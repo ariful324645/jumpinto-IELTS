@@ -50,7 +50,7 @@ const Test3Reading = () => {
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">PASSAGE 1</h1>
+            <h1 className="text-xl font-bold">PASSAGE 1</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -65,16 +65,16 @@ const Test3Reading = () => {
           <div className="">
             <h1 className="text-xl">
               You should spend about 20 minutes on{" "}
-              <span className="text-2xl font-bold">Questions 1-13</span>, which
+              <span className="text-xl font-bold">Questions 1-13</span>, which
               are based on Reading Passage 1 below.
             </h1>
           </div>
-          <h1 className="text-3xl font-bold text-center">Frozen Food</h1>
-          <h1 className="text-2xl font-bold italic text-center">
+          <h1 className="text-xl font-bold text-center">Frozen Food</h1>
+          <h1 className="text-xl font-bold italic text-center">
             A US perspective on the development of the frozen food industry
           </h1>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             At some point in history, humans discovered that ice preserved
             food.There is evidence that winter ice was stored to preserve food
             in the summer as far back as 10,000 years ago.
@@ -89,7 +89,7 @@ const Test3Reading = () => {
             moisture, then dried them in the sun.This preserved their
             nutritional value - if not their aesthetic appeal.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Natural ice remained the main form of refrigeration until late in
             the 19th century.In the early 1800s, ship owners from Boston, USA,
             had enormous blocks of Arctic ice towed all over the Atlantic for
@@ -102,7 +102,7 @@ const Test3Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Finally, in 1870, Australian inventors found a way to make
             'mechanical ice'.They used a compressor to force a gas - ammonia at
             first and later Freon - through a condenser.The compressed gas gave
@@ -113,7 +113,7 @@ const Test3Reading = () => {
             its temperature to freezing point.{" "}
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 In 1880, a shipment of Australian beef and mutton was sent,
@@ -126,7 +126,7 @@ const Test3Reading = () => {
             export meat across the oceans. While the food frozen this way was
             still palatable, there was some deterioration.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Manatees' teeth are all molars - flat, rounded teeth for grinding
             food.Due to manatees' abrasive aquatic plant diet, these teeth get
             worn down and they eventually fall out, so they continually grow new
@@ -140,7 +140,7 @@ const Test3Reading = () => {
             )}
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             The modern frozen food industry began with the indigenous Inuit
             people of Canada.
             {highlight && (
@@ -154,7 +154,7 @@ const Test3Reading = () => {
             quickly freeze fish in the Arctic air.The fish looked and tasted
             fresh even months later.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Birdseye returned to the USA in 1917 and began developing mechanical
             freezers capable of quick-freezing food.Birdseye methodically kept
             inventing better freezers and gradually built a business selling
@@ -163,7 +163,7 @@ const Test3Reading = () => {
             director of research, and his division continued to innovate.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             Birdseye was responsible for several key innovations that made the
             frozen food industry possible.
             {highlight && (
@@ -184,7 +184,7 @@ const Test3Reading = () => {
             be prepared with a minimum of effort.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             But there were still obstacles.In the 1930s, few grocery stores
             could afford to buy freezers for a market that wasn't established
             yet.So, Birdseye leased inexpensive freezer cases to them.He also
@@ -192,7 +192,7 @@ const Test3Reading = () => {
             nationwide.However, few consumers had freezers large enough or
             efficient enough to take advantage of the products.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Sales increased in the early 1940s, when World War II gave a boost
             to the frozen food industry because tin was being used for
             munitions.
@@ -208,7 +208,7 @@ const Test3Reading = () => {
             manufacturers were gradually increasing the size of the freezer
             compartments in them.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             1950s families were also looking for convenience at mealtimes, so
             the moment was right for the arrival of the 'TV Dinner'.Swanson
             Foods was a large, nationally recognized producer of canned and
@@ -231,7 +231,7 @@ const Test3Reading = () => {
             prepared meals such as the TV Dinner.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             Today, the US frozen food industry has a turnover of over $67
             billion annually, with $26.6 billion of that sold to consumers for
             home consumption.The remaining $40 billion in frozen food sales come
@@ -243,21 +243,21 @@ const Test3Reading = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-2xl font-bold mb-3">Questions 1-7</h2>
+            <h2 className="text-lg font-bold mb-3">Questions 1-7</h2>
 
-            <h3 className="text-2xl font-semibold mb-5">
+            <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br />
               Choose <span className="font-bold">ONE WORD AND/OR A NUMBER</span>
               from the passage for each answer.
             </h3>
 
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-lg font-semibold">
               Write your answers in boxes 1-7 on your answer sheet.
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
+            <h1 className="text-lg font-bold text-center mb-4">
               The history of frozen food
             </h1>
             <h2 className="text-xl font-bold mt-6">
@@ -266,7 +266,7 @@ const Test3Reading = () => {
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   People conserved the nutritional value of
                 </span>
@@ -292,7 +292,7 @@ const Test3Reading = () => {
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-xl font-bold mt-6">1851, USA</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block"></span>
                 <button
                   onClick={() => toggleButton(2)}
@@ -317,7 +317,7 @@ const Test3Reading = () => {
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-xl font-bold mt-6">1880, Australia</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">Two kinds of</span>
                 <button
                   onClick={() => toggleButton(3)}
@@ -341,11 +341,11 @@ const Test3Reading = () => {
             <h2 className="text-xl font-bold mt-6">1917 onwards, USA</h2>
 
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-2xl">
+              <li className="text-lg">
                 Clarence Birdseye introduced innovations including:
               </li>
 
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   quick-freezing methods, so that
                 </span>
@@ -366,7 +366,7 @@ const Test3Reading = () => {
                 />
                 did not spoil the food
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">packaging products with</span>
                 <button
                   onClick={() => toggleButton(5)}
@@ -389,7 +389,7 @@ const Test3Reading = () => {
 
             <h2 className="text-xl font-bold mt-6">Early 1940s, USA</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   Frozen food became popular because of a shortage of
                 </span>
@@ -412,7 +412,7 @@ const Test3Reading = () => {
             </ul>
             <h2 className="text-xl font-bold mt-6">1950s, USA</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   A large number of homes now had a
                 </span>
@@ -436,25 +436,25 @@ const Test3Reading = () => {
           </div>
           <br />
           {/* 2nd step     */}
-          <h2 className="text-2xl font-bold mb-3">Questions 8-13 </h2> <br />
+          <h2 className="text-lg font-bold mb-3">Questions 8-13 </h2> <br />
           <h3 className="text-xl font-semibold mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 8-13 on your answer sheet, choose
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">TRUE</span>if the statement
+            <span className="text-lg font-bold">TRUE</span>if the statement
             agrees with the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">FALSE</span>if the statement
+            <span className="text-lg font-bold">FALSE</span>if the statement
             contradicts the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">NOT GIVEN</span> if there is no
+            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
             information on this
           </h3>
           <br /> <br />
@@ -465,7 +465,7 @@ const Test3Reading = () => {
                   <div
                     onClick={() => handleNumberClick(qIndex)}
                     className={`
-                                                           w-10 h-10 flex items-center justify-center text-2xl font-bold rounded-lg transition-all duration-300
+                                                           w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
                                                            border-2
                                                            ${
                                                              activeNumbers[
@@ -479,7 +479,7 @@ const Test3Reading = () => {
                   >
                     {qIndex + 8}
                   </div>
-                  <h1 className="text-2xl">{q}</h1>
+                  <h1 className="text-lg">{q}</h1>
                 </div>
 
                 <ul className="list-none ml-12 flex flex-col gap-3">

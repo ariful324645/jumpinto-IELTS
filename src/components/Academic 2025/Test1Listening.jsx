@@ -25,18 +25,22 @@ const Test1Listening = () => {
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
+
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">PART 1</h1>
+          <div className="flex relative group justify-between items-center">
+            <h1 className="text-2xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
               onChange={() => setHighlight(!highlight)}
               className="toggle toggle-accent"
             />
+            <span className="absolute -top-7  right-6 text-left  bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Toggle guided mode
+            </span>
           </div>
 
-          <div className="">
+          <div>
             <audio controls className="mt-2 w-7/12">
               <source type="audio/mpeg" />
               Your browser does not support the audio element.
@@ -48,335 +52,280 @@ const Test1Listening = () => {
             Restaurant Recommendations for a Celebration
           </h1>
 
-          <h3 className="text-xl font-bold">
-            ANNOUNCER:
-            <span className="font-normal">
-              Part 1.You will hear a woman asking a friend for restaurant
-              recommendations.First, you have some time to look at questions 1
-              to 4.Now listen carefully and answer questions 1 to 4.
-            </span>
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> Part 1. You will hear
+            a woman asking a friend for restaurant recommendations. First, you
+            have some time to look at questions 1 to 4. Now listen carefully and
+            answer questions 1 to 4.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              I've been meaning to ask you for some advice about restaurants.I
-              need to book somewhere to celebrate my sister's 30th birthday, and
-              I like the sound of that place you went to for your mum's 50th.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> I've been meaning to ask
+            you for some advice about restaurants. I need to book somewhere to
+            celebrate my sister's 30th birthday, and I like the sound of that
+            place you went to for your mum's 50th.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              The Junction?Yeah, I'd definitely recommend that for a special
-              occasion.We had a great time there.Everyone really enjoyed it.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> The Junction? Yeah, I'd
+            definitely recommend that for a special occasion. We had a great
+            time there. Everyone really enjoyed it.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Where is it again?I can't remember.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Where is it again? I can't
+            remember.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              It's on Greyson Street, only about a 2 minute walk from the
-              station.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> It's on Greyson Street, only
+            about a 2 minute walk from the station.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Oh, that's good.I'd prefer not to have to drive anywhere, but I
-              don't want to have to walk too far either.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Oh, that's good. I'd
+            prefer not to have to drive anywhere, but I don't want to have to
+            walk too far either.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Yes, the location is perfect, but that's not necessarily why I'd
-              recommend it.,
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  The food's amazing. If you like fish (1)
-                </span>
-              )}
-              it's probably the best restaurant in town for that.It's always
-              really fresh, and there are lots of interesting dishes to choose
-              from, but all the food is good there.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Yes, the location is
+            perfect, but that's not necessarily why I'd recommend it.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                The food's amazing. If you like fish (1)
+              </span>
+            )}
+            it's probably the best restaurant in town for that. It's always
+            really fresh, and there are lots of interesting dishes to choose
+            from, but all the food is good there.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">Is it really expensive?</span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Is it really expensive?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              It's certainly not cheap, but for a special occasion, I think it's
-              fine.It's got a great atmosphere.
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  And before dinner, you can go up on the roof and have a drink.
-                  (2)
-                </span>
-              )}
-              It's really nice up there, but you need to book.It's very popular,
-              as the views are spectacular.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> It's certainly not cheap,
+            but for a special occasion, I think it's fine. It's got a great
+            atmosphere.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                And before dinner, you can go up on the roof and have a drink.
+                (2)
+              </span>
+            )}
+            It's really nice up there, but you need to book. It's very popular,
+            as the views are spectacular.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Hmm, sounds good.So that's definitely a possibility then.Is there
-              anywhere else you can think of?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Hmm, sounds good. So
+            that's definitely a possibility then. Is there anywhere else you can
+            think of?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              um If you want somewhere a bit less formal then you could try
-              Paloma.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> If you want somewhere a bit
+            less formal then you could try Paloma.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Where's that?I haven't heard of it.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Where's that? I haven't
+            heard of it.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              No, it's quite new.It's only been open a few months, but it's got
-              a great reputation already.It's in a really beautiful old building
-              on Bow Street.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> No, it's quite new. It's
+            only been open a few months, but it's got a great reputation
+            already. It's in a really beautiful old building on Bow Street.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Oh, I think I know where you mean.Right beside the cinema.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Oh, I think I know where
+            you mean. Right beside the cinema.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Yes, that's it.I've only been there a couple of times, but I was
-              really impressed.The chef used to work at Don Filipe's
-              apparently.I was really sorry when that closed down.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Yes, that's it. I've only
+            been there a couple of times, but I was really impressed. The chef
+            used to work at Don Filipe's apparently. I was really sorry when
+            that closed down.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              So is all the food they serve Spanish then?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> So is all the food they
+            serve Spanish then?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              ,
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  Yeah, you can get lots of small dishes to share, which always
-                  works really well if you're in a group. And before dinner (3)
-                </span>
-              )}
-              you can go up on the roof and have a drink.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                Yeah, you can get lots of small dishes to share, which always
+                works really well if you're in a group. And before dinner (3)
+              </span>
+            )}
+            you can go up on the roof and have a drink.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">Hmm.Worth thinking about.</span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Hmm. Worth thinking about.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Yeah, there's a lively atmosphere, and the waiters are really
-              friendly.The only thing is that you need to pay a 50 pound deposit
-              to book a table.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Yeah, there's a lively
+            atmosphere, and the waiters are really friendly. The only thing is
+            that you need to pay a 50 pound deposit to book a table.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              A lot of restaurants are doing that these days.I should have a
-              look at the menu to check there's a good choice of vegetarian
-              dishes.A couple of my friends have stopped eating meat.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> A lot of restaurants are
+            doing that these days. I should have a look at the menu to check
+            there's a good choice of vegetarian dishes. A couple of my friends
+            have stopped eating meat.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  Not sure, I'd say the selection of those would be quite
-                  limited. (4)
-                </span>
-              )}
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                Not sure, I'd say the selection of those would be quite limited.
+                (4)
+              </span>
+            )}
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Before you hear the rest of the conversation, you have some time
-              to look at questions 5 to 10.Now listen and answer questions 5 to
-              10.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Before you hear the rest
+            of the conversation, you have some time to look at questions 5 to
+            10. Now listen and answer questions 5 to 10.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              I've just thought of another idea.Have you been to the Audley?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> I've just thought of another
+            idea. Have you been to the Audley?
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              No, don't think I've heard of it.How's it spelt?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> No, don't think I've heard
+            of it. How's it spelt?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">AUDLEY (5)</span>
-              )}
-              .You must have heard of it.There's been a lot about it in the
-              press
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">AUDLEY (5)</span>
+            )}
+            You must have heard of it. There's been a lot about it in the press.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              I don't tend to pay much attention to that kind of thing.So where
-              is it exactly?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> I don't tend to pay much
+            attention to that kind of thing. So where is it exactly?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  {" "}
-                  It's in that hotel near Baxter Bridge, on the top floor. (6)
-                </span>
-              )}
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                It's in that hotel near Baxter Bridge, on the top floor. (6)
+              </span>
+            )}
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Oh, the views would be incredible from up there.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Oh, the views would be
+            incredible from up there.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Yeah, I'd love to go.I can't think of the chef's name, but she was
-              a judge on that TV cookery show recently, and she's written a
-              couple of cookery books.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Yeah, I'd love to go. I
+            can't think of the chef's name, but she was a judge on that TV
+            cookery show recently, and she's written a couple of cookery books.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">Oh, Angela Frayn.</span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Oh, Angela Frayn.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  That's the one.Anyway, it's had excellent reviews from all the
-                  newspapers. (7)
-                </span>
-              )}
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                That's the one. Anyway, it's had excellent reviews from all the
+                newspapers. (7)
+              </span>
+            )}
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              That would be a memorable place for a celebration.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> That would be a memorable
+            place for a celebration.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Definitely, obviously it's worth going there just for the view,
-              but the food is supposed to be really special.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Definitely, obviously it's
+            worth going there just for the view, but the food is supposed to be
+            really special.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              She only likes cooking with local products, doesn't she?
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> She only likes cooking
+            with local products, doesn't she?
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  Yes.Everything at the restaurant has to be sourced within a
-                  short distance, and absolutely nothing flown in from abroad.
-                  (8)
-                </span>
-              )}
-              That's the one.Anyway, it's had excellent reviews from all the
-              newspapers.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                Yes. Everything at the restaurant has to be sourced within a
+                short distance, and absolutely nothing flown in from abroad. (8)
+              </span>
+            )}
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              I imagine it's really expensive though.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> I imagine it's really
+            expensive though.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              Well, you could go for the set lunch.In the evening
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  That's quite reasonable for a top class restaurant, £30 a
-                  head. (9)
-                </span>
-              )}
-              In the evening , I think it would be more like £50.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Well, you could go for the
+            set lunch. In the evening
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                That's quite reasonable for a top class restaurant, £30 a head.
+                (9)
+              </span>
+            )}
+            In the evening, I think it would be more like £50.
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              At least that I should think, but I'm sure everyone would enjoy
-              it.It's not the kind of place you leave feeling hungry though, is
-              it?With tiny portions.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> At least that I should
+            think, but I'm sure everyone would enjoy it. It's not the kind of
+            place you leave feeling hungry though, is it? With tiny portions.
           </h3>
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">
-              No, the reviews I've read didn't mention that.
-              {highlight && (
-                <span className="ml-2 bg-yellow-100 font-bold">
-                  I imagine they'd be average. (10)
-                </span>
-              )}
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> No, the reviews I've read
+            didn't mention that.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                I imagine they'd be average. (10)
+              </span>
+            )}
           </h3>
-          <h3 className="text-xl font-bold">
-            WOMAN:
-            <span className="font-normal">
-              Well, that's all great.Thanks...
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">WOMAN:</span> Well, that's all great.
+            Thanks...
           </h3>
-          <h3 className="text-xl font-bold">
-            ANNOUNCER:
-            <span className="font-normal">
-              That is the end of part 1.You now have one minute to check your
-              answers to part 1.
-            </span>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> That is the end of
+            part 1. You now have one minute to check your answers to part 1.
           </h3>
         </div>
 

@@ -1,8 +1,20 @@
 import React, { useState } from "react";
+import { GrClearOption } from "react-icons/gr";
+
 
 const Test3Listening = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClear = () => {
+    setActiveButtons({});
+    const inputs = document.querySelectorAll("input[type='text']");
+    inputs.forEach((input) => (input.value = ""));
+    console.log("All answers cleared!");
+    setIsOpen(false);
+  };
 
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({
@@ -15,8 +27,8 @@ const Test3Listening = () => {
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
-          <div className="flex justify-between items-center">
+        {/* <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          <div className="flex relative group justify-between items-center">
             <h1 className="text-3xl font-bold">PART 1</h1>
             <input
               type="checkbox"
@@ -24,6 +36,9 @@ const Test3Listening = () => {
               onChange={() => setHighlight(!highlight)}
               className="toggle toggle-accent"
             />
+            <span className="absolute -top-7  right-6 text-left  bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Toggle guided mode
+            </span>
           </div>
 
           <div className="">
@@ -38,19 +53,17 @@ const Test3Listening = () => {
             Furniture Rental Company Consultation
           </h1>
 
-          <h3 className="text-xl font-bold">
-            ANNOUNCER:
-            <span className="font-normal">
-              Part 1.You will hear a woman phoning the owner of a house she is
-              going to rent about companies that she could rent furniture
-              from.First, you have some time to look at questions 1 to 5.Now
-              listen carefully and answer questions 1 to 5.
-            </span>
+          <h3 className="text-lg">
+            <span className="font-bold"> ANNOUNCER:</span>
+            Part 1.You will hear a woman phoning the owner of a house she is
+            going to rent about companies that she could rent furniture
+            from.First, you have some time to look at questions 1 to 5.Now
+            listen carefully and answer questions 1 to 5.
           </h3>
 
-          <h3 className="text-xl font-bold">
-            MAN:
-            <span className="font-normal">Good morning.</span>
+          <h3 className="text-lg">
+            <span className="font-bold"> MAN:</span>
+            Good morning.
           </h3>
           <h3 className="text-xl font-bold">
             SHELLEY MAYER:
@@ -333,9 +346,345 @@ const Test3Listening = () => {
               answers to part 1.
             </span>
           </h3>
+        </div> */}
+
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          <div className="flex relative group justify-between items-center">
+            <h1 className="text-3xl font-bold">PART 1</h1>
+            <input
+              type="checkbox"
+              checked={highlight}
+              onChange={() => setHighlight(!highlight)}
+              className="toggle toggle-accent"
+            />
+            <span className="absolute -top-7 right-6 text-left bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Toggle guided mode
+            </span>
+          </div>
+
+          <div>
+            <audio controls className="mt-2 w-7/12">
+              <source type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <hr />
+          <p>Audio Script</p>
+          <h1 className="text-2xl font-bold text-center">
+            Furniture Rental Company Consultation
+          </h1>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> Part 1. You will hear
+            a woman phoning the owner of a house she is going to rent about
+            companies that she could rent furniture from. First, you have some
+            time to look at questions 1 to 5. Now listen carefully and answer
+            questions 1 to 5.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Good morning.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Hi, this is
+            Shelley Mayer. I'm renting your house on Archwood Avenue. I'm due to
+            move in next week.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Oh yes, hello, Ms Mayer.
+            What can I do for you?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> When I viewed the
+            house, I told you I'll most probably need to rent some furniture -
+            at least until I know whether my temporary work contract is going to
+            be made permanent.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Yes, of course. I remember.
+            And I said I could give you some information about furniture rental
+            companies in the city.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> That's right.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Well, the biggest company is
+            called Peak Rentals. I've recommended them to other people, and I've
+            always heard positive reports about them.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Could you give me
+            an idea of their costs?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Sure, I actually have one of
+            their brochures here.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                It says the monthly price per room starts at $105 and goes up to
+                $239. (1)
+              </span>
+            )}{" "}
+            That depends on which rooms you need furniture for, of course.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Sure. It's just to
+            get a general idea of how much it's gonna cost. And you said you had
+            some positive feedback about this company.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Yes. People have mentioned that the furniture from Peak Rentals
+                is more modern than any of the other companies. (2)
+              </span>
+            )}{" "}
+            And also, once you place an order, the furniture will be delivered
+            to you in just 1 or 2 days.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> That would be
+            really helpful.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Oh, and the brochure says
+            that there's a special offer at the moment, if you rent living room
+            furniture. I believe that's a set of chairs and a TV table.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                You'll also get a lamp at no extra cost. (3)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Ok, but you know
+            that price range you gave is more than I was hoping to pay.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Then you could try Aaron and Oliver. (4)
+              </span>
+            )}{" "}
+            You can go up on the roof and have a drink.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Sorry, what and
+            Oliver?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Aaron, double A R O N.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Ok, are they
+            cheaper?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                I'd say they're a mid price company, but if you choose them, you
+                need to be aware that they charge an extra 12% every month in
+                case of damage. (5)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> I see. I'd have to
+            do the math carefully then.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Right. But one helpful thing
+            is that they also do cleaning for customers.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> For the furniture?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> For the house.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Oh, I see. I
+            probably won't need that.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> Before you hear the
+            rest of the conversation, you have some time to look at questions 6
+            to 10. Now listen and answer questions 6 to 10.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> There's another company
+            called Larch Furniture. It's quite new, and it has the lowest prices
+            in town.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                That's for both furniture and also electronic equipment. (6)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Well, that would
+            be good. I'm not bringing much with me, and I won't have much time
+            to go shopping after I start my job.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> There are two things you
+            need to know about Larch Furniture.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                First of all, you have to take out insurance on the furniture,
+                and you need to organize that yourself. (7)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> That wouldn't be
+            too hard.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Also, you can't take out a
+            contract for less than 6 months. But I figure that might not be a
+            problem for you. You're renting the house for 12 months after all,
+            aren't you?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> Yes. OK. Well,
+            I...
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> Sorry to interrupt. I just
+            thought of another furniture rental company.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                It's called Space Rentals, and it's located very near to the
+                house. (8)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> OK.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span> I don't have any information
+            about their charges.{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                So it's best to use their app to find out what it would cost you
+                to use them. (9)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> OK, thanks. I'll
+            do that.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">MAN:</span>{" "}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                One good thing about that company is that if you don't like the
+                furniture once it's delivered, you can request exchanges, as
+                long as you do that within a week of receiving it. (10)
+              </span>
+            )}{" "}
+            In the evening, I think it would be more like £50.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">SHELLEY MAYER:</span> That sounds really
+            great. Ok, well thanks very much, that's so helpful.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> That is the end of
+            part 1. You now have one minute to check your answers to part 1.
+          </h3>
         </div>
+
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[80vh]">
+          <div className="flex justify-end items-center p-4 text-gray-500">
+            {/* clear icon */}
+
+            <div className="relative group">
+              <div className="flex justify-between items-center">
+                <span
+                  onClick={() => setIsOpen(true)}
+                  className="text-xl cursor-pointer"
+                >
+                  <GrClearOption />
+                </span>
+              </div>
+              {/* Tooltip */}
+
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                Clear answer
+              </span>
+
+              {isOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                    <h2 className="text-lg font-semibold mb-4">
+                      Are you sure you want to clear all answers?
+                    </h2>
+                    <div className="flex justify-center gap-4">
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                      >
+                        No, keep them
+                      </button>
+                      <button
+                        onClick={handleClear}
+                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                      >
+                        Yes, clear them
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
           <h2 className="text-2xl font-bold mb-3">Questions 1–10</h2>
           <h3 className="text-xl font-semibold mb-5">
             Complete the table below. <br /> <br /> Write{" "}

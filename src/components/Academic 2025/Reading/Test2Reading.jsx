@@ -65,13 +65,13 @@ const Test2Reading = () => {
           <div className="">
             <h1 className="text-xl">
               You should spend about 20 minutes on{" "}
-              <span className="text-2xl font-bold">Questions 1-13</span>, which
+              <span className="text-lg font-bold">Questions 1-13</span>, which
               are based on Reading Passage 1 below.
             </h1>
           </div>
           <h1 className="text-3xl font-bold text-center">Manatees</h1>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             Manatees, also known as sea cows, are aquatic mammals that belong to
             a group of animals called Sirenia.This group also contains
             dugongs.Dugongs and manatees look quite alike - they are similar in
@@ -87,7 +87,7 @@ const Test2Reading = () => {
             ("Trichechus manatus"), the African manatee ("Trichechus
             senegalensis") and the Amazonian manatee ("Trichechus inunguis").
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Unlike most mammals, manatees have only six bones in their neck -
             most others, including humans and giraffes, have seven.This short
             neck allows a manatee to move its head up and down, but not side to
@@ -110,7 +110,7 @@ const Test2Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 Seagrasses and other marine plants make up most of a manatee's
@@ -123,7 +123,7 @@ const Test2Reading = () => {
             make up a small part of their diets.West Indian and Amazonian
             manatees are both herbivores.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Manatees' teeth are all molars - flat, rounded teeth for grinding
             food.Due to manatees' abrasive aquatic plant diet, these teeth get
             worn down and they eventually fall out, so they continually grow new
@@ -137,7 +137,7 @@ const Test2Reading = () => {
             )}
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             In 1894, the New Zealand government launched its first attempt to
             save the kākāpō.Conservationist Richard Henry led an effort to
             relocate several hundred of the birds to predator-free Resolution
@@ -147,7 +147,7 @@ const Test2Reading = () => {
             lost species.Only a few clung to life in the most isolated parts of
             New Zealand.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Manatees are fully aquatic, but as mammals, they need to come up to
             the surface to breathe.When awake, they typically surface every two
             to four minutes, but they can hold their breath for much
@@ -164,7 +164,7 @@ const Test2Reading = () => {
             folds in their large intestine to help them float. These birds have
             been the foundation of all subsequent work in managing the species.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             The West Indian manatee reaches about 3.5 metres long and weighs on
             average around 500 kilogrammes.
             {highlight && (
@@ -182,7 +182,7 @@ const Test2Reading = () => {
             drops below 20ºC, it takes refuge in naturally and artificially
             warmed water, such as at the warm-water outfalls from powerplants.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             The African manatee is also about 3.5 metres long and found in the
             sea along the west coast of Africa, from Mauritania down to Angola.
             {highlight && (
@@ -192,7 +192,7 @@ const Test2Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             The Amazonian manatee is the smallest species, though it is still a
             big animal.It grows to about 2.5 metres long and 350
             kilogrammes.Amazonian manatees favour calm, shallow waters that are
@@ -208,7 +208,7 @@ const Test2Reading = () => {
             hunting.Manatee hunting is now illegal in every country the African
             species is found in.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             The two subspecies of West Indian manatee are listed as Endangered
             by the IUCN.
             {highlight && (
@@ -234,26 +234,26 @@ const Test2Reading = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-2xl font-bold mb-3">Questions 1-6</h2>
+            <h2 className="text-xl font-bold mb-3">Questions 1-6</h2>
 
-            <h3 className="text-2xl font-semibold mb-5">
+            <h3 className="text-xl font-semibold mb-5">
               Complete the notes below. <br /> <br />
               Choose <span className="font-bold">ONE WORD AND/OR A NUMBER</span>
               from the passage for each answer.
             </h3>
 
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-xl font-semibold">
               Write your answers in boxes 7–13 on your answer sheet.
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">Manatees</h1>
+            <h1 className="text-xl font-bold text-center mb-4">Manatees</h1>
             <h2 className="text-xl font-bold mt-6">Appearance</h2>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   look similar to dugongs, but with a differently shaped
                 </span>
@@ -278,10 +278,10 @@ const Test2Reading = () => {
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-xl font-bold mt-6">Movement</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-2xl">
+              <li className="text-lg">
                 have fewer neck bones than most mammals
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">need to use their</span>
                 <button
                   onClick={() => toggleButton(2)}
@@ -300,7 +300,7 @@ const Test2Reading = () => {
                 />
                 to help to turn their bodies around in order to look sideways
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   sense vibrations in the water by means of
                 </span>
@@ -326,7 +326,7 @@ const Test2Reading = () => {
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-xl font-bold mt-6">Feeding</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   eat mainly aquatic vegetation, such as
                 </span>
@@ -346,7 +346,7 @@ const Test2Reading = () => {
                   placeholder=""
                 />
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   grasp and pull up plants with their
                 </span>
@@ -371,13 +371,13 @@ const Test2Reading = () => {
             <h2 className="text-xl font-bold mt-6">Breathing</h2>
 
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-2xl">
+              <li className="text-lg">
                 {" "}
                 come to the surface for air every 2-4 minutes when awake and
                 every 15-20 while sleeping
               </li>
 
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">may regulate the</span>
                 <button
                   onClick={() => toggleButton(6)}
@@ -401,25 +401,25 @@ const Test2Reading = () => {
           </div>
           <br />
           {/* 2nd step     */}
-          <h2 className="text-2xl font-bold mb-3">Questions 7-13 </h2> <br />
+          <h2 className="text-lg font-bold mb-3">Questions 7-13 </h2> <br />
           <h3 className="text-xl font-semibold mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 7-13 on your answer sheet, choose
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">TRUE</span> if the statement
+            <span className="text-lg font-bold">TRUE</span> if the statement
             agrees with the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">FALSE</span>if the statement
+            <span className="text-lg font-bold">FALSE</span>if the statement
             contradicts the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">NOT GIVEN</span> if there is no
+            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
             information on this
           </h3>{" "}
           <br /> <br />
@@ -430,7 +430,7 @@ const Test2Reading = () => {
                   <div
                     onClick={() => handleNumberClick(qIndex)}
                     className={`
-                              w-10 h-10 flex items-center justify-center text-2xl font-bold rounded-lg transition-all duration-300
+                              w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
                               border-2
                               ${
                                 activeNumbers[qIndex]
@@ -442,7 +442,7 @@ const Test2Reading = () => {
                   >
                     {qIndex + 7}
                   </div>
-                  <h1 className="text-2xl">{q}</h1>
+                  <h1 className="text-lg">{q}</h1>
                 </div>
 
                 <ul className="list-none ml-12 flex flex-col gap-3">

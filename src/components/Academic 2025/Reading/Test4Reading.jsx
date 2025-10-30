@@ -49,7 +49,7 @@ const Test4Reading = () => {
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">PASSAGE 1</h1>
+            <h1 className="text-xl font-bold">PASSAGE 1</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -64,13 +64,13 @@ const Test4Reading = () => {
           <div className="">
             <h1 className="text-xl">
               You should spend about 20 minutes on{" "}
-              <span className="text-2xl font-bold">Questions 1-13</span>, which
+              <span className="text-xl font-bold">Questions 1-13</span>, which
               are based on Reading Passage 1 below.
             </h1>
           </div>
-          <h1 className="text-3xl font-bold text-center">Georgia O'Keeffe</h1>
+          <h1 className="text-xl font-bold text-center">Georgia O'Keeffe</h1>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             For seven decades, Georgia O'Keeffe (1887-1986) was a major figure
             in American art.
             {highlight && (
@@ -84,7 +84,7 @@ const Test4Reading = () => {
             a paintbrush, she recorded subtle nuances of colour, shape, and
             light that enlivened her paintings and attracted a wide audience.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Born in 1887 near Sun Prairie, Wisconsin to cattle breeders Francis
             and Ida O'Keeffe, Georgia was raised on their farm along with her
             six siblings.
@@ -108,7 +108,7 @@ const Test4Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 During this period, O'Keeffe began to experiment with creating
@@ -125,7 +125,7 @@ const Test4Reading = () => {
             American public.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             With Stieglitz's encouragement and promise of financial support,
             O'Keeffe arrived in New York in June 1918 to begin a career as an
             artist.For the next three decades, Stieglitz vigorously promoted her
@@ -140,7 +140,7 @@ const Test4Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 By the mid-1920s, O'Keeffe was recognized as one of America's
@@ -159,7 +159,7 @@ const Test4Reading = () => {
             )}
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             Enlarging the tiniest details to fill an entire metre-wide canvas
             emphasized their shapes and lines and made them appear abstract.Such
             daring compositions helped establish O'Keeffe's reputation as an
@@ -172,7 +172,7 @@ const Test4Reading = () => {
             each winter to exhibit the new work at Stieglitz's gallery.This
             pattern continued until she moved permanently to New Mexico in 1949.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             There, O'Keeffe found new inspiration: at first, it was the numerous
             sun-bleached bones she came across in the state's rugged terrain
             that sparked her imagination.5
@@ -191,7 +191,7 @@ const Test4Reading = () => {
             and solid and open spaces.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 However, it was the region's spectacular landscape, with its
@@ -204,7 +204,7 @@ const Test4Reading = () => {
             close-up, just as she had done with her botanical subjects.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             O'Keeffe eventually owned two homes in New Mexico - the first, her
             summer retreat at Ghost Ranch, was nestled beneath 200-metre cliffs,
             while the second, used as her winter residence, was in the small
@@ -214,7 +214,7 @@ const Test4Reading = () => {
             than thirty pictures between 1946 and 1960, she reinvented the patio
             into an abstract arrangement of geometric shapes.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 From the 1950s into the 1970s, O'Keeffe travelled widely, making
@@ -231,7 +231,7 @@ const Test4Reading = () => {
             and a special feat for an artist nearing eighty years of age.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             The last two decades of the artist's life were relatively
             unproductive as ill health and blindness hindered her ability to
             work.O'Keeffe died in 1986 at the age of ninety-eight, but her rich
@@ -244,27 +244,27 @@ const Test4Reading = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-2xl font-bold mb-3">Questions 1-7</h2>
+            <h2 className="text-lg font-bold mb-3">Questions 1-7</h2>
 
-            <h3 className="text-2xl font-semibold mb-5">
+            <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br />
               Choose <span className="font-bold">ONE WORD ONLY</span>
               from the passage for each answer.
             </h3>
 
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-lg font-semibold">
               Write your answers in boxes 1-7 on your answer sheet.
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
+            <h1 className="text-lg font-bold text-center mb-4">
               The life and work of Georgia O'Keeffe
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   studied art, then worked as a
                 </span>
@@ -290,7 +290,7 @@ const Test4Reading = () => {
             {/* ---------- Section 2 ---------- */}
 
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">created drawings using</span>
                 <button
                   onClick={() => toggleButton(2)}
@@ -314,9 +314,9 @@ const Test4Reading = () => {
             {/* ---------- Section 3 ---------- */}
 
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
-                  moved to New York and became famous for her paintings of the
+                  moved to New York and became famous for her paintings of the 
                   city's
                 </span>
                 <button
@@ -339,7 +339,7 @@ const Test4Reading = () => {
             {/* Inner list with squares */}
 
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   produced a series of innovative close-up paintings of
                 </span>
@@ -362,7 +362,7 @@ const Test4Reading = () => {
             </ul>
 
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   went to New Mexico and was initially inspired to paint the
                   many
@@ -387,7 +387,7 @@ const Test4Reading = () => {
             </ul>
 
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   continued to paint various features that together formed the
                   dramatic
@@ -411,7 +411,7 @@ const Test4Reading = () => {
               </li>
             </ul>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   travelled widely by plane in later years, and painted pictures
                   of clouds and
@@ -437,25 +437,25 @@ const Test4Reading = () => {
           </div>
           <br />
           {/* 2nd step     */}
-          <h2 className="text-2xl font-bold mb-3">Questions 8-13 </h2> <br />
+          <h2 className="text-lg font-bold mb-3">Questions 8-13 </h2> <br />
           <h3 className="text-xl font-semibold mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 8-13 on your answer sheet, choose
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">TRUE</span>if the statement
+            <span className="text-lg font-bold">TRUE</span>if the statement
             agrees with the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">FALSE</span>if the statement
+            <span className="text-lg font-bold">FALSE</span>if the statement
             contradicts the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">NOT GIVEN</span> if there is no
+            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
             information on this
           </h3>
           <br /> <br />
@@ -466,7 +466,7 @@ const Test4Reading = () => {
                   <div
                     onClick={() => handleNumberClick(qIndex)}
                     className={`
-                                                                                         w-10 h-10 flex items-center justify-center text-2xl font-bold rounded-lg transition-all duration-300
+                                                                                         w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
                                                                                          border-2
                                                                                          ${
                                                                                            activeNumbers[
@@ -480,7 +480,7 @@ const Test4Reading = () => {
                   >
                     {qIndex + 8}
                   </div>
-                  <h1 className="text-2xl">{q}</h1>
+                  <h1 className="text-lg">{q}</h1>
                 </div>
 
                 <ul className="list-none ml-12 flex flex-col gap-3">

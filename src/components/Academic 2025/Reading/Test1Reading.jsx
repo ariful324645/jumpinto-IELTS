@@ -51,7 +51,7 @@ const Test1Reading = () => {
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">PASSAGE 1</h1>
+            <h1 className="text-xl font-bold">PASSAGE 1</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -66,18 +66,18 @@ const Test1Reading = () => {
           <div className="">
             <h1 className="text-xl">
               You should spend about 20 minutes on{" "}
-              <span className="text-2xl font-bold">Questions 1-13</span>, which
+              <span className="text-lg font-bold">Questions 1-13</span>, which
               are based on Reading Passage 1 below.
             </h1>
           </div>
-          <h1 className="text-3xl font-bold text-center">The kākāpō</h1>
+          <h1 className="text-xl font-bold text-center">The kākāpō</h1>
 
-          <h1 className="text-2xl  italic font-bold text-center">
+          <h1 className="text-xl  italic font-bold text-center">
             The kākāpō is a nocturnal, flightless parrot that is critically
             endangered and one of New Zealand's unique treasures
           </h1>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             The kākāpō, also known as the owl parrot, is a large,
             forest-dwelling bird, with a pale owl-like face.Up to 64 cm in
             length, it has predominantly yellow-green feathers, forward-facing
@@ -91,7 +91,7 @@ const Test1Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Kākāpō are solitary birds and tend to occupy the same home range for
             many years.They forage on the ground and climb high into trees.They
             often leap from trees and flap their wings, but at best manage a
@@ -104,7 +104,7 @@ const Test1Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 Kākāpō breed in summer and autumn, but only in years when food
@@ -127,7 +127,7 @@ const Test1Reading = () => {
             searching for food, which leaves the unattended eggs and chicks
             particularly vulnerable to predators.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Before humans arrived, kākāpō were common throughout New Zealand's
             forests.However, this all changed with the arrival of the first
             Polynesian settlers about 700 years ago.For the early settlers, the
@@ -153,7 +153,7 @@ const Test1Reading = () => {
             were also introduced.The kākāpō were in serious trouble.
           </p>
 
-          <p className="text-2xl">
+          <p className="text-lg">
             In 1894, the New Zealand government launched its first attempt to
             save the kākāpō.Conservationist Richard Henry led an effort to
             relocate several hundred of the birds to predator-free Resolution
@@ -163,7 +163,7 @@ const Test1Reading = () => {
             lost species.Only a few clung to life in the most isolated parts of
             New Zealand.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             From 1949 to 1973, the newly formed New Zealand Wildlife Service
             made over 60 expeditions to find kākāpō, focusing mainly on
             Fiordland.Six were caught, but there were no females amongst them
@@ -181,7 +181,7 @@ const Test1Reading = () => {
             These birds have been the foundation of all subsequent work in
             managing the species.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 Unfortunately, predation by feral cats on Rakiura Island led to
@@ -198,7 +198,7 @@ const Test1Reading = () => {
             birds.The critical situation prompted an urgent review of kākāpō
             management in New Zealand.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
                 In 1996, a new Recovery Plan was launched, together with a
@@ -219,14 +219,14 @@ const Test1Reading = () => {
               </span>
             )}
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             After the first five years of the Recovery Plan, the population was
             on target.By 2000, five new females had been produced, and the total
             population had grown to 62 birds.For the first time, there was
             cautious optimism for the future of kākāpō and by June 2020, a total
             of 210 birds was recorded.
           </p>
-          <p className="text-2xl">
+          <p className="text-lg">
             Today, kākāpō management continues to be guided by the kākāpō
             Recovery Plan.
             {highlight && (
@@ -242,25 +242,25 @@ const Test1Reading = () => {
         </div>
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
-          <h2 className="text-2xl font-bold mb-3">Questions 1-6 </h2> <br />
+          <h2 className="text-lg font-bold mb-3">Questions 1-6 </h2> <br />
           <h3 className="text-xl font-semibold mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 1-6 on your answer sheet, choose
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">TRUE</span> if the statement
+            <span className="text-lg font-bold">TRUE</span> if the statement
             agrees with the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">FALSE</span>if the statement
+            <span className="text-lg font-bold">FALSE</span>if the statement
             contradicts the information
           </h3>
-          <h3 className="flex gap-5 text-2xl">
+          <h3 className="flex gap-5 text-lg">
             {" "}
-            <span className="text-2xl font-bold">NOT GIVEN</span> if there is no
+            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
             information on this
           </h3>{" "}
           <br /> <br />
@@ -271,7 +271,7 @@ const Test1Reading = () => {
                   <div
                     onClick={() => handleNumberClick(qIndex)}
                     className={`
-    w-10 h-10 flex items-center justify-center text-2xl font-bold rounded-lg transition-all duration-300
+    w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
     border-2
     ${
       activeNumbers[qIndex]
@@ -283,7 +283,7 @@ const Test1Reading = () => {
                   >
                     {qIndex + 1}
                   </div>
-                  <h1 className="text-2xl">{q}</h1>
+                  <h1 className="text-lg">{q}</h1>
                 </div>
 
                 <ul className="list-none ml-12 flex flex-col gap-3">
@@ -317,28 +317,28 @@ const Test1Reading = () => {
           </div>
           {/* table */}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-2xl font-bold mb-3">Questions 7–13</h2>
+            <h2 className="text-lg font-bold mb-3">Questions 7–13</h2>
 
-            <h3 className="text-2xl font-semibold mb-5">
+            <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br />
               Choose <span className="font-bold">ONE WORD AND/OR A NUMBER</span>
               from the passage for each answer.
             </h3>
 
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-lg font-semibold">
               Write your answers in boxes 7–13 on your answer sheet.
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
+            <h1 className="text-lg font-bold text-center mb-4">
               New Zealand's kakapo
             </h1>
             <h2 className="text-xl font-bold mt-6">A type of parrot</h2>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   diet consists of fern fronds, various parts of a tree and
                 </span>
@@ -358,7 +358,7 @@ const Test1Reading = () => {
                   placeholder=""
                 />
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">nests are created in</span>
                 <button
                   onClick={() => toggleButton(8)}
@@ -384,7 +384,7 @@ const Test1Reading = () => {
               Arrival of Polynesian settlers
             </h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">the</span>
                 <button
                   onClick={() => toggleButton(9)}
@@ -410,7 +410,7 @@ const Test1Reading = () => {
               Arrival of European colonisers
             </h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">the</span>
                 <button
                   onClick={() => toggleButton(10)}
@@ -434,11 +434,11 @@ const Test1Reading = () => {
             {/* Inner list with squares */}
             <h2 className="text-xl font-bold mt-6">Protecting kakapo</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-2xl">
+              <li className="text-lg">
                 Richard Henry, a conservationist, tried to protect the kakapo
               </li>
 
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   a definite sighting of female kakapo on Rakiura Island was
                   reported in the year
@@ -459,7 +459,7 @@ const Test1Reading = () => {
                   placeholder=""
                 />
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   the Recovery Plan included an increase in
                 </span>
@@ -479,7 +479,7 @@ const Test1Reading = () => {
                   placeholder=""
                 />
               </li>
-              <li className=" text-2xl ">
+              <li className=" text-lg ">
                 <span className=" inline-block">
                   a current goal of the Recovery Plan is to maintain the
                   involvement of

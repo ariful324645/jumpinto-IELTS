@@ -25,8 +25,8 @@ const Test2Listening = () => {
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
-          <div className="flex justify-between items-center">
+        {/* <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          <div className="flex relative group justify-between items-center">
             <h1 className="text-3xl font-bold">PART 1</h1>
             <input
               type="checkbox"
@@ -34,6 +34,9 @@ const Test2Listening = () => {
               onChange={() => setHighlight(!highlight)}
               className="toggle toggle-accent"
             />
+            <span className="absolute -top-7  right-6 text-left  bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Toggle guided mode
+            </span>
           </div>
 
           <div className="">
@@ -48,29 +51,23 @@ const Test2Listening = () => {
             Conversation about Caring for Elderly Mother and Council Support
           </h1>
 
-          <h3 className="text-xl font-bold">
-            ANNOUNCER:
-            <span className="font-normal">
-              Part 1.You will hear a woman who is caring for her elderly mother
-              talking to a friend.First, you have some time to look at questions
-              1 to 4.Now listen carefully and answer questions 1 to 4.
-            </span>
+          <h3 className="text-lg">
+            <span className="font-bold"> ANNOUNCER:</span>
+            Part 1.You will hear a woman who is caring for her elderly mother
+            talking to a friend.First, you have some time to look at questions 1
+            to 4.Now listen carefully and answer questions 1 to 4.
           </h3>
 
-          <h3 className="text-xl font-bold">
-            CAROL:
-            <span className="font-normal">
-              It's really good to see you, Tom.Since I had to give up work, I
-              feel I'm losing touch with my friends and colleagues.
-            </span>
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span>
+            It's really good to see you, Tom.Since I had to give up work, I feel
+            I'm losing touch with my friends and colleagues.
           </h3>
           <h3 className="text-xl font-bold">
-            TOM:
-            <span className="font-normal">
-              We really miss you in the office.We were all so sorry you had to
-              leave.But you must be relieved to have more time to look after
-              your mother.How is she?
-            </span>
+            <span className="font-normal"> TOM:</span>
+            We really miss you in the office.We were all so sorry you had to
+            leave.But you must be relieved to have more time to look after your
+            mother.How is she?
           </h3>
           <h3 className="text-xl font-bold">
             CAROL:
@@ -303,13 +300,256 @@ const Test2Listening = () => {
               answers to part 1
             </span>
           </h3>
+        </div> */}
+
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          <div className="flex relative group justify-between items-center">
+            <h1 className="text-3xl font-bold">PART 1</h1>
+            <input
+              type="checkbox"
+              checked={highlight}
+              onChange={() => setHighlight(!highlight)}
+              className="toggle toggle-accent"
+            />
+            <span className="absolute -top-7 right-6 text-left bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Toggle guided mode
+            </span>
+          </div>
+
+          <div>
+            <audio controls className="mt-2 w-7/12">
+              <source type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <hr />
+          <p>Audio Script</p>
+          <h1 className="text-2xl font-bold text-center">
+            Conversation about Caring for Elderly Mother and Council Support
+          </h1>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span>
+            Part 1. You will hear a woman who is caring for her elderly mother
+            talking to a friend. First, you have some time to look at questions
+            1 to 4. Now listen carefully and answer questions 1 to 4.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> It's really good to see
+            you, Tom. Since I had to give up work, I feel I'm losing touch with
+            my friends and colleagues.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> We really miss you in the
+            office. We were all so sorry you had to leave. But you must be
+            relieved to have more time to look after your mother. How is she?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Well, she's very cheerful,
+            but she needs a lot of help.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Have you tried to get any
+            support from the local council?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> No, I didn't know I could.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Yes, they offer different
+            kinds of practical support.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                They realize that carers sometimes need time for all the other
+                responsibilities they have apart from the person they're caring
+                for, and also that they sometimes need a break. (1)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Absolutely. Ok, so tell me
+            more. How do I go about getting this support?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Well, you'd have to have an
+            assessment of your mother's needs. That means someone would come
+            round and talk to you about the situation and what you need.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                So for a start, they'd want to know the amount of time you spend
+                looking after your mother every day. (2)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Ok.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Then they'll probably ask
+            you what sorts of tasks you do for your mother during the day.
+            Things like if she needs help with getting dressed, for example.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Right, I help her with that, and also I help her get into the
+                shower in the morning. (3)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Yes, that sort of thing.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                They'll probably ask you if you do the shopping for her, and
+                help her at meal times, and whether she can cope using money.
+                (4)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Yes, that's becoming a bit
+            of a problem. She used to be very good at it, but not anymore.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> Before you hear the
+            rest of the conversation, you have some time to look at questions 5
+            to 10. Now listen and answer questions 5 to 10.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> And be ready to tell them
+            about anything you find particularly difficult about caring for your
+            mother.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                So recently, I've noticed she started to have quite bad problems
+                with her memory. (5)
+              </span>
+            )}{" "}
+            If I wasn't there, I think she'd forget to eat for example, and
+            often she doesn't seem quite sure what day it is.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> Yes, tell them about that.
+            And are there any physical difficulties you have caring for her?
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Lifting her for example? (6)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Yes, she's quite heavy,
+            and I'm afraid of hurting my back. I'd be in real trouble if that
+            happened.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                They can give you advice about that, and also about how to avoid
+                the possibility of your mom having a fall. (7)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Great. So once they've
+            done this assessment, if I'm eligible, what happens next?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Well, they might support you financially, so they might help you
+                with transport costs, like if you have to get a taxi to take
+                your mother for an appointment for example. (8)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> I usually drive her
+            myself, actually. So could I claim for the petrol?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                You could, and you can claim for the insurance too. (9)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Oh, right.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span> And if you need help with
+            the housework, they can arrange for someone to come along once or
+            twice a week. And one other thing, I hope you don't mind me saying
+            this, but it's important you look after yourself, and it seems to me
+            you're under quite a bit of stress.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> I am, yes.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">TOM:</span>
+            {highlight && (
+              <span className="ml-2 bg-yellow-100">
+                Well tell the council, because they may be able to give you some
+                advice on how to minimize it. (10)
+              </span>
+            )}
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">CAROL:</span> Really? Though, actually,
+            I feel so much better having talked to you. I'll get in touch with
+            the council straight away. Now, shall we go for coffee or some?
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span> That is the end of
+            part 1. You now have one minute to check your answers to part 1.
+          </h3>
         </div>
+
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-between items-center p-4 text-gray-500">
             {/* clear icon */}
             <p>Autosaved @ 2025-10-22 22:59:43. </p>
-            <div className="relative ">
+            <div className="relative group">
               <div className="flex justify-between items-center">
                 <span
                   onClick={() => setIsOpen(true)}
@@ -319,8 +559,9 @@ const Test2Listening = () => {
                 </span>
               </div>
               {/* Tooltip */}
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Clear answer of this Part
+
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                Clear answer
               </span>
 
               {isOpen && (
