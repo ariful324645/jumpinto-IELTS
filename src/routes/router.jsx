@@ -21,6 +21,7 @@ import Test1Speaking from "../components/Academic 2025/Speaking/Test1Speaking";
 import Test2Speaking from "../components/Academic 2025/Speaking/Test2Speaking";
 import Test3Speaking from "../components/Academic 2025/Speaking/Test3Speaking";
 import Test4Speaking from "../components/Academic 2025/Speaking/Test4Speaking";
+import Pagination from "../components/Pagination";
 
 export const router = createBrowserRouter([
   {
@@ -111,6 +112,11 @@ export const router = createBrowserRouter([
         path: "/2025/Test 4/speaking",
         Component:Test4Speaking
       },
+      {
+        path: "/pagination",
+        Component:Pagination
+      },
+
     ],
   },
 ]);

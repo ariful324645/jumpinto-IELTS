@@ -1,8 +1,18 @@
 import React, { useState } from "react";
+import { GrClearOption } from "react-icons/gr";
 
 const Test1Listening = () => {
   const [highlight, setHighlight] = useState(false);
     const [activeButtons, setActiveButtons] = useState({});
+      const [isOpen, setIsOpen] = useState(false);
+
+    const handleClear = () => {
+      setActiveButtons({});
+      const inputs = document.querySelectorAll("input[type='text']");
+      inputs.forEach((input) => (input.value = ""));
+      console.log("All answers cleared!");
+      setIsOpen(false);
+    };
 
     const toggleButton = (id) => {
       setActiveButtons((prev) => ({
@@ -618,6 +628,46 @@ const Test1Listening = () => {
           </table>
         </div> */}
         <div className="md:w-[60%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[80vh]">
+          <div className="flex justify-end items-center p-4 text-gray-500">
+            {/* clear icon */}
+            <div className="relative group">
+              <span
+                onClick={() => setIsOpen(true)}
+                className="text-xl cursor-pointer"
+              >
+                <GrClearOption />
+              </span>
+              {/* Tooltip */}
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                Clear answer of this Part
+              </span>
+
+              {isOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                    <h2 className="text-lg font-semibold mb-4">
+                      Are you sure you want to clear all answers?
+                    </h2>
+                    <div className="flex justify-center gap-4">
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                      >
+                        No, keep them
+                      </button>
+                      <button
+                        onClick={handleClear}
+                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                      >
+                        Yes, clear them
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
           <h2 className="text-2xl font-bold mb-3">Questions 1–10</h2>
           <h3 className="text-xl font-semibold mb-5">
             Complete the table below. <br /> <br /> Write
