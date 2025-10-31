@@ -46,6 +46,7 @@ const Test1Listening = () => {
               Your browser does not support the audio element.
             </audio>
           </div>
+
           <hr />
           <p>Audio Script</p>
           <h1 className="text-2xl font-bold text-center">
@@ -91,11 +92,14 @@ const Test1Listening = () => {
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span> Yes, the location is
             perfect, but that's not necessarily why I'd recommend it.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                The food's amazing. If you like fish (1)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              The food's amazing. If you like fish
+              {highlight && " (1)"}
+            </span>
             it's probably the best restaurant in town for that. It's always
             really fresh, and there are lots of interesting dishes to choose
             from, but all the food is good there.
@@ -109,12 +113,14 @@ const Test1Listening = () => {
             <span className="font-bold">MAN:</span> It's certainly not cheap,
             but for a special occasion, I think it's fine. It's got a great
             atmosphere.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                And before dinner, you can go up on the roof and have a drink.
-                (2)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              And before dinner, you can go up on the roof and have a drink.
+              {highlight && " (2)"}
+            </span>
             It's really nice up there, but you need to book. It's very popular,
             as the views are spectacular.
           </h3>
@@ -160,12 +166,15 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Yeah, you can get lots of small dishes to share, which always
-                works really well if you're in a group. And before dinner (3)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              Yeah, you can get lots of small dishes to share, which always
+              works really well if you're in a group. And before dinner
+              {highlight && " (3)"}
+            </span>
             you can go up on the roof and have a drink.
           </h3>
 
@@ -188,12 +197,14 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Not sure, I'd say the selection of those would be quite limited.
-                (4)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              Not sure, I'd say the selection of those would be quite limited.
+              {highlight && " (4)"}
+            </span>
           </h3>
 
           <h3 className="text-lg">
@@ -214,9 +225,14 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">AUDLEY (5)</span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              AUDLEY
+              {highlight && " (5)"}
+            </span>
             You must have heard of it. There's been a lot about it in the press.
           </h3>
 
@@ -227,11 +243,14 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                It's in that hotel near Baxter Bridge, on the top floor. (6)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              It's in that hotel near Baxter Bridge, on the top floor.
+              {highlight && " (6)"}
+            </span>
           </h3>
 
           <h3 className="text-lg">
@@ -251,12 +270,15 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                That's the one. Anyway, it's had excellent reviews from all the
-                newspapers. (7)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              That's the one. Anyway, it's had excellent reviews from all the
+              newspapers.
+              {highlight && " (7)"}
+            </span>
           </h3>
 
           <h3 className="text-lg">
@@ -277,12 +299,15 @@ const Test1Listening = () => {
 
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span>
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Yes. Everything at the restaurant has to be sourced within a
-                short distance, and absolutely nothing flown in from abroad. (8)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              Yes. Everything at the restaurant has to be sourced within a short
+              distance, and absolutely nothing flown in from abroad.
+              {highlight && " (8)"}
+            </span>
           </h3>
 
           <h3 className="text-lg">
@@ -293,12 +318,14 @@ const Test1Listening = () => {
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span> Well, you could go for the
             set lunch. In the evening
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                That's quite reasonable for a top class restaurant, £30 a head.
-                (9)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              That's quite reasonable for a top class restaurant, £30 a head.
+              {highlight && " (9)"}
+            </span>
             In the evening, I think it would be more like £50.
           </h3>
 
@@ -311,11 +338,14 @@ const Test1Listening = () => {
           <h3 className="text-lg">
             <span className="font-bold">MAN:</span> No, the reviews I've read
             didn't mention that.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100">
-                I imagine they'd be average. (10)
-              </span>
-            )}
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              I imagine they'd be average.
+              {highlight && " (10)"}
+            </span>
           </h3>
 
           <h3 className="text-lg">
