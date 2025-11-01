@@ -344,7 +344,7 @@ const Test1Listening = () => {
               }`}
             >
               I imagine they'd be average.
-              {highlight && " (10)"}
+              {highlight && " (1)"}
             </span>
           </h3>
 
@@ -360,7 +360,50 @@ const Test1Listening = () => {
         </div>
 
         {/* RIGHT SIDE (Questions Table) */}
-        {/* <div className="w-1/2 bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+        <div className="w-1/2 bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+         <div className="flex justify-between items-center p-4 text-gray-500">
+                    {/* clear icon */}
+                    <p>Autosaved @ 2025-10-22 22:59:43. </p>
+                    <div className="relative group">
+                      <div className="flex justify-between items-center">
+                        <span
+                          onClick={() => setIsOpen(true)}
+                          className="text-xl cursor-pointer"
+                        >
+                          <GrClearOption />
+                        </span>
+                      </div>
+                      {/* Tooltip */}
+        
+                      <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                        Clear answer
+                      </span>
+        
+                      {isOpen && (
+                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                          <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                            <h2 className="text-lg font-semibold mb-4">
+                              Are you sure you want to clear all answers?
+                            </h2>
+                            <div className="flex justify-center gap-4">
+                              <button
+                                onClick={() => setIsOpen(false)}
+                                className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                              >
+                                No, keep them
+                              </button>
+                              <button
+                                onClick={handleClear}
+                                className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                              >
+                                Yes, clear them
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
           <h2 className="text-2xl font-bold mb-2">Questions 1–10</h2> <br />
           <h3 className="text-xl font-semibold mb-4">
             Complete the table below. <br /> <br /> Write{" "}
@@ -605,298 +648,8 @@ const Test1Listening = () => {
               </tr>
             </tbody>
           </table>
-        </div> */}
-        <div className="md:w-[60%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[80vh]">
-          <div className="flex justify-end items-center p-4 text-gray-500">
-            {/* clear icon */}
-            <div className="relative group">
-              <span
-                onClick={() => setIsOpen(true)}
-                className="text-xl cursor-pointer"
-              >
-                <GrClearOption />
-              </span>
-              {/* Tooltip */}
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Clear answer of this Part
-              </span>
-
-              {isOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                    <h2 className="text-lg font-semibold mb-4">
-                      Are you sure you want to clear all answers?
-                    </h2>
-                    <div className="flex justify-center gap-4">
-                      <button
-                        onClick={() => setIsOpen(false)}
-                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                      >
-                        No, keep them
-                      </button>
-                      <button
-                        onClick={handleClear}
-                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                      >
-                        Yes, clear them
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <h2 className="text-2xl font-bold mb-3">Questions 1–10</h2>
-          <h3 className="text-xl font-semibold mb-5">
-            Complete the table below. <br /> <br /> Write
-            <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
-            answer.
-          </h3>
-
-          <div className="">
-            <table className="min-w-full border border-gray-300 text-left text-lg">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="border p-3 w-[10%]">Name of restaurant</th>
-                  <th className="border p-3 w-[15%]">Location</th>
-                  <th className="border p-3 w-[20%]">
-                    Reason for recommendation
-                  </th>
-                  <th className="border p-3 w-[20%]">Other comments</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {/* Row 1 */}
-                <tr>
-                  <td className="border p-3">The Junction</td>
-                  <td className="border p-3">
-                    Greyson Street, near the station
-                  </td>
-                  <td className="border p-3">
-                    Good for people who are especially keen on{" "}
-                    <button
-                      onClick={() => toggleButton(1)}
-                      className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[1]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      1
-                    </button>
-                    <input
-                      className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                      type="text"
-                      placeholder=""
-                    />
-                  </td>
-                  <td className="border p-3">
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>Quite expensive</li>
-                      <li>
-                        The{" "}
-                        <button
-                          onClick={() => toggleButton(2)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-1 ${
-                            activeButtons[2]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          2
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                          type="text"
-                          placeholder=""
-                        />
-                        is a good place for a drink
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-
-                {/* Row 2 */}
-                <tr>
-                  <td className="border p-3">Paloma</td>
-                  <td className="border p-3">
-                    In Bow Street next to the cinema
-                  </td>
-                  <td className="border p-3">
-                    <button
-                      onClick={() => toggleButton(3)}
-                      className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[3]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      3
-                    </button>
-                    <input
-                      className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                      type="text"
-                      placeholder=""
-                    />
-                    food, good for sharing
-                  </td>
-                  <td className="border p-3">
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>Staff are very friendly</li>
-                      <li>Need to pay £50 deposit</li>
-                      <li>
-                        A limited selection of{" "}
-                        <button
-                          onClick={() => toggleButton(4)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                            activeButtons[4]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          4
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                          placeholder=""
-                        />{" "}
-                        food on the menu
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-
-                {/* Row 3 */}
-                <tr>
-                  <td className="border p-3">
-                    The{" "}
-                    <button
-                      onClick={() => toggleButton(5)}
-                      className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[5]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      5
-                    </button>
-                    <input
-                      className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                      type="text"
-                      placeholder=""
-                    />
-                  </td>
-                  <td className="border p-3">
-                    At the top of a{" "}
-                    <button
-                      onClick={() => toggleButton(6)}
-                      className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                        activeButtons[6]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      6
-                    </button>
-                    <input
-                      className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                      type="text"
-                      placeholder=""
-                    />
-                  </td>
-                  <td className="border p-3">
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>A famous chef</li>
-                      <li>
-                        All the{" "}
-                        <button
-                          onClick={() => toggleButton(7)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                            activeButtons[7]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          7
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                          placeholder=""
-                        />{" "}
-                        are very good
-                      </li>
-                      <li>
-                        Only uses{" "}
-                        <button
-                          onClick={() => toggleButton(8)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                            activeButtons[8]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          8
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                          placeholder=""
-                        />{" "}
-                        ingredients
-                      </li>
-                    </ul>
-                  </td>
-                  <td className="border p-3">
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Set lunch costs £{" "}
-                        <button
-                          onClick={() => toggleButton(9)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                            activeButtons[9]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          9
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                          placeholder=""
-                        />{" "}
-                        per person
-                      </li>
-                      <li>
-                        Portions probably of{" "}
-                        <button
-                          onClick={() => toggleButton(10)}
-                          className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 mx-2 ${
-                            activeButtons[10]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          10
-                        </button>
-                        <input
-                          className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                          placeholder=""
-                        />{" "}
-                        size
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
+     
       </div>
     </div>
   );
