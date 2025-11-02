@@ -30,7 +30,7 @@ const Test2Listening = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-3xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -50,7 +50,7 @@ const Test2Listening = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-2xl font-bold text-center">
+          <h1 className="text-lg font-bold text-center">
             Conversation about Caring for Elderly Mother and Council Support
           </h1>
 
@@ -308,7 +308,7 @@ const Test2Listening = () => {
               <div className="flex justify-between items-center">
                 <span
                   onClick={() => setIsOpen(true)}
-                  className="text-xl cursor-pointer"
+                  className="text-lg cursor-pointer"
                 >
                   <GrClearOption />
                 </span>
@@ -344,26 +344,26 @@ const Test2Listening = () => {
               )}
             </div>
           </div>
-          <h2 className="text-2xl font-bold mb-3">Questions 1–10</h2>
-          <h3 className="text-xl font-semibold mb-5">
+          <h2 className="text-lg font-bold mb-3">Questions 1–10</h2>
+          <h3 className="text-lg mb-5">
             Complete the table below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
 
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
+            <h1 className="text-lg font-bold text-center mb-4">
               Help for carers
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-xl ">
+              <li className="text-lg ">
                 Local councils can arrange practical support to help those
                 caring for elderly people at home.
               </li>
 
-              <li className="text-xl ">
+              <li className="text-lg ">
                 This can give the carer:
                 <ul className="list-none ml-6 mt-2 space-y-2">
                   <li className="flex items-center gap-2">
@@ -394,13 +394,13 @@ const Test2Listening = () => {
             </ul>
 
             {/* ---------- Section 2 ---------- */}
-            <h2 className="text-xl font-bold mt-6">
+            <h2 className="text-lg font-bold mt-6">
               Assessment of mother's needs
             </h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className="text-xl ">This may include discussion of:</li>
+              <li className="text-lg ">This may include discussion of:</li>
 
-              <li className="flex items-center text-xl gap-2">
+              <li className="flex items-center text-lg gap-2">
                 <span className="w-3 h-3  border-2 border-gray-700 rounded-full inline-block"></span>
                 how much
                 <button
@@ -422,15 +422,15 @@ const Test2Listening = () => {
               </li>
 
               <li className="flex flex-col gap-2">
-                <div className="flex items-center text-xl gap-2">
-                  <span className="w-3 h-3 border-2 text-xl border-gray-700 rounded-full inline-block"></span>
+                <div className="flex items-center text-lg gap-2">
+                  <span className="w-3 h-3 border-2 text-lg border-gray-700 rounded-full inline-block"></span>
                   what types of tasks are involved, e.g.
                 </div>
 
                 {/* Inner square list */}
                 <ul className="list-[square] ml-8 space-y-1">
-                  <li className="text-xl">help with dressing</li>
-                  <li className="text-xl">
+                  <li className="text-lg">help with dressing</li>
+                  <li className="text-lg">
                     helping her have a
                     <button
                       onClick={() => toggleButton(3)}
@@ -448,9 +448,9 @@ const Test2Listening = () => {
                       placeholder=""
                     />
                   </li>
-                  <li className="text-xl">shopping</li>
-                  <li className="text-xl">helping with meals</li>
-                  <li className="text-xl">
+                  <li className="text-lg">shopping</li>
+                  <li className="text-lg">helping with meals</li>
+                  <li className="text-lg">
                     dealing with
                     <button
                       onClick={() => toggleButton(4)}
@@ -473,14 +473,14 @@ const Test2Listening = () => {
             </ul>
 
             {/* ---------- Section 3 ---------- */}
-            <div className="flex items-center text-xl gap-2 mt-4">
+            <div className="flex items-center text-lg gap-2 mt-4">
               <span className="w-3 h-3 border-2 border-gray-700 rounded-full inline-block"></span>
               any aspects of caring that are especially difficult, e.g.
             </div>
 
             {/* Inner list with squares */}
             <ul className="list-[square] ml-8 mt-2 space-y-1">
-              <li className="text-xl">
+              <li className="text-lg">
                 Loss of
                 <button
                   onClick={() => toggleButton(5)}
@@ -518,7 +518,7 @@ const Test2Listening = () => {
                 her
               </li>
 
-              <li className="text-xl">
+              <li className="text-lg">
                 Preventing a
                 <button
                   onClick={() => toggleButton(7)}
@@ -539,12 +539,12 @@ const Test2Listening = () => {
             </ul>
 
             {/* ---------- Section 4 ---------- */}
-            <h2 className="text-xl font-bold mt-6">
+            <h2 className="text-lg font-bold mt-6">
               Types of support that may be offered to carers
             </h2>
 
             <ul className="list-disc list-inside space-y-2 mt-2">
-              <li className="text-xl">
+              <li className="text-lg">
                 transport costs, e.g. cost of a
                 <button
                   onClick={() => toggleButton(8)}
@@ -563,7 +563,7 @@ const Test2Listening = () => {
                 />
               </li>
 
-              <li className="text-xl">
+              <li className="text-lg">
                 car-related costs, e.g. fuel and
                 <button
                   onClick={() => toggleButton(9)}
@@ -582,9 +582,9 @@ const Test2Listening = () => {
                 />
               </li>
 
-              <li className="text-xl">help with housework</li>
+              <li className="text-lg">help with housework</li>
 
-              <li className="text-xl">
+              <li className="text-lg">
                 help to reduce
                 <button
                   onClick={() => toggleButton(10)}

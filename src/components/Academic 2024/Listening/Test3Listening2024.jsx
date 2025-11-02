@@ -356,7 +356,7 @@ const Test3Listening2024 = () => {
             </div>
           </div>
           <h2 className="text-lg font-bold mb-3">Questions 1–6</h2>
-          <h3 className="text-lg font-semibold mb-5">
+          <h3 className="text-lg  mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.

@@ -1,9 +1,19 @@
 import React, { useState } from "react";
+import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
 const Test4Reading = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const handleClear = () => {
+      setActiveButtons({});
+      const inputs = document.querySelectorAll("input[type='text']");
+      inputs.forEach((input) => (input.value = ""));
+      console.log("All answers cleared!");
+      setIsOpen(false);
+    };
 
   const questions = [
     "Georgia O'Keeffe's style was greatly influenced by the changing fashions in art over the seven decades of her career.",
@@ -244,6 +254,50 @@ const Test4Reading = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
+ <div className="flex justify-between items-center p-4 text-gray-500">
+              {/* clear icon */}
+              <p>Autosaved @ 2025-10-22 22:59:43. </p>
+              <div className="relative group">
+                <div className="flex justify-between items-center">
+                  <span
+                    onClick={() => setIsOpen(true)}
+                    className="text-xl cursor-pointer"
+                  >
+                    <GrClearOption />
+                  </span>
+                </div>
+                {/* Tooltip */}
+
+                <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  Clear answer
+                </span>
+
+                {isOpen && (
+                  <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                      <h2 className="text-lg font-semibold mb-4">
+                        Are you sure you want to clear all answers?
+                      </h2>
+                      <div className="flex justify-center gap-4">
+                        <button
+                          onClick={() => setIsOpen(false)}
+                          className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                        >
+                          No, keep them
+                        </button>
+                        <button
+                          onClick={handleClear}
+                          className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                        >
+                          Yes, clear them
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
             <h2 className="text-lg font-bold mb-3">Questions 1-7</h2>
 
             <h3 className="text-lg font-semibold mb-5">
@@ -438,7 +492,7 @@ const Test4Reading = () => {
           <br />
           {/* 2nd step     */}
           <h2 className="text-lg font-bold mb-3">Questions 8-13 </h2> <br />
-          <h3 className="text-xl font-semibold mb-5">
+          <h3 className="text-lg  mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 8-13 on your answer sheet, choose

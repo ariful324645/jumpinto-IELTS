@@ -28,7 +28,7 @@ const Test1Listening = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-2xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -49,7 +49,7 @@ const Test1Listening = () => {
 
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-2xl font-bold text-center">
+          <h1 className="text-xl font-bold text-center">
             Restaurant Recommendations for a Celebration
           </h1>
 
@@ -404,13 +404,13 @@ const Test1Listening = () => {
                       )}
                     </div>
                   </div>
-          <h2 className="text-2xl font-bold mb-2">Questions 1–10</h2> <br />
-          <h3 className="text-xl font-semibold mb-4">
+          <h2 className="text-xl font-bold mb-2">Questions 1–10</h2> <br />
+          <h3 className="text-lg  mb-4">
             Complete the table below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
-          <table className="w-sm border border-gray-300 text-left text-xl">
+          <table className="w-sm border border-gray-300 text-left text-lg">
             <thead className="bg-gray-100">
               <tr>
                 <th className="border p-4">Name of restaurant</th>

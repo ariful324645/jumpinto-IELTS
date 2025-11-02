@@ -28,7 +28,7 @@ const Test1Listening2024 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-3xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -48,7 +48,7 @@ const Test1Listening2024 = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-2xl font-bold text-center">
+          <h1 className="text-xl font-bold text-center">
             School Visit to Hinchingbrooke Country Park
           </h1>
 
@@ -362,7 +362,7 @@ const Test1Listening2024 = () => {
             </div>
           </div>
           <h2 className="text-lg font-bold mb-3">Questions 1–10</h2> <br />
-          <h3 className="text-xl font-semibold mb-5">
+          <h3 className="text-lg mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
@@ -371,7 +371,7 @@ const Test1Listening2024 = () => {
             <h1 className="text-lg font-bold text-center mb-4">
               Hinchingbrooke Country Park
             </h1>
-            <h2 className="text-xl font-bold mt-6">The park</h2>
+            <h2 className="text-lg font-bold mt-6">The park</h2>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
@@ -424,7 +424,7 @@ const Test1Listening2024 = () => {
             </ul>
 
             {/* ---------- Section 2 ---------- */}
-            <h2 className="text-xl font-bold mt-6">
+            <h2 className="text-lg font-bold mt-6">
               Subjects studied in educational visits include
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -512,7 +512,7 @@ const Test1Listening2024 = () => {
             </ul>
 
             {/* ---------- Section 3 ---------- */}
-            <h2 className="text-xl font-bold mt-6">
+            <h2 className="text-lg font-bold mt-6">
               Benefits of outdoor educational visits
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -558,7 +558,7 @@ const Test1Listening2024 = () => {
               </li>
             </ul>
             {/* Inner list with squares */}
-            <h2 className="text-xl font-bold mt-6">Practical issues</h2>
+            <h2 className="text-lg font-bold mt-6">Practical issues</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">Cost per child: £</span>
@@ -600,7 +600,7 @@ const Test1Listening2024 = () => {
             </ul>
 
             {/* ---------- Section 4 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Theatre tickets</h2>
+            <h2 className="text-lg font-bold mt-6">Theatre tickets</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">save up to</span>
@@ -623,7 +623,7 @@ const Test1Listening2024 = () => {
               </li>
             </ul>
 
-            <h2 className="text-xl font-bold mt-6">Free activities</h2>
+            <h2 className="text-lg font-bold mt-6">Free activities</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className="text-lg">Blakewell Gardens:</li>
               <li className=" text-lg ">Roots Music Festival</li>

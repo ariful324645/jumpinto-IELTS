@@ -1,9 +1,19 @@
 import React, { useState } from "react";
+import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
 const Test2Reading = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const handleClear = () => {
+      setActiveButtons({});
+      const inputs = document.querySelectorAll("input[type='text']");
+      inputs.forEach((input) => (input.value = ""));
+      console.log("All answers cleared!");
+      setIsOpen(false);
+    };
 
   const questions = [
     "West Indian manatees can be found in a variety of different aquatic habitats.",
@@ -50,7 +60,7 @@ const Test2Reading = () => {
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold">PASSAGE 1</h1>
+            <h1 className="text-xl font-bold">PASSAGE 1</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -69,7 +79,7 @@ const Test2Reading = () => {
               are based on Reading Passage 1 below.
             </h1>
           </div>
-          <h1 className="text-3xl font-bold text-center">Manatees</h1>
+          <h1 className="text-xl font-bold text-center">Manatees</h1>
 
           <p className="text-lg">
             Manatees, also known as sea cows, are aquatic mammals that belong to
@@ -234,11 +244,58 @@ const Test2Reading = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
+
+              <div className="flex justify-between items-center p-4 text-gray-500">
+                        {/* clear icon */}
+                        <p>Autosaved @ 2025-10-22 22:59:43. </p>
+                        <div className="relative group">
+                          <div className="flex justify-between items-center">
+                            <span
+                              onClick={() => setIsOpen(true)}
+                              className="text-xl cursor-pointer"
+                            >
+                              <GrClearOption />
+                            </span>
+                          </div>
+                          {/* Tooltip */}
+            
+                          <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                            Clear answer
+                          </span>
+            
+                          {isOpen && (
+                            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                              <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                                <h2 className="text-lg font-semibold mb-4">
+                                  Are you sure you want to clear all answers?
+                                </h2>
+                                <div className="flex justify-center gap-4">
+                                  <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                                  >
+                                    No, keep them
+                                  </button>
+                                  <button
+                                    onClick={handleClear}
+                                    className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                                  >
+                                    Yes, clear them
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
             <h2 className="text-xl font-bold mb-3">Questions 1-6</h2>
 
-            <h3 className="text-xl font-semibold mb-5">
+            <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br />
-              Choose <span className="font-bold">ONE WORD AND/OR A NUMBER</span>
+              Choose{" "}
+              <span className="font-bold inline gap-4">
+                ONE WORD AND/OR A NUMBER
+              </span>{" "}
               from the passage for each answer.
             </h3>
 
@@ -248,8 +305,8 @@ const Test2Reading = () => {
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-xl font-bold text-center mb-4">Manatees</h1>
-            <h2 className="text-xl font-bold mt-6">Appearance</h2>
+            <h1 className="text-lg font-bold text-center mb-4">Manatees</h1>
+            <h2 className="text-lg font-bold mt-6">Appearance</h2>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
@@ -276,7 +333,7 @@ const Test2Reading = () => {
             </ul>
 
             {/* ---------- Section 2 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Movement</h2>
+            <h2 className="text-lg font-bold mt-6">Movement</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className="text-lg">
                 have fewer neck bones than most mammals
@@ -324,7 +381,7 @@ const Test2Reading = () => {
             </ul>
 
             {/* ---------- Section 3 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Feeding</h2>
+            <h2 className="text-lg font-bold mt-6">Feeding</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">
@@ -368,7 +425,7 @@ const Test2Reading = () => {
               </li>
             </ul>
             {/* Inner list with squares */}
-            <h2 className="text-xl font-bold mt-6">Breathing</h2>
+            <h2 className="text-lg font-bold mt-6">Breathing</h2>
 
             <ul className="list-disc list-inside space-y-2">
               <li className="text-lg">
@@ -402,7 +459,7 @@ const Test2Reading = () => {
           <br />
           {/* 2nd step     */}
           <h2 className="text-lg font-bold mb-3">Questions 7-13 </h2> <br />
-          <h3 className="text-xl font-semibold mb-5">
+          <h3 className="text-lg font-semibold mb-5">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 7-13 on your answer sheet, choose
@@ -450,7 +507,7 @@ const Test2Reading = () => {
                     <li
                       key={oIndex}
                       onClick={() => handleOptionClick(qIndex, oIndex)}
-                      className="flex items-center gap-2 text-xl cursor-pointer"
+                      className="flex items-center gap-2 text-lg cursor-pointer"
                     >
                       <span
                         className={`w-5 h-5 rounded-full border-2 inline-block transition-colors duration-300 ${

@@ -27,6 +27,12 @@ import Test1Listening2024 from "../components/Academic 2024/Listening/Test1Liste
 import Test2Listening2024 from "../components/Academic 2024/Listening/Test2Listening2024";
 import Test3Listening2024 from "../components/Academic 2024/Listening/Test3Listening2024";
 import Test4Listening2024 from "../components/Academic 2024/Listening/Test4Listening2024";
+import Test1Reading2024 from "../components/Academic 2024/Reading/Test1Reading2024";
+import Test2Reading2024 from "../components/Academic 2024/Reading/Test2Reading2024";
+import Test3Reading2024 from "../components/Academic 2024/Reading/Test3Reading2024";
+import Test4Reading2024 from "../components/Academic 2024/Reading/Test4Reading2024";
+import Test1Writing2024 from "../components/Academic 2024/Writing/Test1Writing2024";
+import Test2Writing2024 from "../components/Academic 2024/Writing/Test2Writing2024";
 
 export const router = createBrowserRouter([
   {
@@ -136,6 +142,30 @@ export const router = createBrowserRouter([
       {
         path: "/2024/Test 4/listening",
         Component: Test4Listening2024,
+      },
+      {
+        path: "/2024/Test 1/reading",
+        Component: Test1Reading2024,
+      },
+      {
+        path: "/2024/Test 2/reading",
+        Component:Test2Reading2024,
+      },
+      {
+        path: "/2024/Test 3/reading",
+        Component:Test3Reading2024,
+      },
+      {
+        path: "/2024/Test 4/reading",
+        Component:Test4Reading2024,
+      },
+      {
+        path: "/2024/Test 1/writing",
+        Component:Test1Writing2024,
+      },
+      {
+        path: "/2024/Test 2/writing",
+        Component:Test2Writing2024,
       },
     ],
   },

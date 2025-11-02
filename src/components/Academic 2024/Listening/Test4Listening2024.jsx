@@ -28,7 +28,7 @@ const Test4Listening2024 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-4 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-3xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -48,7 +48,7 @@ const Test4Listening2024 = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-2xl font-bold text-center">
+          <h1 className="text-xl font-bold text-center">
             Charlotte's First Day at the Supermarket
           </h1>
 
@@ -366,7 +366,7 @@ const Test4Listening2024 = () => {
             </div>
           </div>
           <h2 className="text-lg font-bold mb-3">Questions 1–6</h2>
-          <h3 className="text-lg font-semibold mb-5">
+          <h3 className="text-lg  mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.

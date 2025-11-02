@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
-const Test1Reading = () => {
+const Test1Reading2024 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
 
- 
     const [isOpen, setIsOpen] = useState(false);
   
     const handleClear = () => {
@@ -16,13 +15,15 @@ const Test1Reading = () => {
       console.log("All answers cleared!");
       setIsOpen(false);
     };
+
   const questions = [
-    "There are other parrots that share the kakapo's inability to fly.",
-    "Adult kakapo produce chicks every year.",
-    "Adult male kakapo bring food back to nesting females.",
-    "The Polynesian rat was a greater threat to the kakapo than Polynesian settlers.",
-    "Kakapo were transferred from Rakiura Island to other locations because they were at risk from feral cats.",
-    "One Recovery Plan initiative that helped increase the kakapo population size was caring for struggling young birds.",
+    "People had expected Andy Murray to become the world's top tennis player for at least five years before 2016.",
+    "The change that Andy Murray made to his rackets attracted a lot of attention.",
+    "Most of the world's top players take a professional racket stringer on tour with them.",
+    "Mike and Bob Bryan use rackets that are light in comparison to the majority of rackets..",
+    "Werner Fischer played with a spaghetti-strung racket that he designed himself.",
+    "The weather can affect how professional players adjust the strings on their rackets.",
+    "It was believed that the change Pete Sampras made to his rackets contributed to his strong serve.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -60,7 +61,7 @@ const Test1Reading = () => {
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-lg font-bold">PASSAGE 1</h1>
+            <h1 className="text-xl font-bold">PASSAGE 1</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -73,130 +74,146 @@ const Test1Reading = () => {
           </div>
 
           <div className="">
-            <h1 className="text-lg">
+            <h1 className="text-xl">
               You should spend about 20 minutes on{" "}
               <span className="text-lg font-bold">Questions 1-13</span>, which
               are based on Reading Passage 1 below.
             </h1>
           </div>
-          <h1 className="text-xl font-bold text-center">The kākāpō</h1>
-
-          <h1 className="text-lg  italic font-bold text-center">
-            The kākāpō is a nocturnal, flightless parrot that is critically
-            endangered and one of New Zealand's unique treasures
+          <h1 className="text-xl font-bold text-center">
+            How tennis rackets have changed
           </h1>
 
           <p className="text-lg">
-            The kākāpō, also known as the owl parrot, is a large,
-            forest-dwelling bird, with a pale owl-like face.Up to 64 cm in
-            length, it has predominantly yellow-green feathers, forward-facing
-            eyes, a large grey beak, large blue feet, and relatively short wings
-            and tail.
+            In 2016, the British professional tennis player Andy Murray was
+            ranked as the world's number one.It was an incredible achievement by
+            any standard - made even more remarkable by the fact that he did
+            this during a period considered to be one of the strongest in the
+            sport's history, competing against the likes of Rafael Nadal, Roger
+            Federer and Novak Djokovic, to name just a few.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                It is the world's only flightless parrot, and is also possibly
-                one of the world's longest-living birds, with a reported
-                lifespan of up to 100 years. (1)
+                Yet five years previously, he had been regarded as a talented
+                outsider who entered but never won the major tournaments.(1)
               </span>
             )}
           </p>
           <p className="text-lg">
-            Kākāpō are solitary birds and tend to occupy the same home range for
-            many years.They forage on the ground and climb high into trees.They
-            often leap from trees and flap their wings, but at best manage a
-            controlled descent to the ground.
+            Of the changes that account for this transformation, one was visible
+            and widely publicised: in 2011, Murray invited former number one
+            player Ivan Lendl onto his coaching team - a valuable addition that
+            had a visible impact on the player's playing style.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                They are entirely vegetarian, with their diet including the
-                leaves, roots and bark of trees as well as bulbs, and fern
-                fronds. (7)
+                Another change was so subtle as to pass more or less unnoticed.
+                (2)
+              </span>
+            )}
+            Like many players, Murray has long preferred a racket that consists
+            of two types of string: one for the mains (verticals) and another
+            for the crosses (horizontals).While he continued to use natural
+            string in the crosses, in 2012 he switched to a synthetic string for
+            the mains.A small change, perhaps, but its importance should not be
+            underestimated.
+          </p>
+          <p className="text-lg">
+            The modification that Murray made is just one of a number of options
+            available to players looking to tweak their rackets in order to
+            improve their games."Touring professionals have their rackets
+            customised to their specific needs," says Colin Triplow, a UK-based
+            professional racket stringer."It's a highly important part of
+            performance maximisation."Consequently, the specific rackets used by
+            the world's elite are not actually readily available to the public;
+            rather, each racket is individually made to suit the player who uses
+            it.Take the US professional tennis players Mike and Bob Bryan, for
+            example: "We're very particular with our racket specifications,"
+            they say."All our rackets are sent from our manufacturer to Tampa,
+            Florida, where our frames go through a... thorough customisation
+            process.
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                "They explain how they have adjusted not only racket length, but
+                even experimented with different kinds of paint. (8)
+              </span>
+            )}
+            {highlight && (
+              <span className="ml-2 bg-yellow-100 ">
+                The rackets they use now weigh more than the average model and
+                also have a denser string pattern (i.e. more crosses and
+                mains).(4)
               </span>
             )}
           </p>
-          <p className="text-lg">
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Kākāpō breed in summer and autumn, but only in years when food
-                is plentiful. (2)
-              </span>
-            )}
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Males play no part in incubation or chick-rearing - females
-                alone incubate eggs and feed the chicks (3)
-              </span>
-            )}
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                The 1-4 eggs are laid in soil, which is repeatedly turned over
-                before and during incubation.(8)
-              </span>
-            )}
-            The female kākāpō has to spend long periods away from the nest
-            searching for food, which leaves the unattended eggs and chicks
-            particularly vulnerable to predators.
+          <p className=" text-lg">
+            The primary reason for these modifications is simple: as the line
+            between winning and losing becomes thinner and thinner, even these
+            slight changes become more and more important.As a result, players
+            and their teams are becoming increasingly creative with the
+            modifications to their rackets as they look to maximise their
+            competitive advantage.
           </p>
           <p className="text-lg">
-            Before humans arrived, kākāpō were common throughout New Zealand's
-            forests.However, this all changed with the arrival of the first
-            Polynesian settlers about 700 years ago.For the early settlers, the
-            flightless kākāpō was easy prey.
+            Racket modifications mainly date back to the 1970s, when the amateur
+            German tennis player Werner Fischer started playing with the
+            so-called spaghetti-strung racket.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                They ate its meat and used its feathers to make soft cloaks. (9)
+                It created a string bed that generated so much topspin that it
+                was quickly banned by the International Tennis Federation. (9)
               </span>
             )}
-            With them came the Polynesian dog and rat, which also preyed on
-            kākāpō.By the time European colonisers arrived in the early 1800s,
-            kākāpō had become confined to the central North Island and forested
-            parts of the South Island.The fall in kākāpō numbers was accelerated
-            by European colonisation.
+            However, within a decade or two, racket modification became a
+            regularity.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                A great deal of habitat was lost through forest clearance, and
-                introduced species such as deer depleted the remaining forests
-                of food. (10)
+                Today it is, in many ways, an aspect of the game that is equal
+                in significance to nutrition or training. (10)
               </span>
             )}
-            Other predators such as cats, stoats and two more species of rat
-            were also introduced.The kākāpō were in serious trouble.
           </p>
 
           <p className="text-lg">
-            In 1894, the New Zealand government launched its first attempt to
-            save the kākāpō.Conservationist Richard Henry led an effort to
-            relocate several hundred of the birds to predator-free Resolution
-            Island in Fiordland.Unfortunately, the island didn't remain predator
-            free - stoats arrived within six years, eventually destroying the
-            kākāpō population.By the mid-1900s, the kākāpō was practically a
-            lost species.Only a few clung to life in the most isolated parts of
-            New Zealand.
-          </p>
-          <p className="text-lg">
-            From 1949 to 1973, the newly formed New Zealand Wildlife Service
-            made over 60 expeditions to find kākāpō, focusing mainly on
-            Fiordland.Six were caught, but there were no females amongst them
-            and all but one died within a few months of captivity.In 1974, a new
-            initiative was launched, and by 1977, 18 more kākāpō were found in
-            Fiordland.However, there were still no females.In 1977, a large
-            population of males was spotted in Rakiura - a large island free
-            from stoats, ferrets and weasels.
+            Modifications can be divided into two categories: those to the
+            string bed and those to the racket frame.The former is far more
+            common than the latter: the choice of the strings and the tension
+            with which they are installed is something that nearly all
+            professional players experiment with.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                There were about 200 individuals, and in 1980 it was confirmed
-                females were also present.(11)
+                They will continually change it depending on various factors
+                including the court surface, climatic conditions, and game
+                styles.(6)
               </span>
             )}
-            These birds have been the foundation of all subsequent work in
-            managing the species.
+            Some will even change it depending on how they feel at the time.
           </p>
           <p className="text-lg">
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                Unfortunately, predation by feral cats on Rakiura Island led to
-                a rapid decline in kākāpō numbers.(5)
+                At one time, all tennis rackets were strung with natural gut
+                made from the outer layer of sheep or cow intestines.(11)
               </span>
             )}
+            This all changed in the early 1990s with the development of
+            synthetic strings that were cheaper and more durable.They are made
+            from three materials: nylon (relatively durable and affordable),
+            Kevlar (too stiff to be used alone) or co-polyester (polyester
+            combined with additives that enhance its performance).Even so, many
+            professional players continue to use a "hybrid set-up", where a
+            combination of both synthetic and natural strings are used.
+          </p>
+
+          <p className="text-lg">
+            Of the synthetics, co-polyester is by far the most widely used.It's
+            a perfect fit for the style of tennis now played, where players tend
+            to battle it out from the back of the court rather than coming to
+            the net.Studies indicate that the average spin from a co-polyester
+            string is 25% greater than that from natural string or other
+            synthetics.In a sense, the development of co-polyester strings has
+            revolutionised the game.
+          </p>
+
+          <p className="text-lg">
             As a result, during 1980-97, the surviving population was evacuated
             to three island sanctuaries: Codfish Island, Maud Island and Little
             Barrier Island.However, breeding success was hard to achieve.Rats
@@ -208,23 +225,14 @@ const Test1Reading = () => {
             management in New Zealand.
           </p>
           <p className="text-lg">
+            However, many players go beyond these basic adjustments to the
+            strings and make changes to the racket frame itself.
             {highlight && (
               <span className="ml-2 bg-yellow-100 ">
-                In 1996, a new Recovery Plan was launched, together with a
-                specialist advisory group called the Kākāpō Scientific and
-                Technical Advisory Committee and a higher amount of funding.(12)
-              </span>
-            )}
-            Renewed steps were taken to control predators on the three
-            islands.Cats were eradicated from Little Barrier Island in 1980, and
-            possums were eradicated from Codfish Island by 1986.However, the
-            population did not start to increase until rats were removed from
-            all three islands, and the birds were more intensively managed.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                This involved moving the birds between islands, supplementary
-                feeding of adults and rescuing and hand-raising any failing
-                chicks.(6)
+                For example, much of the serving power of US professional player
+                Pete Sampras was attributed to the addition of four to five lead
+                weights onto his rackets, and today many professionals have the
+                weight adjusted during the manufacturing process.(7),(12)
               </span>
             )}
           </p>
@@ -248,12 +256,19 @@ const Test1Reading = () => {
               </span>
             )}
           </p>
+          <p className="text-lg">
+            Racket customisation and modification have pushed the standards of
+            the game to greater levels that few could have anticipated in the
+            days of natural strings and heavy, wooden frames, and it's exciting
+            to see what further developments there will be in the future.
+          </p>
         </div>
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
-          <div className="flex justify-between items-center p-4 text-gray-500">
+          {/* cleaer icon */}
+          <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
-            <p>Autosaved @ 2025-10-22 22:59:43. </p>
+
             <div className="relative group">
               <div className="flex justify-between items-center">
                 <span
@@ -295,7 +310,7 @@ const Test1Reading = () => {
             </div>
           </div>
           <h2 className="text-lg font-bold mb-3">Questions 1-6 </h2> <br />
-          <h3 className="text-lg  mb-5">
+          <h3 className="text-lg">
             Do the following statements agree with the information given in
             Reading Passage 1? <br /> <br />
             In boxes 1-6 on your answer sheet, choose
@@ -369,55 +384,33 @@ const Test1Reading = () => {
           </div>
           {/* table */}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-lg font-bold mb-3">Questions 7–13</h2>
+            <h2 className="text-lg font-bold mb-3">Questions 8–13</h2>
 
             <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br />
-              Choose{" "}
-              <span className="font-bold inline mr-2">
-                ONE WORD AND/OR A NUMBER
-              </span>
+              Choose <span className="font-bold mr-2">ONE WORD AND/OR A NUMBER</span>
               from the passage for each answer.
             </h3>
 
             <h1 className="text-lg font-semibold">
-              Write your answers in boxes 7–13 on your answer sheet.
+              Write your answers in boxes 8–13 on your answer sheet.
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
-              New Zealand's kakapo
+              The tennis racket and how it has changed
             </h1>
-            <h2 className="text-lg font-bold mt-6">A type of parrot</h2>
 
             {/* ---------- Section 1 ---------- */}
+
+        
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  diet consists of fern fronds, various parts of a tree and
-                </span>
-                <button
-                  onClick={() => toggleButton(7)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  7
-                </button>
-                <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                  placeholder=""
-                />
-              </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">nests are created in</span>
+              <li className="text-lg ">
+                <span>Mike and Bob Bryan made changes to the types of</span>
                 <button
                   onClick={() => toggleButton(8)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[8]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -426,24 +419,20 @@ const Test1Reading = () => {
                   8
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
-                where eggs are laid
+                <span>used on their racket frames.</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              Arrival of Polynesian settlers
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">the</span>
+              <li className="text-lg ">
+                <span>
+                  Players were not allowed to use the spaghetti-strung racket
+                  because of the amount of
+                </span>
                 <button
                   onClick={() => toggleButton(9)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[9]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -452,24 +441,20 @@ const Test1Reading = () => {
                   9
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
-                of the kakapo were used to make clothes
+                <span>it created.</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 3 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              Arrival of European colonisers
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">the</span>
+              <li className="text-lg">
+                <span>
+                  Changes to rackets can be regarded as being as important as
+                  players' diets or the
+                </span>
                 <button
                   onClick={() => toggleButton(10)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[10]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -478,29 +463,19 @@ const Test1Reading = () => {
                   10
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
-                were an animal which they introduced that ate the kakapo's food
-                sources
-              </li>
-            </ul>
-            {/* Inner list with squares */}
-            <h2 className="text-lg font-bold mt-6">Protecting kakapo</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                Richard Henry, a conservationist, tried to protect the kakapo
+                <span>they do.</span>
               </li>
 
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  a definite sighting of female kakapo on Rakiura Island was
-                  reported in the year
+              <li className="text-lg ">
+                <span>
+                  All rackets used to have natural strings made from the
                 </span>
                 <button
                   onClick={() => toggleButton(11)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[11]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -509,18 +484,17 @@ const Test1Reading = () => {
                   11
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
+                <span>of animals.</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  the Recovery Plan included an increase in
-                </span>
+
+              <li className="text-lg ">
+                <span>Pete Sampras had metal</span>
                 <button
                   onClick={() => toggleButton(12)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[12]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -529,19 +503,17 @@ const Test1Reading = () => {
                   12
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
+                <span>put into the frames of his rackets.</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  a current goal of the Recovery Plan is to maintain the
-                  involvement of
-                </span>
+
+              <li className="text-lg ">
+                <span>Gonçalo Oliveira changed the</span>
                 <button
                   onClick={() => toggleButton(13)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[13]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -550,11 +522,10 @@ const Test1Reading = () => {
                   13
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
-                  placeholder=""
                 />
-                in kakapo protection
+                <span>on his racket handles.</span>
               </li>
             </ul>
           </div>
@@ -564,4 +535,4 @@ const Test1Reading = () => {
   );
 };
 
-export default Test1Reading;
+export default Test1Reading2024;

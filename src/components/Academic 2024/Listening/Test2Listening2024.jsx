@@ -28,7 +28,7 @@ const Test2Listening2024 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-3xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -48,7 +48,7 @@ const Test2Listening2024 = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-2xl font-bold text-center">
+          <h1 className="text-xl font-bold text-center">
             Inside Coleman's Guitar Experience
           </h1>
 
@@ -419,14 +419,14 @@ const Test2Listening2024 = () => {
             </div>
           </div>
           <h2 className="text-lg font-bold mb-3">Questions 1–6</h2> 
-          <h3 className="text-xl font-semibold mb-5">
+          <h3 className="text-lg  mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">Guitar Group</h1>
-            <h2 className="text-xl font-bold mt-6">Coordinator:</h2>
+            <h2 className="text-lg font-bold mt-6">Coordinator:</h2>
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
@@ -449,7 +449,7 @@ const Test2Listening2024 = () => {
               </li>
             </ul>
             {/* ---------- Section 2 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Level:</h2>
+            <h2 className="text-lg font-bold mt-6">Level:</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block"></span>
@@ -471,7 +471,7 @@ const Test2Listening2024 = () => {
               </li>
             </ul>
             {/* ---------- Section 3 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Place:</h2>
+            <h2 className="text-lg font-bold mt-6">Place:</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">The</span>
@@ -513,7 +513,7 @@ const Test2Listening2024 = () => {
               <li className="text-lg">First floor, Room T347</li>
             </ul>
             {/* Inner list with squares */}
-            <h2 className="text-xl font-bold mt-6">Time:</h2>
+            <h2 className="text-lg font-bold mt-6">Time:</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">Thursday morning at</span>
@@ -535,7 +535,7 @@ const Test2Listening2024 = () => {
               </li>
             </ul>
             {/* ---------- Section 4 ---------- */}
-            <h2 className="text-xl font-bold mt-6">Recommended website: </h2>
+            <h2 className="text-lg font-bold mt-6">Recommended website: </h2>
             <ul className="list-disc list-inside space-y-2">
               <li className=" text-lg ">
                 <span className=" inline-block">The Perfect</span>
@@ -560,7 +560,7 @@ const Test2Listening2024 = () => {
           </div>
           <div className="mt-5">
             <h2 className="text-lg font-bold mb-3">Questions 7–10</h2>
-            <h3 className="text-xl font-semibold mb-5">
+            <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br /> Write{" "}
               <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for
               each answer.
@@ -573,7 +573,7 @@ const Test2Listening2024 = () => {
                   <th className="border border-gray-400 p-2"></th>
                   <th
                     colSpan="3"
-                    className="border border-gray-400 text-xl font-bold p-2"
+                    className="border border-gray-400 text-lg font-bold p-2"
                   >
                     A typical 45-minute guitar lesson
                   </th>
