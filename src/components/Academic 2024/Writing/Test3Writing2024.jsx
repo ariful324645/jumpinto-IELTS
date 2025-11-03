@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-const Test2Writing2024 = () => {
+const Test3Writing2024 = () => {
   const [message, setMessage] = useState("");
   const [sentenceCount, setSentenceCount] = useState(0);
   const [submittedMessage, setSubmittedMessage] = useState("");
@@ -44,7 +44,7 @@ const Test2Writing2024 = () => {
               You should spend about 20 minutes on this task.
             </h1>
             <p className="text-lg p-5 font-bold italic border-2 border-black">
-              The plans below show a harbour in 2000 and how it looks today.{" "}
+              The diagram below shows how a biofuel called ethanol is produced.{" "}
               <br /> <br />
               Summarise the information by selecting and reporting the main
               features, and make comparisons where relevant.
@@ -52,11 +52,12 @@ const Test2Writing2024 = () => {
 
             <p className="text-lg mt-4">Write at least 150 words.</p>
             <br />
+
             {/* image */}
             <div className="flex items-center justify-center">
               <img
                 className="w-90 h-auto"
-                src="https://i.ibb.co.com/Xf7W7Q2D/w2-2024.jpg"
+                src="https://i.ibb.co.com/fdKwYNkJ/w3-2024.jpg"
                 alt="Eikhane image bosabo"
               />
             </div>
@@ -69,31 +70,30 @@ const Test2Writing2024 = () => {
             </p>
             <br />
             <h1 className="text-xl text-center  font-bold ">
-              Changes of Porth Harbour from 2000 to Present
+              Biofuel Production: How Ethanol Is Made
             </h1>
             <p className="mt-5">
-              The two maps respectively depict the layout of Porth Harbour in
-              2000 and its current appearance. <br /> <br /> In 2000, Porth
-              Harbour had a clear division of areas. Along the main road, there
-              were two car parks, one of which was adjacent to the showers and
-              toilets. The marina for private yachts was located on the
-              northwest side of the harbour. Fishing boats were moored in the
-              southwest part. There was a dock near the public beach in the
-              northeast, where passenger ferries were anchored. Besides, a
-              lifeboat station was set on the road close to the disused castle,
-              and another public beach was on the southern coast near the
-              castle. <br /> <br /> Currently, several changes have taken place.
-              An extra set of showers and toilets has been built near the
-              southern car park. The fishing boats' mooring area and the marina
-              for private yachts have been swapped with each other. A row of
-              cafés and shops has emerged along the road, replacing part of the
-              previous open-space area. The disused castle has been transformed
-              into a hotel, and the nearby public beach has become a private one
-              for the hotel. In addition, the number of docks has also
-              increased. Although the positions of the passenger ferries and
-              lifeboat station remain largely the same, the overall
-              functionality and appearance of the harbour have been
-              significantly updated.
+              The diagram illustrates the production process of ethanol, a type
+              of biofuel, in a cyclical manner. This cycle for biofuel
+              production involves three main stages: harvesting and preparing
+              plant material for processing, producing ethanol by chemical
+              processing, then using the fuel for transportation, before the
+              cycle begins again. <br /> <br /> The process commences with
+              plants and trees growing, utilizing energy from sunlight and
+              carbon dioxide in the atmosphere. Once mature, they are harvested.
+              Subsequently, the harvested materials undergo pre-processing to
+              obtain cellulose. <br /> <br />
+              The cellulose then enters the processing stage. Here, it is
+              converted into sugars, and with the addition of microbes, ethanol
+              is produced. <br /> <br /> After production, ethanol serves as a
+              fuel for various vehicles such as cars, trucks, and airplanes.
+              During the combustion of ethanol in these vehicles, carbon dioxide
+              is emitted back into the atmosphere. This carbon dioxide is then
+              available for plants and trees to use in their growth process
+              again, completing the cycle. <br /> <br /> Overall, the production
+              of ethanol is a sustainable process that recycles carbon dioxide
+              and makes use of natural resources like plants and trees to create
+              a renewable energy source.
             </p>
           </div>
         </div>
@@ -139,4 +139,4 @@ const Test2Writing2024 = () => {
   );
 };
 
-export default Test2Writing2024;
+export default Test3Writing2024;

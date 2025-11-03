@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-const Test2Writing2024 = () => {
+const Test4Writing2024 = () => {
   const [message, setMessage] = useState("");
   const [sentenceCount, setSentenceCount] = useState(0);
   const [submittedMessage, setSubmittedMessage] = useState("");
@@ -44,19 +44,21 @@ const Test2Writing2024 = () => {
               You should spend about 20 minutes on this task.
             </h1>
             <p className="text-lg p-5 font-bold italic border-2 border-black">
-              The plans below show a harbour in 2000 and how it looks today.{" "}
-              <br /> <br />
-              Summarise the information by selecting and reporting the main
-              features, and make comparisons where relevant.
+              The charts below give information on the location and types of
+              dance classes young people in a town in Australia are currently
+              attending . <br /> <br /> Summarise the information by selecting
+              and reporting the main features, and make comparisons where
+              relevant.
             </p>
 
             <p className="text-lg mt-4">Write at least 150 words.</p>
             <br />
+
             {/* image */}
             <div className="flex items-center justify-center">
               <img
                 className="w-90 h-auto"
-                src="https://i.ibb.co.com/Xf7W7Q2D/w2-2024.jpg"
+                src="https://i.ibb.co.com/4gNm8f0g/w4-2024.jpg"
                 alt="Eikhane image bosabo"
               />
             </div>
@@ -69,31 +71,31 @@ const Test2Writing2024 = () => {
             </p>
             <br />
             <h1 className="text-xl text-center  font-bold ">
-              Changes of Porth Harbour from 2000 to Present
+              Dance Classes in an Australian Town: Location and Age-related
+              Preferences
             </h1>
             <p className="mt-5">
-              The two maps respectively depict the layout of Porth Harbour in
-              2000 and its current appearance. <br /> <br /> In 2000, Porth
-              Harbour had a clear division of areas. Along the main road, there
-              were two car parks, one of which was adjacent to the showers and
-              toilets. The marina for private yachts was located on the
-              northwest side of the harbour. Fishing boats were moored in the
-              southwest part. There was a dock near the public beach in the
-              northeast, where passenger ferries were anchored. Besides, a
-              lifeboat station was set on the road close to the disused castle,
-              and another public beach was on the southern coast near the
-              castle. <br /> <br /> Currently, several changes have taken place.
-              An extra set of showers and toilets has been built near the
-              southern car park. The fishing boats' mooring area and the marina
-              for private yachts have been swapped with each other. A row of
-              cafés and shops has emerged along the road, replacing part of the
-              previous open-space area. The disused castle has been transformed
-              into a hotel, and the nearby public beach has become a private one
-              for the hotel. In addition, the number of docks has also
-              increased. Although the positions of the passenger ferries and
-              lifeboat station remain largely the same, the overall
-              functionality and appearance of the harbour have been
-              significantly updated.
+              The provided charts offer insights into the location and types of
+              dance classes attended by young people in an Australian town.{" "}
+              <br /> <br /> In terms of the location of dance classes, as
+              depicted in the pie chart, private studios emerge as the most
+              favored venue, accommodating nearly half (48%) of all dance
+              classes. School halls (after-school) follow, accounting for 24% of
+              the total. Community halls and other locations jointly constitute
+              18%, while college-based studios are the least utilized,
+              representing a mere 10%. <br /> <br /> The bar chart presents a
+              breakdown of the types of dance classes by age group. Ballet
+              attracts a significantly larger number of students under 11 (over
+              600) compared to 11-16-year-olds (around 300). In contrast, for
+              tap dance, 11-16-year-olds (approximately 450) outnumber those
+              under 11 (around 420) slightly. Modern dance shows an inverse
+              pattern, with around 500 students aged 11-16 and only about 300
+              students under 11. <br /> <br /> Overall, it is evident that
+              private studios are the dominant choice for dance-class locations.
+              Moreover, different dance types have distinct appeal across age
+              groups, with ballet being more popular among younger students, tap
+              dance having a slight edge among older students, and modern dance
+              showing a preference for the 11-16 age bracket.
             </p>
           </div>
         </div>
@@ -139,4 +141,4 @@ const Test2Writing2024 = () => {
   );
 };
 
-export default Test2Writing2024;
+export default Test4Writing2024;

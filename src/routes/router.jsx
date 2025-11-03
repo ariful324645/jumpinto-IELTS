@@ -33,6 +33,8 @@ import Test3Reading2024 from "../components/Academic 2024/Reading/Test3Reading20
 import Test4Reading2024 from "../components/Academic 2024/Reading/Test4Reading2024";
 import Test1Writing2024 from "../components/Academic 2024/Writing/Test1Writing2024";
 import Test2Writing2024 from "../components/Academic 2024/Writing/Test2Writing2024";
+import Test3Writing2024 from "../components/Academic 2024/Writing/Test3Writing2024";
+import Test4Writing2024 from "../components/Academic 2024/Writing/Test4Writing2024";
 
 export const router = createBrowserRouter([
   {
@@ -166,6 +168,14 @@ export const router = createBrowserRouter([
       {
         path: "/2024/Test 2/writing",
         Component:Test2Writing2024,
+      },
+      {
+        path: "/2024/Test 3/writing",
+        Component:Test3Writing2024,
+      },
+      {
+        path: "/2024/Test 4/writing",
+        Component:Test4Writing2024,
       },
     ],
   },

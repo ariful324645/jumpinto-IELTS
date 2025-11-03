@@ -30,7 +30,7 @@ const Test1Writing2024 = () => {
   };
 
   return (
-    <div className="px-3">
+    <div className="p-6">
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
@@ -55,8 +55,12 @@ const Test1Writing2024 = () => {
             <br />
 
             {/* image */}
-            <div>
-              <img src="" alt="Eikhane image bosabo" />
+            <div className="flex items-center justify-center">
+              <img
+                className="w-auto h-auto"
+                src="https://i.ibb.co.com/Q7SmjBj2/w1-2024.jpg"
+                alt="Eikhane image bosabo"
+              />
             </div>
 
             <br />
@@ -75,25 +79,26 @@ const Test1Writing2024 = () => {
               different activities at a social centre in Melbourne, Australia,
               from 2000 to 2020. Overall, while some activities witnessed
               significant growth, others experienced a decline, and one remained
-              consistently popular. <br /> <br /> The film club was the most popular activity
-              throughout the period. In 2000, it boasted approximately 64
-              participants. Although the number dipped to around 60 in 2010, it
-              rebounded to nearly 66 by 2020. <br /> <br /> Martial arts participation was
-              characterized by fluctuations. Starting at about 36 in 2000, it
-              decreased to roughly 32 in 2005, reached a peak of 39 in 2010, and
-              then returned to around 36 in 2020. <br /> <br />  Table-tennis showed a
+              consistently popular. <br /> <br /> The film club was the most
+              popular activity throughout the period. In 2000, it boasted
+              approximately 64 participants. Although the number dipped to
+              around 60 in 2010, it rebounded to nearly 66 by 2020. <br />{" "}
+              <br /> Martial arts participation was characterized by
+              fluctuations. Starting at about 36 in 2000, it decreased to
+              roughly 32 in 2005, reached a peak of 39 in 2010, and then
+              returned to around 36 in 2020. <br /> <br /> Table-tennis showed a
               remarkable upward trend. Beginning with just about 16 participants
               in 2000, it soared to approximately 54 in 2020, outpacing all
-              other activities in terms of growth rate. <br /> <br /> Amateur dramatics, on
-              the other hand, suffered a steady decline. The number of
-              participants dropped from around 26 in 2000 to merely about 7 in
-              2020. Musical performances started from scratch in 2000. <br /> <br /> They
-              gradually gained popularity, reaching around 12 in 2010 and
-              approximately 19 in 2020. <br /> <br /> In conclusion, the popularity of
-              activities at the social centre varied significantly over the
-              20-year period, with table-tennis emerging as the fastest-growing
-              activity and amateur dramatics experiencing the most substantial
-              decline.
+              other activities in terms of growth rate. <br /> <br /> Amateur
+              dramatics, on the other hand, suffered a steady decline. The
+              number of participants dropped from around 26 in 2000 to merely
+              about 7 in 2020. Musical performances started from scratch in
+              2000. <br /> <br /> They gradually gained popularity, reaching
+              around 12 in 2010 and approximately 19 in 2020. <br /> <br /> In
+              conclusion, the popularity of activities at the social centre
+              varied significantly over the 20-year period, with table-tennis
+              emerging as the fastest-growing activity and amateur dramatics
+              experiencing the most substantial decline.
             </p>
           </div>
         </div>
