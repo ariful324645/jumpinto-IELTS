@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 
-const Test4Listening2024 = () => {
+const Test3Listening2023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +23,12 @@ const Test4Listening2024 = () => {
   return (
     <div className="px-3">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex px-3 gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-4 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">PART 1</h1>
+            <h1 className="text-3lg font-bold">PART 1</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -48,280 +48,268 @@ const Test4Listening2024 = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-xl font-bold text-center">
-            Charlotte's First Day at the Supermarket
-          </h1>
+          <h1 className="text-xl font-bold text-center">Wayside Camera Club</h1>
 
           <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear
-            two neighbors who live in an apartment block talking about shopping
-            for food.First you have some time to look at questions 1 to 6.Now
-            listen carefully and answer questions 1 to 6.
+            <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear a
+            man talking to the coordinator of a photography club.First, you have
+            some time to look at questions 1 to 4.Now listen carefully and
+            answer questions 1 to 4.
           </h3>
 
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span> Hello, Charlotte.
+            <span className="font-bold">BREDA:</span> Hello, Wayside Camera
+            Club, Breda speaking.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>Oh, hello.Um. My name is Dan,
+            and I'd like to join your club.
+          </h3>
+
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>That's great, Dan.We have
+            an application form.Would you like to complete it over the
+            phone?Then you can ask any questions you might have.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>Oh, yes, thanks.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>OK, so what's your family
+            name?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>It's Green, Dan Green.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>So, can I take your email
+            address?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>Yes, it's dan1068@market.com.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>Thanks, and what about your
+            home address?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>Well, I'm about 10 miles away
+            from your club in Peacetown.I live in a house there.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>OK, so what's the house
+            number and street?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>That's great, Dan.We have an
+            application form.Would you like to complete it over the phone?Then
+            you can ask any questions you might have.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>OK, so what's the house
+            number and street?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>{" "}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              I'm Kaeden, one of the supervisors.
+              It's 52 Marrowfield Street.
               {highlight && "(1)"}
             </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>Hi, Aiden.
+            <span className="font-bold">BREDA:</span>Is that MARROWFIELD?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>That's right.
           </h3>
 
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>Uh. It's Kaeden.
+            <span className="font-bold">BREDA:</span>And that's Peacetown, you
+            said?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> I'm so sorry.
+            <span className="font-bold">DAN:</span>Uh huh.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span> Oh, don't worry.People
-            often get my name wrong, ha ha.They never know how to spell it.It's
-            K A E D E N, in case you ever need to write it.
+            <span className="font-bold">BREDA:</span>So, how did you hear about
+            our club?Did you look on the internet?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> Uh. The email I
-            received said to go to the front desk to show my letter of
-            appointment and pick up my badge.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>You'll need that for the
-            staffroom and other areas of the supermarket where shoppers aren't
-            allowed.So, after you've finished at the front desk, I'll take you
-            to the staffroom.
+            <span className="font-bold">DAN:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Put your coat and rucksack in one of the lockers there, uh, take
-              whichever one is free.
+              I usually do that, but this time well, I was talking to a relative
+              the other day, and he suggested it.
               {highlight && "(2)"}
             </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>
-            Will I have a key?
+            <span className="font-bold">BREDA:</span>Oh, is he a member too?
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
-            You also need to go to the HR department to see Tiffany.She's really
-            helpful.
+            <span className="font-bold">DAN:</span>He belongs to another club,
+            but he'd heard good things about yours.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>
+            <span className="font-bold">BREDA:</span>Right, anything else?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              I was told to bring my passport with me.
+              Well, I also like to socialize with other photographers.
               {highlight && "(3)"}
             </span>
-            HR need to take a note of the number in it.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>That's right.Or you can
-            show your ID card.
+            <span className="font-bold">BREDA:</span>It's £30 a year for full
+            membership, or £20 a year if you're an associate.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>I don't have one of
-            those.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
+            <span className="font-bold">DAN:</span>{" "}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              OK, Tiffany will give you a uniform.
+              I think I'll go for the full membership then.
               {highlight && "(4)"}
             </span>
-            Uh. They have lots in different sizes, so you just tell her what you
-            need.I won't come with you to HR.I've got to go and sort something
-            else out.Um. Problem with a bread slicer.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>Is the HR office near
-            the staffroom?
+            <span className="font-bold">BREDA:</span>So, you said you wanted to
+            compete.Have you ever won any photography competitions?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
+            <span className="font-bold">DAN:</span>Not yet, but I have entered 3
+            in the past.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">BREDA:</span>Oh, that's interesting.So
+            why don't you tell me something about those?Let's start with the
+            first one.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>{" "}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              The staffroom is on the first floor, and HR are a couple of floors
-              above that, on the third floor.
+              Well, the theme was entitled "Domestic life".
               {highlight && "(5)"}
             </span>
-            There's a staircase outside the staffroom.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> OK.
+            <span className="font-bold">BREDA:</span>So what was the theme of
+            the second competition?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
-            Uh. I'll just give you my phone number in case you can't find me.Uh.
-            Have you got your phone there?
+            <span className="font-bold">DAN:</span>Well, my university was on
+            the coast, and that area gets a lot of beautiful sunsets.So that was
+            the theme.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>Uh. Yes, uh OK, ready?
+            <span className="font-bold">BREDA:</span>Oh sunsets, that's a great
+            theme.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
+            <span className="font-bold">DAN:</span>{" "}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              It's oh four one two double six five nine oh three (0412665903).
+              Yes, the instructions were to capture the clouds as well.
               {highlight && "(6)"}
             </span>
+            Uh. It couldn't just be blue sky and a setting sun. BREDA:Sure,
+            cause they give you all those amazing pinks and purples.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>
-            OK.Done.
+            <span className="font-bold">BREDA:</span>Sure, cause they give you
+            all those amazing pinks and purples.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>So, Charlotte, your tasks
-            today are in the bakery section, on the sushi counter, and on the
-            meat and fish counters.The first job is to check sell-by dates on
-            the bread and cakes.If any of the dates are today's, put a new price
-            label on the packaging.
+            <span className="font-bold">DAN:</span>Yeah, and I thought I'd done
+            that well, but the feedback was that I should have waited a bit
+            longer to get the shot.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>
-            What if any of the labels are yesterday's dates or older?Do I throw
-            those items away?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
-            Yes, but that shouldn't happen.We check the stock every day.
+            <span className="font-bold">BREDA:</span> I see
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              When something needs a new price label, put a yellow one on the
-              package next to the original price.
+              So the timing wasn't right.
               {highlight && "(7)"}
             </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> OK.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>Uh. For today, you'll just
-            be helping the staff..
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>
-            Yes, of course.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
-            You'll see lots of flat-cardboard boxes at one end of the counter.
+            <span className="font-bold">DAN:</span>Yes, I took it too soon,
+            basically.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Beneath those is where we keep the plastic boxes.
+              And then the third competition I entered was called Animal Magic.
               {highlight && "(8)"}
             </span>
-            We run out of those really quickly, so you should bring more from
-            the storeroom.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>Is that my only task on
-            the sushi counter?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span> Uh. Finally the meat and
-            fish counters, you need to clean the area where staff serve
-            customers, including wiping the weighing scales.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> OK.Anything else?
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
+            <span className="font-bold">BREDA:</span>I'm sure, because animals
+            move all the time.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">DAN:</span>That's what we had to show.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Um. The fish is laid on ice, but when that starts to melt, you'll
-              need to get more from the cold-room.
+              There had to be some movement in the scene.
               {highlight && "(9)"}
             </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span>I know the staff on the
-            food counters wear a hat.Will that be the same for me?
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">KAEDEN:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              You won't be serving customers directly, so, no, but make sure you
-              put on thermal gloves when you take anything out of the cold-room.
+              I got a great shot of a fox in the end, but I took it at night,
+              and well, I suspected that it was a bit dark, which is what I was
+              told.
               {highlight && "(10)"}
             </span>
-            The temperature's low enough in there to get frostbite from touching
-            things.
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">CHARLOTTE:</span> Understood.
+            <span className="font-bold">BREDA:</span>Well, Dan, you seem to be
+            really keen, and we'd be delighted to have you in our club.I'm sure
+            we can help with all those areas that you've outlined.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span> That is the end of
-            part 1.You now have one minute to check your answers to part 1.
+            <span className="font-bold">DAN:</span>Thanks, that's great.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span>That is the end of part
+            1.You now have one minute to check your answers to part 1.
           </h3>
         </div>
 
         {/* right div */}
-        <div className="md:w-[72%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -333,7 +321,6 @@ const Test4Listening2024 = () => {
                   <GrClearOption />
                 </span>
               </div>
-
               {/* Tooltip */}
               <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                 Clear answer
@@ -365,22 +352,35 @@ const Test4Listening2024 = () => {
             </div>
           </div>
 
-          <h2 className="text-lg font-bold mb-3">Questions 1–6</h2>
+          <h2 className="text-lg font-bold mb-3">Questions 1–4</h2>
           <h3 className="text-lg mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
 
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-xl font-bold text-center mb-4">
-              First day at work
+          <div className=" overflow-x-auto border-2 border-black bg-white rounded-lg p-8 shadow-lg">
+            <h1 className="text-xl font-bold text-center mb-8">
+              Wayside Camera Club Membership Form
             </h1>
 
-            <h2 className="text-lg font-bold mt-6">Name of supervisor:</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block"></span>
+            {/* ---------- Section 1 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Name:</h2>
+              <span className="text-lg flex-1">Dan Green</span>
+            </div>
+
+            {/* ---------- Section 2 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Email address:</h2>
+              <span className="text-lg flex-1">dan1068@market.com</span>
+            </div>
+
+            {/* ---------- Section 3 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Home address:</h2>
+              <div className="flex items-center flex-wrap gap-2 flex-1">
+                <span>52</span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -392,21 +392,21 @@ const Test4Listening2024 = () => {
                   1
                 </button>
                 <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-3 py-1"
                   type="text"
                 />
-              </li>
-            </ul>
+                <span>Street, Peacetown</span>
+              </div>
+            </div>
 
-            <h2 className="text-lg font-bold mt-6">
-              Where to leave coat and bag:
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block">Use</span>
+            {/* ---------- Section 4 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Heard about us:</h2>
+              <div className="flex items-center gap-2 flex-1">
+                <span>from a </span>
                 <button
                   onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[2]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -415,20 +415,20 @@ const Test4Listening2024 = () => {
                   2
                 </button>
                 <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-3 py-1"
                   type="text"
                 />
-                <span>in staffroom</span>
-              </li>
-            </ul>
+              </div>
+            </div>
 
-            <h2 className="text-lg font-bold mt-6">See Tiffany in HR:</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block">to give</span>
+            {/* ---------- Section 5 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Reason for joining:</h2>
+              <div className="flex items-center flex-wrap gap-2 flex-1">
+                <span>to enter competitions, to</span>
                 <button
                   onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[3]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -437,17 +437,19 @@ const Test4Listening2024 = () => {
                   3
                 </button>
                 <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-3 py-1"
                   type="text"
                 />
-                <span>number</span>
-              </li>
+              </div>
+            </div>
 
-              <li className="text-lg">
-                <span className="inline-block">to collect</span>
+            {/* ---------- Section 6 ---------- */}
+            <div className="flex items-center justify-between gap-10 mb-4">
+              <h2 className="text-lg font-bold w-48">Type of membership:</h2>
+              <div className="flex items-center flex-wrap gap-2 flex-1">
                 <button
                   onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[4]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -456,62 +458,17 @@ const Test4Listening2024 = () => {
                   4
                 </button>
                 <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-3 py-1"
                   type="text"
                 />
-                <span>outside</span>
-              </li>
-            </ul>
-
-            <h2 className="text-lg font-bold mt-6">Location of HR office:</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block">On</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>floor.</span>
-              </li>
-            </ul>
-
-            <h2 className="text-lg font-bold mt-6">
-              Supervisor's mobile number:
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block"></span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-              </li>
-            </ul>
+                <span>membership (£30)</span>
+              </div>
+            </div>
           </div>
 
           {/* TABLE SECTION */}
           <div className="mt-5">
-            <h2 className="text-lg font-bold mb-3">Questions 7–10</h2>
+            <h2 className="text-lg font-bold mb-3">Questions 5–10</h2>
             <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br /> Write{" "}
               <span className="font-bold">ONLY ONE WORD</span> for each answer.
@@ -521,32 +478,70 @@ const Test4Listening2024 = () => {
               <thead>
                 <tr>
                   <th
-                    colSpan="4"
+                    colSpan="3"
                     className="border border-gray-400 text-lg font-bold p-2"
                   >
-                    Responsibilities
+                    Photography competitions
                   </th>
                 </tr>
                 <tr>
-                  <th className="border p-2"></th>
-                  <th className="border p-2">Task1</th>
-                  <th className="border p-2">Task2</th>
-                  <th className="border p-2">Task3</th>
+                  <th className="border p-2">Title of competition</th>
+                  <th className="border p-2">Instructions</th>
+                  <th className="border p-2">Feedback to Dan</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td className="border border-gray-400 p-2">
+                    <span>"</span>
+                    <button
+                      onClick={() => toggleButton(5)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[5]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      5
+                    </button>
+                    <input
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      type="text"
+                    />
+                    <span>"</span>
+                  </td>
+
+                  <td className="border border-gray-400 text-sm  p-2">
+                    A scene in the home
+                  </td>
+                  <td className="border border-gray-400 p-2">
+                    The picture's composition was not good.
+                  </td>
+                </tr>
+                <tr>
                   <td className="border border-gray-400 text-sm font-bold p-2">
-                    Bakery section
+                    'Beautiful Sunsets'
                   </td>
                   <td className="border border-gray-400 p-2">
-                    Check sell-by dates
+                    <span>Scene must show some</span>
+                    <button
+                      onClick={() => toggleButton(6)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[6]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      6
+                    </button>
+                    <input
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      type="text"
+                    />
+                    <span>.</span>
                   </td>
                   <td className="border border-gray-400 p-2">
-                    Change price labels
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    <span>Use</span>
+                    <span>The</span>
                     <button
                       onClick={() => toggleButton(7)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -561,16 +556,13 @@ const Test4Listening2024 = () => {
                       className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
                     />
-                    <span>labels</span>
+                    <span>was wrong..</span>
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
-                    Sushi takeaway counter
-                  </td>
                   <td className="border border-gray-400 p-2">
-                    <span>Re-stock with</span>
+                    <span>"</span>
                     <button
                       onClick={() => toggleButton(8)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -585,25 +577,10 @@ const Test4Listening2024 = () => {
                       className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
                     />
-                    <span>boxes if needed</span>
+                    <span>"</span>
                   </td>
                   <td className="border border-gray-400 p-2">
-                    Wipe preparation area and clean the sink
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    Do not clean any knives
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
-                    Meat and fish counters
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    Clean the serving area, including the weighing scales
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    <span>Collect</span>
+                    <span>Scene must show</span>
                     <button
                       onClick={() => toggleButton(9)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -618,10 +595,10 @@ const Test4Listening2024 = () => {
                       className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
                     />
-                    <span>for the fish from the cold-room</span>
+                    <span>.</span>
                   </td>
                   <td className="border border-gray-400 p-2">
-                    <span>Must wear special</span>
+                    <span> The photograph was too</span>
                     <button
                       onClick={() => toggleButton(10)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -636,6 +613,7 @@ const Test4Listening2024 = () => {
                       className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
                     />
+                    <span>.</span>
                   </td>
                 </tr>
               </tbody>
@@ -647,4 +625,4 @@ const Test4Listening2024 = () => {
   );
 };
 
-export default Test4Listening2024;
+export default Test3Listening2023;

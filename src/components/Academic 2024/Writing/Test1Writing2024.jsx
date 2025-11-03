@@ -30,7 +30,7 @@ const Test1Writing2024 = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="px-3">
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}

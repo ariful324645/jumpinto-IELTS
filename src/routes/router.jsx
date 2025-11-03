@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home";
 import Login from "../components/Login";
 import VoiceIelts from "../components/VoiceIelts";
 import VocabularySearch from "../components/VocabularySearch";
-import AllListening from "../components/AllListening";
+
 import Test1Listening from "../components/Academic 2025/Test1Listening";
 import Test2Listening from "../components/Academic 2025/Test2Listening";
 import Test3Listening from "../components/Academic 2025/Test3Listening";
@@ -35,6 +35,15 @@ import Test1Writing2024 from "../components/Academic 2024/Writing/Test1Writing20
 import Test2Writing2024 from "../components/Academic 2024/Writing/Test2Writing2024";
 import Test3Writing2024 from "../components/Academic 2024/Writing/Test3Writing2024";
 import Test4Writing2024 from "../components/Academic 2024/Writing/Test4Writing2024";
+import Test1Speaking2024 from "../components/Academic 2024/Speaking/Test1Speaking2024";
+import Test2Speaking2024 from "../components/Academic 2024/Speaking/Test2Speaking2024";
+import Test3Speaking2024 from "../components/Academic 2024/Speaking/Test3Speaking2024";
+import Test4Speaking2024 from "../components/Academic 2024/Speaking/Test4Speaking2024";
+import Test1Listening2023 from "../components/Academic 2023/Listening/Test1Listening2023";
+import Test2Listening2023 from "../components/Academic 2023/Listening/Test2Listening2023";
+import Test3Listening2023 from "../components/Academic 2023/Listening/Test3Listening2023";
+import Test4Listening2023 from "../components/Academic 2023/Listening/Test4Listening2023";
+import Test1Reading2023 from "../components/Academic 2023/Reading/Test1Reading2023";
 
 export const router = createBrowserRouter([
   {
@@ -176,6 +185,42 @@ export const router = createBrowserRouter([
       {
         path: "/2024/Test 4/writing",
         Component:Test4Writing2024,
+      },
+      {
+        path: "/2024/Test 1/speaking",
+        Component:Test1Speaking2024,
+      },
+      {
+        path: "/2024/Test 2/speaking",
+        Component:Test2Speaking2024,
+      },
+      {
+        path: "/2024/Test 3/speaking",
+        Component:Test3Speaking2024,
+      },
+      {
+        path: "/2024/Test 4/speaking",
+        Component:Test4Speaking2024,
+      },
+      {
+        path: "/2023/Test 1/listening",
+        Component:Test1Listening2023,
+      },
+      {
+        path: "/2023/Test 2/listening",
+        Component:Test2Listening2023,
+      },
+      {
+        path: "/2023/Test 3/listening",
+        Component:Test3Listening2023,
+      },
+      {
+        path: "/2023/Test 4/listening",
+        Component:Test4Listening2023,
+      },
+      {
+        path: "/2023/Test 1/reading",
+        Component:Test1Reading2023,
       },
     ],
   },

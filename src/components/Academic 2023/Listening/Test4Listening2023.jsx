@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 
-const Test1Listening2024 = () => {
+const Test4Listening2024 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -49,270 +49,253 @@ const Test1Listening2024 = () => {
           <hr />
           <p>Audio Script</p>
           <h1 className="text-xl font-bold text-center">
-            School Visit to Hinchingbrooke Country Park
+            Job Details from Employment Agency
           </h1>
 
           <h3 className="text-lg">
             <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear a
-            teaching assistant calling a country park about a school
-            visit.First, you have some time to look at questions 1 to 6.Now
-            listen carefully, and answer questions 1 to 6.
+            man who works at an employment agency, phoning a woman who is
+            looking for a job.First, you have some time to look at questions 1
+            to 5.Now listen carefully and answer questions 1 to 5.
           </h3>
 
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> Good morning,
-            Hinchingbrooke Country Park, Sally speaking.I'm one of the rangers.
+            <span className="font-bold">JULIE::</span> Hello?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>Oh, hello, uh, my name is
-            John Chapman, and I'm a teaching assistant at a local primary
-            school.I've been asked to arrange a visit to the park for two of our
-            classes.
+            <span className="font-bold">GREG::</span>Oh, hello. Is that Julie
+            Davison?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>OK, what would you like to
-            know?
+            <span className="font-bold">JULIE::</span> Yes.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> Well, I'm new to this
-            area.So perhaps you could tell me something about the park first,
-            please.
+            <span className="font-bold">GREG::</span> This is Greg Preston from
+            the Employment Agency.We met last week when you came in to enquire
+            about office work.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> Of course.Altogether the
-            park covers 170 acres.
+            <span className="font-bold">JULIE::</span> Oh, that's right.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG::</span> Now we've just had some
+            details come in of a job which might interest you.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              That's 69 hectares.
+              OK, so this is a position for a receptionist.
               {highlight && "(1)"}
             </span>
-            There are three main types of habitat, wetland, grassland, and
-            woodland.The woods are well established and varied.With an oak
-            plantation and other areas of mixed species.
+            I believe you've done that sort of work before.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> Right
+            <span className="font-bold">JULIE::</span> Yes, I have.I worked in a
+            sports center for a couple of years before I got married and had the
+            children.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> The wetland is quite
-            varied too.The original farmland was dug up around 40 years ago to
-            extract gravel.Once this work was completed, the gravel pits filled
-            with water, forming the two large lakes.There are also several
-            smaller ones.
+            <span className="font-bold">GREG::</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Ponds and a stream that flows through the park.
+              Well, this job's in Fordham, so not too far away for you, and it's
+              at the medical center there.
               {highlight && "(2)"}
             </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>OK, so I suppose with these
-            different habitats, there's quite a variety of wildlife.
+            <span className="font-bold">JULIE::</span> OK, so where exactly is
+            that?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>There certainly is.A lot of
-            different species of birds and insects, and also animals like deer
-            and rabbits.
+            <span className="font-bold">GREG::</span>It's quite near the station
+            on Chastons Road.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>
-            And I understand you organize educational visits for school parties.
+            <span className="font-bold">JULIE::</span> sorry?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> That's right.We can
-            organize a wide range of activities, and adapt them to suit all
-            ages.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> Can you give me some
-            examples of the activities?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> Well, one focus is on
-            science, where we help children to discover and study plants, trees
-            and insects.
+            <span className="font-bold">GREG::</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              They also collect and analyze data about the things they see.3{" "}
+              Chastons Road.
               {highlight && "(3)"}
-            </span>{" "}
+            </span>
+            That's CHASTONS.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>
-            Uh huh.
+            <span className="font-bold">JULIE::</span>OK, thanks.So what would
+            the work involve?Dealing with enquiries from patients?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>
-            Another focus is on geography.
+            <span className="font-bold">GREG::</span> Yes.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              The park is a great environment to learn and practice reading a
-              map. {highlight && "(4)"}
-            </span>{" "}
-            And using a compass to navigate around the park.
+              And you'd also be involved in making appointments, whether face to
+              face or on the phone, and rescheduling them if necessary.
+              {highlight && "(4)"}
+            </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> Do you do anything
-            connected with history?
+            <span className="font-bold">JULIE::</span>Fine.That shouldn't be a
+            problem.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> Yes, we do.For instance,
-            the children can explore how the use of the land has changed over
-            time.Then there's leisure and tourism.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>
-            That focuses on your visitors, I would imagine.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>
-            Yes, mostly.
+            <span className="font-bold">GREG::</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              The children find out about them, their requirements, the problems
-              they may cause, and how we manage these.
+              And another of your duties would be keeping the center's database
+              up-to-date.
               {highlight && "(5)"}
             </span>
-            And another subject we cover is music.
+            Then you might have other general administrative duties as well.But
+            those would be the main ones.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JULIE::</span> ok.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER::</span> Before you hear the
+            rest of the conversation, you have some time to look at questions 6
+            to 10.Now listen and answer questions 6 to 10.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG::</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Here the children experiment with natural materials to create
-              sounds and explore rhythm and tempo.
+              Now, when the details came in, I immediately thought of you,
+              because one thing they do require is someone with experience.
               {highlight && "(6)"}
             </span>
+            And you did mention your work at the sports center when you came in
+            to see us.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> That must be fun.
+            <span className="font-bold">JULIE::</span> Yes, in fact, I enjoyed
+            that job.Is there anything else they're looking for?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> Most children really enjoy
-            it.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span> Before you hear the
-            rest of the conversation, you have some time to look at questions 7
-            to 10.Now listen and answer questions 7 to 10.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>
-            And of course, all the activities are educational too.Learning
-            outside the classroom encourages children to be creative and to
-            explore and discover for themselves.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>
-
+            <span className="font-bold">GREG::</span> Well, they say it's quite
+            a high-pressure environment.They're always very busy, and patients
+            are often under stress.So they want someone who can cope with that.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              I would imagine they get a sense of freedom that might not be a
-              normal part of their lives. {highlight && "(7)"}
+              And stay calm, and at the same time, be confident when interacting
+              with the public.
+              {highlight && "(7)"}
             </span>
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> That's right.And very
-            often the children discover that they can do things they didn't know
-            they could do.
+            <span className="font-bold">JULIE::</span>Well, after dealing with
+            three children all under 5, I reckon I can cope with that.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG::</span> I'm sure you can.And then
+            another thing they mention is that they're looking for someone with
+            good IT skills...
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JULIE::</span> Not a problem.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG::</span> So you'd be interested in
+            following this up?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JULIE::</span> Sure.When would it start?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG::</span>Well, they're looking for
+            someone from the beginning of next month.But I should tell you that
+            this isn't a permanent job.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              And they develop new skills. {highlight && "(8)"}
+              It's temporary.
+              {highlight && "(8)"}
             </span>
-            This gives them greater self-confidence.
+            So the contract would be just to the end of September, but they do
+            say that there could be further opportunities after that.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span>It sounds great.So what
-            about the practical side of it?How much does it cost for a full day
-            visit?We would expect to bring between 30 and 40 children
+            <span className="font-bold">JULIE::</span> Yes, my husband would
+            have to get the kids up and off to my mother's.She's going to be
+            looking after them while I'm at work.What time would I finish?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span>
+            <span className="font-bold">GREG::</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              If there are over 30, it costs £4.95 for each child who attends on
-              the day. {highlight && "(9)"}
+              One fifteen.
+              {highlight && "(9)"}
             </span>
-            We invoice you afterwards, so you don't pay for children who can't
-            come because of sickness, for example.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JULIE::</span> That should work out all
+            right.I can pick the kids up on my way home, and then I'll have the
+            afternoon with them.Oh, one thing.Is there parking available for
+            staff at the center?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">GREG: </span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              There's no charge for leaders and other adults, as many as you
-              want to bring. {highlight && "(10)"}
+              Yes, there is.
+              {highlight && "(10)"}
             </span>
+            And it's also on a bus route.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> That sounds very fair.Well,
-            thanks for all the information.I'll need to discuss it with my
-            colleagues, and I hope to get back to you soon to make a booking.
+            <span className="font-bold">JULIE:</span> Right.Well, I expect I'll
+            have the car, but it's good to know that.OK, so where do I go from
+            here?
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SALLY:</span> We'll look forward to
-            hearing from you.Goodbye.
+            <span className="font-bold">GREG:</span> Well, if you're happy for
+            me to do so, I'll forward your CV and references.And then the best
+            thing would probably be for you to phone them, so they can arrange
+            for an interview.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">JOHN:</span> Goodbye, and thank you.
+            <span className="font-bold">JULIE:</span>Great.Well, thank you very
+            much.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span> That is the end of
-            part 1.You now have one minute to check your answers to part 1.
+            <span className="font-bold">GREG:</span>You're welcome.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JULIE:</span> Bye now.Bye.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER:</span>That is the end of part
+            1.You now have one minute to check your answers to part 1.
           </h3>
         </div>
 
@@ -369,14 +352,14 @@ const Test1Listening2024 = () => {
           </h3>
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
-              Hinchingbrooke Country Park
+              Job details from employment agency
             </h1>
 
             {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">The park</h2>
+            <h2 className="text-lg font-bold mt-6">Role:</h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Area:</span>
+                <span></span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -391,15 +374,15 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>hectares</span>
+                <span>.</span>
               </li>
+            </ul>
 
+            {/* ---------- Section 2 ---------- */}
+            <h2 className="text-lg font-bold mt-6">Location</h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Habitats: wetland, grassland and woodland</span>
-              </li>
-
-              <li className="text-lg">
-                <span>Wetland: lakes, ponds and a</span>
+                <span>Fordham</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -414,21 +397,11 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>(approx.)</span>
+                <span>centre.</span>
               </li>
 
               <li className="text-lg">
-                <span>Wildlife includes birds, insects and animals</span>
-              </li>
-            </ul>
-
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              Subjects studied in educational visits include
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>Science: Children look at</span>
+                <span></span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -443,11 +416,16 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>about plants, etc.</span>
+                <span>Road, Fordham.</span>
               </li>
+            </ul>
 
+            {/* ---------- Section 3 ---------- */}
+            <h2 className="text-lg font-bold mt-6">Work involves</h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">dealing with enquiries</li>
               <li className="text-lg">
-                <span>Geography: includes learning to use a</span>
+                <span>making</span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -462,17 +440,11 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>and compass</span>
+                <span>and reorganising them</span>
               </li>
 
               <li className="text-lg">
-                <span>History: changes in land use</span>
-              </li>
-
-              <li className="text-lg">
-                <span>
-                  Leisure and tourism: mostly concentrates on the park's
-                </span>
+                <span>maintaining the internal</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -487,10 +459,16 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>.</span>
               </li>
+              <li className="text-lg">general administration</li>
+            </ul>
 
+            {/* ---------- Section 4 ---------- */}
+            <h2 className="text-lg font-bold mt-6">Requirements</h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Music: Children make</span>
+                <span></span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -505,19 +483,11 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>
-                  with natural materials, and experiment with rhythm and speed.
-                </span>
+                <span>(essential)</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 3 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              Benefits of outdoor educational visits
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>They give children a feeling of</span>
+                <span>a calm and</span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -532,11 +502,15 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>that they may not have elsewhere.</span>
+                <span>manner.</span>
               </li>
-
+              <li className="text-lg">good IT skills</li>
+            </ul>
+            {/* ---------- Section 5 ---------- */}
+            <h2 className="text-lg font-bold mt-6">Other information</h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Children learn new</span>
+                <span>a</span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -551,15 +525,11 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>and gain self-confidence.</span>
+                <span>job - further opportunities may be available</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Practical issues</h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Cost per child: £</span>
+                <span>hours: 7.45 a.m. to</span>
                 <button
                   onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -574,10 +544,10 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>PM monday to friday</span>
               </li>
-
               <li className="text-lg">
-                <span>Adults, such as</span>
+                <span></span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -592,11 +562,9 @@ const Test1Listening2024 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>, free</span>
+                <span>is available onsite.</span>
               </li>
             </ul>
-
-      
           </div>
         </div>
       </div>
@@ -604,4 +572,4 @@ const Test1Listening2024 = () => {
   );
 };
 
-export default Test1Listening2024;
+export default Test4Listening2024;

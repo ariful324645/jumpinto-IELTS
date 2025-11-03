@@ -30,7 +30,7 @@ const Test3Writing2024 = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="px-3">
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
@@ -56,7 +56,7 @@ const Test3Writing2024 = () => {
             {/* image */}
             <div className="flex items-center justify-center">
               <img
-                className="w-90 h-auto"
+                className="w-96 h-auto"
                 src="https://i.ibb.co.com/fdKwYNkJ/w3-2024.jpg"
                 alt="Eikhane image bosabo"
               />

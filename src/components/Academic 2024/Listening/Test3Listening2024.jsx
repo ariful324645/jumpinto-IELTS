@@ -314,7 +314,6 @@ const Test3Listening2024 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
-
             <div className="relative group">
               <div className="flex justify-between items-center">
                 <span
@@ -325,7 +324,6 @@ const Test3Listening2024 = () => {
                 </span>
               </div>
               {/* Tooltip */}
-
               <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                 Clear answer
               </span>
@@ -355,24 +353,27 @@ const Test3Listening2024 = () => {
               )}
             </div>
           </div>
+
           <h2 className="text-lg font-bold mb-3">Questions 1–6</h2>
-          <h3 className="text-lg  mb-5">
+          <h3 className="text-lg mb-5">
             Complete the notes below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
+
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
             <h1 className="text-xl font-bold text-center mb-4">
               Local food shops
             </h1>
+
             <h2 className="text-lg font-bold mt-6">Where to go</h2>
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">Kite Place - near the</span>
+              <li className="text-lg">
+                <span className="inline-block">Kite Place - near the</span>
                 <button
                   onClick={() => toggleButton(1)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[1]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -381,20 +382,20 @@ const Test3Listening2024 = () => {
                   1
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
               </li>
             </ul>
+
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-lg font-bold mt-6">Fish market</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">Cross the </span>
+              <li className="text-lg">
+                <span className="inline-block">Cross the</span>
                 <button
                   onClick={() => toggleButton(2)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[2]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -403,17 +404,17 @@ const Test3Listening2024 = () => {
                   2
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
-                and turn right
+                <span className="ml-2">and turn right</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">best to go before </span>
+
+              <li className="text-lg">
+                <span className="inline-block">best to go before</span>
                 <button
                   onClick={() => toggleButton(3)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[3]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -422,21 +423,21 @@ const Test3Listening2024 = () => {
                   3
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
-                pm, earlier than closing time
+                <span className="ml-2">pm, earlier than closing time</span>
               </li>
             </ul>
+
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-lg font-bold mt-6">Organic shop</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">called '</span>
+              <li className="text-lg">
+                <span className="inline-block">called '</span>
                 <button
                   onClick={() => toggleButton(4)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[4]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -445,19 +446,22 @@ const Test3Listening2024 = () => {
                   4
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
               </li>
+
               <li className="text-lg">
-                below a restaurant in the large, grey building
+                <span className="inline-block">
+                  below a restaurant in the large, grey building
+                </span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">ook for the large</span>
+
+              <li className="text-lg">
+                <span className="inline-block">look for the large</span>
                 <button
                   onClick={() => toggleButton(5)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[5]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -466,21 +470,21 @@ const Test3Listening2024 = () => {
                   5
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
-                outside
+                <span className="ml-2">outside</span>
               </li>
             </ul>
-            {/* Inner list with squares */}
+
+            {/* ---------- Section 4 ---------- */}
             <h2 className="text-lg font-bold mt-6">Supermarket:</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">take a </span>
+              <li className="text-lg">
+                <span className="inline-block">take a</span>
                 <button
                   onClick={() => toggleButton(6)}
-                  className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[6]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
@@ -489,27 +493,26 @@ const Test3Listening2024 = () => {
                   6
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
                   type="text"
-                  placeholder=""
                 />
-                minibus, number 289
+                <span className="ml-2">minibus, number 289</span>
               </li>
             </ul>
           </div>
+
+          {/* ---------- Table Section ---------- */}
           <div className="mt-5">
             <h2 className="text-lg font-bold mb-3">Questions 7–10</h2>
             <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br /> Write{" "}
-              <span className="font-bold">ONLY ONE ONLY FOR </span> for each
-              answer.
+              <span className="font-bold">ONLY ONE WORD</span> for each answer.
             </h3>
-            {/* table form */}
 
             <table className="border-collapse border border-gray-400 w-full text-center">
               <thead>
                 <tr>
-                  <th className="border border-gray-400 p-2"></th>
+                
                   <th
                     colSpan="3"
                     className="border border-gray-400 text-lg font-bold p-2"
@@ -518,11 +521,12 @@ const Test3Listening2024 = () => {
                   </th>
                 </tr>
                 <tr>
-                  <th className="border  p-2"></th>
+                  <th className="border p-2"></th>
                   <th className="border p-2">To buy</th>
                   <th className="border p-2">Other ideas</th>
                 </tr>
               </thead>
+
               <tbody>
                 <tr>
                   <td className="border border-gray-400 text-sm font-bold p-2">
@@ -530,106 +534,90 @@ const Test3Listening2024 = () => {
                   </td>
                   <td className="border border-gray-400 p-2">a dozen prawns</td>
                   <td className="border border-gray-400 p-2">
-                    {" "}
-                    <h3 className=" text-lg ">
-                      <span className=" inline-block">a handful of</span>
-                      <button
-                        onClick={() => toggleButton(7)}
-                        className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[7]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        7
-                      </button>
-                      <input
-                        className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                        type="text"
-                        placeholder=""
-                      />
-                      (type of seaweed)
-                    </h3>
+                    <span>a handful of</span>
+                    <button
+                      onClick={() => toggleButton(7)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[7]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      7
+                    </button>
+                    <input
+                      className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
+                      type="text"
+                    />
+                    <span className="ml-2">(type of seaweed)</span>
                   </td>
                 </tr>
+
                 <tr>
                   <td className="border border-gray-400 text-sm font-bold p-2">
                     Organic shop
                   </td>
-
                   <td className="border border-gray-400 p-2">
-                    {" "}
-                    <h3 className=" text-lg ">
-                      <span className=" inline-block">beans and a</span>
-                      <button
-                        onClick={() => toggleButton(8)}
-                        className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[8]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        8
-                      </button>
-                      <input
-                        className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                        type="text"
-                        placeholder=""
-                      />
-                      for dessert
-                    </h3>
+                    <span>beans and a</span>
+                    <button
+                      onClick={() => toggleButton(8)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[8]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      8
+                    </button>
+                    <input
+                      className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
+                      type="text"
+                    />
+                    <span className="ml-2">for dessert</span>
                   </td>
                   <td className="border border-gray-400 p-2">
-                    {" "}
-                    <h3 className=" text-lg ">
-                      <span className=" inline-block">spices and</span>
-                      <button
-                        onClick={() => toggleButton(9)}
-                        className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[9]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        9
-                      </button>
-                      <input
-                        className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                        type="text"
-                        placeholder=""
-                      />
-                    </h3>
+                    <span>spices and</span>
+                    <button
+                      onClick={() => toggleButton(9)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[9]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      9
+                    </button>
+                    <input
+                      className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
+                      type="text"
+                    />
                   </td>
                 </tr>
+
                 <tr>
                   <td className="border border-gray-400 text-sm font-bold p-2">
                     Bakery
                   </td>
                   <td className="border border-gray-400 p-2">a brown loaf</td>
                   <td className="border border-gray-400 p-2">
-                    {" "}
-                    <h3 className=" text-lg ">
-                      <span className=" inline-block">a </span>
-                      <button
-                        onClick={() => toggleButton(10)}
-                        className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[10]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        10
-                      </button>
-                      <input
-                        className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                        type="text"
-                        placeholder=""
-                      />
-                   tart.
-                    </h3>
+                    <span>a</span>
+                    <button
+                      onClick={() => toggleButton(10)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[10]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      10
+                    </button>
+                    <input
+                      className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 ml-2"
+                      type="text"
+                    />
+                    <span className="ml-2">tart.</span>
                   </td>
                 </tr>
-             
               </tbody>
             </table>
           </div>

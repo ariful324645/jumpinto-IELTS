@@ -25,7 +25,7 @@ const Test4Listening = () => {
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
-     
+
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
             <h1 className="text-xl font-bold">PART 1</h1>
@@ -347,7 +347,6 @@ const Test4Listening = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
-
             <div className="relative group">
               <div className="flex justify-between items-center">
                 <span
@@ -358,7 +357,6 @@ const Test4Listening = () => {
                 </span>
               </div>
               {/* Tooltip */}
-
               <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                 Clear answer
               </span>
@@ -398,12 +396,12 @@ const Test4Listening = () => {
             <h1 className="text-lg font-bold text-center mb-4">
               Advice on family visit
             </h1>
-            <h2 className="text-xl font-bold mt-6">Accommodation</h2>
 
             {/* ---------- Section 1 ---------- */}
+            <h2 className="text-xl font-bold mt-6">Accommodation</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block"></span>
+              <li className="text-lg flex items-center gap-3">
+                •
                 <button
                   onClick={() => toggleButton(1)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -415,16 +413,14 @@ const Test4Listening = () => {
                   1
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                Hotel on George Street
+                <span>Hotel on George Street</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  cost of family room per night: £
-                </span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>cost of family room per night: £</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -436,19 +432,19 @@ const Test4Listening = () => {
                   2
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                (approx.)
+                <span>(approx.)</span>
               </li>
             </ul>
 
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-xl font-bold mt-6">Recommended trips</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">a</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>a</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -460,14 +456,14 @@ const Test4Listening = () => {
                   3
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                tour of the city centre (starts in Carlton Square)
+                <span>tour of the city centre (starts in Carlton Square)</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">a trip by</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>a trip by</span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -479,19 +475,19 @@ const Test4Listening = () => {
                   4
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                to the old fort
+                <span>to the old fort</span>
               </li>
             </ul>
 
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-xl font-bold mt-6">Science Museum</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">best day to visit:</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>best day to visit:</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -503,13 +499,13 @@ const Test4Listening = () => {
                   5
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">see the exhibition about</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>see the exhibition about</span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -521,19 +517,20 @@ const Test4Listening = () => {
                   6
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                , which opens soon
+                <span>, which opens soon</span>
               </li>
             </ul>
-            {/* Inner list with squares */}
+
+            {/* ---------- Section 4 ---------- */}
             <h2 className="text-xl font-bold mt-6">Food</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className="text-lg">Clacton Market:</li>
-              <li className=" text-lg ">
-                <span className=" inline-block">good for</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>good for</span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -545,14 +542,14 @@ const Test4Listening = () => {
                   7
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                food
+                <span>food</span>
               </li>
-              <li className=" text-lg ">
-                <span className=" inline-block">need to have lunch before</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>need to have lunch before</span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -564,19 +561,19 @@ const Test4Listening = () => {
                   8
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                P.M
+                <span>P.M</span>
               </li>
             </ul>
 
-            {/* ---------- Section 4 ---------- */}
+            {/* ---------- Section 5 ---------- */}
             <h2 className="text-xl font-bold mt-6">Theatre tickets</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li className=" text-lg ">
-                <span className=" inline-block">save up to</span>
+              <li className="text-lg flex items-center gap-3">
+                •<span>save up to</span>
                 <button
                   onClick={() => toggleButton(9)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -588,22 +585,21 @@ const Test4Listening = () => {
                   9
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                % on ticket prices at bargaintickets.com
+                <span>% on ticket prices at bargaintickets.com</span>
               </li>
             </ul>
 
+            {/* ---------- Section 6 ---------- */}
             <h2 className="text-xl font-bold mt-6">Free activities</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className="text-lg">Blakewell Gardens:</li>
-              <li className=" text-lg ">Roots Music Festival</li>
-              <li className=" text-lg ">
-                <span className=" inline-block">
-                  climb Telegraph Hill to see a view of the
-                </span>
+              <li className="text-lg">Roots Music Festival</li>
+              <li className="text-lg flex items-center gap-3">
+                •<span>climb Telegraph Hill to see a view of the</span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -615,11 +611,11 @@ const Test4Listening = () => {
                   10
                 </button>
                 <input
-                  className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                   placeholder=""
                 />
-                P.M
+                <span>P.M</span>
               </li>
             </ul>
           </div>
