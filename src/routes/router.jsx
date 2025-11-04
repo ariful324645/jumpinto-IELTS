@@ -44,6 +44,17 @@ import Test2Listening2023 from "../components/Academic 2023/Listening/Test2Liste
 import Test3Listening2023 from "../components/Academic 2023/Listening/Test3Listening2023";
 import Test4Listening2023 from "../components/Academic 2023/Listening/Test4Listening2023";
 import Test1Reading2023 from "../components/Academic 2023/Reading/Test1Reading2023";
+import Test2Reading2023 from "../components/Academic 2023/Reading/Test2Reading2023";
+import Test3Reading2023 from "../components/Academic 2023/Reading/Test3Reading2023";
+import Test4Reading2023 from "../components/Academic 2023/Reading/Test4Reading2023";
+import Test1Writing2023 from "../components/Academic 2023/Writing/Test1Writing2023";
+import Test2Writing2023 from "../components/Academic 2023/Writing/Test2Writing2023";
+import Test3Writing2023 from "../components/Academic 2023/Writing/Test3Writing2023";
+import Test4Writing2023 from "../components/Academic 2023/Writing/Test4Writing2023";
+import Test1Speaking2023 from "../components/Academic 2023/Speaking/Test1Speaking2023";
+import Test2Speaking2023 from "../components/Academic 2023/Speaking/Test2Speaking2023";
+import Test3Speaking2023 from "../components/Academic 2023/Speaking/Test3Speaking2023";
+import Test4Speaking2023 from "../components/Academic 2023/Speaking/Test4Speaking2023";
 
 export const router = createBrowserRouter([
   {
@@ -221,6 +232,50 @@ export const router = createBrowserRouter([
       {
         path: "/2023/Test 1/reading",
         Component:Test1Reading2023,
+      },
+      {
+        path: "/2023/Test 2/reading",
+        Component:Test2Reading2023,
+      },
+      {
+        path: "/2023/Test 3/reading",
+        Component:Test3Reading2023,
+      },
+      {
+        path: "/2023/Test 4/reading",
+        Component:Test4Reading2023,
+      },
+      {
+        path: "/2023/Test 1/writing",
+        Component:Test1Writing2023,
+      },
+      {
+        path: "/2023/Test 2/writing",
+        Component:Test2Writing2023,
+      },
+      {
+        path: "/2023/Test 3/writing",
+        Component:Test3Writing2023,
+      },
+      {
+        path: "/2023/Test 4/writing",
+        Component:Test4Writing2023,
+      },
+      {
+        path: "/2023/Test 1/speaking",
+        Component:Test1Speaking2023,
+      },
+      {
+        path: "/2023/Test 2/speaking",
+        Component:Test2Speaking2023,
+      },
+      {
+        path: "/2023/Test 3/speaking",
+        Component:Test3Speaking2023,
+      },
+      {
+        path: "/2023/Test 4/speaking",
+        Component:Test4Speaking2023,
       },
     ],
   },
