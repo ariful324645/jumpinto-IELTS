@@ -21,12 +21,12 @@ const Test1Listening = () => {
       }));
     };
   return (
-    <div className="px-3">
+    <div className="px-3 sm:px-4 lg:px-6 py-4">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex flex-col lg:flex-row gap-6 lg:h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
 
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+        <div className="w-full lg:w-1/2 bg-white space-y-5 rounded-lg shadow-md p-4 sm:p-6 overflow-y-scroll max-h-[85vh]">
           <div className="flex relative group justify-between items-center">
             <h1 className="text-xl font-bold">PART 1</h1>
             <input
@@ -360,72 +360,75 @@ const Test1Listening = () => {
         </div>
 
         {/* RIGHT SIDE (Questions Table) */}
-        <div className="w-1/2 bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
-         <div className="flex justify-between items-center p-4 text-gray-500">
-                    {/* clear icon */}
-                    <p>Autosaved @ 2025-10-22 22:59:43. </p>
-                    <div className="relative group">
-                      <div className="flex justify-between items-center">
-                        <span
-                          onClick={() => setIsOpen(true)}
-                          className="text-xl cursor-pointer"
-                        >
-                          <GrClearOption />
-                        </span>
-                      </div>
-                      {/* Tooltip */}
-        
-                      <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                        Clear answer
-                      </span>
-        
-                      {isOpen && (
-                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                          <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                            <h2 className="text-lg font-semibold mb-4">
-                              Are you sure you want to clear all answers?
-                            </h2>
-                            <div className="flex justify-center gap-4">
-                              <button
-                                onClick={() => setIsOpen(false)}
-                                className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                              >
-                                No, keep them
-                              </button>
-                              <button
-                                onClick={handleClear}
-                                className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                              >
-                                Yes, clear them
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      )}
+        <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-4 sm:p-6 overflow-y-scroll max-h-[85vh]">
+          <div className="flex justify-between items-center p-4 text-gray-500">
+            {/* clear icon */}
+            <p>Autosaved @ 2025-10-22 22:59:43. </p>
+            <div className="relative group">
+              <div className="flex justify-between items-center">
+                <span
+                  onClick={() => setIsOpen(true)}
+                  className="text-xl cursor-pointer"
+                >
+                  <GrClearOption />
+                </span>
+              </div>
+              {/* Tooltip */}
+
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                Clear answer
+              </span>
+
+              {isOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                    <h2 className="text-lg font-semibold mb-4">
+                      Are you sure you want to clear all answers?
+                    </h2>
+                    <div className="flex justify-center gap-4">
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
+                      >
+                        No, keep them
+                      </button>
+                      <button
+                        onClick={handleClear}
+                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                      >
+                        Yes, clear them
+                      </button>
                     </div>
                   </div>
+                </div>
+              )}
+            </div>
+          </div>
           <h2 className="text-xl font-bold mb-2">Questions 1–10</h2> <br />
           <h3 className="text-lg  mb-4">
             Complete the table below. <br /> <br /> Write{" "}
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
-          <table className="w-sm border border-gray-300 text-left text-lg">
+          <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
             <thead className="bg-gray-100">
               <tr>
-                <th className="border p-4">Name of restaurant</th>
-                <th className="border p-4">Location</th>
-                <th className="border p-4">Reason for recommendation</th>
-                <th className="border p-4">Other comments</th>
+                <th className="border text-lg p-4">Name of restaurant</th>
+                <th className="border text-lg p-4">Location</th>
+                <th className="border text-lg p-4">
+                  Reason for recommendation
+                </th>
+                <th className="border text-lg p-4">Other comments</th>
               </tr>
             </thead>
 
             <tbody>
-           
               <tr>
-                <td className="border p-4">The Junction</td>
-                <td className="border p-4">Greyson Street, near the station</td>
-                <td className="border p-4">
+                <td className="border text-lg p-4">The Junction</td>
+                <td className="border  text-lg p-4">
+                  Greyson Street, near the station
+                </td>
+                <td className="border text-lg p-4">
                   Good for people who are especially keen on{" "}
                   <button
                     onClick={() => toggleButton(1)}
@@ -438,13 +441,13 @@ const Test1Listening = () => {
                     1
                   </button>
                   <input
-                    className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                     type="text"
                     placeholder=""
                   />
                 </td>
 
-                <td className="border p-4">
+                <td className="border text-lg p-4">
                   <ul className="list-disc list-inside text-black space-y-2">
                     <li>Quite expensive</li>
                     <li>
@@ -460,7 +463,7 @@ const Test1Listening = () => {
                         2
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
@@ -470,11 +473,12 @@ const Test1Listening = () => {
                 </td>
               </tr>
 
-        
               <tr>
-                <td className="border p-4">Paloma</td>
-                <td className="border p-4">In Bow Street next to the cinema</td>
-                <td className="border p-4">
+                <td className="border text-lg p-4">Paloma</td>
+                <td className="border text-lg p-4">
+                  In Bow Street next to the cinema
+                </td>
+                <td className="border text-lg p-4">
                   <button
                     onClick={() => toggleButton(3)}
                     className={`w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -486,13 +490,13 @@ const Test1Listening = () => {
                     3
                   </button>
                   <input
-                    className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                     type="text"
                     placeholder=""
                   />
                   food, good for sharing
                 </td>
-                <td className="border p-4">
+                <td className="border text-lg p-4">
                   <ul className="list-disc list-inside space-y-2">
                     <li>Staff are very friendly</li>
                     <li>Need to pay £50 deposit</li>
@@ -509,7 +513,7 @@ const Test1Listening = () => {
                         4
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
@@ -519,9 +523,8 @@ const Test1Listening = () => {
                 </td>
               </tr>
 
-      
               <tr>
-                <td className="border p-4">
+                <td className="border text-lg p-4">
                   The{" "}
                   <button
                     onClick={() => toggleButton(5)}
@@ -534,13 +537,13 @@ const Test1Listening = () => {
                     5
                   </button>
                   <input
-                    className="ml-3 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                     type="text"
                     placeholder=""
                   />
                 </td>
 
-                <td className="border p-4">
+                <td className="border text-lg p-4">
                   At the top of a
                   <button
                     onClick={() => toggleButton(6)}
@@ -553,13 +556,13 @@ const Test1Listening = () => {
                     6
                   </button>
                   <input
-                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                     type="text"
                     placeholder=""
                   />
                 </td>
 
-                <td className="border p-4">
+                <td className="border text-lg p-4">
                   <ul className="list-disc list-inside space-y-2">
                     <li>A famous chef</li>
                     <li>
@@ -575,7 +578,7 @@ const Test1Listening = () => {
                         7
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
@@ -594,7 +597,7 @@ const Test1Listening = () => {
                         8
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
@@ -603,9 +606,9 @@ const Test1Listening = () => {
                   </ul>
                 </td>
 
-                <td className="border p-4">
+                <td className="border tex-lg p-4">
                   <ul className="list-disc list-inside space-y-2">
-                    <li>
+                    <li className="text-lg">
                       Set lunch costs £
                       <button
                         onClick={() => toggleButton(9)}
@@ -618,13 +621,13 @@ const Test1Listening = () => {
                         9
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
                       per person
                     </li>
-                    <li>
+                    <li className="text-lg ">
                       Portions probably of
                       <button
                         onClick={() => toggleButton(10)}
@@ -637,7 +640,7 @@ const Test1Listening = () => {
                         10
                       </button>
                       <input
-                        className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
                         placeholder=""
                       />
@@ -649,7 +652,6 @@ const Test1Listening = () => {
             </tbody>
           </table>
         </div>
-     
       </div>
     </div>
   );

@@ -55,6 +55,10 @@ import Test1Speaking2023 from "../components/Academic 2023/Speaking/Test1Speakin
 import Test2Speaking2023 from "../components/Academic 2023/Speaking/Test2Speaking2023";
 import Test3Speaking2023 from "../components/Academic 2023/Speaking/Test3Speaking2023";
 import Test4Speaking2023 from "../components/Academic 2023/Speaking/Test4Speaking2023";
+import Test1Listening2022 from "../components/Academic 2022/Listening/Test1Listening2022";
+import Test2Listening2022 from "../components/Academic 2022/Listening/Test2Listening2022";
+import Test3Listening2022 from "../components/Academic 2022/Listening/Test3Listening2022";
+import Test4Listening2022 from "../components/Academic 2022/Listening/Test4Listening2022";
 
 export const router = createBrowserRouter([
   {
@@ -276,6 +280,22 @@ export const router = createBrowserRouter([
       {
         path: "/2023/Test 4/speaking",
         Component:Test4Speaking2023,
+      },
+      {
+        path: "/2022/Test 1/listening",
+        Component:Test1Listening2022,
+      },
+      {
+        path: "/2022/Test 2/listening",
+        Component:Test2Listening2022,
+      },
+      {
+        path: "/2022/Test 3/listening",
+        Component:Test3Listening2022,
+      },
+      {
+        path: "/2022/Test 4/listening",
+        Component:Test4Listening2022,
       },
     ],
   },

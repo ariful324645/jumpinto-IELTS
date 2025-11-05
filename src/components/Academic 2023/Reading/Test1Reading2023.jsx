@@ -218,7 +218,7 @@ const Test1Reading2023 = () => {
           </p>
         </div>
         {/* right div */}
-        <div className="md:w-[70%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -281,7 +281,7 @@ const Test1Reading2023 = () => {
             </h1>
             <br />
           </div>
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
+          <div className="overflow-x-auto border p-5  bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
               Urban farming in Paris
             </h1>
@@ -353,19 +353,19 @@ const Test1Reading2023 = () => {
           </div>
           <br />
           {/* TABLE SECTION */}
-          <div className="mt-5">
+          <div className="mt-5 w-full h-full">
             <h2 className="text-lg font-bold mb-3">Questions 4-7</h2>
             <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br /> Write{" "}
               <span className="font-bold">ONLY ONE WORD</span> for each answer.
             </h3>
 
-            <table className="border-collapse border border-gray-400 w-full text-center">
+            <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
               <thead>
                 <tr>
                   <th
                     colSpan="4"
-                    className="border border-gray-400 text-lg font-bold p-2"
+                    className="border  text-lg font-bold p-2"
                   >
                     Intensive farming versus aeroponic urban farming
                   </th>
@@ -379,10 +379,11 @@ const Test1Reading2023 = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
-                    Intensive farming
-                  </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg p-2">Intensive farming</td>
+                  <td
+                    className="border
+                   text-lg p-2"
+                  >
                     <span>wide range of</span>
                     <button
                       onClick={() => toggleButton(4)}
@@ -395,12 +396,12 @@ const Test1Reading2023 = () => {
                       4
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>used</span>
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     <span>
                       varieties of fruit and vegetables chosen that can survive
                       long
@@ -416,13 +417,13 @@ const Test1Reading2023 = () => {
                       5
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>used</span>
                   </td>
 
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg p-2">
                     <span></span>
                     <button
                       onClick={() => toggleButton(6)}
@@ -435,7 +436,7 @@ const Test1Reading2023 = () => {
                       6
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>receive very little of overall income.</span>
@@ -443,13 +444,13 @@ const Test1Reading2023 = () => {
                 </tr>
 
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
+                  <td className="border text-lg p-2">
                     Aeroponic urban farming
                   </td>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
+                  <td className="border  text-lg p-2">
                     nutrients added to water, which is recycled
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border  text-lg p-2">
                     <span>produce chosen because of its</span>
                     <button
                       onClick={() => toggleButton(7)}
@@ -462,7 +463,7 @@ const Test1Reading2023 = () => {
                       7
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>.</span>

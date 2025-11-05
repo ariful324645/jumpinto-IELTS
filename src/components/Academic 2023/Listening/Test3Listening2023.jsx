@@ -359,7 +359,7 @@ const Test3Listening2023 = () => {
             answer.
           </h3>
 
-          <div className=" overflow-x-auto border-2 border-black bg-white rounded-lg p-8 shadow-lg">
+          <div className=" overflow-x-auto border text-lg bg-white rounded-lg p-8 shadow-lg">
             <h1 className="text-xl font-bold text-center mb-8">
               Wayside Camera Club Membership Form
             </h1>
@@ -474,20 +474,21 @@ const Test3Listening2023 = () => {
               <span className="font-bold">ONLY ONE WORD</span> for each answer.
             </h3>
 
-            <table className="border-collapse border border-gray-400 w-full text-center">
+            <table className="border-collapse border border-gray-400 w-full text-center text-lg mx-auto">
               <thead>
                 <tr>
-                  <th
-                    colSpan="3"
-                    className="border border-gray-400 text-lg font-bold p-2"
-                  >
+                  <th colSpan="3" className="border text-lg font-bold border-gray-400 p-2">
                     Photography competitions
                   </th>
                 </tr>
                 <tr>
-                  <th className="border p-2">Title of competition</th>
-                  <th className="border p-2">Instructions</th>
-                  <th className="border p-2">Feedback to Dan</th>
+                  <th className="border border-gray-400 p-2">
+                    Title of competition
+                  </th>
+                  <th className="border border-gray-400 p-2">Instructions</th>
+                  <th className="border border-gray-400 p-2">
+                    Feedback to Dan
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -505,13 +506,13 @@ const Test3Listening2023 = () => {
                       5
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>"</span>
                   </td>
 
-                  <td className="border border-gray-400 text-sm  p-2">
+                  <td className="border  border-gray-400 text-lg  p-2">
                     A scene in the home
                   </td>
                   <td className="border border-gray-400 p-2">
@@ -519,7 +520,7 @@ const Test3Listening2023 = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
+                  <td className="border border-gray-400 text-lg  p-2">
                     'Beautiful Sunsets'
                   </td>
                   <td className="border border-gray-400 p-2">
@@ -535,7 +536,7 @@ const Test3Listening2023 = () => {
                       6
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>.</span>
@@ -553,7 +554,7 @@ const Test3Listening2023 = () => {
                       7
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>was wrong..</span>
@@ -574,7 +575,7 @@ const Test3Listening2023 = () => {
                       8
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>"</span>
@@ -592,7 +593,7 @@ const Test3Listening2023 = () => {
                       9
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>.</span>
@@ -610,7 +611,7 @@ const Test3Listening2023 = () => {
                       10
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>.</span>

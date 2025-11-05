@@ -299,7 +299,7 @@ const Test2Reading2024 = () => {
             </h1>
             <br />
           </div>
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
+          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
               Britain's Industrial Revolution
             </h1>

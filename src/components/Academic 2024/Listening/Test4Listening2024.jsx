@@ -321,7 +321,7 @@ const Test4Listening2024 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[72%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="w-1/2 bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -372,7 +372,7 @@ const Test4Listening2024 = () => {
             answer.
           </h3>
 
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
+          <div className="overflow-x-auto border p-5  bg-white rounded-lg">
             <h1 className="text-xl font-bold text-center mb-4">
               First day at work
             </h1>
@@ -517,35 +517,26 @@ const Test4Listening2024 = () => {
               <span className="font-bold">ONLY ONE WORD</span> for each answer.
             </h3>
 
-            <table className="border-collapse border border-gray-400 w-full text-center">
+            <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
               <thead>
                 <tr>
-                  <th
-                    colSpan="4"
-                    className="border border-gray-400 text-lg font-bold p-2"
-                  >
+                  <th colSpan="4" className="border text-lg font-bold p-2">
                     Responsibilities
                   </th>
                 </tr>
                 <tr>
-                  <th className="border p-2"></th>
-                  <th className="border p-2">Task1</th>
-                  <th className="border p-2">Task2</th>
-                  <th className="border p-2">Task3</th>
+                  <th className="border text-lg p-2"></th>
+                  <th className="border text-lg p-2">Task1</th>
+                  <th className="border text-lg  p-2">Task2</th>
+                  <th className="border text-lg  p-2">Task3</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
-                    Bakery section
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    Check sell-by dates
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    Change price labels
-                  </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg p-2">Bakery section</td>
+                  <td className="border text-lg  p-2">Check sell-by dates</td>
+                  <td className="border text-lg  p-2">Change price labels</td>
+                  <td className="border text-lg  p-2">
                     <span>Use</span>
                     <button
                       onClick={() => toggleButton(7)}
@@ -558,7 +549,7 @@ const Test4Listening2024 = () => {
                       7
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>labels</span>
@@ -566,10 +557,10 @@ const Test4Listening2024 = () => {
                 </tr>
 
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
+                  <td className="border text-lg  p-2">
                     Sushi takeaway counter
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     <span>Re-stock with</span>
                     <button
                       onClick={() => toggleButton(8)}
@@ -582,27 +573,27 @@ const Test4Listening2024 = () => {
                       8
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>boxes if needed</span>
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     Wipe preparation area and clean the sink
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     Do not clean any knives
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-gray-400 text-sm font-bold p-2">
+                  <td className="border text-lg  p-2">
                     Meat and fish counters
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     Clean the serving area, including the weighing scales
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     <span>Collect</span>
                     <button
                       onClick={() => toggleButton(9)}
@@ -615,12 +606,12 @@ const Test4Listening2024 = () => {
                       9
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                     <span>for the fish from the cold-room</span>
                   </td>
-                  <td className="border border-gray-400 p-2">
+                  <td className="border text-lg  p-2">
                     <span>Must wear special</span>
                     <button
                       onClick={() => toggleButton(10)}
@@ -633,7 +624,7 @@ const Test4Listening2024 = () => {
                       10
                     </button>
                     <input
-                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
                   </td>

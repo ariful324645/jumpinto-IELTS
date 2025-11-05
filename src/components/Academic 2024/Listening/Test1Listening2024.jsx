@@ -367,7 +367,7 @@ const Test1Listening2024 = () => {
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
+          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
               Hinchingbrooke Country Park
             </h1>

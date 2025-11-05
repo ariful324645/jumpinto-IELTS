@@ -27,7 +27,6 @@ const Test3Listening = () => {
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
-       
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
@@ -331,7 +330,6 @@ const Test3Listening = () => {
           </h3>
         </div>
 
-     
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[80vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
@@ -386,7 +384,7 @@ const Test3Listening = () => {
           </h3>
 
           <div className="overflow-x-auto">
-            <table className="min-w-full border border-gray-300 text-left text-lg">
+            <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
               <thead className="">
                 <tr>
                   <th

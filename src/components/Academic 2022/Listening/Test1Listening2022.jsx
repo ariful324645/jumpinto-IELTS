@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 
-const Test1Listening2023 = () => {
+const Test1Listening2022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -48,293 +48,275 @@ const Test1Listening2023 = () => {
           </div>
           <hr />
           <p>Audio Script</p>
-          <h1 className="text-xl font-bold text-center">Transport Survey</h1>
+          <h1 className="text-xl font-bold text-center">
+            Buckworth Conservation Group
+          </h1>
 
           <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear
-            an interview with a woman who is doing a survey on transport.First,
-            you have some time to look at questions 1 to 5.Now listen carefully
-            and answer questions 1 to 5.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> Excuse me, would you mind if
-            I asked you some questions?We're doing a survey on transport.
+            <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear a
+            woman called Jan, phoning a man about their local conservation
+            group.First, you have some time to look at questions 1 to 5.Now
+            listen carefully and answer questions 1 to 5.
           </h3>
 
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>Yes, that's OK
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>First of all can I take your
-            name?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Yes, it's Sadie Jones.
+            <span className="font-bold">PETER:</span>Hello
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> Thanks very much.And could I
-            have your date of birth?Just the year will do, actually.Is that all
-            right?
+            <span className="font-bold">JAN:</span>Oh hello, my name is Jan.Are
+            you the right person to talk to about the Buckworth Conservation
+            Group?
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Uh. Yes, that's fine.It's
-            1991.
+            <span className="font-bold">JAN:</span>Good, I've just moved to this
+            area, and I'm interested in getting involved.I was in a similar
+            group where I used to live.Could you tell me something about your
+            activities, please?
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> So, next your post code
-            please.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
+            <span className="font-bold">PETER:</span>Of course.Well we have a
+            mixture of regular activities and special events.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              It's DW307YZ.1
-              {highlight && "(1)"}
+              One of the regular ones is trying to keep the beach free of
+              litter.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  1
+                </span>
+              )}
             </span>
+            A few of us spend a couple of hours a month on it.And it's awful how
+            much there is to clear.I wish people would be more responsible and
+            take it home with them.
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> Great, thanks.Is that in
-            Wells?
+            <span className="font-bold">JAN:</span>I totally agree.I'd be happy
+            to help with that.Is it OK to take dogs?
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> No, it's actually in
-            Harborne.Wells isn't far from there, though.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>I really like that area.My
-            grandmother lived there when I was a kid.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Yes, it is nice.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> Right, so now I want to ask
-            you some questions about how you traveled here today.Did you use
-            public transport?
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Yes, I came by bus.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> OK, and that was today.
+            <span className="font-bold">PETER:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              It's the 24th of April, isn't it?
-              {highlight && "(2)"}
+              I'm afraid not, as they're banned from the beach itself.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  2
+                </span>
+              )}
             </span>
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Isn't it the 25th uh, no,
-            ha, actually you're right.
+            You can take them along the cliffs though, and children are welcome.
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> Ha ha ha.And what was the
-            reason for your trip today?I can see you've got some shopping with
-            you.
+            <span className="font-bold">JAN:</span>Right.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
+            <span className="font-bold">PETER:</span>We also manage a nature
+            reserve, and there's a lot to do there all year round.Uh. For
+            example, because it's a popular place to visit, we spend a lot of
+            time looking after the paths.And making sure they're in good
+            condition for walking.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JAN:</span>I could certainly help with
+            that.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">PETER:</span>Good.And we have a program
+            of creating new habitats there.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Yes, I did some shopping, but the main reason I came here was to
-              go to the dentist.
-              {highlight && "(3)"}
+              We've just finished making and installing nesting boxes for birds
+              to use, and next we're going to work on encouraging insects.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  3
+                </span>
+              )}
             </span>
+            They're important for the biodiversity of the reserve.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>That's not much fun.Hope it
-            was nothing serious.
+            <span className="font-bold">JAN:</span>They certainly are.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>No, it was just a
-            check-up.It's fine.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>Good.Do you normally travel
-            by bus into the city center?.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
+            <span className="font-bold">PETER:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              Yes, I stopped driving ages ago, because parking was so difficult
-              to find, and it cost so much.
-              {highlight && "(4)"}
-            </span>{" "}
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>I see.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>The bus is much more
-            convenient too. It only takes about 30 minutes.
+              Oh, and we're also running a project to identify the different
+              species of butterflies that visit the reserve.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  4
+                </span>
+              )}
+            </span>
+            You might be interested in taking part in that.
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>That's good.So where did you
-            start your journey?
+            <span className="font-bold">JAN:</span>Sure, I was involved in
+            something similar where I used to live, counting all the species of
+            moths.I'd enjoy that.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
+            <span className="font-bold">PETER:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              At the bus stop on Claxby Street.
-              {highlight && "(5)"}
-            </span>{" "}
+              Another job we're doing at the reserve is replacing the wall on
+              the southern side.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  5
+                </span>
+              )}
+            </span>
+            Between the parking area and our woodshed, it was badly damaged in a
+            storm last month.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>Is that CLAXBY?
+            <span className="font-bold">JAN:</span>ok
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
-            That's right.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span> Before you hear the
+            <span className="font-bold">ANNOUNCER:</span>Before you hear the
             rest of the conversation, you have some time to look at questions 6
             to 10.Now listen and answer questions 6 to 10.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> And how satisfied with the
-            service are you?Do you have any complaints?
+            <span className="font-bold">PETER:</span>Then, as I said, we have a
+            program of events as well, both at the weekend and during the week.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> Well, as I said, it's very
-            convenient and quick when it's on time.
+            <span className="font-bold">JAN:</span>Right.I presume you have
+            guided walks.I'd like to get to know the local countryside, as I'm
+            new to the area.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">PETER:</span>Yes, we do.
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              But this morning it was late, only about 10 minutes, but still.
-              {highlight && "(6)"}
-            </span>{" "}
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>
-            Yes, I understand that's annoying.And what about the timetable?Do
-            you have any comments about that?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
-            Hmm, I suppose I mainly use the bus during the day, but anytime I've
-            been in town in the evening.Uh. For dinner or at the cinema
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              .I've noticed you have to wait a long time for a bus.
-              {highlight && "(7)"}
-            </span>{" "}
-            Uh. There aren't that many.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> OK, thanks.So now, I'd like
-            to ask you about your car use.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
-            Well, I have got a car, but I don't use it that often.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              Mainly just to go to the supermarket.
-              {highlight && "(8)"}
-            </span>{" "}
-            But that's about it really.My husband uses it at the weekends to go
-            to the golf club.
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> And what about a bicycle?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>I don't actually have one
-            at the moment.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">MAN:</span>What about the city bikes you
-            can rent?Do you ever use those?
-          </h3>
-
-          <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span>
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              No, I'm not keen on cycling there because of all the pollution.
-              {highlight && "(9)"}
+              The next walk is to Ruston Island a week on Saturday.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  6
+                </span>
+              )}
             </span>
-            But I would like to get a bike.It would be good to use it to get to
-            work.
+            We'll be meeting in the car park at Dunsmore Beach at low
+            tide.That's when the sands are dry enough for us to walk to the
+            island without getting wet.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> So, why haven't you got one
-            now?
+            <span className="font-bold">JAN:</span>OK. And is there anything we
+            should bring?Like a picnic for instance.
           </h3>
-
           <h3 className="text-lg">
-            <span className="font-bold">SADIE:</span> :Well, I live in a flat on
-            the 2nd floor.
+            <span className="font-bold">PETER:</span>
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              And it doesn't have any storage, so we'd have to leave it in the
-              hall outside the flat.
-              {highlight && "(10)"}
+              Yes, do bring one, as it's a full-day walk, and of course it'll be
+              wet walking across and back, so make sure your boots are
+              waterproof.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  7
+                </span>
+              )}
             </span>
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">MAN:</span> I see.OK, well I think
-            that's all we need from you today...
+            <span className="font-bold">JAN:</span>I must buy a new pair.There's
+            a hole in one of my current ones.Well, I'd definitely like to come
+            on the walk
           </h3>
           <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span> That is the end of
-            part 1.You now have one minute to check your answers to part 1.
+            <span className="font-bold">PETER:</span>
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              Definitely, there'll be a couple of experts leading the session,
+              and we keep the number of participants down, so you'll get as much
+              help as you need.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  8
+                </span>
+              )}
+            </span>
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JAN:</span>Excellent! I'd love to be
+            able to make chairs.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">PETER:</span>Ha. That's probably too
+            ambitious for one day!
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              You'll be starting with wooden spoons, and of course learning how
+              to use the tools, and anything you make is yours to take home with
+              you.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  9
+                </span>
+              )}
+            </span>
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JAN:</span>That sounds like fun.When is
+            it?
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">PETER:</span>It's on the 17th, from 10
+            a.m. until 3.
+            <span
+              className={`ml-2 ${
+                highlight ? "bg-yellow-100" : "bg-transparent"
+              }`}
+            >
+              There's a charge of £35 including lunch,
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  10
+                </span>
+              )}
+            </span>
+            or £40, if you want to camp in the wood.
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">JAN:</span>I should think I'll come home
+            the same day.Well, I'd certainly like to join the group.It sounds
+            like you've...
+          </h3>
+          <h3 className="text-lg">
+            <span className="font-bold">ANNOUNCER</span>That is the end of part
+            1.You now have half a minute to check your answers to part 1.
           </h3>
         </div>
 
@@ -389,17 +371,18 @@ const Test1Listening2023 = () => {
             <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
             answer.
           </h3>
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
+          <div className="overflow-x-auto border p-5  bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
-              Transport survey
+              Buckworth Conservation Group
             </h1>
 
             {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Name: Sadie Jones</h2>
+            <h2 className="text-lg font-bold mt-6">
+              Regular activities <br /> Beach
+            </h2>
             <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">Year of birth: 1991</li>
               <li className="text-lg">
-                <span>Postcode::</span>
+                <span>making sure the beach does not have:</span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -414,15 +397,11 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>hectares</span>
+                <span>on it.</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Travelling by bus</h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Date of bus journey:</span>
+                <span>no</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -437,11 +416,17 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>.</span>
+                <span></span>
               </li>
+            </ul>
 
+            {/* ---------- Section 2 ---------- */}
+            <h2 className="text-lg font-bold mt-6">Nature reserve</h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">maintaining paths</li>
+              <li className="text-lg">nesting boxes for birds installed</li>
               <li className="text-lg">
-                <span>Reason for trip: shopping and visit to the</span>
+                <span>next task is taking action to attract</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -456,11 +441,11 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>and compass</span>
+                <span>to the place.</span>
               </li>
 
               <li className="text-lg">
-                <span>Travelled by bus because cost of</span>
+                <span>identifying types of</span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -475,11 +460,11 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>too high.</span>
+                <span>.</span>
               </li>
 
               <li className="text-lg">
-                <span>Got on bus at</span>
+                <span>building a new</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -494,17 +479,17 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>street.</span>
               </li>
             </ul>
 
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              Complaints about bus service:
+              Forthcoming events <br /> Saturday
             </h2>
             <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">meet at Dunsmore Beach car park</li>
               <li className="text-lg">
-                <span>bus today was</span>
+                <span>walk across the sands and reach the</span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -521,9 +506,8 @@ const Test1Listening2023 = () => {
                 />
                 <span>.</span>
               </li>
-
               <li className="text-lg">
-                <span>frequency of buses in the</span>
+                <span>wear appropriate</span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -543,10 +527,10 @@ const Test1Listening2023 = () => {
             </ul>
 
             {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Travelling by car</h2>
+            <h2 className="text-lg font-bold mt-6">Woodwork session</h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Goes to the</span>
+                <span>suitable for</span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -561,16 +545,10 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>by car.</span>
+                <span>to participate in.</span>
               </li>
-            </ul>
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Travelling by bicycle</h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>
-                  Dislikes travelling by bike in the city centre because of the
-                </span>
+                <span>Making </span>
                 <button
                   onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -585,10 +563,11 @@ const Test1Listening2023 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>.</span>
+                <span>out of it.</span>
               </li>
+
               <li className="text-lg">
-                <span>Doesn't own a bike because of a lack of</span>
+                <span>cost of session (no camping): £</span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -613,4 +592,4 @@ const Test1Listening2023 = () => {
   );
 };
 
-export default Test1Listening2023;
+export default Test1Listening2022;

@@ -324,7 +324,7 @@ const Test2Listening2023 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[75%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -486,152 +486,149 @@ const Test2Listening2023 = () => {
           </div>
 
           {/* TABLE SECTION */}
-          <div className="mt-5 w-[500px] h-full">
+          <div className="mt-5 w-full h-full">
             <h2 className="text-lg font-bold mb-3">Questions 6–10</h2>
             <h3 className="text-lg font-semibold mb-5">
               Complete the notes below. <br /> <br /> Write{" "}
               <span className="font-bold">ONLY ONE WORD</span> for each answer.
             </h3>
-            {/* table */}
-            <table className="border-collapse border border-gray-400 w-[400px] text-center">
-              <thead>
-                <tr>
-                  <th className="border p-2">Location</th>
-                  <th className="border p-2">Job title</th>
-                  <th className="border p-2">Responsibilities include</th>
-                  <th className="border p-2">Pay and conditions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-400 text-sm  p-2">
-                    <p className="text-lg">
-                      <span className="inline-block"></span>
-                      <button
-                        onClick={() => toggleButton(6)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[6]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        6
-                      </button>
-                      <input
-                        className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                        type="text"
-                      />
-                      <span>street.</span>
-                    </p>
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    Breakfast supervisor
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    <ul className="list-disc list-inside ">
-                      <li className="text-lg">
-                        Checking portions, etc. are correct
-                      </li>
-                      <li className="text-lg">
-                        <span className="inline-block">Making sure</span>
+         {/* table */}
+
+            <div className="flex justify-center items-center ">
+              <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
+                <thead>
+                  <tr>
+                    <th className="border p-2">Location</th>
+                    <th className="border p-2">Job title</th>
+                    <th className="border p-2">Responsibilities include</th>
+                    <th className="border p-2">Pay and conditions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border text-lg p-2">
+                      <p className="text-lg flex items-center justify-center flex-wrap">
                         <button
-                          onClick={() => toggleButton(7)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                            activeButtons[7]
+                          onClick={() => toggleButton(6)}
+                          className={`mx-1 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                            activeButtons[6]
                               ? "bg-yellow-400 border-yellow-500"
                               : "bg-gray-200 border-gray-400"
                           }`}
                         >
-                          7
+                          6
                         </button>
                         <input
-                          className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                          className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                           type="text"
                         />
-                        <span>is clean.</span>
-                      </li>
-                    </ul>
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    <ul className="list-disc list-inside ">
-                      <li className="text-lg">
-                        <span className="inline-block">Starting salary £</span>
-                        <button
-                          onClick={() => toggleButton(8)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                            activeButtons[8]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          8
-                        </button>
-                        <input
-                          className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                        />
-                        <span>per hour.</span>
-                      </li>
-                      <li className="text-lg">Start work at 5.30 a.m.</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 text-sm  p-2">
-                    City Road
-                  </td>
-                  <td className="border border-gray-400 p-2">junior chef</td>
-                  <td className="border border-gray-400 p-2">
-                    <ul className="list-disc list-inside ">
-                      <li className="text-lg">Supporting senior chefs</li>
-                      <li className="text-lg">
-                        <span className="inline-block">
-                          Maintaining stock and organising
-                        </span>
-                        <button
-                          onClick={() => toggleButton(9)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                            activeButtons[9]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          9
-                        </button>
-                        <input
-                          className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                        />
-                        <span>is clean.</span>
-                      </li>
-                    </ul>
-                  </td>
-                  <td className="border border-gray-400 p-2">
-                    <ul className="list-disc list-inside ">
-                      <li className="text-lg">Annual salary £23,000</li>
-                      <li className="text-lg">
-                        <span className="inline-block">No work on a</span>
-                        <button
-                          onClick={() => toggleButton(10)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                            activeButtons[10]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          10
-                        </button>
-                        <input
-                          className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                          type="text"
-                        />
-                        <span>once a month.</span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                        <span>street.</span>
+                      </p>
+                    </td>
+                    <td className="border text-lg p-2">Breakfast supervisor</td>
+                    <td className="border  text-lg p-2">
+                      <ul className="list-disc list-inside text-left">
+                        <li className="text-lg">
+                          Checking portions, etc. are correct
+                        </li>
+                        <li className="text-lg flex items-center flex-wrap">
+                          <span>Making sure</span>
+                          <button
+                            onClick={() => toggleButton(7)}
+                            className={`mx-1 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                              activeButtons[7]
+                                ? "bg-yellow-400 border-yellow-500"
+                                : "bg-gray-200 border-gray-400"
+                            }`}
+                          >
+                            7
+                          </button>
+                          <input
+                            className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                            type="text"
+                          />
+                          <span>is clean.</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td className="border  text-lg p-2">
+                      <ul className="list-disc list-inside text-left">
+                        <li className="text-lg flex items-center flex-wrap">
+                          <span>Starting salary £</span>
+                          <button
+                            onClick={() => toggleButton(8)}
+                            className={`mx-1 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                              activeButtons[8]
+                                ? "bg-yellow-400 border-yellow-500"
+                                : "bg-gray-200 border-gray-400"
+                            }`}
+                          >
+                            8
+                          </button>
+                          <input
+                            className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                            type="text"
+                          />
+                          <span>per hour.</span>
+                        </li>
+                        <li className="text-lg">Start work at 5.30 a.m.</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="border  text-lg p-2">City Road</td>
+                    <td className="border  text-lg p-2">Junior chef</td>
+                    <td className="border  text-lg p-2">
+                      <ul className="list-disc list-inside text-left">
+                        <li className="text-lg">Supporting senior chefs</li>
+                        <li className="text-lg flex items-center flex-wrap">
+                          <span>Maintaining stock and organising</span>
+                          <button
+                            onClick={() => toggleButton(9)}
+                            className={`mx-1 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                              activeButtons[9]
+                                ? "bg-yellow-400 border-yellow-500"
+                                : "bg-gray-200 border-gray-400"
+                            }`}
+                          >
+                            9
+                          </button>
+                          <input
+                            className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                            type="text"
+                          />
+                          <span>is clean.</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td className="border  text-lg p-2">
+                      <ul className="list-disc list-inside text-left">
+                        <li className="text-lg">Annual salary £23,000</li>
+                        <li className="text-lg flex items-center flex-wrap">
+                          <span>No work on a</span>
+                          <button
+                            onClick={() => toggleButton(10)}
+                            className={`mx-1 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                              activeButtons[10]
+                                ? "bg-yellow-400 border-yellow-500"
+                                : "bg-gray-200 border-gray-400"
+                            }`}
+                          >
+                            10
+                          </button>
+                          <input
+                            className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                            type="text"
+                          />
+                          <span>once a month.</span>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
