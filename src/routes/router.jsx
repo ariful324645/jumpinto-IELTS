@@ -63,6 +63,14 @@ import Test1Reading2022 from "../components/Academic 2022/Reading/Test1Reading20
 import Test2Reading2022 from "../components/Academic 2022/Reading/Test2Reading2022";
 import Test3Reading2022 from "../components/Academic 2022/Reading/Test3Reading2022";
 import Test4Reading2022 from "../components/Academic 2022/Reading/Test4Reading2022";
+import Test1Writing2022 from "../components/Academic 2022/Writing/Test1Writing2022";
+import Test2Writing2022 from "../components/Academic 2022/Writing/Test2Writing2022";
+import Test3Writing2022 from "../components/Academic 2022/Writing/Test3Writing2022";
+import Test4Writing2022 from "../components/Academic 2022/Writing/Test4Writing2022";
+import Test1Speaking2022 from "../components/Academic 2022/Speaking/Test1Speaking2022";
+import Test2Speaking2022 from "../components/Academic 2022/Speaking/Test2Speaking2022";
+import Test3Speaking2022 from "../components/Academic 2022/Speaking/Test3Speaking2022";
+import Test4Speaking2022 from "../components/Academic 2022/Speaking/Test4Speaking2022";
 
 export const router = createBrowserRouter([
   {
@@ -179,143 +187,175 @@ export const router = createBrowserRouter([
       },
       {
         path: "/2024/Test 2/reading",
-        Component:Test2Reading2024,
+        Component: Test2Reading2024,
       },
       {
         path: "/2024/Test 3/reading",
-        Component:Test3Reading2024,
+        Component: Test3Reading2024,
       },
       {
         path: "/2024/Test 4/reading",
-        Component:Test4Reading2024,
+        Component: Test4Reading2024,
       },
       {
         path: "/2024/Test 1/writing",
-        Component:Test1Writing2024,
+        Component: Test1Writing2024,
       },
       {
         path: "/2024/Test 2/writing",
-        Component:Test2Writing2024,
+        Component: Test2Writing2024,
       },
       {
         path: "/2024/Test 3/writing",
-        Component:Test3Writing2024,
+        Component: Test3Writing2024,
       },
       {
         path: "/2024/Test 4/writing",
-        Component:Test4Writing2024,
+        Component: Test4Writing2024,
       },
       {
         path: "/2024/Test 1/speaking",
-        Component:Test1Speaking2024,
+        Component: Test1Speaking2024,
       },
       {
         path: "/2024/Test 2/speaking",
-        Component:Test2Speaking2024,
+        Component: Test2Speaking2024,
       },
       {
         path: "/2024/Test 3/speaking",
-        Component:Test3Speaking2024,
+        Component: Test3Speaking2024,
       },
       {
         path: "/2024/Test 4/speaking",
-        Component:Test4Speaking2024,
+        Component: Test4Speaking2024,
       },
       {
         path: "/2023/Test 1/listening",
-        Component:Test1Listening2023,
+        Component: Test1Listening2023,
       },
       {
         path: "/2023/Test 2/listening",
-        Component:Test2Listening2023,
+        Component: Test2Listening2023,
       },
       {
         path: "/2023/Test 3/listening",
-        Component:Test3Listening2023,
+        Component: Test3Listening2023,
       },
       {
         path: "/2023/Test 4/listening",
-        Component:Test4Listening2023,
+        Component: Test4Listening2023,
       },
       {
         path: "/2023/Test 1/reading",
-        Component:Test1Reading2023,
+        Component: Test1Reading2023,
       },
       {
         path: "/2023/Test 2/reading",
-        Component:Test2Reading2023,
+        Component: Test2Reading2023,
       },
       {
         path: "/2023/Test 3/reading",
-        Component:Test3Reading2023,
+        Component: Test3Reading2023,
       },
       {
         path: "/2023/Test 4/reading",
-        Component:Test4Reading2023,
+        Component: Test4Reading2023,
       },
       {
         path: "/2023/Test 1/writing",
-        Component:Test1Writing2023,
+        Component: Test1Writing2023,
       },
       {
         path: "/2023/Test 2/writing",
-        Component:Test2Writing2023,
+        Component: Test2Writing2023,
       },
       {
         path: "/2023/Test 3/writing",
-        Component:Test3Writing2023,
+        Component: Test3Writing2023,
       },
       {
         path: "/2023/Test 4/writing",
-        Component:Test4Writing2023,
+        Component: Test4Writing2023,
       },
       {
         path: "/2023/Test 1/speaking",
-        Component:Test1Speaking2023,
+        Component: Test1Speaking2023,
       },
       {
         path: "/2023/Test 2/speaking",
-        Component:Test2Speaking2023,
+        Component: Test2Speaking2023,
       },
       {
         path: "/2023/Test 3/speaking",
-        Component:Test3Speaking2023,
+        Component: Test3Speaking2023,
       },
       {
         path: "/2023/Test 4/speaking",
-        Component:Test4Speaking2023,
+        Component: Test4Speaking2023,
       },
       {
         path: "/2022/Test 1/listening",
-        Component:Test1Listening2022,
+        Component: Test1Listening2022,
       },
       {
         path: "/2022/Test 2/listening",
-        Component:Test2Listening2022,
+        Component: Test2Listening2022,
       },
       {
         path: "/2022/Test 3/listening",
-        Component:Test3Listening2022,
+        Component: Test3Listening2022,
       },
       {
         path: "/2022/Test 4/listening",
-        Component:Test4Listening2022,
+        Component: Test4Listening2022,
       },
       {
         path: "/2022/Test 1/reading",
-        Component:Test1Reading2022,
+        Component: Test1Reading2022,
       },
       {
         path: "/2022/Test 2/reading",
-        Component:Test2Reading2022,
+        Component: Test2Reading2022,
       },
       {
         path: "/2022/Test 3/reading",
-        Component:Test3Reading2022,
+        Component: Test3Reading2022,
       },
       {
         path: "/2022/Test 4/reading",
-        Component:Test4Reading2022,
+        Component: Test4Reading2022,
+      },
+      {
+        path: "/2022/Test 1/writing",
+        Component: Test1Writing2022,
+      },
+      {
+        path: "/2022/Test 2/writing",
+        Component: Test2Writing2022,
+      },
+      {
+        path: "/2022/Test 3/writing",
+        Component: Test3Writing2022,
+      },
+      {
+        path: "/2022/Test 4/writing",
+        Component: Test4Writing2022,
+      },
+      {
+        path: "/2022/Test 1/speaking",
+        Component: Test1Speaking2022,
+      },
+      {
+        path: "/2022/Test 2/speaking",
+        Component: Test2Speaking2022,
+      },
+      {
+        path: "/2022/Test 3/speaking",
+        Component: Test3Speaking2022,
+      },
+      {
+        path: "/2022/Test 4/speaking",
+        Component: Test4Speaking2022,
       },
     ],
   },
