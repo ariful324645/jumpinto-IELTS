@@ -75,6 +75,18 @@ import Test1Listening2021 from "../components/Academic2021/Listening/Test1Listen
 import Test2Listening2021 from "../components/Academic2021/Listening/Test2Listening2021";
 import Test3Listening2021 from "../components/Academic2021/Listening/Test3Listening2021";
 import Test4Listening2021 from "../components/Academic2021/Listening/Test4Listening2021";
+import Test1Reading2021 from "../components/Academic2021/Reading/Test1Reading2021";
+import Test2Reading2021 from "../components/Academic2021/Reading/Test2Reading2021";
+import Test3Reading2021 from "../components/Academic2021/Reading/Test3Reading2021";
+import Test4Reading2021 from "../components/Academic2021/Reading/Test4Reading2021";
+import Test1Writing2021 from "../components/Academic2021/Writing/Test1Writing2021";
+import Test2Writing2021 from "../components/Academic2021/Writing/Test2Writing2021";
+import Test3Writing2021 from "../components/Academic2021/Writing/Test3Writing2021";
+import Test4Writing2021 from "../components/Academic2021/Writing/Test4Writing2021";
+import Test1Speaking2021 from "../components/Academic2021/Speaking/Test1Speaking2021";
+import Test2Speaking2021 from "../components/Academic2021/Speaking/Test2Speaking2021";
+import Test3Speaking2021 from "../components/Academic2021/Speaking/Test3Speaking2021";
+import Test4Speaking2021 from "../components/Academic2021/Speaking/Test4Speaking2021";
 
 export const router = createBrowserRouter([
   {
@@ -376,6 +388,54 @@ export const router = createBrowserRouter([
       {
         path: "/2021/Test 4/listening",
         Component:Test4Listening2021,
+      },
+      {
+        path: "/2021/Test 1/reading",
+        Component:Test1Reading2021,
+      },
+      {
+        path: "/2021/Test 2/reading",
+        Component:Test2Reading2021,
+      },
+      {
+        path: "/2021/Test 3/reading",
+        Component:Test3Reading2021,
+      },
+      {
+        path: "/2021/Test 4/reading",
+        Component:Test4Reading2021,
+      },
+      {
+        path: "/2021/Test 1/writing",
+        Component:Test1Writing2021,
+      },
+      {
+        path: "/2021/Test 2/writing",
+        Component:Test2Writing2021,
+      },
+      {
+        path: "/2021/Test 3/writing",
+        Component:Test3Writing2021,
+      },
+      {
+        path: "/2021/Test 4/writing",
+        Component:Test4Writing2021,
+      },
+      {
+        path: "/2021/Test 1/speaking",
+        Component:Test1Speaking2021,
+      },
+      {
+        path: "/2021/Test 2/speaking",
+        Component:Test2Speaking2021,
+      },
+      {
+        path: "/2021/Test 3/speaking",
+        Component:Test3Speaking2021,
+      },
+      {
+        path: "/2021/Test 4/speaking",
+        Component:Test4Speaking2021,
       },
     ],
   },
