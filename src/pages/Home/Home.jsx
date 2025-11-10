@@ -401,7 +401,7 @@ const Home = () => {
 
                             {/* Show mark only if score > 0 */}
                             {score > 0 && (
-                              <span className="bg-yellow-100 rounded-lg px-3 py-1 font-bold">
+                              <span className="bg-yellow-50 rounded-lg px-3 py-1 font-bold">
                                 {score}
                               </span>
                             )}

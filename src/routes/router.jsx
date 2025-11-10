@@ -90,6 +90,11 @@ import Test4Speaking2021 from "../components/Academic2021/Speaking/Test4Speaking
 import Test1Listening2020 from "../components/Academic 2020/Listening/Test1Listening2020";
 import Test2Listening2020 from "../components/Academic 2020/Listening/Test2Listening2020";
 import Test3Listening2020 from "../components/Academic 2020/Listening/Test3Listening2020";
+import Test4Listening2020 from "../components/Academic 2020/Listening/Test4Listening2020";
+import Test1Reading2020 from "../components/Academic 2020/Reading/Test1Reading2020";
+import Test2Reading2020 from "../components/Academic 2020/Reading/Test2Reading2020";
+import Test3Reading2020 from "../components/Academic 2020/Reading/Test3Reading2020";
+import Test4Reading2020 from "../components/Academic 2020/Reading/Test4Reading2020";
 
 export const router = createBrowserRouter([
   {
@@ -453,6 +458,26 @@ export const router = createBrowserRouter([
       {
         path: "/2020/Test 3/listening",
         Component: Test3Listening2020,
+      },
+      {
+        path: "/2020/Test 4/listening",
+        Component: Test4Listening2020,
+      },
+      {
+        path: "/2020/Test 1/reading",
+        Component: Test1Reading2020,
+      },
+      {
+        path: "/2020/Test 2/reading",
+        Component: Test2Reading2020,
+      },
+      {
+        path: "/2020/Test 3/reading",
+        Component: Test3Reading2020,
+      },
+      {
+        path: "/2020/Test 4/reading",
+        Component: Test4Reading2020,
       },
     ],
   },

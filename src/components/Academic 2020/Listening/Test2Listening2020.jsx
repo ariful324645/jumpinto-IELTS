@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -16,7 +16,6 @@ const Test2Listening2020 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
- 
   const lines = [
     {
       speaker: "ANNOUNCER",
@@ -323,10 +322,7 @@ const Test2Listening2020 = () => {
               i < arr.length - 1
                 ? [
                     p,
-                    <span
-                      key={Math.random()}
-                      className="bg-yellow-200 "
-                    >
+                    <span key={Math.random()} className="bg-yellow-200 ">
                       {ht}
                     </span>,
                   ]
@@ -432,18 +428,68 @@ const Test2Listening2020 = () => {
     speakNextChunk();
   };
 
+  // marks
+
+
+  const correctAnswers = {
+    1: "The next day, the 18th, there's a performance by a ballet company called Eustatis",
+    2: "I haven't seen it myself, but the review in the local paper was very good",
+    3: "Yes, also on the 20th, but in the evening",
+    4: "  Chat",
+    5: "We certainly do. It's going to focus on how to make food part of a healthy lifestyle.",
+    6: "Another workshop is just for children, and that's on creating posters",
+    7: "Oh, yes, they will ask to see that",
+    8: "Yes. There's a beautiful one just outside the town, and that'll be the venue for the swimming",
+    9: "The leader is an expert on insects",
+    10: "the festival organizer is keeping a blog",
+  };
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
+
+  // --- Handle input change and auto-check ---
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [id]: value };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Calculate live score ---
+  const calculateScore = (answers) => {
+    let newScore = 0;
+    Object.keys(correctAnswers).forEach((key) => {
+      if (
+        answers[key]?.trim().toLowerCase() ===
+        correctAnswers[key].trim().toLowerCase()
+      ) {
+        newScore += 1;
+      }
+    });
+    setScore(newScore);
+    localStorage.setItem("/2020/Test 2/listening", newScore);
+  };
+
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const handleClear = () => {
+    setUserAnswers({});
+    setScore(0);
     setActiveButtons({});
-    document
-      .querySelectorAll("input[type='text']")
-      .forEach((input) => (input.value = ""));
-    handleClearHighlight();
     setIsOpen(false);
+    localStorage.removeItem("/2020/Test 2/listening");
   };
+
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2020/Test 2/listening");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -451,6 +497,7 @@ const Test2Listening2020 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
+         
             <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
@@ -588,6 +635,8 @@ const Test2Listening2020 = () => {
                   1
                 </button>
                 <input
+                  value={userAnswers[1] || ""}
+                  onChange={(e) => handleInputChange(1, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -608,6 +657,8 @@ const Test2Listening2020 = () => {
                   2
                 </button>
                 <input
+                  value={userAnswers[2] || ""}
+                  onChange={(e) => handleInputChange(2, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -628,6 +679,8 @@ const Test2Listening2020 = () => {
                   3
                 </button>
                 <input
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -657,6 +710,8 @@ const Test2Listening2020 = () => {
                   4
                 </button>
                 <input
+                  value={userAnswers[4] || ""}
+                  onChange={(e) => handleInputChange(4, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -677,6 +732,8 @@ const Test2Listening2020 = () => {
                   5
                 </button>
                 <input
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -697,6 +754,8 @@ const Test2Listening2020 = () => {
                   6
                 </button>
                 <input
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
                   className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                   type="text"
                 />
@@ -769,6 +828,8 @@ const Test2Listening2020 = () => {
                       7
                     </button>
                     <input
+                      value={userAnswers[1] || ""}
+                      onChange={(e) => handleInputChange(1, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -800,6 +861,8 @@ const Test2Listening2020 = () => {
                       8
                     </button>
                     <input
+                      value={userAnswers[1] || ""}
+                      onChange={(e) => handleInputChange(1, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -824,6 +887,8 @@ const Test2Listening2020 = () => {
                       9
                     </button>
                     <input
+                      value={userAnswers[1] || ""}
+                      onChange={(e) => handleInputChange(1, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -842,6 +907,8 @@ const Test2Listening2020 = () => {
                       10
                     </button>
                     <input
+                      value={userAnswers[1] || ""}
+                      onChange={(e) => handleInputChange(1, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
