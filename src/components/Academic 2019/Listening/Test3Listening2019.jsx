@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Test4Listening2020 = () => {
+const Test3Listening2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -16,306 +16,297 @@ const Test4Listening2020 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
+  //   voice
+  const [voices, setVoices] = useState([]);
+
+  // Load voices
+  useEffect(() => {
+    const synth = window.speechSynthesis;
+    const loadVoices = () => {
+      const allVoices = synth.getVoices();
+      if (allVoices.length) setVoices(allVoices);
+    };
+    loadVoices();
+    synth.onvoiceschanged = loadVoices;
+  }, []);
+
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a representative from a train company talking to a woman about her train journey.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Section 1. You will hear a man phoning the customer services manager of a hotel to get information about holding a conference there.",
+        "First, you have some time to look at questions 1 to 5.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: ["Hello, Flanders Conference Hotel."],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        "Oh, hi, I wanted to ask about conference facilities at the hotel.",
+        "Have I come through to the right person?",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: [
+        "Hmm. You have. I'm the customer services manager. My name's Angela.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "The name of the customer services manager is Angela. So Angela has been written in the space.",
+        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 5.",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: ["Hello, Flanders Conference Hotel."],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        "Oh, hi, I wanted to ask about conference facilities at the hotel.",
+        "Have I come through to the right person?",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: [
+        "Hmm. You have. I'm the customer services manager. My name's Angela.",
+        "So, how can I help you?",
       ],
     },
     {
       speaker: "MAN",
       text: [
-        "Hello, do you mind if I ask you some questions about your journey today? We're doing a customer satisfaction survey.",
+        "Well, I'm calling from Barrett and Stansons. We're a medical company based in Perth.",
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "ANGELA",
+      text: ["Oh, yes."],
+    },
+    {
+      speaker: "MAN",
       text: [
-        "Yes, OK. I've got about 10 minutes before my train home leaves. I'm on a day trip.",
+        "And we're organizing a conference for our clients to be held in Sydney.",
+        "It'll be held over two days, and we're expecting about 50 or 60 people.",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: ["When were you thinking of having it?"],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        "Sometime early next year, like the end of January. It would have to be a weekend.",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: [
+        "Uh. Let me see. Our conference facilities are already booked for the weekend beginning January the 28th.",
+        "We could do the first weekend in February.",
       ],
     },
     {
       speaker: "MAN",
-      text: ["Great, thank you. So first of all, could you tell me your name?"],
+      text: ["How about January the 21st?"],
     },
     {
-      speaker: "SOPHIE",
-      text: ["It's Sophie Bird."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Thank you. And would you mind telling me what you do?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I'm a journalist.", number: 1 }],
+      speaker: "ANGELA",
+      text: ["Ah, oh, I'm afraid that's booked too."],
     },
     {
       speaker: "MAN",
-      text: ["Oh, really? That must be interesting."],
+      text: ["Well, let's go for the February date then."],
     },
     {
-      speaker: "SOPHIE",
-      text: ["Yes, it is."],
+      speaker: "ANGELA",
+      text: ["So, that's the weekend beginning the 4th."],
     },
     {
       speaker: "MAN",
-      text: ["So, what's the reason for your visit here today? Work?"],
-    },
-    {
-      speaker: "SOPHIE",
       text: [
-        "Actually, it's my day off.",
+        "OK, now can you tell me a bit about what conference facilities you have?",
+      ],
+    },
+    {
+      speaker: "ANGELA",
+      text: [
         {
-          text: " I came here to do some shopping.",
+          text: "Sure, uh, so for talks and presentations, we have the Tesla room.",
+          number: 1,
+        },
+        "That's spelled T-E-S-L-A.It holds up to 100 people, and it's fully equipped with a projector and so on.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        {
+          text: "How about a microphone?",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "ANGELA",
+
+      text: [
+        "And there'll be one that members of the audience can use too, for questions if necessary.",
+
+        {
+          text: "Yes, that'll be all set up ready for you.",
           number: 2,
         },
       ],
     },
     {
       speaker: "MAN",
-      text: ["All right."],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["But I do sometimes come here for work."],
-    },
-    {
-      speaker: "MAN",
       text: [
-        "OK. Now, I'd like to ask some questions about your journey today, if that's OK.",
+        "Fine. And we'll also need some sort of open area where people can sit and have a cup of coffee.",
       ],
     },
     {
-      speaker: "SOPHIE",
-      text: ["Yes, no problem."],
-    },
-    {
-      speaker: "MAN",
+      speaker: "ANGELA",
       text: [
-        "Right, so can you tell me which station you're traveling back to?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "Staunfirth, where I live.", number: 3 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Uh. Can I just check the spelling? STAUNFIRTH?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["That's right."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Hmm. And you traveled from there this morning?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, good. Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket, as you don't travel every day.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "That's right.",
         {
-          text: " No, I just got a normal return ticket.",
+          text: "And we'd like to have an exhibition of our products and services there as well, so that'll need to be quite a big space.",
+          number: 3,
+        },
+        "That's fine. There's a central atrium with all those facilities, and you can come before the conference starts if you want to set everything up.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        {
+          text: "Great, and I presume there's wifi",
           number: 4,
         },
-        "I don't have a rail card, so I didn't get any discount. I keep meaning to get one, because it's a lot cheaper.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "ANGELA",
       text: [
-        "Yes, you'd have saved 20% on your ticket today. Uh. So you paid the full price for your ticket.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I paid £23.70.", number: 5 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, do you think that's good value for money?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Not really, I think it's too much for a journey that only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, that's one of the main complaints we get. So you didn't buy your ticket in advance?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "No, I know it's cheaper if you buy a week in advance, but I didn't know I was coming then.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I know, you can't always plan ahead. So, did you buy it this morning?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["No, it was yesterday."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Right, and do you usually buy your tickets at the station?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, I do usually, but the ticket office closes early, and I hate using ticket machines. I think ticket offices should be open for longer hours. There's always a queue for the machines, and they're often out of order.",
         {
-          text: "So to answer your question, I got an e-ticket online.",
-          number: 6,
+          text: "Oh, yes. That's free and available throughout the hotel.",
+          number: 4,
+        },
+        "OK, would you also like us to provide a buffet lunch?",
+        "We can do a two course meal with a number of different options.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["What sort of price are we looking at for that?"],
+    },
+    {
+      speaker: "ANGELA",
+      text: [
+        "Well, I can send you a copy of the standard menu.",
+        {
+          text: "That's $45 per person, or you can have the special for $25 more.",
+          number: 5,
         },
       ],
+    },
+    {
+      speaker: "MAN",
+      text: ["I think the standard should be OK, but yes, send me the menu."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
+        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
+        "Now listen and answer questions 6 to 10.",
       ],
     },
     {
       speaker: "MAN",
       text: [
-        "OK, thank you. Now I'd like to ask you about your satisfaction with your journey. So what would you say you were most satisfied with today?",
+        "Now, we're also going to need accommodation on the Saturday night for some of the participants.",
+        "I'm not sure how many, but probably about 25. So, what do you charge for a room?",
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "ANGELA",
       text: [
-        "Well, I like the Wi-Fi on the train. It's improved a lot. It makes it easier for me to work if I want to.",
+        "Well, for conference attendees, we have a 25% reduction.",
+        { text: "So we can offer you rooms at $135.", number: 6 },
+        "Normally a standard room's $180.",
       ],
     },
     {
       speaker: "MAN",
+      text: ["And does that include breakfast?"],
+    },
+    {
+      speaker: "ANGELA",
       text: [
-        "That's the first time today anyone's mentioned that. It's good to get some positive feedback on that.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Hmm."],
-    },
-    {
-      speaker: "MAN",
-      text: ["And is there anything you weren't satisfied with?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
+        "Sure, and of course guests can also make use of all the other facilities at the hotel.",
+        "So we've got a spa where you can get massages and facials and so on.",
         {
-          text: "Well, normally the trains run on time and are pretty reliable, but today there was a delay.",
+          text: " And there's a pool up on the roof for the use of guests.",
           number: 7,
         },
-        "The train was about 15 minutes behind schedule.",
       ],
     },
     {
       speaker: "MAN",
       text: [
-        "Hmm. OK, I'll put that down. Now, uh, I'd also like to ask about the facilities at this station. You've probably noticed that the whole station's been upgraded. What are you most satisfied with?",
+        "Oh. Great. Now what about transport links? The hotel's downtown, isn't it?",
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "ANGELA",
       text: [
         {
-          text: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers.",
+          text: "Yes, it's about 12 km from the airport, but there's a complimentary shuttle bus for guests, and it's only about 10 minutes' walk from the Central Railway Station.",
           number: 8,
         },
-        "It's much clearer, before there was only one board, and I couldn't always see it properly, which was frustrating.",
       ],
     },
     {
       speaker: "MAN",
-      text: ["That's good, and is there anything you're not satisfied with?"],
+      text: [
+        "OK. Now, I don't know Sydney very well. Can you just give me an idea of the location of the hotel?",
+      ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "ANGELA",
       text: [
-        "Let's see, I think things have generally improved a lot. The trains are much more modern, and I like the new cafe, but one thing is that there aren't enough places to sit down.",
         {
-          text: "Especially on the platforms.",
+          text: "Uh. Well, it's downtown on Wilby Street. That's quite a small street, and it's not very far from the sea.",
           number: 9,
         },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, so I'll put seating down, shall I, as the thing you're least satisfied with?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Can I ask your opinion about some of the other facilities?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "We'd like feedback on whether people are satisfied, dissatisfied or neither satisfied nor dissatisfied. ?",
+        "And of course, if the conference attendees want to go out on their Saturday evening, there's a huge choice of places to eat.",
         {
-          text: "OK, uh, what about the parking at the station",
+          text: "Then, if they want to make a night of it, they can go on to one of the clubs in the area. There are a great many to choose from.",
           number: 10,
         },
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "MAN",
       text: [
-        "Well, to be honest, I don't really have an opinion, as I never use it.",
+        "OK. So, if we go ahead with this, can you give me some information about how much we're looking at?",
       ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So neither satisfied nor dissatisfied for that then?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, I suppose so."],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, uh, and what about these?"],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of Section 1.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
@@ -409,11 +400,6 @@ const Test4Listening2020 = () => {
     );
   };
 
-
-
-
-
-  
   // ---- Voice function ----
   const handleVoice = () => {
     if (isSpeaking) {
@@ -424,16 +410,18 @@ const Test4Listening2020 = () => {
       return;
     }
     const voices = window.speechSynthesis.getVoices();
+
     const getVoice = (speaker) => {
       if (!voices.length) return null;
       if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "SOPHIE")
+      if (speaker === "ANGELA")
         return voices.find((v) => v.name.includes("Zira")) || voices[0];
       if (speaker === "MAN")
         return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };
+
     let lineIndex = 0;
     let chunkIndex = 0;
     setIsSpeaking(true);
@@ -471,16 +459,16 @@ const Test4Listening2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "I'm a journalist",
-    2: "I came here to do some shopping",
-    3: "Staunfirth, where I live",
-    4: "No, I just got a normal return ticket",
-    5: "I paid £23.70",
-    6: "So to answer your question, I got an e-ticket online",
-    7: "Well, normally the trains run on time and are pretty reliable, but today there was a delay",
-    8: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers",
-    9: " Especially on the platforms",
-    10: "OK, uh, what about the parking at the station",
+    1: "Sure, uh, so for talks and presentations, we have the Tesla room.",
+    2: "Yes, that'll be all set up ready for you",
+    3: "And we'd like to have an exhibition of our products and services there as well, so that'll need to be quite a big space",
+    4: "Great, and I presume there's wifi",
+    5: "That's $45 per person, or you can have the special for $25 more",
+    6: "So we can offer you rooms at $135",
+    7: "And there's a pool up on the roof for the use of guests",
+    8: "Yes, it's about 12 km from the airport, but there's a complimentary shuttle bus for guests, and it's only about 10 minutes' walk from the Central Railway Station",
+    9: "Uh. Well, it's downtown on Wilby Street. That's quite a small street, and it's not very far from the sea",
+    10: "Then, if they want to make a night of it, they can go on to one of the clubs in the area. There are a great many to choose from",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -507,7 +495,7 @@ const Test4Listening2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 4/listening", newScore);
+    localStorage.setItem("/2019/Test 3/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -519,12 +507,12 @@ const Test4Listening2020 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2020/Test 4/listening");
+    localStorage.removeItem("/2019/Test 3/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 4/listening");
+    const savedScore = localStorage.getItem("/2019/Test 3/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -567,7 +555,7 @@ const Test4Listening2020 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Customer Satisfaction Survey")}
+                {renderText("Flanders conference hotel")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -655,21 +643,40 @@ const Test4Listening2020 = () => {
             </span>
             {renderText(" for each answer.")}
           </h3>
-
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Customer Satisfaction Survey")}
+              {renderText("FLANDERS CONFERENCE HOTEL")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section 1: Hotel Information ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              <h2 className="text-lg font-bold mt-6">
-                {renderText("Customer details")}
-              </h2>
-              <li className="text-lg">{renderText("Name: Sophie Bird")}</li>
+              <li className="text-lg">
+                <span>
+                  {renderText("(Example) Customer Services Manager:")}
+                </span>
+                <span className="ml-2 font-semibold">
+                  {renderText("Angela")}
+                </span>
+              </li>
 
               <li className="text-lg">
-                <span>{renderText("Occupation:")}</span>
+                <span>{renderText("Date available: weekend beginning")}</span>
+                <input
+                  value={userAnswers[1] || ""}
+                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>{renderText("4th")}</span>
+              </li>
+
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Conference facilities")}
+              </h2>
+
+              <li className="text-lg">
+                <span>{renderText("the")}</span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -686,15 +693,7 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
-              </li>
-
-              <li className="text-lg">
-                {renderText("Phone number: 07866 510333")}
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Reason for travel today:")}</span>
+                <span>{renderText("room for talks (projector and")}</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -705,26 +704,11 @@ const Test4Listening2020 = () => {
                 >
                   2
                 </button>
-                <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
+                <span>{renderText("available)")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Journey information")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                {renderText("Name of station returning to:")}
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Name of station returning to: ")}</span>
+                <span>{renderText("area for coffee and an")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -741,10 +725,10 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Type of ticket purchased: standard")}</span>
+                <span>{renderText("free")}</span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -761,10 +745,11 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("ticket.")}</span>
+                <span>{renderText("throughout")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Cost of ticket: £")}</span>
+                <span>{renderText("a standard buffet lunch costs $")}</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -781,10 +766,15 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("per hour.")}</span>
+                <span>{renderText("per head")}</span>
               </li>
+
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Accommodation")}
+              </h2>
+
               <li className="text-lg">
-                <span>{renderText("Where ticket was bought:")}</span>
+                <span>{renderText("Rooms will cost $")}</span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -801,17 +791,17 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText("including breakfast")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with journey")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Other facilities")}
+              </h2>
+
               <li className="text-lg">
-                <span>{renderText("Least satisfied with: the")}</span>
+                <span>
+                  {renderText("The hotel also has a spa and rooftop")}
+                </span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -828,17 +818,12 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 6 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with station facilities")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Most satisfied with: how much")}</span>
+                <span>
+                  {renderText("There's a free shuttle service to the")}
+                </span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -855,10 +840,14 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("was provided.")}</span>
               </li>
+
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Location")}
+              </h2>
+
               <li className="text-lg">
-                <span>{renderText("The")}</span>
+                <span>{renderText("Wilby Street (quite near the")}</span>
                 <button
                   onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -875,13 +864,11 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" ")}</span>
+                <span>{renderText(")")}</span>
               </li>
 
               <li className="text-lg">
-                <span>
-                  {renderText("Neither satisfied nor dissatisfied with: the")}
-                </span>
+                <span>{renderText("near to restaurants and many")}</span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -898,7 +885,6 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("available.")}</span>
               </li>
             </ul>
           </div>
@@ -908,4 +894,4 @@ const Test4Listening2020 = () => {
   );
 };
 
-export default Test4Listening2020;
+export default Test3Listening2019;

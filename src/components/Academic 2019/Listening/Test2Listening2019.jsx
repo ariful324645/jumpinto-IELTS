@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Test4Listening2020 = () => {
+const Test1Listening2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -20,302 +20,321 @@ const Test4Listening2020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a representative from a train company talking to a woman about her train journey.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Section 1. You will hear a woman talking to a doctor at a clinic about a medical problem.",
+        "First, you have some time to look at questions 1 to 4.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "CARL",
+      text: ["Hi, come and take a seat."],
+    },
+    {
+      speaker: "JULIE",
+      text: ["Thank you."],
+    },
+    {
+      speaker: "CARL",
       text: [
-        "Hello, do you mind if I ask you some questions about your journey today? We're doing a customer satisfaction survey.",
+        "My name is Carl Rogers, and I'm one of the doctors here at the Total Health Clinic.",
+        "So, I understand this is your first visit to the clinic.",
       ],
     },
     {
-      speaker: "SOPHIE",
-      text: [
-        "Yes, OK. I've got about 10 minutes before my train home leaves. I'm on a day trip.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["Great, thank you. So first of all, could you tell me your name?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["It's Sophie Bird."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Thank you. And would you mind telling me what you do?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I'm a journalist.", number: 1 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Oh, really? That must be interesting."],
-    },
-    {
-      speaker: "SOPHIE",
+      speaker: "JULIE",
       text: ["Yes, it is."],
     },
     {
-      speaker: "MAN",
-      text: ["So, what's the reason for your visit here today? Work?"],
-    },
-    {
-      speaker: "SOPHIE",
+      speaker: "CARL",
       text: [
-        "Actually, it's my day off.",
-        {
-          text: " I came here to do some shopping.",
-          number: 2,
-        },
+        "OK, well I hope you'll be very happy with the service you receive here.",
+        "So if it's all right with you, I'll take a few details to help me give you the best possible service.",
       ],
     },
     {
-      speaker: "MAN",
-      text: ["All right."],
+      speaker: "JULIE",
+      text: ["Sure."],
     },
     {
-      speaker: "SOPHIE",
-      text: ["But I do sometimes come here for work."],
-    },
-    {
-      speaker: "MAN",
+      speaker: "CARL",
       text: [
-        "OK. Now, I'd like to ask some questions about your journey today, if that's OK.",
+        "So, can I check first of all that we have the correct personal details for you?",
+        "So your full name is Julie Anne Garcia.",
       ],
     },
     {
-      speaker: "SOPHIE",
-      text: ["Yes, no problem."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Right, so can you tell me which station you're traveling back to?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "Staunfirth, where I live.", number: 3 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Uh. Can I just check the spelling? STAUNFIRTH?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["That's right."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Hmm. And you traveled from there this morning?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, good. Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket, as you don't travel every day.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "That's right.",
-        {
-          text: " No, I just got a normal return ticket.",
-          number: 4,
-        },
-        "I don't have a rail card, so I didn't get any discount. I keep meaning to get one, because it's a lot cheaper.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, you'd have saved 20% on your ticket today. Uh. So you paid the full price for your ticket.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I paid £23.70.", number: 5 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, do you think that's good value for money?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Not really, I think it's too much for a journey that only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, that's one of the main complaints we get. So you didn't buy your ticket in advance?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "No, I know it's cheaper if you buy a week in advance, but I didn't know I was coming then.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I know, you can't always plan ahead. So, did you buy it this morning?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["No, it was yesterday."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Right, and do you usually buy your tickets at the station?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, I do usually, but the ticket office closes early, and I hate using ticket machines. I think ticket offices should be open for longer hours. There's always a queue for the machines, and they're often out of order.",
-        {
-          text: "So to answer your question, I got an e-ticket online.",
-          number: 6,
-        },
-      ],
+      speaker: "JULIE",
+      text: ["That's correct."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
+        "The woman's name is Julie Anne Garcia. So Garcia has been written in the space.",
+        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 4.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "CARL",
+      text: ["Hi, come and take a seat."],
+    },
+    {
+      speaker: "JULIE",
+      text: ["Thank you."],
+    },
+    {
+      speaker: "CARL",
       text: [
-        "OK, thank you. Now I'd like to ask you about your satisfaction with your journey. So what would you say you were most satisfied with today?",
+        "My name is Carl Rogers, and I'm one of the doctors here at the Total Health Clinic.",
+        "So, I understand this is your first visit to the clinic.",
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "JULIE",
+      text: ["Yes, it is."],
+    },
+    {
+      speaker: "CARL",
       text: [
-        "Well, I like the Wi-Fi on the train. It's improved a lot. It makes it easier for me to work if I want to.",
+        "OK, well I hope you'll be very happy with the service you receive here.",
+        "So if it's all right with you, I'll take a few details to help me give you the best possible service.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "JULIE",
+      text: ["Sure."],
+    },
+    {
+      speaker: "CARL",
       text: [
-        "That's the first time today anyone's mentioned that. It's good to get some positive feedback on that.",
+        "So can I check first of all that we have the correct personal details for you?",
+        "So your full name is Julie Anne Garcia.",
       ],
     },
     {
-      speaker: "SOPHIE",
-      text: ["Hmm."],
+      speaker: "JULIE",
+      text: ["That's correct."],
     },
     {
-      speaker: "MAN",
-      text: ["And is there anything you weren't satisfied with?"],
+      speaker: "CARL",
+      text: ["Perfect. And can I have a contact phone number?"],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "JULIE",
+      text: [{ text: "It's 2194429785.", number: 1 }],
+    },
+    {
+      speaker: "CARL",
       text: [
+        "OK, and then can I just check that we have the correct date of birth?",
+      ],
+    },
+    {
+      speaker: "JULIE",
+      text: [{ text: "October 10th, 1992.", number: 2 }],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "Oh, I actually have 1991. I'll just correct that now. Right, so that's all good.",
+        "Now I just need a few more personal details. Do you have an occupation, either full-time or part-time?",
+      ],
+    },
+    {
+      speaker: "JULIE",
+      text: [
+        "Uh. Yes, I work full time in Esterhazy's, you know the restaurant chain.",
+
         {
-          text: "Well, normally the trains run on time and are pretty reliable, but today there was a delay.",
-          number: 7,
+          text: "I started off as a waitress there a few years ago, and I'm a manager now.",
+          number: 3,
         },
-        "The train was about 15 minutes behind schedule.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "CARL",
       text: [
-        "Hmm. OK, I'll put that down. Now, uh, I'd also like to ask about the facilities at this station. You've probably noticed that the whole station's been upgraded. What are you most satisfied with?",
+        "Oh, I know them. Yeah, they're down on 114th Street, aren't they?",
       ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "JULIE",
+      text: ["Uh. That's right."],
+    },
+    {
+      speaker: "CARL",
+      text: ["Yeah, I've been there a few times. I just love their salads."],
+    },
+    {
+      speaker: "JULIE",
+      text: ["That's good to hear."],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "Right, so one more thing I need to know before we talk about why you're here, Julie, and that's the name of your insurance company.",
+      ],
+    },
+    {
+      speaker: "JULIE",
+      text: [{ text: "It's Cawley Life Insurance, that's CAWLEY.", number: 4 }],
+    },
+    {
+      speaker: "CARL",
+      text: ["Excellent, thank you so much."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 5 to 10.",
+        "Now listen and answer questions 5 to 10.",
+      ],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "Now, Julie, let's look at how we can help you. So, tell me a little about what brought you here today.",
+      ],
+    },
+    {
+      speaker: "JULIE",
       text: [
         {
-          text: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers.",
+          text: "Well, I've been getting a pain in my knee, the left one, not very serious at first, but it's gotten worse.",
+          number: 5,
+        },
+        "So I thought I ought to see someone about it.",
+      ],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "That's certainly the right decision. So how long have you been aware of this pain?",
+        "Is it just a few days, or is it longer than that?",
+      ],
+    },
+    {
+      speaker: "JULIE.Longer.",
+
+      text: [
+        {
+          text: " It's been worse for the last couple of days, but it's 3 weeks since I first noticed it.",
+          number: 6,
+        },
+        "It came on quite gradually though, so I kind of ignored it at first.",
+      ],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "And have you taken any medication yourself or treated it in any way?",
+      ],
+    },
+    {
+      speaker: "JULIE",
+      text: [
+        "Um. Yeah, I've been taking medication to deal with the pain, Tylenol, and that works OK for a few hours.",
+        "But I don't like to keep taking it.",
+      ],
+    },
+    {
+      speaker: "CARL",
+      text: [
+        "OK, and what about heat treatment? Have you tried applying heat at all?",
+      ],
+    },
+    {
+      speaker: "JULIE",
+      text: ["No, but I have been using ice on it for the last few days."],
+    },
+    {
+      speaker: "CARL",
+      text: ["And does that seem to help the pain at all?"],
+    },
+    {
+      speaker: "JULIE",
+      text: ["A little, yes."],
+    },
+    {
+      speaker: "CARL",
+      text: ["Good. Now you look as if you're quite fit normally."],
+    },
+    {
+      speaker: "JULIE",
+      text: ["I am, yes."],
+    },
+    {
+      speaker: "CARL",
+      text: ["So, do you do any sport on a regular basis?"],
+    },
+    {
+      speaker: "JULIE",
+      text: [
+        { text: "Yes, I play a lot of tennis.", number: 7 },
+        "I belong to a club, so I go there a lot. I'm quite competitive, so I enjoy that side of it as well as the exercise, but I haven't gone since this started.",
+      ],
+    },
+    {
+      speaker: "CARL",
+      text: ["Sure. And do you do any other types of exercise?"],
+    },
+    {
+      speaker: "JULIE",
+      text: [
+        "Uh. Yeah, I sometimes do a little swimming.",
+        {
+          text: " But usually just when I'm on vacation.But normally I go running a few times a week, maybe 3 or 4 times.",
           number: 8,
         },
-        "It's much clearer, before there was only one board, and I couldn't always see it properly, which was frustrating.",
       ],
     },
     {
-      speaker: "MAN",
-      text: ["That's good, and is there anything you're not satisfied with?"],
+      speaker: "CARL",
+      text: [
+        "Hmm. So your legs are getting quite a pounding, but you haven't had any problems up to now.",
+      ],
     },
     {
-      speaker: "SOPHIE",
+      speaker: "JULIE",
       text: [
-        "Let's see, I think things have generally improved a lot. The trains are much more modern, and I like the new cafe, but one thing is that there aren't enough places to sit down.",
+        "No, not with my legs. ,",
         {
-          text: "Especially on the platforms.",
+          text: "I did have an accident last year when I slipped and hurt my shoulder. but that's better now.",
           number: 9,
         },
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "CARL",
+      text: ["Excellent. And do you have any allergies?"],
+    },
+    {
+      speaker: "JULIE",
+      text: ["No, none that I'm aware of."],
+    },
+    {
+      speaker: "CARL",
+      text: ["And do you take any medication on a regular basis?"],
+    },
+    {
+      speaker: "JULIE",
       text: [
-        "OK, so I'll put seating down, shall I, as the thing you're least satisfied with?",
+        { text: "Well, I take vitamins, but that's all.", number: 10 },
+        "I'm generally very healthy.",
       ],
     },
     {
-      speaker: "SOPHIE",
-      text: ["Yes, OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Can I ask your opinion about some of the other facilities?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "MAN",
+      speaker: "CARL",
       text: [
-        "We'd like feedback on whether people are satisfied, dissatisfied or neither satisfied nor dissatisfied. ?",
-        {
-          text: "OK, uh, what about the parking at the station",
-          number: 10,
-        },
+        "OK, well, let's have a closer look and see what might be causing this problem. If you can just get up...",
       ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, to be honest, I don't really have an opinion, as I never use it.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So neither satisfied nor dissatisfied for that then?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, I suppose so."],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, uh, and what about these?"],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of section 1.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
@@ -409,11 +428,6 @@ const Test4Listening2020 = () => {
     );
   };
 
-
-
-
-
-  
   // ---- Voice function ----
   const handleVoice = () => {
     if (isSpeaking) {
@@ -428,12 +442,13 @@ const Test4Listening2020 = () => {
       if (!voices.length) return null;
       if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "SOPHIE")
+      if (speaker === "JULIE")
         return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "MAN")
+      if (speaker === "CARL")
         return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };
+
     let lineIndex = 0;
     let chunkIndex = 0;
     setIsSpeaking(true);
@@ -471,16 +486,16 @@ const Test4Listening2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "I'm a journalist",
-    2: "I came here to do some shopping",
-    3: "Staunfirth, where I live",
-    4: "No, I just got a normal return ticket",
-    5: "I paid £23.70",
-    6: "So to answer your question, I got an e-ticket online",
-    7: "Well, normally the trains run on time and are pretty reliable, but today there was a delay",
-    8: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers",
-    9: " Especially on the platforms",
-    10: "OK, uh, what about the parking at the station",
+    1: "It's 2194429785",
+    2: "October 10th, 1992",
+    3: "I started off as a waitress there a few years ago, and I'm a manager now",
+    4: "It's Cawley Life Insurance, that's CAWLEY",
+    5: "Well, I've been getting a pain in my knee, the left one, not very serious at first, but it's gotten worse",
+    6: "It's been worse for the last couple of days, but it's 3 weeks since I first noticed it",
+    7: "Yes, I play a lot of tennis",
+    8: "But usually just when I'm on vacation.But normally I go running a few times a week, maybe 3 or 4 times",
+    9: "I did have an accident last year when I slipped and hurt my shoulder. but that's better now",
+    10: "Well, I take vitamins, but that's all",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -507,7 +522,7 @@ const Test4Listening2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 4/listening", newScore);
+    localStorage.setItem("/2019/Test 2/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -519,12 +534,12 @@ const Test4Listening2020 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2020/Test 4/listening");
+    localStorage.removeItem("/2019/Test 2/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 4/listening");
+    const savedScore = localStorage.getItem("/2019/Test 2/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -567,7 +582,7 @@ const Test4Listening2020 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Customer Satisfaction Survey")}
+                {renderText("Total Health Clinic")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -655,21 +670,27 @@ const Test4Listening2020 = () => {
             </span>
             {renderText(" for each answer.")}
           </h3>
-
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Customer Satisfaction Survey")}
+              {renderText("TOTAL HEALTH CLINIC")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section 1: Patient Details ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("PATIENT DETAILS")}
+            </h2>
+
+            <h3 className="text-lg font-bold mt-4">
+              {renderText("Personal information")}
+            </h3>
             <ul className="list-disc list-inside space-y-3">
-              <h2 className="text-lg font-bold mt-6">
-                {renderText("Customer details")}
-              </h2>
-              <li className="text-lg">{renderText("Name: Sophie Bird")}</li>
+              <li className="text-lg">
+                {renderText("(Example) Name: Julie Anne Garcia")}
+              </li>
 
               <li className="text-lg">
-                <span>{renderText("Occupation:")}</span>
+                <span>{renderText("Contact phone:")}</span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -686,15 +707,10 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
 
               <li className="text-lg">
-                {renderText("Phone number: 07866 510333")}
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Reason for travel today:")}</span>
+                <span>{renderText("Date of birth:")}</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -711,20 +727,11 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText(", 1992")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Journey information")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                {renderText("Name of station returning to:")}
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Name of station returning to: ")}</span>
+                <span>{renderText("Occupation: works as a")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -741,10 +748,10 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Type of ticket purchased: standard")}</span>
+                <span>{renderText("Insurance company:")}</span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -761,10 +768,17 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("ticket.")}</span>
+                <span>{renderText("Life Insurance")}</span>
               </li>
+            </ul>
+
+            {/* ---------- Section 2: Details of the Problem ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Details of the problem")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Cost of ticket: £")}</span>
+                <span>{renderText("Type of problem: pain in her left")}</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -781,10 +795,10 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("per hour.")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Where ticket was bought:")}</span>
+                <span>{renderText("When it began:")}</span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -801,17 +815,23 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText("ago")}</span>
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "Action already taken: has taken painkillers and applied ice"
+                )}
               </li>
             </ul>
 
-            {/* ---------- Section 4 ---------- */}
+            {/* ---------- Section 3: Other Information ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with journey")}
+              {renderText("Other information")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Least satisfied with: the")}</span>
+                <span>{renderText("Sports played: belongs to a")}</span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -828,17 +848,11 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText("club")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 6 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with station facilities")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Most satisfied with: how much")}</span>
+                <span>{renderText("goes")}</span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -855,10 +869,17 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("was provided.")}</span>
+                <span>{renderText("regularly")}</span>
               </li>
+            </ul>
+
+            {/* ---------- Section 4: Medical History ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Medical history")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("The")}</span>
+                <span>{renderText("Injured her")}</span>
                 <button
                   onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -875,13 +896,13 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" ")}</span>
+                <span>{renderText("last year")}</span>
               </li>
 
+              <li className="text-lg">{renderText("No allergies")}</li>
+
               <li className="text-lg">
-                <span>
-                  {renderText("Neither satisfied nor dissatisfied with: the")}
-                </span>
+                <span>{renderText("No regular medication apart from")}</span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -898,7 +919,6 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("available.")}</span>
               </li>
             </ul>
           </div>
@@ -908,4 +928,4 @@ const Test4Listening2020 = () => {
   );
 };
 
-export default Test4Listening2020;
+export default Test1Listening2019;

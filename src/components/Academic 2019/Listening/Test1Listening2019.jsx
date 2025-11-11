@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Test4Listening2020 = () => {
+const Test1Listening2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -16,309 +16,291 @@ const Test4Listening2020 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-  const lines = [
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Part 1. You will hear a representative from a train company talking to a woman about her train journey.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Hello, do you mind if I ask you some questions about your journey today? We're doing a customer satisfaction survey.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Yes, OK. I've got about 10 minutes before my train home leaves. I'm on a day trip.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["Great, thank you. So first of all, could you tell me your name?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["It's Sophie Bird."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Thank you. And would you mind telling me what you do?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I'm a journalist.", number: 1 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Oh, really? That must be interesting."],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, it is."],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, what's the reason for your visit here today? Work?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Actually, it's my day off.",
-        {
-          text: " I came here to do some shopping.",
-          number: 2,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["All right."],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["But I do sometimes come here for work."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK. Now, I'd like to ask some questions about your journey today, if that's OK.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, no problem."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Right, so can you tell me which station you're traveling back to?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "Staunfirth, where I live.", number: 3 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Uh. Can I just check the spelling? STAUNFIRTH?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["That's right."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Hmm. And you traveled from there this morning?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, good. Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket, as you don't travel every day.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "That's right.",
-        {
-          text: " No, I just got a normal return ticket.",
-          number: 4,
-        },
-        "I don't have a rail card, so I didn't get any discount. I keep meaning to get one, because it's a lot cheaper.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, you'd have saved 20% on your ticket today. Uh. So you paid the full price for your ticket.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [{ text: "I paid £23.70.", number: 5 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, do you think that's good value for money?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Not really, I think it's too much for a journey that only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, that's one of the main complaints we get. So you didn't buy your ticket in advance?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "No, I know it's cheaper if you buy a week in advance, but I didn't know I was coming then.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I know, you can't always plan ahead. So, did you buy it this morning?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["No, it was yesterday."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Right, and do you usually buy your tickets at the station?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, I do usually, but the ticket office closes early, and I hate using ticket machines. I think ticket offices should be open for longer hours. There's always a queue for the machines, and they're often out of order.",
-        {
-          text: "So to answer your question, I got an e-ticket online.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, thank you. Now I'd like to ask you about your satisfaction with your journey. So what would you say you were most satisfied with today?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, I like the Wi-Fi on the train. It's improved a lot. It makes it easier for me to work if I want to.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "That's the first time today anyone's mentioned that. It's good to get some positive feedback on that.",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Hmm."],
-    },
-    {
-      speaker: "MAN",
-      text: ["And is there anything you weren't satisfied with?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        {
-          text: "Well, normally the trains run on time and are pretty reliable, but today there was a delay.",
-          number: 7,
-        },
-        "The train was about 15 minutes behind schedule.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Hmm. OK, I'll put that down. Now, uh, I'd also like to ask about the facilities at this station. You've probably noticed that the whole station's been upgraded. What are you most satisfied with?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        {
-          text: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers.",
-          number: 8,
-        },
-        "It's much clearer, before there was only one board, and I couldn't always see it properly, which was frustrating.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["That's good, and is there anything you're not satisfied with?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Let's see, I think things have generally improved a lot. The trains are much more modern, and I like the new cafe, but one thing is that there aren't enough places to sit down.",
-        {
-          text: "Especially on the platforms.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, so I'll put seating down, shall I, as the thing you're least satisfied with?",
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Can I ask your opinion about some of the other facilities?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "We'd like feedback on whether people are satisfied, dissatisfied or neither satisfied nor dissatisfied. ?",
-        {
-          text: "OK, uh, what about the parking at the station",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "SOPHIE",
-      text: [
-        "Well, to be honest, I don't really have an opinion, as I never use it.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So neither satisfied nor dissatisfied for that then?"],
-    },
-    {
-      speaker: "SOPHIE",
-      text: ["Yes, I suppose so."],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, uh, and what about these?"],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
-      ],
-    },
-  ];
+ const lines = [
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "Section 1. You will hear a woman reporting a theft to an officer in a police station.",
+       "First, you have some time to look at questions 1 to 3.",
+       "You will see that there is an example that has been done for you.",
+       "On this occasion only, the conversation relating to this will be played first.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Good morning. Uh. What can I do for you?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "I want to report a theft. I had some things stolen out of my bag yesterday.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       "I'm sorry to hear that. Right, so I'll need to take a few details.",
+       "Can I start with your name?",
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Louise Taylor."],
+   },
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "The woman's name is Louise Taylor. So Taylor has been written in the space.",
+       "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+       "Listen carefully and answer questions 1 to 3.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Good morning. Uh. What can I do for you?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "I want to report a theft. I had some things stolen out of my bag yesterday.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       "I'm sorry to hear that. Right, so I'll need to take a few details.",
+       "Can I start with your name?",
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Louise Taylor."],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["OK, thank you. And are you resident in the UK?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       {
+         text: "No, I'm actually Canadian, though my mother was British.",
+         number: 1,
+       },
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["And your date of birth?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["December 14th, 1977."],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["So you're just visiting this country?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "That's right. ",
+       {
+         text: "I come over most summers on business. I'm an interior designer, and I come over to buy old furniture, antiques you know..",
+         number: 2,
+       },
+       "There are some really lovely things around here. But you need to get out to the small towns",
+       "I've had a really good trip this year, until this happened.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["OK, so you've been here quite a while?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Yes. I'm here for 2 months, I go back next week."],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["So, may I ask where you're staying now?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       {
+         text: "Well, at present, I've got a place at Park Apartments, that's on King Street",
+         number: 3,
+       },
+       "I was staying at the Riverside Apartments on the same street, but the apartment there was only available for six weeks, so I had to find another one.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["OK. And the apartment Number?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Fifteen."],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Right."],
+   },
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
+       "Now listen and answer questions 4 to 10.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       "Now, I need to take some details of the theft. So, you said you had some things stolen out of your bag.",
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["That's right."],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       "And were you actually carrying the bag when the theft took place?",
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "Yes. I really can't understand it. I had my backpack on, and I went into a supermarket to buy a few things, and when I opened it up, my wallet wasn't there.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["And what did your wallet have in it?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "Well, fortunately, I don't keep my credit cards in that wallet. I keep them with my passport in an inside compartment in my backpack.",
+       {
+         text: "But there was quite a bit of cash there, about £250 Sterling I should think.",
+         number: 4,
+       },
+       "I withdrew £300 from my account yesterday. But I did a bit of shopping, so I must have already spent about £50 of that.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["OK."],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "At first I thought, oh, I must have left the wallet back in the apartment. ",
+
+       {
+         text: "But then I realized my phone had gone as well.",
+         number: 5,
+       },
+       "It was only a week old, and that's when I realized I'd been robbed",
+       "Anyway, at least they didn't take the keys to my rental car.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Yes. So you say the theft occurred yesterday?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Yes."],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       {
+         text: "So that was September the 10th, and do you have any idea at all of where or when the things might possibly have been stolen?",
+         number: 6,
+       },
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "Well, at first I couldn't believe it, because the bag had been on my back ever since I left the apartment after lunch.",
+       "It's just a small backpack. But I generally use it when I'm traveling, because it seems safer than a handbag.",
+       "Anyway, I met up with a friend, and we spent a couple of hours in the museum.",
+       {
+         text: "But I do remember that as we were leaving there, at about 4 o'clock, a group of young boys ran up to us, and they were really crowding round us.",
+         number: 7,
+       },
+       {
+         text: "And they were asking us what time it was, then all of a sudden, they ran off.",
+         number: 8,
+       },
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Can you remember anything about them?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "The one who did most of the talking was wearing a T-shirt with a picture of something. Ah. Let's see, a tiger.",
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["Right, any idea of how old he might have been?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Around 12 years old."],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["And can you remember anything else about his appearance?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: [
+       "Not much, he was quite thin.Color of hair?",
+       {
+         text: " I do remember that, he was blonde. All the others were dark haired.",
+         number: 9,
+       },
+     ],
+   },
+   {
+     speaker: "OFFICER",
+     text: ["And any details of the others?"],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Not really. They came and went so quickly."],
+   },
+   {
+     speaker: "OFFICER",
+     text: [
+       "Right. So what I'm going to do now is give you a crime reference number, so you can contact your insurance company.",
+       { text: "So, this is 10 digits, 8795482361.", number: 10 },
+     ],
+   },
+   {
+     speaker: "LOUISE",
+     text: ["Thank you. So, should I contact the..."],
+   },
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "That is the end of section 1.",
+       "You now have half a minute to check your answers.",
+     ],
+   },
+ ];
+
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -409,11 +391,6 @@ const Test4Listening2020 = () => {
     );
   };
 
-
-
-
-
-  
   // ---- Voice function ----
   const handleVoice = () => {
     if (isSpeaking) {
@@ -428,13 +405,17 @@ const Test4Listening2020 = () => {
       if (!voices.length) return null;
       if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "SOPHIE")
+      if (speaker === "LOUISE")
         return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "MAN")
+      if (speaker === "OFFICER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };
-    let lineIndex = 0;
+
+
+
+
+let lineIndex = 0;
     let chunkIndex = 0;
     setIsSpeaking(true);
     const speakNextChunk = () => {
@@ -468,23 +449,26 @@ const Test4Listening2020 = () => {
     speakNextChunk();
   };
 
+ 
   //  Marks show
 
   const correctAnswers = {
-    1: "I'm a journalist",
-    2: "I came here to do some shopping",
-    3: "Staunfirth, where I live",
-    4: "No, I just got a normal return ticket",
-    5: "I paid £23.70",
-    6: "So to answer your question, I got an e-ticket online",
-    7: "Well, normally the trains run on time and are pretty reliable, but today there was a delay",
-    8: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers",
-    9: " Especially on the platforms",
-    10: "OK, uh, what about the parking at the station",
+    1: "No, I'm actually Canadian, though my mother was British",
+    2: "I come over most summers on business. I'm an interior designer, and I come over to buy old furniture, antiques you know",
+    3: "Well, at present, I've got a place at Park Apartments, that's on King Street",
+    4: "But there was quite a bit of cash there, about £250 Sterling I should think",
+    5: "But then I realized my phone had gone as well",
+    6: "So that was September the 10th, and do you have any idea at all of where or when the things might possibly have been stolen",
+    7: "But I do remember that as we were leaving there, at about 4 o'clock, a group of young boys ran up to us, and they were really crowding round us",
+    8: "And they were asking us what time it was, then all of a sudden, they ran off",
+    9: "I do remember that, he was blonde. All the others were dark haired",
+    10: "So, this is 10 digits, 8795482361",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
+
+ 
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
@@ -507,7 +491,7 @@ const Test4Listening2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 4/listening", newScore);
+    localStorage.setItem("/2019/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -519,16 +503,17 @@ const Test4Listening2020 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2020/Test 4/listening");
+    localStorage.removeItem("/2019/Test 1/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 4/listening");
+    const savedScore = localStorage.getItem("/2019/Test 1/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
   }, []);
+  
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -567,7 +552,7 @@ const Test4Listening2020 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Customer Satisfaction Survey")}
+                {renderText("Crime Report Form")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -655,21 +640,28 @@ const Test4Listening2020 = () => {
             </span>
             {renderText(" for each answer.")}
           </h3>
-
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Customer Satisfaction Survey")}
+              {renderText("CRIME REPORT FORM")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section 1: Type of Crime ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              <h2 className="text-lg font-bold mt-6">
-                {renderText("Customer details")}
-              </h2>
-              <li className="text-lg">{renderText("Name: Sophie Bird")}</li>
+              <li className="text-lg">{renderText("Type of crime: theft")}</li>
+            </ul>
+
+            {/* ---------- Section 2: Personal Information ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Personal information")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText("Name (Example) Louise Taylor")}
+              </li>
 
               <li className="text-lg">
-                <span>{renderText("Occupation:")}</span>
+                <span>{renderText("Nationality")}</span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -686,15 +678,20 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
 
               <li className="text-lg">
-                {renderText("Phone number: 07866 510333")}
+                {renderText("Date of birth: 14 December 1977")}
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Reason for travel today:")}</span>
+                {renderText("Occupation: interior designer")}
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("Reason for visit: business (to buy antique")}
+                </span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -711,20 +708,15 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText(")")}</span>
               </li>
-            </ul>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Journey information")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                {renderText("Name of station returning to:")}
+                {renderText("Length of stay: two months")}
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Name of station returning to: ")}</span>
+                <span>{renderText("Current address:")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -741,10 +733,21 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText("Apartments (No 15)")}</span>
               </li>
+            </ul>
+
+            {/* ---------- Section 3: Details of Theft ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Details of theft")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Type of ticket purchased: standard")}</span>
+                <span>
+                  {renderText(
+                    "Items stolen: a wallet containing approximately £"
+                  )}
+                </span>
                 <button
                   onClick={() => toggleButton(4)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -761,10 +764,7 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("ticket.")}</span>
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Cost of ticket: £")}</span>
+                <span>{renderText("a")}</span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -781,10 +781,10 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("per hour.")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("Where ticket was bought:")}</span>
+                <span>{renderText("Date of theft:")}</span>
                 <button
                   onClick={() => toggleButton(6)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -801,17 +801,16 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
             </ul>
 
-            {/* ---------- Section 4 ---------- */}
+            {/* ---------- Section 4: Possible Time & Place ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with journey")}
+              {renderText("Possible time and place of theft")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Least satisfied with: the")}</span>
+                <span>{renderText("Location: outside the")}</span>
                 <button
                   onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -828,17 +827,17 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
+                <span>{renderText("at about 4 pm")}</span>
               </li>
             </ul>
 
-            {/* ---------- Section 6 ---------- */}
+            {/* ---------- Section 5: Details of Suspect ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with station facilities")}
+              {renderText("Details of suspect")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Most satisfied with: how much")}</span>
+                <span>{renderText("some boys asked for the")}</span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -855,10 +854,13 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("was provided.")}</span>
+                <span>{renderText("then ran off")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("The")}</span>
+                {renderText(
+                  "one had a T-shirt with a picture of a tiger, he was about 12, slim build with"
+                )}
                 <button
                   onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -875,13 +877,16 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" ")}</span>
+                <span>{renderText("hair")}</span>
               </li>
+            </ul>
 
+            {/* ---------- Section 6: Crime Reference ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Crime reference number allocated")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>
-                  {renderText("Neither satisfied nor dissatisfied with: the")}
-                </span>
                 <button
                   onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -898,7 +903,6 @@ const Test4Listening2020 = () => {
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("available.")}</span>
               </li>
             </ul>
           </div>
@@ -908,4 +912,4 @@ const Test4Listening2020 = () => {
   );
 };
 
-export default Test4Listening2020;
+export default Test1Listening2019;

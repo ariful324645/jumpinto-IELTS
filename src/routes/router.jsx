@@ -100,6 +100,13 @@ import Test2Writing2020 from "../components/Academic 2020/Writing/Test2Writing20
 import Test3Writing2020 from "../components/Academic 2020/Writing/Test3Writing2020";
 import Test4Writing2020 from "../components/Academic 2020/Writing/Test4Writing2020";
 import Test1Speaking2020 from "../components/Academic 2020/Speaking/Test1Speaking2020";
+import Test2Speaking2020 from "../components/Academic 2020/Speaking/Test2Speaking2020";
+import Test3Speaking2020 from "../components/Academic 2020/Speaking/Test3Speaking2020";
+import Test4Speaking2020 from "../components/Academic 2020/Speaking/Test4Speaking2020";
+import Test1Listening2019 from "../components/Academic 2019/Listening/Test1Listening2019";
+import Test2Listening2019 from "../components/Academic 2019/Listening/Test2Listening2019";
+import Test3Listening2019 from "../components/Academic 2019/Listening/Test3Listening2019";
+import Test4Listening2019 from "../components/Academic 2019/Listening/Test4Listening2019";
 
 export const router = createBrowserRouter([
   {
@@ -503,6 +510,34 @@ export const router = createBrowserRouter([
       {
         path: "/2020/Test 1/speaking",
         Component: Test1Speaking2020,
+      },
+      {
+        path: "/2020/Test 2/speaking",
+        Component: Test2Speaking2020,
+      },
+      {
+        path: "/2020/Test 3/speaking",
+        Component: Test3Speaking2020,
+      },
+      {
+        path: "/2020/Test 4/speaking",
+        Component: Test4Speaking2020,
+      },
+      {
+        path: "/2019/Test 1/listening",
+        Component: Test1Listening2019,
+      },
+      {
+        path: "/2019/Test 2/listening",
+        Component: Test2Listening2019,
+      },
+      {
+        path: "/2019/Test 3/listening",
+        Component: Test3Listening2019,
+      },
+      {
+        path: "/2019/Test 4/listening",
+        Component: Test4Listening2019,
       },
     ],
   },

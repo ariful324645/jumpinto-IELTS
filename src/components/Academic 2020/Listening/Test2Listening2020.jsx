@@ -388,9 +388,9 @@ const Test2Listening2020 = () => {
       if (!voices.length) return null;
       if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "AMBER")
+      if (speaker === "JEAN")
         return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "WILLIAM")
+      if (speaker === "TIM")
         return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };

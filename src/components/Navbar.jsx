@@ -282,10 +282,35 @@ const Navbar = () => {
 
   // Define times for each pathname in seconds
   const pathTimes = {
-    "/2021/test 1/listening": 0.1 * 60,
-    "/2020/test 1/listening": 0.1 * 60,
+    // 2020  listening
+
+    "/2020/test 1/listening": 7 * 60,
     "/2020/test 2/listening": 7 * 60,
-    "/2020/test 3/listening": 1 * 60,
+    "/2020/test 3/listening": 7 * 60,
+    "/2020/test 4/listening": 7 * 60,
+    // 2020  reading
+    "/2020/Test 1/reading": 20 * 60,
+    "/2020/Test 2/reading": 20 * 60,
+    "/2020/Test 3/reading": 20 * 60,
+    "/2020/Test 4/reading": 20 * 60,
+
+    // 2020 writing
+    "/2020/Test 1/writing": 20 * 60,
+    "/2020/Test 2/writing": 20 * 60,
+    "/2020/Test 3/writing": 20 * 60,
+    "/2020/Test 4/writing": 20 * 60,
+    //2020 speaking
+    "/2020/Test 1/speaking": 0 * 60,
+    "/2020/Test 2/speaking": 0 * 60,
+    "/2020/Test 3/speaking": 0 * 60,
+    "/2020/Test 4/speaking": 0 * 60,
+
+    // 2020  listening
+
+    "/2019/test 1/listening": 8 * 60,
+    "/2019/test 2/listening": 7 * 60,
+    "/2019/test 3/listening": 8 * 60,
+    "/2019/test 4/listening": 8 * 60,
   };
 
   // Format seconds to mm:ss
