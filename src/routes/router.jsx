@@ -95,6 +95,11 @@ import Test1Reading2020 from "../components/Academic 2020/Reading/Test1Reading20
 import Test2Reading2020 from "../components/Academic 2020/Reading/Test2Reading2020";
 import Test3Reading2020 from "../components/Academic 2020/Reading/Test3Reading2020";
 import Test4Reading2020 from "../components/Academic 2020/Reading/Test4Reading2020";
+import Test1Writing2020 from "../components/Academic 2020/Writing/Test1Writing2020";
+import Test2Writing2020 from "../components/Academic 2020/Writing/Test2Writing2020";
+import Test3Writing2020 from "../components/Academic 2020/Writing/Test3Writing2020";
+import Test4Writing2020 from "../components/Academic 2020/Writing/Test4Writing2020";
+import Test1Speaking2020 from "../components/Academic 2020/Speaking/Test1Speaking2020";
 
 export const router = createBrowserRouter([
   {
@@ -478,6 +483,26 @@ export const router = createBrowserRouter([
       {
         path: "/2020/Test 4/reading",
         Component: Test4Reading2020,
+      },
+      {
+        path: "/2020/Test 1/writing",
+        Component: Test1Writing2020,
+      },
+      {
+        path: "/2020/Test 2/writing",
+        Component: Test2Writing2020,
+      },
+      {
+        path: "/2020/Test 3/writing",
+        Component: Test3Writing2020,
+      },
+      {
+        path: "/2020/Test 4/writing",
+        Component: Test4Writing2020,
+      },
+      {
+        path: "/2020/Test 1/speaking",
+        Component: Test1Speaking2020,
       },
     ],
   },
