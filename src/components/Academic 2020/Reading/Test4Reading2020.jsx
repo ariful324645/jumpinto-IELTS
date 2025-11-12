@@ -25,6 +25,35 @@ const Test4Reading2020 = () => {
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
 
+  const handleOptionClick = (qIndex, option) => {
+    const updatedOptions = [...selectedOptions];
+    updatedOptions[qIndex] = option;
+    setSelectedOptions(updatedOptions);
+
+    // Update userAnswers for score calculation
+    setUserAnswers((prev) => {
+      const answerKey = qIndex + 6;
+      const updated = { ...prev, [answerKey]: option };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Calculate live score ---
+  const calculateScore = (answers) => {
+    let newScore = 0;
+    Object.keys(correctAnswers).forEach((key) => {
+      if (
+        answers[key]?.trim().toLowerCase() ===
+        correctAnswers[key].trim().toLowerCase()
+      ) {
+        newScore += 1;
+      }
+    });
+    setScore(newScore);
+    localStorage.setItem("/2020/Test 4/reading", newScore);
+  };
+
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
@@ -32,12 +61,6 @@ const Test4Reading2020 = () => {
   const [activeNumbers, setActiveNumbers] = useState(
     Array(questions.length).fill(false)
   );
-
-  const handleOptionClick = (qIndex, oIndex) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = oIndex;
-    setSelectedOptions(updatedOptions);
-  };
 
   const handleNumberClick = (qIndex) => {
     const updatedActive = [...activeNumbers];
@@ -115,16 +138,20 @@ const Test4Reading2020 = () => {
     3: "He believes the huarango was key to the ancient people's diet and, because it could reach deep water sources, it allowed local people to withstand years of drought when their other crops failed",
     4: "Cutting down native woodland leads to erosion, as there is nothing to keep the soil in place",
     5: "So when the huarangos go, the land turns into a desert",
-    6: "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses",
-    7: "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses",
-    8: "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses",
-    9: "But now it is disappearing rapidly",
-    10: "His farm is relatively small and doesn't yet provide him with enough to live on, but he hopes this will change",
+    6: "TRUE",
+    7: "FALSE",
+    8: "TRUE",
+    9: "TRUE",
+    10: "FALSE",
     11: " In the hope of counteracting this, he's persuading farmers to let him plant forest corridors on their land",
     12: "It's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives, an island off the coast of Africa",
     13: "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groveIt's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives",
     14: "It's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives",
   };
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2020/Test 4/reading");
+    if (savedScore) setScore(Number(savedScore));
+  }, []);
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -136,21 +163,6 @@ const Test4Reading2020 = () => {
       calculateScore(updated);
       return updated;
     });
-  };
-
-  // --- Calculate live score ---
-  const calculateScore = (answers) => {
-    let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
-      }
-    });
-    setScore(newScore);
-    localStorage.setItem("/2020/Test 4/reading", newScore);
   };
 
   // --- Restore answers from localStorage (optional) ---
@@ -168,7 +180,6 @@ const Test4Reading2020 = () => {
         {/* LEFT SIDE (dynamic texts) */}
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
-        
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
             <div className="flex gap-3">
@@ -680,55 +691,48 @@ const Test4Reading2020 = () => {
           <br /> <br />
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            {questions.map((q, qIndex) => (
-              <div key={qIndex} className="flex flex-col gap-4">
-                <div className="flex items-start gap-3">
-                  <div
-                    onClick={() => handleNumberClick(qIndex)}
-                    className={`
-                              w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
-                              border-2
-                              ${
-                                activeNumbers[qIndex]
-                                  ? "bg-yellow-400 border-yellow-500"
-                                  : "bg-white border-gray-300 hover:border-yellow-400"
-                              }
-                              cursor-pointer
-                            `}
-                  >
-                    {qIndex + 6}
-                  </div>
-                  <h1 className="text-lg">{q}</h1>
-                </div>
+            <h2 className="text-lg font-bold">Questions 6-10</h2>
+            {questions.map((q, qIndex) => {
+              const answerKey = qIndex + 6;
+              const correct = correctAnswers[answerKey];
 
-                <ul className="list-none ml-12 flex flex-col gap-3">
-                  {options.map((option, oIndex) => (
-                    <li
-                      key={oIndex}
-                      onClick={() => handleOptionClick(qIndex, oIndex)}
-                      className="flex items-center gap-2 text-lg cursor-pointer"
-                    >
-                      <span
-                        className={`w-5 h-5 rounded-full border-2 inline-block transition-colors duration-300 ${
-                          selectedOptions[qIndex] === oIndex
-                            ? "bg-blue-500 border-blue-500"
-                            : "border-gray-700"
-                        }`}
-                      ></span>
-                      <span
-                        className={`transition-colors duration-300 ${
-                          selectedOptions[qIndex] === oIndex
-                            ? "text-blue-500"
-                            : "text-black"
-                        }`}
-                      >
-                        {option}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              return (
+                <div key={qIndex} className="flex flex-col gap-2">
+                  <h3 className="text-lg font-medium">
+                    {answerKey}. {q}
+                  </h3>
+                  <ul className="flex flex-col gap-2 ml-4">
+                    {options.map((option, oIndex) => {
+                      const isSelected = selectedOptions[qIndex] === option;
+                      const isCorrect = option === correct;
+
+                      return (
+                        <li
+                          key={oIndex}
+                          onClick={() => handleOptionClick(qIndex, option)}
+                          className="flex items-center gap-2 cursor-pointer"
+                        >
+                          <span
+                            className={`w-5 h-5 rounded-full border-2 inline-block ${
+                              isSelected
+                                ? "bg-blue-500 border-blue-500"
+                                : "border-gray-700"
+                            }`}
+                          ></span>
+                          <span
+                            className={
+                              isSelected ? "text-blue-500" : "text-black"
+                            }
+                          >
+                            {option}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
           {/* table */}
           <h2 className="text-lg font-bold mb-3">

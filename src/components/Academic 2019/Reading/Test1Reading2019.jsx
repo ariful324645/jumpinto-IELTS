@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
-//  Marks show
-
-const Test1Reading2020 = () => {
+const Test1Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +16,11 @@ const Test1Reading2020 = () => {
   };
 
   const questions = [
-    "In the Middle Ages, most Europeans knew where nutmeg was grown.",
-    "The VOC was the world's first major trading company.",
-    "Following the Treaty of Breda, the Dutch had control of all the islands where nutmeg grew.",
+    "Children with good self-control are known to be likely to do well at school later on.",
+    "The way a child plays may provide information about possible medical problems..",
+    "Playing with dolls was found to benefit girls' writing more than boys' writing.",
+    "Children had problems thinking up ideas when they first created the story with Lego.",
+    "People nowadays regard children's play as less significant than they did in the past.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -32,7 +32,7 @@ const Test1Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 5;
+      const answerKey = qIndex + 9;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -51,7 +51,7 @@ const Test1Reading2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 1/reading", newScore);
+    localStorage.setItem("/2019/Test 1/reading", newScore);
   };
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -133,23 +133,23 @@ const Test1Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits",
-    2: "The fruit is encased in a fleshy husk",
-    3: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    4: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    5: "TRUE",
-    6: "FALSE",
-    7: "TRUE",
-    8: "Throughout this period, the Arabs were the exclusive importers of the spice to Europe",
-    9: "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease",
-    10: "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands",
-    11: "One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British",
-    12: "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa",
-    13: "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves",
+    1: "Although she isn't aware of it, this fantasy is helping her take her first steps towards her capacity for creativity and so it will have important repercussions in her adult life",
+    2: "Later on, when they tire of this and settle down with a board game, she's learning about the need to follow rules and take turns with a partner",
+    3: "But we live in changing times, and Whitebread is mindful of a worldwide decline in play, pointing out that over half the people in the world now live in cities",
+    4: "Outdoor play is curtailed by perceptions of risk to do with traffic, as well as parents' increased wish to protect their children from being the victims of crime, and by the emphasis on earlier is bette  which is leading to greater competition in academic learning and schools",
+    5: "Outdoor play is curtailed by perceptions of risk to do with traffic, as well as parents' increased wish to protect their children from being the victims of crime, and by the emphasis on earlier is bette  which is leading to greater competition in academic learning and schools",
+    6: "Outdoor play is curtailed by perceptions of risk to do with traffic, as well as parents' increased wish to protect their children from being the victims of crime, and by the emphasis on earlier is bette  which is leading to greater competition in academic learning and schools",
+    7: " But what they often lack is the evidence to base policies on",
+    8: "Dr Jenny Gibson agrees, pointing out that although some of the steps in the puzzle of how and why play is important have been looked at, there is very little data on the impact it has on the child's later life",
+    9: "TRUE",
+    10: "FALSE",
+    11: "TRUE",
+    12: "FALSE",
+    13: "TRUE",
   };
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 1/reading");
+    const savedScore = localStorage.getItem("/2019/Test 1/reading");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
@@ -167,7 +167,7 @@ const Test1Reading2020 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 1/reading");
+    const savedScore = localStorage.getItem("/2019/Test 1/reading");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -200,18 +200,18 @@ const Test1Reading2020 = () => {
               <span className="text-lg font-bold">
                 {renderText("          Questions 1-13")}
               </span>
-              {renderText("   PASSAGE 1")}
+              {renderText("  which are based on Reading  PASSAGE 1 below")}
             </h1>
           </div>
           {/* left text */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Nutmeg - a valuable spice")}
+              {renderText("THE IMPORTANCE OF CHILDREN'S PLAY")}
             </h1>
 
             <p className="text-lg">
               {renderText(
-                "The nutmeg tree, Myristica fragrans, is a large evergreen tree native to Southeast Asia. Until the late 18th century, it only grew in one place in the world: a small group of islands in the Banda Sea, part of the Moluccas - or Spice Islands - in northeastern Indonesia."
+                "Brick by brick, six-year-old Alice is building a magical kingdom. Imagining fairy-tale turrets and fire-breathing dragons, wicked witches and gallant heroes, she's creating an enchanting world. "
               )}
               <span
                 className={`ml-2 ${
@@ -219,22 +219,74 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+                  "Although she isn't aware of it, this fantasy is helping her take her first steps towards her capacity for creativity and so it will have important repercussions in her adult life."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     1
                   </span>
                 )}
-                {renderText(" The fruit is encased in a fleshy husk.")}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Minutes later, Alice has abandoned the kingdom in favour of playing schools with her younger brother. When she bosses him around as his 'teacher', she's practising how to regulate her emotions through pretence. "
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Later on, when they tire of this and settle down with a board game, she's learning about the need to follow rules and take turns with a partner"
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     2
                   </span>
                 )}
               </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
               {renderText(
-                " When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit. Inside is a purple-brown shiny seed, 2-3 cm long by about 2 cm across, surrounded by a lacy red or crimson covering called an 'aril'."
+                '"Play in all its rich variety is one of the highest achievements of the human species," says Dr David Whitebread from the Faculty of Education at the University of Cambridge, UK. "It underpins how we develop as intellectual, problem-solving adults and is crucial to our success as a highly adaptable species."'
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Recognising the importance of play is not new: over two millennia ago, the Greek philosopher Plato extolled its virtues as a means of developing skills for adult life, and ideas about play-based learning have been developing since the 19th century."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "But we live in changing times, and Whitebread is mindful of a worldwide decline in play, pointing out that over half the people in the world now live in cities."
+                )}
+
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
+              </span>
+              {renderText(
+                ' "The opportunities for free play, which I experienced almost every day of my childhood, are becoming increasingly scarce," he says. Outdoor play is curtailed by perceptions of risk to do with traffic, as well as parents\' increased wish to protect their children from being the victims of crime, and by the emphasis on "earlier is better" which is leading to greater competition in academic learning and schools.'
               )}
               <span
                 className={`ml-2 ${
@@ -242,12 +294,20 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril."
+                  ' "Outdoor play is curtailed by perceptions of risk to do with traffic, as well as parents\' increased wish to protect their children from being the victims of crime, and by the emphasis on "earlier is better" which is leading to greater competition in academic learning and schools.'
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-10 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    3,4
-                  </span>
+                  <>
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                      4
+                    </span>
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
+                      5
+                    </span>
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
+                      6
+                    </span>
+                  </>
                 )}
               </span>
             </p>
@@ -256,7 +316,7 @@ const Test1Reading2020 = () => {
 
             <p className="text-lg">
               {renderText(
-                "Nutmeg was a highly prized and costly ingredient in European cuisine in the Middle Ages, and was used as a flavouring, medicinal, and preservative agent."
+                "International bodies like the United Nations and the European Union have begun to develop policies concerned with children's right to play, and to consider implications for leisure facilities and educational programmes. But what they often lack is the evidence to base policies on."
               )}
               <span
                 className={`ml-2 ${
@@ -264,111 +324,7 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "Throughout this period, the Arabs were the exclusive importers of the spice to Europe."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    5
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " The Arab-Venetian dominance of the trade finally ended in 1512, when the Portuguese reached the Banda Islands and began exploiting its precious resources."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "Always in danger of competition from neighbouring Spain, the Portuguese began subcontracting their spice distribution to Dutch traders. Profits began to flow into the Netherlands, and the Dutch commercial fleet swiftly grew into one of the largest in the world. The Dutch quietly gained control of most of the shipping and trading of spices in Northern Europe. Then, in 1580, Portugal fell under Spanish rule, and by the end of the 16th century the Dutch found themselves locked out of the market. As prices for pepper, nutmeg, and other spices soared across Europe, they decided to fight back."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "In 1602, Dutch merchants founded the VOC, a trading corporation better known as the Dutch East India Company. By 1617, the VOC was the richest commercial operation in the world. The company had 50,000 employees worldwide, with a private army of 30,000 men and a fleet of 200 ships."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    9
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure. Everybody wanted nutmeg, and many were willing to spare no expense to have it. Nutmeg bought for a few pennies in Indonesia could be sold for 68,000 times its original cost on the streets of London. The only problem was the short supply. And that's where the Dutch found their opportunity."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "The Banda Islands were ruled by local sultans who insisted on maintaining a neutral trading policy towards foreign powers. This allowed them to avoid the presence of Portuguese or Spanish troops on their soil, but it also left them unprotected from other invaders. In 1621, the Dutch arrived and took over. Once securely in control of the Bandas, the Dutch went to work protecting their new investment. They concentrated all nutmeg production into a few easily guarded areas, uprooting and destroying any trees outside the plantation zones. Anyone caught growing a nutmeg seedling or carrying seeds without the proper authority was severely punished."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    10
-                  </span>
-                )}
-              </span>
-              {renderText(" There was only one obstacle to Dutch domination.")}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    11
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " After decades of fighting for control of this tiny island, the Dutch and British arrived at a compromise settlement, the Treaty of Breda, in 1667. Intent on securing their hold over every nutmeg-producing island, the Dutch offered a trade: if the British would give them the island of Run, they would in turn give Britain a distant and much less valuable island in North America. The British agreed. That other island was Manhattan, which is how New Amsterdam became New York."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The Dutch now had a monopoly over the nutmeg trade which would last for another century."
+                  " But what they often lack is the evidence to base policies on."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -387,16 +343,40 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa."
+                  "Dr Jenny Gibson agrees, pointing out that although some of the steps in the puzzle of how and why play is important have been looked at, there is very little data on the impact it has on the child's later life."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
+                    8
                   </span>
                 )}
-              </span>{" "}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "If playful experiences do facilitate this aspect of development, say the researchers, it could be extremely significant for educational practices, because the ability to self-regulate has been shown to be a key predictor of academic performance."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    9
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
               {renderText(
-                "Some of these were later exported to the Caribbean where they thrived, especially on the island of Grenada."
+                'Gibson adds: "Playful behaviour is also an important indicator of healthy social and emotional development. In my previous research, I investigated how observing children at play can give us important clues about their well-being and can even be useful in the diagnosis of neurodevelopmental disorders like autism."'
               )}
               <span
                 className={`ml-2 ${
@@ -404,24 +384,57 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+                  ' In my previous research, I investigated how observing children at play can give us important clues about their well-being and can even be useful in the diagnosis of neurodevelopmental disorders like autism."'
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    10
                   </span>
                 )}
-              </span>{" "}
-              {renderText(
-                "Finally, in 1809, the British returned to Indonesia and seized the Banda Islands by force. They returned the islands to the Dutch in 1817, but not before transplanting hundreds of nutmeg seedlings to plantations in several locations across southern Asia. The Dutch nutmeg monopoly was over."
-              )}
+              </span>
             </p>
 
             <br />
 
             <p className="text-lg">
               {renderText(
-                "Today, nutmeg is grown in Indonesia, the Caribbean, India, Malaysia, Papua New Guinea, and Sri Lanka, and world nutmeg production is estimated to average between 10,000 and 12,000 tonnes per year."
+                'Whitebread\'s recent research has involved developing a play-based approach to supporting children\'s writing. "Many primary school children find writing difficult, but we showed in a previous study that a playful stimulus was far more effective than an instructional one." Children wrote longer and better-structured stories when they first played with dolls representing characters in the story. In the latest study, children first created their story with Lego*, with similar results. "Many teachers commented that they had always previously had children saying they didn\'t know what to write about. With the Lego building, however, not a single child said this through the whole year of the project."'
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  'With the Lego building, however, not a single child said this through the whole year of the project."'
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    12
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "\"Somehow the importance of play has been lost in recent decades. It's regarded as something trivial, or even as something negative that contrasts with 'work'.\""
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    13
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "Let's not lose sight of its benefits, and the fundamental contributions it makes to human achievements in the arts, sciences and technology. Let's make sure children have a rich diet of play experiences."
               )}
             </p>
           </div>
@@ -498,7 +511,7 @@ const Test1Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-6")}
+              {renderText("Questions 1-8")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -512,20 +525,27 @@ const Test1Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-6 on your answer sheet."
+                "Write your answers in boxes 1-8 on your answer sheet."
               )}
             </h1>
             <br />
           </div>
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("The nutmeg tree and fruit")}
+              {renderText("Children's play")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold">
+                {renderText("Uses of children's play")}
+              </h1>
+
               <li className="text-lg">
-                <span>{renderText("the leaves of the tree are")}</span>
+                <span>
+                  {renderText("building a 'magical kingdom' may help develop")}
+                </span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -542,10 +562,10 @@ const Test1Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>{renderText("in shape.")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("the")}</span>
+                <span>{renderText("board games involve")}</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -562,14 +582,18 @@ const Test1Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText(
-                    "surrounds the fruit and breaks open when the fruit is ripe."
-                  )}
-                </span>
+                <span>{renderText("and turn-taking")}</span>
               </li>
+            </ul>
+
+            {/* ---------- Section 2 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("Recent changes affecting children's play")}
+              </h1>
+
               <li className="text-lg">
-                <span>{renderText("the")}</span>
+                <span>{renderText("populations of")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -581,19 +605,18 @@ const Test1Reading2020 = () => {
                   3
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText("is used to produce the spice nutmeg.")}
-                </span>
+                <span>{renderText("have grown")}</span>
               </li>
+
               <li className="text-lg">
                 <span>
                   {renderText(
-                    "the covering known as the aril is used to produce"
+                    "opportunities for free play are limited due to fear of"
                   )}
                 </span>
                 <button
@@ -613,15 +636,105 @@ const Test1Reading2020 = () => {
                   type="text"
                 />
               </li>
+
               <li className="text-lg">
-                {renderText("the tree has yellow flowers and fruit")}
+                <span>{renderText("fear of")}</span>
+                <button
+                  onClick={() => toggleButton(5)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[5]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  5
+                </button>
+                <input
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("increased")}</span>
+                <button
+                  onClick={() => toggleButton(6)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[6]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  6
+                </button>
+                <input
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+                <span>{renderText("in schools")}</span>
+              </li>
+            </ul>
+
+            {/* ---------- Section 3 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("International policies on children's play")}
+              </h1>
+
+              <li className="text-lg">
+                <span>{renderText("it is difficult to find")}</span>
+                <button
+                  onClick={() => toggleButton(7)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[7]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  7
+                </button>
+                <input
+                  value={userAnswers[7] || ""}
+                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+                <span>{renderText("to support new policies")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "research needs to study the impact of play on the rest of the child's"
+                  )}
+                </span>
+                <button
+                  onClick={() => toggleButton(8)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[8]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  8
+                </button>
+                <input
+                  value={userAnswers[8] || ""}
+                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
               </li>
             </ul>
           </div>
           <br />
           {/* 2nd step */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 5-7")}
+            {renderText("Questions 9-13")}
           </h2>
           <br />
           <h3 className="text-lg font-semibold mb-5">
@@ -629,7 +742,7 @@ const Test1Reading2020 = () => {
               "Do the following statements agree with the information given in Reading Passage 1?"
             )}{" "}
             <br /> <br />
-            {renderText("In boxes 5-7 on your answer sheet, choose")}
+            {renderText("In boxes 9-13 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
             <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -648,7 +761,7 @@ const Test1Reading2020 = () => {
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">Questions 9-13</h2>
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 5;
+              const answerKey = qIndex + 9;
               const correct = correctAnswers[answerKey];
 
               return (
@@ -689,190 +802,10 @@ const Test1Reading2020 = () => {
               );
             })}
           </div>
-          {/* table */}
-          <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
-            <tbody>
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("Middle Ages")}
-                </td>
-                <td className="border text-lg p-2">
-                  <span>
-                    {renderText("Nutmeg was brought to Europe by the")}
-                  </span>
-                  <button
-                    onClick={() => toggleButton(7)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[7]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    8
-                  </button>
-                  <input
-                    value={userAnswers[8] || ""}
-                    onChange={(e) => handleInputChange(8, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText(".")}</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("16th century")}
-                </td>
-                <td className="border text-lg p-2">
-                  {renderText(
-                    "European nations took control of the nutmeg trade"
-                  )}
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("17th century")}
-                </td>
-                <td className="border text-lg p-2 text-left">
-                  <ul className="list-disc list-inside space-y-3">
-                    <li className="text-lg">
-                      <span>
-                        {renderText(
-                          "Demand for nutmeg grew, as it was believed to be effective against the disease known as the"
-                        )}
-                      </span>
-                      <button
-                        onClick={() => toggleButton(9)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[9]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        9
-                      </button>
-                      <input
-                        value={userAnswers[9] || ""}
-                        onChange={(e) => handleInputChange(9, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>{renderText(".")}</span>
-                    </li>
-
-                    <li className="text-lg">
-                      <span>{renderText("put")}</span>
-                      <button
-                        onClick={() => toggleButton(10)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[10]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        10
-                      </button>
-                      <input
-                        value={userAnswers[10] || ""}
-                        onChange={(e) => handleInputChange(10, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>
-                        {renderText(
-                          "on nutmeg to avoid it being cultivated outside the islands."
-                        )}
-                      </span>
-                    </li>
-
-                    <li>
-                      <span>
-                        {renderText("finally obtained the island of")}
-                      </span>
-                      <button
-                        onClick={() => toggleButton(11)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[11]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        11
-                      </button>
-                      <input
-                        value={userAnswers[11] || ""}
-                        onChange={(e) => handleInputChange(11, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>{renderText("from the British.")}</span>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("Late 18th century")}
-                </td>
-                <td className="border text-lg p-2 text-left">
-                  <p>
-                    {renderText(
-                      "Clean the serving area, including the weighing scales."
-                    )}
-                  </p>
-                  <p className="mt-2">
-                    <span>{renderText("Collect")}</span>
-                    <button
-                      onClick={() => toggleButton(12)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[12]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      12
-                    </button>
-                    <input
-                      value={userAnswers[12] || ""}
-                      onChange={(e) => handleInputChange(12, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span>
-                      {renderText("for the fish from the cold-room.")}
-                    </span>
-                  </p>
-                  <p className="mt-2">
-                    <span>{renderText("Must wear special")}</span>
-                    <button
-                      onClick={() => toggleButton(13)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[13]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      13
-                    </button>
-                    <input
-                      value={userAnswers[13] || ""}
-                      onChange={(e) => handleInputChange(13, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span>{renderText(".")}</span>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
   );
 };
 
-export default Test1Reading2020;
+export default Test1Reading2019;

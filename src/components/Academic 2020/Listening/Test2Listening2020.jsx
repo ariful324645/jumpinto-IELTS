@@ -15,6 +15,10 @@ const Test2Listening2020 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
 
   const lines = [
     {
@@ -430,18 +434,17 @@ const Test2Listening2020 = () => {
 
   // marks
 
-
   const correctAnswers = {
-    1: "The next day, the 18th, there's a performance by a ballet company called Eustatis",
-    2: "I haven't seen it myself, but the review in the local paper was very good",
-    3: "Yes, also on the 20th, but in the evening",
+    1: "Eustatis",
+    2: "review",
+    3: "dance",
     4: "  Chat",
-    5: "We certainly do. It's going to focus on how to make food part of a healthy lifestyle.",
-    6: "Another workshop is just for children, and that's on creating posters",
-    7: "Oh, yes, they will ask to see that",
-    8: "Yes. There's a beautiful one just outside the town, and that'll be the venue for the swimming",
-    9: "The leader is an expert on insects",
-    10: "the festival organizer is keeping a blog",
+    5: "healthy",
+    6: "posters",
+    7: "wood",
+    8: "lake",
+    9: "insects",
+    10: "blog",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -497,7 +500,6 @@ const Test2Listening2020 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-         
             <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
@@ -559,7 +561,7 @@ const Test2Listening2020 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -603,173 +605,11 @@ const Test2Listening2020 = () => {
               )}
             </div>
           </div>
-
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–6")}
-          </h2>
-          <h3 className="text-lg mb-5">
-            {renderText("Complete the notes below.")} <br /> <br />
-            {renderText("Write")}{" "}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>{" "}
-            {renderText("for each answer.")}
-          </h3>
-
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Workshops")}
-            </h2>
-            {/* ---------- Section 1 ---------- */}
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block">{renderText("Making")}</span>
-                <button
-                  onClick={() => toggleButton(1)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  1
-                </button>
-                <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-                <span>food.</span>
-              </li>
-              <li className="text-lg">
-                <span className="inline-block">
-                  {renderText("(children only) Making")}
-                </span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-              </li>
-
-              <li className="text-lg">
-                <span className="inline-block">
-                  {renderText("(adults only) Making toys from")}
-                </span>
-                <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  3
-                </button>
-                <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-                <span className="ml-2">
-                  {renderText("using various tools.")}
-                </span>
-              </li>
-            </ul>
-
-            {/* ---------- Section 3 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Outdoor activities")}
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-lg">
-                <span className="inline-block">
-                  {renderText("Swimming in the")}
-                </span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-              </li>
-
-              <li className="text-lg">
-                <span className="inline-block">
-                  {renderText("Walking in the woods, led by an expert on")}
-                </span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-                <span className="ml-2">.</span>
-              </li>
-              <li className="text-lg">
-                <span className="inline-block">
-                  {renderText("See the festival organiser's")}
-                </span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
-                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                  type="text"
-                />
-                <span className="ml-2">
-                  {renderText("in more information")}
-                </span>
-              </li>
-            </ul>
-          </div>
-
+          {/* 1st section */}
           {/* ---------- Table Section ---------- */}
           <div className="mt-5">
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 7–11")}
+              {renderText("Questions 1-4")}
             </h2>
             <h3 className="text-lg font-semibold mb-5">
               {renderText("Complete the notes below.")} <br /> <br />
@@ -818,14 +658,14 @@ const Test2Listening2020 = () => {
                   <td className="border text-lg border-gray-400 p-2">
                     <span>{renderText("company called")}</span>
                     <button
-                      onClick={() => toggleButton(7)}
+                      onClick={() => toggleButton(1)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[7]
+                        activeButtons[1]
                           ? "bg-yellow-400 border-yellow-500"
                           : "bg-gray-200 border-gray-400"
                       }`}
                     >
-                      7
+                      1
                     </button>
                     <input
                       value={userAnswers[1] || ""}
@@ -851,18 +691,18 @@ const Test2Listening2020 = () => {
                       )}
                     </span>
                     <button
-                      onClick={() => toggleButton(8)}
+                      onClick={() => toggleButton(2)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[8]
+                        activeButtons[2]
                           ? "bg-yellow-400 border-yellow-500"
                           : "bg-gray-200 border-gray-400"
                       }`}
                     >
-                      8
+                      2
                     </button>
                     <input
-                      value={userAnswers[1] || ""}
-                      onChange={(e) => handleInputChange(1, e.target.value)}
+                      value={userAnswers[2] || ""}
+                      onChange={(e) => handleInputChange(2, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -877,18 +717,18 @@ const Test2Listening2020 = () => {
                   <td className="border text-lg border-gray-400 p-2">
                     <span>{renderText("a")}</span>
                     <button
-                      onClick={() => toggleButton(9)}
+                      onClick={() => toggleButton(3)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[9]
+                        activeButtons[3]
                           ? "bg-yellow-400 border-yellow-500"
                           : "bg-gray-200 border-gray-400"
                       }`}
                     >
-                      9
+                      3
                     </button>
                     <input
-                      value={userAnswers[1] || ""}
-                      onChange={(e) => handleInputChange(1, e.target.value)}
+                      value={userAnswers[3] || ""}
+                      onChange={(e) => handleInputChange(3, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -897,18 +737,18 @@ const Test2Listening2020 = () => {
                   <td className="border text-lg border-gray-400 p-2">
                     <span>{renderText("show	show is called")}</span>
                     <button
-                      onClick={() => toggleButton(10)}
+                      onClick={() => toggleButton(4)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[10]
+                        activeButtons[4]
                           ? "bg-yellow-400 border-yellow-500"
                           : "bg-gray-200 border-gray-400"
                       }`}
                     >
-                      10
+                      4
                     </button>
                     <input
-                      value={userAnswers[1] || ""}
-                      onChange={(e) => handleInputChange(1, e.target.value)}
+                      value={userAnswers[4] || ""}
+                      onChange={(e) => handleInputChange(4, e.target.value)}
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
@@ -917,6 +757,273 @@ const Test2Listening2020 = () => {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* 2nd section */}
+          <h2 className="text-lg font-bold my-4">
+            {renderText("Questions 5-10")}
+          </h2>
+          <h3 className="text-lg mb-5">
+            {renderText("Complete the notes below.")} <br /> <br />
+            {renderText("Write")}{" "}
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>{" "}
+            {renderText("for each answer.")}
+          </h3>
+
+          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Workshops")}
+            </h2>
+            {/* ---------- ul 1 ---------- */}
+            <ul className="list-disc list-inside space-y-2">
+              <li className="text-lg">
+                <span className="inline-block">{renderText("Making")}</span>
+                <button
+                  onClick={() => toggleButton(5)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[5]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  5
+                </button>
+                <input
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+                <span>food.</span>
+              </li>
+              <li className="text-lg">
+                <span className="inline-block">
+                  {renderText("(children only) Making")}
+                </span>
+                <button
+                  onClick={() => toggleButton(6)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[6]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  6
+                </button>
+                <input
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span className="inline-block">
+                  {renderText("(adults only) Making toys from")}
+                </span>
+                <button
+                  onClick={() => toggleButton(7)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[7]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  7
+                </button>
+                <input
+                  value={userAnswers[7] || ""}
+                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+                <span className="ml-2">
+                  {renderText("using various tools.")}
+                </span>
+              </li>
+            </ul>
+
+            {/* ---------- ul 3 ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Outdoor activities")}
+            </h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="text-lg">
+                <span className="inline-block">
+                  {renderText("Swimming in the")}
+                </span>
+                <button
+                  onClick={() => toggleButton(8)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[8]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  8
+                </button>
+                <input
+                  value={userAnswers[8] || ""}
+                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span className="inline-block">
+                  {renderText("Walking in the woods, led by an expert on")}
+                </span>
+                <button
+                  onClick={() => toggleButton(9)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[9]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  9
+                </button>
+                <input
+                  value={userAnswers[9] || ""}
+                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+                <span className="ml-2">.</span>
+              </li>
+              <li className="text-lg">
+                <span className="inline-block">
+                  {renderText("See the festival organiser's")}
+                </span>
+                <button
+                  onClick={() => toggleButton(10)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[10]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  10
+                </button>
+                <input
+                  value={userAnswers[10] || ""}
+                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                  type="text"
+                />
+                <span className="ml-2">
+                  {renderText("in more information")}
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
+
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
+                  <button
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                  >
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                  </button>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
+                </div>
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -16,6 +16,11 @@ const Test4Listening2020 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const lines = [
     {
       speaker: "ANNOUNCER",
@@ -409,11 +414,6 @@ const Test4Listening2020 = () => {
     );
   };
 
-
-
-
-
-  
   // ---- Voice function ----
   const handleVoice = () => {
     if (isSpeaking) {
@@ -471,16 +471,16 @@ const Test4Listening2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "I'm a journalist",
-    2: "I came here to do some shopping",
-    3: "Staunfirth, where I live",
-    4: "No, I just got a normal return ticket",
-    5: "I paid £23.70",
-    6: "So to answer your question, I got an e-ticket online",
-    7: "Well, normally the trains run on time and are pretty reliable, but today there was a delay",
-    8: "Uh. I think the best thing is that they've improved the amount of information about train times et cetera that's given to passengers",
-    9: " Especially on the platforms",
-    10: "OK, uh, what about the parking at the station",
+    1: "journalist",
+    2: "shopping",
+    3: "Staunfirth",
+    4: "return ticket",
+    5: "23.70",
+    6: "online",
+    7: " delay",
+    8: "information",
+    9: " seating",
+    10: "parking",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -642,265 +642,373 @@ const Test4Listening2020 = () => {
               )}
             </div>
           </div>
+          {/* 1st section */}
+          <div className="my-5">
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 1–10")}
+            </h2>
+            <br />
+            <h3 className="text-lg mb-5">
+              {renderText("Complete the notes below.")} <br /> <br />
+              {renderText("Write ")}
+              <span className="font-bold">
+                {renderText("ONE WORD AND/OR A NUMBER")}
+              </span>
+              {renderText(" for each answer.")}
+            </h3>
 
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
-          </h2>
-          <br />
-          <h3 className="text-lg mb-5">
-            {renderText("Complete the notes below.")} <br /> <br />
-            {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
-            {renderText(" for each answer.")}
-          </h3>
+            <div className="overflow-x-auto border p-5 bg-white rounded-lg">
+              <h1 className="text-2xl font-bold text-center mb-4">
+                {renderText("Customer Satisfaction Survey")}
+              </h1>
 
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Customer Satisfaction Survey")}
-            </h1>
+              {/* ---------- Section 1 ---------- */}
+              <ul className="list-disc list-inside space-y-3">
+                <h2 className="text-lg font-bold mt-6">
+                  {renderText("Customer details")}
+                </h2>
+                <li className="text-lg">{renderText("Name: Sophie Bird")}</li>
 
-            {/* ---------- Section 1 ---------- */}
-            <ul className="list-disc list-inside space-y-3">
+                <li className="text-lg">
+                  <span>{renderText("Occupation:")}</span>
+                  <button
+                    onClick={() => toggleButton(1)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[1]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    1
+                  </button>
+                  <input
+                    value={userAnswers[1] || ""}
+                    onChange={(e) => handleInputChange(1, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </li>
+
+                <li className="text-lg">
+                  {renderText("Phone number: 07866 510333")}
+                </li>
+
+                <li className="text-lg">
+                  <span>{renderText("Reason for travel today:")}</span>
+                  <button
+                    onClick={() => toggleButton(2)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[2]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    2
+                  </button>
+                  <input
+                    value={userAnswers[2] || ""}
+                    onChange={(e) => handleInputChange(2, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </li>
+              </ul>
+
+              {/* ---------- Section 2 ---------- */}
               <h2 className="text-lg font-bold mt-6">
-                {renderText("Customer details")}
+                {renderText("Journey information")}
               </h2>
-              <li className="text-lg">{renderText("Name: Sophie Bird")}</li>
+              <ul className="list-disc list-inside space-y-3">
+                <li className="text-lg">
+                  {renderText("Name of station returning to:")}
+                </li>
+                <li className="text-lg">
+                  <span>{renderText("Name of station returning to: ")}</span>
+                  <button
+                    onClick={() => toggleButton(3)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[3]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    3
+                  </button>
+                  <input
+                    value={userAnswers[3] || ""}
+                    onChange={(e) => handleInputChange(3, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </li>
+                <li className="text-lg">
+                  <span>
+                    {renderText("Type of ticket purchased: standard")}
+                  </span>
+                  <button
+                    onClick={() => toggleButton(4)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[4]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    4
+                  </button>
+                  <input
+                    value={userAnswers[4] || ""}
+                    onChange={(e) => handleInputChange(4, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText("ticket.")}</span>
+                </li>
+                <li className="text-lg">
+                  <span>{renderText("Cost of ticket: £")}</span>
+                  <button
+                    onClick={() => toggleButton(5)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[5]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    5
+                  </button>
+                  <input
+                    value={userAnswers[5] || ""}
+                    onChange={(e) => handleInputChange(5, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText("per hour.")}</span>
+                </li>
+                <li className="text-lg">
+                  <span>{renderText("Where ticket was bought:")}</span>
+                  <button
+                    onClick={() => toggleButton(6)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[6]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    6
+                  </button>
+                  <input
+                    value={userAnswers[6] || ""}
+                    onChange={(e) => handleInputChange(6, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </li>
+              </ul>
 
-              <li className="text-lg">
-                <span>{renderText("Occupation:")}</span>
-                <button
-                  onClick={() => toggleButton(1)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  1
-                </button>
-                <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
+              {/* ---------- Section 4 ---------- */}
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Satisfaction with journey")}
+              </h2>
+              <ul className="list-disc list-inside space-y-3">
+                <li className="text-lg">
+                  <span>{renderText("Least satisfied with: the")}</span>
+                  <button
+                    onClick={() => toggleButton(7)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[7]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    7
+                  </button>
+                  <input
+                    value={userAnswers[7] || ""}
+                    onChange={(e) => handleInputChange(7, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </li>
+              </ul>
 
-              <li className="text-lg">
-                {renderText("Phone number: 07866 510333")}
-              </li>
+              {/* ---------- Section 6 ---------- */}
+              <h2 className="text-lg font-bold mt-6">
+                {renderText("Satisfaction with station facilities")}
+              </h2>
+              <ul className="list-disc list-inside space-y-3">
+                <li className="text-lg">
+                  <span>{renderText("Most satisfied with: how much")}</span>
+                  <button
+                    onClick={() => toggleButton(8)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[8]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    8
+                  </button>
+                  <input
+                    value={userAnswers[8] || ""}
+                    onChange={(e) => handleInputChange(8, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText("was provided.")}</span>
+                </li>
+                <li className="text-lg">
+                  <span>{renderText("The")}</span>
+                  <button
+                    onClick={() => toggleButton(9)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[9]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    9
+                  </button>
+                  <input
+                    value={userAnswers[9] || ""}
+                    onChange={(e) => handleInputChange(9, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText(" ")}</span>
+                </li>
 
-              <li className="text-lg">
-                <span>{renderText("Reason for travel today:")}</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
-            </ul>
+                <li className="text-lg">
+                  <span>
+                    {renderText("Neither satisfied nor dissatisfied with: the")}
+                  </span>
+                  <button
+                    onClick={() => toggleButton(10)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[10]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    10
+                  </button>
+                  <input
+                    value={userAnswers[10] || ""}
+                    onChange={(e) => handleInputChange(10, e.target.value)}
+                    className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                    type="text"
+                  />
+                  <span>{renderText("available.")}</span>
+                </li>
+              </ul>
+            </div>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Journey information")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                {renderText("Name of station returning to:")}
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Name of station returning to: ")}</span>
+            {/* ---------- Marks display ---------- */}
+            {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+            <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+              {!showResult ? (
                 <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
+                  onClick={() => setShowResult(true)}
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
                 >
-                  3
+                  Submit Answers
                 </button>
-                <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Type of ticket purchased: standard")}</span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText("ticket.")}</span>
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Cost of ticket: £")}</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText("per hour.")}</span>
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Where ticket was bought:")}</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
-            </ul>
+              ) : (
+                <>
+                  {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
 
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with journey")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>{renderText("Least satisfied with: the")}</span>
-                <button
-                  onClick={() => toggleButton(7)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  7
-                </button>
-                <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
-            </ul>
+                  {/* Buttons to toggle right/wrong answers */}
+                  <div className="flex justify-center gap-4 mt-4">
+                    <button
+                      onClick={() => setShowRight((prev) => !prev)}
+                      className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                    >
+                      {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                    </button>
+                    <button
+                      onClick={() => setShowWrong((prev) => !prev)}
+                      className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                    >
+                      {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                    </button>
+                  </div>
 
-            {/* ---------- Section 6 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Satisfaction with station facilities")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>{renderText("Most satisfied with: how much")}</span>
-                <button
-                  onClick={() => toggleButton(8)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  8
-                </button>
-                <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText("was provided.")}</span>
-              </li>
-              <li className="text-lg">
-                <span>{renderText("The")}</span>
-                <button
-                  onClick={() => toggleButton(9)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  9
-                </button>
-                <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" ")}</span>
-              </li>
+                  {/* Right Answers List */}
+                  {showRight && (
+                    <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                      <h3 className="font-bold text-green-700 mb-2">
+                        Correct Answers:
+                      </h3>
+                      <ul className="list-disc list-inside text-green-700 space-y-1">
+                        {Object.keys(userAnswers)
+                          .filter(
+                            (key) =>
+                              userAnswers[key]?.trim().toLowerCase() ===
+                              correctAnswers[key]?.trim().toLowerCase()
+                          )
+                          .map((key) => (
+                            <li key={key}>
+                              <span className="font-semibold">Q{key}:</span>{" "}
+                              {correctAnswers[key]}
+                            </li>
+                          ))}
+                        {Object.keys(userAnswers).filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        ).length === 0 && (
+                          <p className="text-green-600">
+                            No correct answers yet.
+                          </p>
+                        )}
+                      </ul>
+                    </div>
+                  )}
 
-              <li className="text-lg">
-                <span>
-                  {renderText("Neither satisfied nor dissatisfied with: the")}
-                </span>
-                <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  10
-                </button>
-                <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText("available.")}</span>
-              </li>
-            </ul>
+                  {/* Wrong Answers List */}
+                  {showWrong && (
+                    <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                      <h3 className="font-bold text-red-700 mb-2">
+                        ❌ Wrong Answers:
+                      </h3>
+                      <ul className="list-disc list-inside text-red-700 space-y-1">
+                        {Object.keys(userAnswers)
+                          .filter(
+                            (key) =>
+                              correctAnswers[key] &&
+                              userAnswers[key]?.trim().toLowerCase() !==
+                                correctAnswers[key]?.trim().toLowerCase()
+                          )
+                          .map((key) => (
+                            <li key={key}>
+                              <span className="font-semibold">Q{key}:</span>{" "}
+                              Your answer:{" "}
+                              <span className="italic">
+                                {userAnswers[key] || "—"}
+                              </span>{" "}
+                              → Correct:{" "}
+                              <span className="font-semibold">
+                                {correctAnswers[key]}
+                              </span>
+                            </li>
+                          ))}
+                        {Object.keys(userAnswers).filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        ).length === 0 && (
+                          <p className="text-red-600">No wrong answers </p>
+                        )}
+                      </ul>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -107,6 +107,15 @@ import Test1Listening2019 from "../components/Academic 2019/Listening/Test1Liste
 import Test2Listening2019 from "../components/Academic 2019/Listening/Test2Listening2019";
 import Test3Listening2019 from "../components/Academic 2019/Listening/Test3Listening2019";
 import Test4Listening2019 from "../components/Academic 2019/Listening/Test4Listening2019";
+import Test1Reading2019 from "../components/Academic 2019/Reading/Test1Reading2019";
+import Test2Reading2019 from "../components/Academic 2019/Reading/Test2Reading2019";
+import Test3Reading2019 from "../components/Academic 2019/Reading/Test3Reading2019";
+import Test4Reading2019 from "../components/Academic 2019/Reading/Test4Reading2019";
+import Test1Writing2019 from "../components/Academic 2019/Writing/Test1Writing2019";
+import Test2Writing2019 from "../components/Academic 2019/Writing/Test2Writing2019";
+import Test3Writing2019 from "../components/Academic 2019/Writing/Test3Writing2019";
+import Test4Writing2019 from "../components/Academic 2019/Writing/Test4Writing2019";
+import Test1Speaking2019 from "../components/Academic 2019/Speaking/Test1Speaking2019";
 
 export const router = createBrowserRouter([
   {
@@ -538,6 +547,42 @@ export const router = createBrowserRouter([
       {
         path: "/2019/Test 4/listening",
         Component: Test4Listening2019,
+      },
+      {
+        path: "/2019/Test 1/reading",
+        Component: Test1Reading2019,
+      },
+      {
+        path: "/2019/Test 2/reading",
+        Component: Test2Reading2019,
+      },
+      {
+        path: "/2019/Test 3/reading",
+        Component: Test3Reading2019,
+      },
+      {
+        path: "/2019/Test 4/reading",
+        Component: Test4Reading2019,
+      },
+      {
+        path: "/2019/Test 1/writing",
+        Component: Test1Writing2019,
+      },
+      {
+        path: "/2019/Test 2/writing",
+        Component: Test2Writing2019,
+      },
+      {
+        path: "/2019/Test 3/writing",
+        Component: Test3Writing2019,
+      },
+      {
+        path: "/2019/Test 4/writing",
+        Component: Test4Writing2019,
+      },
+      {
+        path: "/2019/Test 1/speaking",
+        Component: Test1Speaking2019,
       },
     ],
   },

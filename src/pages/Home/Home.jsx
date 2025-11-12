@@ -1,11 +1,9 @@
-
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const data = [
   {
-    headline: "IELTS 20 Academy 2025",
+    headline: "IELTS 20 Academic 2025",
     tests: [
       {
         testName: "Test 1",
@@ -26,7 +24,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2024",
+    headline: "IELTS 19 Academic 2024",
     tests: [
       {
         testName: "Test 1",
@@ -47,7 +45,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2023",
+    headline: "IELTS 18 Academic 2023",
     tests: [
       {
         testName: "Test 1",
@@ -68,7 +66,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2022",
+    headline: "IELTS 17 Academic 2022",
     tests: [
       {
         testName: "Test 1",
@@ -89,7 +87,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2021",
+    headline: "IELTS 16 Academic 2021",
     tests: [
       {
         testName: "Test 1",
@@ -110,7 +108,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2020",
+    headline: "IELTS 15 Academic 2020",
     tests: [
       {
         testName: "Test 1",
@@ -131,7 +129,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2019",
+    headline: "IELTS 14 Academic 2019",
     tests: [
       {
         testName: "Test 1",
@@ -152,7 +150,7 @@ const data = [
     ],
   },
   {
-    headline: "IELTS 20 Academy 2018",
+    headline: "IELTS 13 Academy 2018",
     tests: [
       {
         testName: "Test 1",
@@ -193,258 +191,258 @@ const data = [
       },
     ],
   },
-  {
-    headline: "IELTS 20 Academy 2016",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2015",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2013",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2011",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2009",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2007",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2006",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2005",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2002",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2000",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 1996",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
-  {
-    headline: "IELTS 20 Academy 2014",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
+  // {
+  //   headline: "IELTS 20 Academy 2016",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2015",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2013",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2011",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2009",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2007",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2006",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2005",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2002",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2000",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 1996",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   headline: "IELTS 20 Academy 2014",
+  //   tests: [
+  //     {
+  //       testName: "Test 1",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 2",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 3",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //     {
+  //       testName: "Test 4",
+  //       sections: ["Listening", "Reading", "Writing", "Speaking"],
+  //     },
+  //   ],
+  // },
 ];
 
 const Home = () => {
@@ -495,12 +493,12 @@ const Home = () => {
                     className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-lg transition relative"
                   >
                     {/* Show total only if > 0 */}
-                   
-                    {totalScore > 0 && (
+
+                    {/* {totalScore > 0 && (
                       <div className="absolute top-4 right-4 bg-green-200 px-3 py-1 rounded-lg font-bold">
-                        <span>  {totalScore}</span>
+                        <span> {totalScore}</span>
                       </div>
-                    )}
+                    )} */}
 
                     <h3 className="text-xl font-semibold mb-3">
                       {test.testName}
@@ -537,11 +535,11 @@ const Home = () => {
                             </Link>
 
                             {/* Show mark only if score > 0 */}
-                            {score > 0 && (
+                            {/* {score > 0 && (
                               <span className="bg-yellow-50 rounded-lg px-3 py-1 font-bold">
                                 {score}
                               </span>
-                            )}
+                            )} */}
                           </li>
                         );
                       })}

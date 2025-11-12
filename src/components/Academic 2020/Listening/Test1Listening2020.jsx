@@ -16,6 +16,11 @@ const Test1Listening2020 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const lines = [
     {
       speaker: "ANNOUNCER",
@@ -403,26 +408,23 @@ const Test1Listening2020 = () => {
     speakNextChunk();
   };
 
- 
   //  Marks show
 
   const correctAnswers = {
-    1: "The agent I always deal with is called Becky Jamieson",
-    2: "Right, here we are. 07866 510333",
-    3: "It's communication that really matters, so you'd be fine there",
-    4: "It's communication that really matters, so you'd be fine there",
-    5: "The hourly rate is about 10 pounds, 11 if you're lucky",
-    6: "I can probably borrow a suit from Mum",
-    7: "Oh, yes, they will ask to see that",
-    8: "So there are questions about personality that they always ask candidates",
-    9: "For example, the interview will be useful because they'll give you feedback on your performance, so you can improve next time",
-    10: "And they'll have access to jobs which aren't advertised .Exactly, most temporary jobs aren't advertised",
+    1: "Jamieson",
+    2: "afternoon",
+    3: "communication",
+    4: "week",
+    5: "10–11",
+    6: "suit",
+    7: "passport",
+    8: "personality",
+    9: "feedback",
+    10: "effort",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
-
- 
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
@@ -467,15 +469,12 @@ const Test1Listening2020 = () => {
       setScore(Number(savedScore));
     }
   }, []);
-  
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
       <div className="flex gap-6 h-[1000px]">
-     
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
-       
           <div className="flex relative group justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
@@ -538,7 +537,7 @@ const Test1Listening2020 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -849,6 +848,110 @@ const Test1Listening2020 = () => {
                 <span>{renderText("is involved in applying for jobs.")}</span>
               </li>
             </ul>
+          </div>
+
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
+
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
+                  <button
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                  >
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                  </button>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
+                </div>
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
-//  Marks show
-
-const Test1Reading2020 = () => {
+const Test4Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +16,11 @@ const Test1Reading2020 = () => {
   };
 
   const questions = [
-    "In the Middle Ages, most Europeans knew where nutmeg was grown.",
-    "The VOC was the world's first major trading company.",
-    "Following the Treaty of Breda, the Dutch had control of all the islands where nutmeg grew.",
+    "Children with good self-control are known to be likely to do well at school later on.",
+    " The way a child plays may provide information about possible medical problems",
+    " Playing with dolls was found to benefit girls' writing more than boys' writing.",
+    "Children had problems thinking up ideas when they first created the story with Lego.",
+    "People nowadays regard children's play as less significant than they did in the past.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -32,7 +32,7 @@ const Test1Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 5;
+      const answerKey = qIndex + 9;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -51,7 +51,7 @@ const Test1Reading2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 1/reading", newScore);
+    localStorage.setItem("/2019/Test 4/reading", newScore);
   };
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -133,23 +133,23 @@ const Test1Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits",
-    2: "The fruit is encased in a fleshy husk",
-    3: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    4: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    5: "TRUE",
-    6: "FALSE",
-    7: "TRUE",
-    8: "Throughout this period, the Arabs were the exclusive importers of the spice to Europe",
-    9: "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease",
-    10: "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands",
-    11: "One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British",
-    12: "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa",
-    13: "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves",
+    1: "Giraldo focused on ants at four age ranges: 20 to 22 days, 45 to 47 days, 95 to 97 days and 120 to 122 days",
+    2: "Giraldo watched how well the ants took care of the young of the colony, recording how often each ant attended to, carried and fed them",
+    3: "Out in the wild, the ants probably don't live for a full 140 days thanks to predators, disease and just being in an environment that's much harsher than the comforts of the lab",
+    4: "She tested how ants responded to light and also measured how active they were by counting how often ants in a small dish walked across a line",
+    5: "And when it came to reacting to prey, the older ants attacked the poor fruit fly just as aggressively as the young ones did, flaring their mandibles or pulling at the fly's legs",
+    6: "She saw no major differences with age, nor was there any difference in the location of the dying cells, showing that age didn't seem to affect specific brain functions",
+    7: "She also wanted to see if aging affects the density of synaptic complexes within these structures - regions where neurons come together. Again, the answer was no",
+    8: "She also wanted to see if aging affects the density of synaptic complexes within these structures - regions where neurons come together. Again, the answer was no",
+    9: "TRUE",
+    10: "FALSE",
+    11: "TRUE",
+    12: "FALSE",
+    13: "TRUE",
   };
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 1/reading");
+    const savedScore = localStorage.getItem("/2019/Test 4/reading");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
@@ -167,7 +167,7 @@ const Test1Reading2020 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 1/reading");
+    const savedScore = localStorage.getItem("/2019/Test 4/reading");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -200,94 +200,22 @@ const Test1Reading2020 = () => {
               <span className="text-lg font-bold">
                 {renderText("          Questions 1-13")}
               </span>
-              {renderText("   PASSAGE 1")}
+              {renderText("  which are based on Reading  PASSAGE 1 below")}
             </h1>
           </div>
           {/* left text */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Nutmeg - a valuable spice")}
+              {renderText("The secret of staying young")}
             </h1>
 
             <p className="text-lg">
               {renderText(
-                "The nutmeg tree, Myristica fragrans, is a large evergreen tree native to Southeast Asia. Until the late 18th century, it only grew in one place in the world: a small group of islands in the Banda Sea, part of the Moluccas - or Spice Islands - in northeastern Indonesia."
+                "Pheidole dentata, a native ant of the south-eastern U.S., isn't immortal. But scientists have found that it doesn't seem to show any signs of aging. Old worker ants can do everything just as well as the youngsters, and their brains appear just as sharp."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    1
-                  </span>
-                )}
-                {renderText(" The fruit is encased in a fleshy husk.")}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    2
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit. Inside is a purple-brown shiny seed, 2-3 cm long by about 2 cm across, surrounded by a lacy red or crimson covering called an 'aril'."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-10 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    3,4
-                  </span>
-                )}
-              </span>
-            </p>
 
-            <br />
-
-            <p className="text-lg">
               {renderText(
-                "Nutmeg was a highly prized and costly ingredient in European cuisine in the Middle Ages, and was used as a flavouring, medicinal, and preservative agent."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Throughout this period, the Arabs were the exclusive importers of the spice to Europe."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    5
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " The Arab-Venetian dominance of the trade finally ended in 1512, when the Portuguese reached the Banda Islands and began exploiting its precious resources."
+                '"We get a picture that these ants really don\'t decline," says Ysabel Giraldo, who studied the ants for her doctoral thesis at Boston University.'
               )}
             </p>
 
@@ -295,15 +223,7 @@ const Test1Reading2020 = () => {
 
             <p className="text-lg">
               {renderText(
-                "Always in danger of competition from neighbouring Spain, the Portuguese began subcontracting their spice distribution to Dutch traders. Profits began to flow into the Netherlands, and the Dutch commercial fleet swiftly grew into one of the largest in the world. The Dutch quietly gained control of most of the shipping and trading of spices in Northern Europe. Then, in 1580, Portugal fell under Spanish rule, and by the end of the 16th century the Dutch found themselves locked out of the market. As prices for pepper, nutmeg, and other spices soared across Europe, they decided to fight back."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "In 1602, Dutch merchants founded the VOC, a trading corporation better known as the Dutch East India Company. By 1617, the VOC was the richest commercial operation in the world. The company had 50,000 employees worldwide, with a private army of 30,000 men and a fleet of 200 ships."
+                "Such age-defying feats are rare in the animal kingdom."
               )}
               <span
                 className={`ml-2 ${
@@ -311,7 +231,7 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease."
+                  "Naked mole rats can live for almost 30 years and stay fit for nearly their entire lives. "
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -320,7 +240,7 @@ const Test1Reading2020 = () => {
                 )}
               </span>
               {renderText(
-                " Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure. Everybody wanted nutmeg, and many were willing to spare no expense to have it. Nutmeg bought for a few pennies in Indonesia could be sold for 68,000 times its original cost on the streets of London. The only problem was the short supply. And that's where the Dutch found their opportunity."
+                " They can still reproduce even when old, and they never get cancer. But the vast majority of animals deteriorate with age just like people do."
               )}
             </p>
 
@@ -328,7 +248,26 @@ const Test1Reading2020 = () => {
 
             <p className="text-lg">
               {renderText(
-                "The Banda Islands were ruled by local sultans who insisted on maintaining a neutral trading policy towards foreign powers. This allowed them to avoid the presence of Portuguese or Spanish troops on their soil, but it also left them unprotected from other invaders. In 1621, the Dutch arrived and took over. Once securely in control of the Bandas, the Dutch went to work protecting their new investment. They concentrated all nutmeg production into a few easily guarded areas, uprooting and destroying any trees outside the plantation zones. Anyone caught growing a nutmeg seedling or carrying seeds without the proper authority was severely punished."
+                "Like the naked mole rat, ants are social creatures that usually live in highly organised colonies."
+              )}
+              {renderText(
+                '"It\'s this social complexity that makes P. dentata useful for studying aging in people," says Giraldo, now at the California Institute of Technology.'
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Humans are also highly social, a trait that has been connected to healthier aging. By contrast, most animal studies of aging use mice, worms or fruit flies, which all lead much more isolated lives."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "In the lab, P. dentata worker ants typically live for around 140 days.  Then she put them through a range of tests."
               )}
               <span
                 className={`ml-2 ${
@@ -336,7 +275,21 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands."
+                  "Giraldo focused on ants at four age ranges: 20 to 22 days, 45 to 47 days, 95 to 97 days and 120 to 122 days. "
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    1
+                  </span>
+                )}
+              </span>
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Giraldo focused on ants at four age ranges: 20 to 22 days, 45 to 47 days, 95 to 97 days and 120 to 122 days. Unlike all previous studies, which only estimated how old the ants were, her work tracked the ants from the time the pupae became adults, so she knew their exact ages."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -344,14 +297,65 @@ const Test1Reading2020 = () => {
                   </span>
                 )}
               </span>
-              {renderText(" There was only one obstacle to Dutch domination.")}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British."
+                  "Giraldo watched how well the ants took care of the young of the colony, recording how often each ant attended to, carried and fed them."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    2
+                  </span>
+                )}
+
+                {renderText(
+                  " She compared how well 20-day-old and 95-day-old ants followed the telltale scent that the insects usually leave to mark a trail to food."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
+                {renderText(
+                  "She tested how ants responded to light and also measured how active they were by counting how often ants in a small dish walked across a line."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    4
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "  And she experimented with how ants react to live prey: a tethered fruit fly."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Giraldo expected the older ants to perform poorly in all these tasks."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    11
+                  </span>
+                )}
+                {renderText(
+                  " But the elderly insects were all good caretakers and trail-followers - the 95-day-old ants could track the scent even longer than their younger counterparts"
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -360,7 +364,7 @@ const Test1Reading2020 = () => {
                 )}
               </span>
               {renderText(
-                " After decades of fighting for control of this tiny island, the Dutch and British arrived at a compromise settlement, the Treaty of Breda, in 1667. Intent on securing their hold over every nutmeg-producing island, the Dutch offered a trade: if the British would give them the island of Run, they would in turn give Britain a distant and much less valuable island in North America. The British agreed. That other island was Manhattan, which is how New Amsterdam became New York."
+                ". They all responded to light well, and the older ants were more active. "
               )}
               <span
                 className={`ml-2 ${
@@ -368,11 +372,11 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "The Dutch now had a monopoly over the nutmeg trade which would last for another century."
+                  "And when it came to reacting to prey, the older ants attacked the poor fruit fly just as aggressively as the young ones did, flaring their mandibles or pulling at the fly's legs."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    7
+                    5
                   </span>
                 )}
               </span>
@@ -381,22 +385,8 @@ const Test1Reading2020 = () => {
             <br />
 
             <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
-                  </span>
-                )}
-              </span>{" "}
               {renderText(
-                "Some of these were later exported to the Caribbean where they thrived, especially on the island of Grenada."
+                "Then Giraldo compared the brains of 20-day-old and 95-day-old ants, identifying any cells that were close to death."
               )}
               <span
                 className={`ml-2 ${
@@ -404,16 +394,39 @@ const Test1Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+                  "She saw no major differences with age, nor was there any difference in the location of the dying cells, showing that age didn't seem to affect specific brain functions."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    6
                   </span>
                 )}
-              </span>{" "}
+              </span>
               {renderText(
-                "Finally, in 1809, the British returned to Indonesia and seized the Banda Islands by force. They returned the islands to the Dutch in 1817, but not before transplanting hundreds of nutmeg seedlings to plantations in several locations across southern Asia. The Dutch nutmeg monopoly was over."
+                "  Ants and other insects have structures in their brains called mushroom bodies, which are important for processing information, learning and memory. "
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "She also wanted to see if aging affects the density of synaptic complexes within these structures - regions where neurons come together. Again, the answer was no."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-10 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    7,8
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "What was more, the old ants didn't experience any drop in the levels of either serotonin or dopamine - brain chemicals whose decline often coincides with aging. In humans, for example, a decrease in serotonin has been linked to Alzheimer's disease."
               )}
             </p>
 
@@ -421,7 +434,57 @@ const Test1Reading2020 = () => {
 
             <p className="text-lg">
               {renderText(
-                "Today, nutmeg is grown in Indonesia, the Caribbean, India, Malaysia, Papua New Guinea, and Sri Lanka, and world nutmeg production is estimated to average between 10,000 and 12,000 tonnes per year."
+                '"This is the first time anyone has looked at both behavioral and neural changes in these ants so thoroughly," says Giraldo, who recently published the findings in the Proceedings of the Royal Society B.'
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Scientists have looked at some similar aspects in bees, but the results of recent bee studies were mixed - some studies showed age-related declines, which biologists call senescence, and others didn't."
+              )}
+
+              {renderText(
+                '"For now, the study raises more questions than it answers," Giraldo says, "including how P. dentata stays in such good shape."'
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Also, if the ants don't deteriorate with age, why do they die at all? "
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Out in the wild, the ants probably don't live for a full 140 days thanks to predators, disease and just being in an environment that's much harsher than the comforts of the lab."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "\"The lucky ants that do live into old age may suffer a steep decline just before dying,\" Giraldo says, but she can't say for sure because her study wasn't designed to follow an ant's final moments."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                '"It will be important to extend these findings to other species of social insects," says Gene E. Robinson, an entomologist at the University of Illinois at Urbana-Champaign. This ant might be unique, or it might represent a broader pattern among other social bugs with possible clues to the science of aging in larger animals. Either way, it seems that for these ants, age really doesn’t matter."'
               )}
             </p>
           </div>
@@ -498,7 +561,7 @@ const Test1Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-6")}
+              {renderText("Questions 1-8")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -512,20 +575,27 @@ const Test1Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-6 on your answer sheet."
+                "Write your answers in boxes 1-8 on your answer sheet."
               )}
             </h1>
             <br />
           </div>
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("The nutmeg tree and fruit")}
+              {renderText("Children's play")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold">
+                {renderText("Uses of children's play")}
+              </h1>
+
               <li className="text-lg">
-                <span>{renderText("the leaves of the tree are")}</span>
+                <span>
+                  {renderText("building a 'magical kingdom' may help develop")}
+                </span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -542,10 +612,10 @@ const Test1Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>{renderText("in shape.")}</span>
               </li>
+
               <li className="text-lg">
-                <span>{renderText("the")}</span>
+                <span>{renderText("board games involve")}</span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -562,14 +632,18 @@ const Test1Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText(
-                    "surrounds the fruit and breaks open when the fruit is ripe."
-                  )}
-                </span>
+                <span>{renderText("and turn-taking")}</span>
               </li>
+            </ul>
+
+            {/* ---------- Section 2 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("Recent changes affecting children's play")}
+              </h1>
+
               <li className="text-lg">
-                <span>{renderText("the")}</span>
+                <span>{renderText("populations of")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -581,19 +655,18 @@ const Test1Reading2020 = () => {
                   3
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText("is used to produce the spice nutmeg.")}
-                </span>
+                <span>{renderText("have grown")}</span>
               </li>
+
               <li className="text-lg">
                 <span>
                   {renderText(
-                    "the covering known as the aril is used to produce"
+                    "opportunities for free play are limited due to fear of"
                   )}
                 </span>
                 <button
@@ -613,15 +686,105 @@ const Test1Reading2020 = () => {
                   type="text"
                 />
               </li>
+
               <li className="text-lg">
-                {renderText("the tree has yellow flowers and fruit")}
+                <span>{renderText("fear of")}</span>
+                <button
+                  onClick={() => toggleButton(5)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[5]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  5
+                </button>
+                <input
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("increased")}</span>
+                <button
+                  onClick={() => toggleButton(6)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[6]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  6
+                </button>
+                <input
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+                <span>{renderText("in schools")}</span>
+              </li>
+            </ul>
+
+            {/* ---------- Section 3 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("International policies on children's play")}
+              </h1>
+
+              <li className="text-lg">
+                <span>{renderText("it is difficult to find")}</span>
+                <button
+                  onClick={() => toggleButton(7)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[7]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  7
+                </button>
+                <input
+                  value={userAnswers[7] || ""}
+                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+                <span>{renderText("to support new policies")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "research needs to study the impact of play on the rest of the child's"
+                  )}
+                </span>
+                <button
+                  onClick={() => toggleButton(8)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[8]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  8
+                </button>
+                <input
+                  value={userAnswers[8] || ""}
+                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
               </li>
             </ul>
           </div>
           <br />
           {/* 2nd step */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 5-7")}
+            {renderText("Questions 9-13")}
           </h2>
           <br />
           <h3 className="text-lg font-semibold mb-5">
@@ -629,7 +792,7 @@ const Test1Reading2020 = () => {
               "Do the following statements agree with the information given in Reading Passage 1?"
             )}{" "}
             <br /> <br />
-            {renderText("In boxes 5-7 on your answer sheet, choose")}
+            {renderText("In boxes 9-13 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
             <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -648,7 +811,7 @@ const Test1Reading2020 = () => {
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">Questions 9-13</h2>
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 5;
+              const answerKey = qIndex + 9;
               const correct = correctAnswers[answerKey];
 
               return (
@@ -689,190 +852,10 @@ const Test1Reading2020 = () => {
               );
             })}
           </div>
-          {/* table */}
-          <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
-            <tbody>
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("Middle Ages")}
-                </td>
-                <td className="border text-lg p-2">
-                  <span>
-                    {renderText("Nutmeg was brought to Europe by the")}
-                  </span>
-                  <button
-                    onClick={() => toggleButton(7)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[7]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    8
-                  </button>
-                  <input
-                    value={userAnswers[8] || ""}
-                    onChange={(e) => handleInputChange(8, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText(".")}</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("16th century")}
-                </td>
-                <td className="border text-lg p-2">
-                  {renderText(
-                    "European nations took control of the nutmeg trade"
-                  )}
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("17th century")}
-                </td>
-                <td className="border text-lg p-2 text-left">
-                  <ul className="list-disc list-inside space-y-3">
-                    <li className="text-lg">
-                      <span>
-                        {renderText(
-                          "Demand for nutmeg grew, as it was believed to be effective against the disease known as the"
-                        )}
-                      </span>
-                      <button
-                        onClick={() => toggleButton(9)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[9]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        9
-                      </button>
-                      <input
-                        value={userAnswers[9] || ""}
-                        onChange={(e) => handleInputChange(9, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>{renderText(".")}</span>
-                    </li>
-
-                    <li className="text-lg">
-                      <span>{renderText("put")}</span>
-                      <button
-                        onClick={() => toggleButton(10)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[10]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        10
-                      </button>
-                      <input
-                        value={userAnswers[10] || ""}
-                        onChange={(e) => handleInputChange(10, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>
-                        {renderText(
-                          "on nutmeg to avoid it being cultivated outside the islands."
-                        )}
-                      </span>
-                    </li>
-
-                    <li>
-                      <span>
-                        {renderText("finally obtained the island of")}
-                      </span>
-                      <button
-                        onClick={() => toggleButton(11)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                          activeButtons[11]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        11
-                      </button>
-                      <input
-                        value={userAnswers[11] || ""}
-                        onChange={(e) => handleInputChange(11, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span>{renderText("from the British.")}</span>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("Late 18th century")}
-                </td>
-                <td className="border text-lg p-2 text-left">
-                  <p>
-                    {renderText(
-                      "Clean the serving area, including the weighing scales."
-                    )}
-                  </p>
-                  <p className="mt-2">
-                    <span>{renderText("Collect")}</span>
-                    <button
-                      onClick={() => toggleButton(12)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[12]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      12
-                    </button>
-                    <input
-                      value={userAnswers[12] || ""}
-                      onChange={(e) => handleInputChange(12, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span>
-                      {renderText("for the fish from the cold-room.")}
-                    </span>
-                  </p>
-                  <p className="mt-2">
-                    <span>{renderText("Must wear special")}</span>
-                    <button
-                      onClick={() => toggleButton(13)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                        activeButtons[13]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      13
-                    </button>
-                    <input
-                      value={userAnswers[13] || ""}
-                      onChange={(e) => handleInputChange(13, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span>{renderText(".")}</span>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
   );
 };
 
-export default Test1Reading2020;
+export default Test4Reading2019;

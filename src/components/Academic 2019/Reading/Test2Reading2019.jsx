@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 
-const Test3Reading2020 = () => {
+const Test2Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -16,13 +16,14 @@ const Test3Reading2020 = () => {
   };
 
   const questions = [
-    "On leaving school, Moore did what his father wanted him to do.",
-    "Moore began studying sculpture in his first term at the Leeds School of Art..",
-    "When Moore started at the Royal College of Art, its reputation for teaching sculpture was excellent.",
-    "Moore became aware of ancient sculpture as a result of visiting London museums.",
-    "The Trocadero Museum's Mayan sculpture attracted a lot of public interest.",
-    "Moore thought the Mayan sculpture was similar in certain respects to other stone sculptures",
-    "The artists who belonged to Unit One wanted to make modern art and architecture more popular",
+    "Henderson rarely visited the area around Press estate when he was younger.",
+    "Henderson pursued a business career because it was what his family wanted.",
+    "Henderson and Notman were surprised by the results of their 1865 experiment",
+    "There were many similarities between Henderson's early landscapes and those of Notman.",
+    "The studio that Henderson opened in 1866 was close to his home.",
+    "Henderson gave up portraiture so that he could focus on taking photographs of scenery.",
+    "When Henderson began work for the Intercolonial Railway, the Montreal to Halifax line had been finished.",
+    "Henderson's last work as a photographer was with the Canadian Pacific Railway.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -34,7 +35,7 @@ const Test3Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 7;
+      const answerKey = qIndex + 6;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -53,7 +54,7 @@ const Test3Reading2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 3/reading", newScore);
+    localStorage.setItem("/2019/Test 2/reading", newScore);
   };
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -135,23 +136,23 @@ const Test3Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: " After leaving school, Moore hoped to become a sculptor, but instead he complied with his father's wish that he train as a schoolteacher",
-    2: "Although he wanted to study sculpture, no teacher was appointed until his second year",
-    3: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    4: ".Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture",
-    5: "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity",
-    6: "Moore became fascinated with this stone sculpture, which he thought had a power and originality that no other stone sculpture possessed",
-    7: "TRUE",
-    8: "FALSE",
-    9: "FALSE",
-    10: "TRUE",
+    1: "The family often stayed at Press Castle, the large mansion on the northern edge of the property, and Alexander spent much of his childhood in the area, playing on the beach near Eyemouth or fishing in the streams nearby",
+    2: "Although he never liked the prospect of a business career, he stayed with it to please his family",
+    3: "In 1866, he gave up his business to open a photographic studio, advertising himself as a portrait and landscape photographer. From about 1870 he dropped portraiture to specialize in landscape photography and other views",
+    4: "While Notman's landscapes were noted for their bold realism, Henderson for the first 20 years of his career produced romantic images, showing the strong influence of the British landscape tradition",
+    5: "People wanted to buy photographs as souvenirs of a trip or as gifts, and catering to this market, Henderson had stock photographs on display at his studio for mounting, framing, or inclusion in albums",
+    6: "TRUE",
+    7: "FALSE",
+    8: "TRUE",
+    9: "TRUE",
+    10: "FALSE",
     11: "TRUE",
     12: "FALSE",
     13: "TRUE",
   };
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 3/reading");
+    const savedScore = localStorage.getItem("/2019/Test 2/reading");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
@@ -169,7 +170,7 @@ const Test3Reading2020 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 3/reading");
+    const savedScore = localStorage.getItem("/2019/Test 2/reading");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -184,6 +185,7 @@ const Test3Reading2020 = () => {
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
+
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -202,178 +204,27 @@ const Test3Reading2020 = () => {
               <span className="text-lg font-bold">
                 {renderText("          Questions 1-13")}
               </span>
-              {renderText("   PASSAGE 1")}
+              {renderText(" which are based on Reading  PASSAGE 1 below")}
             </h1>
           </div>
           {/* left text */}
-          <div>
+          <div className="  ">
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Henry Moore (1898–1986)")}
-            </h1>
-            <h1 className="text-xl font-bold italic text-center mb-5">
-              {renderText(
-                "The British sculptor Henry Moore was a leading figure in the 20th-century art world"
-              )}
+              {renderText("Alexander Henderson (1831-1913)")}
             </h1>
 
-            <p className="text-lg">
+            <h2 className="text-lg italic text-center font-bold mb-5">
               {renderText(
-                "The British sculptor Henry Moore was a leading figure in the 20th-century art world. Henry Moore was born in Castleford, a small town near Leeds in the north of England. He was the seventh child of Raymond Moore and his wife Mary Baker. He studied at Castleford Grammar School from 1909 to 1915, where his early interest in art was encouraged by his teacher Alice Gostick.."
+                "Born in Scotland, Henderson emigrated to Canada in 1855 and became a well-known landscape photographer"
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " After leaving school, Moore hoped to become a sculptor, but instead he complied with his father's wish that he train as a schoolteacher."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    1
-                  </span>
-                )}
-              </span>
-              He had to abandon his training in 1917 when he was sent to France
-              to fight in the First World War
-            </p>
-
-            <br />
+            </h2>
 
             <p className="text-lg">
-              {renderText(
-                "After the war, Moore enrolled at the Leeds School of Art, where he studied for two years. In his first year, he spent most of his time drawing. ."
-              )}
               <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
+                className={`${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  "Although he wanted to study sculpture, no teacher was appointed until his second year"
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    2
-                  </span>
-                )}
-              </span>
-              At the end of that year, he passed the sculpture examination and
-              was awarded a scholarship to the Royal College of Art in London.
-              In September 1921, he moved to London and began three years of
-              advanced study in sculpture.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(".")}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture"
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    4
-                  </span>
-                )}
-              </span>
-              During these visits, he discovered the power and beauty of ancient
-              Egyptian and African sculpture. As he became increasingly
-              interested in these 'primitive' forms of art, he turned away from
-              European sculptural traditions.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "After graduating, Moore spent the first six months of 1925 travelling in France. When he visited the Trocadero Museum in Paris, he was impressed by a cast of a Mayan sculpture of the rain spirit. It was a male reclining figure with its knees drawn up together, and its head at a right angle to its body."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Moore became fascinated with this stone sculpture, which he thought had a power and originality that no other stone sculpture possessed."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    6
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " He himself started carving a variety of subjects in stone, including depictions of reclining women, mother-and-child groups, and masks."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "Moore's exceptional talent soon gained recognition, and in 1926 he started work as a sculpture instructor at the Royal College. In 1933, he became a member of a group of young artists called Unit One."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The aim of the group was to convince the English public of the merits of the emerging international movement in modern art and architecture."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    7
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "Around this time, Moore moved away from the human figure to experiment with abstract shapes. In 1931, he held an exhibition at the Leicester Galleries in London."
-              )}
-              {renderText(
-                "His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " There were calls for his resignation from the Royal College, and the following year, when his contract expired, he left to start a sculpture department at the Chelsea School of Art in London."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
-                  </span>
-                )}
-              </span>
-              {renderText("")}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "In 1940, during the Second World War, Moore stopped teaching at the Chelsea School and moved to a farmhouse about 20 miles north of London. "
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "A shortage of materials forced him to focus on drawing."
+                  "Alexander Henderson was born in Scotland in 1831 and was the son of a successful merchant."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -381,18 +232,114 @@ const Test3Reading2020 = () => {
                   </span>
                 )}
               </span>
-
               {renderText(
-                "He did numerous small sketches of Londoners, later turning these ideas into large coloured drawings in his studio. "
+                "His grandfather, also called Alexander, had founded the family business, and later became the first chairman of the National Bank of Scotland."
+              )}
+              {renderText(
+                "The family had extensive landholdings in Scotland. Besides its residence in Edinburgh, it owned Press Estate, 650 acres of farmland about 35 miles southeast of the city."
+              )}
+              <span
+                className={`${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                } ml-1`}
+              >
+                {renderText(
+                  "The family often stayed at Press Castle, the large mansion on the northern edge of the property, and Alexander spent much of his childhood in the area, playing on the beach near Eyemouth or fishing in the streams nearby."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    1
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg mt-4">
+              {renderText(
+                "Even after he went to school at Murcheston Academy on the outskirts of Edinburgh, Henderson returned to Press at weekends.In 1849 he began a three-year apprenticeship to become an accountant."
               )}
 
               <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
+                className={`${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " In 1942, he returned to Castleford to make a series of sketches of the miners who worked there.."
+                  " Although he never liked the prospect of a business career, he stayed with it to please his family."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    2
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                "In October 1855, however, he emigrated to Canada with his wife Agnes Elder Robertson and they settled in Montreal."
+              )}
+            </p>
+
+            <p className="text-lg mt-4">
+              {renderText(
+                "Henderson learned photography in Montreal around the year 1857 and quickly took it up as a serious amateur."
+              )}
+              {renderText(
+                "He became a personal friend and colleague of the Scottish-Canadian photographer William Notman. The two men made a photographic excursion to Niagara Falls in 1860 and they cooperated on experiments with magnesium flares as a source of artificial light in 1865."
+              )}
+              {renderText(
+                "They belonged to the same societies and were among the founding members of the Art Association of Montreal. Henderson acted as chairman of the association's first meeting, which was held in Notman's studio on 11 January 1860."
+              )}
+            </p>
+
+            <p className="text-lg mt-4">
+              {renderText(
+                "In spite of their friendship, their styles of photography were quite different."
+              )}
+              <span
+                className={`${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  " While Notman's landscapes were noted for their bold realism, Henderson for the first 20 years of his career produced romantic images, showing the strong influence of the British landscape tradition."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    4
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "His artistic and technical progress was rapid and in 1865 he published his first major collection of landscape photographs."
+              )}
+              {renderText(
+                "The publication had limited circulation (only seven copies have ever been found), and was called Canadian Views and Studies. The contents of each copy vary significantly and have proved a useful source for evaluating Henderson's early work."
+              )}
+            </p>
+
+            <p className="text-lg mt-4">
+              <span
+                className={`${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "In 1866, he gave up his business to open a photographic studio, advertising himself as a portrait and landscape photographer. From about 1870 he dropped portraiture to specialize in landscape photography and other views."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "His numerous photographs of city life revealed in street scenes, houses, and markets are alive with human activity, and although his favourite subject was landscape he usually composed his scenes around such human pursuits as farming the land, cutting ice on a river, or sailing down a woodland stream."
+              )}
+
+              {renderText(
+                "There was sufficient demand for these types of scenes and others he took depicting the lumber trade, steamboats and waterfalls to enable him to make a living. "
+              )}
+              <span
+                className={`${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                } ml-1`}
+              >
+                {renderText(
+                  "There was little competing hobby or amateur photography before the late 1880s because of the time-consuming techniques involved and the weight of the equipment."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -400,66 +347,23 @@ const Test3Reading2020 = () => {
                   </span>
                 )}
               </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(".")}
               <span
-                className={`ml-2 ${
+                className={`${
                   highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
+                } ml-1`}
               >
                 {renderText(
-                  "In 1944, Harlow, a town near London, offered Moore a commission for a sculpture depicting a family"
+                  "People wanted to buy photographs as souvenirs of a trip or as gifts, and catering to this market, Henderson had stock photographs on display at his studio for mounting, framing, or inclusion in albums."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    11
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " The resulting work signifies a dramatic change in Moore's style, away from the experimentation of the 1930s towards a more natural and humanistic subject matter. He did dozens of studies in clay for the sculpture, and these were cast in bronze and issued in editions of seven to nine copies each."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "In this way, Moore's work became available to collectors all over the world."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The boost to his income enabled him to take on ambitious projects and start working on the scale he felt his sculpture demanded."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    5
                   </span>
                 )}
               </span>
             </p>
 
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "In his final years, Moore created the Henry Moore Foundation to promote art appreciation and to display his work. Moore was the first modern English sculptor to achieve international critical acclaim and he is still regarded as one of the most important sculptors of the 20th century."
-              )}
-            </p>
+            {/* Add more paragraphs following the same style for the rest of the text */}
           </div>
 
           {/* highlight modal */}
@@ -534,7 +438,7 @@ const Test3Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-6")}
+              {renderText("Questions 1-5")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -548,25 +452,25 @@ const Test3Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-6 on your answer sheet."
+                "Write your answers in boxes 1-5 on your answer sheet."
               )}
             </h1>
             <br />
           </div>
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moore's career as an artist")}
+              {renderText("Alexander Henderson")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold  ">{renderText("1930s")}</h1>
+              <h1 className="text-lg font-bold">{renderText("Early life")}</h1>
+
               <li className="text-lg">
-                Moore's exhibition at the Leicester Galleries is criticised by
-                the press
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Moore is urged to offer his")}</span>
+                <span>
+                  {renderText("was born in Scotland in 1831 - father was a")}
+                </span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -583,15 +487,43 @@ const Test3Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>{renderText("and leave the Royal College.")}</span>
               </li>
-            </ul>
-            {/* ---------- Section 2 ---------- */}
-            <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold mt-3 ">{renderText("1940s")}</h1>
 
               <li className="text-lg">
-                <span>{renderText("Moore turns to drawing because")}</span>
+                <span>
+                  {renderText(
+                    "trained as an accountant, emigrated to Canada in 1855"
+                  )}
+                </span>
+              </li>
+            </ul>
+
+            {/* ---------- Section 2 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("Start of a photographic career")}
+              </h1>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("opened up a photographic studio in 1866")}
+                </span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "took photos of city life, but preferred landscape photography"
+                  )}
+                </span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "people bought Henderson's photos because photography took up considerable time and"
+                  )}
+                </span>
                 <button
                   onClick={() => toggleButton(2)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -608,17 +540,14 @@ const Test3Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText("for sculpting are not readily available")}
-                </span>
               </li>
 
               <li className="text-lg">
-                <span>
-                  {renderText(
-                    "While visiting his hometown, Moore does some drawings of"
-                  )}
-                </span>
+                <span>{renderText("was heavy")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("the photographs Henderson sold were")}</span>
                 <button
                   onClick={() => toggleButton(3)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -630,16 +559,35 @@ const Test3Reading2020 = () => {
                   3
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>{renderText(".")}</span>
               </li>
+
+              <li className="text-lg">
+                <span>{renderText("or souvenirs")}</span>
+              </li>
+            </ul>
+
+            {/* ---------- Section 3 ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <h1 className="text-lg font-bold mt-3">
+                {renderText("Travelling as a professional photographer")}
+              </h1>
+
               <li className="text-lg">
                 <span>
-                  {renderText("Moore is employed to produce a sculpture of a")}
+                  {renderText(
+                    "travelled widely in Quebec and Ontario in 1870s and 1880s"
+                  )}
+                </span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("took many trips along eastern rivers in a")}
                 </span>
                 <button
                   onClick={() => toggleButton(4)}
@@ -658,8 +606,19 @@ const Test3Reading2020 = () => {
                   type="text"
                 />
               </li>
+
               <li className="text-lg">
-                <span>{renderText("")}</span>
+                <span>
+                  {renderText(
+                    "worked for Canadian railways between 1875 and 1897"
+                  )}
+                </span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("worked for CPR in 1885 and photographed the")}
+                </span>
                 <button
                   onClick={() => toggleButton(5)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -676,45 +635,17 @@ const Test3Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                {renderText("start to buy Moore's work")}
               </li>
-              <li className="text-lg">
-                <span>{renderText("Moore increased")}</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                {renderText(
-                  "makes it possible for him to do more ambitious sculpture"
-                )}
-              </li>
-            </ul>
 
-            <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold mt-3"> {renderText("1950s")}</h1>
               <li className="text-lg">
-                {renderText(
-                  "Moore's series of bronze figures marks a further change in his style"
-                )}
+                <span>{renderText("and the railway at Rogers Pass")}</span>
               </li>
             </ul>
           </div>
           <br />
           {/* 2nd step */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 7-13")}
+            {renderText("Questions 9-13")}
           </h2>
           <br />
           <h3 className="text-lg font-semibold mb-5">
@@ -722,7 +653,7 @@ const Test3Reading2020 = () => {
               "Do the following statements agree with the information given in Reading Passage 1?"
             )}{" "}
             <br /> <br />
-            {renderText("In boxes 7-13 on your answer sheet, choose")}
+            {renderText("In boxes 9-13 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
             <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -739,9 +670,9 @@ const Test3Reading2020 = () => {
           <br /> <br />
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 7-13</h2>
+            <h2 className="text-lg font-bold">Questions 9-13</h2>
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 7;
+              const answerKey = qIndex + 6;
               const correct = correctAnswers[answerKey];
 
               return (
@@ -788,4 +719,4 @@ const Test3Reading2020 = () => {
   );
 };
 
-export default Test3Reading2020;
+export default Test2Reading2019;

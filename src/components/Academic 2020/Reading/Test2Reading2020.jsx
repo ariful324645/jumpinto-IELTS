@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-import { IoIosArrowUp } from "react-icons/io";
+
 import { IoBookSharp } from "react-icons/io5";
 
 const Test2Reading2020 = () => {
@@ -8,8 +9,6 @@ const Test2Reading2020 = () => {
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
 
-
- 
   const handleClear = () => {
     setActiveButtons({});
     const inputs = document.querySelectorAll("input[type='text']");
@@ -24,7 +23,6 @@ const Test2Reading2020 = () => {
       [id]: !prev[id],
     }));
   };
-
 
   // text highlight and clear
 
@@ -80,7 +78,7 @@ const Test2Reading2020 = () => {
     });
     return parts;
   };
-// marks show
+  // marks show
   const correctAnswers = {
     1: "That is not to suggest everyone should dance their way to work, however healthy and happy it might make us, but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making",
     2: "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating",
@@ -140,7 +138,7 @@ const Test2Reading2020 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           {/* Header */}
-       
+
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("PASSAGE 1")}</h1>
             <div className="flex gap-3">
@@ -193,14 +191,9 @@ const Test2Reading2020 = () => {
           {/* Section A */}
           <h1 className="text-lg font-bold">{renderText("A")}</h1>
           <p className="text-lg">
-            The way we travel around cities has a major impact on whether they
-            are sustainable. Transportation is estimated to account for 30% of
-            energy consumption in most of the world's most developed nations, so
-            lowering the need for energy-using vehicles is essential for
-            decreasing the environmental impact of mobility. But as more and
-            more people move to cities, it is important to think about other
-            kinds of sustainable travel too.
-            {renderText("")}
+            {renderText(
+              "The way we travel around cities has a major impact on whether they are sustainable. Transportation is estimated to account for 30% of energy consumption in most of the world's most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility. But as more and more people move to cities, it is important to think about other kinds of sustainable travel too."
+            )}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
@@ -216,13 +209,13 @@ const Test2Reading2020 = () => {
                 </span>
               )}
             </span>
-            Engineers are tasked with changing how we travel round cities
-            through urban design, but the engineering industry still works on
-            the assumptions that led to the creation of the energy-consuming
-            transport systems we have now: the emphasis placed solely on
-            efficiency, speed, and quantitative data. We need radical changes,
-            to make it healthier, more enjoyable, and less environmentally
-            damaging to travel around cities.
+            {renderText(`Engineers are tasked with changing how we travel round cities
+through urban design, but the engineering industry still works on
+the assumptions that led to the creation of the energy-consuming
+transport systems we have now: the emphasis placed solely on
+efficiency, speed, and quantitative data. We need radical changes,
+to make it healthier, more enjoyable, and less environmentally
+damaging to travel around cities.`)}
           </p>
 
           {/* Section B */}
@@ -234,22 +227,21 @@ const Test2Reading2020 = () => {
                 highlight ? "bg-yellow-100" : "bg-transparent"
               }`}
             >
-              That is not to suggest everyone should dance their way to work,
+              {renderText(`  That is not to suggest everyone should dance their way to work,
               however healthy and happy it might make us, but rather that the
               techniques used by choreographers to experiment with and design
               movement in dance could provide engineers with tools to stimulate
-              new ideas in city-making
-              {renderText("")}
+              new ideas in city-making`)}
               {highlight && (
                 <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                   {renderText("1")}
                 </span>
               )}
             </span>
-            Richard Sennett, an influential urbanist and sociologist who has
+            {renderText(`    Richard Sennett, an influential urbanist and sociologist who has
             transformed ideas about the way cities are made, argues that urban
             design has suffered from a separation between mind and body since
-            the introduction of the architectural blueprint.
+            the introduction of the architectural blueprint.`)}
           </p>
 
           {/* Section C */}
@@ -270,9 +262,9 @@ const Test2Reading2020 = () => {
                 </span>
               )}
             </span>
-            While the design practices created by these new technologies are
+            {renderText(` While the design practices created by these new technologies are
             essential for managing the technical complexity of the modern city,
-            they have the drawback of simplifying reality in the process.
+            they have the drawback of simplifying reality in the process.`)}
           </p>
 
           {/* Section D */}
@@ -303,8 +295,8 @@ const Test2Reading2020 = () => {
             {renderText(
               "The same is true in transport engineering, which uses models to predict and shape the way people move through the city. Again, these models are necessary, but they are built on specific world views in which certain forms of efficiency and safety are considered and other experiences of the city ignored."
             )}
-            Designs that seem logical in models appear counter-intuitive in the
-            actual experience of their users.
+            {renderText(`     Designs that seem logical in models appear counter-intuitive in the
+            actual experience of their users.`)}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
@@ -382,8 +374,8 @@ const Test2Reading2020 = () => {
             {renderText(
               "If their designers had had the tools to think with their bodies - like dancers - and imagine how these barriers would feel, there might have been a better solution. In order to bring about fundamental changes to the ways we use our cities, engineering will need to develop a richer understanding of why people move in certain ways, and how this movement affects them."
             )}
-            Choreography may not seem an obvious choice for tackling this
-            problem.
+            {renderText(`  Choreography may not seem an obvious choice for tackling this
+            problem.`)}
             <span
               className={`ml-2 ${
                 highlight ? "bg-yellow-100" : "bg-transparent"
@@ -469,184 +461,225 @@ const Test2Reading2020 = () => {
           </div>
           {/* optional question */}
           <div className="space-y-4">
-            <h1 className=" text-lg font-bold">Questions 1-6</h1>
+            <h1 className="text-lg font-bold">{renderText("Questions 1-6")}</h1>
+
             <p>
-              Reading Passage 1 has five paragraphs,
-              <span className="font-bold text-lg">A-G</span>
-            </p>
-            <p>Which section contains the following information?</p>
-            <p>
-              Choose the correct letter,
-              <span className="font-bold text-lg">A-G</span>, in boxes 1-5 on
-              your answer sheet.
-            </p>
-            <p>
-              Choose the correct letter,
-              <span className="font-bold text-lg">NB</span> You may use any
-              letter more than once.
+              {renderText("Reading Passage 1 has five paragraphs,")}
+              <span className="font-bold text-lg">{renderText(" A-G")}</span>
             </p>
 
+            <p>
+              {renderText("Which section contains the following information?")}
+            </p>
+
+            <p>
+              {renderText("Choose the correct letter,")}
+              <span className="font-bold text-lg">{renderText(" A-G")}</span>
+              {renderText(", in boxes 1-5 on your answer sheet.")}
+            </p>
+
+            <p>
+              {renderText("Choose the correct letter,")}
+              <span className="font-bold text-lg">{renderText(" NB")}</span>
+              {renderText(" You may use any letter more than once.")}
+            </p>
+
+            {/* ---------- Question 1 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">1.</span>
+              <span className="font-bold text-lg">{renderText("1.")}</span>
               <span>
-                reference to an appealing way of using dance that the writer is
-                not proposing
+                {renderText(
+                  "reference to an appealing way of using dance that the writer is not proposing"
+                )}
               </span>
 
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="1">1</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
-                  <option value="">H</option>
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="1">{renderText("1")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
+
+            {/* ---------- Question 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">2.</span>
+              <span className="font-bold text-lg">{renderText("2.")}</span>
               <span>
-                an example of a contrast between past and present approaches to
-                building
+                {renderText(
+                  "an example of a contrast between past and present approaches to building"
+                )}
               </span>
 
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="1">2</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
-                  <option value="">H</option>
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="2">{renderText("2")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">3.</span>
-              <span>mention of an objective of both dance and engineering</span>
 
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="">3</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
+            {/* ---------- Question 3 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("3.")}</span>
+              <span>
+                {renderText(
+                  "mention of an objective of both dance and engineering"
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="3">{renderText("3")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
+
+            {/* ---------- Question 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">4.</span>
-              reference to an unforeseen problem arising from ignoring the
-              climate
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="">4</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
-                  <option value="">H</option>
+              <span className="font-bold text-lg">{renderText("4.")}</span>
+              {renderText(
+                "reference to an unforeseen problem arising from ignoring the climate"
+              )}
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="4">{renderText("4")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
+
+            {/* ---------- Question 5 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">5.</span>
-              why some measures intended to help people are being reversed
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="">5</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
-                  <option value="">H</option>
+              <span className="font-bold text-lg">{renderText("5.")}</span>
+              {renderText(
+                "why some measures intended to help people are being reversed"
+              )}
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="5">{renderText("5")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
+
+            {/* ---------- Question 6 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">6.</span>
-              reference to how transport has an impact on human lives
-              <div class="relative w-40">
-                <select class="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
-                  <option value="">6</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                  <option value="">D</option>
-                  <option value="">E</option>
-                  <option value="">F</option>
-                  <option value="">G</option>
-                  <option value="">H</option>
+              <span className="font-bold text-lg">{renderText("6.")}</span>
+              {renderText(
+                "reference to how transport has an impact on human lives"
+              )}
+              <div className="relative w-40">
+                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                  <option value="6">{renderText("6")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
-                <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <IoIosArrowUp />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
               </div>
             </p>
           </div>
-          {/* table */}
-          <div className="space-y-4 leading-relaxed">
-            <h2 className="text-lg font-bold mb-3">Questions 7-13</h2>
 
-            <h3 className="text-lg  mb-5">
-              Complete the notes below. <br /> <br />
-              Choose <span className="font-bold mr-2">ONE WORD ONLY </span>
-              from the passage for each answer.
+          {/* normal title*/}
+          <div className="space-y-4 leading-relaxed">
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 7-13")}
+            </h2>
+
+            <h3 className="text-lg mb-5">
+              {renderText("Complete the notes below.")} <br /> <br />
+              {renderText("Choose")}{" "}
+              <span className="font-bold mr-2">
+                {renderText("ONE WORD ONLY")}
+              </span>{" "}
+              {renderText("from the passage for each answer.")}
             </h3>
 
-            <h1 className="text-lg ">
-              Write your answers in boxes 7-13 on your answer sheet.
+            <h1 className="text-lg">
+              {renderText(
+                "Write your answers in boxes 7-13 on your answer sheet."
+              )}
             </h1>
+
             <br />
           </div>
+
+          {/* box text */}
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">Guard rails</h1>
+            <h1 className="text-2xl font-bold text-center mb-4">
+              {renderText("Guard rails")}
+            </h1>
 
             {/* ---------- Section 1 ---------- */}
-
             <ul className="list-disc list-inside space-y-3">
               <p className="text-lg">
                 <span>
-                  {" "}
-                  Guard rails were introduced on British roads to improve the
+                  {renderText(
+                    "Guard rails were introduced on British roads to improve the"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(7)}
@@ -664,10 +697,15 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
-                <span>of pedestrians, while ensuring that the movement of</span>
+                <span>
+                  {renderText(
+                    "of pedestrians, while ensuring that the movement of"
+                  )}
+                </span>
                 <button
                   onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -684,12 +722,14 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span></span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
                 <span>
-                  is not disrupted. Pedestrians are led to access points, and
-                  encouraged to cross one
+                  {renderText(
+                    "is not disrupted. Pedestrians are led to access points, and encouraged to cross one"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(9)}
@@ -707,12 +747,14 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
                 <span>
-                  at a time. An unintended effect is to create psychological
-                  difficulties in crossing the road, particularly for less
+                  {renderText(
+                    "at a time. An unintended effect is to create psychological difficulties in crossing the road, particularly for less"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(10)}
@@ -730,11 +772,14 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
                 <span>
-                  people. Another result is that some people cross the road in a
+                  {renderText(
+                    "people. Another result is that some people cross the road in a"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(11)}
@@ -752,10 +797,11 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
-                <span>way. The guard rails separate</span>
+                <span>{renderText("way. The guard rails separate")}</span>
                 <button
                   onClick={() => toggleButton(12)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -772,12 +818,14 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
+
               <p className="text-lg">
                 <span>
-                  and make it more difficult to introduce forms of transport
-                  that are
+                  {renderText(
+                    "and make it more difficult to introduce forms of transport that are"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(13)}
@@ -795,10 +843,11 @@ const Test2Reading2020 = () => {
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>.</span>
+                <span>{renderText(".")}</span>
               </p>
             </ul>
           </div>
+
           <br />
         </div>
       </div>
