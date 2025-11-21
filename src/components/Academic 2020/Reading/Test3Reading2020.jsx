@@ -7,6 +7,11 @@ const Test3Reading2020 = () => {
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const handleClear = () => {
     setActiveButtons({});
     const inputs = document.querySelectorAll("input[type='text']");
@@ -34,7 +39,7 @@ const Test3Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 7;
+      const answerKey = qIndex + 1;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -135,18 +140,18 @@ const Test3Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: " After leaving school, Moore hoped to become a sculptor, but instead he complied with his father's wish that he train as a schoolteacher",
-    2: "Although he wanted to study sculpture, no teacher was appointed until his second year",
-    3: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    4: ".Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture",
-    5: "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity",
-    6: "Moore became fascinated with this stone sculpture, which he thought had a power and originality that no other stone sculpture possessed",
+    1: "TRUE",
+    2: "FALSE",
+    3: "NOT GIVEN",
+    4: "TRUE",
+    5: "NOT GIVEN",
+    6: "FALSE",
     7: "TRUE",
-    8: "FALSE",
-    9: "FALSE",
-    10: "TRUE",
-    11: "TRUE",
-    12: "FALSE",
+    8: "resignation",
+    9: "materials",
+    10: "miners",
+    11: "family",
+    12: "collectors",
     13: "TRUE",
   };
 
@@ -486,7 +491,77 @@ const Test3Reading2020 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+          {/* 2nd step */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1-7")}
+          </h2>
+          <br />
+          <h3 className="text-lg font-semibold mb-5">
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}{" "}
+            <br /> <br />
+            {renderText("In boxes 1-7 on your answer sheet, choose")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
+            {renderText("if the statement agrees with the information")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
+            {renderText("if the statement contradicts the information")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
+            {renderText("if there is no information on this")}
+          </h3>
+          <br /> <br />
+          {/* question dynamic */}
+          <div className="space-y-6 leading-relaxed p-4">
+            <h2 className="text-lg font-bold">Questions 1-7</h2>
+            {questions.map((q, qIndex) => {
+              const answerKey = qIndex + 1;
+              const correct = correctAnswers[answerKey];
+
+              return (
+                <div key={qIndex} className="flex flex-col gap-2">
+                  <h3 className="text-lg font-medium">
+                    {answerKey}. {q}
+                  </h3>
+                  <ul className="flex flex-col gap-2 ml-4">
+                    {options.map((option, oIndex) => {
+                      const isSelected = selectedOptions[qIndex] === option;
+                      const isCorrect = option === correct;
+
+                      return (
+                        <li
+                          key={oIndex}
+                          onClick={() => handleOptionClick(qIndex, option)}
+                          className="flex items-center gap-2 cursor-pointer"
+                        >
+                          <span
+                            className={`w-5 h-5 rounded-full border-2 inline-block ${
+                              isSelected
+                                ? "bg-blue-500 border-blue-500"
+                                : "border-gray-700"
+                            }`}
+                          ></span>
+                          <span
+                            className={
+                              isSelected ? "text-blue-500" : "text-black"
+                            }
+                          >
+                            {option}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -534,7 +609,7 @@ const Test3Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-6")}
+              {renderText("Questions 8-13")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -548,7 +623,7 @@ const Test3Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-6 on your answer sheet."
+                "Write your answers in boxes 8-13 on your answer sheet."
               )}
             </h1>
             <br />
@@ -568,18 +643,18 @@ const Test3Reading2020 = () => {
               <li className="text-lg">
                 <span>{renderText("Moore is urged to offer his")}</span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[8]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  8
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[8] || ""}
+                  onChange={(e) => handleInputChange(8, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -593,18 +668,18 @@ const Test3Reading2020 = () => {
               <li className="text-lg">
                 <span>{renderText("Moore turns to drawing because")}</span>
                 <button
-                  onClick={() => toggleButton(2)}
+                  onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
+                    activeButtons[9]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  2
+                  9
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[9] || ""}
+                  onChange={(e) => handleInputChange(9, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -620,18 +695,18 @@ const Test3Reading2020 = () => {
                   )}
                 </span>
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
+                    activeButtons[10]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  10
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[10] || ""}
+                  onChange={(e) => handleInputChange(10, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -642,18 +717,18 @@ const Test3Reading2020 = () => {
                   {renderText("Moore is employed to produce a sculpture of a")}
                 </span>
                 <button
-                  onClick={() => toggleButton(4)}
+                  onClick={() => toggleButton(11)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
+                    activeButtons[11]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  4
+                  11
                 </button>
                 <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
+                  value={userAnswers[11] || ""}
+                  onChange={(e) => handleInputChange(11, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -661,18 +736,18 @@ const Test3Reading2020 = () => {
               <li className="text-lg">
                 <span>{renderText("")}</span>
                 <button
-                  onClick={() => toggleButton(5)}
+                  onClick={() => toggleButton(12)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
+                    activeButtons[12]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  5
+                  12
                 </button>
                 <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  value={userAnswers[12] || ""}
+                  onChange={(e) => handleInputChange(12, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -681,18 +756,18 @@ const Test3Reading2020 = () => {
               <li className="text-lg">
                 <span>{renderText("Moore increased")}</span>
                 <button
-                  onClick={() => toggleButton(6)}
+                  onClick={() => toggleButton(13)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
+                    activeButtons[13]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  6
+                  13
                 </button>
                 <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  value={userAnswers[13] || ""}
+                  onChange={(e) => handleInputChange(13, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -712,75 +787,108 @@ const Test3Reading2020 = () => {
             </ul>
           </div>
           <br />
-          {/* 2nd step */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 7-13")}
-          </h2>
-          <br />
-          <h3 className="text-lg font-semibold mb-5">
-            {renderText(
-              "Do the following statements agree with the information given in Reading Passage 1?"
-            )}{" "}
-            <br /> <br />
-            {renderText("In boxes 7-13 on your answer sheet, choose")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
-            {renderText("if the statement agrees with the information")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
-            {renderText("if the statement contradicts the information")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
-            {renderText("if there is no information on this")}
-          </h3>
-          <br /> <br />
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 7-13</h2>
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 7;
-              const correct = correctAnswers[answerKey];
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
 
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg font-medium">
-                    {answerKey}. {q}
-                  </h3>
-                  <ul className="flex flex-col gap-2 ml-4">
-                    {options.map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-                      const isCorrect = option === correct;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
+                  <button
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                  >
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                  </button>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
                 </div>
-              );
-            })}
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -15,6 +15,11 @@ const Test4Reading2020 = () => {
     setIsOpen(false);
   };
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const questions = [
     "Local families have told Whaley about some traditional uses of huarango products.",
     "Farmer Alberto Benevides is now making a good profit from growing huarangos..",
@@ -32,7 +37,7 @@ const Test4Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 6;
+      const answerKey = qIndex + 9;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -133,21 +138,26 @@ const Test4Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "They stretch down 50-80 metres and, as well as sucking up water for the tree, they bring it into the higher subsoil, creating a water source for other plant life",
-    2: "He believes the huarango was key to the ancient people's diet and, because it could reach deep water sources, it allowed local people to withstand years of drought when their other crops failed",
-    3: "He believes the huarango was key to the ancient people's diet and, because it could reach deep water sources, it allowed local people to withstand years of drought when their other crops failed",
-    4: "Cutting down native woodland leads to erosion, as there is nothing to keep the soil in place",
-    5: "So when the huarangos go, the land turns into a desert",
-    6: "TRUE",
-    7: "FALSE",
-    8: "TRUE",
-    9: "TRUE",
+    // Questions 1-5: Notes
+    1: "water",
+    2: "diet",
+    3: "drought",
+    4: "erosion",
+    5: "desert",
+
+    // Questions 6-8:
+    6: "branches",
+    7: "leaves ",
+    8: "trunk",
+
+    // Questions 9-13:
+    9: "NOT GIVEN",
     10: "FALSE",
-    11: " In the hope of counteracting this, he's persuading farmers to let him plant forest corridors on their land",
-    12: "It's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives, an island off the coast of Africa",
-    13: "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groveIt's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives",
-    14: "It's not like a rainforest that needs to have this huge expanse. Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives",
+    11: "TRUE",
+    12: "FALSE",
+    13: "NOT GIVEN",
   };
+
   useEffect(() => {
     const savedScore = localStorage.getItem("/2020/Test 4/reading");
     if (savedScore) setScore(Number(savedScore));
@@ -479,7 +489,7 @@ const Test4Reading2020 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -664,9 +674,10 @@ const Test4Reading2020 = () => {
             </ul>
           </div>
           <br />
-          {/* 2nd step */}
+          <br /> <br />
+          {/* table */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 6-10")}
+            {renderText("Questions 6-8")}
           </h2>
           <br />
           <h3 className="text-lg font-semibold mb-5">
@@ -674,7 +685,128 @@ const Test4Reading2020 = () => {
               "Do the following statements agree with the information given in Reading Passage 1?"
             )}{" "}
             <br /> <br />
-            {renderText("In boxes 6-10 on your answer sheet, choose")}
+            {renderText("In boxes 6-8 on your answer sheet, choose")}
+          </h3>
+          <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
+            <tbody>
+              <tr>
+                <th className="text-2xl p-4 font-bold" colSpan={2}>
+                  Traditional uses of the huarango tree
+                </th>
+              </tr>
+              <tr>
+                <th className="border text-lg p-2">Part of tree</th>
+                <th className="border text-lg p-2">Traditional use</th>
+              </tr>
+              <tr>
+                <td className="border text-lg p-2">
+                  <span>{renderText("")}</span>
+                  <button
+                    onClick={() => toggleButton(6)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[6]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    6
+                  </button>
+                  <input
+                    value={userAnswers[6] || ""}
+                    onChange={(e) => handleInputChange(6, e.target.value)}
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </td>
+                <td className="border text-lg p-2 w-1/4">
+                  {renderText("fuel.")}
+                </td>
+              </tr>
+              <tr>
+                <td className="border text-lg p-2">
+                  <span>{renderText("")}</span>
+                  <button
+                    onClick={() => toggleButton(7)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[7]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    7
+                  </button>
+                  <input
+                    value={userAnswers[7] || ""}
+                    onChange={(e) => handleInputChange(7, e.target.value)}
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                    type="text"
+                  />
+                  <span>{renderText("")}</span>
+                  and
+                  <span>{renderText("")}</span>
+                  <button
+                    onClick={() => toggleButton(7)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[7]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    7
+                  </button>
+                  <input
+                    value={userAnswers[7] || ""}
+                    onChange={(e) => handleInputChange(7, e.target.value)}
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                    type="text"
+                  />
+                  <span>{renderText("")}</span>
+                </td>
+                <td className="border text-lg p-2 w-1/4">
+                  {renderText("medicine.")}
+                </td>
+              </tr>
+
+              <tr>
+                <td className="border text-lg p-2">
+                  <span>{renderText("")}</span>
+                  <button
+                    onClick={() => toggleButton(8)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[8]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    8
+                  </button>
+                  <input
+                    value={userAnswers[8] || ""}
+                    onChange={(e) => handleInputChange(8, e.target.value)}
+                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                    type="text"
+                  />
+                  <span>{renderText(".")}</span>
+                </td>
+                <td className="border text-lg p-2 w-1/4">
+                  {renderText("Construction.")}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          {/* question dynamic */}
+          {/* 2nd step */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 9-13")}
+          </h2>
+          <br />
+          <h3 className="text-lg font-semibold mb-5">
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}{" "}
+            <br /> <br />
+            {renderText("In boxes 9-13 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
             <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -688,12 +820,10 @@ const Test4Reading2020 = () => {
             <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
             {renderText("if there is no information on this")}
           </h3>
-          <br /> <br />
-          {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">Questions 6-10</h2>
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 6;
+              const answerKey = qIndex + 9;
               const correct = correctAnswers[answerKey];
 
               return (
@@ -734,126 +864,109 @@ const Test4Reading2020 = () => {
               );
             })}
           </div>
-          {/* table */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 11-14")}
-          </h2>
-          <br />
-          <h3 className="text-lg font-semibold mb-5">
-            {renderText(
-              "Do the following statements agree with the information given in Reading Passage 1?"
-            )}{" "}
-            <br /> <br />
-            {renderText("In boxes 11-14 on your answer sheet, choose")}
-          </h3>
-          <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
-            <tbody>
-              <tr>
-                <th className="text-2xl p-4 font-bold" colSpan={2}>
-                  Traditional uses of the huarango tree
-                </th>
-              </tr>
-              <tr>
-                <th className="border text-lg p-2">Part of tree</th>
-                <th className="border text-lg p-2">Traditional use</th>
-              </tr>
-              <tr>
-                <td className="border text-lg p-2">
-                  <span>{renderText("")}</span>
-                  <button
-                    onClick={() => toggleButton(11)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[11]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    11
-                  </button>
-                  <input
-                    value={userAnswers[11] || ""}
-                    onChange={(e) => handleInputChange(11, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText(".")}</span>
-                </td>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("fuel.")}
-                </td>
-              </tr>
-              <tr>
-                <td className="border text-lg p-2">
-                  <span>{renderText("")}</span>
-                  <button
-                    onClick={() => toggleButton(12)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[12]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    12
-                  </button>
-                  <input
-                    value={userAnswers[12] || ""}
-                    onChange={(e) => handleInputChange(12, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText("")}</span>
-                  and
-                  <span>{renderText("")}</span>
-                  <button
-                    onClick={() => toggleButton(13)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[13]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    13
-                  </button>
-                  <input
-                    value={userAnswers[13] || ""}
-                    onChange={(e) => handleInputChange(13, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText("")}</span>
-                </td>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("medicine.")}
-                </td>
-              </tr>
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
 
-              <tr>
-                <td className="border text-lg p-2">
-                  <span>{renderText("")}</span>
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
                   <button
-                    onClick={() => toggleButton(14)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[14]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
                   >
-                    14
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
                   </button>
-                  <input
-                    value={userAnswers[14] || ""}
-                    onChange={(e) => handleInputChange(14, e.target.value)}
-                    className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
-                    type="text"
-                  />
-                  <span>{renderText(".")}</span>
-                </td>
-                <td className="border text-lg p-2 w-1/4">
-                  {renderText("Construction.")}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
+                </div>
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

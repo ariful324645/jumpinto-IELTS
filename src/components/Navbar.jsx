@@ -288,6 +288,9 @@ const Navbar = () => {
     "/2020/test 2/listening": 7 * 60,
     "/2020/test 3/listening": 7 * 60,
     "/2020/test 4/listening": 7 * 60,
+    // listening part time
+    "/listening1Part22020": 7 * 60+30,
+
     // 2020  reading
     "/2020/Test 1/reading": 20 * 60,
     "/2020/Test 2/reading": 20 * 60,
@@ -408,7 +411,7 @@ const Navbar = () => {
               <h2 className="text-xl font-bold text-red-600 mb-3">
                 ⏰ Time’s Up!
               </h2>
-         
+
               <button
                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
                 onClick={() => setShowTimeOver(false)}

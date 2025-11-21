@@ -9,6 +9,11 @@ const Test2Reading2020 = () => {
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const handleClear = () => {
     setActiveButtons({});
     const inputs = document.querySelectorAll("input[type='text']");
@@ -80,19 +85,19 @@ const Test2Reading2020 = () => {
   };
   // marks show
   const correctAnswers = {
-    1: "That is not to suggest everyone should dance their way to work, however healthy and happy it might make us, but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making",
-    2: "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating",
-    3: "Yet it shares with engineering the aim of designing patterns of movement within limitations of space",
-    4: "They failed to take into account that purpose-built street cafes could not operate in the hot sun without the protective awnings common in older buildings, and would need energy-consuming air-conditioning instead, or that its giant car park would feel so unwelcoming that it would put people off getting out of their cars",
-    5: "As a result, many are now being removed, causing disruption, cost, and waste",
-    6: "The ways we travel affect our physical and mental health, our social lives, our access to work and culture, and the air we breathe",
-    7: "The guard rails that will be familiar to anyone who has attempted to cross a British road, for example, were an engineering solution to pedestrian safety based on models that prioritise the smooth flow of traffic.",
-    8: "The guard rails that will be familiar to anyone who has attempted to cross a British road, for example, were an engineering solution to pedestrian safety based on models that prioritise the smooth flow of traffic.",
-    9: "On wide major roads, they often guide pedestrians to specific crossing points and slow down their progress across the road by using staggered access points to divide the crossing into two - one for each carriageway",
-    10: "In doing so they make crossings feel longer, introducing psychological barriers greatly impacting those that are the least mobile, and encouraging others to make dangerous crossings to get around the guard rails",
-    11: "In doing so they make crossings feel longer, introducing psychological barriers greatly impacting those that are the least mobile, and encouraging others to make dangerous crossings to get around the guard rails",
-    12: "These barriers don't just make it harder to cross the road: they divide communities and decrease opportunities for healthy transport",
-    13: "These barriers don't just make it harder to cross the road: they divide communities and decrease opportunities for healthy transport",
+    1: "B",
+    2: "C",
+    3: "F",
+    4: "D",
+    5: "E",
+    6: "A",
+    7: "safety",
+    8: "traffic",
+    9: "carriageway",
+    10: "mobile",
+    11: "dangerous",
+    12: "communities",
+    13: "healthy",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -415,7 +420,7 @@ damaging to travel around cities.`)}
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
 
@@ -494,7 +499,11 @@ damaging to travel around cities.`)}
               </span>
 
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[1] || ""}
+                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="1">{renderText("1")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -522,7 +531,11 @@ damaging to travel around cities.`)}
               </span>
 
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[2] || ""}
+                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="2">{renderText("2")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -550,7 +563,11 @@ damaging to travel around cities.`)}
               </span>
 
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="3">{renderText("3")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -574,7 +591,11 @@ damaging to travel around cities.`)}
                 "reference to an unforeseen problem arising from ignoring the climate"
               )}
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[4] || ""}
+                  onChange={(e) => handleInputChange(4, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="4">{renderText("4")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -599,7 +620,11 @@ damaging to travel around cities.`)}
                 "why some measures intended to help people are being reversed"
               )}
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="5">{renderText("5")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -624,7 +649,11 @@ damaging to travel around cities.`)}
                 "reference to how transport has an impact on human lives"
               )}
               <div className="relative w-40">
-                <select className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400">
+                <select
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
                   <option value="6">{renderText("6")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
@@ -848,7 +877,109 @@ damaging to travel around cities.`)}
             </ul>
           </div>
 
-          <br />
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
+
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
+                  <button
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                  >
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                  </button>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
+                </div>
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

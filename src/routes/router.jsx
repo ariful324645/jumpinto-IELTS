@@ -117,6 +117,9 @@ import Test3Writing2019 from "../components/Academic 2019/Writing/Test3Writing20
 import Test4Writing2019 from "../components/Academic 2019/Writing/Test4Writing2019";
 import Test1Speaking2019 from "../components/Academic 2019/Speaking/Test1Speaking2019";
 
+import Listening1Pagination2020 from "../components/Academic 2020/Pagination/Listening1Pagination/listening1Pagination2020";
+import Listening1Part22020 from "../components/Academic 2020/Listening/Listening1/Listening1Part22020";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -485,6 +488,14 @@ export const router = createBrowserRouter([
         Component: Test4Listening2020,
       },
       {
+        path: "/listening1Pagination",
+        Component: Listening1Pagination2020,
+      },
+      {
+        path: "/listening1Part22020",
+        Component: Listening1Part22020,
+      },
+      {
         path: "/2020/Test 1/reading",
         Component: Test1Reading2020,
       },
@@ -532,6 +543,7 @@ export const router = createBrowserRouter([
         path: "/2020/Test 4/speaking",
         Component: Test4Speaking2020,
       },
+
       {
         path: "/2019/Test 1/listening",
         Component: Test1Listening2019,

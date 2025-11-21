@@ -9,6 +9,11 @@ const Test1Reading2020 = () => {
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
 
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showWrong, setShowWrong] = useState(false);
+
   const handleClear = () => {
     setActiveButtons({});
     const inputs = document.querySelectorAll("input[type='text']");
@@ -133,19 +138,19 @@ const Test1Reading2020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits",
-    2: "The fruit is encased in a fleshy husk",
-    3: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    4: "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril",
-    5: "TRUE",
-    6: "FALSE",
+    1: "oval",
+    2: "husk",
+    3: "seed",
+    4: "mace",
+    5: "FALSE",
+    6: "TRUE",
     7: "TRUE",
-    8: "Throughout this period, the Arabs were the exclusive importers of the spice to Europe",
-    9: "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease",
-    10: "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands",
-    11: "One of the Banda Islands, a sliver of land called Run, only 3 km long by less than 1 km wide, was under the control of the British",
-    12: "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa",
-    13: "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves",
+    8: "Arabs",
+    9: "plague",
+    10: "lime",
+    11: "Run",
+    12: "nutmeg plants",
+    13: "gloves",
   };
 
   useEffect(() => {
@@ -200,7 +205,7 @@ const Test1Reading2020 = () => {
               <span className="text-lg font-bold">
                 {renderText("          Questions 1-13")}
               </span>
-              {renderText("   PASSAGE 1")}
+              {renderText(" which are based on Reading  PASSAGE 1 below")}
             </h1>
           </div>
           {/* left text */}
@@ -450,7 +455,7 @@ const Test1Reading2020 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -498,7 +503,7 @@ const Test1Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-6")}
+              {renderText("Questions 1-4")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -512,7 +517,7 @@ const Test1Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-6 on your answer sheet."
+                "Write your answers in boxes 1-4 on your answer sheet."
               )}
             </h1>
             <br />
@@ -581,8 +586,8 @@ const Test1Reading2020 = () => {
                   3
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -646,7 +651,7 @@ const Test1Reading2020 = () => {
           <br /> <br />
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 9-13</h2>
+            <h2 className="text-lg font-bold">Questions 5-7</h2>
             {questions.map((q, qIndex) => {
               const answerKey = qIndex + 5;
               const correct = correctAnswers[answerKey];
@@ -690,6 +695,23 @@ const Test1Reading2020 = () => {
             })}
           </div>
           {/* table */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 8-13")}
+          </h2>
+          <h3 className="text-lg  mb-5">
+            {renderText("Complete the notes below.")} <br /> <br />
+            {renderText("Choose ")}
+            <span className="font-bold mr-2">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
+            {renderText(" from the passage for each answer.")}
+          </h3>
+          <h1 className="text-lg font-semibold">
+            {renderText(
+              "Write your answers in boxes 8-13 on your answer sheet."
+            )}
+          </h1>
+          <br />
           <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
             <tbody>
               <tr>
@@ -701,9 +723,9 @@ const Test1Reading2020 = () => {
                     {renderText("Nutmeg was brought to Europe by the")}
                   </span>
                   <button
-                    onClick={() => toggleButton(7)}
+                    onClick={() => toggleButton(8)}
                     className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[7]
+                      activeButtons[8]
                         ? "bg-yellow-400 border-yellow-500"
                         : "bg-gray-200 border-gray-400"
                     }`}
@@ -869,6 +891,109 @@ const Test1Reading2020 = () => {
               </tr>
             </tbody>
           </table>
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            {!showResult ? (
+              <button
+                onClick={() => setShowResult(true)}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
+              >
+                Submit Answers
+              </button>
+            ) : (
+              <>
+                {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
+
+                {/* Buttons to toggle right/wrong answers */}
+                <div className="flex justify-center gap-4 mt-4">
+                  <button
+                    onClick={() => setShowRight((prev) => !prev)}
+                    className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
+                  >
+                    {showRight ? "Hide Right Answers" : "Show Right Answers"}
+                  </button>
+                  <button
+                    onClick={() => setShowWrong((prev) => !prev)}
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                  >
+                    {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
+                  </button>
+                </div>
+
+                {/* Right Answers List */}
+                {showRight && (
+                  <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
+                    <h3 className="font-bold text-green-700 mb-2">
+                      Correct Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-green-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            userAnswers[key]?.trim().toLowerCase() ===
+                            correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span>{" "}
+                            {correctAnswers[key]}
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          userAnswers[key]?.trim().toLowerCase() ===
+                          correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-green-600">
+                          No correct answers yet.
+                        </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Wrong Answers List */}
+                {showWrong && (
+                  <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
+                    <h3 className="font-bold text-red-700 mb-2">
+                      ❌ Wrong Answers:
+                    </h3>
+                    <ul className="list-disc list-inside text-red-700 space-y-1">
+                      {Object.keys(userAnswers)
+                        .filter(
+                          (key) =>
+                            correctAnswers[key] &&
+                            userAnswers[key]?.trim().toLowerCase() !==
+                              correctAnswers[key]?.trim().toLowerCase()
+                        )
+                        .map((key) => (
+                          <li key={key}>
+                            <span className="font-semibold">Q{key}:</span> Your
+                            answer:{" "}
+                            <span className="italic">
+                              {userAnswers[key] || "—"}
+                            </span>{" "}
+                            → Correct:{" "}
+                            <span className="font-semibold">
+                              {correctAnswers[key]}
+                            </span>
+                          </li>
+                        ))}
+                      {Object.keys(userAnswers).filter(
+                        (key) =>
+                          correctAnswers[key] &&
+                          userAnswers[key]?.trim().toLowerCase() !==
+                            correctAnswers[key]?.trim().toLowerCase()
+                      ).length === 0 && (
+                        <p className="text-red-600">No wrong answers </p>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import Pagination from "../../components/Pagination";
 
 const data = [
   {
@@ -552,6 +553,7 @@ const Home = () => {
         );
       })}
     </div>
+   
   );
 };
 
