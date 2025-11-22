@@ -119,6 +119,11 @@ import Test1Speaking2019 from "../components/Academic 2019/Speaking/Test1Speakin
 
 import Listening1Pagination2020 from "../components/Academic 2020/Pagination/Listening1Pagination/listening1Pagination2020";
 import Listening1Part22020 from "../components/Academic 2020/Listening/Listening1/Listening1Part22020";
+import Listening1Part32020 from "../components/Academic 2020/Listening/Listening1/Listening1Part32020";
+import Listening1Part42020 from "../components/Academic 2020/Listening/Listening1/Listening1Part42020";
+import Listening2Part22020 from "../components/Academic 2020/Listening/Listening2/Listening2Part22020";
+import Listening2Part32020 from "../components/Academic 2020/Listening/Listening2/Listening2Part32020";
+import Listening2Part42020 from "../components/Academic 2020/Listening/Listening2/Listening2Part42020";
 
 export const router = createBrowserRouter([
   {
@@ -476,8 +481,36 @@ export const router = createBrowserRouter([
         Component: Test1Listening2020,
       },
       {
+        path: "/listening1Pagination",
+        Component: Listening1Pagination2020,
+      },
+      {
+        path: "/listening1Part22020",
+        Component: Listening1Part22020,
+      },
+      {
+        path: "/listening1Part32020",
+        Component: Listening1Part32020,
+      },
+      {
+        path: "/listening1Part42020",
+        Component: Listening1Part42020,
+      },
+      {
         path: "/2020/Test 2/listening",
         Component: Test2Listening2020,
+      },
+      {
+        path: "/listening2Part22020",
+        Component: Listening2Part22020,
+      },
+      {
+        path: "/listening2Part32020",
+        Component: Listening2Part32020,
+      },
+      {
+        path: "/listening2Part42020",
+        Component: Listening2Part42020,
       },
       {
         path: "/2020/Test 3/listening",
@@ -487,14 +520,7 @@ export const router = createBrowserRouter([
         path: "/2020/Test 4/listening",
         Component: Test4Listening2020,
       },
-      {
-        path: "/listening1Pagination",
-        Component: Listening1Pagination2020,
-      },
-      {
-        path: "/listening1Part22020",
-        Component: Listening1Part22020,
-      },
+
       {
         path: "/2020/Test 1/reading",
         Component: Test1Reading2020,

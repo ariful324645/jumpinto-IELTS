@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
-import Listening1Pagination from "../../Pagination/Listening1Pagination/listening1Pagination2020";
-import { FaDotCircle } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
 
-const Listening1Part22020 = () => {
+import { FaChevronDown, FaDotCircle } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
+
+const Listening2Part22020 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -27,48 +28,59 @@ const Listening1Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear a woman giving a presentation about a holiday on an island in Britain that her company organizes.",
+        "Part 2. You will hear part of a talk to a gardening club about a local park.",
         "First, you have some time to look at questions 11 to 14.",
         "Now listen carefully and answer questions 11 to 14.",
       ],
     },
+
     {
-      speaker: "ERICA MATTHEWS",
+      speaker: "WOMAN",
       text: [
-        "Good morning. My name's Erica Matthews, and I'm the owner of Matthews Island Holidays, a company set up by my parents.",
-        "Thank you for coming to this presentation, in which I hope to interest you in what we have to offer.",
-        "We're a small family-run company, and we believe in the importance of the personal touch.",
-        "So we don't aim to compete with other companies on the number of customers.",
-        {
-          text: "What we do is build on our many years' experience, more than almost any other rail holiday company, ",
-          number: 11,
-        },
-        "to ensure we provide perfect holidays in a small number of destinations, which we've got to know extremely well.",
-        "I'll start with our six-day Isle of Man holiday.",
-        "This is a fascinating island in the Irish Sea, with Wales to the south, England to the east, Scotland to the north, and Northern Ireland to the west.",
+        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
+        "Over to you, Mark.",
+      ],
+    },
+
+    {
+      speaker: "MARK",
+      text: [
+        "Thank you. I'm sure you're all familiar with Minster Park.",
+        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
+        "What perhaps isn't so well known is the origin of the park.",
 
         {
-          text: "Our holiday starts in Heysham, where your tour manager will meet you.",
+          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
+          number: 11,
+        },
+        "It was unclear who actually owned the land.",
+        "And this wasn't settled until 20 years later, when the council took possession of it.",
+        "You may have noticed the statue near one of the entrances.",
+        "It's of Diane Gosforth, who played a key role in the history of the park.",
+        "Once the council had become the legal owner, it planned to sell the land for housing.",
+        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
+        "Remember, the park is in a densely populated residential area.",
+
+        {
+          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
           number: 12,
         },
-        "Then you'll travel by ferry to the Isle of Man.",
-        "Some people prefer to fly from Luton instead.",
-        "And another popular option is to go by train to Liverpool and take a ferry from there.",
-        "You have five nights in the hotel, and the price covers five breakfasts and dinners.",
+        "Soon after this, the First World War broke out in 1914, ",
         {
-          text: "And lunch on the three days when there are organized trips.",
+          text: "and most of the park was dug up and planted with vegetables, ",
           number: 13,
         },
-        "Day 4 is free, and most people have lunch in a cafe or restaurant in Douglas.",
-        "The price of the holiday includes the ferry to the Isle of Man, all travel on the island, the hotel, and the meals I've mentioned.",
-        "Incidentally, we try to make booking our holidays as simple and fair as possible.",
-        "So unlike with many companies, the price is the same whether you book 6 months in advance or at the last minute, and there's no supplement for single rooms in hotels.",
+        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
+        "There were occasional public meetings during the war, in an area that had been retained as grass.",
+        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
+        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
         {
-          text: " If you make a booking, then need to change the start date, you're welcome to change to an alternative date or a different tour for a small administrative fee.",
+          text: "The changes finally got going in 2016 and were finished on schedule last year.",
           number: 14,
         },
       ],
     },
+
     {
       speaker: "ANNOUNCER",
       text: [
@@ -76,52 +88,52 @@ const Listening1Part22020 = () => {
         "Now listen and answer questions 15 to 20.",
       ],
     },
+
     {
-      speaker: "ERICA MATTHEWS",
+      speaker: "MARK",
       text: [
-        "OK, so what does the holiday consist of?",
-        "Well, on day one, you'll arrive in time for a short introduction by your tour manager, followed by dinner in the hotel.",
-        {
-          text: "The dining room looks out at the river, close to where it flows into the harbor, and there's usually plenty of activity going on.",
-          number: 15,
-        },
-        "On day two, you'll take the coach to the small town of Peel, on the way calling in at the Tynwald Exhibition.",
-        "The Isle of Man isn't part of the United Kingdom, and it has its own parliament called Tynwald.",
-        "It's claimed that this is the world's oldest parliament that's still functioning, and that it dates back to 979.",
-        {
-          text: "However, the earliest surviving reference to it is from 1422, so perhaps it isn't quite as old as it claims.",
-          number: 16,
-        },
-        "Day three, we have a trip to the mountain Snaefell.",
-        "This begins with a leisurely ride along the promenade in Douglas in a horse-drawn tram.",
-        "Then you board an electric train, which takes you to the fishing village of Laxey.",
-        {
-          text: "From there, it's an eight-kilometer ride in the Snaefell Mountain Railway to the top.",
-          number: 17,
-        },
-        "Lunch will be in the cafe, giving you spectacular views of the island.",
-        {
-          text: "Day 4 is free for you to explore, using the pass which we'll give you.",
-          number: 18,
-        },
-        "So you won't have to pay for travel on local transport, or for entrance to the island's heritage sites.",
-        "Or you might just want to take it easy in Douglas, and perhaps do a little light shopping.",
+        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
+        "If you look at this map.",
+        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
+        "The statue of Diane Gosforth has been moved.",
 
         {
-          text: "The last full day, day 5, is for some people the highlight of the holiday, with a ride on the steam railway from Douglas to Port Erin.",
+          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
+          number: 15,
+        },
+        {
+          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
+          number: 16,
+        },
+        "There are two areas that are particularly intended for children.",
+
+        {
+          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
+          number: 17,
+        },
+        "Then there's a new maze, a circular series of paths separated by low hedges.",
+
+        {
+          text: "That's near the west gate.",
+          number: 18,
+        },
+        " You go north from there towards the river and then turn left to reach it.",
+        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
+
+        {
+          text: "They're still in the south-west corner of the park",
           number: 19,
         },
-        "After some time to explore, a coach will take you to the Headland that overlooks the Calf of Man, a small island just off the coast.",
-        "From there, you continue to Castletown,",
+        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
+
         {
-          text: " which used to be the capital of the Isle of Man, and its mediaeval castle.",
+          text: "This is right next to the lily pond, on the same side as the west gate.",
           number: 20,
         },
-        "And on day 6, it's back to the ferry, or the airport, if you flew to the island.",
-        "And time to go home.",
-        "Now, I'd like to tell you a bit more.",
+        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
       ],
     },
+
     {
       speaker: "ANNOUNCER",
       text: [
@@ -130,28 +142,33 @@ const Listening1Part22020 = () => {
       ],
     },
   ];
+
   // different option
   const questions = [
-    "According to the speaker, the company",
-    "Where can customers meet the tour manager before travelling to the Isle of Man?",
-    "arranges holidays to more destinations than its competitors.",
-    "has more customers than its competitors.",
+    "The park was originally established",
+    "Why is there a statue of Diane Gosforth in the park?",
+    "During the First World War, the park was mainly used for",
+    "When did the physical transformation of the park begin?",
   ];
 
   const options = [
     [
-      "A. has been in business for longer than most of its competitors.",
-      " B. arranges holidays to more destinations than its competitors.",
-      " C. has more customers than its competitors.",
+      "A. as an amenity provided by the city council.",
+      "B. as land belonging to a private house.",
+      "C. as a shared area set up by the local community.",
     ],
-    ["A. Liverpool", "B. Heysham", "C. Luton"],
-    ["A. three", "B. four", "C. five"],
+
     [
-      "A. guaranteeing themselves a larger room.",
-      "B. booking at short notice",
-      "C. transferring to another date.",
+      "A. She was a resident who helped to lead a campaign.",
+      "B. She was a council member responsible for giving the public access.",
+      "C. She was a senior worker at the park for many years.",
     ],
+
+    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
+
+    ["A. 2013", "B. 2015", "C. 2016"],
   ];
+
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
@@ -275,9 +292,12 @@ const Listening1Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
+      if (speaker === "MARK") {
+        return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
 
       // Erica: female
-      if (speaker === "ERICA MATTHEWS") {
+      if (speaker === "WOMAN") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -323,27 +343,27 @@ const Listening1Part22020 = () => {
     };
     speakNextChunk();
   };
-useEffect(() => {
-  window.speechSynthesis.onvoiceschanged = () => {
-    const list = window.speechSynthesis.getVoices();
-    console.log("Available voices:", list);
-  };
-}, []);
+  useEffect(() => {
+    window.speechSynthesis.onvoiceschanged = () => {
+      const list = window.speechSynthesis.getVoices();
+      console.log("Available voices:", list);
+    };
+  }, []);
 
   //  Marks show
 
-  const correctAnswers = {
-    11: "A. has been in business for longer than most of its competitors.",
-    12: "B. Heysham",
-    13: "B. three",
-    14: "C. transferring to another date.",
-    15: "harbour",
-    16: "1422",
-    17: "top",
-    18: "pass",
-    19: "steam",
-    20: "capital",
-  };
+const correctAnswers = {
+  11: "C. as a shared area set up by the local community.",
+  12: "A. She was a resident who helped to lead a campaign.",
+  13: "B. growing vegetables.",
+  14: "C. 2016",
+  15: "H",
+  16: "C",
+  17: "G",
+  18: "B",
+  19: "E",
+  20: "F",
+};
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -369,7 +389,7 @@ useEffect(() => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening1Part22020", newScore);
+    localStorage.setItem("/listening2Part22020", newScore);
   };
 
   const toggleButton = (id) => {
@@ -381,12 +401,12 @@ useEffect(() => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening1Part22020");
+    localStorage.removeItem("/listening2Part22020");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening1Part22020");
+    const savedScore = localStorage.getItem("/listening2Part22020");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -429,7 +449,7 @@ useEffect(() => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Matthews Island")}
+                {renderText("Minster Park")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -504,6 +524,7 @@ useEffect(() => {
               )}
             </div>
           </div>
+
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">Questions 11-14</h2>
@@ -511,20 +532,18 @@ useEffect(() => {
               Choose the correct letter,{" "}
               <span className="font-bold">A, B or C</span>.
             </p>
-            <h1 className="text-center text-2xl font-bold">
-              Matthews Island Holidays
-            </h1>
+            <h1 className="text-2xl font-bold text-center">Minster Park</h1>
 
             {questions.map((q, qIndex) => {
               const answerKey = qIndex + 11;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg font-medium">
+                  <h3 className="text-lg">
                     {answerKey}. {q}
                   </h3>
 
-                  <ul className="flex flex-col gap-2 ml-4">
+                  <ul className="flex flex-col  gap-2 ml-4">
                     {options[qIndex].map((option, oIndex) => {
                       const isSelected = selectedOptions[qIndex] === option;
 
@@ -557,210 +576,205 @@ useEffect(() => {
               );
             })}
           </div>
-          {/* ---------- Table Section ---------- */}
-          <div className="mt-5">
-            <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 15-20")}
-            </h2>
-            <h3 className="text-lg font-semibold mb-5">
-              {renderText("Complete the notes below.")} <br /> <br />
-              {renderText("Write")}{" "}
-              <span className="font-bold">{renderText("ONLY ONE WORD")}</span>{" "}
-              {renderText("for each answer.")}
-            </h3>
 
-            <table className="border-collapse border border-gray-400 w-full text-center">
-              <thead>
-                <tr>
-                  <th
-                    colSpan="3"
-                    className="border border-gray-400 text-lg font-bold p-2"
-                  >
-                    {renderText("Timetable for Isle of Man holiday")}
-                  </th>
-                </tr>
-                <tr>
-                  <th className="border p-2"> {renderText("")} </th>
-                  <th className="border p-2">{renderText("Activity")}</th>
-                  <th className="border p-2">{renderText("Notes")}</th>
-                </tr>
-              </thead>
+          {/* 2st section */}
 
-              <tbody>
-                {/* Day 1 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 1</td>
-                  <td className="border border-gray-400 text-lg p-2">Arrive</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div>Introduction by manager</div>
-                    <div className="flex items-center mt-1">
-                      <span>Hotel dining room has view of the</span>
-                      <button
-                        onClick={() => toggleButton(15)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[15]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        15
-                      </button>
-                      <input
-                        value={userAnswers[15] || ""}
-                        onChange={(e) => handleInputChange(15, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                    </div>
-                  </td>
-                </tr>
+          <div>
+            {/* normal title*/}
+            <div className="space-y-4 leading-relaxed">
+              <h2 className="text-lg font-bold mb-3">
+                {renderText("Questions 15-20")}
+              </h2>
 
-                {/* Day 2 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 2</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Tynwald Exhibition and Peel
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <span>Tynwald may have been founded in </span>
-                    <button
-                      onClick={() => toggleButton(16)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                        activeButtons[16]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      16
-                    </button>
-                    <input
-                      value={userAnswers[16] || ""}
-                      onChange={(e) => handleInputChange(16, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span> not 979.</span>
-                  </td>
-                </tr>
+              <h3 className="text-lg mb-5">
+                {renderText("Level the map below")} <br /> <br />
+                {renderText("Choose the correct letter,  ")}{" "}
+                <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
+                {renderText("next to Questions 15-20.")}
+              </h3>
+              <div className="flex items-center justify-center ">
+                <div className="text-center">
+                  <img className="h-96 w-96" src="https://i.ibb.co.com/7N4HdKN4/L1.jpg" alt="Image bosa" />
+                </div>
+              </div>
 
-                {/* Day 3 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 3</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Trip to Snaefell
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2 leading-relaxed">
-                    <div>Travel along promenade in a tram;</div>
-                    <div>train to Laxey;</div>
-                    <div className="flex items-center">
-                      <span>train to the </span>
-                      <button
-                        onClick={() => toggleButton(17)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[17]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        17
-                      </button>
-                      <input
-                        value={userAnswers[17] || ""}
-                        onChange={(e) => handleInputChange(17, e.target.value)}
-                        className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span> of Snaefell</span>
-                    </div>
-                  </td>
-                </tr>
+              <br />
+            </div>
+          </div>
 
-                {/* Day 4 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 4</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Free day
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <span>Company provides a </span>
-                    <button
-                      onClick={() => toggleButton(18)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                        activeButtons[18]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      18
-                    </button>
-                    <input
-                      value={userAnswers[18] || ""}
-                      onChange={(e) => handleInputChange(18, e.target.value)}
-                      className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span> for local transport and heritage sites.</span>
-                  </td>
-                </tr>
+          {/* optional question */}
+          <div className="space-y-2">
+            {/* ---------- Question 1 ---------- */}
 
-                {/* Day 5 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 5</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Take the{" "}
-                    <button
-                      onClick={() => toggleButton(19)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                        activeButtons[19]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      19
-                    </button>
-                    <input
-                      value={userAnswers[19] || ""}
-                      onChange={(e) => handleInputChange(19, e.target.value)}
-                      className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    railway train from Douglas to Port Erin
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div>Free time, then coach to Castletown – former </div>
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("15.")}</span>
+              <span className="text-lg">
+                {renderText("statue of Diane Gosforth")}
+              </span>
 
-                    <div className="flex items-center mt-1">
-                      <button
-                        onClick={() => toggleButton(20)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[20]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        20
-                      </button>
-                      <input
-                        value={userAnswers[20] || ""}
-                        onChange={(e) => handleInputChange(20, e.target.value)}
-                        className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span> has old castle.</span>
-                    </div>
-                  </td>
-                </tr>
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[15] || ""}
+                  onChange={(e) => handleInputChange(15, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="1">{renderText("15")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
 
-                {/* Day 6 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 6</td>
-                  <td className="border border-gray-400 text-lg p-2">Leave</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Leave the island by ferry or plane
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 2 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("16.")}</span>
+              <span className="text-lg">{renderText("a middle child")}</span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[16] || ""}
+                  onChange={(e) => handleInputChange(16, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="2">{renderText("16")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 3 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("17.")}</span>
+              <span className="text-lg">
+                {renderText("the youngest child")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[17] || ""}
+                  onChange={(e) => handleInputChange(17, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="3">{renderText("17")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 4 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("18.")}</span>
+              <span className="text-lg"> {renderText("a twin")}</span>
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[18] || ""}
+                  onChange={(e) => handleInputChange(18, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="4">{renderText("18")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 5 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("19.")}</span>
+              <span className="text-lg"> {renderText("an only child")}</span>
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[19] || ""}
+                  onChange={(e) => handleInputChange(19, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="5">{renderText("19")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 6 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("20.")}</span>
+              <span className="text-lg">
+                {" "}
+                {renderText("a child with much older siblings")}
+              </span>
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[20] || ""}
+                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="6">{renderText("20")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -789,7 +803,7 @@ useEffect(() => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11–20)
+                    All Answers (11-20)
                   </h3>
 
                   <ul className="space-y-3">
@@ -860,9 +874,9 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <Listening1Pagination></Listening1Pagination>
+     <Listening2Pagination2020></Listening2Pagination2020>
     </div>
   );
 };
 
-export default Listening1Part22020;
+export default Listening2Part22020;

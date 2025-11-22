@@ -290,6 +290,8 @@ const Navbar = () => {
     "/2020/test 4/listening": 7 * 60,
     // listening part time
     "/listening1Part22020": 7 * 60+30,
+    "/listening1Part32020": 8 * 60,
+    "/listening1Part42020": 9 * 60,
 
     // 2020  reading
     "/2020/Test 1/reading": 20 * 60,
