@@ -124,6 +124,7 @@ import Listening1Part42020 from "../components/Academic 2020/Listening/Listening
 import Listening2Part22020 from "../components/Academic 2020/Listening/Listening2/Listening2Part22020";
 import Listening2Part32020 from "../components/Academic 2020/Listening/Listening2/Listening2Part32020";
 import Listening2Part42020 from "../components/Academic 2020/Listening/Listening2/Listening2Part42020";
+import Listening3Part22020 from "../components/Academic 2020/Listening/Listening3/Listening3Part22020";
 
 export const router = createBrowserRouter([
   {
@@ -516,6 +517,11 @@ export const router = createBrowserRouter([
         path: "/2020/Test 3/listening",
         Component: Test3Listening2020,
       },
+      {
+        path: "/listening3Part22020",
+        Component: Listening3Part22020,
+      },
+
       {
         path: "/2020/Test 4/listening",
         Component: Test4Listening2020,
