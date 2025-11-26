@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link, useLocation } from "react-router";
 
-const Listening3Pagination2020 = () => {
+const Listening4Pagination2020 = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -32,11 +32,11 @@ const Listening3Pagination2020 = () => {
   };
 
   const centerLinks = [
-                "/2020/Test%203/listening", 
-                "/listening3Part22020",
-                "/listening3Part32020",
-                "/listening3Part42020"
-];
+    "/2020/Test%204/listening",
+    "/listening4Part22020",
+    "/listening4Part32020",
+    "/listening4Part42020",
+  ];
 
   // ---------- Detect Active Page ----------
   const activePage = centerLinks.findIndex((link) => link === currentPath) + 1;
@@ -83,4 +83,4 @@ const Listening3Pagination2020 = () => {
   );
 };
 
-export default Listening3Pagination2020;
+export default Listening4Pagination2020;

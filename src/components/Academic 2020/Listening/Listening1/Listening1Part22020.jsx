@@ -323,12 +323,12 @@ const Listening1Part22020 = () => {
     };
     speakNextChunk();
   };
-useEffect(() => {
-  window.speechSynthesis.onvoiceschanged = () => {
-    const list = window.speechSynthesis.getVoices();
-    console.log("Available voices:", list);
-  };
-}, []);
+  useEffect(() => {
+    window.speechSynthesis.onvoiceschanged = () => {
+      const list = window.speechSynthesis.getVoices();
+      console.log("Available voices:", list);
+    };
+  }, []);
 
   //  Marks show
 
@@ -506,13 +506,15 @@ useEffect(() => {
           </div>
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 11-14</h2>
+            <h2 className="text-lg font-bold">
+              {renderText("Questions 11-14")}
+            </h2>
             <p className="text-xl">
-              Choose the correct letter,{" "}
-              <span className="font-bold">A, B or C</span>.
+              {renderText("  Choose the correct letter,")}
+              <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
-            <h1 className="text-center text-2xl font-bold">
-              Matthews Island Holidays
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("   Matthews Island Holidays")}
             </h1>
 
             {questions.map((q, qIndex) => {

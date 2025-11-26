@@ -696,14 +696,14 @@ const Listening1Part32020 = () => {
                   <h1 className="text-xl font-bold mb-5">Personality Traits</h1>
 
                   <ul className="space-y-1 text-lg">
-                    <li>A. outgoing</li>
-                    <li>B. selfish</li>
-                    <li>C. independent</li>
-                    <li>D. attention-seeking</li>
-                    <li>E. introverted</li>
-                    <li>F. co-operative</li>
-                    <li>G. caring</li>
-                    <li>H. competitive</li>
+                    <li>{renderText("A. outgoing")}</li>
+                    <li>{renderText("B. selfish")}</li>
+                    <li>{renderText("C. independent")}</li>
+                    <li>{renderText("D. attention-seeking")}</li>
+                    <li>{renderText("E. introverted")}</li>
+                    <li>{renderText("F. co-operative")}</li>
+                    <li>{renderText("G. caring")}</li>
+                    <li>{renderText("H. competitive")}</li>
                   </ul>
                 </div>
               </div>
@@ -715,7 +715,9 @@ const Listening1Part32020 = () => {
           {/* optional question */}
           <div className="space-y-2">
             {/* ---------- Question 1 ---------- */}
-            <h1 className="text-lg font-bold">Position in Family</h1>
+            <h1 className="text-lg font-bold">
+              {renderText("Position in Family")}
+            </h1>
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("21.")}</span>
               <span>{renderText("the eldest child")}</span>
@@ -882,10 +884,12 @@ const Listening1Part32020 = () => {
 
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 27-30</h2>
+            <h2 className="text-lg font-bold">
+              {renderText("Questions 27-30")}
+            </h2>
             <p className="text-xl">
-              Choose the correct letter,{" "}
-              <span className="font-bold">A, B or C</span>.
+              {renderText("  Choose the correct letter,")}
+              <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
 
             {questions.map((q, qIndex) => {

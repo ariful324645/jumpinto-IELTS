@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
 
+import { ImCross } from "react-icons/im";
+import { FaDotCircle } from "react-icons/fa";
+import Listening4Pagination2020 from "../Pagination/Listening4Pagination/Listening4Pagination2020";
+
 const Test4Listening2020 = () => {
+  // 2nd
+
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +24,6 @@ const Test4Listening2020 = () => {
 
   // result marks display
   const [showResult, setShowResult] = useState(false);
-  const [showRight, setShowRight] = useState(false);
-  const [showWrong, setShowWrong] = useState(false);
 
   const lines = [
     {
@@ -428,10 +432,19 @@ const Test4Listening2020 = () => {
       if (!voices.length) return null;
       if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "SOPHIE")
-        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+
       if (speaker === "MAN")
         return voices.find((v) => v.name.includes("David")) || voices[0];
+      // Erica: female
+      if (speaker === "SOPHIE") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
       return voices[0];
     };
     let lineIndex = 0;
@@ -597,7 +610,7 @@ const Test4Listening2020 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -908,110 +921,108 @@ const Test4Listening2020 = () => {
 
             {/* ---------- Marks display ---------- */}
             {/* ---------- Marks Section (Submit + Result Display) ---------- */}
-            <div className="mt-8 border-t pt-6 text-center text-lg font-semibold">
+            <div className="mt-10">
               {!showResult ? (
-                <button
-                  onClick={() => setShowResult(true)}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
-                >
-                  Submit Answers
-                </button>
+                <div className="flex items-center justify-center">
+                  {" "}
+                  <button
+                    onClick={() => setShowResult(true)}
+                    className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  >
+                    Submit Answers
+                  </button>
+                </div>
               ) : (
-                <>
-                  {/* <p className="text-green-600 mb-2">✅ Marks: {score}/10</p> */}
-
-                  {/* Buttons to toggle right/wrong answers */}
-                  <div className="flex justify-center gap-4 mt-4">
-                    <button
-                      onClick={() => setShowRight((prev) => !prev)}
-                      className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition"
-                    >
-                      {showRight ? "Hide Right Answers" : "Show Right Answers"}
-                    </button>
-                    <button
-                      onClick={() => setShowWrong((prev) => !prev)}
-                      className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                    >
-                      {showWrong ? "Hide Wrong Answers" : "Show Wrong Answers"}
-                    </button>
+                <div className="space-y-6">
+                  {/* Result Card */}
+                  <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                    <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                    <p className="text-green-600 text-2xl font-semibold">
+                      Your Score: {score}/10
+                    </p>
                   </div>
 
-                  {/* Right Answers List */}
-                  {showRight && (
-                    <div className="mt-4 text-left bg-green-50 border border-green-300 rounded-lg p-4">
-                      <h3 className="font-bold text-green-700 mb-2">
-                        Correct Answers:
-                      </h3>
-                      <ul className="list-disc list-inside text-green-700 space-y-1">
-                        {Object.keys(userAnswers)
-                          .filter(
-                            (key) =>
-                              userAnswers[key]?.trim().toLowerCase() ===
-                              correctAnswers[key]?.trim().toLowerCase()
-                          )
-                          .map((key) => (
-                            <li key={key}>
-                              <span className="font-semibold">Q{key}:</span>{" "}
-                              {correctAnswers[key]}
-                            </li>
-                          ))}
-                        {Object.keys(userAnswers).filter(
-                          (key) =>
-                            userAnswers[key]?.trim().toLowerCase() ===
-                            correctAnswers[key]?.trim().toLowerCase()
-                        ).length === 0 && (
-                          <p className="text-green-600">
-                            No correct answers yet.
-                          </p>
-                        )}
-                      </ul>
-                    </div>
-                  )}
+                  {/* All Answers List */}
+                  <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                    <h3 className="text-xl font-bold text-gray-700 mb-3">
+                      All Answers (1–10)
+                    </h3>
 
-                  {/* Wrong Answers List */}
-                  {showWrong && (
-                    <div className="mt-4 text-left bg-red-50 border border-red-300 rounded-lg p-4">
-                      <h3 className="font-bold text-red-700 mb-2">
-                        ❌ Wrong Answers:
-                      </h3>
-                      <ul className="list-disc list-inside text-red-700 space-y-1">
-                        {Object.keys(userAnswers)
-                          .filter(
-                            (key) =>
-                              correctAnswers[key] &&
-                              userAnswers[key]?.trim().toLowerCase() !==
-                                correctAnswers[key]?.trim().toLowerCase()
-                          )
-                          .map((key) => (
-                            <li key={key}>
-                              <span className="font-semibold">Q{key}:</span>{" "}
-                              Your answer:{" "}
-                              <span className="italic">
-                                {userAnswers[key] || "—"}
-                              </span>{" "}
-                              → Correct:{" "}
-                              <span className="font-semibold">
-                                {correctAnswers[key]}
-                              </span>
+                    <ul className="space-y-3">
+                      {Array.from({ length: 10 }, (_, i) => i + 1).map(
+                        (num) => {
+                          const userAnswer =
+                            userAnswers[num]?.trim().toLowerCase() || "";
+                          const correctAnswer = correctAnswers[num]
+                            ?.trim()
+                            .toLowerCase();
+
+                          const isCorrect =
+                            userAnswer && userAnswer === correctAnswer;
+
+                          const isWrong =
+                            userAnswer && userAnswer !== correctAnswer;
+
+                          const noAnswer = !userAnswer;
+
+                          return (
+                            <li
+                              key={num}
+                              className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                            >
+                              <div className="flex items-center gap-2">
+                                {/* ICONS */}
+                                {isCorrect && (
+                                  <span className="text-green-600 text-xl font-bold">
+                                    <FaDotCircle />
+                                  </span> // GREEN CIRCLE
+                                )}
+                                {(isWrong || noAnswer) && (
+                                  <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-sm font-bold leading-none">
+                                      <ImCross />
+                                    </span>
+                                  </div>
+                                )}
+
+                                <p className="font-bold">Q{num}:</p>
+                              </div>
+
+                              {/* User Answer */}
+                              <p className="ml-8">
+                                <span className="font-semibold">
+                                  Your Answer:
+                                </span>{" "}
+                                {noAnswer ? (
+                                  <span className=" italic">
+                                    No answer provided
+                                  </span>
+                                ) : (
+                                  <span>{userAnswer}</span>
+                                )}
+                              </p>
+
+                              {/* Correct Answer */}
+                              <p className="ml-8">
+                                <span className="font-semibold text-green-600">
+                                  Correct Answer:
+                                </span>{" "}
+                                <span>{correctAnswers[num]}</span>
+                              </p>
                             </li>
-                          ))}
-                        {Object.keys(userAnswers).filter(
-                          (key) =>
-                            correctAnswers[key] &&
-                            userAnswers[key]?.trim().toLowerCase() !==
-                              correctAnswers[key]?.trim().toLowerCase()
-                        ).length === 0 && (
-                          <p className="text-red-600">No wrong answers </p>
-                        )}
-                      </ul>
-                    </div>
-                  )}
-                </>
+                          );
+                        }
+                      )}
+                    </ul>
+                  </div>
+                </div>
               )}
             </div>
           </div>
         </div>
       </div>
+
+      <Listening4Pagination2020></Listening4Pagination2020>
     </div>
   );
 };

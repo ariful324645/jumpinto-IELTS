@@ -125,6 +125,12 @@ import Listening2Part22020 from "../components/Academic 2020/Listening/Listening
 import Listening2Part32020 from "../components/Academic 2020/Listening/Listening2/Listening2Part32020";
 import Listening2Part42020 from "../components/Academic 2020/Listening/Listening2/Listening2Part42020";
 import Listening3Part22020 from "../components/Academic 2020/Listening/Listening3/Listening3Part22020";
+import Listening3Part32020 from "../components/Academic 2020/Listening/Listening3/Listening3Part32020";
+import Listening3Part42020 from "../components/Academic 2020/Listening/Listening3/Listening3Part42020";
+import Listening4Part22020 from "../components/Academic 2020/Listening/Listening4/Listening4Part22020";
+import Listening4Part32020 from "../components/Academic 2020/Listening/Listening4/Listening4Part32020";
+import Listening4Part42020 from "../components/Academic 2020/Listening/Listening4/Listening4Part42020";
+import Reading1Part22020 from "../components/Academic 2020/Reading/Reading1/Reading1Part22020";
 
 export const router = createBrowserRouter([
   {
@@ -521,15 +527,39 @@ export const router = createBrowserRouter([
         path: "/listening3Part22020",
         Component: Listening3Part22020,
       },
+      {
+        path: "/listening3Part32020",
+        Component: Listening3Part32020,
+      },
+      {
+        path: "/listening3Part42020",
+        Component: Listening3Part42020,
+      },
 
       {
         path: "/2020/Test 4/listening",
         Component: Test4Listening2020,
       },
+      {
+        path: "/listening4Part22020",
+        Component: Listening4Part22020,
+      },
+      {
+        path: "/listening4Part32020",
+        Component: Listening4Part32020,
+      },
+      {
+        path: "/listening4Part42020",
+        Component: Listening4Part42020,
+      },
 
       {
         path: "/2020/Test 1/reading",
         Component: Test1Reading2020,
+      },
+      {
+        path: "/Reading1Part22020",
+        Component: Reading1Part22020,
       },
       {
         path: "/2020/Test 2/reading",

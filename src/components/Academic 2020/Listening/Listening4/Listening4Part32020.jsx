@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
-import Listening1Pagination from "../../Pagination/Listening1Pagination/listening1Pagination2020";
+
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
 
-const Listening2Part32020 = () => {
+import Listening4Pagination2020 from "../../Pagination/Listening4Pagination/Listening4Pagination2020";
+
+const Listening4Part32020 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -23,306 +24,265 @@ const Listening2Part32020 = () => {
 
   // result marks display
   const [showResult, setShowResult] = useState(false);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 3. You will hear two students of English called Cathy and Graham planning a display on 19th century British life and literature for a university event.",
+        "Part 3. You will hear two students of social history called Annie and Jack discussing their presentation about refrigeration.",
         "You have some time to look at questions 21 to 24.",
         "Now listen carefully and answer questions 21 to 24.",
       ],
     },
 
     {
-      speaker: "CATHY",
+      speaker: "ANNIE",
       text: [
-        "OK, Graham, so let's check we both know what we're supposed to be doing.",
+        "OK, Jack. Before we plan our presentation about refrigeration, let's discuss what we've discovered so far.",
       ],
     },
 
     {
-      speaker: "GRAHAM",
-      text: ["OK."],
-    },
-
-    {
-      speaker: "CATHY",
+      speaker: "JACK",
       text: [
-        "So for the university's open day, we have to plan a display on British life and literature in the mid 19th century.",
+        "Fine, Annie. Though I have to admit I haven't done much research yet.",
       ],
     },
 
     {
-      speaker: "GRAHAM",
+      speaker: "ANNIE",
       text: [
-        "That's right. But we'll have some people to help us find the materials and set it up, remember? For the moment, we just need to plan it.",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        "Good. So have you gathered who's expected to come and see the display? Is it for the people studying English or students from other departments? I'm not clear about it.",
-      ],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "Nor me. That was how it used to be, but it didn't attract many people so this year it's going to be part of an open day to raise the university's profile.",
-
+        "Nor me. But I found an interesting article about ice houses. I'd seen some 18th- and 19th-century ones here in the UK, so I knew they were often built in a shady area. Or underground, close to lakes that might freeze in the winter. Then blocks of ice could be cut and stored in the icehouse..",
         {
-          text: "It'll be publicized in the city to encourage people to come and find out something of what goes on here.",
+          text: " But I didn't realize that insulating the blocks with straw or sawdust meant they didn't melt for months",
           number: 21,
         },
+        "The ancient Romans had refrigeration too.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["I didn't know that."],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
+        "Yes, pits were dug in the ground, and snow was imported from the mountains. Even though they were at quite a distance, the snow was stored in the pits.",
         {
-          text: "And it's included in the information that's sent to people who are considering applying to study here next year.",
+          text: " Ice formed at the bottom of it, both the ice and the snow were then sold.",
           number: 22,
         },
+        "The ice cost more than the snow, and my guess is that only the wealthy members of society could afford it.",
       ],
     },
 
     {
-      speaker: "CATHY",
-      text: ["Presumably some current students and lecturers will come."],
-    },
-
-    {
-      speaker: "GRAHAM",
+      speaker: "JACK",
       text: [
-        "I would imagine so. But we've been told to concentrate on the other categories of people.",
+        "I wouldn't be surprised. I also came across an article about modern domestic fridges. Several different technologies are used, but they were too complex for me to understand.",
       ],
     },
 
     {
-      speaker: "CATHY",
+      speaker: "ANNIE",
       text: [
-        "Right. We don't have to cover the whole range of 19th century literature, do we?",
+        "You have to wonder what happens when people get rid of old ones.",
       ],
     },
 
     {
-      speaker: "GRAHAM",
+      speaker: "JACK",
       text: [
-        "No, it's entirely up to us. I suggest just using Charles Dickens.",
+        "You mean because the gases in them are harmful for the environment?",
       ],
     },
 
     {
-      speaker: "CATHY",
+      speaker: "ANNIE",
       text: [
-        "That's a good idea.",
+        "Exactly.",
         {
-          text: " Most people have heard of him and have probably read some of his novels or seen films based on them.",
+          number: 23,
+          text: " At least there are now plenty of organizations that will recycle most of the components safely, but of course some people just dump old fridges in the countryside.",
+        },
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "It's hard to see how they can be stopped unfortunately. In the UK, we get rid of 3 million a year altogether.",
+      ],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
+        "That sounds a lot, especially because fridges hardly ever break down.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "That's right. In this country, we keep domestic fridges for 11 years on average. And a lot last for 20 or more. ",
+        {
+          text: "So if you divide the cost by the number of years you can use a fridge, they're not expensive compared with some household appliances.",
           number: 24,
         },
-        "Hmm. So that's a good lead-in to life in his time.",
       ],
     },
 
     {
-      speaker: "GRAHAM",
+      speaker: "ANNIE",
       text: [
-        "Exactly. ?",
-        {
-          text: "And his novels show the awful conditions that most people had to live in, don't they?. He wanted to shock people into doing something about it.",
-          number: 23,
-        },
+        "True. I suppose manufacturers encourage people to spend more by making them different colors and designs. I'm sure when my parents bought their first fridge, they had hardly any choice.",
       ],
     },
 
     {
-      speaker: "CATHY",
-      text: ["Did he do any campaigning other than writing?"],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "Yes, he campaigned for education and other social reforms and gave talks, but I'm inclined to ignore that and focus on the novels.",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: ["Yes, I agree."],
+      speaker: "JACK",
+      text: ["Yes, there's been quite a change."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
         "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
-        "I listen and answer questions 25 to 30.",
+        "Now listen and answer questions 25 to 30.",
       ],
     },
 
     {
-      speaker: "CATHY",
-      text: ["OK, so now should we think about a topic linked to each novel?"],
-    },
-
-    {
-      speaker: "GRAHAM",
+      speaker: "JACK",
       text: [
-        "Yes, I've printed out a list of Dickens's novels in the order they were published. In the hope you'd agree to focus on him.",
+        "Right, let's make a list of topics to cover in our presentation, and decide who's going to do more research on them. Then later we can get together and plan the next step.",
       ],
     },
 
     {
-      speaker: "CATHY",
+      speaker: "ANNIE",
       text: [
-        "Ha ha ha, you're lucky. I did agree. Ha ha. Let's have a look. Uh. OK, the first was the Pickwick Papers. Published in 1836 it was very successful when it came out, wasn't it? And was adapted for the theatre straight away.",
+        "OK, how about starting with how useful refrigeration is, and the range of goods that are refrigerated nowadays? Because of course, it's not just food and drinks.",
       ],
     },
 
     {
-      speaker: "GRAHAM",
+      speaker: "JACK",
+      text: ["No, I suppose flowers and medicines are refrigerated, too."],
+    },
+
+    {
+      speaker: "ANNIE",
       text: [
-        "There's an interesting point though. ",
+        { text: "And computers. I could do that.", number: 25 },
+        "Unless you particularly want to.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "No, that's fine by me. What about the effects of refrigeration on people's health? After all, some of the chemicals used in the 19th century were pretty harmful. But there have been lots of benefits too, like always having access to fresh food. Do you fancy dealing with that?",
+      ],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: ["I'm not terribly keen to be honest. Hmm, nor me."],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["My mind just goes blank when I read anything about chemicals."],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
         {
-          text: "That there's a character who keeps falling asleep, and that medical condition was named after the book, Pickwickian syndrome.",
-          number: 25,
-        },
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        "Oh, so why don't we use that as the topic? And include some quotations from the novel.",
-      ],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "Right, next is Oliver Twist. Hmm. There's a lot in the novel about poverty, but maybe something less obvious.",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        "Well, Oliver is taught how to steal, isn't he? ",
-        {
-          text: "We could use that to illustrate the fact that very few children went to school, particularly not poor children, so they learned in other ways.Hmm.",
+          text: "Oh, all right then, I'll do you a favor, but you owe me, Jack.",
           number: 26,
         },
+        "OK?What about the effects on food producers, like farmers in poorer countries being able to export their produce to developed countries? Something for you maybe?",
       ],
     },
 
     {
-      speaker: "GRAHAM",
-      text: ["Good idea. What's next?"],
-    },
-
-    {
-      speaker: "CATHY",
+      speaker: "JACK",
       text: [
-        "Maybe Nicholas Nickleby. Actually he taught in a really cruel school, didn't he?",
+        { number: 27, text: "I don't mind, it should be quite interesting." },
       ],
     },
 
     {
-      speaker: "GRAHAM",
+      speaker: "ANNIE",
       text: [
-        "That's right. But there's also the company of touring actors that Nicholas joins..",
+        "I think we should also look at how refrigeration has helped whole cities, like Las Vegas, which couldn't exist without refrigeration, because it's in the middle of a desert.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Right. I had a quick look at an economics book in the library that's got a chapter about this sort of thing. I could give you the title if you want to do this section.",
+      ],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
+        "Not particularly to be honest. I find economics books pretty heavy going as a rule.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [{ text: "OK, leave it to me then.", number: 28 }],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
+        "Thanks. Then there's transport, and the difference that refrigerated trucks have made..",
+        { text: " I wouldn't mind having a go at that", number: 29 },
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Don't forget trains too. I read something about milk and butter being transported in refrigerated railroad cars in the USA, right back in the 1840s.",
+      ],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: ["I hadn't thought of trains. Thanks."],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Should we have a separate section on domestic fridges? After all, they're something everyone's familiar with.",
+      ],
+    },
+
+    {
+      speaker: "ANNIE",
+      text: [
+        "What about splitting it into two? ",
         {
-          text: " We could do something on theaters and other amusements of the time",
-          number: 27,
-        },
-        "We don't want only the bad things, do we? OK, what about Martin Chuzzlewit? He goes to the USA, doesn't he?",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        {
-          text: "Yes, and Dickens himself had been there a year before.And drew on his experience there in the novel.",
-          number: 28,
-        },
-      ],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "I wonder though, the main theme is selfishness, so we could do something on social justice. Hmm. No, too general. Let's keep to your idea. I think it would work well.",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: ["He wrote Bleak House next, that's my favorite of his novels."],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "Yes, mine too. Oh, his satire of the legal system is pretty powerful.",
-      ],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        "That's true, but think about Esther the heroine.",
-        {
-          text: " As a child, she lives with someone she doesn't know is her aunt, who treats her very badly.",
-          number: 29,
-        },
-
-        {
-          text: "Then she's very happy living with her guardian, and he puts her in charge of the household, and at the end she gets married, and her guardian gives her and her husband a house, where of course they're very happy.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: ["Yes, I like that."],
-    },
-
-    {
-      speaker: "CATHY",
-      text: [
-        "What should we take next? Uh. Little Dorrit, old Mr Dorrit has been in a debtor's prison for years.",
-      ],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: ["So was Dickens's father, wasn't he?"],
-    },
-
-    {
-      speaker: "CATHY",
-      text: ["That's right."],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        {
-          text: "What about focusing on the part when Mr Dorrit inherits a fortune?. And he starts pretending he's always been rich.",
           number: 30,
+          text: "You could investigate 19th and 20th century fridges, and I'll concentrate on what's available these days, and how manufacturers differentiate their products from those of their competitors.",
         },
       ],
     },
 
     {
-      speaker: "CATHY",
-      text: ["Ha ha, good idea."],
-    },
-
-    {
-      speaker: "GRAHAM",
-      text: [
-        "Ha ha, OK. So next we need to think about what materials we want to illustrate each issue. That's going to be quite hard.",
-      ],
+      speaker: "JACK",
+      text: ["OK, that suits me."],
     },
 
     {
@@ -336,32 +296,32 @@ const Listening2Part32020 = () => {
 
   // different option
   const questions = [
-    "Who is the display mainly aimed at?",
-    "Who else is expected to attend the display?",
-    "Why did Cathy and Graham choose Charles Dickens as their focus?",
-    "What was another reason for choosing Charles Dickens?",
+    "What did Annie discover from reading about icehouses?",
+    "What point does Annie make about refrigeration in ancient Rome?",
+    "In connection with modern refrigerators, both Annie and Jack are worried about",
+    "What do Jack and Annie agree regarding domestic fridges?",
   ];
 
   const options = [
     [
-      "A. Students from the English department",
-      " B. Residents of the local area",
-      " C. Potential new students",
+      "A. why they were first created",
+      " B. how the ice was kept frozen",
+      " C. where they were located",
     ],
     [
-      "A. Students from other departments",
-      " B. The university’s teaching staff",
-      " C. Potential new students",
+      "A. It became a commercial business.",
+      " B. It used snow from nearby.",
+      " C. It took a long time to become popular.",
     ],
     [
-      "A. His novels are widely known today",
-      " B. He used his writing to highlight social problems",
-      " C. His reputation has recently changed",
+      "A. the complexity of the technology.",
+      " B. the fact that some are disposed of irresponsibly.",
+      " C. the large number that quickly break down",
     ],
     [
-      "A. He was consulted on social issues",
-      " B. His speeches inspired positive change",
-      " C. His novels link well to life in his time",
+      "A. They are generally good value for money.",
+      " B. There are plenty of useful variations.",
+      " C. They are more useful than other domestic appliances.",
     ],
   ];
   const [selectedOptions, setSelectedOptions] = useState(
@@ -487,12 +447,12 @@ const Listening2Part32020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "GRAHAM") {
+      if (speaker === "JACK") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "CATHY") {
+      if (speaker === "ANNIE") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -548,16 +508,16 @@ const Listening2Part32020 = () => {
   //  Marks show
 
   const correctAnswers = {
-    21: "C. Potential new students",
-    22: "B. The university’s teaching staff",
-    23: "A. His novels are widely known today",
-    24: "C. His novels link well to life in his time",
-    25: "G",
-    26: "B",
-    27: "D",
-    28: "C",
-    29: "H",
-    30: "F",
+    21: "B. how the ice was kept frozen",
+    22: "A. It became a commercial business.",
+    23: "B. the fact that some are disposed of irresponsibly.",
+    24: "A. they are generally good value for money.",
+    25: "A",
+    26: "A",
+    27: "B",
+    28: "B",
+    29: "A",
+    30: "C",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -584,7 +544,7 @@ const Listening2Part32020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32020", newScore);
+    localStorage.setItem("/listening4Part32020", newScore);
   };
 
   const toggleButton = (id) => {
@@ -596,12 +556,12 @@ const Listening2Part32020 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32020");
+    localStorage.removeItem("/listening4Part32020");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32020");
+    const savedScore = localStorage.getItem("/listening4Part32020");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -644,7 +604,7 @@ const Listening2Part32020 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Cathy & Graham novels")}
+                {renderText("Presentation about Refrigeration")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -723,12 +683,17 @@ const Listening2Part32020 = () => {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
+              {" "}
               {renderText(" Questions 21-24")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}{" "}
               <span className="font-bold"> {renderText("    A, B or C")}</span>.
             </p>
+
+            <h1 className="font-bold text-2xl text-center">
+              {renderText("  Presentation about refrigeration")}
+            </h1>
 
             {questions.map((q, qIndex) => {
               const answerKey = qIndex + 21;
@@ -793,17 +758,12 @@ const Listening2Part32020 = () => {
               </h3>
               <div className="flex items-center justify-center border border-black py-4 px-4 w-64 mx-auto">
                 <div className="text-center">
-                  <h1 className="text-xl font-bold mb-5">Topics</h1>
+                  <h1 className="text-xl font-bold mb-5">People</h1>
 
                   <ul className="space-y-1 text-lg">
-                    <li>{renderText("A. poverty")}</li>
-                    <li>{renderText("B. education")}</li>
-                    <li>{renderText("C. Dickens's travels")}</li>
-                    <li>{renderText("D. entertainment")}</li>
-                    <li>{renderText("E. crime and the law")}</li>
-                    <li>{renderText("F. wealth")}</li>
-                    <li>{renderText("G. medicine")}</li>
-                    <li>{renderText("H. a woman's life")}</li>
+                    <li>{renderText("A. Annie ")}</li>
+                    <li>{renderText("B. Jack ")}</li>
+                    <li>{renderText("C. both Annie and Jack")} </li>
                   </ul>
                 </div>
               </div>
@@ -818,7 +778,7 @@ const Listening2Part32020 = () => {
             <h1 className="text-lg font-bold">Novels by Dickens</h1>
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("25.")}</span>
-              <span>{renderText("The Pickwick Papers")}</span>
+              <span>{renderText("the goods that are refrigerated")}</span>
 
               <div className="relative w-40">
                 <select
@@ -846,7 +806,7 @@ const Listening2Part32020 = () => {
             {/* ---------- Question 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("26.")}</span>
-              <span>{renderText("Oliver Twist")}</span>
+              <span>{renderText("the effects on health")}</span>
 
               <div className="relative w-40">
                 <select
@@ -874,7 +834,7 @@ const Listening2Part32020 = () => {
             {/* ---------- Question 3 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("27.")}</span>
-              <span>{renderText("Nicholas Nickleby")}</span>
+              <span>{renderText("the impact on food producers")}</span>
 
               <div className="relative w-40">
                 <select
@@ -901,7 +861,7 @@ const Listening2Part32020 = () => {
             {/* ---------- Question 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("28.")}</span>
-              {renderText("Martin Chuzzlewit")}
+              {renderText("the impact on cities")}
               <div className="relative w-40">
                 <select
                   value={userAnswers[28] || ""}
@@ -928,7 +888,7 @@ const Listening2Part32020 = () => {
             {/* ---------- Question 5 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("29.")}</span>
-              {renderText("Bleak House")}
+              {renderText("refrigerated transport")}
               <div className="relative w-40">
                 <select
                   value={userAnswers[29] || ""}
@@ -955,7 +915,7 @@ const Listening2Part32020 = () => {
             {/* ---------- Question 6 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("30.")}</span>
-              {renderText("Little Dorrit")}
+              {renderText("domestic fridges")}
               <div className="relative w-40">
                 <select
                   value={userAnswers[30] || ""}
@@ -1077,9 +1037,9 @@ const Listening2Part32020 = () => {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+      <Listening4Pagination2020></Listening4Pagination2020>
     </div>
   );
 };
 
-export default Listening2Part32020;
+export default Listening4Part32020;

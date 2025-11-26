@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GrClearOption } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
+import Reading1Pagination2020 from "../Pagination/Reading1Pagination/Reading1Pagination2020";
 
 //  Marks show
 
@@ -158,6 +159,14 @@ const Test1Reading2020 = () => {
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2020/Test 1/reading");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
+
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -169,14 +178,6 @@ const Test1Reading2020 = () => {
       return updated;
     });
   };
-
-  // --- Restore answers from localStorage (optional) ---
-  useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 1/reading");
-    if (savedScore) {
-      setScore(Number(savedScore));
-    }
-  }, []);
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -996,6 +997,7 @@ const Test1Reading2020 = () => {
           </div>
         </div>
       </div>
+      <Reading1Pagination2020></Reading1Pagination2020>
     </div>
   );
 };
