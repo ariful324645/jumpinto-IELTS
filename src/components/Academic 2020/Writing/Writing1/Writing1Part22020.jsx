@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Writing2Pagination2020 from "../Pagination/writing1Pagination/Writing2Pagination2020";
+import Writing2Pagination2020 from "../../Pagination/writing1Pagination/Writing2Pagination2020";
 
-const Test1Writing2020 = () => {
+const Writing1Part22020 = () => {
   const [message, setMessage] = useState("");
   const [sentenceCount, setSentenceCount] = useState(0);
   const [submittedMessage, setSubmittedMessage] = useState("");
@@ -12,7 +12,7 @@ const Test1Writing2020 = () => {
   const [openScript, setOpenScript] = useState(true);
 
   // The key used by the home page
-  const storageKey = "/2020/Test 1/writing";
+  const storageKey = "/Writing1Part22020";
 
   // Load mark from localStorage if it exists
   const [mark, setMark] = useState(
@@ -54,31 +54,25 @@ const Test1Writing2020 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-[1000px]">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">TASK 1</h1>
+            <h1 className="text-2xl font-bold">TASK 2</h1>
           </div>
 
           <div className="">
             <h1 className="text-xl mb-4">
-              You should spend about 20 minutes on this task.
+              You should spend about 40 minutes on this task.
             </h1>
+            <p className="text-xl mb-4">Write about the following topic:</p>
             <p className="text-lg p-5 font-bold italic border-2 border-black">
-              The chart below shows the results of a survey about people's
-              coffee and tea buying and drinking habits in five Australian
-              cities. <br /> <br /> Summarise the information by selecting and
-              reporting the main features, and make comparisons where relevant.
+              It is important for people to take risks, both in their
+              professional lives and their personal lives. <br /> <br /> Do you
+              think the advantages of taking risks outweigh the disadvantages?
             </p>
-
-            <p className="text-lg mt-4">Write at least 150 words.</p>
+            <p className="text-xl my-4">
+              Give reasons for your answer and include any relevant examples
+              from your own knowledge or experience.
+            </p>
+            <p className="text-lg mt-4">Write at least 250 words.</p>
             <br />
-
-            {/* image */}
-            <div className="flex items-center justify-center">
-              <img
-                className="w-96 h-96"
-                src="https://i.ibb.co.com/JjC98VTX/w-1-2020.jpg"
-                alt="Eikhane image bosabo"
-              />
-            </div>
 
             <br />
             <hr className="border border-gray-400" />
@@ -96,35 +90,55 @@ const Test1Writing2020 = () => {
             {/* left text */}
             {openScript ? (
               <div>
-                <h1 className="text-xl text-center  font-bold ">
-                  Coffee and Tea Buying and Drinking Habits in Five Australian
-                  Cities
+                <h1 className="text-xl text-center font-bold">
+                  Reasons and Evaluation of Home-ownership Preference in Some
+                  Countries
                 </h1>
                 <p className="mt-5">
-                  The given bar chart illustrates the buying and consumption
-                  patterns of coffee and tea among inhabitants of five
-                  Australian cities - Sydney, Melbourne, Brisbane, Adelaide, and
-                  Hobart - spanning a four-week period. <br /> <br /> Overall,
-                  with the exception of Adelaide, visiting a café for coffee or
-                  tea was a popular activity in all cities. Melbourne had the
-                  highest percentage of café-goers at around 63%, closely
-                  followed by Hobart at approximately 62%. Sydney also had a
-                  relatively high proportion at roughly 61%. Brisbane and
-                  Adelaide were less enthusiastic about café visits, with around
-                  56% and 49% respectively. <br /> <br /> When it came to buying
-                  instant coffee, Hobart had the highest percentage (nearly
-                  55%), followed by Brisbane (around 53%). Sydney and Melbourne
-                  had similar figures ranging between 45% and 50%. In Adelaide,
-                  the proportion of people choosing instant coffee hovered
-                  around 50%, making it the most popular choice among Adelaide
-                  residents. <br /> <br /> In terms of purchasing fresh coffee,
-                  Sydney led with around 44%, followed by Melbourne in the
-                  vicinity of 42%. Brisbane, Adelaide, and Hobart had lower
-                  percentages, with Brisbane and Adelaide both hovering around
-                  34%, and Hobart at roughly 38%. <br /> <br /> Generally, the
-                  data indicates differences in coffee and tea-related habits
-                  among the five cities, with café visits being a common
-                  preference across most of them.
+                  The cultural emphasis on homeownership over renting in certain
+                  societies stems from complex psychological and economic
+                  factors. While property ownership offers perceived stability,
+                  its societal prioritization carries significant drawbacks that
+                  merit critical examination.
+                  <br />
+                  <br />
+                  Three interlinked drivers fuel this phenomenon. Firstly,
+                  property serves as a tangible store of value in economies with
+                  volatile currencies or limited investment options - many
+                  middle-class families in Argentina traditionally convert
+                  savings into real estate as protection against peso
+                  fluctuations. Secondly, homeownership often functions as a
+                  social status marker, particularly in Mediterranean cultures
+                  where multigenerational home inheritance symbolizes family
+                  continuity. Spanish families might renovate ancestral village
+                  houses despite urban relocation, viewing them as heritage
+                  rather than assets. Thirdly, legal frameworks in some nations
+                  disadvantage tenants - until recent reforms, German rental
+                  contracts offered such strong tenant protections that
+                  landlords preferred temporary leases, inadvertently pushing
+                  stability-seekers toward buying.
+                  <br />
+                  <br />
+                  The societal consequences of this housing paradigm prove
+                  problematic. Young adults in Seoul exemplify the financial
+                  strain, where average apartment prices require 18 years of
+                  median income, forcing many into lifelong debt or delayed life
+                  milestones. Urban planning distortions emerge when cities like
+                  Dublin prioritize luxury developments over affordable rentals
+                  to satisfy investor demand, exacerbating housing shortages.
+                  Environmental impacts compound these issues as suburban sprawl
+                  intensifies in markets favoring detached homes - Phoenix's
+                  water crisis partially stems from unchecked desert housing
+                  expansion catering to ownership aspirations.
+                  <br />
+                  <br />
+                  While property ownership provides individual security, its
+                  cultural glorification creates systemic risks. Balanced
+                  housing policies should decouple residential stability from
+                  ownership status, as demonstrated by Vienna's successful
+                  social housing model where 60% rent high-quality public
+                  apartments without stigma. Only when societies stop equating
+                  walls with worth can sustainable housing ecosystems emerge.
                 </p>
               </div>
             ) : (
@@ -179,4 +193,4 @@ const Test1Writing2020 = () => {
   );
 };
 
-export default Test1Writing2020;
+export default Writing1Part22020;

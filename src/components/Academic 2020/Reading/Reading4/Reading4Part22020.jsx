@@ -3,9 +3,10 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
-import Reading3Pagination2020 from "../Pagination/Reading3Pagination/Reading3Pagination2020";
 
-const Test3Reading2020 = () => {
+import Reading4Pagination2020 from "../../Pagination/Reading4Pagination/Reading4Pagination2020";
+
+const Reading4Part22020 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +25,12 @@ const Test3Reading2020 = () => {
   };
 
   const questions = [
-    "On leaving school, Moore did what his father wanted him to do.",
-    "Moore began studying sculpture in his first term at the Leeds School of Art..",
-    "When Moore started at the Royal College of Art, its reputation for teaching sculpture was excellent.",
-    "Moore became aware of ancient sculpture as a result of visiting London museums.",
-    "The Trocadero Museum's Mayan sculpture attracted a lot of public interest.",
-    "Moore thought the Mayan sculpture was similar in certain respects to other stone sculptures",
-    "The artists who belonged to Unit One wanted to make modern art and architecture more popular",
+    "La Gomera is the most mountainous of all the Canary Islands",
+    "Silbo is only appropriate for short and simple messages.",
+    "In the brain-activity study, silbadores and non-whistlers produced different results.",
+    "The Spanish introduced Silbo to the islands in the 15th century.",
+    "There is precise data available regarding all of the whistle languages in existence today.",
+    "The children of Gomera now learn Silbo.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -42,7 +42,7 @@ const Test3Reading2020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 1;
+      const answerKey = qIndex + 14;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -61,7 +61,7 @@ const Test3Reading2020 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2020/Test 3/reading", newScore);
+    localStorage.setItem("/reading4Part22020", newScore);
   };
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -142,24 +142,25 @@ const Test3Reading2020 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    1: "TRUE",
-    2: "FALSE",
-    3: "NOT GIVEN",
-    4: "TRUE",
-    5: "NOT GIVEN",
-    6: "FALSE",
-    7: "TRUE",
-    8: "resignation",
-    9: "materials",
-    10: "miners",
-    11: "family",
-    12: "collectors",
-    13: "income",
-  };
+const correctAnswers = {
+  14: "NOT GIVEN",
+  15: "FALSE",
+  16: "TRUE",
+  17: "FALSE",
+  18: "FALSE",
+  19: "TRUE",
+  20: "tones",
+  21: "finger",
+  22: "direction",
+  23: "commands",
+  24: "fires",
+  25: "technology",
+  26: "award",
+};
+
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 3/reading");
+    const savedScore = localStorage.getItem("/reading4Part22020");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
@@ -177,7 +178,7 @@ const Test3Reading2020 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2020/Test 3/reading");
+    const savedScore = localStorage.getItem("/reading4Part22020");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -191,7 +192,7 @@ const Test3Reading2020 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("   PASSAGE 2")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -210,226 +211,134 @@ const Test3Reading2020 = () => {
               <span className="text-lg font-bold">
                 {renderText("          Questions 1-13")}
               </span>
-              {renderText("  which are based on Reading PASSAGE 1 bellow")}
+              {renderText("  which are based on Reading   PASSAGE 2 below")}
             </h1>
           </div>
           {/* left text */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Henry Moore (1898–1986)")}
-            </h1>
-            <h1 className="text-xl font-bold italic text-center mb-5">
               {renderText(
-                "The British sculptor Henry Moore was a leading figure in the 20th-century art world"
+                "Silbo Gomero - the whistle 'language' of the Canary Islands"
               )}
             </h1>
-
             <p className="text-lg">
               {renderText(
-                "The British sculptor Henry Moore was a leading figure in the 20th-century art world. Henry Moore was born in Castleford, a small town near Leeds in the north of England. He was the seventh child of Raymond Moore and his wife Mary Baker. He studied at Castleford Grammar School from 1909 to 1915, where his early interest in art was encouraged by his teacher Alice Gostick.."
+                "La Gomera is one of the Canary Islands situated in the Atlantic Ocean off the northwest coast of Africa. This small volcanic island is mountainous, with steep rocky slopes and deep, wooded ravines, rising to 1,487 metres at its highest peak. It is also home to the best known of the world's whistle 'languages', a means of transmitting information over long distances which is perfectly adapted to the extreme terrain of the island."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " After leaving school, Moore hoped to become a sculptor, but instead he complied with his father's wish that he train as a schoolteacher."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    1
-                  </span>
-                )}
-              </span>
-              He had to abandon his training in 1917 when he was sent to France
-              to fight in the First World War
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
               {renderText(
-                "After the war, Moore enrolled at the Leeds School of Art, where he studied for two years. In his first year, he spent most of his time drawing. ."
+                "This 'language', known as 'Silbo' or 'Silbo Gomero' - from the Spanish word for 'whistle' - is now shedding light on the language-processing abilities of the human brain, according to scientists. Researchers say that Silbo activates parts of the brain normally associated with spoken language, suggesting that the brain is remarkably flexible in its ability to interpret sounds as language."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Although he wanted to study sculpture, no teacher was appointed until his second year"
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    2
-                  </span>
-                )}
-              </span>
-              At the end of that year, he passed the sculpture examination and
-              was awarded a scholarship to the Royal College of Art in London.
-              In September 1921, he moved to London and began three years of
-              advanced study in sculpture.
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
-              {renderText(".")}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture"
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    4
-                  </span>
-                )}
-              </span>
-              During these visits, he discovered the power and beauty of ancient
-              Egyptian and African sculpture. As he became increasingly
-              interested in these 'primitive' forms of art, he turned away from
-              European sculptural traditions.
-            </p>
-
+              {renderText(
+                '"Science has developed the idea of brain areas that are dedicated to language, and we are starting to understand the scope of signals that can be recognised as language," says David Corina, co-author of a recent study and associate professor of psychology at the University of Washington in Seattle.'
+              )}
+            </p>{" "}
             <br />
-
             <p className="text-lg">
-              {renderText(
-                "After graduating, Moore spent the first six months of 1925 travelling in France. When he visited the Trocadero Museum in Paris, he was impressed by a cast of a Mayan sculpture of the rain spirit. It was a male reclining figure with its knees drawn up together, and its head at a right angle to its body."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "Moore became fascinated with this stone sculpture, which he thought had a power and originality that no other stone sculpture possessed."
+                  "Silbo is a substitute for Spanish, with individual words recoded into whistles which have high- and low-frequency tones. "
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    6
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("20")}
                   </span>
-                )}
+                )}{" "}
+                {renderText(
+                  ' A whistler - or "silbador" - puts a finger in his or her mouth to increase the whistle\'s pitch, while the other hand can be cupped to adjust the direction of the sound. '
+                )}{" "}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("21,22")}
+                  </span>
+                )}{" "}
               </span>
               {renderText(
-                " He himself started carving a variety of subjects in stone, including depictions of reclining women, mother-and-child groups, and masks."
+                '  "There is much more ambiguity in the whistled signal than in the spoken signal," explains lead researcher Manuel Carreiras, psychology professor at the University of La Laguna on the Canary island of Tenerife. Because whistled "words" can be hard to distinguish, silbadores rely on repetition, as well as awareness of context, to make themselves understood.'
               )}
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
               {renderText(
-                "Moore's exceptional talent soon gained recognition, and in 1926 he started work as a sculpture instructor at the Royal College. In 1933, he became a member of a group of young artists called Unit One."
-              )}
+                "The silbadores of Gomera are traditionally shepherds and other isolated mountain folk, and their novel means of staying in touch allows them to communicate over distances of up to 10 kilometres. Carreiras explains that silbadores are able to pass a surprising amount of information via their whistles.  "
+              )}{" "}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "The aim of the group was to convince the English public of the merits of the emerging international movement in modern art and architecture."
+                  "In daily life they use whistles to communicate short commands, but any Spanish sentence could be whistled."
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    7
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("15,23")}
                   </span>
-                )}
+                )}{" "}
+                {renderText(
+                  "Silbo has proved particularly useful when fires have occurred on the island and rapid communication across large areas has been vital. "
+                )}{" "}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("24")}
+                  </span>
+                )}{" "}
               </span>
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
               {renderText(
-                "Around this time, Moore moved away from the human figure to experiment with abstract shapes. In 1931, he held an exhibition at the Leicester Galleries in London."
-              )}
-              {renderText(
-                "His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure."
-              )}
+                "The study team used neuroimaging equipment to contrast the brain activity of silbadores while listening to whistled and spoken Spanish. Results showed the left temporal lobe of the brain, which is usually associated with spoken language, was engaged during the processing of Silbo. The researchers found that other key regions in the brain's frontal lobe also responded to the whistles, including those activated in response to sign language among deaf people. "
+              )}{" "}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  " There were calls for his resignation from the Royal College, and the following year, when his contract expired, he left to start a sculpture department at the Chelsea School of Art in London."
-                )}
+                  "When the experiments were repeated with non-whistlers, however, activation was observed in all areas of the brain. "
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
+                    {renderText("16")}
                   </span>
-                )}
+                )}{" "}
               </span>
-              {renderText("")}
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
               {renderText(
-                "In 1940, during the Second World War, Moore stopped teaching at the Chelsea School and moved to a farmhouse about 20 miles north of London. "
+                '"Our results provide more evidence about the flexibility of human capacity for language in a variety of forms," Corina says. "These data suggest that left-hemisphere language regions are uniquely adapted for communicative purposes, independent of the modality of signal. The non-Silbo speakers were not recognising Silbo as a language. They had nothing to grab onto, so multiple areas of their brains were activated."'
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "A shortage of materials forced him to focus on drawing."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    9
-                  </span>
-                )}
-              </span>
-
-              {renderText(
-                "He did numerous small sketches of Londoners, later turning these ideas into large coloured drawings in his studio. "
-              )}
-
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " In 1942, he returned to Castleford to make a series of sketches of the miners who worked there.."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    10
-                  </span>
-                )}
-              </span>
-            </p>
-
+            </p>{" "}
             <br />
-
             <p className="text-lg">
-              {renderText(".")}
+              {" "}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "In 1944, Harlow, a town near London, offered Moore a commission for a sculpture depicting a family"
-                )}
+                  "Carreiras says the origins of Silbo Gomero remain obscure, but that indigenous Canary Islanders, who were of North African origin, already had a whistled language when Spain conquered the volcanic islands in the 15th century."
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    11
+                    {renderText("17")}
                   </span>
-                )}
+                )}{" "}
               </span>
               {renderText(
-                " The resulting work signifies a dramatic change in Moore's style, away from the experimentation of the 1930s towards a more natural and humanistic subject matter. He did dozens of studies in clay for the sculpture, and these were cast in bronze and issued in editions of seven to nine copies each."
+                ' Whistled languages survive today in Papua New Guinea, Mexico, Vietnam, Guyana, China, Nepal, Senegal, and a few mountainous pockets in southern Europe."'
               )}
               <span
                 className={`ml-2 ${
@@ -437,36 +346,69 @@ const Test3Reading2020 = () => {
                 }`}
               >
                 {renderText(
-                  "In this way, Moore's work became available to collectors all over the world."
-                )}
+                  " There are thought to be as many as 70 whistled languages still in use, though only 12 have been described and studied scientifically."
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
+                    {renderText("18")}
                   </span>
-                )}
+                )}{" "}
               </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The boost to his income enabled him to take on ambitious projects and start working on the scale he felt his sculpture demanded."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
-                  </span>
-                )}
-              </span>
-            </p>
-
+              {renderText(
+                ' Whistled languages survive today in Papua New Guinea, Mexico, Vietnam, Guyana, China, Nepal, Senegal, and a few mountainous pockets in southern Europe. This form of communication is an adaptation found among cultures where people are often isolated from each other, according to Julien Meyer, a researcher at the Institute of Human Sciences in Lyon, France. "They are mostly used in mountains or dense forests," he says. "Whistled languages are quite clearly defined and represent an original adaptation of the spoken language for the needs of isolated human groups."'
+              )}
+            </p>{" "}
             <br />
-
             <p className="text-lg">
+              {" "}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " But with modern communication technology now widely available, researchers say whistled languages like Silbo are threatened with extinction."
+                )}{" "}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("25")}
+                  </span>
+                )}{" "}
+              </span>
               {renderText(
-                "In his final years, Moore created the Henry Moore Foundation to promote art appreciation and to display his work. Moore was the first modern English sculptor to achieve international critical acclaim and he is still regarded as one of the most important sculptors of the 20th century."
+                " With dwindling numbers of Gomera islanders still fluent in the language, Canaries' authorities are taking steps to try to ensure its survival. "
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "  Since 1999, Silbo Gomero has been taught in all of the island's elementary schools."
+                )}{" "}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("19")}
+                  </span>
+                )}{" "}
+              </span>{" "}
+              {renderText(
+                " With dwindling numbers of Gomera islanders still fluent in the language, Canaries' authorities are taking steps to try to ensure its survival. In addition, locals are seeking assistance from the United Nations Educational, Scientific and Cultural Organization (UNESCO). "
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  '"The local authorities are trying to get an award from the organisation to declare [Silbo Gomero] as something that should be preserved for humanity," Carreiras adds.'
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
+                  </span>
+                )}{" "}
+              </span>
             </p>
           </div>
 
@@ -497,15 +439,15 @@ const Test3Reading2020 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           {/* 2nd step */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1-7")}
+            {renderText("Questions 14-19")}
           </h2>
           <br />
           <h3 className="text-lg font-semibold mb-5">
             {renderText(
-              "Do the following statements agree with the information given in Reading Passage 1?"
+              "Do the following statements agree with the information given in Reading Passage 2?"
             )}{" "}
             <br /> <br />
-            {renderText("In boxes 1-7 on your answer sheet, choose")}
+            {renderText("In boxes 14-19 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
             <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -522,9 +464,9 @@ const Test3Reading2020 = () => {
           <br /> <br />
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 1-7</h2>
+            <h2 className="text-lg font-bold">Questions 14-19</h2>
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 1;
+              const answerKey = qIndex + 14;
               const correct = correctAnswers[answerKey];
 
               return (
@@ -612,7 +554,7 @@ const Test3Reading2020 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 8-13")}
+              {renderText("Questions 20-26")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -626,167 +568,188 @@ const Test3Reading2020 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 8-13 on your answer sheet."
+                "Write your answers in boxes  20-26 on your answer sheet."
               )}
             </h1>
             <br />
           </div>
+          {/* box */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moore's career as an artist")}
+              {renderText("Silbo Gomero")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section 1: How Silbo is produced ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold  ">{renderText("1930s")}</h1>
-              <li className="text-lg">
-                Moore's exhibition at the Leicester Galleries is criticised by
-                the press
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Moore is urged to offer his")}</span>
-                <button
-                  onClick={() => toggleButton(8)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  8
-                </button>
-                <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>{renderText("and leave the Royal College.")}</span>
-              </li>
-            </ul>
-            {/* ---------- Section 2 ---------- */}
-            <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold mt-3 ">{renderText("1940s")}</h1>
+              <h1 className="text-lg font-bold">
+                {renderText("How Silbo is produced")}
+              </h1>
 
-              <li className="text-lg">
-                <span>{renderText("Moore turns to drawing because")}</span>
-                <button
-                  onClick={() => toggleButton(9)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  9
-                </button>
-                <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>
-                  {renderText("for sculpting are not readily available")}
-                </span>
-              </li>
-
-              <li className="text-lg">
-                <span>
-                  {renderText(
-                    "While visiting his hometown, Moore does some drawings of"
-                  )}
-                </span>
-                <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  10
-                </button>
-                <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>{renderText(".")}</span>
-              </li>
-              <li className="text-lg">
-                <span>
-                  {renderText("Moore is employed to produce a sculpture of a")}
-                </span>
-                <button
-                  onClick={() => toggleButton(11)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[11]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  11
-                </button>
-                <input
-                  value={userAnswers[11] || ""}
-                  onChange={(e) => handleInputChange(11, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-              </li>
-              <li className="text-lg">
-                <span>{renderText("")}</span>
-                <button
-                  onClick={() => toggleButton(12)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[12]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  12
-                </button>
-                <input
-                  value={userAnswers[12] || ""}
-                  onChange={(e) => handleInputChange(12, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                {renderText("start to buy Moore's work")}
-              </li>
-              <li className="text-lg">
-                <span>{renderText("Moore increased")}</span>
-                <button
-                  onClick={() => toggleButton(13)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[13]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  13
-                </button>
-                <input
-                  value={userAnswers[13] || ""}
-                  onChange={(e) => handleInputChange(13, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
+              <li className="text-lg flex items-center flex-wrap">
                 {renderText(
-                  "makes it possible for him to do more ambitious sculpture"
+                  "high- and low-frequency tones represent different sounds in Spanish"
                 )}
+                <button
+                  onClick={() => toggleButton(20)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[20]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  20
+                </button>
+                <input
+                  value={userAnswers[20] || ""}
+                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText("pitch of whistle is controlled using silbador's")}
+                <button
+                  onClick={() => toggleButton(21)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[21]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  21
+                </button>
+                <input
+                  value={userAnswers[21] || ""}
+                  onChange={(e) => handleInputChange(21, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText("is changed with a cupped hand")}
+                <button
+                  onClick={() => toggleButton(22)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[22]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  22
+                </button>
+                <input
+                  value={userAnswers[22] || ""}
+                  onChange={(e) => handleInputChange(22, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
               </li>
             </ul>
 
-            <ul className="list-disc list-inside space-y-3">
-              <h1 className="text-lg font-bold mt-3"> {renderText("1950s")}</h1>
+            {/* ---------- Section 2: How Silbo is used ---------- */}
+            <ul className="list-disc list-inside space-y-3 mt-3">
+              <h1 className="text-lg font-bold">
+                {renderText("How Silbo is used")}
+              </h1>
+
               <li className="text-lg">
                 {renderText(
-                  "Moore's series of bronze figures marks a further change in his style"
+                  "has long been used by shepherds and people living in secluded locations"
                 )}
               </li>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText("in everyday use for the transmission of brief")}
+                <button
+                  onClick={() => toggleButton(23)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[23]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  23
+                </button>
+                <input
+                  value={userAnswers[23] || ""}
+                  onChange={(e) => handleInputChange(23, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText(
+                  "can relay essential information quickly, e.g. to inform people about"
+                )}
+                <button
+                  onClick={() => toggleButton(24)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[24]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  24
+                </button>
+                <input
+                  value={userAnswers[24] || ""}
+                  onChange={(e) => handleInputChange(24, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+            </ul>
+
+            {/* ---------- Section 3: The future of Silbo ---------- */}
+            <ul className="list-disc list-inside space-y-3 mt-3">
+              <h1 className="text-lg font-bold">
+                {renderText("The future of Silbo")}
+              </h1>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText("future under threat because of new")}
+                <button
+                  onClick={() => toggleButton(25)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[25]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  25
+                </button>
+                <input
+                  value={userAnswers[25] || ""}
+                  onChange={(e) => handleInputChange(25, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg flex items-center flex-wrap">
+                {renderText("Canaries' authorities hoping to receive a UNESCO")}
+                <button
+                  onClick={() => toggleButton(26)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[26]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  26
+                </button>
+                <input
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">{renderText("to help preserve it")}</li>
             </ul>
           </div>
           <br />
@@ -816,11 +779,11 @@ const Test3Reading2020 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (27-40)
+                    All Answers (14-26)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -887,9 +850,9 @@ const Test3Reading2020 = () => {
           </div>
         </div>
       </div>
-      <Reading3Pagination2020></Reading3Pagination2020>
+      <Reading4Pagination2020></Reading4Pagination2020>
     </div>
   );
 };
 
-export default Test3Reading2020;
+export default Reading4Part22020;

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Writing2Pagination2020 from "../Pagination/writing1Pagination/Writing2Pagination2020";
+import Writing3Pagination2020 from "../Pagination/Writing2Pagination/Writing3Pagination2020";
 
 const Test2Writing2020 = () => {
   const [message, setMessage] = useState("");
@@ -49,9 +51,9 @@ const Test2Writing2020 = () => {
 
   return (
     <div className="px-3">
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6">
         {/* LEFT SIDE */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll  h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -132,7 +134,7 @@ const Test2Writing2020 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-1/2">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll  h-[1000px]">
           <textarea
             rows="16"
             placeholder="Please input"
@@ -169,6 +171,7 @@ const Test2Writing2020 = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing3Pagination2020></Writing3Pagination2020>
     </div>
   );
 };

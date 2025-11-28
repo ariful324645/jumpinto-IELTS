@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Writing5Pagination2020 from "../Pagination/Writing4Pagination/Writing5Pagination2020";
 
 const Test4Writing2020 = () => {
   const [message, setMessage] = useState("");
@@ -49,9 +50,9 @@ const Test4Writing2020 = () => {
 
   return (
     <div className="px-3">
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6">
         {/* LEFT SIDE */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll  h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -74,7 +75,7 @@ const Test4Writing2020 = () => {
             <div className="flex items-center justify-center">
               <img
                 className="w-96 h-96"
-                src="https://i.ibb.co.com/xq39g6qD/w-4.jpg"
+                src="https://i.ibb.co.com/fY4np92v/m-1.jpg"
                 alt="Eikhane image bosabo"
               />
             </div>
@@ -130,7 +131,7 @@ const Test4Writing2020 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-1/2">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll  h-[1000px]">
           <textarea
             rows="16"
             placeholder="Please input"
@@ -167,6 +168,7 @@ const Test4Writing2020 = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing5Pagination2020></Writing5Pagination2020>
     </div>
   );
 };

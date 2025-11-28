@@ -6,7 +6,7 @@ import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
 import Reading1Pagination2020 from "../../Pagination/Reading1Pagination/Reading1Pagination2020";
 
-const Readign1Part22020 = () => {
+const Readign1Part32020 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -16,35 +16,55 @@ const Readign1Part22020 = () => {
 
   // different option
   const questions = [
-    "Which benefit of automated vehicles is mentioned by the writer?",
-    "Which other benefit of automated vehicles is mentioned by the writer?",
-    "Which challenge to automated vehicle development is mentioned by the writer?",
-    "Which other challenge to automated vehicle development is mentioned by the writer?",
+    "The writer refers to visitors to New York to illustrate the point that",
+    "According to the second paragraph, what is the writer's view of explorers?",
+    "The writer refers to a description of Egdon Heath to suggest that",
+    "In the fourth paragraph, the writer refers to 'a golden age' to suggest that",
+    "In the sixth paragraph, when discussing the definition of exploration, the writer argues that",
+    "In the last paragraph, the writer explains that he is interested in",
   ];
 
   const options = [
     [
-      "A. Car travellers could enjoy considerable cost savings.",
-      "B. It would be easier to find parking spaces in urban areas.",
-      "C. Travellers could spend journeys doing something other than driving.",
+      "A. exploration is an intrinsic element of being human.",
+      "B. most people are enthusiastic about exploring.",
+      "C. exploration can lead to surprising results.",
+      "D. most people find exploration daunting.",
     ],
 
     [
-      "A. People who find driving physically difficult could travel independently.",
-      "B. A reduction in the number of cars would mean a reduction in pollution.",
-      "C. Travellers could spend journeys doing something other than driving.",
+      "A. Their discoveries have brought both benefits and disadvantages.",
+      "B. Their main value is in teaching others.",
+      "C. They act on an urge that is common to everyone.",
+      "D. They tend to be more attracted to certain professions than to others.",
     ],
 
     [
-      "A. Making sure the general public has confidence in automated vehicles",
-      "B. Managing the pace of transition from conventional to automated vehicles",
-      "C. Deciding how to compensate professional drivers who become redundant",
+      "A. Hardy was writing about his own experience of exploration.",
+      "B. Hardy was mistaken about the nature of exploration.",
+      "C. Hardy's aim was to investigate people's emotional states.",
+      "D. Hardy's aim was to show the attraction of isolation.",
     ],
 
     [
-      "A. Setting up the infrastructure to make roads suitable for automated vehicles",
-      "B. Getting automated vehicles to adapt to various different driving conditions",
-      "C. Managing the pace of transition from conventional to automated vehicles",
+      "A. the amount of useful information produced by exploration has decreased.",
+      "B. fewer people are interested in exploring than in the 19th century.",
+      "C. recent developments have made exploration less exciting.",
+      "D. we are wrong to think that exploration is no longer necessary.",
+    ],
+
+    [
+      "A. people tend to relate exploration to their own professional interests.",
+      "B. certain people are likely to misunderstand the nature of exploration.",
+      "C. the generally accepted definition has changed over time.",
+      "D. historians and scientists have more valid definitions than the general public.",
+    ],
+
+    [
+      "A. how someone's personality is reflected in their choice of places to visit.",
+      "B. the human ability to cast new light on places that may be familiar.",
+      "C. how travel writing has evolved to meet changing demands.",
+      "D. the feelings that writers develop about the places that they explore.",
     ],
   ];
 
@@ -73,7 +93,7 @@ const Readign1Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 23;
+      const answerKey = qIndex + 27;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -130,21 +150,21 @@ const Readign1Part22020 = () => {
   };
   // marks show
 const correctAnswers = {
-  14: "C",
-  15: "B",
-  16: "E",
-  17: "G",
-  18: "D",
-  19: "human",
-  20: "car-sharing",
-  21: "ownership",
-  22: "mileage",
-  23: "C. Travellers could spend journeys doing something other than driving",
-  24: "A. People who find driving physically difficult could travel independently.",
-  25: "A. Making sure the general public has confidence in automated vehicles",
-  26: "B. Getting automated vehicles to adapt to various different driving conditions",
+  27: "A. exploration is an intrinsic element of being human.",
+  28: "C. they act on an urge that is common to everyone.",
+  29: "C. Hardy's aim was to investigate people's emotional states.",
+  30: "D. we are wrong to think that exploration is no longer necessary.",
+  31: "A. people tend to relate exploration to their own professional interests.",
+  32: "B. the human ability to cast new light on places that may be familiar.",
+  33: "E",
+  34: "A",
+  35: "D",
+  36: "E",
+  37: "B",
+  38: "expeditions",
+  39: "uncontacted",
+  40: "surface",
 };
-
 
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -171,7 +191,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/reading1Part32020", newScore);
   };
 
   const handleClear = () => {
@@ -179,12 +199,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/reading1Part32020");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/reading1Part32020");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -200,7 +220,7 @@ const correctAnswers = {
           {/* Header */}
 
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("PASSAGE 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("PASSAGE 3")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -232,40 +252,28 @@ const correctAnswers = {
               </button>
             </div>
           )}
-
+          <div>
+            <h1 className="text-lg">
+              {renderText("You should spend about 20 minutes on ")}
+              <span className="text-lg font-bold">
+                {renderText("Questions 27-40")}
+              </span>
+              {renderText(", which are based on Reading Passage 1 below.")}
+            </h1>
+          </div>
           {/* left text */}
 
           <div className="">
-            <div>
-              <h1 className="text-lg">
-                {renderText("You should spend about 20 minutes on ")}
-                <span className="text-lg font-bold">
-                  {renderText("Questions 1-13")}
-                </span>
-                {renderText(", which are based on Reading Passage 1 below.")}
-              </h1>
-            </div>
-
-            <h1 className="text-2xl font-bold text-center mt-10">
-              {renderText("Driverless cars")}
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("What is exploration?")}
             </h1>
 
-            {/* Section A */}
-            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
-            <p className="text-lg">
+            <p className="text-lg my-5">
               {renderText(
-                "The automotive sector is well used to adapting to automation in manufacturing. The implementation of robotic car manufacture from the 1970s onwards led to significant cost savings and improvements in the reliability and flexibility of vehicle mass production. A new challenge to vehicle production is now on the horizon and, again, it comes from automation. However, this time it is not to do with the manufacturing process, but with the vehicles themselves."
+                "We are all explorers.Our desire to discover, and then share that new-found knowledge, is part of what makes us human - indeed, this has played an important part in our success as a species."
               )}
               {renderText(
-                "Research projects on vehicle automation are not new. Vehicles with limited self-driving capabilities have been around for more than 50 years, resulting in significant contributions towards driver assistance systems. But since Google announced in 2010 that it had been trialling self-driving cars on the streets of California, progress in this field has quickly gathered pace."
-              )}
-            </p>
-
-            {/* Section B */}
-            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
-            <p className="text-lg">
-              {renderText(
-                "There are many reasons why technology is advancing so fast."
+                "Long before the first caveman slumped down beside the fire and grunted news that there were plenty of wildebeest over yonder, our ancestors had learnt the value of sending out scouts to investigate the unknown."
               )}
               <span
                 className={`ml-2 ${
@@ -273,94 +281,174 @@ const correctAnswers = {
                 }`}
               >
                 {renderText(
-                  " One frequently cited motive is safety; indeed, research at the UK's Transport Research Laboratory has demonstrated that more than 90 percent of road collisions involve human error as a contributory factor, and it is the primary cause in the vast majority."
+                  "This questing nature of ours undoubtedly helped our species spread around the globe, just as it nowadays no doubt helps the last nomadic Penan maintain their existence in the depleted forests of Borneo, and a visitor negotiate the subways of New York."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("27")}
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Over the years, we've come to think of explorers as a peculiar breed - different from the rest of us, different from those of us who are merely 'well travelled', even; and perhaps there is a type of person more suited to seeking out the new, a type of caveman more inclined to risk venturing out."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "That, however, doesn't take away from the fact that we all have this enquiring instinct, even today; and that in all sorts of professions - whether artist, marine biologist or astronomer - borders of the unknown are being tested each day."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("28")}
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Thomas Hardy set some of his novels in Egdon Heath, a fictional area of uncultivated land, and used the landscape to suggest the desires and fears of his characters."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "He is delving into matters we all recognise because they are common to humanity."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("29")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "This is surely an act of exploration, and into a world as remote as the author chooses. Explorer and travel writer Peter Fleming talks of the moment when the explorer returns to the existence he has left behind with his loved ones."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("34")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                'The traveller "who has for weeks or months seen himself only as a puny and irrelevant alien crawling laboriously over a country in which he has no roots and no background, suddenly encounters his other self, a relatively solid figure, with a place in the minds of certain people".'
+              )}
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "In this book about the exploration of the earth's surface, I have confined myself to those whose travels were real and who also aimed at more than personal discovery. But that still left me with another problem: the word 'explorer' has become associated with a past era."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "We think back to a golden age, as if exploration peaked somehow in the 19th century - as if the process of discovery is now on the decline, though the truth is that we have named only one and a half million of this planet's species, and there may be more than 10 million - and that's not including bacteria."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("30")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "We have studied only 5 percent of the species we know. We have scarcely mapped the ocean floors, and know even less about ourselves; we fully understand the workings of only 10 percent of our brains."
+              )}
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Here is how some of today's 'explorers' define the word."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Ran Fiennes, dubbed the 'greatest living explorer', said, 'An explorer is someone who has done something that no human has done before - and also done something scientifically useful.'"
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("37")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                'Chris Bonington, a leading mountaineer, felt exploration was to be found in the act of physically touching the unknown: "You have to have gone somewhere new."'
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  'Then Robin Hanbury-Tenison, a campaigner on behalf of remote so-called "tribal" peoples, said, "A traveller simply records information about some far-off world, and reports back; but an explorer \'changes\' the world."'
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("35")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Wilfred Thesiger, who crossed Arabia's Empty Quarter in 1946, and belongs to an era of unmechanised travel now lost to the rest of us, told me, 'If I'd gone across by camel when I could have gone by car, it would have been a stunt.' To him, exploration meant bringing back information from a remote place regardless of any great self-discovery."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15,19")}
+                    {renderText("33,36")}
                   </span>
                 )}
               </span>
+            </p>
 
-              {renderText(
-                "Automation may help to reduce the incidence of this."
-              )}
+            <p className="text-lg my-5">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "Another aim is to free the time people spend driving for other purposes. "
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15")}
-                  </span>
-                )}
-                {renderText(
-                  "If the vehicle can do some or all of the driving, it may be possible to be productive, to socialise or simply to relax while automation systems have responsibility for safe control of the vehicle."
-                )}
-              </span>
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  {renderText("23")}
-                </span>
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "If the vehicle can do the driving, those who are challenged by existing mobility models – such as older or disabled travellers – may be able to enjoy significantly greater travel autonomy."
+                  "Each definition is slightly different - and tends to reflect the field of endeavour of each pioneer."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15,24")}
-                  </span>
-                )}
-              </span>
-            </p>
-
-            {/* Section C */}
-            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
-            <p className="text-lg">
-              {renderText(
-                "Beyond these direct benefits, we can consider the wider implications for transport and society, and how manufacturing processes might need to respond as a result.."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " At present, the average car spends more than 90 percent of its life parked."
-                )}{" "}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("14")}
-                  </span>
-                )}
-                {renderText(
-                  "Automation means that initiatives for car-sharing become much more viable, particularly in urban areas with significant travel demand."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("20")}
+                    {renderText("31")}
                   </span>
                 )}
               </span>
               {renderText(
-                " If a significant proportion of the population choose to use shared automated vehicles, mobility demand can be met by far fewer vehicles"
+                "It was the same whoever I asked: the prominent historian would say exploration was a thing of the past, the cutting-edge scientist would say it was of the present. And so on. They each set their own particular criteria; the common factor in their approach being that they all had, unlike many of us who simply enjoy travel or discovering new things, both a very definite objective from the outset and also a desire to record their findings."
               )}
             </p>
 
-            {/* Section D */}
-            <h1 className="text-lg font-bold  my-5">{renderText("D")}</h1>
-            <p className="text-lg">
+            <p className="text-lg my-5">
               {renderText(
-                "The Massachusetts Institute of Technology investigated automated mobility in Singapore, finding that fewer than 30 percent of the vehicles currently used would be required if fully automated car sharing could be implemented. If this is the case, it might mean that we need to manufacture far fewer vehicles to meet demand. However, the number of trips being taken would probably increase, partly because empty vehicles would have to be moved from one customer to the next."
+                "I'd best declare my own bias. As a writer, I'm interested in the exploration of ideas."
               )}
               <span
                 className={`ml-2 ${
@@ -368,106 +456,64 @@ const correctAnswers = {
                 }`}
               >
                 {renderText(
-                  "Modelling work by the University of Michigan Transportation Research Institute suggests automated vehicles might reduce vehicle ownership by 43 percent, but that vehicles' average annual mileage would double as a result."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("21,22")}
-                  </span>
-                )}
-              </span>
-              {renderText(
-                "As a consequence, each vehicle would be used more intensively, and might need replacing sooner. "
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "This faster rate of turnover may mean that vehicle production will not necessarily decrease."
+                  "I've done a great many expeditions and each one was unique"
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("18")}
+                    {renderText("38")}
                   </span>
                 )}
               </span>
-            </p>
-
-            {/* Section E */}
-            <h1 className="text-lg font-bold  my-5">{renderText("E")}</h1>
-            <p className="text-lg">
-              {renderText(
-                "Automation may prompt other changes in vehicle manufacture."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  " If we move to a model where consumers are tending not to own a single vehicle but to purchase access to a range of vehicles through a mobility provider, drivers will have the freedom to select one that best suits their needs for a particular journey, rather than making a compromise across all their requirements."
+                  "I've lived for months alone with isolated groups of people all around the world, even two 'uncontacted tribes'."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("16")}
+                    {renderText("39")}
                   </span>
                 )}
               </span>
               {renderText(
-                "Since, for most of the time, most of the seats in most cars are unoccupied, this may boost production of a smaller, more efficient range of vehicles that suit the needs of individuals."
+                "But none of these things is of the slightest interest to anyone unless, through my books, I've found a new slant, explored a new idea. Why? Because the world has moved on."
               )}
               {renderText(
-                "Specialised vehicles may then be available for exceptional journeys, such as going on a family camping trip or helping a son or daughter move to university."
+                "The time has long passed for the great continental voyages - another walk to the poles, another crossing of the Empty Quarter."
               )}
-            </p>
 
-            {/* Section F */}
-            <h1 className="text-lg font-bold  my-5">{renderText("F")}</h1>
-            <p className="text-lg">
-              {" "}
-              {renderText(
-                "There are a number of hurdles to overcome in delivering automated vehicles to our roads."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                {" "}
                 {renderText(
-                  " These include the technical difficulties in ensuring that the vehicle works reliably in the infinite range of traffic, weather and road situations it might encounter; the regulatory challenges in understanding how liability and enforcement might change when drivers are no longer essential for vehicle operation; and the societal changes that may be required for communities to trust and accept automated vehicles as being a valuable part of the mobility landscape."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("25,26")}
-                  </span>
-                )}
-              </span>
-            </p>
-
-            {/* Section G */}
-            <h1 className="text-lg font-bold  my-5">{renderText("G")}</h1>
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {" "}
-                {renderText(
-                  "It's clear that there are many challenges that need to be addressed but, through robust and targeted research, these can most probably be conquered within the next 10 years."
+                  "We know how the land surface of our planet lies; exploration of it is now down to the details - the habits of microbes, say, or the grazing behaviour of buffalo."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("17")}
+                    {renderText("40")}
                   </span>
                 )}
               </span>
-              {renderText(
-                "Mobility will change in such potentially significant ways and in association with so many other technological developments, such as telepresence and virtual reality, that it is hard to make concrete predictions about the future. However, one thing is certain: change is coming, and the need to be flexible in response to this will be vital for those involved in manufacturing the vehicles that will deliver future mobility."
-              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Aside from the deep sea and deep underground, it's the era of specialists. However, this is to disregard the role the human mind has in conveying remote places; and this is what interests me: how a fresh interpretation, even of a well-travelled route, can give its readers new insights."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("32")}
+                  </span>
+                )}
+              </span>
             </p>
           </div>
         </div>
@@ -517,343 +563,23 @@ const correctAnswers = {
               )}
             </div>
           </div>
-          {/* optional question */}
-          <div className="space-y-4">
-            <h1 className="text-lg font-bold">
-              {renderText("Questions 14-18")}
-            </h1>
-
-            <p>
-              {renderText("Reading Passage 1 has five paragraphs,")}
-              <span className="font-bold text-lg">{renderText(" A-G")}</span>
-            </p>
-
-            <p>
-              {renderText("Which section contains the following information?")}
-            </p>
-
-            <p>
-              {renderText("Choose the correct letter,")}
-              <span className="font-bold text-lg">{renderText(" A-G")}</span>
-              {renderText(", in boxes 14-18 on your answer sheet.")}
-            </p>
-
-            <p>
-              {renderText("Choose the correct letter,")}
-              <span className="font-bold text-lg">{renderText(" NB")}</span>
-              {renderText(" You may use any letter more than once.")}
-            </p>
-
-            {/* ---------- Question 1 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("14.")}</span>
-              <span>
-                {renderText(
-                  "reference to the amount of time when a car is not in use"
-                )}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[14] || ""}
-                  onChange={(e) => handleInputChange(14, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="1">{renderText("14")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 2 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
-              <span>
-                {renderText(
-                  "mention of several advantages of driverless vehicles for individual road-users"
-                )}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="15">{renderText("15")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 3 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span>
-                {renderText(
-                  "reference to the opportunity of choosing the most appropriate vehicle for each trip"
-                )}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="16">{renderText("16")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 4 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
-              {renderText(
-                "an estimate of how long it will take to overcome a number of problems"
-              )}
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-17 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="17">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 5 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              {renderText(
-                "why some measures intended to help people are being reversed"
-              )}
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="18">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-          </div>
-
-          {/* normal title*/}
-          <div className="space-y-4 leading-relaxed">
-            <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 19-22")}
-            </h2>
-
-            <h3 className="text-lg mb-5">
-              {renderText("Complete the notes below.")} <br /> <br />
-              {renderText("Choose")}{" "}
-              <span className="font-bold mr-2">
-                {renderText("ONE WORD ONLY")}
-              </span>{" "}
-              {renderText("from the passage for each answer.")}
-            </h3>
-
-            <h1 className="text-lg">
-              {renderText(
-                "Write your answers in boxes 19-22 on your answer sheet."
-              )}
-            </h1>
-
-            <br />
-          </div>
-
-          {/* box text */}
-          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("The impact of driverless cars")}
-            </h1>
-
-            {/* ---------- Section 1 ---------- */}
-            <ul className="list-disc list-inside space-y-3">
-              <p className="text-lg">
-                <span>
-                  {renderText(
-                    "Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to"
-                  )}
-                </span>
-                <button
-                  onClick={() => toggleButton(19)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[19]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  19
-                </button>
-                <input
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>
-                  {renderText(
-                    ", so the introduction of driverless vehicles will result in greater safety."
-                  )}
-                </span>
-              </p>
-
-              <p className="text-lg">
-                <span>
-                  {renderText(
-                    "In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for"
-                  )}
-                </span>
-                <button
-                  onClick={() => toggleButton(20)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[20]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  20
-                </button>
-                <input
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>
-                  {renderText(
-                    " will be more workable, especially in towns and cities, resulting in fewer cars on the road."
-                  )}
-                </span>
-              </p>
-
-              <p className="text-lg">
-                <span>
-                  {renderText(
-                    "According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in"
-                  )}
-                </span>
-                <button
-                  onClick={() => toggleButton(21)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[21]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  21
-                </button>
-                <input
-                  value={userAnswers[21] || ""}
-                  onChange={(e) => handleInputChange(21, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>{renderText(" of cars.")}</span>
-              </p>
-
-              <p className="text-lg">
-                <span>
-                  {renderText("However, this would mean that the yearly")}
-                </span>
-                <button
-                  onClick={() => toggleButton(22)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[22]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  22
-                </button>
-                <input
-                  value={userAnswers[22] || ""}
-                  onChange={(e) => handleInputChange(22, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>
-                  {renderText(
-                    " of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing."
-                  )}
-                </span>
-              </p>
-            </ul>
-          </div>
 
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 23-26")}
+              {renderText("Questions 27-40")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
+              <span className="font-bold">
+                {" "}
+                {renderText("  A, B , C or D")}
+              </span>
+              .
             </p>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 23;
+              const answerKey = qIndex + 27;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -894,6 +620,306 @@ const correctAnswers = {
               );
             })}
           </div>
+          {/* optional question */}
+          <div className="space-y-4">
+            <h1 className="text-lg font-bold">
+              {renderText("Questions 33-37")}
+            </h1>
+
+            <p>
+              {renderText("Reading Passage 1 has five paragraphs,")}
+              <span className="font-bold text-lg">{renderText(" A-E")}</span>
+            </p>
+
+            <p>
+              {renderText("Which section contains the following information?")}
+            </p>
+
+            <p>
+              {renderText("Choose the correct letter,")}
+              <span className="font-bold text-lg">{renderText(" A-E")}</span>
+              {renderText(", in boxes 33-37 on your answer sheet.")}
+            </p>
+
+            <p>
+              {renderText("Choose the correct letter,")}
+              <span className="font-bold text-lg">{renderText(" NB")}</span>
+              {renderText(" You may use any letter more than once.")}
+            </p>
+
+            <div className="flex items-center justify-center border border-black py-4 px-4 w-64 mx-auto">
+              <div className="text-center">
+                <h1 className="text-xl font-bold mb-5">List of Explorers</h1>
+
+                <ul className="space-y-1 text-lg">
+                  <li>{renderText("A. Peter Fleming")}</li>
+                  <li>{renderText("B. Ran Fiennes")}</li>
+                  <li>{renderText("C. Chris Bonington")}</li>
+                  <li>{renderText("D. Robin Hanbury-Tenison")}</li>
+                  <li>{renderText("E. Wilfred Thesiger")}</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* ---------- Question 1 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("33.")}</span>
+              <span>
+                {renderText(
+                  "reference to the amount of time when a car is not in use"
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="1">{renderText("33")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 2 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("34.")}</span>
+              <span>
+                {renderText(
+                  "mention of several advantages of driverless vehicles for individual road-users"
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="34">{renderText("34")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 3 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("35.")}</span>
+              <span>
+                {renderText(
+                  "reference to the opportunity of choosing the most appropriate vehicle for each trip"
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="35">{renderText("35")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+
+                  <option value="G">{renderText("G")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 4 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("36.")}</span>
+              {renderText(
+                "an estimate of how long it will take to overcome a number of problems"
+              )}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="36">{renderText("36")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 5 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("37.")}</span>
+              {renderText(
+                "why some measures intended to help people are being reversed"
+              )}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="37">{renderText("37")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+          </div>
+
+          {/* normal title*/}
+          <div className="space-y-4 leading-relaxed">
+            <h2 className="text-lg font-bold my-5">
+              {renderText("Questions 38-40")}
+            </h2>
+
+            <h3 className="text-lg mb-5">
+              {renderText("Complete the notes below.")} <br /> <br />
+              {renderText("Choose")}{" "}
+              <span className="font-bold mr-2">
+                {renderText("ONE WORD ONLY")}
+              </span>{" "}
+              {renderText("from the passage for each answer.")}
+            </h3>
+
+            <h1 className="text-lg">
+              {renderText(
+                "Write your answers in boxes 38-40 on your answer sheet."
+              )}
+            </h1>
+
+            <br />
+          </div>
+
+          {/* box text */}
+          <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
+            <h1 className="text-2xl font-bold text-center mb-4">
+              {renderText("The writer's own bias")}
+            </h1>
+
+            {/* ---------- Section ---------- */}
+            <ul className="list-disc list-inside space-y-3">
+              <p className="text-lg">
+                <span>
+                  {renderText("The writer has experience of a large number of")}
+                </span>
+
+                <button
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[38]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  38
+                </button>
+
+                <input
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+
+                <span>
+                  {renderText(
+                    ", and was the first stranger that certain previously"
+                  )}
+                </span>
+              </p>
+
+              <p className="text-lg">
+                <button
+                  onClick={() => toggleButton(39)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[39]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  39
+                </button>
+
+                <input
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+
+                <span>{renderText("people had encountered.")}</span>
+              </p>
+
+              <p className="text-lg">
+                <span>
+                  {renderText(
+                    "He believes there is no need for further exploration of Earth's"
+                  )}
+                </span>
+
+                <button
+                  onClick={() => toggleButton(40)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[40]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  40
+                </button>
+
+                <input
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+
+                <span>
+                  {renderText(
+                    ", except to answer specific questions such as how buffalo eat."
+                  )}
+                </span>
+              </p>
+            </ul>
+          </div>
 
           {/* ---------- Marks display ---------- */}
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
@@ -921,11 +947,11 @@ const correctAnswers = {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (14-26)
+                    All Answers (27-40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                    {Array.from({ length: 14 }, (_, i) => i + 27).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -997,4 +1023,4 @@ const correctAnswers = {
   );
 };
 
-export default Readign1Part22020;
+export default Readign1Part32020;

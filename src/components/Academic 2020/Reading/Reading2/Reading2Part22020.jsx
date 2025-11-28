@@ -4,9 +4,10 @@ import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 
 import { IoBookSharp } from "react-icons/io5";
-import Reading1Pagination2020 from "../../Pagination/Reading1Pagination/Reading1Pagination2020";
 
-const Readign1Part22020 = () => {
+import Reading2Pagination2020 from "../../Pagination/Reading2Pagination/Reading2Pagination2020";
+
+const Readign2Part22020 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -16,35 +17,55 @@ const Readign1Part22020 = () => {
 
   // different option
   const questions = [
-    "Which benefit of automated vehicles is mentioned by the writer?",
-    "Which other benefit of automated vehicles is mentioned by the writer?",
-    "Which challenge to automated vehicle development is mentioned by the writer?",
-    "Which other challenge to automated vehicle development is mentioned by the writer?",
+    "The writer refers to visitors to New York to illustrate the point that",
+    "According to the second paragraph, what is the writer's view of explorers?",
+    "The writer refers to a description of Egdon Heath to suggest that",
+    "In the fourth paragraph, the writer refers to 'a golden age' to suggest that",
+    "In the sixth paragraph, when discussing the definition of exploration, the writer argues that",
+    "In the last paragraph, the writer explains that he is interested in",
   ];
 
   const options = [
     [
-      "A. Car travellers could enjoy considerable cost savings.",
-      "B. It would be easier to find parking spaces in urban areas.",
-      "C. Travellers could spend journeys doing something other than driving.",
+      "A. exploration is an intrinsic element of being human.",
+      "B. most people are enthusiastic about exploring.",
+      "C. exploration can lead to surprising results.",
+      "D. most people find exploration daunting.",
     ],
 
     [
-      "A. People who find driving physically difficult could travel independently.",
-      "B. A reduction in the number of cars would mean a reduction in pollution.",
-      "C. Travellers could spend journeys doing something other than driving.",
+      "A. Their discoveries have brought both benefits and disadvantages.",
+      "B. Their main value is in teaching others.",
+      "C. They act on an urge that is common to everyone.",
+      "D. They tend to be more attracted to certain professions than to others.",
     ],
 
     [
-      "A. Making sure the general public has confidence in automated vehicles",
-      "B. Managing the pace of transition from conventional to automated vehicles",
-      "C. Deciding how to compensate professional drivers who become redundant",
+      "A. Hardy was writing about his own experience of exploration.",
+      "B. Hardy was mistaken about the nature of exploration.",
+      "C. Hardy's aim was to investigate people's emotional states.",
+      "D. Hardy's aim was to show the attraction of isolation.",
     ],
 
     [
-      "A. Setting up the infrastructure to make roads suitable for automated vehicles",
-      "B. Getting automated vehicles to adapt to various different driving conditions",
-      "C. Managing the pace of transition from conventional to automated vehicles",
+      "A. the amount of useful information produced by exploration has decreased.",
+      "B. fewer people are interested in exploring than in the 19th century.",
+      "C. recent developments have made exploration less exciting.",
+      "D. we are wrong to think that exploration is no longer necessary.",
+    ],
+
+    [
+      "A. people tend to relate exploration to their own professional interests.",
+      "B. certain people are likely to misunderstand the nature of exploration.",
+      "C. the generally accepted definition has changed over time.",
+      "D. historians and scientists have more valid definitions than the general public.",
+    ],
+
+    [
+      "A. how someone's personality is reflected in their choice of places to visit.",
+      "B. the human ability to cast new light on places that may be familiar.",
+      "C. how travel writing has evolved to meet changing demands.",
+      "D. the feelings that writers develop about the places that they explore.",
     ],
   ];
 
@@ -73,7 +94,7 @@ const Readign1Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 23;
+      const answerKey = qIndex + 14;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -130,21 +151,20 @@ const Readign1Part22020 = () => {
   };
   // marks show
 const correctAnswers = {
-  14: "C",
-  15: "B",
-  16: "E",
-  17: "G",
-  18: "D",
-  19: "human",
-  20: "car-sharing",
-  21: "ownership",
-  22: "mileage",
-  23: "C. Travellers could spend journeys doing something other than driving",
-  24: "A. People who find driving physically difficult could travel independently.",
-  25: "A. Making sure the general public has confidence in automated vehicles",
-  26: "B. Getting automated vehicles to adapt to various different driving conditions",
+  14: "F",
+  15: "A",
+  16: "D",
+  17: "A",
+  18: "genetic traits",
+  19: "heat loss",
+  20: "hair",
+  21: "fat",
+  22: "carbon emissions",
+  23: "B",
+  24: "C",
+  25: "A",
+  26: "C",
 };
-
 
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -171,7 +191,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/reading2Part22020", newScore);
   };
 
   const handleClear = () => {
@@ -179,12 +199,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/reading2Part22020");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/reading2Part22020");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -232,32 +252,64 @@ const correctAnswers = {
               </button>
             </div>
           )}
-
+          <div>
+            <h1 className="text-lg mb-10">
+              {renderText("You should spend about 20 minutes on ")}
+              <span className="text-lg font-bold">
+                {renderText("Questions 14-26")}
+              </span>
+              {renderText(", which are based on Reading Passage 1 below.")}
+            </h1>
+          </div>
           {/* left text */}
 
           <div className="">
-            <div>
-              <h1 className="text-lg">
-                {renderText("You should spend about 20 minutes on ")}
-                <span className="text-lg font-bold">
-                  {renderText("Questions 1-13")}
-                </span>
-                {renderText(", which are based on Reading Passage 1 below.")}
-              </h1>
-            </div>
-
-            <h1 className="text-2xl font-bold text-center mt-10">
-              {renderText("Driverless cars")}
+            <h1 className="text-2xl font-bold text-center">
+              {renderText(
+                "Should we try to bring extinct species back to life?"
+              )}
             </h1>
 
             {/* Section A */}
             <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
             <p className="text-lg">
               {renderText(
-                "The automotive sector is well used to adapting to automation in manufacturing. The implementation of robotic car manufacture from the 1970s onwards led to significant cost savings and improvements in the reliability and flexibility of vehicle mass production. A new challenge to vehicle production is now on the horizon and, again, it comes from automation. However, this time it is not to do with the manufacturing process, but with the vehicles themselves."
+                "The passenger pigeon was a legendary species. Flying in vast numbers across North America, with potentially many millions within a single flock, their migration was once one of nature's great spectacles. Sadly, the passenger pigeon's existence came to an end on 1 September 1914, when the last living specimen died at Cincinnati Zoo."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " Sadly, the passenger pigeon's existence came to an end on 1 September 1914, when the last living specimen died at Cincinnati Zoo."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("17")}
+                  </span>
+                )}
+              </span>
               {renderText(
-                "Research projects on vehicle automation are not new. Vehicles with limited self-driving capabilities have been around for more than 50 years, resulting in significant contributions towards driver assistance systems. But since Google announced in 2010 that it had been trialling self-driving cars on the streets of California, progress in this field has quickly gathered pace."
+                "Geneticist Ben Novak is lead researcher on an ambitious project which now aims to bring the bird back to life through a process known as 'de-extinction'."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The basic premise involves using cloning technology to turn the DNA of extinct animals into a fertilised embryo, which is carried by the nearest relative still in existence - in this case, the abundant band-tailed pigeon - before being born as a living, breathing animal."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("15")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "Passenger pigeons are one of the pioneering species in this field, but they are far from the only ones on which this cutting-edge technology is being trialled."
               )}
             </p>
 
@@ -265,7 +317,7 @@ const correctAnswers = {
             <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
             <p className="text-lg">
               {renderText(
-                "There are many reasons why technology is advancing so fast."
+                "In Australia, the thylacine, more commonly known as the Tasmanian tiger, is another extinct creature which genetic scientists are striving to bring back to life."
               )}
               <span
                 className={`ml-2 ${
@@ -273,133 +325,133 @@ const correctAnswers = {
                 }`}
               >
                 {renderText(
-                  " One frequently cited motive is safety; indeed, research at the UK's Transport Research Laboratory has demonstrated that more than 90 percent of road collisions involve human error as a contributory factor, and it is the primary cause in the vast majority."
+                  '"There is no carnivore now in Tasmania that fills the niche which thylacines once occupied," explains Michael Archer of the University of New South Wales.'
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15,19")}
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("23")}
                   </span>
                 )}
               </span>
-
               {renderText(
-                "Automation may help to reduce the incidence of this."
+                "He points out that in the decades since the thylacine went extinct, there has been a spread in a 'dangerously debilitating' facial tumour syndrome which threatens the existence of the Tasmanian devils, the island's other notorious resident."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Another aim is to free the time people spend driving for other purposes. "
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15")}
-                  </span>
-                )}
-                {renderText(
-                  "If the vehicle can do some or all of the driving, it may be possible to be productive, to socialise or simply to relax while automation systems have responsibility for safe control of the vehicle."
-                )}
-              </span>
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  {renderText("23")}
-                </span>
+              {renderText(
+                "Thylacines would have prevented this spread because they would have killed significant numbers of Tasmanian devils. If that contagious cancer had popped up previously, it would have burned out in whatever region it started. The return of thylacines to Tasmania could help to ensure that devils are never again subjected to risks of this kind."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "If the vehicle can do the driving, those who are challenged by existing mobility models – such as older or disabled travellers – may be able to enjoy significantly greater travel autonomy."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("15,24")}
-                  </span>
-                )}
-              </span>
             </p>
 
             {/* Section C */}
             <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
             <p className="text-lg">
               {renderText(
-                "Beyond these direct benefits, we can consider the wider implications for transport and society, and how manufacturing processes might need to respond as a result.."
+                "If extinct species can be brought back to life, can humanity begin to correct the damage it has caused to the natural world over the past few millennia?"
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " At present, the average car spends more than 90 percent of its life parked."
-                )}{" "}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("14")}
-                  </span>
-                )}
-                {renderText(
-                  "Automation means that initiatives for car-sharing become much more viable, particularly in urban areas with significant travel demand."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("20")}
-                  </span>
-                )}
-              </span>
+
               {renderText(
-                " If a significant proportion of the population choose to use shared automated vehicles, mobility demand can be met by far fewer vehicles"
+                '"The idea of de-extinction is that we can reverse this process, bringing species that no longer exist back to life," says Beth Shapiro of University of California Santa Cruz\'s Genomics Institute.'
+              )}
+              {renderText(
+                "She explains that there is no way to bring back something that is 100 percent identical to a species that went extinct a long time ago. A more practical approach for long-extinct species is to take the DNA of existing species as a template, ready for the insertion of strands of extinct animal DNA to create something new; a hybrid, based on the living species, but which looks and/or acts like the animal which died out."
               )}
             </p>
 
             {/* Section D */}
-            <h1 className="text-lg font-bold  my-5">{renderText("D")}</h1>
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
             <p className="text-lg">
               {renderText(
-                "The Massachusetts Institute of Technology investigated automated mobility in Singapore, finding that fewer than 30 percent of the vehicles currently used would be required if fully automated car sharing could be implemented. If this is the case, it might mean that we need to manufacture far fewer vehicles to meet demand. However, the number of trips being taken would probably increase, partly because empty vehicles would have to be moved from one customer to the next."
+                "This complicated process and questionable outcome begs the question: what is the actual point of this technology?"
               )}
+
+              {renderText(
+                '"For us, the goal has always been replacing the extinct species with a suitable replacement," explains Novak.'
+              )}
+              {renderText(
+                "He explains that band-tailed pigeons scatter and make maybe one or two nests per hectare, whereas passenger pigeons were very social and would make 10,000 or more nests in one hectare. Since the disappearance of this key species, ecosystems in the eastern US have suffered, as the lack of disturbance caused by thousands of passenger pigeons wrecking trees and branches means there has been minimal need for regrowth."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "Modelling work by the University of Michigan Transportation Research Institute suggests automated vehicles might reduce vehicle ownership by 43 percent, but that vehicles' average annual mileage would double as a result."
+                  " Since the disappearance of this key species, ecosystems in the eastern US have suffered, as the lack of disturbance caused by thousands of passenger pigeons wrecking trees and branches means there has been minimal need for regrowth."
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("21,22")}
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("16")}
                   </span>
                 )}
               </span>
+
               {renderText(
-                "As a consequence, each vehicle would be used more intensively, and might need replacing sooner. "
+                "This has left forests stagnant and therefore unwelcoming to the plants and animals which evolved to help regenerate the forest after a disturbance."
               )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "This faster rate of turnover may mean that vehicle production will not necessarily decrease."
+                  "According to Novak, a hybridised band-tailed pigeon, with the added nesting habits of a passenger pigeon, could, in theory, re-establish that forest disturbance, thereby creating a habitat necessary for a great many other native species to thrive."
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("18")}
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("25")}
                   </span>
                 )}
               </span>
             </p>
 
             {/* Section E */}
-            <h1 className="text-lg font-bold  my-5">{renderText("E")}</h1>
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
             <p className="text-lg">
               {renderText(
-                "Automation may prompt other changes in vehicle manufacture."
+                "Another popular candidate for this technology is the woolly mammoth."
+              )}
+              {renderText(
+                "George Church, professor at Harvard Medical School and leader of the Woolly Mammoth Revival Project, has been focusing on cold resistance, the main way in which the extinct woolly mammoth and its nearest living relative, the Asian elephant, differ."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "By pinpointing which genetic traits made it possible for mammoths to survive the icy climate of the tundra, the project's goal is to return mammoths, or a mammoth-like species, to the area."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("18")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                '"My highest priority would be preserving the endangered Asian elephant," says Church, "expanding their range to the huge ecosystem of the tundra."'
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  '" Necessary adaptations would include smaller ears, thicker hair, and extra insulating fat, all for the purpose of reducing heat loss in the tundra, and all traits found in the now extinct woolly mammoth."'
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-16 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("19,20,21")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "This repopulation of the tundra and boreal forests of Eurasia and North America with large mammals could also be a useful factor in reducing carbon emissions - elephants punch holes through snow and knock down trees, which encourages grass growth."
               )}
               <span
                 className={`ml-2 ${
@@ -407,67 +459,51 @@ const correctAnswers = {
                 }`}
               >
                 {renderText(
-                  " If we move to a model where consumers are tending not to own a single vehicle but to purchase access to a range of vehicles through a mobility provider, drivers will have the freedom to select one that best suits their needs for a particular journey, rather than making a compromise across all their requirements."
+                  '"  This grass growth would reduce temperatures, and mitigate emissions from melting permafrost."'
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("16")}
+                  <span className="inline-flex items-center justify-center w-16 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("22")}
                   </span>
                 )}
               </span>
-              {renderText(
-                "Since, for most of the time, most of the seats in most cars are unoccupied, this may boost production of a smaller, more efficient range of vehicles that suit the needs of individuals."
-              )}
-              {renderText(
-                "Specialised vehicles may then be available for exceptional journeys, such as going on a family camping trip or helping a son or daughter move to university."
-              )}
             </p>
 
             {/* Section F */}
-            <h1 className="text-lg font-bold  my-5">{renderText("F")}</h1>
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
             <p className="text-lg">
-              {" "}
               {renderText(
-                "There are a number of hurdles to overcome in delivering automated vehicles to our roads."
+                "While the prospect of bringing extinct animals back to life might capture imaginations, it is, of course, far easier to try to save an existing species which is merely threatened with extinction.Many of the technologies that people have in mind when they think about de-extinction can be used as a form of 'genetic rescue',\" explains Shapiro."
               )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                {" "}
                 {renderText(
-                  " These include the technical difficulties in ensuring that the vehicle works reliably in the infinite range of traffic, weather and road situations it might encounter; the regulatory challenges in understanding how liability and enforcement might change when drivers are no longer essential for vehicle operation; and the societal changes that may be required for communities to trust and accept automated vehicles as being a valuable part of the mobility landscape."
+                  '" She prefers to focus the debate on how this emerging technology could be used to fully understand why various species went extinct in the first place, and therefore how we could use it to make genetic modifications which could prevent mass extinctions in the future.'
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("25,26")}
+                    {renderText("14,24")}
                   </span>
                 )}
               </span>
-            </p>
 
-            {/* Section G */}
-            <h1 className="text-lg font-bold  my-5">{renderText("G")}</h1>
-            <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                {" "}
                 {renderText(
-                  "It's clear that there are many challenges that need to be addressed but, through robust and targeted research, these can most probably be conquered within the next 10 years."
+                  '"I would also say there\'s an incredible moral hazard to not do anything at all," she continues, "We know that what we are doing today is not enough, and we have to be willing to take some calculated and measured risks."'
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("17")}
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
                   </span>
                 )}
               </span>
-              {renderText(
-                "Mobility will change in such potentially significant ways and in association with so many other technological developments, such as telepresence and virtual reality, that it is hard to make concrete predictions about the future. However, one thing is certain: change is coming, and the need to be flexible in response to this will be vital for those involved in manufacturing the vehicles that will deliver future mobility."
-              )}
             </p>
           </div>
         </div>
@@ -517,25 +553,28 @@ const correctAnswers = {
               )}
             </div>
           </div>
+
           {/* optional question */}
           <div className="space-y-4">
             <h1 className="text-lg font-bold">
-              {renderText("Questions 14-18")}
+              {renderText("Questions 14-17")}
             </h1>
 
             <p>
-              {renderText("Reading Passage 1 has five paragraphs,")}
-              <span className="font-bold text-lg">{renderText(" A-G")}</span>
+              {renderText("Reading Passage 2 has six paragraphs,")}
+              <span className="font-bold text-lg">{renderText(" A-F")}</span>
             </p>
 
             <p>
-              {renderText("Which section contains the following information?")}
+              {renderText(
+                "Which paragraph contains the following information?"
+              )}
             </p>
 
             <p>
               {renderText("Choose the correct letter,")}
-              <span className="font-bold text-lg">{renderText(" A-G")}</span>
-              {renderText(", in boxes 14-18 on your answer sheet.")}
+              <span className="font-bold text-lg">{renderText(" A-F")}</span>
+              {renderText(", in boxes 14-17 on your answer sheet.")}
             </p>
 
             <p>
@@ -549,7 +588,7 @@ const correctAnswers = {
               <span className="font-bold text-lg">{renderText("14.")}</span>
               <span>
                 {renderText(
-                  "reference to the amount of time when a car is not in use"
+                  "reference to how further disappearance of multiple species could be avoided"
                 )}
               </span>
 
@@ -559,15 +598,13 @@ const correctAnswers = {
                   onChange={(e) => handleInputChange(14, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="1">{renderText("14")}</option>
+                  <option value="14">{renderText("14")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
                   <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -581,7 +618,7 @@ const correctAnswers = {
               <span className="font-bold text-lg">{renderText("15.")}</span>
               <span>
                 {renderText(
-                  "mention of several advantages of driverless vehicles for individual road-users"
+                  "explanation of a way of reproducing an extinct animal using the DNA of only that species"
                 )}
               </span>
 
@@ -598,8 +635,6 @@ const correctAnswers = {
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
                   <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -613,7 +648,7 @@ const correctAnswers = {
               <span className="font-bold text-lg">{renderText("16.")}</span>
               <span>
                 {renderText(
-                  "reference to the opportunity of choosing the most appropriate vehicle for each trip"
+                  "reference to a habitat which has suffered following the extinction of a species"
                 )}
               </span>
 
@@ -630,7 +665,6 @@ const correctAnswers = {
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
                   <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -642,14 +676,17 @@ const correctAnswers = {
             {/* ---------- Question 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("17.")}</span>
-              {renderText(
-                "an estimate of how long it will take to overcome a number of problems"
-              )}
+              <span>
+                {renderText(
+                  "mention of the exact point at which a particular species became extinct"
+                )}
+              </span>
+
               <div className="relative w-40">
                 <select
                   value={userAnswers[17] || ""}
                   onChange={(e) => handleInputChange(17, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-17 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
                   <option value="17">{renderText("17")}</option>
                   <option value="A">{renderText("A")}</option>
@@ -658,37 +695,6 @@ const correctAnswers = {
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
                   <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 5 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              {renderText(
-                "why some measures intended to help people are being reversed"
-              )}
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="18">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -697,25 +703,24 @@ const correctAnswers = {
               </div>
             </p>
           </div>
-
           {/* normal title*/}
           <div className="space-y-4 leading-relaxed">
-            <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 19-22")}
+            <h2 className="text-lg font-bold my-5">
+              {renderText("Questions 18-22")}
             </h2>
 
             <h3 className="text-lg mb-5">
-              {renderText("Complete the notes below.")} <br /> <br />
+              {renderText("Complete the summary below.")} <br /> <br />
               {renderText("Choose")}{" "}
               <span className="font-bold mr-2">
-                {renderText("ONE WORD ONLY")}
+                {renderText("NO MORE THAN TWO WORDS")}
               </span>{" "}
               {renderText("from the passage for each answer.")}
             </h3>
 
             <h1 className="text-lg">
               {renderText(
-                "Write your answers in boxes 19-22 on your answer sheet."
+                "Write your answers in boxes 18-22 on your answer sheet."
               )}
             </h1>
 
@@ -725,17 +730,48 @@ const correctAnswers = {
           {/* box text */}
           <div className="overflow-x-auto border-2 p-5 border-black bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("The impact of driverless cars")}
+              {renderText("The woolly mammoth revival project")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section ---------- */}
             <ul className="list-disc list-inside space-y-3">
               <p className="text-lg">
                 <span>
                   {renderText(
-                    "Figures from the Transport Research Laboratory indicate that most motor accidents are partly due to"
+                    "Professor George Church and his team are trying to identify the"
                   )}
                 </span>
+
+                <button
+                  onClick={() => toggleButton(18)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[18]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  18
+                </button>
+
+                <input
+                  value={userAnswers[18] || ""}
+                  onChange={(e) => handleInputChange(18, e.target.value)}
+                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                  type="text"
+                />
+
+                <span>
+                  {renderText("which enabled mammoths to live in the tundra.")}
+                </span>
+              </p>
+
+              <p className="text-lg">
+                <span>
+                  {renderText(
+                    "According to Church, introducing Asian elephants to the tundra would involve certain physical adaptations to minimise"
+                  )}
+                </span>
+
                 <button
                   onClick={() => toggleButton(19)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -746,25 +782,22 @@ const correctAnswers = {
                 >
                   19
                 </button>
+
                 <input
                   value={userAnswers[19] || ""}
                   onChange={(e) => handleInputChange(19, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText(
-                    ", so the introduction of driverless vehicles will result in greater safety."
-                  )}
-                </span>
               </p>
 
               <p className="text-lg">
                 <span>
                   {renderText(
-                    "In addition to the direct benefits of automation, it may bring other advantages. For example, schemes for"
+                    "To survive in the tundra, the species would need to have the mammoth-like features of thicker hair,"
                   )}
                 </span>
+
                 <button
                   onClick={() => toggleButton(20)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -775,25 +808,18 @@ const correctAnswers = {
                 >
                   20
                 </button>
+
                 <input
                   value={userAnswers[20] || ""}
                   onChange={(e) => handleInputChange(20, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText(
-                    " will be more workable, especially in towns and cities, resulting in fewer cars on the road."
-                  )}
-                </span>
+
+                <span>{renderText("of a reduced size and more")}</span>
               </p>
 
               <p className="text-lg">
-                <span>
-                  {renderText(
-                    "According to the University of Michigan Transportation Research Institute, there could be a 43 percent drop in"
-                  )}
-                </span>
                 <button
                   onClick={() => toggleButton(21)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -804,19 +830,22 @@ const correctAnswers = {
                 >
                   21
                 </button>
+
                 <input
                   value={userAnswers[21] || ""}
                   onChange={(e) => handleInputChange(21, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>{renderText(" of cars.")}</span>
               </p>
 
               <p className="text-lg">
                 <span>
-                  {renderText("However, this would mean that the yearly")}
+                  {renderText(
+                    "Repopulating the tundra with mammoths or Asian elephant/mammoth hybrids would also have an impact on the environment, which could help to reduce temperatures and decrease"
+                  )}
                 </span>
+
                 <button
                   onClick={() => toggleButton(22)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -827,72 +856,164 @@ const correctAnswers = {
                 >
                   22
                 </button>
+
                 <input
                   value={userAnswers[22] || ""}
                   onChange={(e) => handleInputChange(22, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
-                <span>
-                  {renderText(
-                    " of each car would, on average, be twice as high as it currently is. This would lead to a higher turnover of vehicles, and therefore no reduction in automotive manufacturing."
-                  )}
-                </span>
               </p>
             </ul>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
+          {/* optional question */}
+          <div className="space-y-4">
+            <h1 className="text-lg font-bold">
               {renderText("Questions 23-26")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
+            </h1>
+
+            <p>
+              {renderText(
+                "Look at the following statements (Questions 23-26) and the list of people below."
+              )}
             </p>
 
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 23;
+            <p>
+              {renderText("Match each statement with the correct person,")}
+              <span className="font-bold text-lg">{renderText(" A-C")}</span>.
+            </p>
 
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
+            <p>
+              {renderText(
+                "Choose the correct letter, A-C, in boxes 23-26 on your answer sheet."
+              )}
+            </p>
 
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
+            <p>{renderText("NB You may use any letter more than once.")}</p>
 
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
+            {/* ---------- List of People ---------- */}
+            <div className="flex items-center justify-center border border-black py-4 px-4 w-64 mx-auto">
+              <div className="text-center">
+                <h1 className="text-xl font-bold mb-5">
+                  {renderText("List of People")}
+                </h1>
 
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
+                <ul className="space-y-1 text-lg">
+                  <li>{renderText("A. Ben Novak")}</li>
+                  <li>{renderText("B. Michael Archer")}</li>
+                  <li>{renderText("C. Beth Shapiro")}</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* ---------- Question 23 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("23.")}</span>
+              <span>
+                {renderText(
+                  "Reintroducing an extinct species to its original habitat could improve the health of a particular species living there."
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[23] || ""}
+                  onChange={(e) => handleInputChange(23, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="23">{renderText("23")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 24 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("24.")}</span>
+              <span>
+                {renderText(
+                  "It is important to concentrate on the causes of an animal's extinction."
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[24] || ""}
+                  onChange={(e) => handleInputChange(24, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="24">{renderText("24")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 25 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("25.")}</span>
+              <span>
+                {renderText(
+                  "A species brought back from extinction could have an important beneficial impact on the vegetation of its habitat."
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[25] || ""}
+                  onChange={(e) => handleInputChange(25, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="25">{renderText("25")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 26 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("26.")}</span>
+              <span>
+                {renderText(
+                  "Our current efforts at preserving biodiversity are insufficient."
+                )}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="26">{renderText("26")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -914,7 +1035,7 @@ const correctAnswers = {
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
                   <h1 className="text-3xl font-bold mb-2"> Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    Your Score: {score}/12
                   </p>
                 </div>
 
@@ -925,7 +1046,7 @@ const correctAnswers = {
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                    {Array.from({ length: 12 }, (_, i) => i + 14).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -992,9 +1113,9 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Reading1Pagination2020></Reading1Pagination2020>
+      <Reading2Pagination2020></Reading2Pagination2020>
     </div>
   );
 };
 
-export default Readign1Part22020;
+export default Readign2Part22020;

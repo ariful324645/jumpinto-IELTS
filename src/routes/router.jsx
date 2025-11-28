@@ -131,6 +131,17 @@ import Listening4Part22020 from "../components/Academic 2020/Listening/Listening
 import Listening4Part32020 from "../components/Academic 2020/Listening/Listening4/Listening4Part32020";
 import Listening4Part42020 from "../components/Academic 2020/Listening/Listening4/Listening4Part42020";
 import Reading1Part22020 from "../components/Academic 2020/Reading/Reading1/Reading1Part22020";
+import Reading1Part32020 from "../components/Academic 2020/Reading/Reading1/Reading1Part32020";
+import Reading2Part22020 from "../components/Academic 2020/Reading/Reading2/Reading2Part22020";
+import Reading2Part32020 from "../components/Academic 2020/Reading/Reading2/Reading2Part32020";
+import Reading3Part22020 from "../components/Academic 2020/Reading/Reading3/Reading3Part22020";
+import Reading3Part32020 from "../components/Academic 2020/Reading/Reading3/Reading3Part32020";
+import Reading4Part22020 from "../components/Academic 2020/Reading/Reading4/Reading4Part22020";
+import Reading4Part32020 from "../components/Academic 2020/Reading/Reading4/Reading4Part32020";
+import Writing1Part22020 from "../components/Academic 2020/Writing/Writing1/Writing1Part22020";
+import Writing2Part22020 from "../components/Academic 2020/Writing/Writing2/Writing2Part22020";
+import Writing3Part22020 from "../components/Academic 2020/Writing/Writing3/Writing3Part22020";
+import Writing4Part22020 from "../components/Academic 2020/Writing/Writing4/Writing4Part22020";
 
 export const router = createBrowserRouter([
   {
@@ -562,32 +573,76 @@ export const router = createBrowserRouter([
         Component: Reading1Part22020,
       },
       {
+        path: "/Reading1Part32020",
+        Component: Reading1Part32020,
+      },
+      {
         path: "/2020/Test 2/reading",
         Component: Test2Reading2020,
+      },
+      {
+        path: "/Reading2Part22020",
+        Component: Reading2Part22020,
+      },
+      {
+        path: "/Reading2Part32020",
+        Component: Reading2Part32020,
       },
       {
         path: "/2020/Test 3/reading",
         Component: Test3Reading2020,
       },
       {
+        path: "/Reading3Part22020",
+        Component: Reading3Part22020,
+      },
+      {
+        path: "/Reading3Part32020",
+        Component: Reading3Part32020,
+      },
+      {
         path: "/2020/Test 4/reading",
         Component: Test4Reading2020,
+      },
+      {
+        path: "/Reading4Part22020",
+        Component: Reading4Part22020,
+      },
+      {
+        path: "/Reading4Part32020",
+        Component: Reading4Part32020,
       },
       {
         path: "/2020/Test 1/writing",
         Component: Test1Writing2020,
       },
       {
+        path: "/Writing1Part22020",
+        Component: Writing1Part22020,
+      },
+      {
         path: "/2020/Test 2/writing",
         Component: Test2Writing2020,
+      },
+      {
+        path: "/Writing2Part22020",
+        Component: Writing2Part22020,
       },
       {
         path: "/2020/Test 3/writing",
         Component: Test3Writing2020,
       },
       {
+        path: "/Writing3Part22020",
+        Component: Writing3Part22020,
+      },
+      {
         path: "/2020/Test 4/writing",
         Component: Test4Writing2020,
+      },
+      {
+        path: "/Writing4Part22020",
+        Component: Writing4Part22020,
       },
       {
         path: "/2020/Test 1/speaking",
