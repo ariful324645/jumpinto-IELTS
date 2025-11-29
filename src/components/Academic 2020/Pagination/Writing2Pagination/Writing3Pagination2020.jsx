@@ -12,10 +12,10 @@ const Writing3Pagination2020 = () => {
   const [rightIndex, setRightIndex] = React.useState(2);
 
   const topicLinks = {
-    Listening: "/2025/Test%202/listening",
-    Reading: "/2025/Test%201/reading",
-    Writing: "/2025/Test%203/listening",
-    Speaking: "/2025/Test%204/listening",
+    Listening: "/2020/Test%202/listening",
+    Reading: "/2020/Test%202/reading",
+    Writing: "/2020/Test%202/writing",
+    Speaking: "/2020/Test%202/speaking",
   };
 
 //   const centerLinks = ["/2020/Test%202/writing", "/Writing2Part22020"];

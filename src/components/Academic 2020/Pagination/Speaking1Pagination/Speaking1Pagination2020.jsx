@@ -2,20 +2,20 @@ import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link, useLocation } from "react-router";
 
-const Listening1Pagination = () => {
+const Speaking1Pagination2020 = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const sideButtonsList = ["listening","Reading", "Writing", "Speaking"];
+  const sideButtonsList = ["Listening", "Reading", "Writing", "Speaking"];
 
   const [leftIndex, setLeftIndex] = React.useState(0);
   const [rightIndex, setRightIndex] = React.useState(2);
 
   const topicLinks = {
     Listening: "/2020/Test%201/listening",
-    Reading: "/2020/Test%201/reading",
-    Writing: "/2020/Test%201/writing",
-    Speaking: "/2020/Test%201/speaking",
+    Reading: "/2020/Test%202/reading",
+    Writing: "/2020/Test%203/writing",
+    Speaking: "/2020/Test%204/speaking",
   };
 
   const rotateLeft = () => {
@@ -33,11 +33,9 @@ const Listening1Pagination = () => {
   };
 
   const centerLinks = [
-    "/2020/Test%201/listening",
-
-    "/listening1Part22020", // page 2
-    "/listening1Part32020", // page 3
-    "/listening1Part42020",
+    "/2020/Test%201/speaking",
+    "/Speaking1Part22020",
+    "/Speaking1Part32020",
   ];
 
   // ---------- Detect Active Page ----------
@@ -85,4 +83,4 @@ const Listening1Pagination = () => {
   );
 };
 
-export default Listening1Pagination;
+export default Speaking1Pagination2020;

@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
 
-const Test1Speaking2020 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+import Speaking2Pagination2020 from "../../Pagination/Speaking2Pagination/Speaking2Pagination2020";
+
+const Speaking2Part22020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,19 +18,18 @@ const Test1Speaking2020 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-  const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
-  ];
+const questions = [
+  "What the website is?",
+  "What you bought from this website?",
+  "How satisfied you were with what you bought?",
+];
 
-  const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
-  ];
+const questionKeywords = [
+  ["website", "online", "platform", "store", "shop", "ecommerce"],
+  ["bought", "purchase", "item", "product", "order"],
+  ["satisfied", "happy", "quality", "experience", "review", "feedback"],
+];
+
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -182,28 +182,28 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <h1 className="text-2xl font-bold">PART 2</h1> <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
-            <li>
-              What kinds of emails do you receive about your work or studies?
-            </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
-            <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
-            </li>
-            <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A website that you bought something from
+            </h1>
+            <p className="text-lg font-bold">
+              Describe a website that you bought something from.
+            </p>
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>what the website is</li>
+            <li>what you bought from this website</li>
+            <li>how satisfied you were with what you bought</li>
           </ul>
+          <p className="text-lg font-bold mt-3">
+            and explain what you liked or disliked about using this website.
+          </p>
         </div>
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
@@ -261,9 +261,9 @@ const Test1Speaking2020 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2020></Speaking1Pagination2020>
+      <Speaking2Pagination2020></Speaking2Pagination2020>
     </div>
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking2Part22020;

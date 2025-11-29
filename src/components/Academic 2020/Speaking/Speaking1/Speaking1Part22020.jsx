@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
+import Speaking1Pagination2020 from "../../Pagination/Speaking1Pagination/Speaking1Pagination2020";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
 
-const Test1Speaking2020 = () => {
+const Speaking1Part22020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -18,17 +18,23 @@ const Test1Speaking2020 = () => {
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
   const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
+    "Where this hotel is?",
+    "What this hotel looks like?",
+    "What facilities this hotel has?",
   ];
 
   const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
+    ["location", "place", "area", "situated", "where", "hotel location"],
+    ["appearance", "look", "design", "style", "building", "outside", "inside"],
+    [
+      "facilities",
+      "services",
+      "amenities",
+      "features",
+      "gym",
+      "pool",
+      "restaurant",
+    ],
   ];
 
   // ▶ Speak current question
@@ -182,28 +188,26 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <h1 className="text-2xl font-bold">PART 2</h1> <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
-            <li>
-              What kinds of emails do you receive about your work or studies?
-            </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
-            <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
-            </li>
-            <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A hotel that you know
+            </h1>
+            <p className="text-lg font-bold">Describe a hotel that you know.</p>
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>where this hotel is</li>
+            <li>what this hotel looks like</li>
+            <li>what facilities this hotel has</li>
           </ul>
+          <p className="text-lg font-bold mt-3">
+            and explain whether you think this is a nice hotel to stay in.
+          </p>
         </div>
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
@@ -266,4 +270,4 @@ const Test1Speaking2020 = () => {
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking1Part22020;

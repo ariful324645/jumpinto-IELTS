@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking2Pagination2020 from "../Pagination/Speaking2Pagination/Speaking2Pagination2020";
 
 const Test2Speaking2020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,45 +17,42 @@ const Test2Speaking2020 = () => {
 
   const storageKey = "/2020/Test 2/speaking"; // ✅ localStorage key
 
-  const questions = [
-    "Which social media websites do you use",
-    "How much time do you spend on social media sites",
-    "What kind of information about yourself have you put on social media",
-    "Is there anything you don't like about social media",
-  ];
+const questions = [
+  "How many languages can you speak? [Why/Why not?]",
+  "How useful will English be to you in your future? [Why/Why not?]",
+  "What do you remember about learning languages at school? [Why/Why not?]",
+  "What do you think would be the hardest language for you to learn? [Why?]",
+];
 
-  const questionKeywords = [
-    [
-      "Facebook",
-      "Instagram",
-      "Twitter",
-      "TikTok",
-      "LinkedIn",
-      "Snapchat",
-      "YouTube",
-      "social media",
-    ],
-    ["time", "hours", "daily", "weekly", "spend", "usage", "frequency"],
-    [
-      "information",
-      "personal",
-      "profile",
-      "details",
-      "data",
-      "share",
-      "privacy",
-    ],
-    [
-      "dislike",
-      "problem",
-      "issue",
-      "annoying",
-      "negative",
-      "concern",
-      "privacy",
-      "ads",
-    ],
-  ];
+const questionKeywords = [
+  [
+    "languages",
+    "speak",
+    "bilingual",
+    "multilingual",
+    "fluency",
+    "communication",
+  ],
+  ["English", "future", "career", "study", "useful", "benefit", "importance"],
+  [
+    "school",
+    "learning",
+    "teachers",
+    "class",
+    "lessons",
+    "experience",
+    "language learning",
+  ],
+  [
+    "hardest",
+    "difficult",
+    "learn",
+    "grammar",
+    "pronunciation",
+    "characters",
+    "language difficulty",
+  ],
+];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -202,84 +200,91 @@ const Test2Speaking2020 = () => {
   }
 
   return (
-    <div className="p-6 flex justify-between">
-      {/* left div */}
-      <div className="flex-1">
-        <h1 className="text-2xl font-bold">PART 1</h1> <br />
-        <p className="text-lg">
-          The examiner asks you about yourself, your home, work or studies and
-          other familiar topics.
-        </p>
-        <br />
-        <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
-        <ul className="list-disc pl-8 list-inside space-y-2">
-          <h1 className="text-2xl font-bold text-center">Social media</h1>
-          <li>Which social media websites do you use??</li>
-          <li>
-            How much time do you spend on social media sites? [Why/Why not?]
-          </li>
-          <li>
-            What kind of information about yourself have you put on social
-            media? [Why/Why not?]
-          </li>
-          <li>Is there anything you don't like about social media? [Why?]</li>
-        </ul>
+    <div>
+      {" "}
+      <div className="p-6 flex justify-between">
+        {/* left div */}
+        <div className="flex-1">
+          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <p className="text-lg">
+            The examiner asks you about yourself, your home, work or studies and
+            other familiar topics.
+          </p>
+          <br />
+          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <ul className="list-disc pl-8 list-inside space-y-2">
+            <h1 className="text-2xl font-bold text-center">Language</h1>
+            <li>How many languages can you speak? [Why/Why not?]</li>
+            <li>
+              How useful will English be to you in your future? [Why/Why not?]
+            </li>
+            <li>
+              What do you remember about learning languages at school? [Why/Why
+              not?]
+            </li>
+            <li>
+              What do you think would be the hardest language for you to learn?
+              [Why?]
+            </li>
+          </ul>
+        </div>
+        {/* right div */}
+        <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
+          <p className="flex items-center justify-center">
+            <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
+              2/3 speaking practices finished in 180 minutes.
+            </span>
+          </p>
+
+          <div className="flex justify-center items-center gap-10 mb-10">
+            <VscDebugStart
+              size={60}
+              className={`cursor-pointer transition ${
+                isSpeaking
+                  ? "text-blue-500 animate-pulse"
+                  : "hover:text-green-600"
+              }`}
+              onClick={handleStartClick}
+              title="Speak Question"
+            />
+            <FaMicrophone
+              size={50}
+              className={`cursor-pointer transition ${
+                isListening ? "text-red-500 animate-pulse" : "text-gray-700"
+              }`}
+              onClick={handleMicrophoneClick}
+              title="Speak Answer"
+            />
+          </div>
+
+          <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
+            {spokenQuestion && (
+              <div>
+                <p className="text-lg font-semibold text-blue-700 mb-2">
+                  Question:
+                </p>
+                <p className="text-gray-800">{spokenQuestion}</p>
+              </div>
+            )}
+
+            {currentAnswer && (
+              <div className="mt-4">
+                <p className="text-lg font-semibold text-green-700 mb-2">
+                  Your Answer (live):
+                </p>
+                <p className="text-gray-800 whitespace-pre-line">
+                  {currentAnswer}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-6 text-sm text-gray-500">
+            Question {questionIndex + 1} of {questions.length}
+          </div>
+        </div>
       </div>
-      {/* right div */}
-      <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
-        <p className="flex items-center justify-center">
-          <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
-            2/3 speaking practices finished in 180 minutes.
-          </span>
-        </p>
-
-        <div className="flex justify-center items-center gap-10 mb-10">
-          <VscDebugStart
-            size={60}
-            className={`cursor-pointer transition ${
-              isSpeaking
-                ? "text-blue-500 animate-pulse"
-                : "hover:text-green-600"
-            }`}
-            onClick={handleStartClick}
-            title="Speak Question"
-          />
-          <FaMicrophone
-            size={50}
-            className={`cursor-pointer transition ${
-              isListening ? "text-red-500 animate-pulse" : "text-gray-700"
-            }`}
-            onClick={handleMicrophoneClick}
-            title="Speak Answer"
-          />
-        </div>
-
-        <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
-          {spokenQuestion && (
-            <div>
-              <p className="text-lg font-semibold text-blue-700 mb-2">
-                Question:
-              </p>
-              <p className="text-gray-800">{spokenQuestion}</p>
-            </div>
-          )}
-
-          {currentAnswer && (
-            <div className="mt-4">
-              <p className="text-lg font-semibold text-green-700 mb-2">
-                Your Answer (live):
-              </p>
-              <p className="text-gray-800 whitespace-pre-line">
-                {currentAnswer}
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="mt-6 text-sm text-gray-500">
-          Question {questionIndex + 1} of {questions.length}
-        </div>
-      </div>
+      <Speaking2Pagination2020></Speaking2Pagination2020>
     </div>
   );
 };

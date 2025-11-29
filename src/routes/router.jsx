@@ -142,6 +142,14 @@ import Writing1Part22020 from "../components/Academic 2020/Writing/Writing1/Writ
 import Writing2Part22020 from "../components/Academic 2020/Writing/Writing2/Writing2Part22020";
 import Writing3Part22020 from "../components/Academic 2020/Writing/Writing3/Writing3Part22020";
 import Writing4Part22020 from "../components/Academic 2020/Writing/Writing4/Writing4Part22020";
+import Speaking1Part22020 from "../components/Academic 2020/Speaking/Speaking1/Speaking1Part22020";
+import Speaking1Part32020 from "../components/Academic 2020/Speaking/Speaking1/Speaking1Part32020";
+import Speaking2Part22020 from "../components/Academic 2020/Speaking/Speaking2/Speaking2Part22020";
+import Speaking2Part32020 from "../components/Academic 2020/Speaking/Speaking2/Speaking2Part32020";
+import Speaking3Part22020 from "../components/Academic 2020/Speaking/Speaking3/Speaking3Part22020";
+import Speaking3Part32020 from "../components/Academic 2020/Speaking/Speaking3/Speaking3Part32020";
+import Speaking4Part22020 from "../components/Academic 2020/Speaking/Speaking4/Speaking4Part22020";
+import Speaking4Part32020 from "../components/Academic 2020/Speaking/Speaking4/Speaking4Part32020";
 
 export const router = createBrowserRouter([
   {
@@ -649,16 +657,48 @@ export const router = createBrowserRouter([
         Component: Test1Speaking2020,
       },
       {
+        path: "/Speaking1Part22020",
+        Component: Speaking1Part22020,
+      },
+      {
+        path: "/Speaking1Part32020",
+        Component: Speaking1Part32020,
+      },
+      {
         path: "/2020/Test 2/speaking",
         Component: Test2Speaking2020,
+      },
+      {
+        path: "/Speaking2Part22020",
+        Component: Speaking2Part22020,
+      },
+      {
+        path: "/Speaking2Part32020",
+        Component: Speaking2Part32020,
       },
       {
         path: "/2020/Test 3/speaking",
         Component: Test3Speaking2020,
       },
       {
+        path: "/Speaking3Part22020",
+        Component: Speaking3Part22020,
+      },
+      {
+        path: "/Speaking3Part32020",
+        Component: Speaking3Part32020,
+      },
+      {
         path: "/2020/Test 4/speaking",
         Component: Test4Speaking2020,
+      },
+      {
+        path: "/Speaking4Part22020",
+        Component: Speaking4Part22020,
+      },
+      {
+        path: "/Speaking4Part32020",
+        Component: Speaking4Part32020,
       },
 
       {

@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking1Pagination2020 from "../../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking2Pagination2020 from "../../Pagination/Speaking2Pagination/Speaking2Pagination2020";
 
-const Test1Speaking2020 = () => {
+const Speaking2Part32020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -18,17 +19,41 @@ const Test1Speaking2020 = () => {
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
   const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
+    "What kinds of things do people in your country often buy from online shops?",
+    "Why do you think online shopping has become so popular nowadays?",
+    "What are some possible disadvantages of buying things from online shops?",
+    "Why do many people today keep buying things which they do not need?",
+    "Do you believe the benefits of a consumer society outweigh the disadvantages?",
+    "How possible is it to avoid the culture of consumerism?",
   ];
 
   const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
+    ["buy", "online", "purchase", "items", "products", "country", "shopping"],
+    ["popular", "online shopping", "convenience", "easy", "trend", "growth"],
+    [
+      "disadvantages",
+      "problems",
+      "risk",
+      "delivery",
+      "fraud",
+      "quality issues",
+    ],
+    ["consumerism", "buying", "unnecessary", "shopping habits", "impulse"],
+    [
+      "benefits",
+      "disadvantages",
+      "consumer society",
+      "pros and cons",
+      "economy",
+    ],
+    [
+      "avoid",
+      "consumerism",
+      "minimalism",
+      "lifestyle",
+      "possible",
+      "challenge",
+    ],
   ];
 
   // ▶ Speak current question
@@ -182,27 +207,37 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Shopping online & The culture of consumerism
+            </h1>
+
+            <p className="text-lg font-bold">Shopping online</p>
             <li>
-              What kinds of emails do you receive about your work or studies?
-            </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
-            <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
+              What kinds of things do people in your country often buy from
+              online shops?
             </li>
             <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
+              Why do you think online shopping has become so popular nowadays?
             </li>
+            <li>
+              What are some possible disadvantages of buying things from online
+              shops?
+            </li>
+
+            <p className="text-lg font-bold mt-4">The culture of consumerism</p>
+            <li>
+              Why do many people today keep buying things which they do not
+              need?
+            </li>
+            <li>
+              Do you believe the benefits of a consumer society outweigh the
+              disadvantages?
+            </li>
+            <li>How possible is it to avoid the culture of consumerism?</li>
           </ul>
         </div>
         {/* right div */}
@@ -261,9 +296,9 @@ const Test1Speaking2020 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2020></Speaking1Pagination2020>
+      <Speaking2Pagination2020></Speaking2Pagination2020>
     </div>
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking2Part32020;

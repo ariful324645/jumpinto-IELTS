@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking1Pagination2020 from "../../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking2Pagination2020 from "../../Pagination/Speaking2Pagination/Speaking2Pagination2020";
+import Speaking3Pagination2020 from "../../Pagination/Speaking3Pagination/Speaking3Pagination2020";
+import Speaking4Pagination2020 from "../../Pagination/Speaking4Pagination/Speaking4Pagination2020";
 
-const Test1Speaking2020 = () => {
+const Speaking4Part32020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -18,17 +21,67 @@ const Test1Speaking2020 = () => {
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
   const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
+    "How interested are most people in your country in science?",
+    "Why do you think children today might be better at science than their parents?",
+    "How do you suggest the public can learn more about scientific developments?",
+    "What do you think are the most important scientific discoveries in the last 100 years?",
+    "Do you agree or disagree that there are no more major scientific discoveries left to make?",
+    "Who should pay for scientific research - governments or private companies?",
   ];
 
   const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
+    [
+      "interest",
+      "people",
+      "public",
+      "science",
+      "country",
+      "knowledge",
+      "curiosity",
+    ],
+    [
+      "children",
+      "better",
+      "science",
+      "parents",
+      "learn",
+      "education",
+      "skills",
+    ],
+    [
+      "public",
+      "learn",
+      "science",
+      "developments",
+      "knowledge",
+      "information",
+      "methods",
+    ],
+    [
+      "important",
+      "scientific discoveries",
+      "last 100 years",
+      "innovation",
+      "breakthroughs",
+      "science",
+    ],
+    [
+      "agree",
+      "disagree",
+      "major discoveries",
+      "scientific progress",
+      "future",
+      "research",
+    ],
+    [
+      "pay",
+      "funding",
+      "research",
+      "governments",
+      "private companies",
+      "finance",
+      "support",
+    ],
   ];
 
   // ▶ Speak current question
@@ -182,26 +235,37 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Science and the public & Scientific discoveries
+            </h1>
+
+            <p className="text-lg font-bold">Science and the public</p>
+            <li>How interested are most people in your country in science?</li>
             <li>
-              What kinds of emails do you receive about your work or studies?
+              Why do you think children today might be better at science than
+              their parents?
             </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
             <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
+              How do you suggest the public can learn more about scientific
+              developments?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Scientific discoveries</p>
+            <li>
+              What do you think are the most important scientific discoveries in
+              the last 100 years?
             </li>
             <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
+              Do you agree or disagree that there are no more major scientific
+              discoveries left to make?
+            </li>
+            <li>
+              Who should pay for scientific research - governments or private
+              companies?
             </li>
           </ul>
         </div>
@@ -261,9 +325,9 @@ const Test1Speaking2020 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2020></Speaking1Pagination2020>
+      <Speaking4Pagination2020></Speaking4Pagination2020>
     </div>
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking4Part32020;

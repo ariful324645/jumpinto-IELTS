@@ -1,271 +1,3 @@
-// // import React, { useContext, useEffect, useState } from "react";
-// // import { Link } from "react-router";
-// // import { AuthContext } from "../context/AuthContext/AuthContext";
-// // import { FaClock } from "react-icons/fa";
-
-// // const Navbar = () => {
-// //   const { user, logOut } = useContext(AuthContext);
-// //   const [showConfirm, setShowConfirm] = useState(false);
-
-// //   return (
-// //     <div className="p-4 mx-auto sticky top-0 z-50  navbar flex justify-between  bg-base-100 ">
-// //       <div className="flex items-center gap-5">
-// //         <Link to="/voiceIelts">
-// //           <div>
-// //             <img
-// //               className=" h-16"
-// //               src="https://i.ibb.co.com/zTw3NXG3/images.png"
-// //               alt=""
-// //             />
-// //           </div>
-// //         </Link>
-
-// //         <Link to="/">
-// //           <h1
-// //             className="text-2xl font-bold text-black hover:text-red-500 "
-// //             onMouseEnter={(e) => (e.target.textContent = "IELTS")}
-// //             onMouseLeave={(e) => (e.target.textContent = "Jumpinto")}
-// //           >
-// //             Jumpinto
-// //           </h1>
-// //         </Link>
-// //       </div>
-
-// //       <div>
-// //         <span>
-// //           <FaClock size={24} className="text-green-900" />
-// //         </span>
-// //       </div>
-
-// //       <div className="flex items-center gap-5">
-// //         <div className="relative flex flex-col items-center group">
-// //           {/* Circle with message icon */}
-// //           <div className="bg-white border-2 border-gray-300 h-10 w-10 rounded-full flex items-center justify-center p-2 cursor-pointer hover:bg-blue-100">
-// //             <img
-// //               className="h-5 w-5 "
-// //               src="https://i.ibb.co.com/Y4hBZK9n/message-1.jpg"
-// //               alt="message icon"
-// //             />
-// //           </div>
-
-// //           {/* Tooltip */}
-// //           <div className="absolute top-12 left-1/2 -translate-x-1/2 w-max p-2.5 text-white border border-gray-300 rounded-md text-lg bg-gray-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-// //             Have suggestions or need to report an issue? <br /> Email us at
-// //             team@jumpinto.com
-// //           </div>
-// //         </div>
-
-// //         <div className="flex items-center gap-4">
-// //           {!user ? (
-// //             // 🔹 User not logged in → Show Sign In button
-// //             <Link to="/login">
-// //               <button className="btn text-white text-xl font-bold rounded-2xl bg-[#47698F]">
-// //                 Sign In
-// //               </button>
-// //             </Link>
-// //           ) : (
-// //             // 🔹 User logged in → Show image
-// //             <div className="relative">
-// //               <img
-// //                 src={user.photoURL}
-// //                 alt="Google profile"
-// //                 className="w-10 h-10 rounded-full border-2 border-[#47698F] cursor-pointer"
-// //                 onClick={() => setShowConfirm(!showConfirm)}
-// //               />
-
-// //               {showConfirm && (
-// //                 <div className="absolute top-12 right-0 bg-white shadow-lg p-4 rounded-2xl border w-56 text-center">
-// //                   <p className="text-gray-700 font-semibold mb-3">
-// //                     Are you sure to sign out?
-// //                   </p>
-// //                   <div className="flex justify-center gap-4">
-// //                     <button
-// //                       onClick={() => setShowConfirm(false)}
-// //                       className="px-4 py-1 rounded-lg bg-gray-300 text-gray-800 font-medium hover:bg-gray-400"
-// //                     >
-// //                       No
-// //                     </button>
-// //                     <button
-// //                       onClick={() => {
-// //                         logOut();
-// //                         setShowConfirm(false);
-// //                       }}
-// //                       className="px-4 py-1 rounded-lg bg-red-500 text-white font-medium hover:bg-red-600"
-// //                     >
-// //                       Yes
-// //                     </button>
-// //                   </div>
-// //                 </div>
-// //               )}
-// //             </div>
-// //           )}
-// //         </div>
-// //       </div>
-// //     </div>
-// //   );
-// // };
-
-// // export default Navbar;
-// import React, { useContext, useEffect, useState } from "react";
-// import { Link, useLocation } from "react-router";
-// import { AuthContext } from "../context/AuthContext/AuthContext";
-// import { FaClock } from "react-icons/fa";
-
-// const Navbar = () => {
-//   const { user, logOut } = useContext(AuthContext);
-//   const [showConfirm, setShowConfirm] = useState(false);
-
-//   const location = useLocation();
-//   const [time, setTime] = useState(0);
-//   const [running, setRunning] = useState(false);
-
-//   // Set dynamic countdown time based on page
-// useEffect(() => {
-//   let dynamicTime = 8; // default time
-
-//   const path = location.pathname.toLowerCase(); // normalize
-
-//   // Exceptions for specific paths
-//   if (path.includes("/2020/test 1/listening")) dynamicTime = 5;
-//   else if (path.includes("/2021/test 1/listening")) dynamicTime = 3;
-//   else {
-//     // Extract year dynamically like "/2025/..."
-//     const match = path.match(/\/(\d{4})\//);
-//     if (match) {
-//       const year = parseInt(match[1]);
-//       dynamicTime = year - 2000; // 2025 → 25 seconds
-//     }
-//   }
-
-//   setTime(dynamicTime);
-//   setRunning(false); // stop timer on page change
-// }, [location]);
-
-//   // Countdown effect
-//   useEffect(() => {
-//     if (!running) return;
-
-//     const timer = setInterval(() => {
-//       setTime((prev) => {
-//         if (prev <= 1) {
-//           clearInterval(timer);
-//           setRunning(false);
-//           return 0;
-//         }
-//         return prev - 1;
-//       });
-//     }, 1000);
-
-//     return () => clearInterval(timer);
-//   }, [running]);
-
-//   // Toggle start/stop on clock click
-//   const handleClockClick = () => {
-//     setRunning((prev) => !prev);
-//   };
-
-//   return (
-//     <div className="p-4 mx-auto sticky top-0 z-50 navbar flex justify-between bg-base-100">
-//       {/* Logo */}
-//       <div className="flex items-center gap-5">
-//         <Link to="/voiceIelts">
-//           <div>
-//             <img
-//               className="h-16"
-//               src="https://i.ibb.co.com/zTw3NXG3/images.png"
-//               alt="Logo"
-//             />
-//           </div>
-//         </Link>
-
-//         <Link to="/">
-//           <h1
-//             className="text-2xl font-bold text-black hover:text-red-500"
-//             onMouseEnter={(e) => (e.target.textContent = "IELTS")}
-//             onMouseLeave={(e) => (e.target.textContent = "Jumpinto")}
-//           >
-//             Jumpinto
-//           </h1>
-//         </Link>
-//       </div>
-
-//       {/* Clock Timer */}
-//       <div
-//         className="flex items-center gap-2 cursor-pointer"
-//         onClick={handleClockClick}
-//       >
-//         <FaClock
-//           size={24}
-//           className={`text-green-900 ${running ? "animate-pulse" : ""}`}
-//         />
-//         <span className="font-bold">{time}s</span>
-//       </div>
-
-//       {/* Message Icon and User */}
-//       <div className="flex items-center gap-5">
-//         <div className="relative flex flex-col items-center group">
-//           <div className="bg-white border-2 border-gray-300 h-10 w-10 rounded-full flex items-center justify-center p-2 cursor-pointer hover:bg-blue-100">
-//             <img
-//               className="h-5 w-5"
-//               src="https://i.ibb.co.com/Y4hBZK9n/message-1.jpg"
-//               alt="message icon"
-//             />
-//           </div>
-//           <div className="absolute top-12 left-1/2 -translate-x-1/2 w-max p-2.5 text-white border border-gray-300 rounded-md text-lg bg-gray-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-//             Have suggestions or need to report an issue? <br /> Email us at
-//             team@jumpinto.com
-//           </div>
-//         </div>
-
-//         <div className="flex items-center gap-4">
-//           {!user ? (
-//             <Link to="/login">
-//               <button className="btn text-white text-xl font-bold rounded-2xl bg-[#47698F]">
-//                 Sign In
-//               </button>
-//             </Link>
-//           ) : (
-//             <div className="relative">
-//               <img
-//                 src={user.photoURL}
-//                 alt="Google profile"
-//                 className="w-10 h-10 rounded-full border-2 border-[#47698F] cursor-pointer"
-//                 onClick={() => setShowConfirm(!showConfirm)}
-//               />
-//               {showConfirm && (
-//                 <div className="absolute top-12 right-0 bg-white shadow-lg p-4 rounded-2xl border w-56 text-center">
-//                   <p className="text-gray-700 font-semibold mb-3">
-//                     Are you sure to sign out?
-//                   </p>
-//                   <div className="flex justify-center gap-4">
-//                     <button
-//                       onClick={() => setShowConfirm(false)}
-//                       className="px-4 py-1 rounded-lg bg-gray-300 text-gray-800 font-medium hover:bg-gray-400"
-//                     >
-//                       No
-//                     </button>
-//                     <button
-//                       onClick={() => {
-//                         logOut();
-//                         setShowConfirm(false);
-//                       }}
-//                       className="px-4 py-1 rounded-lg bg-red-500 text-white font-medium hover:bg-red-600"
-//                     >
-//                       Yes
-//                     </button>
-//                   </div>
-//                 </div>
-//               )}
-//             </div>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar
-
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthContext/AuthContext";
@@ -274,36 +6,60 @@ import { FaClock } from "react-icons/fa";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showConfirm, setShowConfirm] = useState(false);
-
   const location = useLocation();
-  const [secondsLeft, setSecondsLeft] = useState(null); // initially null
-  const [running, setRunning] = useState(false);
-  const [showTimeOver, setShowTimeOver] = useState(false); // ✅ new state for modal
 
-  // Define times for each pathname in seconds
+  const [secondsLeft, setSecondsLeft] = useState(null);
+  const [running, setRunning] = useState(false);
+  const [showTimeOver, setShowTimeOver] = useState(false);
+
+  // Define timer for each page
   const pathTimes = {
     // 2020  listening
 
     "/2020/test 1/listening": 7 * 60,
-    "/2020/test 2/listening": 7 * 60,
+    "/2020/test 2/listening": 7 * 60 + 30,
     "/2020/test 3/listening": 7 * 60,
     "/2020/test 4/listening": 7 * 60,
     // listening part time
-    "/listening1Part22020": 7 * 60+30,
+    "/listening1Part22020": 7 * 60 + 30,
     "/listening1Part32020": 8 * 60,
     "/listening1Part42020": 9 * 60,
+    "/listening2Part22020": 7 * 60 + 30,
+    "/listening2Part32020": 7 * 60 + 30,
+    "/listening2Part42020": 8 * 60 + 30,
+    "/listening3Part22020": 7 * 60 + 30,
+    "/listening3Part32020": 7 * 60 + 30,
+    "/listening3Part42020": 7 * 60 + 30,
+    "/listening4Part22020": 7 * 60,
+    "/listening4Part32020": 7 * 60 + 30,
+    "/listening4Part42020": 7 * 60 + 30,
 
     // 2020  reading
     "/2020/Test 1/reading": 20 * 60,
     "/2020/Test 2/reading": 20 * 60,
     "/2020/Test 3/reading": 20 * 60,
     "/2020/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22020": 20 * 60,
+    "/Reading1Part32020": 20 * 60,
+    "/Reading2Part22020": 20 * 60,
+    "/Reading2Part32020": 20 * 60,
+    "/Reading3Part22020": 20 * 60,
+    "/Reading3Part32020": 20 * 60,
+    "/Reading4Part22020": 20 * 60,
+    "/Reading4Part32020": 20 * 60,
 
     // 2020 writing
     "/2020/Test 1/writing": 20 * 60,
     "/2020/Test 2/writing": 20 * 60,
     "/2020/Test 3/writing": 20 * 60,
     "/2020/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22020": 40 * 60,
+    "/Writing2Part22020": 40 * 60,
+    "/Writing3Part22020": 40 * 60,
+    "/Writing4Part22020": 40 * 60,
     //2020 speaking
     "/2020/Test 1/speaking": 0 * 60,
     "/2020/Test 2/speaking": 0 * 60,
@@ -325,33 +81,26 @@ const Navbar = () => {
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
 
-  // Handle clock click (start, pause, resume)
-  const handleClockClick = () => {
-    const path = decodeURIComponent(location.pathname.toLowerCase());
+  // Reset timer when location changes
+  useEffect(() => {
+    setShowTimeOver(false);
+    setRunning(false);
 
-    // If timer not started yet, start it
-    if (secondsLeft === null) {
-      let dynamicTime = 0;
-      for (const key in pathTimes) {
-        if (path.includes(key.toLowerCase())) {
-          dynamicTime = pathTimes[key];
-          break;
-        }
-      }
-      if (dynamicTime > 0) {
-        setSecondsLeft(dynamicTime);
-        setRunning(true);
+    const path = decodeURIComponent(location.pathname.toLowerCase());
+    let dynamicTime = 0;
+    for (const key in pathTimes) {
+      if (path.includes(key.toLowerCase())) {
+        dynamicTime = pathTimes[key];
+        break;
       }
     }
-    // If timer is running → pause it
-    else if (running) {
-      setRunning(false);
+
+    if (dynamicTime > 0) {
+      setSecondsLeft(dynamicTime); // fresh timer for the new page
+    } else {
+      setSecondsLeft(null); // no timer for this page
     }
-    // If timer is paused → resume it
-    else if (!running && secondsLeft > 0) {
-      setRunning(true);
-    }
-  };
+  }, [location]);
 
   // Countdown effect
   useEffect(() => {
@@ -370,7 +119,11 @@ const Navbar = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [running]);
+  }, [running, secondsLeft]);
+
+  const handleClockClick = () => {
+    if (secondsLeft !== null) setRunning((prev) => !prev); // toggle start/pause for current page
+  };
 
   return (
     <div className="p-4 mx-auto sticky top-0 z-50 navbar flex justify-between bg-base-100">
@@ -394,7 +147,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Clock Timer */}
+      {/* Clock */}
       <div
         className="flex items-center gap-2 cursor-pointer"
         onClick={handleClockClick}
@@ -406,14 +159,13 @@ const Navbar = () => {
         <span className="font-bold">
           {secondsLeft !== null ? formatTime(secondsLeft) : ""}
         </span>
-        {/* ✅ Time Over Modal */}
+
         {showTimeOver && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
             <div className="bg-white py-4 px-14 rounded-xl shadow-xl text-center max-w-sm">
               <h2 className="text-xl font-bold text-red-600 mb-3">
                 ⏰ Time’s Up!
               </h2>
-
               <button
                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
                 onClick={() => setShowTimeOver(false)}
@@ -425,7 +177,7 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Message Icon & User */}
+      {/* Message & User */}
       <div className="flex items-center gap-5">
         <div className="relative flex flex-col items-center group">
           <div className="bg-white border-2 border-gray-300 h-10 w-10 rounded-full flex items-center justify-center p-2 cursor-pointer hover:bg-blue-100">

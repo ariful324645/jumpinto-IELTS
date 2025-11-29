@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking1Pagination2020 from "../../Pagination/Speaking1Pagination/Speaking1Pagination2020";
 
-const Test1Speaking2020 = () => {
+const Speaking1Part32020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -18,17 +18,37 @@ const Test1Speaking2020 = () => {
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
   const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
+    "What things are important when people are choosing a hotel?",
+    "Why do some people not like staying in hotels?",
+    "Do you think staying in a luxury hotel is a waste of money?",
+    "Do you think hotel work is a good career for life?",
+    "How does working in a big hotel compare with working in a small hotel?",
+    "What skills are needed to be a successful hotel manager?",
   ];
 
   const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
+    [
+      "important",
+      "choose",
+      "select",
+      "hotel",
+      "location",
+      "price",
+      "reviews",
+      "comfort",
+    ],
+    ["dislike", "not like", "avoid", "hotels", "privacy", "noise", "comfort"],
+    ["luxury", "expensive", "waste", "money", "worth", "value"],
+    ["career", "job", "hotel work", "profession", "future", "stable"],
+    ["big hotel", "small hotel", "comparison", "work", "difference", "staff"],
+    [
+      "skills",
+      "manager",
+      "hotel manager",
+      "leadership",
+      "communication",
+      "management",
+    ],
   ];
 
   // ▶ Speak current question
@@ -182,27 +202,23 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              {" "}
+              Staying in hotels & Working in a hotel
+            </h1>
+            <li>What things are important when people are choosing a hotel?</li>
+            <li>Why do some people not like staying in hotels?</li>
+            <li>Do you think staying in a luxury hotel is a waste of money?</li>
+            <li>Do you think hotel work is a good career for life?</li>
             <li>
-              What kinds of emails do you receive about your work or studies?
+              How does working in a big hotel compare with working in a small
+              hotel?
             </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
-            <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
-            </li>
-            <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
-            </li>
+            <li>What skills are needed to be a successful hotel manager?</li>
           </ul>
         </div>
         {/* right div */}
@@ -266,4 +282,4 @@ const Test1Speaking2020 = () => {
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking1Part32020;

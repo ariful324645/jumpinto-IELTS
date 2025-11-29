@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking3Pagination2020 from "../Pagination/Speaking3Pagination/Speaking3Pagination2020";
 
 const Test3Speaking2020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,20 +17,19 @@ const Test3Speaking2020 = () => {
 
   const storageKey = "/2020/Test 3/speaking"; // ✅ localStorage key
 
-const questions = [
-  "Did you learn to swim when you were a child?",
-  "How often do you go swimming now?",
-  "What places are there for swimming where you live?",
-  "Do you think it would be more enjoyable to go swimming outdoors or at an indoor pool?",
-];
+  const questions = [
+    "Did you learn to swim when you were a child?",
+    "How often do you go swimming now?",
+    "What places are there for swimming where you live?",
+    "Do you think it would be more enjoyable to go swimming outdoors or at an indoor pool?",
+  ];
 
-const questionKeywords = [
-  ["learn", "child", "swim", "lessons", "practice", "experience"],
-  ["often", "frequency", "regularly", "swimming", "now", "habit"],
-  ["places", "locations", "pools", "beach", "swimming spots", "facilities"],
-  ["outdoors", "indoor", "pool", "enjoyable", "preference", "swimming style"],
-];
-
+  const questionKeywords = [
+    ["learn", "child", "swim", "lessons", "practice", "experience"],
+    ["often", "frequency", "regularly", "swimming", "now", "habit"],
+    ["places", "locations", "pools", "beach", "swimming spots", "facilities"],
+    ["outdoors", "indoor", "pool", "enjoyable", "preference", "swimming style"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -177,82 +177,86 @@ const questionKeywords = [
   }
 
   return (
-    <div className="p-6 flex justify-between">
-      {/* left div */}
-      <div className="flex-1">
-        <h1 className="text-2xl font-bold">PART 1</h1> <br />
-        <p className="text-lg">
-          The examiner asks you about yourself, your home, work or studies and
-          other familiar topics.
-        </p>
-        <br />
-        <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
-        <ul className="list-disc pl-8 list-inside space-y-2">
-          <h1 className="text-2xl font-bold text-center">Swimming</h1>
-          <li>Did you learn to swim when you were a child? [Why/Why not?]</li>
-          <li>How often do you go swimming now? [Why/Why not?]</li>
-          <li>What places are there for swimming where you live? [Why?]</li>
-          <li>
-            Do you think it would be more enjoyable to go swimming outdoors or
-            at an indoor pool? [Why?]
-          </li>
-        </ul>
+    <div>
+      {" "}
+      <div className="p-6 flex justify-between">
+        {/* left div */}
+        <div className="flex-1">
+          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <p className="text-lg">
+            The examiner asks you about yourself, your home, work or studies and
+            other familiar topics.
+          </p>
+          <br />
+          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <ul className="list-disc pl-8 list-inside space-y-2">
+            <h1 className="text-2xl font-bold text-center">Swimming</h1>
+            <li>Did you learn to swim when you were a child? [Why/Why not?]</li>
+            <li>How often do you go swimming now? [Why/Why not?]</li>
+            <li>What places are there for swimming where you live? [Why?]</li>
+            <li>
+              Do you think it would be more enjoyable to go swimming outdoors or
+              at an indoor pool? [Why?]
+            </li>
+          </ul>
+        </div>
+        {/* right div */}
+        <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
+          <p className="flex items-center justify-center">
+            <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
+              2/3 speaking practices finished in 180 minutes.
+            </span>
+          </p>
+
+          <div className="flex justify-center items-center gap-10 mb-10">
+            <VscDebugStart
+              size={60}
+              className={`cursor-pointer transition ${
+                isSpeaking
+                  ? "text-blue-500 animate-pulse"
+                  : "hover:text-green-600"
+              }`}
+              onClick={handleStartClick}
+              title="Speak Question"
+            />
+            <FaMicrophone
+              size={50}
+              className={`cursor-pointer transition ${
+                isListening ? "text-red-500 animate-pulse" : "text-gray-700"
+              }`}
+              onClick={handleMicrophoneClick}
+              title="Speak Answer"
+            />
+          </div>
+
+          <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
+            {spokenQuestion && (
+              <div>
+                <p className="text-lg font-semibold text-blue-700 mb-2">
+                  Question:
+                </p>
+                <p className="text-gray-800">{spokenQuestion}</p>
+              </div>
+            )}
+
+            {currentAnswer && (
+              <div className="mt-4">
+                <p className="text-lg font-semibold text-green-700 mb-2">
+                  Your Answer (live):
+                </p>
+                <p className="text-gray-800 whitespace-pre-line">
+                  {currentAnswer}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-6 text-sm text-gray-500">
+            Question {questionIndex + 1} of {questions.length}
+          </div>
+        </div>
       </div>
-      {/* right div */}
-      <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
-        <p className="flex items-center justify-center">
-          <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
-            2/3 speaking practices finished in 180 minutes.
-          </span>
-        </p>
-
-        <div className="flex justify-center items-center gap-10 mb-10">
-          <VscDebugStart
-            size={60}
-            className={`cursor-pointer transition ${
-              isSpeaking
-                ? "text-blue-500 animate-pulse"
-                : "hover:text-green-600"
-            }`}
-            onClick={handleStartClick}
-            title="Speak Question"
-          />
-          <FaMicrophone
-            size={50}
-            className={`cursor-pointer transition ${
-              isListening ? "text-red-500 animate-pulse" : "text-gray-700"
-            }`}
-            onClick={handleMicrophoneClick}
-            title="Speak Answer"
-          />
-        </div>
-
-        <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
-          {spokenQuestion && (
-            <div>
-              <p className="text-lg font-semibold text-blue-700 mb-2">
-                Question:
-              </p>
-              <p className="text-gray-800">{spokenQuestion}</p>
-            </div>
-          )}
-
-          {currentAnswer && (
-            <div className="mt-4">
-              <p className="text-lg font-semibold text-green-700 mb-2">
-                Your Answer (live):
-              </p>
-              <p className="text-gray-800 whitespace-pre-line">
-                {currentAnswer}
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="mt-6 text-sm text-gray-500">
-          Question {questionIndex + 1} of {questions.length}
-        </div>
-      </div>
+      <Speaking3Pagination2020></Speaking3Pagination2020>
     </div>
   );
 };

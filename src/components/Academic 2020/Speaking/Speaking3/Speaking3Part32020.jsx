@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking1Pagination2020 from "../../Pagination/Speaking1Pagination/Speaking1Pagination2020";
+import Speaking2Pagination2020 from "../../Pagination/Speaking2Pagination/Speaking2Pagination2020";
+import Speaking3Pagination2020 from "../../Pagination/Speaking3Pagination/Speaking3Pagination2020";
 
-const Test1Speaking2020 = () => {
+const Speaking3Part32020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -18,17 +20,35 @@ const Test1Speaking2020 = () => {
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
   const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
+    "What kinds of people are most famous in your country today?",
+    "Why are there so many stories about famous people in the news?",
+    "Do you agree or disagree that many young people today want to be famous?",
+    "Do you think it is easy for famous people to earn a lot of money?",
+    "Why might famous people enjoy having fans?",
+    "In what ways could famous people use their influence to do good things in the world?",
   ];
 
   const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
+    [
+      "famous",
+      "celebrities",
+      "popular",
+      "country",
+      "public figures",
+      "well-known",
+    ],
+    [
+      "news",
+      "stories",
+      "media",
+      "public interest",
+      "celebrities",
+      "pop culture",
+    ],
+    ["young people", "famous", "want fame", "agree", "disagree", "dream"],
+    ["money", "earn", "income", "fame", "celebrity career", "wealth"],
+    ["fans", "enjoy", "supporters", "popularity", "admire", "attention"],
+    ["influence", "good things", "help", "world", "role model", "impact"],
   ];
 
   // ▶ Speak current question
@@ -182,26 +202,32 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Famous people today & Advantages of being famous
+            </h1>
+
+            <p className="text-lg font-bold">Famous people today</p>
+            <li>What kinds of people are most famous in your country today?</li>
             <li>
-              What kinds of emails do you receive about your work or studies?
+              Why are there so many stories about famous people in the news?
             </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
             <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
+              Do you agree or disagree that many young people today want to be
+              famous?
             </li>
+
+            <p className="text-lg font-bold mt-4">Advantages of being famous</p>
             <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
+              Do you think it is easy for famous people to earn a lot of money?
+            </li>
+            <li>Why might famous people enjoy having fans?</li>
+            <li>
+              In what ways could famous people use their influence to do good
+              things in the world?
             </li>
           </ul>
         </div>
@@ -261,9 +287,9 @@ const Test1Speaking2020 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2020></Speaking1Pagination2020>
+      <Speaking3Pagination2020></Speaking3Pagination2020>
     </div>
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking3Part32020;

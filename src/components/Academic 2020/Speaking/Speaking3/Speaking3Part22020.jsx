@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2020 from "../Pagination/Speaking1Pagination/Speaking1Pagination2020";
 
-const Test1Speaking2020 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+import Speaking3Pagination2020 from "../../Pagination/Speaking3Pagination/Speaking3Pagination2020";
+
+const Speaking3Part22020 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,19 +19,18 @@ const Test1Speaking2020 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-  const questions = [
-    "What kinds of emails do you receive about your work or studies?",
-    "Do you prefer to email, phone or text your friends?",
-    "Do you reply to emails and messages as soon as you receive them? ",
-    "Are you happy to receive emails that are advertising things?",
-  ];
+const questions = [
+  "Who this person is?",
+  "What kind of business this person is involved in?",
+  "What you know about this business person?",
+];
 
-  const questionKeywords = [
-    ["work", "study", "notification", "assignment", "project", "update"],
-    ["email", "phone", "text", "message", "communication", "friends"],
-    ["reply", "answer", "message", "immediately", "prompt", "response"],
-    ["advertising", "ads", "promotion", "newsletter", "offer", "marketing"],
-  ];
+const questionKeywords = [
+  ["person", "individual", "who", "identity", "business person"],
+  ["business", "work", "industry", "company", "involved", "entrepreneur"],
+  ["know", "information", "background", "experience", "career", "details"],
+];
+
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -182,28 +183,28 @@ const Test1Speaking2020 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <h1 className="text-2xl font-bold">PART 2</h1> <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Email</h1>
-            <li>
-              What kinds of emails do you receive about your work or studies?
-            </li>
-            <li>Do you prefer to email, phone or text your friends? [Why?]</li>
-            <li>
-              Do you reply to emails and messages as soon as you receive them?
-              [Why/Why not?]
-            </li>
-            <li>
-              Are you happy to receive emails that are advertising things?
-              [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A famous business person that you know about
+            </h1>
+            <p className="text-lg font-bold">
+              Describe a famous business person that you know abo
+            </p>
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>who this person is</li>
+            <li>what kind of business this person is involved in</li>
+            <li>what you know about this business person</li>
           </ul>
+          <p className="text-lg font-bold mt-3">
+            and explain what you think of this business person.
+          </p>
         </div>
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
@@ -261,9 +262,9 @@ const Test1Speaking2020 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2020></Speaking1Pagination2020>
+      <Speaking3Pagination2020></Speaking3Pagination2020>
     </div>
   );
 };
 
-export default Test1Speaking2020;
+export default Speaking3Part22020;
