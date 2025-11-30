@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { FaChevronDown, FaDotCircle } from "react-icons/fa";
-import { GrClearOption } from "react-icons/gr";
-import { ImCross } from "react-icons/im";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import Listening4Pagination2019 from "../Pagination/Listening4Pagination2019";
 
-const Test4Listening2019 = () => {
+import { IoIosArrowDown } from "react-icons/io";
+import { GrClearOption } from "react-icons/gr";
+
+import { FaChevronDown, FaDotCircle } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+
+import Listening3Pagination2019 from "../Pagination/Listening3Pagination2019";
+
+const Listening3Part32019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,245 +21,235 @@ const Test4Listening2019 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+
+  // result marks display
   const [showResult, setShowResult] = useState(false);
-  //   voice
-  const [voices, setVoices] = useState([]);
-
-  // Load voices
-  useEffect(() => {
-    const synth = window.speechSynthesis;
-    const loadVoices = () => {
-      const allVoices = synth.getVoices();
-      if (allVoices.length) setVoices(allVoices);
-    };
-    loadVoices();
-    synth.onvoiceschanged = loadVoices;
-  }, []);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1. You will hear a woman phoning a hotel about holding a party there.",
-        "First, you have some time to look at questions 1 to 7.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 3. You will hear a trainee music teacher called Joe talking to his supervisor about the school marching band that he has been given responsibility for.",
+        "First, you have some time to look at questions 21 to 26.",
+        "Now listen carefully and answer questions 21 to 26.",
       ],
     },
-    {
-      speaker: "ANDREW",
-      text: [
-        "Good morning, Clare House Hotel, Andrew speaking, I'm the Events Manager.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Andrew is the Events Manager, so Events has been written in the space.",
-        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 7.",
-      ],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "Good morning, Clare House Hotel, Andrew speaking, I'm the Events Manager.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: [
-        "Good morning, Andrew. My name is Samantha. I'm arranging a party for my parents' 50th wedding anniversary.",
-        "And I'm ringing to ask about hiring a room sometime next September, also my parents and several of the guests will need accommodation.",
-      ],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "OK, I'm sure we can help you with that. Will you be having a sit down meal or a buffet?",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Probably a sit down."],
-    },
-    {
-      speaker: "ANDREW",
-      text: ["And do you know how many people there'll be?"],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Around 80, I think."],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "Well we have two rooms that can hold that number. ",
-        {
-          text: "One is the Adelphi room, that can seat 85 or hold over 100 if people are standing for a buffet.",
-          number: 1,
-        },
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Right."],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "If you have live music, there's room for four or five musicians in the gallery. Overlooking the room, our guests usually appreciate the fact that the music can be loud enough for dancing, but not too loud for conversation.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Yes, I really don't like it when you can't talk."],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "Exactly. Now the Adelphi Room is at the back of the hotel, and there are French windows. Leading out onto the terrace. ",
-        {
-          text: "This has a beautiful display of pots of roses at that time of the year.",
-          number: 2,
-        },
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Which direction does it face?"],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "Southwest, so that side of the hotel gets the sun in the afternoon and early evening.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Very nice."],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        {
-          text: "From the terrace, you can see the area of trees within the grounds of the hotel.",
-          number: 3,
-        },
-        "  Or you can stroll through there to the river. That's on the far side, so it isn't visible from the hotel. OK, then another option is the Carlton room. This is a bit bigger.",
-        {
-          text: " It can hold up to 110 people, and it has the advantage of a stage, which is useful if you have any entertainment.",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Hmm. And can you go outside from the room?"],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "No, the Carlton room is on the first floor. But on one side, the windows look out onto the lake.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Lovely. I think either of those rooms would be suitable."],
-    },
-    {
-      speaker: "ANDREW",
-      text: ["Can I tell you about some of the options we offer in addition?"],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["Please do."],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        "As well as a meal, you can have a MC, a master of ceremonies, who'll be with you throughout the party.",
-        "What exactly is the MC's function? I suppose they make a speech during the meal, if we need one, do they?",
-        { text: "That's right.", number: 5 },
-        "All our MCs are trained as public speakers, so they can easily get people's attention. Many guests are glad to have someone who can make themselves heard above the chatter, and they're also your support. ",
-        {
-          text: "If anything goes wrong, the MC will deal with it, so you can relax.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: [
-        "Great, I'll need to ask you about food, but something else that's important is accommodation. You obviously have rooms in the hotel. But do you also have any other accommodation, like cabins, for example?",
-      ],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        {
-          text: "Yes, there are 5 in the grounds, all self contained.",
-          number: 7,
-        },
-        "They each sleep 2 to 4 people, and have their own living room, bathroom, and small kitchen.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: ["That sounds perfect for what we'll need."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 8 to 10.",
-        "Now listen and answer questions 8 to 10.",
-      ],
-    },
-    {
-      speaker: "SAMANTHA",
-      text: [
-        "Now you have various facilities, don't you? Are they all included in the price of hiring the room? The pool for instance.",
-      ],
-    },
-    {
-      speaker: "ANDREW",
-      text: [
-        {
-          text: "Normally you'd be able to use it, but it'll be closed throughout September for refurbishment, I'm afraid.",
-          number: 8,
-        },
 
-        {
-          text: "The gym will be available though, at no extra charge.",
-          number: 9,
-        },
-        "That's open all day from 6 in the morning until midnight.",
+    {
+      speaker: "LIZZIE",
+      text: [
+        "So, how are you getting on with your teaching practice at the high school, Joe?",
       ],
     },
+
     {
-      speaker: "SAMANTHA",
-      text: ["Right."],
+      speaker: "JOE",
+      text: [
+        "Well, I've been put in charge of the school marching band, and it's quite a responsibility.",
+        "I'd like to talk it over with you.",
+      ],
     },
+
     {
-      speaker: "ANDREW",
+      speaker: "LIZZIE",
+      text: ["Go ahead. You'd better start by giving me a bit of background."],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "OK. Well, the band has students in it from all years. ",
+        {
+          text: "So they're aged 11 to 18, and there are about 50 of them altogether.",
+          number: 21,
+        },
+        "It's quite a popular activity within the school. I've never worked with a band of more than 20 before, and this is very different.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["I can imagine."],
+    },
+
+    {
+      speaker: "JOE",
       text: [
         {
-          text: "And the tennis courts but there is a small additional payment for those.",
-          number: 10,
+          text: "They aren't really good enough to enter national band competitions, but they're in a regional one later in the term.",
+          number: 22,
         },
-        "We have four courts, and it's worth booking in advance if you possibly can, as there can be quite a long waiting list for them.",
+        "Even if they don't win, and I don't expect them to. Hopefully it'll be an incentive for them to try and improve.",
       ],
     },
+
     {
-      speaker: "SAMANTHA",
+      speaker: "LIZZIE",
+      text: ["Yes, hopefully."],
+    },
+
+    {
+      speaker: "JOE",
       text: [
-        "Right, now could we discuss the food? This would be dinner around 7 o'clock...",
+        {
+          text: "Well, now the town council's organizing a carnival in the summer.",
+          number: 23,
+        },
+        "And the band has been asked to perform. If you ask me, they aren't really up to it yet, and I need to get them functioning better as a band, and in a very short time.",
       ],
     },
+
+    {
+      speaker: "LIZZIE",
+      text: [
+        "Have you been doing anything with them? Apart from practicing the music, I mean.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        {
+          text: "I played a recording I came across of a drummer talking about how playing in a band had changed his life.",
+          number: 24,
+        },
+        "I think it was an after-dinner speech. I thought it was pretty inspiring, because being in the band had stopped him from getting involved in crime.",
+        "The students seemed to find it interesting too.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["That's good."],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        {
+          text: "I'm planning to show them that old film from the 1940s 'Strike Up the Band', and talk about it with the students.",
+          number: 25,
+        },
+        "What do you think?",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: [
+        "Good idea. As it's about a school band, it might make the students realise how much they can achieve if they work together.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "That's what I've got in mind. ",
+        {
+          text: "I'm hoping I can take some of the band to a parade that's going to take place next month.",
+          number: 26,
+        },
+        "A couple of marching bands will be performing, and the atmosphere should be quite exciting. It depends on whether I can persuade the school to hire a coach or two to take us there.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["Mmm. They sound like good ideas to me."],
+    },
+
+    {
+      speaker: "JOE",
+      text: ["Thanks."],
+    },
+
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of section 1. You now have half a minute to check your answers.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "Now listen and answer questions 27 to 30.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "Can I tell you about a few people in the band who I'm finding it quite difficult to cope with? I'm sure you'll have some ideas about what I can do.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["Go ahead."],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "There's a flautist who says she loves playing in the band.",
+        {
+          text: " We rehearse twice a week after school, but she's hardly ever there.",
+          number: 27,
+        },
+        "Then she looks for me the next day, and gives me a very plausible reason. She says she had to help her mother, or she's been ill, but to be honest, I don't believe her.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["Oh, dear. Any more students with difficulties?"],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "Plenty. Uh. There's a trumpeter who thinks she's the best musician in the band, though she certainly isn't.",
+        {
+          text: "She's always saying what she thinks other people should do, which makes my job pretty difficult.",
+          number: 28,
+        },
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["She sounds a bit of a nightmare."],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "You can say that again. Uh. One of the trombonists has got an impressive sense of rhythm, and could be an excellent musician.",
+        {
+          text: "Except that he has breathing difficulties, and he doesn't really have enough breath for the trombone.",
+          number: 29,
+        },
+        "He'd be much better off playing percussion for instance, but he refuses to give up, so he ends up only playing half the notes.",
+      ],
+    },
+
+    {
+      speaker: "LIZZIE",
+      text: ["I suppose you have to admire his determination."],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        {
+          text: "Hmm. Maybe. One of the percussionists isn't too bad, but he never seems to interact with other people.",
+          number: 30,
+        },
+        "And he always rushes off as soon as the rehearsal ends. I don't know if there are family reasons or what, but it isn't good in a band where people really need to feel they're part of a group.",
+        "Hmm. There are others too, but at least that gives you an idea of what I'm up against.",
+        "Do you have any thoughts about what I can do, Lizzie?",
+      ],
+    },
+
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 3.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
@@ -360,15 +353,29 @@ const Test4Listening2019 = () => {
       return;
     }
     const voices = window.speechSynthesis.getVoices();
-
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-      if (speaker === "ANNOUNCER")
+
+      // Announcer: male
+      if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "SAMANTHA")
-        return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "ANDREW")
-        return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
+      // Announcer: male
+      if (speaker === "JOE") {
+        return voices.find((v) => v.name.includes("Mark")) || voices[0];
+      }
+
+      // Erica: female
+      if (speaker === "LIZZIE") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
+
       return voices[0];
     };
 
@@ -405,21 +412,28 @@ const Test4Listening2019 = () => {
     };
     speakNextChunk();
   };
+  useEffect(() => {
+    window.speechSynthesis.onvoiceschanged = () => {
+      const list = window.speechSynthesis.getVoices();
+      console.log("Available voices:", list);
+    };
+  }, []);
 
   //  Marks show
+const correctAnswers = {
+  21: "50",
+  22: "regional",
+  23: "carnival",
+  24: "drummer",
+  25: "film",
+  26: "parade",
 
-  const correctAnswers = {
-    1: "85",
-    2: "roses",
-    3: "trees",
-    4: "110",
-    5: "speech",
-    6: "support",
-    7: "cabins",
-    8: "C",
-    9: "A",
-    10: "B",
-  };
+  27: "D",
+  28: "B",
+  29: "E",
+  30: "F",
+};
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -445,7 +459,7 @@ const Test4Listening2019 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2019/Test 4/listening", newScore);
+    localStorage.setItem("/listening3Part32019", newScore);
   };
 
   const toggleButton = (id) => {
@@ -457,12 +471,12 @@ const Test4Listening2019 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2019/Test 4/listening");
+    localStorage.removeItem("/listening3Part32019");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2019/Test 4/listening");
+    const savedScore = localStorage.getItem("/listening3Part32019");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -474,7 +488,7 @@ const Test4Listening2019 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -505,7 +519,7 @@ const Test4Listening2019 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Enquiry about booking hotel room")}
+                {renderText("School Marching Band")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -535,7 +549,7 @@ const Test4Listening2019 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -580,8 +594,9 @@ const Test4Listening2019 = () => {
               )}
             </div>
           </div>
+          {/* 1st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 21–26")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -592,266 +607,207 @@ const Test4Listening2019 = () => {
             </span>
             {renderText(" for each answer.")}
           </h3>
+
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Enquiry about booking hotel room for event")}
+              {renderText("BACKGROUND ON SCHOOL MARCHING BAND")}
             </h1>
 
             <ul className="list-disc list-inside space-y-3">
-              {/* ---------- Example ---------- */}
               <li className="text-lg">
-                <span>{renderText("(Example) Andrew is the")}</span>
-                <span className="ml-2 font-semibold">
-                  {renderText("Events Manager")}
-                </span>
+                <span>{renderText("It consists of around")}</span>
+                <button
+                  onClick={() => toggleButton(21)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[21]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  21
+                </button>
+                <input
+                  value={userAnswers[21] || ""}
+                  onChange={(e) => handleInputChange(21, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>{renderText("students.")}</span>
               </li>
 
-              <h2 className="text-lg font-bold mt-6">{renderText("Rooms")}</h2>
-
               <li className="text-lg">
-                <span>{renderText("Adelphi Room")}</span>
+                <span>{renderText("It is due to play in a")}</span>
+                <button
+                  onClick={() => toggleButton(22)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[22]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  22
+                </button>
+                <input
+                  value={userAnswers[22] || ""}
+                  onChange={(e) => handleInputChange(22, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>{renderText("band competition.")}</span>
               </li>
 
               <li className="text-lg">
                 <span>
-                  {renderText("number of people who can sit down to eat:")}
+                  {renderText("It has been invited to play in the town's")}
                 </span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(23)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[23]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  23
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[23] || ""}
+                  onChange={(e) => handleInputChange(23, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>.</span>
               </li>
 
               <li className="text-lg">
-                {renderText("has a gallery suitable for musicians")}
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("can go out and see the")}</span>
+                <span>{renderText("They have listened to a talk by a")}</span>
                 <button
-                  onClick={() => toggleButton(2)}
+                  onClick={() => toggleButton(24)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
+                    activeButtons[24]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  2
+                  24
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[24] || ""}
+                  onChange={(e) => handleInputChange(24, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("in pots on the terrace")}</span>
+                <span>.</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("terrace has a view of a group of")}</span>
+                <span>{renderText("Joe will discuss a")}</span>
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(25)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
+                    activeButtons[25]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  25
                 </button>
                 <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  value={userAnswers[25] || ""}
+                  onChange={(e) => handleInputChange(25, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-              </li>
-
-              <li className="text-lg">{renderText("Carlton Room")}</li>
-
-              <li className="text-lg">
-                <span>
-                  {renderText("number of people who can sit down to eat:")}
-                </span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-
-              <li className="text-lg">{renderText("view of the lake")}</li>
-
-              <h2 className="text-lg font-bold mt-6">
-                {renderText("Options")}
-              </h2>
-
-              <li className="text-lg">
-                <span>{renderText("Master of Ceremonies: can give")}</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText("while people are eating")}</span>
+                <span>{renderText("with the band.")}</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("will provide")}</span>
+                <span>{renderText("Joe hopes the band will attend a")}</span>
                 <button
-                  onClick={() => toggleButton(6)}
+                  onClick={() => toggleButton(26)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
+                    activeButtons[26]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  6
+                  26
                 </button>
                 <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText("if there are any problems")}</span>
-              </li>
-
-              <h2 className="text-lg font-bold mt-6">
-                {renderText("Accommodation")}
-              </h2>
-
-              <li className="text-lg">
-                <span>{renderText("in hotel rooms or")}</span>
-                <button
-                  onClick={() => toggleButton(7)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  7
-                </button>
-                <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
+                <span>{renderText("next month.")}</span>
               </li>
             </ul>
           </div>
-          {/* third step */}
-          <div className="space-y-4">
-            <h1 className="text-lg font-bold">
-              {renderText("Questions 8-10")}
-            </h1>
-            <p>
-              {renderText(
-                "Look at the following statements (Questions 8-10) and the list of people below."
-              )}
-            </p>
-            <p>
-              {renderText("Match each statement with the correct person, ")}
-              <span className="font-bold text-lg">{renderText("A-C")}</span>
-            </p>
-            <p>
-              {renderText("Choose the correct letter, ")}
-              <span className="font-bold text-lg">{renderText("A-C")}</span>
-              {renderText(", in boxes 9-13 on your answer sheet.")}
-            </p>
-            <p>
-              <span className="font-bold text-lg">{renderText("NB")}</span>
-              {renderText(" You may use any letter more than once.")}
-            </p>
 
-            <div className="flex items-center justify-center">
-              <div className="flex items-center border-2 border-gray-300 w-80 md:w-96 px-4 py-8 justify-center">
-                <div>
-                  <h1 className="text-xl font-bold text-center mb-4 hidden sm:block">
-                    {renderText("Availability")}
-                  </h1>
-                  <ul className="list-[upper-alpha] list-inside text-lg">
-                    <li>{renderText("included in cost of hiring room")}</li>
-                    <li>{renderText(".available at extra charge")}</li>
-                    <li>{renderText("not available")}</li>
+          <div>
+            {/* normal title*/}
+            <div className="space-y-4 leading-relaxed mt-5">
+              <h2 className="text-lg font-bold mb-3">
+                {renderText("Questions 27-30")}
+              </h2>
+
+              <h3 className="text-lg mb-5">
+                {renderText(
+                  "What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?"
+                )}{" "}
+                <br /> <br />
+                {renderText("Choose the correct letter,  ")}{" "}
+                <span className="font-bold mr-2">{renderText("A-F")}</span>{" "}
+                {renderText("next to Questions 27-30")}
+              </h3>
+              <div className="flex items-center justify-center border border-black py-4 px-4 w-80 mx-auto">
+                <div className="text-center">
+                  <h1 className="text-xl font-bold mb-5">Problems</h1>
+
+                  <ul className="space-y-1 text-lg">
+                    <li>
+                      {renderText("A. makes a lot of mistakes in rehearsals")}
+                    </li>
+                    <li>
+                      {renderText("B. keeps making unhelpful suggestions")}
+                    </li>
+                    <li>{renderText("C. has difficulty with rhythm")}</li>
+                    <li>{renderText("D. misses too many rehearsals")}</li>
+                    <li>{renderText("E. has a health problem")}</li>
+                    <li>{renderText("F. doesn't mix with other students")}</li>
                   </ul>
                 </div>
               </div>
+
+              <br />
             </div>
+          </div>
 
-            <p className="flex items-center flex-wrap">
-              <span className="font-bold text-lg">{renderText("8.")}</span>
-              <span>{renderText("outdoor swimming pool")}</span>
+          {/* optional question */}
+          <div className="space-y-2">
+            {/* ---------- Question 1 ---------- */}
+            <h1 className="text-lg font-bold">{renderText("Band members")}</h1>
 
-              <div className="relative w-40">
-                {" "}
-                <select
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="8">{renderText("8")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                </select>
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            <p className="flex items-center flex-wrap">
-              <span className="font-bold text-lg">{renderText("9.")}</span>
-              <span>{renderText("gym")}</span>
+            {/* ---------- Question 2 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("27.")}</span>
+              <span>{renderText("flautist")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  value={userAnswers[27] || ""}
+                  onChange={(e) => handleInputChange(27, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="9">{renderText("9")}</option>
+                  <option value="27">{renderText("27")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -860,20 +816,26 @@ const Test4Listening2019 = () => {
               </div>
             </p>
 
-            <p className="flex items-center flex-wrap">
-              <span className="font-bold text-lg">{renderText("10.")}</span>
-              <span>{renderText("tennis courts")}</span>
+            {/* ---------- Question 3 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("28.")}</span>
+              <span>{renderText("trumpeter")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  value={userAnswers[28] || ""}
+                  onChange={(e) => handleInputChange(28, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="10">{renderText("10")}</option>
+                  <option value="28">{renderText("28")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
                 </select>
 
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -881,7 +843,65 @@ const Test4Listening2019 = () => {
                 </span>
               </div>
             </p>
-          </div>{" "}
+
+            {/* ---------- Question 4 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("29.")}</span>
+              {renderText("trombonis")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[29] || ""}
+                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="29">{renderText("29")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 5 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("30.")}</span>
+              {renderText("percussionist")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[30] || ""}
+                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="30">{renderText("30")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+      
+          </div>
+
           {/* ---------- Marks display ---------- */}
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
           <div className="mt-10">
@@ -908,11 +928,11 @@ const Test4Listening2019 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (21-30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -979,9 +999,9 @@ const Test4Listening2019 = () => {
           </div>
         </div>
       </div>
-      <Listening4Pagination2019></Listening4Pagination2019>
+      <Listening3Pagination2019></Listening3Pagination2019>
     </div>
   );
 };
 
-export default Test4Listening2019;
+export default Listening3Part32019;

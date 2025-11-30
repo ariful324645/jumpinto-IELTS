@@ -150,6 +150,26 @@ import Speaking3Part22020 from "../components/Academic 2020/Speaking/Speaking3/S
 import Speaking3Part32020 from "../components/Academic 2020/Speaking/Speaking3/Speaking3Part32020";
 import Speaking4Part22020 from "../components/Academic 2020/Speaking/Speaking4/Speaking4Part22020";
 import Speaking4Part32020 from "../components/Academic 2020/Speaking/Speaking4/Speaking4Part32020";
+import Test2Speaking2019 from "../components/Academic 2019/Speaking/Test2Speaking2019";
+import Test3Speaking2019 from "../components/Academic 2019/Speaking/Test3Speaking2019";
+import Test4Speaking2019 from "../components/Academic 2019/Speaking/Test4Speaking2019";
+import Listening1Part22019 from "../components/Academic 2019/Parts/Listening1Part22019";
+import Listening1Part32019 from "../components/Academic 2019/Parts/Listening1Part32019";
+import Listening1Part42019 from "../components/Academic 2019/Parts/Listening1Part42019";
+import Listening2Part22019 from "../components/Academic 2019/Parts/Listening2Part22019";
+import Listening2Part32019 from "../components/Academic 2019/Parts/Listening2Part32019";
+import Listening2Part42019 from "../components/Academic 2019/Parts/Listening2Part42019";
+import Listening3Part22019 from "../components/Academic 2019/Parts/Listening3Part22019";
+import Listening3Part32019 from "../components/Academic 2019/Parts/Listening3Part32019";
+import Listening3Part42019 from "../components/Academic 2019/Parts/Listening3Part42019";
+import Listening4Part22019 from "../components/Academic 2019/Parts/Listening4Part22019";
+import Listening4Part32019 from "../components/Academic 2019/Parts/Listening4Part32019";
+import Listening4Part42019 from "../components/Academic 2019/Parts/Listening4Part42019";
+import Reading1Part22019 from "../components/Academic 2019/Parts/Reading1Part22019";
+import Reading1Part32019 from "../components/Academic 2019/Parts/Reading1Part32019";
+import Reading2Part22019 from "../components/Academic 2019/Parts/Reading2Part22019";
+
+import Reading2Part32019 from "../components/Academic 2019/Parts/Reading2Part32019";
 
 export const router = createBrowserRouter([
   {
@@ -172,10 +192,6 @@ export const router = createBrowserRouter([
         path: "/vocabularySearch",
         Component: VocabularySearch,
       },
-      // {
-      //   path: "/:year/:testName/listening",
-      //   Component: AllListening,
-      // },
 
       {
         path: "/2025/Test 1/listening",
@@ -706,24 +722,89 @@ export const router = createBrowserRouter([
         Component: Test1Listening2019,
       },
       {
+        path: "/listening1Part22019",
+        Component: Listening1Part22019,
+      },
+      {
+        path: "/listening1Part32019",
+        Component: Listening1Part32019,
+      },
+      {
+        path: "/listening1Part42019",
+        Component: Listening1Part42019,
+      },
+      {
         path: "/2019/Test 2/listening",
         Component: Test2Listening2019,
+      },
+      {
+        path: "/listening2Part22019",
+        Component: Listening2Part22019,
+      },
+      {
+        path: "/listening2Part32019",
+        Component: Listening2Part32019,
+      },
+      {
+        path: "/listening2Part42019",
+        Component: Listening2Part42019,
       },
       {
         path: "/2019/Test 3/listening",
         Component: Test3Listening2019,
       },
       {
+        path: "/listening3Part22019",
+        Component: Listening3Part22019,
+      },
+      {
+        path: "/listening3Part32019",
+        Component: Listening3Part32019,
+      },
+      {
+        path: "/listening3Part42019",
+        Component: Listening3Part42019,
+      },
+      {
         path: "/2019/Test 4/listening",
         Component: Test4Listening2019,
       },
+      {
+        path: "/listening4Part22019",
+        Component: Listening4Part22019,
+      },
+      {
+        path: "/listening4Part32019",
+        Component: Listening4Part32019,
+      },
+      {
+        path: "/listening4Part42019",
+        Component: Listening4Part42019,
+      },
+
       {
         path: "/2019/Test 1/reading",
         Component: Test1Reading2019,
       },
       {
+        path: "/reading1Part22019",
+        Component: Reading1Part22019,
+      },
+      {
+        path: "/reading1Part32019",
+        Component: Reading1Part32019,
+      },
+      {
         path: "/2019/Test 2/reading",
         Component: Test2Reading2019,
+      },
+      {
+        path: "/reading2Part22019",
+        Component: Reading2Part22019,
+      },
+      {
+        path: "/reading2Part32019",
+        Component: Reading2Part32019,
       },
       {
         path: "/2019/Test 3/reading",
@@ -752,6 +833,18 @@ export const router = createBrowserRouter([
       {
         path: "/2019/Test 1/speaking",
         Component: Test1Speaking2019,
+      },
+      {
+        path: "/2019/Test 2/speaking",
+        Component: Test2Speaking2019,
+      },
+      {
+        path: "/2019/Test 3/speaking",
+        Component: Test3Speaking2019,
+      },
+      {
+        path: "/2019/Test 4/speaking",
+        Component: Test4Speaking2019,
       },
     ],
   },

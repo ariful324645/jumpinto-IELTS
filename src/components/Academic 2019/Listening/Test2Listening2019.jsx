@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
+import Listening2Pagination2019 from "../Pagination/Listening2Pagination2019";
 
 const Test1Listening2019 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -15,6 +18,7 @@ const Test1Listening2019 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const [showResult, setShowResult] = useState(false);
 
   const lines = [
     {
@@ -486,16 +490,16 @@ const Test1Listening2019 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "It's 2194429785",
-    2: "October 10th, 1992",
-    3: "I started off as a waitress there a few years ago, and I'm a manager now",
-    4: "It's Cawley Life Insurance, that's CAWLEY",
-    5: "Well, I've been getting a pain in my knee, the left one, not very serious at first, but it's gotten worse",
-    6: "It's been worse for the last couple of days, but it's 3 weeks since I first noticed it",
-    7: "Yes, I play a lot of tennis",
-    8: "But usually just when I'm on vacation.But normally I go running a few times a week, maybe 3 or 4 times",
-    9: "I did have an accident last year when I slipped and hurt my shoulder. but that's better now",
-    10: "Well, I take vitamins, but that's all",
+    1: "2194429785",
+    2: "October 10",
+    3: "manager",
+    4: "Cawley",
+    5: "knee",
+    6: "3 weeks",
+    7: "tannis",
+    8: "running",
+    9: "shoulder",
+    10: "vitamins",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -612,7 +616,7 @@ const Test1Listening2019 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -922,8 +926,104 @@ const Test1Listening2019 = () => {
               </li>
             </ul>
           </div>
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–10)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+      <Listening2Pagination2019></Listening2Pagination2019>
     </div>
   );
 };

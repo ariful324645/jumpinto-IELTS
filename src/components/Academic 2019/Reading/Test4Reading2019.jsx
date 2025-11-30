@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
 
 const Test4Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+   const [showResult, setShowResult] = useState(false);
 
   const handleClear = () => {
     setActiveButtons({});
@@ -131,22 +134,22 @@ const Test4Reading2019 = () => {
   };
 
   //  Marks show
+const correctAnswers = {
+  1: "behavior",
+  2: "caregiving",
+  3: "trail-following",
+  4: "activity",
+  5: "prey",
+  6: "mushroom",
+  7: "synaptic",
+  8: "serotonin",
+  9: "NOT GIVEN",
+  10: "NOT GIVEN",
+  11: "NOT GIVEN",
+  12: "NOT GIVEN",
+  13: "NOT GIVEN",
+};
 
-  const correctAnswers = {
-    1: "Giraldo focused on ants at four age ranges: 20 to 22 days, 45 to 47 days, 95 to 97 days and 120 to 122 days",
-    2: "Giraldo watched how well the ants took care of the young of the colony, recording how often each ant attended to, carried and fed them",
-    3: "Out in the wild, the ants probably don't live for a full 140 days thanks to predators, disease and just being in an environment that's much harsher than the comforts of the lab",
-    4: "She tested how ants responded to light and also measured how active they were by counting how often ants in a small dish walked across a line",
-    5: "And when it came to reacting to prey, the older ants attacked the poor fruit fly just as aggressively as the young ones did, flaring their mandibles or pulling at the fly's legs",
-    6: "She saw no major differences with age, nor was there any difference in the location of the dying cells, showing that age didn't seem to affect specific brain functions",
-    7: "She also wanted to see if aging affects the density of synaptic complexes within these structures - regions where neurons come together. Again, the answer was no",
-    8: "She also wanted to see if aging affects the density of synaptic complexes within these structures - regions where neurons come together. Again, the answer was no",
-    9: "TRUE",
-    10: "FALSE",
-    11: "TRUE",
-    12: "FALSE",
-    13: "TRUE",
-  };
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/2019/Test 4/reading");
@@ -513,7 +516,7 @@ const Test4Reading2019 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -851,6 +854,101 @@ const Test4Reading2019 = () => {
                 </div>
               );
             })}
+          </div>
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-10 pb-5">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–13)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

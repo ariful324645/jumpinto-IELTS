@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading2Pagination2019 from "../Pagination/Reading2Pagination2019";
 
 const Test2Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   const handleClear = () => {
     setActiveButtons({});
@@ -35,7 +39,7 @@ const Test2Reading2019 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 6;
+      const answerKey = qIndex + 1;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -136,19 +140,19 @@ const Test2Reading2019 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "The family often stayed at Press Castle, the large mansion on the northern edge of the property, and Alexander spent much of his childhood in the area, playing on the beach near Eyemouth or fishing in the streams nearby",
-    2: "Although he never liked the prospect of a business career, he stayed with it to please his family",
-    3: "In 1866, he gave up his business to open a photographic studio, advertising himself as a portrait and landscape photographer. From about 1870 he dropped portraiture to specialize in landscape photography and other views",
-    4: "While Notman's landscapes were noted for their bold realism, Henderson for the first 20 years of his career produced romantic images, showing the strong influence of the British landscape tradition",
-    5: "People wanted to buy photographs as souvenirs of a trip or as gifts, and catering to this market, Henderson had stock photographs on display at his studio for mounting, framing, or inclusion in albums",
+    1: "FALSE",
+    2: "TRUE",
+    3: "NOT GIVEN",
+    4: "FALSE",
+    5: "NOT GIVEN",
     6: "TRUE",
-    7: "FALSE",
-    8: "TRUE",
-    9: "TRUE",
-    10: "FALSE",
-    11: "TRUE",
-    12: "FALSE",
-    13: "TRUE",
+    7: "NOT GIVEN",
+    8: "NOT GIVEN",
+    9: "merchant",
+    10: "time-consuming",
+    11: "mounting, framing, albums",
+    12: "Quebec",
+    13: "mountains",
   };
 
   useEffect(() => {
@@ -390,7 +394,78 @@ const Test2Reading2019 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+          <br />
+          {/* 2nd step */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1-8")}
+          </h2>
+          <br />
+          <h3 className="text-lg font-semibold mb-5">
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}{" "}
+            <br /> <br />
+            {renderText("In boxes 1-8 on your answer sheet, choose")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
+            {renderText("if the statement agrees with the information")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
+            {renderText("if the statement contradicts the information")}
+          </h3>
+          <h3 className="flex gap-5 text-lg">
+            <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
+            {renderText("if there is no information on this")}
+          </h3>
+          <br /> <br />
+          {/* question dynamic */}
+          <div className="space-y-6 leading-relaxed p-4">
+            <h2 className="text-lg font-bold">Questions 1-8</h2>
+            {questions.map((q, qIndex) => {
+              const answerKey = qIndex + 1;
+              const correct = correctAnswers[answerKey];
+
+              return (
+                <div key={qIndex} className="flex flex-col gap-2">
+                  <h3 className="text-lg font-medium">
+                    {answerKey}. {q}
+                  </h3>
+                  <ul className="flex flex-col gap-2 ml-4">
+                    {options.map((option, oIndex) => {
+                      const isSelected = selectedOptions[qIndex] === option;
+                      const isCorrect = option === correct;
+
+                      return (
+                        <li
+                          key={oIndex}
+                          onClick={() => handleOptionClick(qIndex, option)}
+                          className="flex items-center gap-2 cursor-pointer"
+                        >
+                          <span
+                            className={`w-5 h-5 rounded-full border-2 inline-block ${
+                              isSelected
+                                ? "bg-blue-500 border-blue-500"
+                                : "border-gray-700"
+                            }`}
+                          ></span>
+                          <span
+                            className={
+                              isSelected ? "text-blue-500" : "text-black"
+                            }
+                          >
+                            {option}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
@@ -438,7 +513,7 @@ const Test2Reading2019 = () => {
             </div>
 
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-5")}
+              {renderText("Questions 9-13")}
             </h2>
 
             <h3 className="text-lg  mb-5">
@@ -452,7 +527,7 @@ const Test2Reading2019 = () => {
 
             <h1 className="text-lg font-semibold">
               {renderText(
-                "Write your answers in boxes 1-5 on your answer sheet."
+                "Write your answers in boxes 9-13 on your answer sheet."
               )}
             </h1>
             <br />
@@ -472,18 +547,18 @@ const Test2Reading2019 = () => {
                   {renderText("was born in Scotland in 1831 - father was a")}
                 </span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[9]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  9
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[9] || ""}
+                  onChange={(e) => handleInputChange(9, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -525,18 +600,18 @@ const Test2Reading2019 = () => {
                   )}
                 </span>
                 <button
-                  onClick={() => toggleButton(2)}
+                  onClick={() => toggleButton(10)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
+                    activeButtons[10]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  2
+                  10
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[10] || ""}
+                  onChange={(e) => handleInputChange(10, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -549,18 +624,18 @@ const Test2Reading2019 = () => {
               <li className="text-lg">
                 <span>{renderText("the photographs Henderson sold were")}</span>
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(11)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
                     activeButtons[3]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  11
                 </button>
                 <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  value={userAnswers[11] || ""}
+                  onChange={(e) => handleInputChange(11, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -571,7 +646,7 @@ const Test2Reading2019 = () => {
               </li>
             </ul>
 
-            {/* ---------- Section 3 ---------- */}
+            {/* ---------- Section 10 ---------- */}
             <ul className="list-disc list-inside space-y-3">
               <h1 className="text-lg font-bold mt-3">
                 {renderText("Travelling as a professional photographer")}
@@ -590,18 +665,18 @@ const Test2Reading2019 = () => {
                   {renderText("took many trips along eastern rivers in a")}
                 </span>
                 <button
-                  onClick={() => toggleButton(4)}
+                  onClick={() => toggleButton(12)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
+                    activeButtons[12]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  4
+                  12
                 </button>
                 <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
+                  value={userAnswers[12] || ""}
+                  onChange={(e) => handleInputChange(12, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -620,18 +695,18 @@ const Test2Reading2019 = () => {
                   {renderText("worked for CPR in 1885 and photographed the")}
                 </span>
                 <button
-                  onClick={() => toggleButton(5)}
+                  onClick={() => toggleButton(13)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
+                    activeButtons[13]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  5
+                  13
                 </button>
                 <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  value={userAnswers[13] || ""}
+                  onChange={(e) => handleInputChange(13, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -642,79 +717,104 @@ const Test2Reading2019 = () => {
               </li>
             </ul>
           </div>
-          <br />
-          {/* 2nd step */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 9-13")}
-          </h2>
-          <br />
-          <h3 className="text-lg font-semibold mb-5">
-            {renderText(
-              "Do the following statements agree with the information given in Reading Passage 1?"
-            )}{" "}
-            <br /> <br />
-            {renderText("In boxes 9-13 on your answer sheet, choose")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
-            {renderText("if the statement agrees with the information")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
-            {renderText("if the statement contradicts the information")}
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
-            {renderText("if there is no information on this")}
-          </h3>
-          <br /> <br />
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">Questions 9-13</h2>
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 6;
-              const correct = correctAnswers[answerKey];
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/13
+                  </p>
+                </div>
 
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg font-medium">
-                    {answerKey}. {q}
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–13)
                   </h3>
-                  <ul className="flex flex-col gap-2 ml-4">
-                    {options.map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-                      const isCorrect = option === correct;
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
 
                       return (
                         <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
                         </li>
                       );
                     })}
                   </ul>
                 </div>
-              );
-            })}
+              </div>
+            )}
           </div>
         </div>
       </div>
+      <Reading2Pagination2019></Reading2Pagination2019>
     </div>
   );
 };

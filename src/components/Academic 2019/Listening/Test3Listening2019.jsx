@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
+import Listening3Pagination2019 from "../Pagination/Listening3Pagination2019";
 
 const Test3Listening2019 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -15,6 +18,7 @@ const Test3Listening2019 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const [showResult, setShowResult] = useState(false);
 
   //   voice
   const [voices, setVoices] = useState([]);
@@ -459,16 +463,16 @@ const Test3Listening2019 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "Sure, uh, so for talks and presentations, we have the Tesla room.",
-    2: "Yes, that'll be all set up ready for you",
-    3: "And we'd like to have an exhibition of our products and services there as well, so that'll need to be quite a big space",
-    4: "Great, and I presume there's wifi",
-    5: "That's $45 per person, or you can have the special for $25 more",
-    6: "So we can offer you rooms at $135",
-    7: "And there's a pool up on the roof for the use of guests",
-    8: "Yes, it's about 12 km from the airport, but there's a complimentary shuttle bus for guests, and it's only about 10 minutes' walk from the Central Railway Station",
-    9: "Uh. Well, it's downtown on Wilby Street. That's quite a small street, and it's not very far from the sea",
-    10: "Then, if they want to make a night of it, they can go on to one of the clubs in the area. There are a great many to choose from",
+    1: "Tesla",
+    2: "microphones",
+    3: "exhibition",
+    4: "wifi",
+    5: "45",
+    6: "135",
+    7: "pool",
+    8: "airport",
+    9: "sea",
+    10: "clubs",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -585,7 +589,7 @@ const Test3Listening2019 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -888,8 +892,104 @@ const Test3Listening2019 = () => {
               </li>
             </ul>
           </div>
+          {/* ---------- Marks display ---------- */}
+          {/* ---------- Marks Section (Submit + Result Display) ---------- */}
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–10)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+      <Listening3Pagination2019></Listening3Pagination2019>
     </div>
   );
 };
