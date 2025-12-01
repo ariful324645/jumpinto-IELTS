@@ -170,6 +170,10 @@ import Reading1Part32019 from "../components/Academic 2019/Parts/Reading1Part320
 import Reading2Part22019 from "../components/Academic 2019/Parts/Reading2Part22019";
 
 import Reading2Part32019 from "../components/Academic 2019/Parts/Reading2Part32019";
+import Reading3Part22019 from "../components/Academic 2019/Parts/Reading3Part22019";
+import Reading3Part32019 from "../components/Academic 2019/Parts/Reading3Part32019";
+import Reading4Part22019 from "../components/Academic 2019/Parts/Reading4Part22019";
+import Reading4Part32019 from "../components/Academic 2019/Parts/Reading4Part32019";
 
 export const router = createBrowserRouter([
   {
@@ -811,8 +815,24 @@ export const router = createBrowserRouter([
         Component: Test3Reading2019,
       },
       {
+        path: "/reading3Part22019",
+        Component: Reading3Part22019,
+      },
+      {
+        path: "/reading3Part32019",
+        Component: Reading3Part32019,
+      },
+      {
         path: "/2019/Test 4/reading",
         Component: Test4Reading2019,
+      },
+      {
+        path: "/reading4Part22019",
+        Component: Reading4Part22019,
+      },
+      {
+        path: "/reading4Part32019",
+        Component: Reading4Part32019,
       },
       {
         path: "/2019/Test 1/writing",

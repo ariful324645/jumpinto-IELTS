@@ -3,12 +3,13 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading4Pagination2019 from "../Pagination/Reading4Pagination2019";
 
 const Test4Reading2019 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-   const [showResult, setShowResult] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   const handleClear = () => {
     setActiveButtons({});
@@ -134,22 +135,21 @@ const Test4Reading2019 = () => {
   };
 
   //  Marks show
-const correctAnswers = {
-  1: "behavior",
-  2: "caregiving",
-  3: "trail-following",
-  4: "activity",
-  5: "prey",
-  6: "mushroom",
-  7: "synaptic",
-  8: "serotonin",
-  9: "NOT GIVEN",
-  10: "NOT GIVEN",
-  11: "NOT GIVEN",
-  12: "NOT GIVEN",
-  13: "NOT GIVEN",
-};
-
+  const correctAnswers = {
+    1: "behavior",
+    2: "caregiving",
+    3: "trail-following",
+    4: "activity",
+    5: "prey",
+    6: "mushroom",
+    7: "synaptic",
+    8: "serotonin",
+    9: "NOT GIVEN",
+    10: "NOT GIVEN",
+    11: "NOT GIVEN",
+    12: "NOT GIVEN",
+    13: "NOT GIVEN",
+  };
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/2019/Test 4/reading");
@@ -952,6 +952,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
+      <Reading4Pagination2019></Reading4Pagination2019>
     </div>
   );
 };
