@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking2Pagination2019 from "../Pagination/Speaking2Pagination2019";
 
-const Test2Speaking2019 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+import Speaking3Pagination2019 from "../Pagination/Speaking3Pagination2019";
+
+const Speaking3Part22019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,20 +17,18 @@ const Test2Speaking2019 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2019/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
 
 const questions = [
-  "Which social media websites do you use?",
-  "How much time do you spend on social media sites? [Why/Why not?]",
-  "What kind of information about yourself have you put on social media? [Why/Why not?]",
-  "Is there anything you don't like about social media? [Why?]",
+  "What task you did?",
+  "Why this task was very difficult?",
+  "How you worked on this task?",
 ];
 
 const questionKeywords = [
-  ["social media", "websites", "platforms", "accounts", "apps", "use"],
-  ["time", "duration", "hours", "frequency", "usage", "spend"],
-  ["information", "personal", "details", "profile", "share", "post"],
-  ["dislike", "negative", "problem", "issue", "concern", "why"],
+  ["task", "work", "assignment", "project", "job", "activity"],
+  ["difficult", "challenge", "hard", "problem", "obstacle"],
+  ["worked", "process", "method", "approach", "steps", "solution"],
 ];
 
 
@@ -183,26 +183,35 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <h1 className="text-2xl font-bold">PART 2</h1> <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Social media</h1>
-            <li>Which social media websites do you use?</li>
-            <li>
-              How much time do you spend on social media sites? [Why/Why not?]
-            </li>
-            <li>
-              What kind of information about yourself have you put on social
-              media? [Why/Why not?]
-            </li>
-            <li>Is there anything you don't like about social media? [Why?]</li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A very difficult task that you succeeded in doing as part of your
+              work or studies
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a very difficult task that you succeeded in doing as part
+              of your work or studies.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>what task you did</li>
+            <li>why this task was very difficult</li>
+            <li>how you worked on this task</li>
           </ul>
+          <p className="text-lg font-bold mt-3">
+            and explain how you felt when you had successfully completed this
+            task.
+          </p>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -259,9 +268,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking2Pagination2019></Speaking2Pagination2019>
+      <Speaking3Pagination2019></Speaking3Pagination2019>
     </div>
   );
 };
 
-export default Test2Speaking2019;
+export default Speaking3Part22019;

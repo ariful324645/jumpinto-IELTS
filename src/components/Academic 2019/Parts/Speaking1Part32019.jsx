@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking2Pagination2019 from "../Pagination/Speaking2Pagination2019";
 
-const Test2Speaking2019 = () => {
+import Speaking1Pagination2019 from "../Pagination/Speaking1Pagination2019";
+
+const Speaking1Part32019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,22 +16,38 @@ const Test2Speaking2019 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2019/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-const questions = [
-  "Which social media websites do you use?",
-  "How much time do you spend on social media sites? [Why/Why not?]",
-  "What kind of information about yourself have you put on social media? [Why/Why not?]",
-  "Is there anything you don't like about social media? [Why?]",
-];
+  const questions = [
+    "What are the most popular types of children's books in your country?",
+    "What are the benefits of parents reading books to their children?",
+    "Should parents always let children choose the books they read?",
+    "How popular are electronic books in your country?",
+    "What are the advantages of parents reading electronic books (compared to printed books)?",
+    "Will electronic books ever completely replace printed books in the future?",
+  ];
 
-const questionKeywords = [
-  ["social media", "websites", "platforms", "accounts", "apps", "use"],
-  ["time", "duration", "hours", "frequency", "usage", "spend"],
-  ["information", "personal", "details", "profile", "share", "post"],
-  ["dislike", "negative", "problem", "issue", "concern", "why"],
-];
-
+  const questionKeywords = [
+    ["children's books", "popular", "types", "kids", "reading", "country"],
+    ["benefits", "parents", "reading", "children", "advantages", "learning"],
+    ["choose books", "children choice", "reading", "select", "freedom"],
+    ["electronic books", "ebooks", "popularity", "digital reading", "country"],
+    [
+      "advantages",
+      "ebooks",
+      "electronic books",
+      "parents",
+      "comparison",
+      "printed books",
+    ],
+    [
+      "future",
+      "ebooks",
+      "replace printed books",
+      "technology",
+      "digital future",
+    ],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -183,26 +200,39 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Social media</h1>
-            <li>Which social media websites do you use?</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Children and reading & Electronic books
+            </h1>
+
+            <p className="text-lg font-bold">Children and reading</p>
             <li>
-              How much time do you spend on social media sites? [Why/Why not?]
+              What are the most popular types of children's books in your
+              country?
             </li>
             <li>
-              What kind of information about yourself have you put on social
-              media? [Why/Why not?]
+              What are the benefits of parents reading books to their children?
             </li>
-            <li>Is there anything you don't like about social media? [Why?]</li>
+            <li>
+              Should parents always let children choose the books they read?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Electronic books</p>
+            <li>How popular are electronic books in your country?</li>
+            <li>
+              What are the advantages of parents reading electronic books
+              (compared to printed books)?
+            </li>
+            <li>
+              Will electronic books ever completely replace printed books in the
+              future?
+            </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -259,9 +289,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking2Pagination2019></Speaking2Pagination2019>
+      <Speaking1Pagination2019></Speaking1Pagination2019>
     </div>
   );
 };
 
-export default Test2Speaking2019;
+export default Speaking1Part32019;

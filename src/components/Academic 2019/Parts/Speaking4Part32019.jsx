@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking2Pagination2019 from "../Pagination/Speaking2Pagination2019";
 
-const Test2Speaking2019 = () => {
+
+import Speaking4Pagination2019 from "../Pagination/Speaking4Pagination2019";
+
+const Speaking4Part32019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,20 +17,24 @@ const Test2Speaking2019 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2019/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
 const questions = [
-  "Which social media websites do you use?",
-  "How much time do you spend on social media sites? [Why/Why not?]",
-  "What kind of information about yourself have you put on social media? [Why/Why not?]",
-  "Is there anything you don't like about social media? [Why?]",
+  "What kinds of things do people in your country often buy from online shops?",
+  "Why has online shopping become so popular in many countries?",
+  "What are some possible disadvantages of buying things from online shops?",
+  "Do you agree that the prices of all goods should be lower on internet shopping sites than in shops?",
+  "Will large shopping malls continue to be popular, despite the growth of internet shopping?",
+  "Do you think that some businesses (e.g. banks and travel agents) will only operate online in the future?",
 ];
 
 const questionKeywords = [
-  ["social media", "websites", "platforms", "accounts", "apps", "use"],
-  ["time", "duration", "hours", "frequency", "usage", "spend"],
-  ["information", "personal", "details", "profile", "share", "post"],
-  ["dislike", "negative", "problem", "issue", "concern", "why"],
+  ["buy", "things", "online shops", "products", "purchase", "country"],
+  ["popular", "online shopping", "trend", "convenience", "growth"],
+  ["disadvantages", "problems", "risk", "delivery", "fraud", "quality issues"],
+  ["prices", "internet shopping", "cost", "comparison", "shops", "goods"],
+  ["shopping malls", "popularity", "internet shopping", "future", "businesses"],
+  ["businesses", "online only", "banks", "travel agents", "future", "digital"],
 ];
 
 
@@ -183,26 +189,43 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Social media</h1>
-            <li>Which social media websites do you use?</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Shopping online & Online retail businesses
+            </h1>
+
+            <p className="text-lg font-bold">Shopping online</p>
             <li>
-              How much time do you spend on social media sites? [Why/Why not?]
+              What kinds of things do people in your country often buy from
+              online shops?
             </li>
             <li>
-              What kind of information about yourself have you put on social
-              media? [Why/Why not?]
+              Why has online shopping become so popular in many countries?
             </li>
-            <li>Is there anything you don't like about social media? [Why?]</li>
+            <li>
+              What are some possible disadvantages of buying things from online
+              shops?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Online retail businesses</p>
+            <li>
+              Do you agree that the prices of all goods should be lower on
+              internet shopping sites than in shops?
+            </li>
+            <li>
+              Will large shopping malls continue to be popular, despite the
+              growth of internet shopping?
+            </li>
+            <li>
+              Do you think that some businesses (e.g. banks and travel agents)
+              will only operate online in the future?
+            </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -259,9 +282,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking2Pagination2019></Speaking2Pagination2019>
+      <Speaking4Pagination2019></Speaking4Pagination2019>
     </div>
   );
 };
 
-export default Test2Speaking2019;
+export default Speaking4Part32019;

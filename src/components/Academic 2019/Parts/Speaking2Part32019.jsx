@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+
 import Speaking2Pagination2019 from "../Pagination/Speaking2Pagination2019";
 
-const Test2Speaking2019 = () => {
+const Speaking2Part32019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,20 +16,24 @@ const Test2Speaking2019 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2019/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
 const questions = [
-  "Which social media websites do you use?",
-  "How much time do you spend on social media sites? [Why/Why not?]",
-  "What kind of information about yourself have you put on social media? [Why/Why not?]",
-  "Is there anything you don't like about social media? [Why?]",
+  "Why do some people buy lots of things for their home?",
+  "Do you think it is very expensive to make a home look nice?",
+  "Why don't some people care about how their home looks?",
+  "In what ways is living in a flat/apartment better than living in a house?",
+  "Do you think homes will look different in the future?",
+  "Do you agree that the kinds of homes people prefer change as they get older?",
 ];
 
 const questionKeywords = [
-  ["social media", "websites", "platforms", "accounts", "apps", "use"],
-  ["time", "duration", "hours", "frequency", "usage", "spend"],
-  ["information", "personal", "details", "profile", "share", "post"],
-  ["dislike", "negative", "problem", "issue", "concern", "why"],
+  ["buy", "things", "home", "shopping", "decoration", "consumer"],
+  ["expensive", "cost", "home decor", "budget", "money", "appearance"],
+  ["care", "home looks", "appearance", "interest", "lifestyle"],
+  ["flat", "apartment", "house", "better", "living", "comparison"],
+  ["future", "homes", "design", "architecture", "changes"],
+  ["homes", "preferences", "age", "older", "change", "lifestyle"],
 ];
 
 
@@ -183,26 +188,32 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Social media</h1>
-            <li>Which social media websites do you use?</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Creating a nice home & Different types of home
+            </h1>
+
+            <p className="text-lg font-bold">Creating a nice home</p>
+            <li>Why do some people buy lots of things for their home?</li>
+            <li>Do you think it is very expensive to make a home look nice?</li>
+            <li>Why don't some people care about how their home looks?</li>
+
+            <p className="text-lg font-bold mt-4">Different types of home</p>
             <li>
-              How much time do you spend on social media sites? [Why/Why not?]
+              In what ways is living in a flat/apartment better than living in a
+              house?
             </li>
+            <li>Do you think homes will look different in the future?</li>
             <li>
-              What kind of information about yourself have you put on social
-              media? [Why/Why not?]
+              Do you agree that the kinds of homes people prefer change as they
+              get older?
             </li>
-            <li>Is there anything you don't like about social media? [Why?]</li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -264,4 +275,4 @@ const questionKeywords = [
   );
 };
 
-export default Test2Speaking2019;
+export default Speaking2Part32019;

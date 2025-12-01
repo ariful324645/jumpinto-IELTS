@@ -174,6 +174,19 @@ import Reading3Part22019 from "../components/Academic 2019/Parts/Reading3Part220
 import Reading3Part32019 from "../components/Academic 2019/Parts/Reading3Part32019";
 import Reading4Part22019 from "../components/Academic 2019/Parts/Reading4Part22019";
 import Reading4Part32019 from "../components/Academic 2019/Parts/Reading4Part32019";
+import Writing1Part22019 from "../components/Academic 2019/Parts/Writing1Part22019";
+import Writing2Part22019 from "../components/Academic 2019/Parts/Writing2Part22019";
+import Writing3Pagination2019 from "../components/Academic 2019/Pagination/Writing3Pagination2019";
+import Writing3Part22019 from "../components/Academic 2019/Parts/Writing3Part22019";
+import Writing4Part22019 from "../components/Academic 2019/Parts/Writing4Part22019";
+import Speaking1Part22019 from "../components/Academic 2019/Parts/Speaking1Part22019";
+import Speaking1Part32019 from "../components/Academic 2019/Parts/Speaking1Part32019";
+import Speaking2Part22019 from "../components/Academic 2019/Parts/Speaking2Part22019";
+import Speaking2Part32019 from "../components/Academic 2019/Parts/Speaking2Part32019";
+import Speaking3Part22019 from "../components/Academic 2019/Parts/Speaking3Part22019";
+import Speaking3Part32019 from "../components/Academic 2019/Parts/Speaking3Part32019";
+import Speaking4Part22019 from "../components/Academic 2019/Parts/Speaking4Part22019";
+import Speaking4Part32019 from "../components/Academic 2019/Parts/Speaking4Part32019";
 
 export const router = createBrowserRouter([
   {
@@ -839,32 +852,80 @@ export const router = createBrowserRouter([
         Component: Test1Writing2019,
       },
       {
+        path: "/writing1Part22019",
+        Component: Writing1Part22019,
+      },
+      {
         path: "/2019/Test 2/writing",
         Component: Test2Writing2019,
+      },
+      {
+        path: "/writing2Part22019",
+        Component: Writing2Part22019,
       },
       {
         path: "/2019/Test 3/writing",
         Component: Test3Writing2019,
       },
       {
+        path: "/writing3Part22019",
+        Component: Writing3Part22019,
+      },
+      {
         path: "/2019/Test 4/writing",
         Component: Test4Writing2019,
+      },
+      {
+        path: "/writing4Part22019",
+        Component: Writing4Part22019,
       },
       {
         path: "/2019/Test 1/speaking",
         Component: Test1Speaking2019,
       },
       {
+        path: "/speaking1Part22019",
+        Component: Speaking1Part22019,
+      },
+      {
+        path: "/speaking1Part32019",
+        Component: Speaking1Part32019,
+      },
+      {
         path: "/2019/Test 2/speaking",
         Component: Test2Speaking2019,
+      },
+      {
+        path: "/speaking2Part22019",
+        Component: Speaking2Part22019,
+      },
+      {
+        path: "/speaking2Part32019",
+        Component: Speaking2Part32019,
       },
       {
         path: "/2019/Test 3/speaking",
         Component: Test3Speaking2019,
       },
       {
+        path: "/speaking3Part22019",
+        Component: Speaking3Part22019,
+      },
+      {
+        path: "/speaking3Part32019",
+        Component: Speaking3Part32019,
+      },
+      {
         path: "/2019/Test 4/speaking",
         Component: Test4Speaking2019,
+      },
+      {
+        path: "/speaking4Part22019",
+        Component: Speaking4Part22019,
+      },
+      {
+        path: "/speaking4Part32019",
+        Component: Speaking4Part32019,
       },
     ],
   },

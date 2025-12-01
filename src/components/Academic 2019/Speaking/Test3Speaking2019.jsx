@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking3Pagination2019 from "../Pagination/Speaking3Pagination2019";
 
 const Test3Speaking2019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,20 +17,19 @@ const Test3Speaking2019 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-const questions = [
-  "How often do you see your neighbours? [Why/Why not?]",
-  "Do you invite your neighbours to your home? [Why/Why not?]",
-  "Do you think you are a good neighbour? [Why/Why not?]",
-  "Has a neighbour ever helped you? [Why/Why not?]",
-];
+  const questions = [
+    "How often do you see your neighbours? [Why/Why not?]",
+    "Do you invite your neighbours to your home? [Why/Why not?]",
+    "Do you think you are a good neighbour? [Why/Why not?]",
+    "Has a neighbour ever helped you? [Why/Why not?]",
+  ];
 
-const questionKeywords = [
-  ["see", "neighbours", "frequency", "meet", "visits", "interaction"],
-  ["invite", "neighbours", "home", "visit", "gathering", "socialize"],
-  ["good", "neighbour", "friendly", "helpful", "relationship", "behaviour"],
-  ["help", "assistance", "neighbour", "support", "favor", "aid"],
-];
-
+  const questionKeywords = [
+    ["see", "neighbours", "frequency", "meet", "visits", "interaction"],
+    ["invite", "neighbours", "home", "visit", "gathering", "socialize"],
+    ["good", "neighbour", "friendly", "helpful", "relationship", "behaviour"],
+    ["help", "assistance", "neighbour", "support", "favor", "aid"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -177,79 +177,85 @@ const questionKeywords = [
   }
 
   return (
-    <div className="p-6 flex justify-between">
-      {/* left div */}
-      <div className="flex-1">
-        <h1 className="text-2xl font-bold">PART 1</h1> <br />
-        <p className="text-lg">
-          The examiner asks you about yourself, your home, work or studies and
-          other familiar topics.
-        </p>
-        <br />
-        <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
-        <ul className="list-disc pl-8 list-inside space-y-2">
-          <h1 className="text-2xl font-bold text-center">Neighbours</h1>
-          <li>How often do you see you see your neighbours? [Why/Why not?]</li>
-          <li>Do you invite your neighbours to your home? [Why/Why not?]</li>
-          <li>Do you think you are a good neighbour? [Why/Why not?]</li>
-          <li>Has a neighbour ever helped you? [Why/Why not?]</li>
-        </ul>
+    <div>
+      {" "}
+      <div className="p-6 flex justify-between">
+        {/* left div */}
+        <div className="flex-1">
+          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <p className="text-lg">
+            The examiner asks you about yourself, your home, work or studies and
+            other familiar topics.
+          </p>
+          <br />
+          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <ul className="list-disc pl-8 list-inside space-y-2">
+            <h1 className="text-2xl font-bold text-center">Neighbours</h1>
+            <li>
+              How often do you see you see your neighbours? [Why/Why not?]
+            </li>
+            <li>Do you invite your neighbours to your home? [Why/Why not?]</li>
+            <li>Do you think you are a good neighbour? [Why/Why not?]</li>
+            <li>Has a neighbour ever helped you? [Why/Why not?]</li>
+          </ul>
+        </div>
+        {/* right div */}
+        <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
+          <p className="flex items-center justify-center">
+            <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
+              2/3 speaking practices finished in 180 minutes.
+            </span>
+          </p>
+
+          <div className="flex justify-center items-center gap-10 mb-10">
+            <VscDebugStart
+              size={60}
+              className={`cursor-pointer transition ${
+                isSpeaking
+                  ? "text-blue-500 animate-pulse"
+                  : "hover:text-green-600"
+              }`}
+              onClick={handleStartClick}
+              title="Speak Question"
+            />
+            <FaMicrophone
+              size={50}
+              className={`cursor-pointer transition ${
+                isListening ? "text-red-500 animate-pulse" : "text-gray-700"
+              }`}
+              onClick={handleMicrophoneClick}
+              title="Speak Answer"
+            />
+          </div>
+
+          <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
+            {spokenQuestion && (
+              <div>
+                <p className="text-lg font-semibold text-blue-700 mb-2">
+                  Question:
+                </p>
+                <p className="text-gray-800">{spokenQuestion}</p>
+              </div>
+            )}
+
+            {currentAnswer && (
+              <div className="mt-4">
+                <p className="text-lg font-semibold text-green-700 mb-2">
+                  Your Answer (live):
+                </p>
+                <p className="text-gray-800 whitespace-pre-line">
+                  {currentAnswer}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-6 text-sm text-gray-500">
+            Question {questionIndex + 1} of {questions.length}
+          </div>
+        </div>
       </div>
-      {/* right div */}
-      <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
-        <p className="flex items-center justify-center">
-          <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
-            2/3 speaking practices finished in 180 minutes.
-          </span>
-        </p>
-
-        <div className="flex justify-center items-center gap-10 mb-10">
-          <VscDebugStart
-            size={60}
-            className={`cursor-pointer transition ${
-              isSpeaking
-                ? "text-blue-500 animate-pulse"
-                : "hover:text-green-600"
-            }`}
-            onClick={handleStartClick}
-            title="Speak Question"
-          />
-          <FaMicrophone
-            size={50}
-            className={`cursor-pointer transition ${
-              isListening ? "text-red-500 animate-pulse" : "text-gray-700"
-            }`}
-            onClick={handleMicrophoneClick}
-            title="Speak Answer"
-          />
-        </div>
-
-        <div className="text-left bg-white p-4 rounded-lg shadow-inner min-h-[150px]">
-          {spokenQuestion && (
-            <div>
-              <p className="text-lg font-semibold text-blue-700 mb-2">
-                Question:
-              </p>
-              <p className="text-gray-800">{spokenQuestion}</p>
-            </div>
-          )}
-
-          {currentAnswer && (
-            <div className="mt-4">
-              <p className="text-lg font-semibold text-green-700 mb-2">
-                Your Answer (live):
-              </p>
-              <p className="text-gray-800 whitespace-pre-line">
-                {currentAnswer}
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="mt-6 text-sm text-gray-500">
-          Question {questionIndex + 1} of {questions.length}
-        </div>
-      </div>
+      <Speaking3Pagination2019></Speaking3Pagination2019>
     </div>
   );
 };

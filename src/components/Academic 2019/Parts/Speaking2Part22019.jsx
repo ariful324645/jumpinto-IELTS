@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
+
 import { VscDebugStart } from "react-icons/vsc";
+
 import Speaking2Pagination2019 from "../Pagination/Speaking2Pagination2019";
 
-const Test2Speaking2019 = () => {
+const Speaking2Part22019 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,22 +17,19 @@ const Test2Speaking2019 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2019/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
 
-const questions = [
-  "Which social media websites do you use?",
-  "How much time do you spend on social media sites? [Why/Why not?]",
-  "What kind of information about yourself have you put on social media? [Why/Why not?]",
-  "Is there anything you don't like about social media? [Why?]",
-];
+  const questions = [
+    "What this book was?",
+    "Why you decided to read it?",
+    "What reading this book made you think about?",
+  ];
 
-const questionKeywords = [
-  ["social media", "websites", "platforms", "accounts", "apps", "use"],
-  ["time", "duration", "hours", "frequency", "usage", "spend"],
-  ["information", "personal", "details", "profile", "share", "post"],
-  ["dislike", "negative", "problem", "issue", "concern", "why"],
-];
-
+  const questionKeywords = [
+    ["book", "story", "title", "genre", "author"],
+    ["reason", "decided", "read", "choice", "motivation"],
+    ["think", "reflection", "impact", "ideas", "thoughts"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -183,26 +182,33 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
+          <h1 className="text-2xl font-bold">PART 2</h1> <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Social media</h1>
-            <li>Which social media websites do you use?</li>
-            <li>
-              How much time do you spend on social media sites? [Why/Why not?]
-            </li>
-            <li>
-              What kind of information about yourself have you put on social
-              media? [Why/Why not?]
-            </li>
-            <li>Is there anything you don't like about social media? [Why?]</li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              Something you liked very much which you bought for your home
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe something you liked very much which you bought for your
+              home.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>what you bought</li>
+            <li>when and where you bought it</li>
+            <li>why you chose this particular thing</li>
           </ul>
+          <p className="text-lg font-bold mt-3">
+            and explain why you liked it so much.
+          </p>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -264,4 +270,4 @@ const questionKeywords = [
   );
 };
 
-export default Test2Speaking2019;
+export default Speaking2Part22019;
