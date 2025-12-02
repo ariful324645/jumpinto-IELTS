@@ -187,6 +187,22 @@ import Speaking3Part22019 from "../components/Academic 2019/Parts/Speaking3Part2
 import Speaking3Part32019 from "../components/Academic 2019/Parts/Speaking3Part32019";
 import Speaking4Part22019 from "../components/Academic 2019/Parts/Speaking4Part22019";
 import Speaking4Part32019 from "../components/Academic 2019/Parts/Speaking4Part32019";
+import Test1Listening2018 from "../components/Academic 2018/Listening/Test1Listening2018";
+import Test2Listening2018 from "../components/Academic 2018/Listening/Test2Listening2018";
+import Test3Listening2018 from "../components/Academic 2018/Listening/Test3Listening2018";
+import Test4Listening2018 from "../components/Academic 2018/Listening/Test4Listening2018";
+import Test1Reading2018 from "../components/Academic 2018/Reading/Test1Reading2018";
+import Test2Reading2018 from "../components/Academic 2018/Reading/Test2Reading2018";
+import Test3Reading2018 from "../components/Academic 2018/Reading/Test3Reading2018";
+import Test4Reading2018 from "../components/Academic 2018/Reading/Test4Reading2018";
+import Test1Writing2018 from "../components/Academic 2018/Writing2018/Test1Writing2018";
+import Test2Writing2018 from "../components/Academic 2018/Writing2018/Test2Writing2018";
+import Test3Writing2018 from "../components/Academic 2018/Writing2018/Test3Writing2018";
+import Test4Writing2018 from "../components/Academic 2018/Writing2018/Test4Writing2018";
+import Test1Speaking2018 from "../components/Academic 2018/Speaking/Test1Speaking2018";
+import Test2Speaking2018 from "../components/Academic 2018/Speaking/Test2Speaking2018";
+import Test3Speaking2018 from "../components/Academic 2018/Speaking/Test3Speaking2018";
+import Test4Speaking2018 from "../components/Academic 2018/Speaking/Test4Speaking2018";
 
 export const router = createBrowserRouter([
   {
@@ -926,6 +942,71 @@ export const router = createBrowserRouter([
       {
         path: "/speaking4Part32019",
         Component: Speaking4Part32019,
+      },
+      // 2018
+      {
+        path: "/2018/Test 1/listening",
+        Component: Test1Listening2018,
+      },
+      {
+        path: "/2018/Test 2/listening",
+        Component: Test2Listening2018,
+      },
+      {
+        path: "/2018/Test 3/listening",
+        Component: Test3Listening2018,
+      },
+      {
+        path: "/2018/Test 4/listening",
+        Component: Test4Listening2018,
+      },
+      {
+        path: "/2018/Test 1/reading",
+        Component: Test1Reading2018,
+      },
+      {
+        path: "/2018/Test 2/reading",
+        Component: Test2Reading2018,
+      },
+      {
+        path: "/2018/Test 3/reading",
+        Component: Test3Reading2018,
+      },
+      {
+        path: "/2018/Test 4/reading",
+        Component: Test4Reading2018,
+      },
+      {
+        path: "/2018/Test 1/writing",
+        Component: Test1Writing2018,
+      },
+      {
+        path: "/2018/Test 2/writing",
+        Component: Test2Writing2018,
+      },
+      {
+        path: "/2018/Test 3/writing",
+        Component: Test3Writing2018,
+      },
+      {
+        path: "/2018/Test 4/writing",
+        Component: Test4Writing2018,
+      },
+      {
+        path: "/2018/Test 1/speaking",
+        Component: Test1Speaking2018,
+      },
+      {
+        path: "/2018/Test 2/speaking",
+        Component: Test2Speaking2018,
+      },
+      {
+        path: "/2018/Test 3/speaking",
+        Component: Test3Speaking2018,
+      },
+      {
+        path: "/2018/Test 4/speaking",
+        Component: Test4Speaking2018,
       },
     ],
   },

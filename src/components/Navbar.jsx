@@ -60,18 +60,52 @@ const Navbar = () => {
     "/Writing2Part22020": 40 * 60,
     "/Writing3Part22020": 40 * 60,
     "/Writing4Part22020": 40 * 60,
-    //2020 speaking
-    "/2020/Test 1/speaking": 0 * 60,
-    "/2020/Test 2/speaking": 0 * 60,
-    "/2020/Test 3/speaking": 0 * 60,
-    "/2020/Test 4/speaking": 0 * 60,
 
-    // 2020  listening
+    // 2019  listening
 
     "/2019/test 1/listening": 8 * 60,
+
     "/2019/test 2/listening": 7 * 60,
     "/2019/test 3/listening": 8 * 60,
     "/2019/test 4/listening": 8 * 60,
+    // listening part time
+    "/listening1Part22019": 7 * 60,
+    "/listening1Part32019": 7 * 60 + 30,
+    "/listening1Part42019": 8 * 60 + 30,
+    "/listening2Part22019": 8 * 60,
+    "/listening2Part32019": 8 * 60,
+    "/listening2Part42019": 9 * 60,
+    "/listening3Part22019": 8 * 60,
+    "/listening3Part32019": 8 * 60,
+    "/listening3Part42019": 9 * 60 + 30,
+    "/listening4Part22019": 7 * 60 + 30,
+    "/listening4Part32019": 8 * 60,
+    "/listening4Part42019": 9 * 60 + 30,
+    // 2019  reading
+    "/2019/Test 1/reading": 20 * 60,
+    "/2019/Test 2/reading": 20 * 60,
+    "/2019/Test 3/reading": 20 * 60,
+    "/2019/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22019": 20 * 60,
+    "/Reading1Part32019": 20 * 60,
+    "/Reading2Part22019": 20 * 60,
+    "/Reading2Part32019": 20 * 60,
+    "/Reading3Part22019": 20 * 60,
+    "/Reading3Part32019": 20 * 60,
+    "/Reading4Part22019": 20 * 60,
+    "/Reading4Part32019": 20 * 60,
+    // 2019 writing
+    "/2019/Test 1/writing": 20 * 60,
+    "/2019/Test 2/writing": 20 * 60,
+    "/2019/Test 3/writing": 20 * 60,
+    "/2019/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22019": 40 * 60,
+    "/Writing2Part22019": 40 * 60,
+    "/Writing3Part22019": 40 * 60,
+    "/Writing4Part22019": 40 * 60,
   };
 
   // Format seconds to mm:ss
