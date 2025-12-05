@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Writing4Pagination2018 from "../Pagination2018/Writing4Pagination2018";
 
 const Test4Writing2018 = () => {
   const [message, setMessage] = useState("");
@@ -11,7 +12,7 @@ const Test4Writing2018 = () => {
   const [openScript, setOpenScript] = useState(true);
 
   // The key used by the home page
-  const storageKey = "/2019/Test 1/writing";
+  const storageKey = "/2018/Test 4/writing";
 
   // Load mark from localStorage if it exists
   const [mark, setMark] = useState(
@@ -170,7 +171,7 @@ const Test4Writing2018 = () => {
           </div>
         </div>
       </div>
-      {/* <Writing1Pagination2019></Writing1Pagination2019> */}
+   <Writing4Pagination2018></Writing4Pagination2018>
     </div>
   );
 };

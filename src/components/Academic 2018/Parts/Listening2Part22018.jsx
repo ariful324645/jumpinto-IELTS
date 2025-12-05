@@ -5,9 +5,10 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
 
-const Listening2Part22020 = () => {
+import Listening2Pagination2018 from "../Pagination2018/Listening2Pagination2018";
+
+const Listening2Part22018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +29,145 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 2. You will hear a manager in a company talking to employees about volunteering for charity work.",
+        "First, you have some time to look at questions 11 to 16.",
+        "Now listen carefully, and answer questions 11 to 16.",
       ],
     },
-
     {
-      speaker: "WOMAN",
+      speaker: "SPEAKER",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
-      ],
-    },
-
-    {
-      speaker: "MARK",
-      text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
-
+        "Thanks for coming everyone. OK, so this meeting is for new staff and staff who haven't been involved with our volunteering projects yet.",
+        "So basically the idea is that we allow staff to give up some of their work time to help on various charity projects to benefit the local community.",
+        "We've been doing this for the last five years. And it's been very successful.",
+        "Participating doesn't necessarily involve a huge time commitment. ",
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
+          text: "The company will pay for 8 hours of your time. That can be used over one or two days, all at once, or spread over several months throughout the year.",
           number: 11,
         },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
-
+        "There are some staff who enjoy volunteering so much, they also give up their own free time for a couple of hours every week. It's completely up to you.",
+        "Obviously, many people will have family commitments and aren't as available as other members of staff.",
+        "Feedback from staff has been overwhelmingly positive, because they felt they were doing something really useful. ",
         {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
+          text: "Nearly everyone agreed that volunteering made them feel more motivated at work.",
           number: 12,
         },
-        "Soon after this, the First World War broke out in 1914, ",
+        "They also liked building relationships with the people in the local community, and felt valued by them. One or two people also said it was a good thing to have on their CVs. One particularly successful project last year was the Get Working project. This was aimed at helping unemployed people in the area get back to work.",
+        "This is something many employers look for in job applicants, and something we all do without even thinking about every day at work.",
         {
-          text: "and most of the park was dug up and planted with vegetables, ",
+          text: " Our staff were able to help them improve their telephone skills, such as writing down messages and speaking with confidence to potential customers, which they had found quite difficult.",
           number: 13,
         },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
+        "We've got an exciting new project starting this year. Up until now, we've mainly focused on projects to do with education and training, and we'll continue with our reading project in schools. ",
+
         {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
+          text: "And our work with local charities, but we've also agreed to help out on a conservation project in Redfern Park.",
           number: 14,
         },
-      ],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
-      ],
-    },
-
-    {
-      speaker: "MARK",
-      text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
-
+        "So, if any of you fancy being outside and getting your hands dirty, this is the project for you.",
+        "I also want to mention the annual Digital Inclusion Day, which is coming up next month. The aim of this is to help older people keep up with technology.",
         {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
+          text: " And this year, instead of hosting the event in our own training facility, we're using the ICT suite at Hill College, as it can hold far more people.",
           number: 15,
         },
+        "We've invited over 60 people from the Silver Age Community Center to take part, so we'll need a lot of volunteers to help with this event.",
         {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
+          text: " If you're interested in taking part, please go to the volunteering section of our website and complete the relevant form.",
           number: 16,
         },
-        "There are two areas that are particularly intended for children.",
-
-        {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
-          number: 17,
-        },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
-
-        {
-          text: "That's near the west gate.",
-          number: 18,
-        },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
-
-        {
-          text: "They're still in the south-west corner of the park",
-          number: 19,
-        },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
-
-        {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
-          number: 20,
-        },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "We won't be providing any training for this. But you'll be paired with an experienced volunteer if you've never done it before. By the way, don't forget to tell your manager about any volunteering activities you decide to do.",
       ],
     },
-
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "Before you hear the rest of the talk, you have some time to look at questions 17 to 20.",
+        "Now listen and answer questions 17 to 20.",
+      ],
+    },
+    {
+      speaker: "SPEAKER",
+      text: [
+        "The participants on the Digital Inclusion Day really benefited. The majority were in their 70s, though some were younger, and a few were even in their 90s. ",
+        {
+          text: "Quite a few owned both a computer and a mobile phone, but these tended to be outdated models.",
+          number: 17,
+        },
+        "They generally knew how to do simple things like send texts, but weren't aware of recent developments in mobile phone technology. A few were keen to learn, but most were quite dismissive at first.",
+        {
+          text: "A few were keen to learn, but most were quite dismissive at first.",
+          number: 18,
+        },
+        {
+          text: "The really encouraging thing was that participants all said they felt much more confident about using social media to keep in touch with their grandchildren, who prefer this form of communication to phoning or sending emails.",
+          number: 19,
+        },
+
+        {
+          text: "A lot of them also said playing online games would help them make new friends and keep their brains active.",
+          number: 20,
+        },
+        "They weren't that impressed with being able to order their groceries online. As they liked going out to the shops, but some said it would come in handy if they were ill or the weather was really bad. One thing they asked about was using tablets for things like reading newspapers. Some people had been given tablets as presents, but had never used them. So that's something we'll make sure we include this time.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 2.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "How much time for volunteering does the company allow per employee?",
+    "In feedback almost all employees said that volunteering improved their",
+    "Last year some staff helped unemployed people with their",
+    "This year the company will start a new volunteering project with a local",
+    "Where will the Digital Inclusion Day be held?",
+    "What should staff do if they want to take part in the Digital Inclusion Day?",
+    "Which of the following was true about participants on the last Digital Inclusion Day? (1)",
+    "Which of the following was true about participants on the last Digital Inclusion Day? (2)",
+    "Which of the following activities on the last Digital Inclusion Day did participants find useful? (1)",
+    "Which of the following activities on the last Digital Inclusion Day did participants find useful? (2)",
   ];
 
   const options = [
+    ["A. two hours per week", "B. one day per month", "C. hours per year"],
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. chances of promotion",
+      "B. job satisfaction",
+      "C. relationships with colleagues",
     ],
-
+    ["A. literacy skills", "B. job applications", "C. communication skills"],
+    ["A. school", "B. park", "C. charity"],
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. at the company's training facility",
+      "B. at a college",
+      "C. in a community centre",
     ],
-
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
-
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. fill in a form",
+      "B. attend a training workshop",
+      "C. get permission from their manager",
+    ],
+    [
+      "A. They were all over 70.",
+      "B. They never used their computer.",
+      "C. Their phones were mostly old-fashioned.",
+    ],
+    [
+      "A. They only used their phones for making calls.",
+      "B. They initially showed little interest.",
+      "C. They all knew how to use social media.",
+    ],
+    [
+      "A. learning to use tablets",
+      "B. communicating with family",
+      "C. shopping online",
+    ],
+    ["A. playing online games", "B. sending emails", "C. attending workshops"],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -292,12 +293,12 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
+      if (speaker === "JACK") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "EMMA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -352,18 +353,19 @@ const Listening2Part22020 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
-};
+  const correctAnswers = {
+    11: "C. hours per year", // 8
+    12: "B. job satisfaction", //
+    13: "A. literacy skills", //
+    14: "B. park", //
+    15: "B. at a college", //
+    16: "A. fill in a form", //
+    17: "A. They were all over 70.", //
+    18: "B. They initially showed little interest.", //
+    19: "B. communicating with family", //
+    20: "A. learning to use tablets", //
+  };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +391,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening2Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +403,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening2Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening2Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -449,7 +451,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Company Volunteering Projects")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,14 +530,14 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 11-20")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText("  Information on company volunteering projects")}
             </h1>
 
             {questions.map((q, qIndex) => {
@@ -579,210 +581,6 @@ const correctAnswers = {
                 </div>
               );
             })}
-          </div>
-
-          {/* 2st section */}
-
-          <div>
-            {/* normal title*/}
-            <div className="space-y-4 leading-relaxed">
-              <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
-              </h2>
-
-              <h3 className="text-lg mb-5">
-                {renderText("Level the map below")} <br /> <br />
-                {renderText("Choose the correct letter,  ")}{" "}
-                <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
-              </h3>
-              <div className="flex items-center justify-center ">
-                <div className="text-center">
-                  <img
-                    className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
-                    alt="Image bosa"
-                  />
-                </div>
-              </div>
-
-              <br />
-            </div>
-          </div>
-
-          {/* optional question */}
-          <div className="space-y-2">
-            {/* ---------- Question 1 ---------- */}
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
-              <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="1">{renderText("15")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 2 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="2">{renderText("16")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 3 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
-              <span className="text-lg">
-                {renderText("the youngest child")}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="3">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 4 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="4">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 5 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="5">{renderText("19")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 6 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("20.")}</span>
-              <span className="text-lg">
-                {" "}
-                {renderText("a child with much older siblings")}
-              </span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="6">{renderText("20")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -882,9 +680,10 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+
+      <Listening2Pagination2018></Listening2Pagination2018>
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening2Part22018;

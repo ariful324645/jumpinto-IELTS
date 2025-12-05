@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
+import Listening3Pagination2018 from "../Pagination2018/Listening3Pagination2018";
 
-const Listening2Part22020 = () => {
+const Listening3Part32018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +28,268 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 3. You will hear a textile design student called Jim discussing his project on using natural dyes for coloring fabrics with his tutor.",
+        "First, you have some time to look at questions 21 to 24.",
+        "Now listen carefully and answer questions 21 to 24.",
       ],
     },
-
     {
-      speaker: "WOMAN",
+      speaker: "TUTOR",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
+        "OK, Jim. You wanted to see me about your textile design project.",
       ],
     },
-
     {
-      speaker: "MARK",
+      speaker: "JIM",
       text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
-
+        "That's right. I've been looking at how a range of natural dyes can be used to color fabrics like cotton and wool.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: ["Why did you choose that topic?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Well, I got a lot of useful ideas from the museum. You know, at that exhibition of textiles, but I've always been interested in anything to do with color.",
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
-          number: 11,
-        },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
-
-        {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
-          number: 12,
-        },
-        "Soon after this, the First World War broke out in 1914, ",
-        {
-          text: "and most of the park was dug up and planted with vegetables, ",
-          number: 13,
-        },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
-        {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
-          number: 14,
+          text: "Years ago, I went to a carpet shop with my parents when we were on holiday in Turkey, and I remember all the amazing colors.",
+          number: 21,
         },
       ],
     },
-
+    {
+      speaker: "TUTOR",
+      text: ["They might not all have been natural dyes."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Maybe not, but for the project, I decided to follow it up.",
+        "And I found a great book about a botanic garden in California that specializes in plants used for dyes.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        "OK. So in your project, you had to include a practical investigation.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Yeah, at first I couldn't decide on my variables. I was going to just look at one type of fiber, for example, like cotton, and see how different types of dyes affected it.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: ["Yes."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "Then I decided to include others as well, so I looked at cotton and wool and nylon.",
+          number: 22,
+        },
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: ["With just one type of dye?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Various types, including some that weren't natural for comparison.",
+        "So, I did the experiments last week. I used some ready-made natural dyes. I found a website which supplied them. They came in just a few days, but I also made some of my own.",
+        {
+          text: "And I had to chop up a whole pile of it, so it all took longer than I'd expected.",
+          number: 23,
+        },
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        "That must have taken quite a bit of time.",
+        "One possibility is to use food colorings.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Yes, I thought it would just be a matter of a teaspoon or so of dye, and actually that wasn't the case at all.",
+        "Like I was using one vegetable, beetroot for a red dye. And I had to chop up a whole pile of it, so it all took longer than I'd expected.",
+        "I did use one, that was a yellow dye, an artificial one.",
+        {
+          text: "It came out a great color, but when I rinsed the material, the color just washed away.",
+          number: 24,
+        },
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        "Tartrazine?",
+        "Were you worried about health issues?",
+        "Well, it can occasionally cause allergic reactions, I believe.",
+      ],
+    },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
+        "Now listen and answer questions 25 to 30.",
       ],
     },
-
     {
-      speaker: "MARK",
+      speaker: "TUTOR",
+      text: ["So, what natural dyes did you look at?"],
+    },
+    {
+      speaker: "JIM",
       text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
-
-        {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
-          number: 15,
-        },
-        {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
-          number: 16,
-        },
-        "There are two areas that are particularly intended for children.",
-
-        {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
-          number: 17,
-        },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
-
-        {
-          text: "That's near the west gate.",
-          number: 18,
-        },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
-
-        {
-          text: "They're still in the south-west corner of the park",
-          number: 19,
-        },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
-
-        {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
-          number: 20,
-        },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "Well, one was turmeric. The color's great, it's a really strong yellow, it's generally used in dishes like curry.",
       ],
     },
-
+    {
+      speaker: "TUTOR",
+      text: [
+        {
+          text: "It's meant to be quite good for your health when eaten, but you might find it's not permanent when it's used as a dye, a few washes and it's gone.",
+          number: 25,
+        },
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Right. I used beetroot as a dye for wool. ",
+        {
+          text: "When I chop up beetroot to eat, I always end up with bright red hands, but the wool ended up just a sort of watery cream shade, disappointing.",
+          number: 26,
+        },
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        "There's a natural dye called Tyrian purple, have you heard of that?",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "It fell out of use centuries ago, though one researcher managed to get hold of some recently. But that shade of purple can be produced by chemical dyes nowadays.",
+          number: 27,
+        },
+        "Did you use any black dyes? Logwood. That was quite complicated. I had to prepare the fabric so the dye would take.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: ["I hope you were careful to wear gloves."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "Good, it can be extremely dangerous if it's ingested.",
+          number: 28,
+        },
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Now presumably you had a look at an insect based dye like cochineal for example.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Yes, I didn't actually make that. I didn't have time to start crushing up insects to get the red color.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        "I can see why it's generally just used in cooking and in small quantities.",
+        "Yes, it's very effective, but that's precisely why it's not used as a dye.",
+        "Yes, that works well for dyeing cotton, but you have to be careful as the metal can actually affect the fabric, and so you can't expect to get a lot of wear out of fabrics treated in this way.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "And anyway they're not available here, but I managed to get the dye quite easily from a website, but it cost a fortune.",
+          number: 29,
+        },
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "I also read about using metal oxide. Apparently you can allow iron to rust while it's in contact with the fabric. And that colors it.",
+      ],
+    },
+    {
+      speaker: "TUTOR",
+      text: [
+        {
+          text: "Yes, that works well for dyeing cotton, but you have to be careful as the metal can actually affect the fabric, and so you can't expect to get a lot of wear out of fabrics treated in this way.",
+          number: 30,
+        },
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "And the colors are quite subtle, not everyone likes them. Anyway, it looks as if you've done a lot of work.",
+      ],
+    },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "That is the end of Section 3.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "What first inspired Jim to choose this project?",
+    "Jim eventually decided to do a practical investigation which involved",
+    "When doing his experiments, Jim was surprised by",
+    "What problem did Jim have with using tartrazine as a fabric dye?",
   ];
 
   const options = [
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. Textiles displayed in an exhibition",
+      "B. A book about a botanic garden",
+      "C. Carpets he saw on holiday",
     ],
-
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. Using a range of dyes with different fibres",
+      "B. Applying different dyes to one type of fibre",
+      "C. Testing one dye and a range of fibres",
     ],
-
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
-
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. How much natural material was needed to make the dye",
+      "B. The fact that dyes were widely available on the internet",
+      "C. The time that he had to leave the fabric in the dye",
+    ],
+    [
+      "A. It caused a slight allergic reaction",
+      "B. It was not a permanent dye on cotton",
+      "C. It was ineffective when used on nylon",
+    ],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -179,7 +302,7 @@ const Listening2Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 11;
+      const answerKey = qIndex + 21;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -292,12 +415,12 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
-        return voices.find((v) => v.name.includes("David")) || voices[0];
+      if (speaker === "JACK") {
+        return voices.find((v) => v.name.includes("JIM")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "TUTOR") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -353,17 +476,19 @@ const Listening2Part22020 = () => {
   //  Marks show
 
 const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
+  // Section 3 – Jim natural dyes
+  21: "A. Textiles displayed in an exhibition", //
+  22: "A. Using a range of dyes with different fibres", //
+  23: "A. How much natural material was needed to make the dye", //
+  24: "B. It was not a permanent dye on cotton", //
+  25: "C", // 
+  26: "F", // Beetroot – colour may be unexpected
+  27: "H", // Tyrian purple – not generally available
+  28: "D", // Logwood – very poisonous
+  29: "A", // Cochineal – expensive
+  30: "G", // Metal oxide – unsuitable for some fabrics
 };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +514,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening3Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +526,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening3Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening3Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -418,7 +543,7 @@ const correctAnswers = {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -449,7 +574,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Using natural dyes to colour fabrics")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,18 +653,18 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 21-24")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText(" Project on using natural dyes to colour fabrics")}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 11;
+              const answerKey = qIndex + 21;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -587,22 +712,50 @@ const correctAnswers = {
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
+                {renderText("Questions 25-30")}
               </h2>
 
               <h3 className="text-lg mb-5">
-                {renderText("Level the map below")} <br /> <br />
-                {renderText("Choose the correct letter,  ")}{" "}
-                <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
+                {renderText(
+                  "What problem is identified with each of the following natural dyes?"
+                )}{" "}
+                <br /> <br />
+                {renderText("Choose the correct letter, ")}{" "}
+                <span className="font-bold mr-2">{renderText("A-H")}</span>{" "}
+                {renderText("next to Questions 25-30.")}
               </h3>
-              <div className="flex items-center justify-center ">
-                <div className="text-center">
-                  <img
-                    className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
-                    alt="Image bosa"
-                  />
+
+              <div className="flex items-center justify-center">
+                <div className="text-center border-2 border-black p-4 space-y-2">
+                  <ul className="list-disc list-inside text-left">
+                    <h1 className="text-lg font-bold text-center">
+                      {renderText("A. Problems")}
+                    </h1>
+                    <li className="text-lg">
+                      {renderText("A. It is expensive.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("B. The colour is too strong.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("C. The colour is not long-lasting.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("D. It is very poisonous.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("E. It can damage the fabric.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("F. The colour may be unexpected.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("G. It is unsuitable for some fabrics.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("H. It is not generally available.")}
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -610,23 +763,23 @@ const correctAnswers = {
             </div>
           </div>
 
-          {/* optional question */}
+          {/* select question */}
           <div className="space-y-2">
-            {/* ---------- Question 1 ---------- */}
+            {/* ---------- Step 1 ---------- */}
+            <h1 className="text-lg font-bold">{renderText("Natural dyes")}</h1>
 
+            {/* ---------- Step 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
-              <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
-              </span>
+              <span className="font-bold text-lg">{renderText("25.")}</span>
+              <span className="text-lg">{renderText("turmeric")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
+                  value={userAnswers[25] || ""}
+                  onChange={(e) => handleInputChange(25, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="1">{renderText("15")}</option>
+                  <option value="25">{renderText("25")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -636,25 +789,24 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
-
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 2 ---------- */}
+            {/* ---------- Step 3 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
+              <span className="font-bold text-lg">{renderText("26.")}</span>
+              <span className="text-lg">{renderText("beetroot")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="2">{renderText("16")}</option>
+                  <option value="26">{renderText("26")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -664,53 +816,24 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
-
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 3 ---------- */}
+            {/* ---------- Step 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
-              <span className="text-lg">
-                {renderText("the youngest child")}
-              </span>
+              <span className="font-bold text-lg">{renderText("27.")}</span>
+              <span className="text-lg">{renderText("Tyrian purple")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
+                  value={userAnswers[27] || ""}
+                  onChange={(e) => handleInputChange(27, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="3">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 4 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="4">{renderText("18")}</option>
+                  <option value="27">{renderText("27")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -720,24 +843,24 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
-
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 5 ---------- */}
+            {/* ---------- Step 5 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
+              <span className="font-bold text-lg">{renderText("28.")}</span>
+              <span className="text-lg">{renderText("logwood")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
+                  value={userAnswers[28] || ""}
+                  onChange={(e) => handleInputChange(28, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="5">{renderText("19")}</option>
+                  <option value="28">{renderText("28")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -747,27 +870,24 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
-
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 6 ---------- */}
+            {/* ---------- Step 6 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("20.")}</span>
-              <span className="text-lg">
-                {" "}
-                {renderText("a child with much older siblings")}
-              </span>
+              <span className="font-bold text-lg">{renderText("29.")}</span>
+              <span className="text-lg">{renderText("cochineal")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  value={userAnswers[29] || ""}
+                  onChange={(e) => handleInputChange(29, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="6">{renderText("20")}</option>
+                  <option value="29">{renderText("29")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -777,7 +897,33 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
 
+            {/* ---------- Step 7 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("30.")}</span>
+              <span className="text-lg">{renderText("metal oxide")}</span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[30] || ""}
+                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="30">{renderText("30")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
@@ -811,11 +957,11 @@ const correctAnswers = {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11-20)
+                    All Answers (21-30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -882,9 +1028,9 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+      <Listening3Pagination2018></Listening3Pagination2018>
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening3Part32018;

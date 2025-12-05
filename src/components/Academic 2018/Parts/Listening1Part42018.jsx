@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 
-import { ImCross } from "react-icons/im";
-import { FaDotCircle } from "react-icons/fa";
-import Listening3Pagination2018 from "../Pagination2018/Listening3Pagination2018";
+import Listening1Pagination2018 from "../Pagination2018/Listening1Pagination2018";
 
-const Test3Listening2018 = () => {
+const Listening1Part42018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -19,256 +19,99 @@ const Test3Listening2018 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-  // result marks display
   const [showResult, setShowResult] = useState(false);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1.You will hear a man phoning a woman who lives in an English city called Banford to get some advice about moving to that city.",
-        "First, you have some time to look at questions 1 to 5.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 4. You will hear part of a lecture on an environmental studies course about recent research on how animals are adapting to urban environments.",
+        "You have some time to look at questions 31 to 40.",
+        "Now listen carefully, and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Recommends a suburb called Dalton. So Dalton has been written in the space.",
-        "Now we shall begin.",
-        "You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 5.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Sounds good. Hmm. Do you know how much it would be to rent a 2 bedroom flat there?",
-        {
-          text: "Yeah, you should be able to get something reasonable for £850 per month.",
-          number: 1,
-        },
-        "fThat's what people typically pay. You certainly wouldn't want to pay more than £900 that doesn't include bills or anything.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "No, that sounds all right. I'll definitely have a look there. Are the transport links easy from where you live?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: " I go by bike.",
-          number: 2,
-        },
-        "Uh. Well, I'm very lucky. I work in the city center, so I don't have to use public transport.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, I wish I could do that. Is it safe to cycle around the city?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, it's fine, and it keeps me fit. ",
-        {
-          text: "Anyway, driving to work in the city center would be a nightmare, because there's hardly any parking.",
-          number: 3,
-        },
-        "And the traffic during the rush hour can be bad.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "I'd be working from home, but I'd have to go to London one or two days a week.",
-      ],
-    },
-    {
-      speaker: "LINDA",
+        "Hi. Today we're going to be looking at animals in urban environments, and I'm going to be telling you about some research on how they're affected by these environments.",
+        "Now, in evolutionary terms, urban environments represent huge upheavals, the sorts of massive changes that usually happen over millions of years.",
+        "And we used to think that only a few species could adapt to this new environment.",
 
-      text: [
-        "Oh, that's perfect. Getting to London is no problem.",
         {
-          text: " There's a fast train every 30 minutes.",
-          number: 4,
+          text: "One species which is well known as being highly adaptable is the crow.",
+          number: 31,
         },
-        "Which only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["That's good."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yeah, the train service isn't bad during the week. And they run quite late at night. ",
+        "And there have been various studies about how they manage to learn new skills.",
+        "Another successful species is the pigeon.",
+
         {
-          text: "It's weekends that are a problem.",
-          number: 5,
+          text: "Because they're able to perch on ledges on the walls of city buildings, just like they once perched on cliffs by the sea, but in fact we're now finding that these early immigrants were just the start of a more general movement of animals into cities.",
+          number: 32,
         },
-        "They're always doing engineering work. And you have to take a bus to Hadham and pick up the train there, which is really slow.",
-        "But other than that Banford's a great place to live. I've never been happier.",
+        "And of adaptation by these animals to city life.",
+
+        {
+          text: "And one thing that researchers are finding especially interesting is the speed with which they're doing this.",
+          number: 33,
+        },
+        "We're not talking about gradual evolution here. These animals are changing fast.",
+        "Let me tell you about some of the studies that have been carried out in this area.",
+        "So, in the University of Minnesota, a biologist called Emilie Snell-Rood and her colleagues looked at specimens of urbanized small mammals such as mice and gophers that had been collected in Minnesota, and that are now kept in museums there.",
+        "And she looked at specimens that had been collected over the last hundred years, which is a very short time in evolutionary terms.",
+        {
+          text: "And she found that during that time, these small mammals had experienced a jump in brain size when compared to rural mammals.",
+          number: 34,
+        },
+        "Now we can't be sure this means they're more intelligent.",
+        "But since the sizes of other parts of the body didn't change, it does suggest that something cognitive was going on.",
+        "And Snell-Rood thinks that this change might reflect the cognitive demands of adjusting to city life.",
+
+        {
+          text: "Having to look in different places to find food for example, and coping with a whole new set of dangers.",
+          number: 35,
+        },
+        "Then over in Germany at the Max Planck Institute, there's another biologist called Catarina Miranda, who's done some experiments with blackbirds living in urban and rural areas.",
+
+        {
+          text: "She's been looking not at their anatomy, but at their behavior.",
+          number: 36,
+        },
+        "So as you might expect, she's found that the urban blackbirds tend to be quite bold.",
+        "They're prepared to face up to a lot of threats that would frighten away their country counterparts, but there's one type of situation that does seem to frighten the urban blackbirds.",
+
+        {
+          text: "And that's anything new, anything they haven't experienced before.",
+          number: 37,
+        },
+        "And if you think about it, that's quite sensible for a bird living in the city.",
+        "Jonathan Atwell in Indiana University is looking at how a range of animals respond to urban environments.",
+        {
+          text: "He's found that when they're under stress, their endocrine systems react by reducing the amount of hormones such as corticosterone into their blood.",
+          number: 38,
+        },
+        "It's a sensible-seeming adaptation.",
+        "A rat that gets scared every time a subway train rolls past won't be very successful.",
+        "There's just one more study I'd like to mention, which is by Sarah Partan and her team.",
+        "And they've been looking at how squirrels communicate in an urban environment.",
+        {
+          text: "And they found that a routine part of their communication is carried out by waving their tails.",
+          number: 39,
+        },
+        "You do also see this in the country, but it's much more prevalent in cities.",
+        "Possibly because it's effective in a noisy environment.",
+        "So what are the long-term implications of this?",
+
+        {
+          text: "One possibility is that we may see completely new species developing in cities, but on the other hand, it's possible that not all of these adaptations will be permanent.",
+          number: 40,
+        },
+        "Once the animals got accustomed to its new environment, it may no longer need the features it's developed.",
+        "So now we've had a look...",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "There are some nice restaurants in the city center, and a brand new cinema, which has only been open a couple of months.",
-          number: 6,
-        },
-        "There's a good arts center too.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Sounds like Banford's got it all."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, we're really lucky. There are lots of really good aspects to living here.",
-        {
-          text: " The schools are good, and the hospital here is one of the best in the country.",
-          number: 7,
-        },
-        "Everyone I know who's been there's had a positive experience. .",
-        {
-          text: "Oh, I can give you the name of my dentist too, in Bridge Street, if you're interested",
-          number: 8,
-        },
-        "I've been going to him for years, and I've never had any problems.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Oh, OK, thanks."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I'll find his number and send it to you."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Thanks, that would be really helpful."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Are you planning to visit Banford soon?"],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Yes, my wife and I are both coming next week. We want to make some appointments with estate agents.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I could meet you if you like, and show you around."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Are you sure? We'd really appreciate that."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Either a Tuesday or Thursday is good for me, after 5:30.",
-        {
-          text: "Thursday is preferable - Tuesday, I need to get home before 6 pm.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "OK, great. Let me know which train you're catching, and I'll meet you in the cafe outside.",
-          number: 10,
-        },
-        "You can't miss it. It's opposite the station, and next to the museum.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Brilliant. I'll text you next week, then. Thanks so much for all the advice.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["No problem. I'll see you next week."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of section 1.",
+        "That is the end of Section 4.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -375,26 +218,12 @@ const Test3Listening2018 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "MATT") {
+      if (speaker === "LOUISE")
+        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+      if (speaker === "SPEAKER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "LINDA") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
       return voices[0];
     };
 
@@ -431,26 +260,20 @@ const Test3Listening2018 = () => {
     };
     speakNextChunk();
   };
-  useEffect(() => {
-    window.speechSynthesis.onvoiceschanged = () => {
-      const list = window.speechSynthesis.getVoices();
-      console.log("Available voices:", list);
-    };
-  }, []);
 
   //  Marks show
 
   const correctAnswers = {
-    1: "850", // Average rent
-    2: "bike", // Linda travels to work by
-    3: "parking", // Limited ... in city centre
-    4: "30", // Trains to London every X minutes
-    5: "weekends", // Poor train service at ...
-    6: "cinema", // New ... opened recently
-    7: "hospital", // ... has excellent reputation
-    8: "dentist", // Good ... on Bridge Street
-    9: "Thursday", // Meet Linda on ...
-    10: "cafe", // In the ... opposite the station
+    31: "crow",
+    32: "cliffs",
+    33: "speed",
+    34: "brain",
+    35: "food",
+    36: "behavior",
+    37: "new",
+    38: "stress",
+    39: "tails",
+    40: "permanent",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -477,7 +300,7 @@ const Test3Listening2018 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2018/Test 3/listening", newScore);
+    localStorage.setItem("/listening1Part42018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -489,12 +312,12 @@ const Test3Listening2018 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2018/Test 3/listening");
+    localStorage.removeItem("/listening1Part42018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 3/listening");
+    const savedScore = localStorage.getItem("/listening1Part42018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -506,7 +329,7 @@ const Test3Listening2018 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -537,7 +360,7 @@ const Test3Listening2018 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Moving to Branford City")}
+                {renderText("Effect of urban environments on animals")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -567,7 +390,7 @@ const Test3Listening2018 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -614,7 +437,7 @@ const Test3Listening2018 = () => {
           </div>
 
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31-40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -625,246 +448,251 @@ const Test3Listening2018 = () => {
             </span>
             {renderText(" for each answer.")}
           </h3>
-          {/* box */}
+          {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moving to Banford City")}
+              {renderText("Effects of Urban Environments on Animals")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
+            {/* ---------- Section 1: Introduction ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Accommodation")}
+              {renderText("Introduction")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
                 {renderText(
-                  "(Example) Linda recommends living in suburb of: Dalton"
+                  "Recent urban developments represent massive environmental changes. It was previously thought that only a few animals were suitable for city life, e.g."
                 )}
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Average rent: £")}</span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(31)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  31
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" a month")}</span>
-              </li>
-            </ul>
-
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Transport")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>{renderText("Linda travels to work by")}</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Limited")}</span>
+                {renderText(
+                  "The pigeon - because walls of city buildings are similar to"
+                )}
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(32)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
+                    activeButtons[32]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  32
                 </button>
                 <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" in city centre")}</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Trains to London every")}</span>
+                {renderText(
+                  "In fact, many urban animals are adapting with unusual"
+                )}
                 <button
-                  onClick={() => toggleButton(4)}
+                  onClick={() => toggleButton(33)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
+                    activeButtons[33]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  4
+                  33
                 </button>
                 <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" minutes")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Poor train service at")}</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
             </ul>
 
-            {/* ---------- Section 3 ---------- */}
+            {/* ---------- Section 2: Recent Research ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Advantages of living in Banford")}
+              {renderText("Recent Research")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("New")}</span>
+                {renderText(
+                  "Emilie Snell-Rood studied small urbanised mammal specimens from museums in Minnesota. She found the size of their"
+                )}
                 <button
-                  onClick={() => toggleButton(6)}
+                  onClick={() => toggleButton(34)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  6
+                  34
                 </button>
                 <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" opened recently")}</span>
+                {renderText("had increased.")}
               </li>
 
               <li className="text-lg">
-                <span>{renderText("")}</span>
+                {renderText(
+                  "She suggests this may be due to the need to locate new sources of"
+                )}
                 <button
-                  onClick={() => toggleButton(7)}
+                  onClick={() => toggleButton(35)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  7
+                  35
                 </button>
                 <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                {renderText("and to deal with new dangers.")}
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Good")}</span>
+                {renderText("Catarina Miranda focused on the")}
                 <button
-                  onClick={() => toggleButton(8)}
+                  onClick={() => toggleButton(36)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
+                    activeButtons[36]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  8
+                  36
                 </button>
                 <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" on Bridge Street")}</span>
+                {renderText("of urban and rural blackbirds.")}
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "She found urban birds were often braver, but were afraid of situations that were"
+                )}
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText(".")}
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "Jonathan Atwell studies how animals respond to urban environments. He found that some animals respond to"
+                )}
+                <button
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[38]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  38
+                </button>
+                <input
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText("by producing lower levels of hormones.")}
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "Sarah Partan's team found urban squirrels use their"
+                )}
+                <button
+                  onClick={() => toggleButton(39)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[39]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  39
+                </button>
+                <input
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText("to help them communicate.")}
               </li>
             </ul>
 
-            {/* ---------- Section 4 ---------- */}
+            {/* ---------- Section 3: Long-term possibilities ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Meet Linda")}
+              {renderText("Long-term possibilities")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Meet Linda on")}</span>
+                {renderText(
+                  "Species of animals may develop which are unique to cities. However, some changes may not be"
+                )}
                 <button
-                  onClick={() => toggleButton(9)}
+                  onClick={() => toggleButton(40)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
+                    activeButtons[40]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  9
+                  40
                 </button>
                 <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" after 5.30 pm")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("In the")}</span>
-                <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  10
-                </button>
-                <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" opposite the station")}</span>
               </li>
             </ul>
           </div>
@@ -895,11 +723,11 @@ const Test3Listening2018 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31-40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -966,9 +794,9 @@ const Test3Listening2018 = () => {
           </div>
         </div>
       </div>
-      <Listening3Pagination2018></Listening3Pagination2018>
+      <Listening1Pagination2018></Listening1Pagination2018>
     </div>
   );
 };
 
-export default Test3Listening2018;
+export default Listening1Part42018;

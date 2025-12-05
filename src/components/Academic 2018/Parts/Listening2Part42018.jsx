@@ -4,9 +4,9 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
-import Listening3Pagination2018 from "../Pagination2018/Listening3Pagination2018";
+import Listening2Pagination2018 from "../Pagination2018/Listening2Pagination2018";
 
-const Test3Listening2018 = () => {
+const Listening2Part42018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -27,248 +27,97 @@ const Test3Listening2018 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1.You will hear a man phoning a woman who lives in an English city called Banford to get some advice about moving to that city.",
-        "First, you have some time to look at questions 1 to 5.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 4.You will hear a lecturer in psychology talking about a type of memory.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully, and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Recommends a suburb called Dalton. So Dalton has been written in the space.",
-        "Now we shall begin.",
-        "You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 5.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Sounds good. Hmm. Do you know how much it would be to rent a 2 bedroom flat there?",
+        "Today, we'll be continuing the series of lectures on memory by focusing on what is called episodic memory, and what can happen if this is not working properly.",
+        "Episodic memory refers to the memory of an event or episode.",
+        "Episodic memories allow us to mentally travel back in time to an event from the past.",
+        "Episodic memories include various details about these events, for example, when an event happened, ",
         {
-          text: "Yeah, you should be able to get something reasonable for £850 per month.",
-          number: 1,
+          text: "and other information, such as the location.",
+          number: 31,
         },
-        "fThat's what people typically pay. You certainly wouldn't want to pay more than £900 that doesn't include bills or anything.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "No, that sounds all right. I'll definitely have a look there. Are the transport links easy from where you live?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: " I go by bike.",
-          number: 2,
-        },
-        "Uh. Well, I'm very lucky. I work in the city center, so I don't have to use public transport.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, I wish I could do that. Is it safe to cycle around the city?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, it's fine, and it keeps me fit. ",
-        {
-          text: "Anyway, driving to work in the city center would be a nightmare, because there's hardly any parking.",
-          number: 3,
-        },
-        "And the traffic during the rush hour can be bad.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "I'd be working from home, but I'd have to go to London one or two days a week.",
-      ],
-    },
-    {
-      speaker: "LINDA",
+        "To help understand this concept, try to remember the last time you ate dinner at a restaurant.",
+        "The ability to remember where you ate, who you were with and the items you ordered are all features of an episodic memory.",
+        "Episodic memory is distinct from another type of memory called semantic memory.",
+        "This is the type of factual memory that we have in common with everyone else.",
 
-      text: [
-        "Oh, that's perfect. Getting to London is no problem.",
         {
-          text: " There's a fast train every 30 minutes.",
-          number: 4,
+          text: "That is your general knowledge of the world.",
+          number: 32,
         },
-        "Which only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["That's good."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yeah, the train service isn't bad during the week. And they run quite late at night. ",
+        "To build upon a previous example, remembering where you parked your car is an example of episodic memory, but your understanding of what a car is and how an engine works are examples of semantic memory.",
+
         {
-          text: "It's weekends that are a problem.",
-          number: 5,
+          text: "Unlike episodic memory, semantic memory isn't dependent on recalling personal experiences.",
+          number: 33,
         },
-        "They're always doing engineering work. And you have to take a bus to Hadham and pick up the train there, which is really slow.",
-        "But other than that Banford's a great place to live. I've never been happier.",
+        "Episodic memory can be thought of as a process with several different steps of memory processing: encoding, consolidation and retrieval.",
+        "The initial step is called encoding.",
+        "This involves the process of receiving and registering information, which is necessary for creating memories of information or events that you experience.",
+
+        {
+          text: "The degree to which you can successfully encode information depends on the level of attention you give to an event while it's actually happening.",
+          number: 34,
+        },
+        "Being distracted can make effective encoding very difficult.",
+        "Encoding of episodic memories is also influenced by how you process the event.",
+        "For example, if you were introduced to someone called Charlie, you might make the connection that your uncle has the same name.",
+        {
+          text: "Future recollection of Charlie's name is much easier. ",
+          number: 35,
+        },
+        "If you have a strategy to help you encode it.Memory consolidation, the next step in forming an episodic memory, is the process by which memories of encoded information are strengthened, stabilized, and stored to facilitate later retrieval.",
+
+        {
+          text: "Consolidation is most effective when the information being stored can be linked to an existing network of information.",
+          number: 36,
+        },
+        "Consolidation makes it possible for you to store memories for later retrieval indefinitely.",
+        {
+          text: "Forming strong memories depends on the frequency with which you try to retrieve them.",
+          number: 37,
+        },
+        "Memories can fade, or become harder to retrieve if they aren't used very often.",
+        "The last step in forming episodic memories is called retrieval, which is the conscious recollection of encoded information.",
+        "Retrieving information from episodic memory depends upon semantic, olfactory, auditory, and visual factors.",
+        "These help episodic memory retrieval by acting as a prompt.",
+        "For example,",
+        {
+          text: " when recalling where you parked your car, you may use the color of a sign close to where you parked.",
+          number: 38,
+        },
+        "You actually have to mentally travel back to the moment you parked.",
+        "There are a wide range of neurological diseases and conditions that can affect episodic memory.",
+        "These range from Alzheimer's to schizophrenia, to autism.",
+        "An impairment of episodic memory can have a profound effect on individuals' lives.",
+        "For example, the symptoms of schizophrenia can be reasonably well controlled by medication.",
+        "However, patients' episodic memory may still be impaired, and so they are often unable to return to university or work.",
+
+        {
+          text: "Recent studies have shown that computer-assisted games designed to keep the brain active can help improve their episodic memory.",
+          number: 39,
+        },
+        "Episodic memories can help people connect with others, for instance, by sharing intimate details about their past — something individuals with autism often have problems with.",
+        {
+          text: "This may be caused by an absence of a sense of self.",
+          number: 40,
+        },
+        "This is essential for the storage of episodic memory, and has been found to be impaired in children with autism.",
+        "Research has shown that treatments that improve memory may also have a positive impact on children's social development.",
+        "One study looked at...",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "There are some nice restaurants in the city center, and a brand new cinema, which has only been open a couple of months.",
-          number: 6,
-        },
-        "There's a good arts center too.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Sounds like Banford's got it all."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, we're really lucky. There are lots of really good aspects to living here.",
-        {
-          text: " The schools are good, and the hospital here is one of the best in the country.",
-          number: 7,
-        },
-        "Everyone I know who's been there's had a positive experience. .",
-        {
-          text: "Oh, I can give you the name of my dentist too, in Bridge Street, if you're interested",
-          number: 8,
-        },
-        "I've been going to him for years, and I've never had any problems.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Oh, OK, thanks."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I'll find his number and send it to you."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Thanks, that would be really helpful."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Are you planning to visit Banford soon?"],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Yes, my wife and I are both coming next week. We want to make some appointments with estate agents.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I could meet you if you like, and show you around."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Are you sure? We'd really appreciate that."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Either a Tuesday or Thursday is good for me, after 5:30.",
-        {
-          text: "Thursday is preferable - Tuesday, I need to get home before 6 pm.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "OK, great. Let me know which train you're catching, and I'll meet you in the cafe outside.",
-          number: 10,
-        },
-        "You can't miss it. It's opposite the station, and next to the museum.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Brilliant. I'll text you next week, then. Thanks so much for all the advice.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["No problem. I'll see you next week."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of section 1.",
+        "That is the end of section 4.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -380,12 +229,12 @@ const Test3Listening2018 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MATT") {
+      if (speaker === "RUSS") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "LINDA") {
+      if (speaker === "SPEAKER") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -440,18 +289,19 @@ const Test3Listening2018 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    1: "850", // Average rent
-    2: "bike", // Linda travels to work by
-    3: "parking", // Limited ... in city centre
-    4: "30", // Trains to London every X minutes
-    5: "weekends", // Poor train service at ...
-    6: "cinema", // New ... opened recently
-    7: "hospital", // ... has excellent reputation
-    8: "dentist", // Good ... on Bridge Street
-    9: "Thursday", // Meet Linda on ...
-    10: "cafe", // In the ... opposite the station
-  };
+const correctAnswers = {
+  31: "location",
+  32: "world",
+  33: "personal",
+  34: "attention",
+  35: "name",
+ 36: "network",
+  37: "frequency",
+  38: "colour",
+  39: "brain",
+  40: "self",
+};
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -477,7 +327,7 @@ const Test3Listening2018 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2018/Test 3/listening", newScore);
+    localStorage.setItem("/listening2Part42018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -489,12 +339,12 @@ const Test3Listening2018 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2018/Test 3/listening");
+    localStorage.removeItem("/listening2Part42018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 3/listening");
+    const savedScore = localStorage.getItem("/listening2Part42018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -506,7 +356,7 @@ const Test3Listening2018 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -537,7 +387,7 @@ const Test3Listening2018 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Moving to Branford City")}
+                {renderText("Episodic Memory")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -614,7 +464,7 @@ const Test3Listening2018 = () => {
           </div>
 
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31-40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -628,243 +478,295 @@ const Test3Listening2018 = () => {
           {/* box */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moving to Banford City")}
+              {renderText("Episodic Memory")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Accommodation")}
-            </h2>
+            <h2 className="text-lg font-bold mt-6">{renderText("Overview")}</h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                {renderText(
-                  "(Example) Linda recommends living in suburb of: Dalton"
-                )}
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Average rent: £")}</span>
+                <span>
+                  {renderText(
+                    "the ability to recall details, e.g. the time and"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(31)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  31
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" a month")}</span>
+                <span>{renderText("of past events")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "different to semantic memory - the ability to remember general information about the"
+                  )}
+                </span>
+                <button
+                  onClick={() => toggleButton(32)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[32]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  32
+                </button>
+                <input
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>{renderText(", which does not involve recalling")}</span>
+
+                <button
+                  onClick={() => toggleButton(33)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[33]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  33
+                </button>
+                <input
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>{renderText("information")}</span>
               </li>
             </ul>
 
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Transport")}
+              {renderText("Forming Episodic Memories")}
             </h2>
+
             <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">{renderText("Encoding")}</li>
+
               <li className="text-lg">
-                <span>{renderText("Linda travels to work by")}</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
+                <span>
+                  {renderText("involves receiving and processing information")}
+                </span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Limited")}</span>
+                <span>{renderText("the more")}</span>
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(34)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  34
                 </button>
                 <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" in city centre")}</span>
+                <span>
+                  {renderText(
+                    "given to an event, the more successfully it can be encoded"
+                  )}
+                </span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Trains to London every")}</span>
+                <span>{renderText("to remember a")}</span>
                 <button
-                  onClick={() => toggleButton(4)}
+                  onClick={() => toggleButton(35)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  4
+                  35
                 </button>
                 <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" minutes")}</span>
+                <span>
+                  {renderText(
+                    ", it is useful to have a strategy for encoding such information"
+                  )}
+                </span>
+              </li>
+
+              <li className="text-lg">{renderText("Consolidation")}</li>
+
+              <li className="text-lg">
+                {renderText("how memories are strengthened and stored")}
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Poor train service at")}</span>
+                <span>
+                  {renderText("most effective when memories can be added to a")}
+                </span>
                 <button
-                  onClick={() => toggleButton(5)}
+                  onClick={() => toggleButton(36)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
+                    activeButtons[36]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  5
+                  36
                 </button>
                 <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>{renderText("of related information")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("the")}</span>
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>
+                  {renderText("of retrieval affects the strength of memories")}
+                </span>
+              </li>
+
+              <li className="text-lg">{renderText("Retrieval")}</li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "memory retrieval often depends on using a prompt, e.g. the"
+                  )}
+                </span>
+                <button
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[38]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  38
+                </button>
+                <input
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>
+                  {renderText(
+                    "of an object near to the place where you left your car"
+                  )}
+                </span>
               </li>
             </ul>
 
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Advantages of living in Banford")}
+              {renderText("Episodic Memory Impairments")}
             </h2>
+
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("New")}</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" opened recently")}</span>
+                {renderText(
+                  "these affect people with a wide range of medical conditions"
+                )}
               </li>
 
               <li className="text-lg">
-                <span>{renderText("")}</span>
+                <span>{renderText("games which stimulate the")}</span>
                 <button
-                  onClick={() => toggleButton(7)}
+                  onClick={() => toggleButton(39)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
+                    activeButtons[39]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  7
+                  39
                 </button>
                 <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>
+                  {renderText(
+                    "have been found to help people with schizophrenia"
+                  )}
+                </span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Good")}</span>
+                <span>
+                  {renderText(
+                    "children with autism may have difficulty forming episodic memories - possibly because their concept of the"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(8)}
+                  onClick={() => toggleButton(40)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
+                    activeButtons[40]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  8
+                  40
                 </button>
                 <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" on Bridge Street")}</span>
-              </li>
-            </ul>
-
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Meet Linda")}
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>{renderText("Meet Linda on")}</span>
-                <button
-                  onClick={() => toggleButton(9)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  9
-                </button>
-                <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" after 5.30 pm")}</span>
+                <span>{renderText("may be absent")}</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("In the")}</span>
-                <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  10
-                </button>
-                <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" opposite the station")}</span>
+                {renderText(
+                  "memory training may help autistic children develop social skills"
+                )}
               </li>
             </ul>
           </div>
@@ -895,11 +797,11 @@ const Test3Listening2018 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31-40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -966,9 +868,10 @@ const Test3Listening2018 = () => {
           </div>
         </div>
       </div>
-      <Listening3Pagination2018></Listening3Pagination2018>
+      {/* <Listening1Pagination2020></Listening1Pagination2020> */}
+      <Listening2Pagination2018></Listening2Pagination2018>
     </div>
   );
 };
 
-export default Test3Listening2018;
+export default Listening2Part42018;

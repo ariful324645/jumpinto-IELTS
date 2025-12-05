@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
+import Listening4Pagination2018 from "../Pagination2018/Listening4Pagination2018";
 
 const Test4Listening2018 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -22,250 +23,250 @@ const Test4Listening2018 = () => {
   // result marks display
   const [showResult, setShowResult] = useState(false);
 
-const lines = [
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Section 1. You will hear a phone conversation between Alex, an employee at a company called JPNW, and Martha, who wants to work as a trainee at the company.",
-      "First, you have some time to look at questions 1 to 7.",
-      "You will see that there is an example that has been done for you.",
-      "On this occasion only, the conversation relating to this will be played first.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "Hi, Alex. It's Martha Clines here. James White gave me your number. I hope you don't mind me calling you.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: ["Of course not. How are you, Martha?"],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Good, thanks. I'm ringing because I need a bit of advice."],
-  },
-  {
-    speaker: "ALEX",
-    text: ["Oh, yeah. What about?"],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "The training you did at JPNW a few years ago. I'm applying for the same thing.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Oh, right. Yes, I did mine in 2014. Best thing I ever did, I'm still working there.",
-    ],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Alex did his training in 2014. So 2014 has been written in the space.",
-      "Now we shall begin.",
-      "You should answer the questions as you listen, because you will not hear the recording a second time.",
-      "Listen carefully and answer questions 1 to 7.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "Hi, Alex. It's Martha Clines here. James White gave me your number. I hope you don't mind me calling you.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: ["Of course not. How are you, Martha?"],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Good, thanks. I'm ringing because I need a bit of advice."],
-  },
-  {
-    speaker: "ALEX",
-    text: ["Oh, yeah. What about?"],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "The training you did at JPNW a few years ago. I'm applying for the same thing.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Oh, right. Yes, I did mine in 2014. Best thing I ever did. I'm still working there.Well, now I work in the customer services department.",
-      {
-        text: " But I did my initial training in Finance.",
-        number: 1,
-      },
-      "I stayed there for the first two years, and then moved to where I am now.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["That's the same department I'm applying for. Did you enjoy it?"],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Uh. I was pretty nervous to begin with. ",
-      {
-        text: "I didn't do well in my exams at school, and I was really worried because I failed maths.",
-        number: 2,
-      },
-      "But it didn't actually matter, because I did lots of courses on the job.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "Did you get a diploma at the end of your trainee period? I'm hoping to do the one in business skills.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Yes, that sounds good.",
-      {
-        text: " I took the one on IT skills, but I wish I'd done that one instead.",
-        number: 3,
-      },
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "OK, that's good to know. Um. What about the other trainees? How did you get on with them?",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "There were about 20 of us who started at the same time. And we were all around the same age. ",
-      {
-        text: "I was 18, and there was only one person younger than me, who was 17.",
-        number: 4,
-      },
-      "The rest were between 18 and 20. I made some good friends.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "I've heard lots of good things about the training at JPNW. It seems like there are a lot of opportunities there.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Yeah, definitely. Because of its size, you can work in loads of different areas within the organization.That's right, which isn't great.",
-      {
-        text: " But you get the same number of days' holiday as everyone else, and the pay goes up massively if they offer you a job at the end of the training period.",
-        number: 5,
-      },
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: [
-      "Yeah, but I'm not doing it for the money. It's the experience I think will be really useful. Everyone says by the end of the year you gain so much confidence.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "You're right. That's the most useful part about it. There's a lot of variety too. You're given lots of different things to do. I enjoyed it all. I didn't even mind the studying.",
-      {
-        text: "Yes, 1 day each month. ",
-        number: 6,
-      },
-      "So you get lots of support from both your tutor and your manager.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Hmm, that's good. And the company is easy to get to, isn't it?"],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      {
-        text: "Yes, it's very close to the train station, so the location's a real advantage.",
-        number: 7,
-      },
-    ],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Before you hear the rest of the phone conversation, you have some time to look at questions 8 to 10.",
-      "Now listen and answer questions 8 to 10.",
-    ],
-  },
-  {
-    speaker: "ALEX",
-    text: ["Have you got a date for your interview yet?"],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Yes, it's on the 23rd of this month."],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "So long as you're well prepared, there's nothing to worry about. Everyone's very friendly.",
-      {
-        text: "Nothing too casual, like jeans for example. ",
-        number: 8,
-      },
-      "If you've got a nice jacket, wear that with a skirt or trousers.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["OK, thanks. Any other tips?"],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Um. Well, I know it's really obvious, but arrive in plenty of time.",
-      {
-        text: " They hate people who are late.",
-        number: 9,
-      },
-      "So make sure you know exactly where you have to get to, and one other useful piece of advice my manager told me before I had the interview for this job is to smile.",
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Section 1. You will hear a phone conversation between Alex, an employee at a company called JPNW, and Martha, who wants to work as a trainee at the company.",
+        "First, you have some time to look at questions 1 to 7.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "Hi, Alex. It's Martha Clines here. James White gave me your number. I hope you don't mind me calling you.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: ["Of course not. How are you, Martha?"],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Good, thanks. I'm ringing because I need a bit of advice."],
+    },
+    {
+      speaker: "ALEX",
+      text: ["Oh, yeah. What about?"],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "The training you did at JPNW a few years ago. I'm applying for the same thing.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Oh, right. Yes, I did mine in 2014. Best thing I ever did, I'm still working there.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Alex did his training in 2014. So 2014 has been written in the space.",
+        "Now we shall begin.",
+        "You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 7.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "Hi, Alex. It's Martha Clines here. James White gave me your number. I hope you don't mind me calling you.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: ["Of course not. How are you, Martha?"],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Good, thanks. I'm ringing because I need a bit of advice."],
+    },
+    {
+      speaker: "ALEX",
+      text: ["Oh, yeah. What about?"],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "The training you did at JPNW a few years ago. I'm applying for the same thing.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Oh, right. Yes, I did mine in 2014. Best thing I ever did. I'm still working there.Well, now I work in the customer services department.",
+        {
+          text: " But I did my initial training in Finance.",
+          number: 1,
+        },
+        "I stayed there for the first two years, and then moved to where I am now.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["That's the same department I'm applying for. Did you enjoy it?"],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Uh. I was pretty nervous to begin with. ",
+        {
+          text: "I didn't do well in my exams at school, and I was really worried because I failed maths.",
+          number: 2,
+        },
+        "But it didn't actually matter, because I did lots of courses on the job.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "Did you get a diploma at the end of your trainee period? I'm hoping to do the one in business skills.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Yes, that sounds good.",
+        {
+          text: " I took the one on IT skills, but I wish I'd done that one instead.",
+          number: 3,
+        },
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "OK, that's good to know. Um. What about the other trainees? How did you get on with them?",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "There were about 20 of us who started at the same time. And we were all around the same age. ",
+        {
+          text: "I was 18, and there was only one person younger than me, who was 17.",
+          number: 4,
+        },
+        "The rest were between 18 and 20. I made some good friends.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "I've heard lots of good things about the training at JPNW. It seems like there are a lot of opportunities there.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Yeah, definitely. Because of its size, you can work in loads of different areas within the organization.That's right, which isn't great.",
+        {
+          text: " But you get the same number of days' holiday as everyone else, and the pay goes up massively if they offer you a job at the end of the training period.",
+          number: 5,
+        },
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: [
+        "Yeah, but I'm not doing it for the money. It's the experience I think will be really useful. Everyone says by the end of the year you gain so much confidence.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "You're right. That's the most useful part about it. There's a lot of variety too. You're given lots of different things to do. I enjoyed it all. I didn't even mind the studying.",
+        {
+          text: "Yes, 1 day each month. ",
+          number: 6,
+        },
+        "So you get lots of support from both your tutor and your manager.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Hmm, that's good. And the company is easy to get to, isn't it?"],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        {
+          text: "Yes, it's very close to the train station, so the location's a real advantage.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the phone conversation, you have some time to look at questions 8 to 10.",
+        "Now listen and answer questions 8 to 10.",
+      ],
+    },
+    {
+      speaker: "ALEX",
+      text: ["Have you got a date for your interview yet?"],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Yes, it's on the 23rd of this month."],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "So long as you're well prepared, there's nothing to worry about. Everyone's very friendly.",
+        {
+          text: "Nothing too casual, like jeans for example. ",
+          number: 8,
+        },
+        "If you've got a nice jacket, wear that with a skirt or trousers.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["OK, thanks. Any other tips?"],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Um. Well, I know it's really obvious, but arrive in plenty of time.",
+        {
+          text: " They hate people who are late.",
+          number: 9,
+        },
+        "So make sure you know exactly where you have to get to, and one other useful piece of advice my manager told me before I had the interview for this job is to smile.",
 
-      { text: "", number: 10 },
-      "Even if you feel terrified, it makes people respond better to you.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Ha, I'll have to practice doing that in the mirror. Ha ha."],
-  },
-  {
-    speaker: "ALEX",
-    text: [
-      "Yeah, well, good luck. Let me know if you need any more information.",
-    ],
-  },
-  {
-    speaker: "MARTHA",
-    text: ["Thanks very much."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "That is the end of section 1.",
-      "You now have half a minute to check your answers.",
-    ],
-  },
-];
+        { text: "", number: 10 },
+        "Even if you feel terrified, it makes people respond better to you.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Ha, I'll have to practice doing that in the mirror. Ha ha."],
+    },
+    {
+      speaker: "ALEX",
+      text: [
+        "Yeah, well, good luck. Let me know if you need any more information.",
+      ],
+    },
+    {
+      speaker: "MARTHA",
+      text: ["Thanks very much."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 1.",
+        "You now have half a minute to check your answers.",
+      ],
+    },
+  ];
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -433,19 +434,18 @@ const lines = [
 
   //  Marks show
 
- const correctAnswers = {
-   1: "Finance", // At first, Alex did his training in the department
-   2: "maths", // Alex didn't have a qualification from school in
-   3: "IT", // Alex thinks he should have done the diploma in skills
-   4: "17", // Age of the youngest trainee
-   5: "holiday", // Trainees receive the same amount of ... as permanent staff
-   6: "college", // Trainees go to ... one day per month
-   7: "location", // The company is in a convenient ...
-   8: "jeans", // Don't wear ...
-   9: "late", // Don't be ...
-   10: "smile", // Make sure you ...
- };
-
+  const correctAnswers = {
+    1: "Finance", // At first, Alex did his training in the department
+    2: "maths", // Alex didn't have a qualification from school in
+    3: "IT", // Alex thinks he should have done the diploma in skills
+    4: "17", // Age of the youngest trainee
+    5: "holiday", // Trainees receive the same amount of ... as permanent staff
+    6: "college", // Trainees go to ... one day per month
+    7: "location", // The company is in a convenient ...
+    8: "jeans", // Don't wear ...
+    9: "late", // Don't be ...
+    10: "smile", // Make sure you ...
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -977,7 +977,7 @@ const lines = [
           </div>
         </div>
       </div>
-      {/* <Listening1Pagination2020></Listening1Pagination2020> */}
+      <Listening4Pagination2018></Listening4Pagination2018>
     </div>
   );
 };

@@ -4,9 +4,9 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
-import Listening3Pagination2018 from "../Pagination2018/Listening3Pagination2018";
+import Listening4Pagination2018 from "../Pagination2018/Listening4Pagination2018";
 
-const Test3Listening2018 = () => {
+const Listening4Part42018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -27,248 +27,100 @@ const Test3Listening2018 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1.You will hear a man phoning a woman who lives in an English city called Banford to get some advice about moving to that city.",
-        "First, you have some time to look at questions 1 to 5.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 4. You will hear part of a presentation by a history student about the history of coffee.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully, and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Recommends a suburb called Dalton. So Dalton has been written in the space.",
-        "Now we shall begin.",
-        "You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 5.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Sounds good. Hmm. Do you know how much it would be to rent a 2 bedroom flat there?",
-        {
-          text: "Yeah, you should be able to get something reasonable for £850 per month.",
-          number: 1,
-        },
-        "fThat's what people typically pay. You certainly wouldn't want to pay more than £900 that doesn't include bills or anything.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "No, that sounds all right. I'll definitely have a look there. Are the transport links easy from where you live?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: " I go by bike.",
-          number: 2,
-        },
-        "Uh. Well, I'm very lucky. I work in the city center, so I don't have to use public transport.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, I wish I could do that. Is it safe to cycle around the city?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, it's fine, and it keeps me fit. ",
-        {
-          text: "Anyway, driving to work in the city center would be a nightmare, because there's hardly any parking.",
-          number: 3,
-        },
-        "And the traffic during the rush hour can be bad.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "I'd be working from home, but I'd have to go to London one or two days a week.",
-      ],
-    },
-    {
-      speaker: "LINDA",
+        "In my presentation, I'm going to talk about coffee, and its importance both in economic and social terms.",
+        "We think it was first drunk in the Arab world. But there's hardly any documentary evidence of it before the 1500s, although of course that doesn't mean that people didn't know about it before then.",
+        "However, there is evidence that coffee was originally gathered from bushes growing wild in Ethiopia, in the northeast of Africa.",
+        "In the early 16th century, it was being bought by traders, and gradually its use as a drink spread throughout the Middle East.",
+        "It's also known that in 1522, in the Turkish city of Constantinople, which was the center of the Ottoman Empire, the court physician approved its use as a medicine.",
+        "By the mid 1500s, coffee bushes were being cultivated in the Yemen, and for the next hundred years, this region produced most of the coffee drunk in Africa and the Arab world.",
+        "What's particularly interesting about coffee is its effect on social life.",
+        "It was rarely drunk at home, but instead, people went to coffee houses to drink it.",
+        "These people, usually men, would meet to drink coffee and chat about issues of the day.",
 
-      text: [
-        "Oh, that's perfect. Getting to London is no problem.",
         {
-          text: " There's a fast train every 30 minutes.",
-          number: 4,
+          text: "But at the time, this chance to share ideas and opinions was seen as something that was potentially dangerous, and in 1623, the ruler of Constantinople demanded the destruction of all the coffee houses in the city. ",
+          number: 31,
         },
-        "Which only takes 45 minutes.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["That's good."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yeah, the train service isn't bad during the week. And they run quite late at night. ",
+
+        "Although after his death, many new ones opened, and coffee consumption continued.",
+        "In the 17th century, coffee drinking spread to Europe, and here too, coffee shops became places where ordinary people, nearly always men, could meet to exchange ideas.",
+
         {
-          text: "It's weekends that are a problem.",
-          number: 5,
+          text: "Because of this, some people said that these places performed a similar function to universities. ",
+          number: 32,
         },
-        "They're always doing engineering work. And you have to take a bus to Hadham and pick up the train there, which is really slow.",
-        "But other than that Banford's a great place to live. I've never been happier.",
+        "The opportunity they provided for people to meet together outside their own homes, and to discuss the topics of the day had an enormous impact on social life.",
+
+        {
+          text: "And many social movements and political developments had their origins in coffee house discussions. ",
+          number: 33,
+        },
+        "In the late 1600s, the Yemeni monopoly on coffee production broke down, and coffee production started to spread around the world, helped by European colonization.",
+        "Europeans set up coffee plantations in Indonesia and the Caribbean, and production of coffee in the colonies skyrocketed.",
+        "Different types of coffee were produced in different areas, and it's interesting that the names given to these different types, like Mocha or Java coffee,",
+        {
+          text: " were often taken from the port they were shipped to Europe from.",
+          number: 34,
+        },
+        "But if you look at the labor system in the different colonies, there were some significant differences.",
+
+        {
+          text: "In Brazil and the various Caribbean colonies, coffee was grown in huge plantations, and the workers there were almost all slaves.",
+          number: 35,
+        },
+        "But this wasn't the same in all colonies. For example, in Java, which had been colonized by the Dutch, the peasants grew coffee, and passed a proportion of this onto the Dutch.",
+
+        {
+          text: "So it was used as a means of taxation. ",
+          number: 36,
+        },
+        "But whatever system was used, under the European powers of the 18th century, coffee production was very closely linked to colonization.",
+
+        {
+          text: "Coffee was grown in ever increasing quantities to satisfy the growing demand from Europe, and it became nearly as important as sugar production, which was grown under very similar conditions. ",
+          number: 37,
+        },
+        "However, coffee prices were not yet low enough for people to drink it regularly at home, so most coffee consumption still took place in public coffee houses, and it still remained something of a luxury item.",
+        "In Britain, however, a new drink was introduced from China, and started to become popular.",
+        "Gradually taking over from coffee, although at first it was so expensive that only the upper classes could afford it. ",
+        {
+          text: "This was tea. ",
+          number: 38,
+        },
+        "And by the late 1700s it was being widely drunk.",
+        "However, when the USA gained independence from Britain in 1776, they identified this drink with Britain, and coffee remained the preferred drink in the USA, as it still is today.",
+        "So, by the early 19th century, coffee was already being widely produced and consumed.",
+        "But during this century, production boomed.",
+        "And coffee prices started to fall.",
+
+        {
+          text: "This was partly because new types of transportation had been developed, which were cheaper and more efficient. ",
+          number: 39,
+        },
+        "So now, working people could afford to buy coffee.",
+        "It wasn't just a drink for the middle classes, and this was at a time when large parts of Europe were starting to work in industries, and sometimes this meant their work didn't stop when it got dark.",
+
+        {
+          text: "They might have to continue throughout the night. ",
+          number: 40,
+        },
+        "So the use of coffee as a stimulant became important.",
+        "It wasn't just a drink people drank in the morning for breakfast.",
+        "There were also changes in cultivation...",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "There are some nice restaurants in the city center, and a brand new cinema, which has only been open a couple of months.",
-          number: 6,
-        },
-        "There's a good arts center too.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Sounds like Banford's got it all."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, we're really lucky. There are lots of really good aspects to living here.",
-        {
-          text: " The schools are good, and the hospital here is one of the best in the country.",
-          number: 7,
-        },
-        "Everyone I know who's been there's had a positive experience. .",
-        {
-          text: "Oh, I can give you the name of my dentist too, in Bridge Street, if you're interested",
-          number: 8,
-        },
-        "I've been going to him for years, and I've never had any problems.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Oh, OK, thanks."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I'll find his number and send it to you."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Thanks, that would be really helpful."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Are you planning to visit Banford soon?"],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Yes, my wife and I are both coming next week. We want to make some appointments with estate agents.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I could meet you if you like, and show you around."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Are you sure? We'd really appreciate that."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Either a Tuesday or Thursday is good for me, after 5:30.",
-        {
-          text: "Thursday is preferable - Tuesday, I need to get home before 6 pm.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "OK, great. Let me know which train you're catching, and I'll meet you in the cafe outside.",
-          number: 10,
-        },
-        "You can't miss it. It's opposite the station, and next to the museum.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Brilliant. I'll text you next week, then. Thanks so much for all the advice.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["No problem. I'll see you next week."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of section 1.",
+        "That is the end of section 4.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -380,12 +232,12 @@ const Test3Listening2018 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MATT") {
+      if (speaker === "ALEX") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "LINDA") {
+      if (speaker === "MARTHA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -441,17 +293,18 @@ const Test3Listening2018 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "850", // Average rent
-    2: "bike", // Linda travels to work by
-    3: "parking", // Limited ... in city centre
-    4: "30", // Trains to London every X minutes
-    5: "weekends", // Poor train service at ...
-    6: "cinema", // New ... opened recently
-    7: "hospital", // ... has excellent reputation
-    8: "dentist", // Good ... on Bridge Street
-    9: "Thursday", // Meet Linda on ...
-    10: "cafe", // In the ... opposite the station
+    31: "destruction",
+    32: "universities",
+    33: "political",
+    34: "port",
+    35: "slavery",
+    36: "taxation",
+    37: "sugar production",
+    38: "tea",
+    39: "transportation",
+    40: "night",
   };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -477,7 +330,7 @@ const Test3Listening2018 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2018/Test 3/listening", newScore);
+    localStorage.setItem("/2018/Test 4/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -489,12 +342,12 @@ const Test3Listening2018 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2018/Test 3/listening");
+    localStorage.removeItem("/2018/Test 4/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 3/listening");
+    const savedScore = localStorage.getItem("/2018/Test 4/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -506,7 +359,7 @@ const Test3Listening2018 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -537,7 +390,7 @@ const Test3Listening2018 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Moving to Branford City")}
+                {renderText("The history of coffee")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -614,7 +467,7 @@ const Test3Listening2018 = () => {
           </div>
 
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -628,243 +481,242 @@ const Test3Listening2018 = () => {
           {/* box */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moving to Banford City")}
+              {renderText("The History of Coffee")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Accommodation")}
+              {renderText("Coffee in the Arab world")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
                 {renderText(
-                  "(Example) Linda recommends living in suburb of: Dalton"
+                  "There was small-scale trade in wild coffee from Ethiopia."
                 )}
               </li>
-
               <li className="text-lg">
-                <span>{renderText("Average rent: £")}</span>
+                {renderText(
+                  "1522: Coffee was approved in the Ottoman court as a type of medicine."
+                )}
+              </li>
+              <li className="text-lg">
+                <span>
+                  {renderText("1623: In Constantinople, the ruler ordered the")}
+                </span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(31)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  31
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" a month")}</span>
+                <span>{renderText(" of every coffee house.")}</span>
               </li>
             </ul>
 
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Transport")}
+              {renderText("Coffee arrives in Europe (17th century)")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Linda travels to work by")}</span>
+                {renderText("Coffee shops were compared to")}
                 <button
-                  onClick={() => toggleButton(2)}
+                  onClick={() => toggleButton(32)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
+                    activeButtons[32]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  2
+                  32
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>.</span>
               </li>
-
               <li className="text-lg">
-                <span>{renderText("Limited")}</span>
+                {renderText("They played an important part in social and")}
                 <button
-                  onClick={() => toggleButton(3)}
+                  onClick={() => toggleButton(33)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
+                    activeButtons[33]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  3
+                  33
                 </button>
                 <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" in city centre")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Trains to London every")}</span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" minutes")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Poor train service at")}</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
+                <span>{renderText(" changes.")}</span>
               </li>
             </ul>
 
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Advantages of living in Banford")}
+              {renderText("Coffee and European colonisation")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("New")}</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" opened recently")}</span>
+                {renderText(
+                  "European powers established coffee plantations in their colonies."
+                )}
               </li>
-
               <li className="text-lg">
-                <span>{renderText("")}</span>
+                {renderText(
+                  "Types of coffee were often named according to the"
+                )}
                 <button
-                  onClick={() => toggleButton(7)}
+                  onClick={() => toggleButton(34)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  7
+                  34
                 </button>
                 <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>.</span>
               </li>
-
               <li className="text-lg">
-                <span>{renderText("Good")}</span>
+                {renderText(
+                  "In Brazil and the Caribbean, most cultivation depended on"
+                )}
                 <button
-                  onClick={() => toggleButton(8)}
+                  onClick={() => toggleButton(35)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  8
+                  35
                 </button>
                 <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" on Bridge Street")}</span>
+                <span>.</span>
+              </li>
+              <li className="text-lg">
+                {renderText("In Java, coffee was used as a form of")}
+                <button
+                  onClick={() => toggleButton(36)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[36]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  36
+                </button>
+                <input
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>.</span>
+              </li>
+              <li className="text-lg">
+                {renderText("Coffee became almost as important as")}
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                <span>.</span>
+              </li>
+              <li className="text-lg">
+                {renderText(
+                  "The move towards the consumption of tea in Britain did not also take place in the USA."
+                )}
               </li>
             </ul>
 
             {/* ---------- Section 4 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Meet Linda")}
+              {renderText("Coffee in the 19th century")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Meet Linda on")}</span>
+                {renderText("Prices dropped because of improvements in")}
                 <button
-                  onClick={() => toggleButton(9)}
+                  onClick={() => toggleButton(39)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
+                    activeButtons[39]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  9
+                  39
                 </button>
                 <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" after 5.30 pm")}</span>
+                <span>.</span>
               </li>
-
               <li className="text-lg">
-                <span>{renderText("In the")}</span>
+                {renderText(
+                  "Industrial workers found coffee helped them to work at"
+                )}
                 <button
-                  onClick={() => toggleButton(10)}
+                  onClick={() => toggleButton(40)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
+                    activeButtons[40]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  10
+                  40
                 </button>
                 <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" opposite the station")}</span>
+                <span>.</span>
               </li>
             </ul>
           </div>
@@ -895,11 +747,11 @@ const Test3Listening2018 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -966,9 +818,9 @@ const Test3Listening2018 = () => {
           </div>
         </div>
       </div>
-      <Listening3Pagination2018></Listening3Pagination2018>
+      <Listening4Pagination2018></Listening4Pagination2018>
     </div>
   );
 };
 
-export default Test3Listening2018;
+export default Listening4Part42018;

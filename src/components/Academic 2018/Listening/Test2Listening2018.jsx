@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
+import Listening2Pagination2018 from "../Pagination2018/Listening2Pagination2018";
 
 const Test2Listening2018 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -22,308 +23,307 @@ const Test2Listening2018 = () => {
   // result marks display
   const [showResult, setShowResult] = useState(false);
 
-const lines = [
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Section 1.You will hear a woman phoning the secretary of a cycling club to find out about becoming a member.",
-      "First, you have some time to look at questions 1 to 6.",
-      "You will see that there is an example that has been done for you.",
-      "On this occasion only, the conversation relating to this will be played first.",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: ["Hello, South City Cycling Club."],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Oh, hi.Um. I want to find out about joining the club."],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Right, I can help you there.I'm the club secretary, and my name's Jim Hunter.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Oh, hi, Jim."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "The club secretary's name is Jim Hunter, so Hunter has been written in the space.",
-      "Now we shall begin.",
-      "You should answer the questions as you listen, because you will not hear the recording a second time.",
-      "Listen carefully, and answer questions 1 to 6.",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: ["Hello, South City Cycling Club."],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Oh, hi.Um. I want to find out about joining the club."],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Right, I can help you there.I'm the club secretary, and my name's Jim Hunter.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Oh, hi, Jim."],
-  },
-  {
-    speaker: "JIM",
-    text: ["So, are you interested in membership for yourself?"],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["That's right."],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "OK, well there are basically two types of adult membership.",
-      "If you're pretty serious about cycling, there's the full membership.",
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Section 1.You will hear a woman phoning the secretary of a cycling club to find out about becoming a member.",
+        "First, you have some time to look at questions 1 to 6.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: ["Hello, South City Cycling Club."],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Oh, hi.Um. I want to find out about joining the club."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Right, I can help you there.I'm the club secretary, and my name's Jim Hunter.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Oh, hi, Jim."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "The club secretary's name is Jim Hunter, so Hunter has been written in the space.",
+        "Now we shall begin.",
+        "You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully, and answer questions 1 to 6.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: ["Hello, South City Cycling Club."],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Oh, hi.Um. I want to find out about joining the club."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Right, I can help you there.I'm the club secretary, and my name's Jim Hunter.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Oh, hi, Jim."],
+    },
+    {
+      speaker: "JIM",
+      text: ["So, are you interested in membership for yourself?"],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["That's right."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "OK, well there are basically two types of adult membership.",
+        "If you're pretty serious about cycling, there's the full membership.",
 
-      {
-        text: "That costs $260, and that covers you not just for ordinary cycling, but also for races both here in the city and also in other parts of Australia.",
-        number: 1,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "Right.Well I'm not really up to that standard.",
-      "I was more interested in just joining a group to do some cycling in my free time.",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Sure, that's why most people join.",
-      "So, in that case, you'd be better with the recreational membership.",
-      "That's $108 if you're over 19, and ninety five dollars if you're under.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["I'm 25."],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "OK.",
-      "It's paid quarterly, and you can upgrade it later to the full membership if you want to, of course.",
-      "Now both types of membership include the club fee of $20.",
+        {
+          text: "That costs $260, and that covers you not just for ordinary cycling, but also for races both here in the city and also in other parts of Australia.",
+          number: 1,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Right.Well I'm not really up to that standard.",
+        "I was more interested in just joining a group to do some cycling in my free time.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Sure, that's why most people join.",
+        "So, in that case, you'd be better with the recreational membership.",
+        "That's $108 if you're over 19, and ninety five dollars if you're under.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["I'm 25."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "OK.",
+        "It's paid quarterly, and you can upgrade it later to the full membership if you want to, of course.",
+        "Now both types of membership include the club fee of $20.",
 
-      {
-        text: "They also provide insurance in case you have an accident, though we hope you won't need that, of course.",
-        number: 2,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "No, OK.",
-      "Well, I'll go with the recreational membership, I think.",
-      "And that allows me to join in the club activities and so on.",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "That's right.",
-      "And once you're a member of the club, you're also permitted to wear our kit when you're out cycling.",
-      "It's green and white.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "Yes, I've seen cyclists wearing it.",
-      "So can I buy that at the club?",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Uh. No, it's made to order by a company in Brisbane.",
-      "You can find them online.",
+        {
+          text: "They also provide insurance in case you have an accident, though we hope you won't need that, of course.",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "No, OK.",
+        "Well, I'll go with the recreational membership, I think.",
+        "And that allows me to join in the club activities and so on.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "That's right.",
+        "And once you're a member of the club, you're also permitted to wear our kit when you're out cycling.",
+        "It's green and white.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Yes, I've seen cyclists wearing it.",
+        "So can I buy that at the club?",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Uh. No, it's made to order by a company in Brisbane.",
+        "You can find them online.",
 
-      { text: "They're called Jerriz.", number: 3 },
-      "That's JERRIZ.",
-      "You can use your membership number to put in an order on their website.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["OK, now can you tell me a bit about the rides I can do?"],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Sure, so we have training rides pretty well every morning, and they're a really good way of improving your cycling skills as well as your general level of fitness.",
-      "But they're different levels.",
-      "Level A is pretty fast, you're looking at about 30 or 35 kilometers an hour.",
+        { text: "They're called Jerriz.", number: 3 },
+        "That's JERRIZ.",
+        "You can use your membership number to put in an order on their website.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK, now can you tell me a bit about the rides I can do?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Sure, so we have training rides pretty well every morning, and they're a really good way of improving your cycling skills as well as your general level of fitness.",
+        "But they're different levels.",
+        "Level A is pretty fast, you're looking at about 30 or 35 kilometers an hour.",
 
-      {
-        text: "If you can do about 25 km an hour, you'd probably be level B, and then level C are the novices who stay at about 15 km per hour.",
-        number: 4,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "Right.Well, I reckon I'd be level B.So when are the sessions for that level?",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Uh. There are a couple each week.",
-      "They're both early morning sessions.",
-      "There's one on Tuesdays, and for that one you meet at 5:30 am.",
+        {
+          text: "If you can do about 25 km an hour, you'd probably be level B, and then level C are the novices who stay at about 15 km per hour.",
+          number: 4,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Right.Well, I reckon I'd be level B.So when are the sessions for that level?",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Uh. There are a couple each week.",
+        "They're both early morning sessions.",
+        "There's one on Tuesdays, and for that one you meet at 5:30 am.",
 
-      { text: "And the meeting point's the stadium.", number: 5 },
-      "Do you know where that is?",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "Yes, it's quite near my home, in fact.OK, and how about the other one?",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      {
-        text: "That's on Thursdays, it starts at the same time, but they meet at the main gate to the park.",
-        number: 6,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Is that the one just past the shopping mall?"],
-  },
-  {
-    speaker: "JIM",
-    text: ["That's it."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-      "Now listen and answer questions 7 to 10.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["So how long are the rides?"],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Uh. They're about an hour and a half.",
-      "So if you have a job, it's easy to fit in before you go to work.",
+        { text: "And the meeting point's the stadium.", number: 5 },
+        "Do you know where that is?",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Yes, it's quite near my home, in fact.OK, and how about the other one?",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "That's on Thursdays, it starts at the same time, but they meet at the main gate to the park.",
+          number: 6,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Is that the one just past the shopping mall?"],
+    },
+    {
+      speaker: "JIM",
+      text: ["That's it."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "Now listen and answer questions 7 to 10.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["So how long are the rides?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Uh. They're about an hour and a half.",
+        "So if you have a job, it's easy to fit in before you go to work.",
 
-      {
-        text: "And the members often go somewhere for coffee afterwards, so it's quite a social event.",
-        number: 7,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "OK, that sounds good.",
-      "I've only just moved to the city, so I don't actually know many people yet.",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: ["Well, it's a great way to meet people."],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["And does each ride have a leader?"],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      { text: "Sometimes, but not always.", number: 8 },
-      "But you don't really need one.",
-      "The group members on the ride support one another anyway.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["How would we know where to go?"],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      {
-        text: "If you check the club website, you'll see that the route for each ride is clearly marked.",
-        number: 9,
-      },
-      "So you can just print that out and take it along with you.",
-      "It's similar from one week to another, but it's not always exactly the same.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["And what do I need to bring?"],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      "Hmm. Well, bring a bottle of water and your phone.",
-      "You shouldn't use it while you're cycling, but have it with you.",
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: ["Right."],
-  },
-  {
-    speaker: "JIM",
-    text: [
-      {
-        text: "And in winter, it's well before sunrise when we set out, so you need to make sure your bike's got lights.",
-        number: 10,
-      },
-    ],
-  },
-  {
-    speaker: "WOMAN",
-    text: [
-      "That's OK.Well, thanks, Jim.I'd definitely like to join.So what's the best way of going about it?",
-    ],
-  },
-  {
-    speaker: "JIM",
-    text: ["Uh. You can..."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "That is the end of section 1.",
-      "You now have half a minute to check your answers.",
-    ],
-  },
-];
-
+        {
+          text: "And the members often go somewhere for coffee afterwards, so it's quite a social event.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "OK, that sounds good.",
+        "I've only just moved to the city, so I don't actually know many people yet.",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: ["Well, it's a great way to meet people."],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["And does each ride have a leader?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        { text: "Sometimes, but not always.", number: 8 },
+        "But you don't really need one.",
+        "The group members on the ride support one another anyway.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["How would we know where to go?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "If you check the club website, you'll see that the route for each ride is clearly marked.",
+          number: 9,
+        },
+        "So you can just print that out and take it along with you.",
+        "It's similar from one week to another, but it's not always exactly the same.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["And what do I need to bring?"],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        "Hmm. Well, bring a bottle of water and your phone.",
+        "You shouldn't use it while you're cycling, but have it with you.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Right."],
+    },
+    {
+      speaker: "JIM",
+      text: [
+        {
+          text: "And in winter, it's well before sunrise when we set out, so you need to make sure your bike's got lights.",
+          number: 10,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "That's OK.Well, thanks, Jim.I'd definitely like to join.So what's the best way of going about it?",
+      ],
+    },
+    {
+      speaker: "JIM",
+      text: ["Uh. You can..."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 1.",
+        "You now have half a minute to check your answers.",
+      ],
+    },
+  ];
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -414,7 +414,6 @@ const lines = [
     );
   };
 
-  
   // ---- Voice function ----
   const handleVoice = () => {
     if (isSpeaking) {
@@ -492,19 +491,18 @@ const lines = [
 
   //  Marks show
 
-const correctAnswers = {
-  1: "city",
-  2: "insurance",
-  3: "Jerriz",
-  4: "25",
-  5: "stadium",
-  6: "main gate ",
-  7: "coffee",
-  8: "leader",
-  9: "route",
-  10: "lights",
-};
-
+  const correctAnswers = {
+    1: "city",
+    2: "insurance",
+    3: "Jerriz",
+    4: "25",
+    5: "stadium",
+    6: "main gate ",
+    7: "coffee",
+    8: "leader",
+    9: "route",
+    10: "lights",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -1045,6 +1043,7 @@ const correctAnswers = {
         </div>
       </div>
       {/* <Listening1Pagination2020></Listening1Pagination2020> */}
+      <Listening2Pagination2018></Listening2Pagination2018>
     </div>
   );
 };

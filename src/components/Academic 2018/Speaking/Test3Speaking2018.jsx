@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking3Pagination2018 from "../Pagination2018/Speaking3Pagination2018";
 
 const Test3Speaking2018 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -258,7 +259,7 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      {/* <Speaking1Pagination2019></Speaking1Pagination2019> */}
+    <Speaking3Pagination2018></Speaking3Pagination2018>
     </div>
   );
 };

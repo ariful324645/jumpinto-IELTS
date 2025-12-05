@@ -4,6 +4,7 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import Reading3Pagination2018 from "../Pagination2018/Reading3Pagination2018";
 
 //  Marks show
 
@@ -824,7 +825,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Reading1Pagination2020></Reading1Pagination2020> */}
+<Reading3Pagination2018></Reading3Pagination2018>
     </div>
   );
 };

@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
+import Listening1Pagination2018 from "../Pagination2018/Listening1Pagination2018";
 
-const Listening2Part22020 = () => {
+const Listening1Part22018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +28,143 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 2. You will hear the chairman of the Highways Committee of Granford speaking to members of the public about proposed changes to traffic and parking in the area.",
+        "First, you have some time to look at questions 11 to 13.",
+        "Now listen carefully, and answer questions 11 to 13.",
       ],
     },
 
     {
-      speaker: "WOMAN",
+      speaker: "PHIL SUTTON",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
-      ],
-    },
-
-    {
-      speaker: "MARK",
-      text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
+        "Good evening everyone. My name is Phil Sutton, and I'm chairman of the Highways Committee.",
+        "We've called this meeting to inform members of the public about the new regulations for traffic and parking we're proposing for Granford.",
+        "I'll start by summarizing these changes before we open the meeting to questions.",
+        "So, why do we need to make these changes to traffic systems in Granford?",
+        "Well, we're very aware that traffic is becoming an increasing problem.",
+        "It's been especially noticeable with the increase in heavy traffic while they've been building the new hospital.",
 
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
+          text: "But it's the overall rise in the volume of traffic of all kinds that's concerning us.",
           number: 11,
         },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
+        "To date, there's not been any increase in traffic accidents. But that's not something we want to see happen, obviously.",
+        "Uh. We recently carried out a survey of local residents, and their responses were interesting.",
 
         {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
+          text: "People were very concerned about the lack of visibility on some roads due to cars parked along the sides of the roads.We'd expected complaints about the congestion near the school, when parents are dropping off their children or picking them up.",
           number: 12,
         },
-        "Soon after this, the First World War broke out in 1914, ",
+        "But this wasn't top of the list, and nor were noise and fumes from trucks and lorries, though they were mentioned by some people.",
+        "We think these new traffic regulations would make a lot of difference, but we still have a long way to go.",
+        "We've managed to keep our proposals within budget, just.",
+
         {
-          text: "and most of the park was dug up and planted with vegetables, ",
+          text: "So they can be covered by the Council, but of course it's no good introducing new regulations if we don't have a way of making sure that everyone obeys them.",
           number: 13,
         },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
+        "And that's an area we're still working on with the help of representatives from the police force.",
+      ],
+    },
+
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the talk, you have some time to look at questions 14 to 20.",
+        "Now listen and answer questions 14 to 20.",
+      ],
+    },
+
+    {
+      speaker: "PHIL SUTTON",
+      text: [
+        "OK, so this slide shows a map of the central area of Granford, with the High Street in the middle and School Road on the right.",
+
         {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
+          text: "Now we already have a set of traffic lights in the High Street at the junction with Station Road, but we're planning to have another set at the other end at the School Road junction.",
           number: 14,
         },
-      ],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
-      ],
-    },
-
-    {
-      speaker: "MARK",
-      text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
+        "To regulate the flow of traffic along the High Street.",
+        "We've decided we definitely need a pedestrian crossing.",
+        "We considered putting this on School Road just outside the school.",
+        "But in the end, we decided that could lead to a lot of traffic congestion.",
 
         {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
+          text: "So we decided to locate it on the High Street, crossing the road in front of the supermarket.",
           number: 15,
         },
+        "That's a very busy area, so it should help things there.",
+        "We are proposing some changes to parking.",
+        "At present, parking isn't allowed on the High Street outside the library.",
+
         {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
+          text: "But we are going to change that and allow parking there, but not at the other end of the High Street near School Road.",
           number: 16,
         },
-        "There are two areas that are particularly intended for children.",
 
         {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
+          text: "There'll be a new no parking sign on School Road.",
           number: 17,
         },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
+        "Just by the entrance to the school, forbidding parking for 25 meters.",
+        "This should improve visibility for drivers and pedestrians, especially on the bend just to the north of the school.",
 
         {
-          text: "That's near the west gate.",
+          text: "As far as disabled drivers are concerned, at present, they have parking outside the supermarket, but lorries also use those spaces, so we've got two new disabled parking spaces on the side road.",
           number: 18,
         },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
+        "Up towards the bank.",
+        "It's not ideal, but probably better than the present arrangement.",
+        "We also plan to widen the pavement on School Road.",
 
         {
-          text: "They're still in the south-west corner of the park",
+          text: "We think we can manage to get an extra half-meter on the bend just before you get to the school on the same side of the road.",
           number: 19,
         },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
 
         {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
+          text: "Finally, we've introduced new restrictions on loading and unloading for the supermarket, so lorries will only be allowed to stop there before 8 am. That's the supermarket on School Road.",
           number: 20,
         },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "We kept to the existing arrangements with the High Street supermarket.",
+        "OK, so that's about it. Now, would anyone...",
       ],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "That is the end of section 2.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "Why are changes needed to traffic systems in Granford?",
+    "In a survey, local residents particularly complained about",
+    "According to the speaker, one problem with the new regulations will be",
   ];
 
   const options = [
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. The number of traffic accidents has risen.",
+      "B. The amount of traffic on the roads has increased.",
+      "C. The types of vehicles on the roads have changed.",
     ],
 
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. dangerous driving by parents.",
+      "B. pollution from trucks and lorries.",
+      "C. inconvenience from parked cars.",
     ],
 
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
-
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. raising money to pay for them.",
+      "B. finding a way to make people follow them.",
+      "C. getting the support of the police.",
+    ],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -292,7 +290,7 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
+      if (speaker === "PHIL SUTTON") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
@@ -352,18 +350,18 @@ const Listening2Part22020 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
-};
+  const correctAnswers = {
+    11: "B. The amount of traffic on the roads has increased.",
+    12: "C.  Inconvenience from parked cars.",
+    13: "B.  Finding a way to make people follow them.",
+    14: "F",
+    15: "D",
+    16: "H",
+    17: "C",
+    18: "G",
+    19: "E",
+    20: "B",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +387,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening2Part22018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +399,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening2Part22018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening2Part22018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -449,7 +447,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Traffic changes in Granford")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,14 +526,14 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 11-13")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText("  Traffic Changes in Granford")}
             </h1>
 
             {questions.map((q, qIndex) => {
@@ -587,20 +585,20 @@ const correctAnswers = {
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
+                {renderText("Questions 14-20")}
               </h2>
 
               <h3 className="text-lg mb-5">
                 {renderText("Level the map below")} <br /> <br />
                 {renderText("Choose the correct letter,  ")}{" "}
                 <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
+                {renderText("next to Questions 14-20.")}
               </h3>
               <div className="flex items-center justify-center ">
                 <div className="text-center">
                   <img
                     className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
+                    src="https://i.ibb.co.com/wrdvhBH2/p1-2018.jpg"
                     alt="Image bosa"
                   />
                 </div>
@@ -615,9 +613,37 @@ const correctAnswers = {
             {/* ---------- Question 1 ---------- */}
 
             <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("14.")}</span>
+              <span className="text-lg">
+                {renderText("New traffic lights")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[14] || ""}
+                  onChange={(e) => handleInputChange(14, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="14">{renderText("14")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>
+
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+            <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("15.")}</span>
               <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
+                {renderText("Pedestrian crossing")}
               </span>
 
               <div className="relative w-40">
@@ -626,7 +652,7 @@ const correctAnswers = {
                   onChange={(e) => handleInputChange(15, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="1">{renderText("15")}</option>
+                  <option value="15">{renderText("15")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -646,7 +672,7 @@ const correctAnswers = {
             {/* ---------- Question 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
+              <span className="text-lg">{renderText("Parking allowed")}</span>
 
               <div className="relative w-40">
                 <select
@@ -654,7 +680,7 @@ const correctAnswers = {
                   onChange={(e) => handleInputChange(16, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="2">{renderText("16")}</option>
+                  <option value="16">{renderText("16")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -675,7 +701,7 @@ const correctAnswers = {
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("17.")}</span>
               <span className="text-lg">
-                {renderText("the youngest child")}
+                {renderText("New 'No Parking' sign")}
               </span>
 
               <div className="relative w-40">
@@ -703,7 +729,10 @@ const correctAnswers = {
             {/* ---------- Question 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
+              <span className="text-lg">
+                {" "}
+                {renderText("New disabled parking spaces")}
+              </span>
               <div className="relative w-40">
                 <select
                   value={userAnswers[18] || ""}
@@ -730,7 +759,7 @@ const correctAnswers = {
             {/* ---------- Question 5 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
+              <span className="text-lg"> {renderText("Widened pavement")}</span>
               <div className="relative w-40">
                 <select
                   value={userAnswers[19] || ""}
@@ -759,7 +788,7 @@ const correctAnswers = {
               <span className="font-bold text-lg">{renderText("20.")}</span>
               <span className="text-lg">
                 {" "}
-                {renderText("a child with much older siblings")}
+                {renderText("Lorry loading/unloading restrictions")}
               </span>
               <div className="relative w-40">
                 <select
@@ -882,9 +911,10 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+      <Listening1Pagination2018></Listening1Pagination2018>
+      {/* <Listening2Pagination2020></Listening2Pagination2020> */}
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening1Part22018;

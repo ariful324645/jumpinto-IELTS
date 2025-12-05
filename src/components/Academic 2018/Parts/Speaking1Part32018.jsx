@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2018 from "../Pagination2018/Speaking4Pagination2018";
 
-const Test4Speaking2018 = () => {
+import Speaking1Pagination2018 from "../Pagination2018/Speaking1Pagination2018";
+
+const Speaking1Part22018 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,19 +16,23 @@ const Test4Speaking2018 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
   const questions = [
-    "Are there many animals or birds where you live? ",
-    "How often do you watch programmes or read articles about wild animals? ",
-    "Have you ever been to a zoo or a wildlife park?",
-    "Would you like to have a job working with animals? ",
+    "What kinds of jobs do young people not want to do in your country?",
+    "Who is best at advising young people about choosing a job: teachers or parents?",
+    "Is money always the most important thing when choosing a job?",
+    "Do you agree that many people nowadays are under pressure to work longer hours and take less holiday?",
+    "What is the impact on society of people having a poor work-life balance?",
+    "Could you recommend some effective strategies for governments and employers to ensure people have a good work-life balance?",
   ];
 
   const questionKeywords = [
-    ["animals", "birds", "live", "place", "why", "why not"],
-    ["watch", "programmes", "read", "articles", "wild animals", "why"],
-    ["zoo", "wildlife park", "visit", "experience", "why", "why not"],
-    ["job", "work", "animals", "career", "why", "why not"],
+    ["jobs", "young people", "avoid", "unpopular work", "country"],
+    ["advice", "teachers", "parents", "choosing job", "guidance"],
+    ["money", "job choice", "importance", "salary", "motivation"],
+    ["work pressure", "long hours", "holiday", "agreement", "modern life"],
+    ["impact", "society", "poor work-life balance", "effects", "consequences"],
+    ["strategies", "government", "employers", "work-life balance", "solutions"],
   ];
 
   // ▶ Speak current question
@@ -177,33 +182,46 @@ const Test4Speaking2018 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center mb-5">Animals</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Choosing work & Work-Life Balance
+            </h1>
+
+            <p className="text-lg font-bold">Choosing work</p>
             <li>
-              Are there many animals or birds where you live? [Why/Why not?]
+              What kinds of jobs do young people not want to do in your country?
             </li>
             <li>
-              How often do you watch programmes or read articles about wild
-              animals? [Why?]
+              Who is best at advising young people about choosing a job:
+              teachers or parents?
             </li>
             <li>
-              Have you ever been to a zoo or a wildlife park? [Why/Why not?]
+              Is money always the most important thing when choosing a job?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Work-Life balance</p>
+            <li>
+              Do you agree that many people nowadays are under pressure to work
+              longer hours and take less holiday?
             </li>
             <li>
-              Would you like to have a job working with animals? [Why/Why not?]
+              What is the impact on society of people having a poor work-life
+              balance?
+            </li>
+            <li>
+              Could you recommend some effective strategies for governments and
+              employers to ensure people have a good work-life balance?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -260,9 +278,9 @@ const Test4Speaking2018 = () => {
           </div>
         </div>
       </div>
-      <Speaking4Pagination2018></Speaking4Pagination2018>
+      <Speaking1Pagination2018></Speaking1Pagination2018>
     </div>
   );
 };
 
-export default Test4Speaking2018;
+export default Speaking1Part22018;

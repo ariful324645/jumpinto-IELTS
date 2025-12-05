@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+
 import Speaking4Pagination2018 from "../Pagination2018/Speaking4Pagination2018";
 
-const Test4Speaking2018 = () => {
+const Speaking4Part32018 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,20 +16,31 @@ const Test4Speaking2018 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 2/speaking"; // ✅ localStorage key
-  const questions = [
-    "Are there many animals or birds where you live? ",
-    "How often do you watch programmes or read articles about wild animals? ",
-    "Have you ever been to a zoo or a wildlife park?",
-    "Would you like to have a job working with animals? ",
-  ];
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "Why do some people find the internet addictive?",
+  "What would the world be like without the internet?",
+  "Do you think that the way people use the internet may change in the future?",
+  "What are the ways that social media can be used for positive purposes?",
+  "Why do some individuals post highly negative comments about other people on social media?",
+  "Do you think that companies' main form of advertising will be via social media in the future?",
+];
 
-  const questionKeywords = [
-    ["animals", "birds", "live", "place", "why", "why not"],
-    ["watch", "programmes", "read", "articles", "wild animals", "why"],
-    ["zoo", "wildlife park", "visit", "experience", "why", "why not"],
-    ["job", "work", "animals", "career", "why", "why not"],
-  ];
+const questionKeywords = [
+  ["internet", "addictive", "usage", "people", "behavior"],
+  ["internet", "world", "without", "impact", "society"],
+  ["internet", "usage", "future", "change", "technology"],
+  ["social media", "positive", "benefits", "usage", "purposes"],
+  [
+    "social media",
+    "negative comments",
+    "online behavior",
+    "people",
+    "harassment",
+  ],
+  ["social media", "advertising", "companies", "future", "marketing"],
+];
+
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -177,33 +189,42 @@ const Test4Speaking2018 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center mb-5">Animals</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              The internet & Social media websites
+            </h1>
+
+            <p className="text-lg font-bold">The internet</p>
+            <li>Why do some people find the internet addictive?</li>
+            <li>What would the world be like without the internet?</li>
             <li>
-              Are there many animals or birds where you live? [Why/Why not?]
+              Do you think that the way people use the internet may change in
+              the future?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Social media websites</p>
+            <li>
+              What are the ways that social media can be used for positive
+              purposes?
             </li>
             <li>
-              How often do you watch programmes or read articles about wild
-              animals? [Why?]
+              Why do some individuals post highly negative comments about other
+              people on social media?
             </li>
             <li>
-              Have you ever been to a zoo or a wildlife park? [Why/Why not?]
-            </li>
-            <li>
-              Would you like to have a job working with animals? [Why/Why not?]
+              Do you think that companies' main form of advertising will be via
+              social media in the future?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -265,4 +286,4 @@ const Test4Speaking2018 = () => {
   );
 };
 
-export default Test4Speaking2018;
+export default Speaking4Part32018;

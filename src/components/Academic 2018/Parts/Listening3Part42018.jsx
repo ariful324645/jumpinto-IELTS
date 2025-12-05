@@ -6,7 +6,7 @@ import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
 import Listening3Pagination2018 from "../Pagination2018/Listening3Pagination2018";
 
-const Test3Listening2018 = () => {
+const Listening3Part42018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -27,250 +27,96 @@ const Test3Listening2018 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1.You will hear a man phoning a woman who lives in an English city called Banford to get some advice about moving to that city.",
-        "First, you have some time to look at questions 1 to 5.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 4. You will hear part of a biology lecture about an animal called the sleepy lizard, that is common in parts of Australia.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully, and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Recommends a suburb called Dalton. So Dalton has been written in the space.",
-        "Now we shall begin.",
-        "You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 5.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Hello, Linda speaking."],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, hi, Linda. This is Matt Brooks. Alex White gave me your number. He said you'd be able to give me some advice about moving to Banford.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Yes, Alex did mention you. How can I help?"],
-    },
-    {
-      speaker: "MATT",
-      text: ["Well, uh, first of all, which area to live in?"],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Well, I live in Dalton, which is a really nice suburb, not too expensive, and there's a nice park.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Sounds good. Hmm. Do you know how much it would be to rent a 2 bedroom flat there?",
+        "Last week we started looking at reptiles, including crocodiles and snakes.",
+        "Today, I'd like us to have a look at another reptile, the lizard, and in particular at some studies that have been done on a particular type of lizard, whose Latin name is Tiliqua rugosa.",
+        "This is commonly known as the sleepy lizard, because it's quite slow in its movements and spends quite a lot of its time dozing under rocks or lying in the sun.",
+        "I'll start with a general description.",
+        "Sleepy lizards live in Western and South Australia, where they're quite common.",
+        "Unlike European lizards, which are mostly small, green and fast-moving, ",
         {
-          text: "Yeah, you should be able to get something reasonable for £850 per month.",
-          number: 1,
+          text: "sleepy lizards are brown, but what's particularly distinctive about them is the color of their tongue, which is dark blue, in contrast with the lining of their mouth which is bright pink.",
+          number: 31,
         },
-        "fThat's what people typically pay. You certainly wouldn't want to pay more than £900 that doesn't include bills or anything.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "No, that sounds all right. I'll definitely have a look there. Are the transport links easy from where you live?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: " I go by bike.",
-          number: 2,
-        },
-        "Uh. Well, I'm very lucky. I work in the city center, so I don't have to use public transport.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Oh, I wish I could do that. Is it safe to cycle around the city?",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, it's fine, and it keeps me fit. ",
-        {
-          text: "Anyway, driving to work in the city center would be a nightmare, because there's hardly any parking.",
-          number: 3,
-        },
-        "And the traffic during the rush hour can be bad.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "I'd be working from home, but I'd have to go to London one or two days a week.",
-      ],
-    },
-    {
-      speaker: "LINDA",
+        "And they're much bigger than most European lizards.",
 
-      text: [
-        "Oh, that's perfect. Getting to London is no problem.",
         {
-          text: " There's a fast train every 30 minutes.",
-          number: 4,
+          text: "They have quite a varied diet, including insects and even small animals, but they mostly eat plants of varying kinds.",
+          number: 32,
         },
-        "Which only takes 45 minutes.",
+        "Even though they're quite large and powerful, with strong jaws that can crush beetles and snail shells, they still have quite a few predators.",
+        "Large birds like cassowaries were one of the main ones in the past.",
+
+        {
+          text: "But nowadays, they're more likely to be caught and killed by snakes.",
+          number: 33,
+        },
+        "Actually, another threat to their survival isn't a predator at all, but is man made.",
+        "Quite a large number of sleepy lizards are killed by cars when they're trying to cross highways.",
+        "One study carried out by Michael Freake at Flinders University investigated the methods of navigation of these lizards.",
+        "Though they move slowly, they can travel quite long distances.",
+        {
+          text: "And he found that even if they were taken some distance away from their home territory, they could usually find their way back home as long as they could see the sky.",
+          number: 34,
+        },
+        "They didn't need any other landmarks on the ground.",
+        "Observations of these lizards in the wild have also revealed that their mating habits are quite unusual.",
+
+        {
+          text: "Unlike most animals, it seems that they're relatively monogamous, returning to the same partner year after year.",
+          number: 35,
+        },
+        "And the male and female also stay together for a long time, both before and after the birth of their young.",
+        "It's quite interesting to think about the possible reasons for this.",
+        "It could be that it's to do with protecting their young.",
+        "You'd expect them to have a much better chance of survival.",
+        {
+          text: " if they have both parents around, but in fact, observers have noted that once the babies have hatched out of their eggs, they have hardly any contact with their parents.",
+          number: 36,
+        },
+        "So there's not really any evidence to support that idea.",
+        "Another suggestion's based on the observation that male lizards in monogamous relationships tend to be bigger and stronger than other males.",
+
+        {
+          text: "So maybe the male lizards stay around, so they can give the female lizards protection from other males.",
+          number: 37,
+        },
+        "But again, we're not really sure.",
+        "Finally, I'd like to mention another study that involved collecting data by tracking the lizards.",
+        "I was actually involved in this myself, so we caught some lizards in the wild.",
+
+        {
+          text: "And we developed a tiny GPS system that would allow us to track them, and we fixed this onto their tails.",
+          number: 38,
+        },
+
+        {
+          text: "Then we set the lizards free again, and we were able to track them for 12 days and gather data, not just about their location, but even about how many steps they took during this period.",
+          number: 39,
+        },
+        "One surprising thing we discovered from this is that there were far fewer meetings between lizards than we expected.",
+        "It seems that they were actually trying to avoid one another.",
+
+        {
+          text: "So why would that be? Well, again, we have no clear evidence, but one hypothesis is that male lizards can cause quite serious injuries to one another.",
+          number: 40,
+        },
+        "So maybe this avoidance is a way of preventing this, of self-preservation if you like.",
+        "But we need to collect a lot more data before we can be sure of any of this.",
+        "That is the end of Section 4.",
       ],
     },
-    {
-      speaker: "MATT",
-      text: ["That's good."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yeah, the train service isn't bad during the week. And they run quite late at night. ",
-        {
-          text: "It's weekends that are a problem.",
-          number: 5,
-        },
-        "They're always doing engineering work. And you have to take a bus to Hadham and pick up the train there, which is really slow.",
-        "But other than that Banford's a great place to live. I've never been happier.",
-      ],
-    },
+
     {
       speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "There are some nice restaurants in the city center, and a brand new cinema, which has only been open a couple of months.",
-          number: 6,
-        },
-        "There's a good arts center too.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Sounds like Banford's got it all."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Yes, we're really lucky. There are lots of really good aspects to living here.",
-        {
-          text: " The schools are good, and the hospital here is one of the best in the country.",
-          number: 7,
-        },
-        "Everyone I know who's been there's had a positive experience. .",
-        {
-          text: "Oh, I can give you the name of my dentist too, in Bridge Street, if you're interested",
-          number: 8,
-        },
-        "I've been going to him for years, and I've never had any problems.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: ["Oh, OK, thanks."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I'll find his number and send it to you."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Thanks, that would be really helpful."],
-    },
-    {
-      speaker: "LINDA",
-      text: ["Are you planning to visit Banford soon?"],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Yes, my wife and I are both coming next week. We want to make some appointments with estate agents.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["I could meet you if you like, and show you around."],
-    },
-    {
-      speaker: "MATT",
-      text: ["Are you sure? We'd really appreciate that."],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        "Either a Tuesday or Thursday is good for me, after 5:30.",
-        {
-          text: "Thursday is preferable - Tuesday, I need to get home before 6 pm.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: [
-        {
-          text: "OK, great. Let me know which train you're catching, and I'll meet you in the cafe outside.",
-          number: 10,
-        },
-        "You can't miss it. It's opposite the station, and next to the museum.",
-      ],
-    },
-    {
-      speaker: "MATT",
-      text: [
-        "Brilliant. I'll text you next week, then. Thanks so much for all the advice.",
-      ],
-    },
-    {
-      speaker: "LINDA",
-      text: ["No problem. I'll see you next week."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of section 1.",
-        "You now have half a minute to check your answers.",
-      ],
+      text: ["You now have half a minute to check your answers."],
     },
   ];
 
@@ -441,17 +287,18 @@ const Test3Listening2018 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "850", // Average rent
-    2: "bike", // Linda travels to work by
-    3: "parking", // Limited ... in city centre
-    4: "30", // Trains to London every X minutes
-    5: "weekends", // Poor train service at ...
-    6: "cinema", // New ... opened recently
-    7: "hospital", // ... has excellent reputation
-    8: "dentist", // Good ... on Bridge Street
-    9: "Thursday", // Meet Linda on ...
-    10: "cafe", // In the ... opposite the station
+    31: "tongue", // They are brown, but recognisable by their tongue
+    32: "plants", // Their diet consists mainly of plants
+    33: "snakes", // Their main predators are large birds and snakes
+    34: "sky", // One study found that lizards can use the sky to help them navigate
+    35: "partner", // Observations show that these lizards keep the same partner for several years
+    36: "contact", // Little contact has been noted between parents and children
+    37: "protection", // To provide protection for female lizards
+    38: "tails", // GPS systems attached to their tails
+    39: "steps", // Number of steps taken
+    40: "injuries", // Reduce chances of injuries/self-preservation
   };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -477,7 +324,7 @@ const Test3Listening2018 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2018/Test 3/listening", newScore);
+    localStorage.setItem("/listening3Part42018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -489,12 +336,12 @@ const Test3Listening2018 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2018/Test 3/listening");
+    localStorage.removeItem("/listening3Part42018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 3/listening");
+    const savedScore = localStorage.getItem("/listening3Part42018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -506,7 +353,7 @@ const Test3Listening2018 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -537,7 +384,7 @@ const Test3Listening2018 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Moving to Branford City")}
+                {renderText("The Sleepy Lizard")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -612,9 +459,8 @@ const Test3Listening2018 = () => {
               )}
             </div>
           </div>
-
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -628,247 +474,280 @@ const Test3Listening2018 = () => {
           {/* box */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Moving to Banford City")}
+              {renderText("The Sleepy Lizard (Tiliqua rugosa)")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Accommodation")}
+              {renderText("Description")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                {renderText(
-                  "(Example) Linda recommends living in suburb of: Dalton"
-                )}
+                <span>
+                  {renderText("They are common in Western and South Australia")}
+                </span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Average rent: £")}</span>
+                <span>
+                  {renderText("They are brown, but recognisable by their")}
+                </span>
                 <button
-                  onClick={() => toggleButton(1)}
+                  onClick={() => toggleButton(31)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  1
+                  31
                 </button>
                 <input
-                  value={userAnswers[1] || ""}
-                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" a month")}</span>
+              </li>
+
+              <li className="text-lg">
+                {renderText("They are relatively large")}
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("Their diet consists mainly of")}</span>
+                <button
+                  onClick={() => toggleButton(32)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[32]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  32
+                </button>
+                <input
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("Their main predators are large birds and")}
+                </span>
+                <button
+                  onClick={() => toggleButton(33)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[33]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  33
+                </button>
+                <input
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
               </li>
             </ul>
 
             {/* ---------- Section 2 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Transport")}
+              {renderText("Navigation study")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Linda travels to work by")}</span>
+                <span>
+                  {renderText("One study found that lizards can use the")}
+                </span>
                 <button
-                  onClick={() => toggleButton(2)}
+                  onClick={() => toggleButton(34)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  2
+                  34
                 </button>
                 <input
-                  value={userAnswers[2] || ""}
-                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Limited")}</span>
-                <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  3
-                </button>
-                <input
-                  value={userAnswers[3] || ""}
-                  onChange={(e) => handleInputChange(3, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" in city centre")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Trains to London every")}</span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  value={userAnswers[4] || ""}
-                  onChange={(e) => handleInputChange(4, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>{renderText(" minutes")}</span>
-              </li>
-
-              <li className="text-lg">
-                <span>{renderText("Poor train service at")}</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  value={userAnswers[5] || ""}
-                  onChange={(e) => handleInputChange(5, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
+                <span>{renderText(" to help them navigate")}</span>
               </li>
             </ul>
 
             {/* ---------- Section 3 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Advantages of living in Banford")}
+              {renderText("Observations in the wild")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("New")}</span>
+                <span>
+                  {renderText(
+                    "Observations show that these lizards keep the same"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(6)}
+                  onClick={() => toggleButton(35)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  6
+                  35
                 </button>
                 <input
-                  value={userAnswers[6] || ""}
-                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" opened recently")}</span>
+                <span>{renderText(" for several years")}</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("")}</span>
+                <span>
+                  {renderText(
+                    "Possible reasons: to improve the survival of their young (but little"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(7)}
+                  onClick={() => toggleButton(36)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
+                    activeButtons[36]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  7
+                  36
                 </button>
                 <input
-                  value={userAnswers[7] || ""}
-                  onChange={(e) => handleInputChange(7, e.target.value)}
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                <span>
+                  {renderText(" has been noted between parents and children)")}
+                </span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("Good")}</span>
+                <span>{renderText("to provide")}</span>
                 <button
-                  onClick={() => toggleButton(8)}
+                  onClick={() => toggleButton(37)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
+                    activeButtons[37]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  8
+                  37
                 </button>
                 <input
-                  value={userAnswers[8] || ""}
-                  onChange={(e) => handleInputChange(8, e.target.value)}
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" on Bridge Street")}</span>
+                <span>{renderText(" for female lizards")}</span>
               </li>
             </ul>
 
             {/* ---------- Section 4 ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Meet Linda")}
+              {renderText("Tracking study")}
             </h2>
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("Meet Linda on")}</span>
+                <span>
+                  {renderText(
+                    "A study was carried out using GPS systems attached to the"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(9)}
+                  onClick={() => toggleButton(38)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
+                    activeButtons[38]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  9
+                  38
                 </button>
                 <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" after 5.30 pm")}</span>
+                <span>{renderText(" of the lizards")}</span>
               </li>
 
               <li className="text-lg">
-                <span>{renderText("In the")}</span>
+                <span>
+                  {renderText(
+                    "This provided information on the lizards' location and even the number of"
+                  )}
+                </span>
                 <button
-                  onClick={() => toggleButton(10)}
+                  onClick={() => toggleButton(39)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
+                    activeButtons[39]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  10
+                  39
                 </button>
                 <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-                <span>{renderText(" opposite the station")}</span>
+                <span>{renderText(" taken")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText(
+                    "It appeared that the lizards were trying to avoid one another."
+                  )}
+                </span>{" "} <br /> 
+                <span>
+                  {renderText(" This may be in order to reduce chances of")}
+                </span>
+                <button
+                  onClick={() => toggleButton(40)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[40]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  40
+                </button>
+                <input
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
               </li>
             </ul>
           </div>
-
           {/* ---------- Marks display ---------- */}
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
           <div className="mt-10">
@@ -895,11 +774,11 @@ const Test3Listening2018 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -971,4 +850,4 @@ const Test3Listening2018 = () => {
   );
 };
 
-export default Test3Listening2018;
+export default Listening3Part42018;

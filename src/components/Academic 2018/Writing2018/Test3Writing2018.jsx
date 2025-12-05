@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Writing3Pagination2018 from "../Pagination2018/Writing3Pagination2018";
 
 const Test3Writing2018 = () => {
   const [message, setMessage] = useState("");
@@ -173,7 +174,7 @@ const Test3Writing2018 = () => {
           </div>
         </div>
       </div>
-      {/* <Writing1Pagination2019></Writing1Pagination2019> */}
+<Writing3Pagination2018></Writing3Pagination2018>
     </div>
   );
 };

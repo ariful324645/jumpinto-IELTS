@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
+import Listening1Pagination2018 from "../Pagination2018/Listening1Pagination2018";
 
-const Listening2Part22020 = () => {
+const Listening1Part32018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +28,309 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 3. You will hear two biology students called Emma and Jack discussing an experiment they are going to do together.",
+        "First, you have some time to look at questions 21 to 25.",
+        "Now listen carefully and answer questions 21 to 25.",
       ],
     },
 
     {
-      speaker: "WOMAN",
+      speaker: "EMMA",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
+        "We've got to choose a topic for our experiment, haven't we, Jack? Were you thinking of something to do with seeds?",
       ],
     },
 
     {
-      speaker: "MARK",
+      speaker: "JACK",
       text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
+        "Hmm, that's right. I thought we could look at seed germination, how a seed begins to grow.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "OK, any particular reason? I know you're hoping to work in plant science eventually.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Yeah, but practically everything we do is going to feed into that.",
 
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
-          number: 11,
+          text: "No, there's an optional module on seed structure and function in the 3rd year that I might do, so I thought it might be useful for that.",
+          number: 21,
         },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
+        "If I choose that option, I don't have to do a dissertation module.",
+      ],
+    },
 
+    {
+      speaker: "EMMA",
+      text: ["Good idea."],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Hmm, well I thought for this experiment, we could look at the relationship between seed size and the way the seeds are planted.",
+        "So we could plant different sized seeds in different ways and see which grow best.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: ["OK, we'd need to allow time for the seeds to come up."],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
         {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
-          number: 12,
+          text: "That should be fine if we start now.",
+          number: 22,
         },
-        "Soon after this, the First World War broke out in 1914, ",
+        "A lot of the other possible experiments need quite a bit longer.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "So that would make it a good one to choose.",
+        "And I don't suppose it needs much equipment. We're not doing chemical analysis or anything, though that's not really an issue. We've got plenty of equipment in the laboratory.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Yeah, we need to have a word with the tutor if we're going to go ahead with it though.",
+        "I'm sure our aim's OK, it's not very ambitious, but the assignment's only 10% of our final mark, isn't it?",
         {
-          text: "and most of the park was dug up and planted with vegetables, ",
-          number: 13,
-        },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
-        {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
-          number: 14,
+          text: "But we need to be sure we're the only ones doing it.",
+          number: 23,
         },
       ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "Yeah, it's only 5% actually, but it would be a bit boring if everyone was doing it.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["Did you read that book on seed germination on our reading list?"],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "The one by Graves? Hmm, I looked through it for my last experiment, though it wasn't all that relevant there..",
+        {
+          text: " It would be for this experiment though.I found it quite hard to follow, lots about the theory which I hadn't expected.",
+          number: 24,
+        },
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Yes, I'd been hoping for something more practical. It does include references to the recent findings on genetically modified seeds, though.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: ["Yes, that was interesting."],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["I read an article about seed germination by Lee Hall."],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "About seeds that lie in the ground for ages and only germinate after a fire.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Hmm, that's the one. I knew a bit about it already, but not about this research.",
+        {
+          text: "His analysis of figures comparing the times of the fires and the proportion of seeds that germinated was done in a lot of detail, very impressive.",
+          number: 25,
+        },
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "Was that the article with the illustrations of early stages of plant development? They were very clear.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["I think those diagrams were in another article."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 26 to 30.",
+        "Now listen and answer questions 26 to 30.",
       ],
     },
 
     {
-      speaker: "MARK",
+      speaker: "EMMA",
       text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
-
-        {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
-          number: 15,
-        },
-        {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
-          number: 16,
-        },
-        "There are two areas that are particularly intended for children.",
-
-        {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
-          number: 17,
-        },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
-
-        {
-          text: "That's near the west gate.",
-          number: 18,
-        },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
-
-        {
-          text: "They're still in the south-west corner of the park",
-          number: 19,
-        },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
-
-        {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
-          number: 20,
-        },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "Anyway, shall we have a look at the procedure for our experiment? We'll need to get going with it quite soon.",
       ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Right. So the first thing we have to do is find our seeds. ",
+        {
+          text: "I think vegetable seeds would be best, and obviously they mustn't all be the same size.",
+          number: 26,
+        },
+        "So how many sorts do we need? About four different ones.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "I think that would be enough. There'll be quite a large number of seeds for each one.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        {
+          text: "Then for each seed, we need to find out how much it weighs.",
+          number: 27,
+        },
+        "And also measure its dimensions, and we need to keep a careful record of all that.",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "That'll be quite time consuming, and we also need to decide how deep we're going to plant the seeds. ",
+        {
+          text: "Right on the surface, a few millimeters down, or several centimeters.",
+          number: 28,
+        },
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "OK, so then we get planting. Do you think we can plant several seeds together in the same plant pot?",
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        {
+          text: "No, I think we need a different one for each seed.",
+          number: 29,
+        },
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: [
+        "Hmm, right, and we'll need to label them. We can use different colored labels. Then we wait for the seeds to germinate. I reckon that'll be about 3 weeks, depending on what the weather's like. Then we see if our plants have come up.",
+        {
+          text: "And write down how tall they've grown.",
+          number: 30,
+        },
+      ],
+    },
+
+    {
+      speaker: "EMMA",
+      text: [
+        "Then all we have to do is look at our numbers and see if there's any relation between them.",
+      ],
+    },
+
+    {
+      speaker: "JACK",
+      text: ["That's right. So then we..."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "That is the end of Section 3.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "Why is Jack interested in investigating seed germination?",
+    "Jack and Emma agree the main advantage of their present experiment is that it can be",
+    "What do they decide to check with their tutor?",
+    "They agree that Graves' book on seed germination is disappointing because",
+    "What does Jack say about the article on seed germination by Lee Hall?",
   ];
 
   const options = [
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. He may do a module on a related topic later on.",
+      "B. He wants to have a career in plant science.",
+      "C. He is thinking of choosing this topic for his dissertation.",
     ],
 
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. described very easily.",
+      "B. carried out inside the laboratory.",
+      "C. completed in the time available.",
     ],
 
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
+    [
+      "A. whether their aim is appropriate",
+      "B. whether anyone else has chosen this topic",
+      "C. whether the assignment contributes to their final grade",
+    ],
 
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. it fails to cover recent advances in seed science.",
+      "B. the content is irrelevant for them.",
+      "C. its focus is very theoretical.",
+    ],
+
+    [
+      "A. The diagrams of plant development are useful.",
+      "B. The analysis of seed germination statistics is thorough.",
+      "C. The findings on seed germination after fires are surprising.",
+    ],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -179,7 +343,7 @@ const Listening2Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 11;
+      const answerKey = qIndex + 21;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -292,12 +456,12 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
+      if (speaker === "JACK") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "EMMA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -352,18 +516,19 @@ const Listening2Part22020 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
-};
+  const correctAnswers = {
+    // Section 3 – Jack seed germination
+    21: "A. He may do a module on a related topic later on.",
+    22: "C. completed in the time available.",
+    23: "B. whether anyone else has chosen this topic",
+    24: "C. its focus is very theoretical.",
+    25: "B. The analysis of seed germination statistics is thorough.",
+    26: "G", // Select seeds of different types and sizes
+    27: "C", // Measure and record the weight and size of each one
+    28: "H", // Decide on the depths to be used
+    29: "A", // Use a different container for each seed and label it
+    30: "E", // After about 3 weeks, record the plant's height
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +554,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening2Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +566,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening2Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening2Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -418,7 +583,7 @@ const correctAnswers = {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -449,7 +614,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Jack seed germination")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,18 +693,18 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 11-13")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText("  Traffic Changes in Granford")}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 11;
+              const answerKey = qIndex + 21;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -587,22 +752,27 @@ const correctAnswers = {
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
+                {renderText("Questions 26-30")}
               </h2>
 
               <h3 className="text-lg mb-5">
                 {renderText("Level the map below")} <br /> <br />
                 {renderText("Choose the correct letter,  ")}{" "}
                 <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
+                {renderText("next to Questions 26-30.")}
               </h3>
               <div className="flex items-center justify-center ">
-                <div className="text-center">
-                  <img
-                    className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
-                    alt="Image bosa"
-                  />
+                <div className="text-center border-2 border-black p-4 space-y-2">
+                  <ul className="list-disc list-inside text-left">
+                    <li className="text-lg">{renderText("A. container")}</li>
+                    <li className="text-lg">{renderText("B. soil")}</li>
+                    <li className="text-lg">{renderText("C. weight")}</li>
+                    <li className="text-lg">{renderText("D. condition")}</li>
+                    <li className="text-lg">{renderText("E. height")}</li>
+                    <li className="text-lg">{renderText("F. colour")}</li>
+                    <li className="text-lg">{renderText("G. types")}</li>
+                    <li className="text-lg">{renderText("H. depths")}</li>
+                  </ul>
                 </div>
               </div>
 
@@ -611,176 +781,135 @@ const correctAnswers = {
           </div>
 
           {/* optional question */}
+          {/* Stages in the experiment */}
           <div className="space-y-2">
-            {/* ---------- Question 1 ---------- */}
-
+            {/* ---------- Step 1 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
+              <span className="font-bold text-lg">{renderText("26.")}</span>
               <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
+                {renderText("Select seeds of different and sizes")}
               </span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="1">{renderText("15")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
+                  <option value="26">{renderText("26")}</option>
+                  <option value="A">{renderText("A. container")}</option>
+                  <option value="B">{renderText("B. soil")}</option>
+                  <option value="C">{renderText("C. weight")}</option>
+                  <option value="D">{renderText("D. condition")}</option>
+                  <option value="E">{renderText("E. height")}</option>
+                  <option value="F">{renderText("F. colour")}</option>
+                  <option value="G">{renderText("G. types")}</option>
+                  <option value="H">{renderText("H. depths")}</option>
                 </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
               </div>
             </p>
 
-            {/* ---------- Question 2 ---------- */}
+            {/* ---------- Step 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="2">{renderText("16")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 3 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
+              <span className="font-bold text-lg">{renderText("27.")}</span>
               <span className="text-lg">
-                {renderText("the youngest child")}
+                {renderText("Measure and record the and size of each one")}
               </span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
+                  value={userAnswers[27] || ""}
+                  onChange={(e) => handleInputChange(27, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="3">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
+                  <option value="27">{renderText("27")}</option>
+                  <option value="A">{renderText("A. container")}</option>
+                  <option value="B">{renderText("B. soil")}</option>
+                  <option value="C">{renderText("C. weight")}</option>
+                  <option value="D">{renderText("D. condition")}</option>
+                  <option value="E">{renderText("E. height")}</option>
+                  <option value="F">{renderText("F. colour")}</option>
+                  <option value="G">{renderText("G. types")}</option>
+                  <option value="H">{renderText("H. depths")}</option>
                 </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
               </div>
             </p>
 
-            {/* ---------- Question 4 ---------- */}
+            {/* ---------- Step 3 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="4">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 5 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="5">{renderText("19")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 6 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("20.")}</span>
+              <span className="font-bold text-lg">{renderText("28.")}</span>
               <span className="text-lg">
-                {" "}
-                {renderText("a child with much older siblings")}
+                {renderText("Decide on the to be used")}
               </span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  value={userAnswers[28] || ""}
+                  onChange={(e) => handleInputChange(28, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="6">{renderText("20")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
+                  <option value="28">{renderText("28")}</option>
+                  <option value="A">{renderText("A. container")}</option>
+                  <option value="B">{renderText("B. soil")}</option>
+                  <option value="C">{renderText("C. weight")}</option>
+                  <option value="D">{renderText("D. condition")}</option>
+                  <option value="E">{renderText("E. height")}</option>
+                  <option value="F">{renderText("F. colour")}</option>
+                  <option value="G">{renderText("G. types")}</option>
+                  <option value="H">{renderText("H. depths")}</option>
                 </select>
+              </div>
+            </p>
 
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
+            {/* ---------- Step 4 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("29.")}</span>
+              <span className="text-lg">
+                {renderText("Use a different for each seed and label it")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[29] || ""}
+                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="29">{renderText("29")}</option>
+                  <option value="A">{renderText("A. container")}</option>
+                  <option value="B">{renderText("B. soil")}</option>
+                  <option value="C">{renderText("C. weight")}</option>
+                  <option value="D">{renderText("D. condition")}</option>
+                  <option value="E">{renderText("E. height")}</option>
+                  <option value="F">{renderText("F. colour")}</option>
+                  <option value="G">{renderText("G. types")}</option>
+                  <option value="H">{renderText("H. depths")}</option>
+                </select>
+              </div>
+            </p>
+
+            {/* ---------- Step 5 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("30.")}</span>
+              <span className="text-lg">
+                {renderText("After about 3 weeks, record the plant's")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[30] || ""}
+                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="30">{renderText("30")}</option>
+                  <option value="A">{renderText("A. container")}</option>
+                  <option value="B">{renderText("B. soil")}</option>
+                  <option value="C">{renderText("C. weight")}</option>
+                  <option value="D">{renderText("D. condition")}</option>
+                  <option value="E">{renderText("E. height")}</option>
+                  <option value="F">{renderText("F. colour")}</option>
+                  <option value="G">{renderText("G. types")}</option>
+                  <option value="H">{renderText("H. depths")}</option>
+                </select>
               </div>
             </p>
           </div>
@@ -811,11 +940,11 @@ const correctAnswers = {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11-20)
+                    All Answers (21-30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -882,9 +1011,10 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+      <Listening1Pagination2018></Listening1Pagination2018>
+      {/* <Listening2Pagination2020></Listening2Pagination2020> */}
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening1Part32018;

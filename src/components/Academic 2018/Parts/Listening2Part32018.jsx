@@ -5,9 +5,10 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
 
-const Listening2Part22020 = () => {
+import Listening2Pagination2018 from "../Pagination2018/Listening2Pagination2018";
+
+const Listening2Part32018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +29,331 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 3. You will hear a student called Russ consulting his tutor about a presentation he is preparing on nanotechnology, the study of materials on an extremely small scale.",
+        "First, you have some time to look at questions 21 to 25.",
+        "Now listen carefully and answer questions 21 to 25.",
       ],
     },
 
     {
-      speaker: "WOMAN",
+      speaker: "TUTOR",
+      text: ["Ah... come in, Russ."],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Thank you."],
+    },
+
+    {
+      speaker: "TUTOR",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
+        "Now you wanted to consult me about your class presentation on nanotechnology. You're due to give it next week, aren't you?",
       ],
     },
 
     {
-      speaker: "MARK",
+      speaker: "RUSS",
       text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
+        "That's right, and I'm really struggling. I chose the topic because I didn't know much about it, and wanted to learn more. But now I've read so much about it, in a way there's too much to say. I could talk for much longer than the 20 minutes I've been allocated.",
 
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
-          number: 11,
+          text: "Should I assume the other students don't know much, and give them a kind of general introduction, or should I try and make them share my fascination with a particular aspect?",
+          number: 21,
         },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
+      ],
+    },
 
+    {
+      speaker: "TUTOR",
+      text: [
+        "You could do either, but you'll need to have it clear in your own mind.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Then I think I'll give an overview."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "OK, now one way of approaching this is to work through developments in chronological order.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Uh huh."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "On the other hand, you could talk about the numerous ways that nanotechnology is being applied.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        "You mean things like thin films on camera displays to make them water-repellent, and additives to make motorcycle helmets stronger and lighter.",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "Exactly. ",
         {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
-          number: 12,
+          text: "Or another way would be to focus on its impact in one particular area.",
+          number: 22,
         },
-        "Soon after this, the First World War broke out in 1914, ",
+        "Say medicine or space exploration.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
         {
-          text: "and most of the park was dug up and planted with vegetables, ",
-          number: 13,
+          text: "That would make it easier to focus. Perhaps I should do that.",
+          number: 22,
         },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [{ text: "I think that would be a good idea.", number: 22 }],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        "Right. How important is it to include slides in the presentation?",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "They aren't essential by any means, and there's a danger of tailoring what you say to fit whatever slides you can find.",
+        "While it can be good to include slides, ",
         {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
-          number: 14,
+          text: "you could end up spending too long looking for suitable ones. You might find it better to leave them out.",
+          number: 23,
         },
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        "I see. Another thing I was wondering about was how to start. I know presentations often begin with, first, I'm going to talk about this, and then I'll talk about that.",
+        "But I thought about asking the audience what they know about nanotechnology.",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "That would be fine if you had an hour or two for the presentation, but you might find that you can't do anything with the answers you get.",
+        "And it simply eats into the short time that's available.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        {
+          text: "So maybe I should mention a particular way that nanotechnology is used to focus people's attention.",
+          number: 24,
+        },
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [{ text: "That sounds sensible.", number: 24 }],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        "What do you think I should do next? I really have to plan the presentation today and tomorrow.",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "Well, initially, I think you should ignore all the notes you've made. ",
+        {
+          text: "Take a small piece of paper and write a single short sentence that ties together the whole presentation.It can be something as simple as, nanotechnology is already improving our lives.Then start planning the content around that.",
+          number: 25,
+        },
+        " You can always modify that sentence later if you need to.",
       ],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 26 to 30.",
+        "Now listen and answer questions 26 to 30.",
       ],
     },
 
     {
-      speaker: "MARK",
+      speaker: "TUTOR",
       text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
-
-        {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
-          number: 15,
-        },
-        {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
-          number: 16,
-        },
-        "There are two areas that are particularly intended for children.",
-
-        {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
-          number: 17,
-        },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
-
-        {
-          text: "That's near the west gate.",
-          number: 18,
-        },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
-
-        {
-          text: "They're still in the south-west corner of the park",
-          number: 19,
-        },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
-
-        {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
-          number: 20,
-        },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "OK, now let's think about actually giving the presentation. You've only given one before, if I remember correctly, about an experiment you've been involved in.",
       ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["That's right. It was pretty rubbish."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "Let's say it was better in some respects than in others.",
+        {
+          text: " With regard to the structure, I felt that you ended rather abruptly without rounding it off.",
+          number: 26,
+        },
+        "Be careful not to do that in next week's presentation.",
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["OK."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        {
+          text: "And you made very little eye contact with the audience, because you were looking down at your notes most of the time.",
+          number: 27,
+        },
+        "You need to be looking at the audience and only occasionally glancing at your notes.",
+        "Your body language was a little odd. Every time you showed a slide, you turned your back on the audience, so you could look at it.",
+
+        {
+          text: "You should have been looking at your laptop, and you kept scratching your head, so I found myself wondering when you were next going to do that, instead of listening to what you were saying.",
+          number: 28,
+        },
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: [
+        "Oh, dear. What did you think of the language? I knew that not everyone was familiar with the subject, so I tried to make it as simple as I could.",
+      ],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "Yes, that came across. ",
+        {
+          text: "You used a few words that are specific to the field, but you always explained what they meant, so the audience wouldn't have had any difficulty understanding.",
+          number: 29,
+        },
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Uh-huh."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: [
+        "I must say the handouts you prepared were well thought out. ",
+        {
+          text: "They were a good summary of your presentation, which people would have been able to refer to later on.",
+          number: 30,
+        },
+      ],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Thank you."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: ["Well, I hope that helps you with next week's presentation."],
+    },
+
+    {
+      speaker: "RUSS",
+      text: ["Yes, it will. Thanks a lot."],
+    },
+
+    {
+      speaker: "TUTOR",
+      text: ["I'll look forward to seeing a big improvement then."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "That is the end of section 3.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "Russ says that his difficulty in planning the presentation is due to",
+    "Russ and his tutor agree that his approach in the presentation will be",
+    "In connection with slides, the tutor advises Russ to",
+    "They both agree that the best way for Russ to start his presentation is",
+    "What does the tutor advise Russ to do next while preparing his presentation?",
   ];
 
   const options = [
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. his lack of knowledge about the topic.",
+      "B. his uncertainty about what he should try to achieve.",
+      "C. the short time that he has for preparation.",
     ],
 
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. to concentrate on how nanotechnology is used in one field.",
+      "B. to follow the chronological development of nanotechnology.",
+      "C. to show the range of applications of nanotechnology.",
     ],
 
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
+    [
+      "A. talk about things that he can find slides to illustrate.",
+      "B. look for slides to illustrate the points he makes.",
+      "C. consider omitting slides altogether.",
+    ],
 
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. to encourage the audience to talk.",
+      "B. to explain what Russ intends to do.",
+      "C. to provide an example.",
+    ],
+
+    [
+      "A. summarise the main point he wants to make",
+      "B. read the notes he has already made",
+      "C. list the topics he wants to cover",
+    ],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -179,7 +366,7 @@ const Listening2Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 11;
+      const answerKey = qIndex + 21;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -292,12 +479,12 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
+      if (speaker === "RUSS") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "TUTOR") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -353,17 +540,21 @@ const Listening2Part22020 = () => {
   //  Marks show
 
 const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
+  // Section 3 – Updated Answers
+  21: "B. his uncertainty about what he should try to achieve.",
+  22: "A. to concentrate on how nanotechnology is used in one field.",
+  23: "C. consider omitting slides altogether.",
+  24: "C. to provide an example.",
+  25: "A. summarise the main point he wants to make",
+
+  // Questions 26–30
+  26: "A",
+  27: "C",
+  28: "D",
+  29: "G",
+  30: "B",
 };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +580,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening2Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +592,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening2Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening2Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -418,7 +609,7 @@ const correctAnswers = {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -449,7 +640,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Presentation on Nanotechnology")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,18 +719,18 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 21-25")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText("  Planning a presentation on nanotechnology")}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 11;
+              const answerKey = qIndex + 21;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -587,22 +778,41 @@ const correctAnswers = {
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
+                {renderText("Questions 26-30")}
               </h2>
 
               <h3 className="text-lg mb-5">
                 {renderText("Level the map below")} <br /> <br />
                 {renderText("Choose the correct letter,  ")}{" "}
-                <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
+                <span className="font-bold mr-2">{renderText("A-G")}</span>{" "}
+                {renderText("next to Questions 26-30.")}
               </h3>
               <div className="flex items-center justify-center ">
-                <div className="text-center">
-                  <img
-                    className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
-                    alt="Image bosa"
-                  />
+                <div className="text-center border-2 border-black p-4 space-y-2">
+                  <ul className="list-disc list-inside text-left">
+                    <h1 className="text-lg font-bold text-center">
+                      {renderText("Comments")}
+                    </h1>
+                    <li className="text-lg">
+                      {renderText("A. lacked a conclusion")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("B. useful in the future")}
+                    </li>
+                    <li className="text-lg">{renderText("C. not enough")}</li>
+                    <li className="text-lg">
+                      {renderText("D. sometimes distracting")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("E. showed originality")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("F. covered a wide range")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("G. not too technical")}
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -611,22 +821,23 @@ const correctAnswers = {
           </div>
 
           {/* optional question */}
+          {/* Stages in the experiment */}
           <div className="space-y-2">
-            {/* ---------- Question 1 ---------- */}
-
+            {/* ---------- Step 1 ---------- */}{" "}
+            <h1 className="text-lg font-bold">
+              {renderText("Aspects of Russ's previous presentation")}
+            </h1>
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
-              <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
-              </span>
+              <span className="font-bold text-lg">{renderText("26.")}</span>
+              <span className="text-lg">{renderText("structure")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="1">{renderText("15")}</option>
+                  <option value="26">{renderText("26")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
@@ -636,26 +847,24 @@ const correctAnswers = {
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
                 </select>
-
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
-
-            {/* ---------- Question 2 ---------- */}
+            {/* ---------- Step 2 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
+              <span className="font-bold text-lg">{renderText("27.")}</span>
+              <span className="text-lg">{renderText("eye contact")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
+                  value={userAnswers[27] || ""}
+                  onChange={(e) => handleInputChange(27, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="2">{renderText("16")}</option>
-                  <option value="A">{renderText("A")}</option>
+                  <option value="27">{renderText("27")}</option>
+               <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
@@ -663,55 +872,25 @@ const correctAnswers = {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
-
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
-
-            {/* ---------- Question 3 ---------- */}
+            {/* ---------- Step 3 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
-              <span className="text-lg">
-                {renderText("the youngest child")}
-              </span>
+              <span className="font-bold text-lg">{renderText("28.")}</span>
+              <span className="text-lg">{renderText("body language")}</span>
 
               <div className="relative w-40">
                 <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
+                  value={userAnswers[28] || ""}
+                  onChange={(e) => handleInputChange(28, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="3">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 4 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="4">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
+                  <option value="28">{renderText("28")}</option>
+               <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
@@ -719,26 +898,25 @@ const correctAnswers = {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
-
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
-
-            {/* ---------- Question 5 ---------- */}
+            {/* ---------- Step 4 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
+              <span className="font-bold text-lg">{renderText("29.")}</span>
+              <span className="text-lg">{renderText("choice of words")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
+                  value={userAnswers[29] || ""}
+                  onChange={(e) => handleInputChange(29, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="5">{renderText("19")}</option>
-                  <option value="A">{renderText("A")}</option>
+                  <option value="29">{renderText("29")}</option>
+               <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
@@ -746,29 +924,25 @@ const correctAnswers = {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
-
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
-
-            {/* ---------- Question 6 ---------- */}
+            {/* ---------- Step 5 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("20.")}</span>
-              <span className="text-lg">
-                {" "}
-                {renderText("a child with much older siblings")}
-              </span>
+              <span className="font-bold text-lg">{renderText("30.")}</span>
+              <span className="text-lg">{renderText("handouts")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  value={userAnswers[30] || ""}
+                  onChange={(e) => handleInputChange(30, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="6">{renderText("20")}</option>
-                  <option value="A">{renderText("A")}</option>
+                  <option value="30">{renderText("30")}</option>
+               <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
@@ -776,8 +950,7 @@ const correctAnswers = {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
-
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
@@ -811,11 +984,11 @@ const correctAnswers = {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11-20)
+                    All Answers (21-30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -882,9 +1055,10 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+      <Listening2Pagination2018></Listening2Pagination2018>
+      {/* <Listening2Pagination2020></Listening2Pagination2020> */}
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening2Part32018;

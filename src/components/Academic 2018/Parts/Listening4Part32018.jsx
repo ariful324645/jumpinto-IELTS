@@ -5,9 +5,11 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening2Pagination2020 from "../../Pagination/Listening2Pagination/Listening2Pagination2020";
 
-const Listening2Part22020 = () => {
+import Listening2Pagination2018 from "../Pagination2018/Listening2Pagination2018";
+import Listening4Pagination2018 from "../Pagination2018/Listening4Pagination2018";
+
+const Listening4Part32018 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,145 +30,332 @@ const Listening2Part22020 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear part of a talk to a gardening club about a local park.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 3. You will hear two students called Jack and Alice discussing food labels that give information on the nutritional value of foods.",
+        "First, you have some time to look at questions 21 to 26.",
+        "Now listen carefully and answer questions 21 to 26.",
       ],
     },
-
     {
-      speaker: "WOMAN",
+      speaker: "JACK",
       text: [
-        "I'm very pleased to welcome this evening's guest speaker, Mark Logan, who's going to tell us about the recent transformation of Minster Park.",
-        "Over to you, Mark.",
+        "I've still got loads to do for our report on nutritional food labels.",
       ],
     },
-
     {
-      speaker: "MARK",
+      speaker: "ALICE",
       text: [
-        "Thank you. I'm sure you're all familiar with Minster Park.",
-        "It's been a feature of the city for well over a century, and has been the responsibility of the city council for most of that time.",
-        "What perhaps isn't so well known is the origin of the park.",
-
+        "Me too. What did you learn from doing the project about your own shopping habits?",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Well, I've always had to check labels for traces of peanuts in everything I eat because of my allergy.",
         {
-          text: "Unlike many public parks that started in private ownership, as the garden of a large house for instance, Minster was some waste land, which people living nearby started planting with flowers in 1892.",
-          number: 11,
-        },
-        "It was unclear who actually owned the land.",
-        "And this wasn't settled until 20 years later, when the council took possession of it.",
-        "You may have noticed the statue near one of the entrances.",
-        "It's of Diane Gosforth, who played a key role in the history of the park.",
-        "Once the council had become the legal owner, it planned to sell the land for housing.",
-        "Many local people wanted it to remain a place that everyone could go to, to enjoy the fresh air and natural environment.",
-        "Remember, the park is in a densely populated residential area.",
-
-        {
-          text: "Diane Gosforth was one of those people, and she organized petitions and demonstrations, which eventually made the council change its mind about the future of the land.",
-          number: 12,
-        },
-        "Soon after this, the First World War broke out in 1914, ",
-        {
-          text: "and most of the park was dug up and planted with vegetables, ",
-          number: 13,
-        },
-        "which were sold locally.At one stage, the army considered taking it over for troop exercises, and got as far as contacting the city council, then decided the park was too small to be of use.",
-        "There were occasional public meetings during the war, in an area that had been retained as grass.",
-        "After the war, the park was turned back more or less to how it had been before 1914 and continued almost unchanged until recently.",
-        "Plans for transforming it were drawn up at various times, most recently in 2013, though they were revised in 2015 before any work had started.",
-        {
-          text: "The changes finally got going in 2016 and were finished on schedule last year.",
-          number: 14,
+          text: "But beyond that, I've never really been concerned enough to check how healthy a product is.",
+          number: 21,
         },
       ],
     },
-
+    {
+      speaker: "ALICE",
+      text: [
+        "This project has actually taught me to read the labels much more carefully.",
+        "I tended to believe claims on packaging like 'low in fat'.",
+        {
+          text: "But I now realize that the 'healthy' yogurt I've bought for years is full of sugar, and that it's actually quite high in calories.",
+          number: 22,
+        },
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Hmm. Ready meals are the worst. Comparing the labels on supermarket pizzas was a real eye opener.",
+        "Did you have any idea how many calories they contain? I was amazed.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        {
+          text: "Yes, because unless you read the label really carefully, you wouldn't know that the nutritional values given are for half a pizza.",
+          number: 23,
+        },
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "When most people eat the whole pizza. Not exactly transparent, is it?",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: ["Not at all, but I expect it won't stop you from buying pizza."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Probably not, no. I thought comparing the different labeling systems used by food manufacturers was interesting.",
+        "I think the kind of labeling system used makes a big difference.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: ["Which one did you prefer?"],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "I like the traditional daily value system best. The one which tells you what proportion of your required daily intake of each ingredient the product contains.",
+        "I'm not sure it's the easiest for people to use, but at least you get the full story.",
+        {
+          text: "I like to know all the ingredients in a product, not just how much fat, salt and sugar they contain.",
+          number: 24,
+        },
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "But it's good, supermarkets have been making an effort to provide reliable information for customers.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yes. There just needs to be more consistency between labeling systems used by different supermarkets, in terms of portion sizes, et cetera.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "Hmm. The labels on the different brands of chicken flavor crisps were quite revealing too, weren't they?",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yeah, I don't understand how they can get away with calling them chicken flavor.",
+        {
+          text: "When they only contain artificial additives.",
+          number: 25,
+        },
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "I know. I'd at least have expected them to contain a small percentage of real chicken.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: ["Absolutely."],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "I think having nutritional food labelling has been a good idea, don't you?",
+        "I think it will change people's behavior and stop mothers, in particular, buying the wrong things.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "But didn't that study kind of prove the opposite? People didn't necessarily stop buying unhealthy products.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "They only said that might be the case.",
+        {
+          text: "Those findings weren't that conclusive, and it was quite a small-scale study.",
+          number: 26,
+        },
+        "I think more research has to be done.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: ["Yes, I think you're probably right."],
+    },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "Now listen and answer questions 27 to 30.",
       ],
     },
-
     {
-      speaker: "MARK",
+      speaker: "JACK",
+      text: ["What do you think of the traffic light system?"],
+    },
+    {
+      speaker: "ALICE",
       text: [
-        "OK, let me tell you about some of the changes that have been made, and some things that have been retained.",
-        "If you look at this map.",
-        "You'll see the familiar outline of the park, with the river forming the northern boundary, and a gate in each of the other three walls.",
-        "The statue of Diane Gosforth has been moved.",
-
-        {
-          text: "It used to be close to the south gate, but it's now immediately to the north of the lily pond, almost in the center of the park, which makes it much more visible.",
-          number: 15,
-        },
-        {
-          text: "There's a new area of wooden sculptures, which are on the river bank, where the path from the east gate makes a sharp bend.",
-          number: 16,
-        },
-        "There are two areas that are particularly intended for children.",
-
-        {
-          text: "The playground has been enlarged and improved, and that's between the river and the path that leads from the pond to the river.",
-          number: 17,
-        },
-        "Then there's a new maze, a circular series of paths separated by low hedges.",
-
-        {
-          text: "That's near the west gate.",
-          number: 18,
-        },
-        " You go north from there towards the river and then turn left to reach it.",
-        "There have been tennis courts in the park for many years, and they've been doubled from four to eight.",
-
-        {
-          text: "They're still in the south-west corner of the park",
-          number: 19,
-        },
-        ", where there's a right-angle bend in the path.Something else I'd like to mention is the new fitness area.",
-
-        {
-          text: "This is right next to the lily pond, on the same side as the west gate.",
-          number: 20,
-        },
-        "Now, as you're all gardeners, I'm sure you'll like to hear about the plants that have been chosen for the park.",
+        "I think supermarkets like the idea of having a color coded system, red, orange or green for levels of fat, sugar and salt in a product.",
       ],
     },
-
+    {
+      speaker: "JACK",
+      text: [
+        {
+          text: "But it's not been adopted universally, and not on all products.",
+          number: 27,
+        },
+        "Why do you suppose that is?",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "Pressure from the food manufacturers, hardly surprising that some of them are opposed to flagging up how unhealthy their products are.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "I'd have thought it would have been compulsory. It seems ridiculous it isn't.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "I know, and what I couldn't get over is the fact that it was brought in without enough consultation.",
+        {
+          text: "A lot of experts had deep reservations about it.",
+          number: 28,
+        },
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "That is a bit weird. I suppose there's an argument for doing the research now when consumers are familiar with this system.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: ["Yeah, maybe."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "The participants in the survey were quite positive about the traffic light system.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "Hmm, but I don't think they targeted the right people.",
+        "They should have focused on people with low literacy levels, because these labels are designed to be accessible to them.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        {
+          text: "Yeah, but it's good to get feedback from all socio-economic groups.",
+          number: 29,
+        },
+        "And there wasn't much variation in their responses.",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        {
+          text: "No, but if they hadn't interviewed participants face to face, they could have used a much bigger sample size. I wonder why they chose that method.",
+          number: 30,
+        },
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Dunno. How were they selected? Did they volunteer, or were they approached?",
+      ],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "I think they volunteered. The thing that wasn't stated was how often they bought packaged food.",
+        "All we know is how frequently they use the supermarket.",
+      ],
+    },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "That is the end of section 3.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "The park was originally established",
-    "Why is there a statue of Diane Gosforth in the park?",
-    "During the First World War, the park was mainly used for",
-    "When did the physical transformation of the park begin?",
+    "What was Jack's attitude to nutritional food labels before this project?",
+    "Alice says that before doing this project,",
+    "When discussing supermarket brands of pizza, Jack agrees with Alice that",
+    "Jack prefers the daily value system to other labelling systems because it is",
+    "What surprised both students about one flavour of crisps?",
+    "What do the students think about research into the impact of nutritional food labelling?",
+    "Which one things surprised the students about the traffic-light system for nutritional labels",
+    "Which one things surprised the students about the traffic-light system for nutritional labels",
+    "Which one things are true about the participants in the study on the traffic-light system?",
+    "Which one things are true about the participants in the study on the traffic-light system?",
   ];
 
   const options = [
     [
-      "A. as an amenity provided by the city council.",
-      "B. as land belonging to a private house.",
-      "C. as a shared area set up by the local community.",
+      "A. He didn't read everything on them.",
+      "B. He didn't think they were important.",
+      "C. He thought they were too complicated.",
     ],
-
     [
-      "A. She was a resident who helped to lead a campaign.",
-      "B. She was a council member responsible for giving the public access.",
-      "C. She was a senior worker at the park for many years.",
+      "A. she was unaware of what certain foods contained.",
+      "B. she was too lazy to read food labels.",
+      "C. she was only interested in the number of calories.",
     ],
-
-    ["A. exercises by troops", "B. growing vegetables.", "C. public meetings."],
-
-    ["A. 2013", "B. 2015", "C. 2016"],
+    [
+      "A. the list of ingredients is shocking.",
+      "B. he will hesitate before buying pizza again.",
+      "C. the nutritional label is misleading.",
+    ],
+    ["A. more accessible.", "B. more logical.", "C. more comprehensive."],
+    [
+      "A. The percentage of artificial additives given was incorrect.",
+      "B. The products did not contain any meat.",
+      "C. The labels did not list all the ingredients.",
+    ],
+    [
+      "A. It did not produce clear results.",
+      "B. It focused on the wrong people.",
+      "C. It made unrealistic recommendations.",
+    ],
+    [
+      "A. its widespread use",
+      "B. the fact that it is voluntary for supermarkets",
+      "C. how little research was done before its introduction",
+    ],
+    [
+      "A. its unpopularity with food manufacturers",
+      "B. the way certain colours are used",
+      "C. the fact that it is voluntary for supermarkets",
+    ],
+    [
+      "A. They were from all socio-economic groups.",
+      "B. They were interviewed face-to-face.",
+      "C. They had low literacy levels.",
+    ],
+    [
+      "A. They were regular consumers of packaged food.",
+      "B. They were selected randomly.",
+      "C. They were interviewed face-to-face.",
+    ],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -179,7 +368,7 @@ const Listening2Part22020 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 11;
+      const answerKey = qIndex + 21;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -292,12 +481,12 @@ const Listening2Part22020 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "MARK") {
+      if (speaker === "JACK") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "EMMA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -352,18 +541,18 @@ const Listening2Part22020 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  11: "C. as a shared area set up by the local community.",
-  12: "A. She was a resident who helped to lead a campaign.",
-  13: "B. growing vegetables.",
-  14: "C. 2016",
-  15: "H",
-  16: "C",
-  17: "G",
-  18: "B",
-  19: "E",
-  20: "F",
-};
+  const correctAnswers = {
+    21: "B. He didn't think they were important.",
+    22: "A. she was unaware of what certain foods contained.",
+    23: "C. the nutritional label is misleading.",
+    24: "C. more comprehensive.",
+    25: "B. The products did not contain any meat.",
+    26: "A. It did not produce clear results.",
+    27: "C. how little research was done before its introduction",
+    28: "A. its unpopularity with food manufacturers",
+    29: "A. They were from all socio-economic groups.",
+    30: "C. They were interviewed face-to-face.",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -389,7 +578,7 @@ const correctAnswers = {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22020", newScore);
+    localStorage.setItem("/listening4Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -401,12 +590,12 @@ const correctAnswers = {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22020");
+    localStorage.removeItem("/listening4Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22020");
+    const savedScore = localStorage.getItem("/listening4Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -418,7 +607,7 @@ const correctAnswers = {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -449,7 +638,7 @@ const correctAnswers = {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Minster Park")}
+                {renderText("Food packaging labels")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -528,18 +717,20 @@ const correctAnswers = {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 21-26")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Minster Park")}
+              {renderText(
+                "  Labels giving nutritional information on food packaging"
+              )}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 11;
+              const answerKey = qIndex + 21;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -581,210 +772,6 @@ const correctAnswers = {
             })}
           </div>
 
-          {/* 2st section */}
-
-          <div>
-            {/* normal title*/}
-            <div className="space-y-4 leading-relaxed">
-              <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 15-20")}
-              </h2>
-
-              <h3 className="text-lg mb-5">
-                {renderText("Level the map below")} <br /> <br />
-                {renderText("Choose the correct letter,  ")}{" "}
-                <span className="font-bold mr-2">{renderText("A-I")}</span>{" "}
-                {renderText("next to Questions 15-20.")}
-              </h3>
-              <div className="flex items-center justify-center ">
-                <div className="text-center">
-                  <img
-                    className="h-96 w-96"
-                    src="https://i.ibb.co.com/tpFRC5gc/a15t2l.jpg"
-                    alt="Image bosa"
-                  />
-                </div>
-              </div>
-
-              <br />
-            </div>
-          </div>
-
-          {/* optional question */}
-          <div className="space-y-2">
-            {/* ---------- Question 1 ---------- */}
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("15.")}</span>
-              <span className="text-lg">
-                {renderText("statue of Diane Gosforth")}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[15] || ""}
-                  onChange={(e) => handleInputChange(15, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="1">{renderText("15")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 2 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("16.")}</span>
-              <span className="text-lg">{renderText("a middle child")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[16] || ""}
-                  onChange={(e) => handleInputChange(16, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="2">{renderText("16")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 3 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("17.")}</span>
-              <span className="text-lg">
-                {renderText("the youngest child")}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[17] || ""}
-                  onChange={(e) => handleInputChange(17, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="3">{renderText("17")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 4 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("18.")}</span>
-              <span className="text-lg"> {renderText("a twin")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[18] || ""}
-                  onChange={(e) => handleInputChange(18, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="4">{renderText("18")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 5 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("19.")}</span>
-              <span className="text-lg"> {renderText("an only child")}</span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[19] || ""}
-                  onChange={(e) => handleInputChange(19, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="5">{renderText("19")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Question 6 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("20.")}</span>
-              <span className="text-lg">
-                {" "}
-                {renderText("a child with much older siblings")}
-              </span>
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[20] || ""}
-                  onChange={(e) => handleInputChange(20, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="6">{renderText("20")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-          </div>
-
           {/* ---------- Marks display ---------- */}
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
           <div className="mt-10">
@@ -811,11 +798,11 @@ const correctAnswers = {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11-20)
+                    All Answers (21-30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -882,9 +869,10 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      <Listening2Pagination2020></Listening2Pagination2020>
+
+      <Listening4Pagination2018></Listening4Pagination2018>
     </div>
   );
 };
 
-export default Listening2Part22020;
+export default Listening4Part32018;

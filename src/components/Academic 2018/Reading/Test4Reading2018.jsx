@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading4Pagination2018 from "../Pagination2018/Reading4Pagination2018";
 
 const Test4Reading2018 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -873,7 +874,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Reading3Pagination2020></Reading3Pagination2020> */}
+<Reading4Pagination2018></Reading4Pagination2018>
     </div>
   );
 };

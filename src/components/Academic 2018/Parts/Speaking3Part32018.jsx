@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2018 from "../Pagination2018/Speaking4Pagination2018";
 
-const Test4Speaking2018 = () => {
+import Speaking3Pagination2018 from "../Pagination2018/Speaking3Pagination2018";
+
+const Speaking3Part32018 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,19 +16,23 @@ const Test4Speaking2018 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 2/speaking"; // ✅ localStorage key
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
   const questions = [
-    "Are there many animals or birds where you live? ",
-    "How often do you watch programmes or read articles about wild animals? ",
-    "Have you ever been to a zoo or a wildlife park?",
-    "Would you like to have a job working with animals? ",
+    "Why is it good to discuss problems with other people?",
+    "Do you think that it's better to talk to friends and not family about problems?",
+    "Is it always a good idea to tell lots of people about a problem?",
+    "Which communication skills are most important when taking part in meetings with colleagues?",
+    "What are the possible effects of poor written communication skills at work?",
+    "What do you think will be the future impact of technology on communication in the workplace?",
   ];
 
   const questionKeywords = [
-    ["animals", "birds", "live", "place", "why", "why not"],
-    ["watch", "programmes", "read", "articles", "wild animals", "why"],
-    ["zoo", "wildlife park", "visit", "experience", "why", "why not"],
-    ["job", "work", "animals", "career", "why", "why not"],
+    ["discuss", "problems", "other people", "benefits", "sharing"],
+    ["talk", "friends", "family", "problems", "preference"],
+    ["problem", "tell people", "sharing", "good idea", "advice"],
+    ["communication skills", "meetings", "colleagues", "work", "importance"],
+    ["poor communication", "written skills", "work", "effects", "consequences"],
+    ["future", "technology", "impact", "workplace", "communication"],
   ];
 
   // ▶ Speak current question
@@ -177,33 +182,46 @@ const Test4Speaking2018 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics: </h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center mb-5">Animals</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Discussing problems with others & Communication skills at work
+            </h1>
+
+            <p className="text-lg font-bold">Discussing problems with others</p>
+            <li>Why is it good to discuss problems with other people?</li>
             <li>
-              Are there many animals or birds where you live? [Why/Why not?]
+              Do you think that it's better to talk to friends and not family
+              about problems?
             </li>
             <li>
-              How often do you watch programmes or read articles about wild
-              animals? [Why?]
+              Is it always a good idea to tell lots of people about a problem?
+            </li>
+
+            <p className="text-lg font-bold mt-4">
+              Communication skills at work
+            </p>
+            <li>
+              Which communication skills are most important when taking part in
+              meetings with colleagues?
             </li>
             <li>
-              Have you ever been to a zoo or a wildlife park? [Why/Why not?]
+              What are the possible effects of poor written communication skills
+              at work?
             </li>
             <li>
-              Would you like to have a job working with animals? [Why/Why not?]
+              What do you think will be the future impact of technology on
+              communication in the workplace?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -260,9 +278,9 @@ const Test4Speaking2018 = () => {
           </div>
         </div>
       </div>
-      <Speaking4Pagination2018></Speaking4Pagination2018>
+      <Speaking3Pagination2018></Speaking3Pagination2018>
     </div>
   );
 };
 
-export default Test4Speaking2018;
+export default Speaking3Part32018;

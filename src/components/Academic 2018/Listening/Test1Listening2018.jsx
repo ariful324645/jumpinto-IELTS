@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
+import Listening1Pagination2018 from "../Pagination2018/Listening1Pagination2018";
 
 const Test1Listening2018 = () => {
   // second
@@ -942,7 +943,7 @@ const lines = [
                  </div>
         </div>
       </div>
-      {/* <Listening2Pagination2020></Listening2Pagination2020> */}
+  <Listening1Pagination2018></Listening1Pagination2018>
     </div>
   );
 };
