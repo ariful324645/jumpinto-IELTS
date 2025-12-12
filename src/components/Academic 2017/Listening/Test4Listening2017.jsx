@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
+import Listening4Pagination2017 from "../Pagination2017/Listening4Pagination2017";
 
 const Test4Listening2017 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -18,272 +19,271 @@ const Test4Listening2017 = () => {
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const [showResult, setShowResult] = useState(false);
-const lines = [
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Section 1. You will hear a telephone conversation between a woman who is looking for a job and a man from a company that organizes cycling holidays.",
-      "First, you have some time to look at questions 1 to 6.",
-      "You will see that there is an example that has been done for you.",
-      "On this occasion only, the conversation relating to this will be played first.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Hello, Pembroke Cycling Holidays, Bob speaking."],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "Oh, hello. I've seen your advert for people to lead cycle trips. Are you the right person to speak to?",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Yes, I am. Could I have your name please?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["It's Margaret Smith."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "The woman's surname is Smith. So, Smith has been written in the space.",
-      "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
-      "Listen carefully and answer questions 1 to 6.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Hello, Pembroke Cycling Holidays, Bob speaking."],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "Oh, hello. I've seen your advert for people to lead cycle trips. Are you the right person to speak to?",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Yes, I am. Could I have your name please?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["It's Margaret Smith."],
-  },
-  {
-    speaker: "BOB",
-    text: ["Are you looking for a permanent job, Margaret?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      {
-        text: "No, temporary. ",
-        number: 1,
-      },
-      "I've got a permanent job starting in a few months' time. And I want to do something else until then.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["What work do you do?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "This will probably sound crazy.",
-      {
-        text: " I used to be a lawyer, and then I made a complete career change, and I'm going to be a doctor.",
-        number: 2,
-      },
-      " I've just finished my training.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Right, and have you had any experience of leading cycle trips?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      { text: "Yes, I've led several bike tours in Africa.", number: 3 },
-      " The trip to India that I had arranged to lead next month has now been canceled. So when I saw you were advertising for tour leaders, I decided to apply.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "OK. Now we normally have 2 or 3 leaders on a trip, depending on the size of the group. Some tours are for very experienced cyclists, but we've got a tour coming up soon in Spain. Which is proving so popular, we need an additional leader. It's a cycling holiday for families, would that suit you?",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "It certainly would. I enjoy working with children. And I probably need some more experience before I go on a really challenging trip.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "That tour includes several teenagers. Have you worked with that age group before?",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      {
-        text: "Yes, I'm a volunteer worker in a youth club, where I help people to improve their cycling skills.",
-        number: 4,
-      },
-      " Before that, I helped out in a cycling club where I taught beginners.",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "Well, that's great. Now the trip I mentioned is just for a fortnight, but there might be the possibility of leading other tours after that. Would that fit in with your plans?",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "That would be fine. I'll be free for five months.",
-      {
-        text: " My job is due to start on October the second, and I'm available from May the 1st until late September.",
-        number: 5,
-      },
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "Good, now is there anything I need to know about the food you eat? We usually have one or two people in the group who don't eat meat, or have some sort of food allergy. So we're always very careful about that.",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      { text: "Yes, I'm allergic to cheese.", number: 6 },
-      " Would that be a problem?",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["No, as long as we have enough notice, we can deal with that."],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["That's great."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10. Now listen and answer questions 7 to 10.",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      "It sounds really interesting. Would you like me to fill in an application form?",
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["Yes, please. Where should I post it to?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      {
-        text: "Could you send it to 27 Arbuthnot Place - ARBUTHNOT - Place, Dumfries.",
-        number: 7,
-      },
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: ["And what's the postcode please?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: [{ text: "DG74PH.", number: 8 }],
-  },
-  {
-    speaker: "BOB",
-    text: ["Was that P papa or B bravo?"],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["P papa."],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "Got that, if you could return the application form by Friday this week, we can interview you on Tuesday next week, say 2:30 would that be possible for you?",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: [
-      {
-        text: "Yes, it's fine. You're quite a long way from where I live, so I'll drive over on Monday. Should I bring anything to the interview?",
-        number: 9,
-      },
-    ],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "We'll have your application form of course. But we'll need to see any certificates you've got that are relevant in cycling, first aid or whatever.",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["OK."],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "And at the interview, we'd like to find out about your experience of being a tour guide.",
-      {
-        text: "  So, could you prepare a 10 minute talk about that please?",
-        number: 10,
-      },
-      " You don't need slides or any complicated equipment, just some notes.",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["Right. I'll start thinking about that straight away."],
-  },
-  {
-    speaker: "BOB",
-    text: [
-      "Good. Well, we'll look forward to receiving your application form, and we'll contact you to confirm the interview.",
-    ],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["Thanks very much."],
-  },
-  {
-    speaker: "BOB",
-    text: ["Thank you, Margaret. Goodbye."],
-  },
-  {
-    speaker: "MARGARET",
-    text: ["Bye."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "That is the end of section 1. You now have half a minute to check your answers.",
-    ],
-  },
-];
-
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Section 1. You will hear a telephone conversation between a woman who is looking for a job and a man from a company that organizes cycling holidays.",
+        "First, you have some time to look at questions 1 to 6.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Hello, Pembroke Cycling Holidays, Bob speaking."],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "Oh, hello. I've seen your advert for people to lead cycle trips. Are you the right person to speak to?",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Yes, I am. Could I have your name please?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["It's Margaret Smith."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "The woman's surname is Smith. So, Smith has been written in the space.",
+        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 6.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Hello, Pembroke Cycling Holidays, Bob speaking."],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "Oh, hello. I've seen your advert for people to lead cycle trips. Are you the right person to speak to?",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Yes, I am. Could I have your name please?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["It's Margaret Smith."],
+    },
+    {
+      speaker: "BOB",
+      text: ["Are you looking for a permanent job, Margaret?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        {
+          text: "No, temporary. ",
+          number: 1,
+        },
+        "I've got a permanent job starting in a few months' time. And I want to do something else until then.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["What work do you do?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "This will probably sound crazy.",
+        {
+          text: " I used to be a lawyer, and then I made a complete career change, and I'm going to be a doctor.",
+          number: 2,
+        },
+        " I've just finished my training.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Right, and have you had any experience of leading cycle trips?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        { text: "Yes, I've led several bike tours in Africa.", number: 3 },
+        " The trip to India that I had arranged to lead next month has now been canceled. So when I saw you were advertising for tour leaders, I decided to apply.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "OK. Now we normally have 2 or 3 leaders on a trip, depending on the size of the group. Some tours are for very experienced cyclists, but we've got a tour coming up soon in Spain. Which is proving so popular, we need an additional leader. It's a cycling holiday for families, would that suit you?",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "It certainly would. I enjoy working with children. And I probably need some more experience before I go on a really challenging trip.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "That tour includes several teenagers. Have you worked with that age group before?",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        {
+          text: "Yes, I'm a volunteer worker in a youth club, where I help people to improve their cycling skills.",
+          number: 4,
+        },
+        " Before that, I helped out in a cycling club where I taught beginners.",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "Well, that's great. Now the trip I mentioned is just for a fortnight, but there might be the possibility of leading other tours after that. Would that fit in with your plans?",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "That would be fine. I'll be free for five months.",
+        {
+          text: " My job is due to start on October the second, and I'm available from May the 1st until late September.",
+          number: 5,
+        },
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "Good, now is there anything I need to know about the food you eat? We usually have one or two people in the group who don't eat meat, or have some sort of food allergy. So we're always very careful about that.",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        { text: "Yes, I'm allergic to cheese.", number: 6 },
+        " Would that be a problem?",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["No, as long as we have enough notice, we can deal with that."],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["That's great."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10. Now listen and answer questions 7 to 10.",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        "It sounds really interesting. Would you like me to fill in an application form?",
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["Yes, please. Where should I post it to?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        {
+          text: "Could you send it to 27 Arbuthnot Place - ARBUTHNOT - Place, Dumfries.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: ["And what's the postcode please?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: [{ text: "DG74PH.", number: 8 }],
+    },
+    {
+      speaker: "BOB",
+      text: ["Was that P papa or B bravo?"],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["P papa."],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "Got that, if you could return the application form by Friday this week, we can interview you on Tuesday next week, say 2:30 would that be possible for you?",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: [
+        {
+          text: "Yes, it's fine. You're quite a long way from where I live, so I'll drive over on Monday. Should I bring anything to the interview?",
+          number: 9,
+        },
+      ],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "We'll have your application form of course. But we'll need to see any certificates you've got that are relevant in cycling, first aid or whatever.",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["OK."],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "And at the interview, we'd like to find out about your experience of being a tour guide.",
+        {
+          text: "  So, could you prepare a 10 minute talk about that please?",
+          number: 10,
+        },
+        " You don't need slides or any complicated equipment, just some notes.",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["Right. I'll start thinking about that straight away."],
+    },
+    {
+      speaker: "BOB",
+      text: [
+        "Good. Well, we'll look forward to receiving your application form, and we'll contact you to confirm the interview.",
+      ],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["Thanks very much."],
+    },
+    {
+      speaker: "BOB",
+      text: ["Thank you, Margaret. Goodbye."],
+    },
+    {
+      speaker: "MARGARET",
+      text: ["Bye."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 1. You now have half a minute to check your answers.",
+      ],
+    },
+  ];
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -451,20 +451,18 @@ const lines = [
 
   //  Marks show
 
-const correctAnswers = {
-  1: "job",
-  2: "doctor",
-  3: "India",
-  4: "youth",
-  5: "May",
-  6: "cheese",
-  7: "27 Arbuthnot",
-  8: "DG74PH",
-  9: "Tuesday",
-  10: "10-minute talk",
-};
-
-
+  const correctAnswers = {
+    1: "job",
+    2: "doctor",
+    3: "India",
+    4: "youth",
+    5: "May",
+    6: "cheese",
+    7: "27 Arbuthnot",
+    8: "DG74PH",
+    9: "Tuesday",
+    10: "10-minute talk",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -965,7 +963,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Listening1Pagination2019></Listening1Pagination2019> */}
+      <Listening4Pagination2017></Listening4Pagination2017>
     </div>
   );
 };

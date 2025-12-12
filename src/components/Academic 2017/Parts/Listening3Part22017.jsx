@@ -28,131 +28,164 @@ const Listening3Part22017 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear a woman giving a presentation about a holiday on an island in Britain that her company organizes.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Section 2. You will hear part of a training session for new employees at a large travel company.",
+        "First, you have some time to look at questions 11 to 17.",
+        "Now listen carefully and answer questions 11 to 17.",
       ],
     },
     {
-      speaker: "ERICA MATTHEWS",
+      speaker: "SPEAKER",
       text: [
-        "Good morning. My name's Erica Matthews, and I'm the owner of Matthews Island Holidays, a company set up by my parents.",
-        "Thank you for coming to this presentation, in which I hope to interest you in what we have to offer.",
-        "We're a small family-run company, and we believe in the importance of the personal touch.",
-        "So we don't aim to compete with other companies on the number of customers.",
-        {
-          text: "What we do is build on our many years' experience, more than almost any other rail holiday company, ",
-          number: 11,
-        },
-        "to ensure we provide perfect holidays in a small number of destinations, which we've got to know extremely well.",
-        "I'll start with our six-day Isle of Man holiday.",
-        "This is a fascinating island in the Irish Sea, with Wales to the south, England to the east, Scotland to the north, and Northern Ireland to the west.",
+        "In this session in your training day, we're going to look at some of the more specialized holidays we offer at BC Travel.",
+        "Now, the travel business is very competitive and it's important to be aware of how the market's changing and developing.",
 
         {
-          text: "Our holiday starts in Heysham, where your tour manager will meet you.",
+          text: "In terms of age groups, the over 65s are an important market, and one that's increasing steadily year on year.",
           number: 12,
         },
-        "Then you'll travel by ferry to the Isle of Man.",
-        "Some people prefer to fly from Luton instead.",
-        "And another popular option is to go by train to Liverpool and take a ferry from there.",
-        "You have five nights in the hotel, and the price covers five breakfasts and dinners.",
-        {
-          text: "And lunch on the three days when there are organized trips.",
-          number: 13,
-        },
-        "Day 4 is free, and most people have lunch in a cafe or restaurant in Douglas.",
-        "The price of the holiday includes the ferry to the Isle of Man, all travel on the island, the hotel, and the meals I've mentioned.",
-        "Incidentally, we try to make booking our holidays as simple and fair as possible.",
-        "So unlike with many companies, the price is the same whether you book 6 months in advance or at the last minute, and there's no supplement for single rooms in hotels.",
-        {
-          text: " If you make a booking, then need to change the start date, you're welcome to change to an alternative date or a different tour for a small administrative fee.",
-          number: 14,
-        },
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
-      ],
-    },
-    {
-      speaker: "ERICA MATTHEWS",
-      text: [
-        "OK, so what does the holiday consist of?",
-        "Well, on day one, you'll arrive in time for a short introduction by your tour manager, followed by dinner in the hotel.",
-        {
-          text: "The dining room looks out at the river, close to where it flows into the harbor, and there's usually plenty of activity going on.",
-          number: 15,
-        },
-        "On day two, you'll take the coach to the small town of Peel, on the way calling in at the Tynwald Exhibition.",
-        "The Isle of Man isn't part of the United Kingdom, and it has its own parliament called Tynwald.",
-        "It's claimed that this is the world's oldest parliament that's still functioning, and that it dates back to 979.",
-        {
-          text: "However, the earliest surviving reference to it is from 1422, so perhaps it isn't quite as old as it claims.",
-          number: 16,
-        },
-        "Day three, we have a trip to the mountain Snaefell.",
-        "This begins with a leisurely ride along the promenade in Douglas in a horse-drawn tram.",
-        "Then you board an electric train, which takes you to the fishing village of Laxey.",
-        {
-          text: "From there, it's an eight-kilometer ride in the Snaefell Mountain Railway to the top.",
-          number: 17,
-        },
-        "Lunch will be in the cafe, giving you spectacular views of the island.",
-        {
-          text: "Day 4 is free for you to explore, using the pass which we'll give you.",
-          number: 18,
-        },
-        "So you won't have to pay for travel on local transport, or for entrance to the island's heritage sites.",
-        "Or you might just want to take it easy in Douglas, and perhaps do a little light shopping.",
+        "The fewest holidays are taken by the 31 to 42 year olds. And that figure shows no sign of rising.",
+        "The biggest market at present is still the youngest group, the 16 to 30s, but this group's also seen the biggest drop over the last few years.",
 
         {
-          text: "The last full day, day 5, is for some people the highlight of the holiday, with a ride on the steam railway from Douglas to Port Erin.",
-          number: 19,
+          text: "Whereas there's a noticeable growth in the number of holidays taken by the 55 to 64 year olds.",
+          number: 11,
         },
-        "After some time to explore, a coach will take you to the Headland that overlooks the Calf of Man, a small island just off the coast.",
-        "From there, you continue to Castletown,",
+        "As far as the 43 to 54 year olds are concerned, bookings there are steady, but we haven't seen the increase we expected.",
+        "One trend we're noticing with nearly all age groups is the growing popularity of holidays in which clients do some kind of specialized activity.",
+        "I'm not talking here about adventure holidays where clients take part in high risk activities like white water rafting, just for the thrill of it.",
+        "Activity holidays usually involve rather less high-risk sports or things like art and music.",
+
         {
-          text: " which used to be the capital of the Isle of Man, and its mediaeval castle.",
-          number: 20,
+          text: "They're not necessarily cheaper than ordinary holidays, often the opposite in fact, but they do often take place outside the main tourist centers, which gives an opportunity for clients to find out more about the local people and customs.",
+          number: 14,
         },
-        "And on day 6, it's back to the ferry, or the airport, if you flew to the island.",
-        "And time to go home.",
-        "Now, I'd like to tell you a bit more.",
+        "And many say this is one of the most positive features of these holidays.",
+        "Of course, they offer the chance to develop a new skill or talent.",
+        {
+          text: "But clients often say that more than this, it's the chance to create lasting relationships with other like-minded people that's the main draw.",
+          number: 13,
+        },
+        "Let me give you some examples of BC Travel activity holidays.",
+        "Our painting holidays take place in four different centres in France and Italy.",
+        "They're very popular with clients of all abilities from beginners onwards.",
+
+        {
+          text: "We've got an excellent team of artists to lead the classes; some have been with us from the start, and five additional ones will be joining us this year so that we can offer a greater number of classes in each centre.",
+          number: 15,
+        },
+
+        {
+          text: "As far as cooking holidays are concerned, many agents offer holidays where clients cook recipes related to one country, but we focus on dishes from many different ones.",
+          number: 16,
+        },
+        "Apart from that, you'll find the usual emphasis on good quality organic ingredients, and there are generally some meat-free recipes included.",
+        "Photography holidays take place in a wide range of countries from Iceland to Vietnam, with opportunities to see stunning scenery.",
+
+        {
+          text: "Groups are small, no more than eight, so clients can have one-on-one tuition, and excursions are arranged with fully trained guides.",
+          number: 17,
+        },
+        "At the end of each holiday, an exhibition is held of the photographs taken, so clients can receive valuable feedback.",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of part 2.",
-        "You now have 30 seconds to check your answers to part 2.",
+        "Before you hear the rest of the training session, you have some time to look at questions 18 to 20.",
+        "Now listen and answer questions 18 to 20.",
+      ],
+    },
+    {
+      speaker: "SPEAKER",
+      text: [
+        "Finally, let me tell you about our fitness holidays.",
+        "In Ireland and Italy, we run one-week general fitness classes for all ages and levels.",
+        "Clients start the course with a consultation with a trainer, and together they draw up an individual program.",
+
+        {
+          text: "As well as improving general fitness, clients find they end up losing much of the stress built up in their daily lives.",
+          number: 18,
+        },
+
+        {
+          text: "In Greece, we have a two-week holiday for clients who want to do something about their weight.",
+          number: 19,
+        },
+        "This includes all the usual features such as a personalised diet program, but the most popular feature is that the exercise classes are all held on the beach.",
+        "Finally, we offer several holidays in Morocco.",
+        "One very popular one is the mountain biking holiday.",
+        "Bikes are provided and there are routes for all levels.",
+        {
+          text: "We offer one tailored for families, which is particularly popular.",
+          number: 20,
+        },
+        "OK, so that's about all the time I have today.",
+        "Thank you very much.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 2.",
+        "You now have half a minute to check your answers.",
       ],
     },
   ];
+
   // different option
   const questions = [
-    "According to the speaker, the company",
-    "Where can customers meet the tour manager before travelling to the Isle of Man?",
-    "arranges holidays to more destinations than its competitors.",
-    "has more customers than its competitors.",
+    "Which age group is taking an increasing number of holidays with BC Travel?",
+    "Which age group is also increasing steadily year on year?",
+    "What is one main reason for the popularity of activity holidays?",
+    "What do clients say they enjoy most about activity holidays?",
+    "How does BC Travel plan to expand the painting holidays?",
+    "Why are BC Travel's cooking holidays unusual?",
+    "What does the speaker say about the photography holidays?",
   ];
 
   const options = [
+    // Question 11
+    ["A. 16–30 years", "B. 55–64 years", "C. 31–42 years"],
+
+    // Question 12
+    ["A. Over 65 years", "B. 43–54 years", "C. 16–30 years"],
+
+    // Question 13
     [
-      "A. has been in business for longer than most of its competitors.",
-      " B. arranges holidays to more destinations than its competitors.",
-      " C. has more customers than its competitors.",
+      "A. Clients make new friends",
+      "B. Clients enjoy high-risk activities",
+      "C. Clients find them cheap",
     ],
-    ["A. Liverpool", "B. Heysham", "C. Luton"],
-    ["A. three", "B. four", "C. five"],
+
+    // Question 14
     [
-      "A. guaranteeing themselves a larger room.",
-      "B. booking at short notice",
-      "C. transferring to another date.",
+      "A. Learning about a new culture",
+      "B. Learning a new skill",
+      "C. Building lasting relationships with like-minded people",
+    ],
+
+    // Question 15
+    [
+      "A. by adding to the number of locations",
+      "B. by increasing the range of levels",
+      "C. by employing more teachers",
+    ],
+
+    // Question 16
+    [
+      "A. They only use organic foods",
+      "B. They have an international focus",
+      "C. They mainly involve vegetarian dishes",
+    ],
+
+    // Question 17
+    [
+      "A. Clients receive individual tuition",
+      "B. The tutors are also trained guides",
+      "C. Advice is given on selling photographs",
     ],
   ];
+
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
@@ -332,19 +365,19 @@ const Listening3Part22017 = () => {
   }, []);
 
   //  Marks show
+const correctAnswers = {
+  11: "B. 55–64 years",
+  12: "A. Over 65 years",
+  13: "A. Clients make new friends",
+  14: "C. Building lasting relationships with like-minded people",
+  15: "C. by employing more teachers",
+  16: "B. They have an international focus",
+  17: "A. Clients receive individual tuition",
+  18: "stress",
+  19: "diet",
+  20: "families",
+};
 
-  const correctAnswers = {
-    11: "A. has been in business for longer than most of its competitors.",
-    12: "B. Heysham",
-    13: "B. three",
-    14: "C. transferring to another date.",
-    15: "harbour",
-    16: "1422",
-    17: "top",
-    18: "pass",
-    19: "steam",
-    20: "capital",
-  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -430,7 +463,7 @@ const Listening3Part22017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Matthews Island")}
+                {renderText("BC travel fitness holidays")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -508,15 +541,12 @@ const Listening3Part22017 = () => {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 11-14")}
+              {renderText("Questions 11-17")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("   Matthews Island Holidays")}
-            </h1>
 
             {questions.map((q, qIndex) => {
               const answerKey = qIndex + 11;
@@ -563,7 +593,7 @@ const Listening3Part22017 = () => {
           {/* ---------- Table Section ---------- */}
           <div className="mt-5">
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 15-20")}
+              {renderText("Questions 18-20")}
             </h2>
             <h3 className="text-lg font-semibold mb-5">
               {renderText("Complete the notes below.")} <br /> <br />
@@ -571,121 +601,22 @@ const Listening3Part22017 = () => {
               <span className="font-bold">{renderText("ONLY ONE WORD")}</span>{" "}
               {renderText("for each answer.")}
             </h3>
-
-            <table className="border-collapse border border-gray-400 w-full text-center">
-              <thead>
-                <tr>
-                  <th
-                    colSpan="3"
-                    className="border border-gray-400 text-lg font-bold p-2"
-                  >
-                    {renderText("Timetable for Isle of Man holiday")}
-                  </th>
-                </tr>
-                <tr>
-                  <th className="border p-2"> {renderText("")} </th>
-                  <th className="border p-2">{renderText("Activity")}</th>
-                  <th className="border p-2">{renderText("Notes")}</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {/* Day 1 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 1</td>
-                  <td className="border border-gray-400 text-lg p-2">Arrive</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div>Introduction by manager</div>
-                    <div className="flex items-center mt-1">
-                      <span>Hotel dining room has view of the</span>
-                      <button
-                        onClick={() => toggleButton(15)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[15]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        15
-                      </button>
-                      <input
-                        value={userAnswers[15] || ""}
-                        onChange={(e) => handleInputChange(15, e.target.value)}
-                        className="mx-1 w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                    </div>
-                  </td>
-                </tr>
-
-                {/* Day 2 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 2</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Tynwald Exhibition and Peel
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <span>Tynwald may have been founded in </span>
-                    <button
-                      onClick={() => toggleButton(16)}
-                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                        activeButtons[16]
-                          ? "bg-yellow-400 border-yellow-500"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      16
-                    </button>
-                    <input
-                      value={userAnswers[16] || ""}
-                      onChange={(e) => handleInputChange(16, e.target.value)}
-                      className="mx-1 w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                      type="text"
-                    />
-                    <span> not 979.</span>
-                  </td>
-                </tr>
-
-                {/* Day 3 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 3</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Trip to Snaefell
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2 leading-relaxed">
-                    <div>Travel along promenade in a tram;</div>
-                    <div>train to Laxey;</div>
-                    <div className="flex items-center">
-                      <span>train to the </span>
-                      <button
-                        onClick={() => toggleButton(17)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[17]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        17
-                      </button>
-                      <input
-                        value={userAnswers[17] || ""}
-                        onChange={(e) => handleInputChange(17, e.target.value)}
-                        className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span> of Snaefell</span>
-                    </div>
-                  </td>
-                </tr>
-
-                {/* Day 4 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 4</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Free day
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <span>Company provides a </span>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              {renderText("  Fitness Holidays")}
+            </h1>
+            <tbody>
+              {/* Ireland & Italy */}
+              <tr>
+                <td className="border border-gray-400 text-lg p-2">
+                  Ireland and Italy
+                </td>
+                <td className="border border-gray-400 text-lg p-2">
+                  general fitness
+                </td>
+                <td className="border border-gray-400 text-lg p-2">
+                  <div>personally designed programme</div>
+                  <div>also reduces</div>
+                  <div className="flex items-center mt-1">
                     <button
                       onClick={() => toggleButton(18)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -699,18 +630,21 @@ const Listening3Part22017 = () => {
                     <input
                       value={userAnswers[18] || ""}
                       onChange={(e) => handleInputChange(18, e.target.value)}
-                      className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
+                      className="w-[120px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
-                    <span> for local transport and heritage sites.</span>
-                  </td>
-                </tr>
+                  </div>
+                </td>
+              </tr>
 
-                {/* Day 5 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 5</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Take the{" "}
+              {/* Greece */}
+              <tr>
+                <td className="border border-gray-400 text-lg p-2">Greece</td>
+                <td className="border border-gray-400 text-lg p-2">
+                  weight control
+                </td>
+                <td className="border border-gray-400 text-lg p-2">
+                  <div className="flex items-center">
                     <button
                       onClick={() => toggleButton(19)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -724,46 +658,44 @@ const Listening3Part22017 = () => {
                     <input
                       value={userAnswers[19] || ""}
                       onChange={(e) => handleInputChange(19, e.target.value)}
-                      className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
+                      className="w-[120px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />
-                    railway train from Douglas to Port Erin
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div>Free time, then coach to Castletown – former </div>
+                    <span className="ml-2">includes exercise on the beach</span>
+                  </div>
+                </td>
+              </tr>
 
-                    <div className="flex items-center mt-1">
-                      <button
-                        onClick={() => toggleButton(20)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                          activeButtons[20]
-                            ? "bg-yellow-400 border-yellow-500"
-                            : "bg-gray-200 border-gray-400"
-                        }`}
-                      >
-                        20
-                      </button>
-                      <input
-                        value={userAnswers[20] || ""}
-                        onChange={(e) => handleInputChange(20, e.target.value)}
-                        className="w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
-                        type="text"
-                      />
-                      <span> has old castle.</span>
-                    </div>
-                  </td>
-                </tr>
-
-                {/* Day 6 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">Day 6</td>
-                  <td className="border border-gray-400 text-lg p-2">Leave</td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    Leave the island by ferry or plane
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              {/* Morocco */}
+              <tr>
+                <td className="border border-gray-400 text-lg p-2">Morocco</td>
+                <td className="border border-gray-400 text-lg p-2">
+                  mountain biking
+                </td>
+                <td className="border border-gray-400 text-lg p-2">
+                  <div>wide variety of levels</div>
+                  <div className="flex items-center mt-1">
+                    <span>one holiday that is specially designed for</span>
+                    <button
+                      onClick={() => toggleButton(20)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        activeButtons[20]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      20
+                    </button>
+                    <input
+                      value={userAnswers[20] || ""}
+                      onChange={(e) => handleInputChange(20, e.target.value)}
+                      className="w-[120px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
+                      type="text"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </div>
 
           {/* ---------- Marks display ---------- */}

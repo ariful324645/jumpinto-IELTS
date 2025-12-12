@@ -6,9 +6,9 @@ import { GrClearOption } from "react-icons/gr";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
-import Listening3Pagination2017 from "../Pagination2017/Listening3Pagination2017";
+import Listening4Pagination2017 from "../Pagination2017/Listening4Pagination2017";
 
-const Listening3Part32018 = () => {
+const Listening4Part32017 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,249 +24,235 @@ const Listening3Part32018 = () => {
 
   // result marks display
   const [showResult, setShowResult] = useState(false);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two tourism students called Natalie and Dave talking about the tourism case study they are doing.",
-        "You have some time to look at questions 21 to 26.",
-        "Now listen carefully and answer questions 21 to 26.",
+        "Section 3. You will hear two students, Katie and Joe discussing a presentation in their Film Studies course.",
+        "First, you have some time to look at questions 21 to 24.",
+        "Listen carefully, and answer questions 21 to 24.",
       ],
     },
 
     {
-      speaker: "NATALIE",
+      speaker: "KATIE",
       text: [
-        "Dave, I'm worried about our case study. I've done a bit of reading, but I'm not sure what's involved in actually writing a case study. I missed the lecture where Dr Baker talked us through it.",
+        "Joe, you know I'm giving a presentation in our film studies class next week.",
       ],
     },
 
     {
-      speaker: "DAVE",
+      speaker: "JOE",
+      text: ["Yes."],
+    },
+
+    {
+      speaker: "KATIE",
       text: [
-        "OK, well, it's quite straightforward. We've got our focus. That's tourism at the Horton Castle site. And you said you had done some reading about it?",
+        "Well, could we discuss it? I could do with getting someone else's opinion.",
       ],
     },
 
     {
-      speaker: "NATALIE",
-      text: ["Yes, I found some articles and made notes of the main points."],
+      speaker: "JOE",
+      text: ["Of course, Katie. What are you going to talk about?"],
     },
 
     {
-      speaker: "DAVE",
+      speaker: "KATIE",
       text: [
+        "It's about film adaptations of Shakespeare's plays. I've got very interested in all the different approaches that film directors take.",
+
         {
-          text: "Did you remember to keep a record of where you got the information from?",
+          text: "So I thought I'd start with Giannetti, who's a professor of film and literature, and in one of his books, he came up with a straightforward classification of film adaptations based on how faithful they are to the original plays and novels.",
           number: 21,
         },
       ],
     },
 
     {
-      speaker: "NATALIE",
-      text: ["Sure, I know what a pain it is when you forget that."],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "OK, so we can compare what we've read. Then we have to decide on a particular problem or need at our site, and then think about who we're going to interview to get more information.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: [
-        "OK, so who'd that be?",
-        {
-          text: " The people who work there, and presumably some of the tourists too.",
-          number: 22,
-        },
-      ],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "Yes, both those groups. So we'll have to go to the site to do that, I suppose. But we might also do some of our interviewing away from the site. We could even contact some people here in the city.",
-        {
-          text: " Like administrators involved in overseeing tourism.",
-          number: 23,
-        },
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: [
-        "OK, so we'll need to think about our interview questions and fix times and places for the meetings. It's all going to take a lot of time.",
-      ],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "Hmm. And if we can, we should ask our interviewees if they can bring along some numerical data that we can add to support our findings.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: ["And photographs?"],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        {
-          text: "I think we have plenty of those already, but Dr Baker also said we have to establish with our interviewees whether we can identify them in our case study.",
-          number: 24,
-        },
-        "Or whether they want to be anonymous.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: [
-        "Oh, I wouldn't have thought of that. OK, once we've got all this information, I suppose we have to analyze it.",
-      ],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "Yes, put it all together, and choose what's relevant to the problem we're focusing on.",
-        {
-          text: " And analyze that carefully to find out if we can identify any trends or regularities there.",
-          number: 25,
-        },
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: ["OK, and then once we've analyzed that, what next?"],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "Well, then we need to think about what we do with the data we've selected to make it as clear as possible to our readers. Things like graphs or tables or charts.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
+      speaker: "JOE",
       text: ["Right."],
     },
 
     {
-      speaker: "DAVE",
+      speaker: "KATIE",
       text: [
-        "Then the case study itself is mostly quite standard. We begin by presenting the problem, and giving some background, then go through the main sections. But the thing that surprised me is that in a normal report, we'd end with some suggestions to deal with the problem or need we identified. ",
+        "I've already made some notes on that, so I just need to sort those out before the presentation.",
         {
-          text: "But in a case study, we end up with a question or a series of questions to our readers, and they decide what ought to be done.",
+          text: " I thought that next, I'd ask the class to come up with the worst examples of Shakespeare adaptations that they've seen.",
+          number: 22,
+        },
+        "And to say why, that should be more fun than having their favorite versions.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: ["Yes, I can certainly think of a couple."],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "Hmm. Right, next, I want to talk about Rachel Malchow. I came across something on the internet about her work on film adaptations. And I was thinking of showing some film clips to illustrate her ideas.",
+        "Will you have enough time though, both to prepare and during the presentation? After all, I doubt if you'll be able to find all the clips you want.",
+
+        "Hmm. Perhaps you're right.  ",
+        { text: "OK, well, I'd better do some slides instead.", number: 23 },
+        "Saying how various films relate to what she says, that should encourage discussion.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: ["Hmm."],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "Next, I want to say something about how plays may be chosen for adaptation.",
+        {
+          text: " Because they're concerned with issues of the time when the film is made.",
+          number: 24,
+        },
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: ["You mean things like patriotism, or the role of governments?"],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "Exactly. It's quite tricky, but I've got a few ideas I'd like to discuss.",
+      ],
+    },
+
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
+        "Listen and answer questions 25 to 30.",
+      ],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "And finally, I want to talk about a few adaptations that I think illustrate a range of approaches, and make some comments on them. Do you know the Japanese film Ran?",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "I haven't seen it. It was based on Shakespeare's King Lear, wasn't it?",
+      ],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "That's right. ",
+        {
+          text: "It was a very loose adaptation, using the same situation and story, but moving it to 16th century Japan.Instead of 16th century Britain",
+          number: 25,
+        },
+        "So, for example, the king's daughters become sons, because in Japanese culture at that time women couldn't succeed to the throne.",
+      ],
+    },
+
+    {
+      speaker: "JOE",
+      text: [
+        "OK, I hope you're going to talk about the 1993 film of Much Ado About Nothing. I think that's one of the best Shakespeare films. It really brings the play to life, doesn't it?",
+      ],
+    },
+
+    {
+      speaker: "KATIE",
+      text: [
+        "Yes, I agree. ",
+        {
+          text: "And I think filming it in Italy, where the play is set, makes you see what life was like at the time of the play.",
           number: 26,
         },
       ],
     },
 
     {
-      speaker: "NATALIE",
-      text: ["Oh, I hadn't realized that."],
+      speaker: "JOE",
+      text: ["Absolutely, right, what's next?"],
     },
 
     {
-      speaker: "ANNOUNCER",
+      speaker: "KATIE",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
-        "Now listen and answer questions 27 to 30.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: [
-        "So basically, the problem we're addressing in our case study of the Horton Castle site is why so few tourists are visiting it. And we'll find out more from our interviews, but I did find one report on the internet that suggested that one reason might be because as far as transport goes, access is difficult.",
-      ],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "I read that too, but that report was actually written 10 years ago, when the road there was really bad.",
         {
-          text: " But that's been improved now, and I think there's plenty of fascinating stuff there for a really good day out, but you'd never realize it from the Castle website.",
+          text: "Uh. Next, I thought Romeo and Juliet, the 1996 film, which moves the action into the present day.",
           number: 27,
         },
       ],
     },
 
     {
-      speaker: "NATALIE",
-      text: ["Yes, it's really dry and boring."],
-    },
-
-    {
-      speaker: "DAVE",
+      speaker: "JOE",
       text: [
-        "I read somewhere a suggestion that what the castle needs is a visitor center. So we could have a look for some information about that on the internet. What would we need to know?",
+        "Yes. It worked really well, I thought, changing the two feuding families in the original to two competing business empires, even though they're speaking in the English of the original play.",
+        "You'd expect it would sound really bizarre, but I found I soon got used to it.",
       ],
     },
 
     {
-      speaker: "NATALIE",
+      speaker: "KATIE",
       text: [
-        "Well, who'd use it for a start? It'd be good to know what categories the visitors fall into too, like school parties or retired people. But I think we'd have to talk to staff to get that information.",
-      ],
-    },
-
-    {
-      speaker: "DAVE",
-      text: [
-        "OK, and as we're thinking of suggesting a visitor center, we'd also have to look at potential problems. I mean obviously, it wouldn't be cheap to set up.",
-      ],
-    },
-
-    {
-      speaker: "NATALIE",
-      text: [
-        "No, but it could be a really good investment.",
+        "Me too. Then I thought I'd include a real Hollywood film. One that's intended to appeal to a mass commercial audience.",
+        "Yes, but I've picked the 1996 film of Hamlet.",
         {
-          text: " And as it's on a historical site, it'd need to get special planning permission, I expect.",
+          text: " It included every line of the text, but it's more like a typical action hero movie.",
           number: 28,
         },
+        "There are loads of special effects, but no unifying interpretation of the play.",
       ],
     },
 
     {
-      speaker: "DAVE",
+      speaker: "JOE",
+      text: ["All show and no substance."],
+    },
+
+    {
+      speaker: "KATIE",
       text: [
-        "Right. Especially as the only possible place for it would be at the entrance, and that's right in front of the castle. Hmm. But it could be a good thing for the town of Horton, at present, it's a bit of a ghost town. ",
+        "Exactly. Then there's Prospero's Books, based on The Tempest. That was really innovative from a stylistic point of view.",
+
         {
-          text: "Once they've left school and got any skills or qualifications, the young people all get out as fast as they can to get jobs in the city, and the only people left are children and those who've retired.",
+          text: "Didn't it include dance and singing and animation as well as live actors?",
           number: 29,
         },
+        "Yes, it did. I also want to mention Looking for Richard. Did you ever see it?",
+        "No, but I've read about it. ",
       ],
     },
 
     {
-      speaker: "NATALIE",
+      speaker: "KATIE",
       text: [
-        "Right. Something else we could investigate would be the potential damage that tourists might cause to the castle site. I mean their environmental impact. At present the tourists can just wander around wherever they want.",
         {
-          text: " But if numbers increase, there might have to be some restrictions, like sticking to marked ways, and there'd need to be guides and wardens around to make sure these are enforced.",
+          text: "It was a blend of a documentary with a few scenes from Richard III, wasn't it?",
           number: 30,
         },
+        "That's right. It's more a way of looking into how people nowadays connect with the playwright. The play is really just the starting point, and that'll be where I finish.",
       ],
     },
 
     {
-      speaker: "DAVE",
-      text: ["Yes, we could look at that too. OK, well we certainly..."],
+      speaker: "JOE",
+      text: ["Well, it sounds as though it'll be very interesting."],
     },
 
     {
@@ -278,53 +264,7 @@ const Listening3Part32018 = () => {
     },
   ];
 
-  // different option
-  const questions = [
-    "Natalie and Dave agree one reason why so few people visit Horton Castle is that",
-    "Natalie and Dave agree that the greatest problem with a visitor centre could be",
-    "What does Dave say about conditions in the town of Horton?",
-    "According to Natalie, one way to prevent damage to the castle site would be to",
-  ];
-
-  const options = [
-    [
-      "A. the publicity is poor.",
-      "B. it is difficult to get to.",
-      "C. there is little there of interest.",
-    ],
-    [
-      "A. covering the investment costs.",
-      "B. finding a big enough space for it.",
-      "C. dealing with planning restrictions.",
-    ],
-    [
-      "A. There is a lot of unemployment.",
-      "B. There are few people of working age.",
-      "C. There are opportunities for skilled workers.",
-    ],
-    [
-      "A. insist visitors have a guide.",
-      "B. make visitors keep to the paths.",
-      "C. limit visitor numbers.",
-    ],
-  ];
-
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-  const handleOptionClick = (qIndex, option) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = option;
-    setSelectedOptions(updatedOptions);
-
-    // Update userAnswers for score calculation
-    setUserAnswers((prev) => {
-      const answerKey = qIndex + 27;
-      const updated = { ...prev, [answerKey]: option };
-      calculateScore(updated);
-      return updated;
-    });
-  };
+  // Updated questions and options
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -432,12 +372,12 @@ const Listening3Part32018 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "DAVE") {
+      if (speaker === "JOE") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "NATALIE") {
+      if (speaker === "KATIE") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -491,22 +431,22 @@ const Listening3Part32018 = () => {
   }, []);
 
   //  Marks show
+const correctAnswers = {
+  // Questions 21–24
+  21: "classification",
+  22: "worst",
+  23: "slides",
+  24: "issues",
 
-  const correctAnswers = {
-    // Questions 21–26 – Tourism Case Study
-    21: "C", // Locate and read relevant articles – sources
-    22: "E", // Identify a problem or need – employees
-    23: "H", // Select interviewees – officials
-    24: "D", // Check whether interviewees can be used – questions
-    25: "A", // Select relevant information and identify – patterns
-    26: "F", // Do not end with – solutions
+  // Questions 25–30
+  25: "F",
+  26: "A",
+  27: "E",
+  28: "C",
+  29: "G",
+  30: "B",
+};
 
-    // Questions 27–30 – Horton Castle Site
-    27: "B. it is difficult to get to.", //
-    28: "A. covering the investment costs.", //
-    29: "B. there are few people of working age.", //
-    30: "B. make visitors keep to the paths.", //
-  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -532,7 +472,7 @@ const Listening3Part32018 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening3Part22018", newScore);
+    localStorage.setItem("/listening2Part22019", newScore);
   };
 
   const toggleButton = (id) => {
@@ -544,12 +484,12 @@ const Listening3Part32018 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening3Part22018");
+    localStorage.removeItem("/listening2Part22019");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening3Part22018");
+    const savedScore = localStorage.getItem("/listening2Part22019");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -592,7 +532,7 @@ const Listening3Part32018 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("The Horton Castle site")}
+                {renderText("Film adaptations on Shakespeare's plays")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -667,189 +607,211 @@ const Listening3Part32018 = () => {
               )}
             </div>
           </div>
+          {/* 1st section */}
 
-          {/* 2st section */}
+          {/* question dynamic */}
+          <div className="space-y-6 leading-relaxed p-4">
+            <div className="mt-5">
+              <h2 className="text-lg font-bold mb-3">
+                {renderText("Questions 21-24")}
+              </h2>
+              <h3 className="text-lg font-semibold mb-5">
+                {renderText("Complete the notes below.")} <br /> <br />
+                {renderText("Write")}{" "}
+                <span className="font-bold">{renderText("ONLY ONE WORD")}</span>{" "}
+                {renderText("for each answer.")}
+              </h3>
+              <h1 className="text-2xl font-bold text-center mb-5">
+                {renderText(
+                  "   Presentation on film adaptations of Shakespeare's plays"
+                )}
+              </h1>
+              <tbody>
+                {/* Task 21 */}
+                <tr>
+                  <td className="border border-gray-400 text-lg p-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {renderText(
+                        " Introduce Giannetti's book containing a of adaptations"
+                      )}
+                      <button
+                        onClick={() => toggleButton(21)}
+                        className={`h-8 w-8 rounded-full font-semibold border ${
+                          activeButtons[21]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
+                        }`}
+                      >
+                        21
+                      </button>
+                      <input
+                        value={userAnswers[21] || ""}
+                        onChange={(e) => handleInputChange(21, e.target.value)}
+                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
+                        type="text"
+                        placeholder=""
+                      />
+                    </div>
+                  </td>
+                  <td className="border border-gray-400 text-lg p-2">
+                    {renderText("Organise notes")}
+                  </td>
+                </tr>
+
+                {/* Task 22 */}
+                <tr>
+                  <td className="border border-gray-400 text-lg p-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {renderText(" Ask class to suggest the adaptations")}
+                      <button
+                        onClick={() => toggleButton(22)}
+                        className={`h-8 w-8 rounded-full  font-semibold border ${
+                          activeButtons[22]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
+                        }`}
+                      >
+                        22
+                      </button>
+                      <input
+                        value={userAnswers[22] || ""}
+                        onChange={(e) => handleInputChange(22, e.target.value)}
+                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
+                        type="text"
+                        placeholder=""
+                      />
+                    </div>
+                  </td>
+                  <td className="border border-gray-400 text-lg p-2">
+                    {renderText("No further work needed")}
+                  </td>
+                </tr>
+
+                {/* Task 23 */}
+                <tr>
+                  {" "}
+                  <td className="border border-gray-400 text-lg p-2">
+                    {renderText("Present Rachel Malchow's ideas ")}
+                  </td>
+                  <td className="border border-gray-400 text-lg p-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {renderText("  Prepare some")}
+                      <button
+                        onClick={() => toggleButton(23)}
+                        className={`h-8 w-8 rounded-full font-semibold border ${
+                          activeButtons[23]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
+                        }`}
+                      >
+                        23
+                      </button>
+                      <input
+                        value={userAnswers[23] || ""}
+                        onChange={(e) => handleInputChange(23, e.target.value)}
+                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
+                        type="text"
+                        placeholder=""
+                      />
+                    </div>
+                  </td>
+                </tr>
+
+                {/* Task 24 */}
+                <tr>
+                  <td className="border border-gray-400 text-lg p-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {renderText(
+                        "Discuss relationship between adaptations and at the time of making the film"
+                      )}
+                      <button
+                        onClick={() => toggleButton(24)}
+                        className={`h-8 w-8 rounded-full font-semibold border ${
+                          activeButtons[24]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
+                        }`}
+                      >
+                        24
+                      </button>
+                      <input
+                        value={userAnswers[24] || ""}
+                        onChange={(e) => handleInputChange(24, e.target.value)}
+                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
+                        type="text"
+                        placeholder=""
+                      />
+                    </div>
+                  </td>
+                  <td className="border border-gray-400 text-lg p-2">
+                    {renderText("No further work needed")}
+                  </td>
+                </tr>
+              </tbody>
+            </div>
+          </div>
 
           <div>
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 21-26")}
+                {renderText("Questions 25-30")}
               </h2>
 
               <h3 className="text-lg mb-5">
-                {renderText("Level the map below")} <br /> <br />
+                {renderText(
+                  "What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?"
+                )}{" "}
+                <br /> <br />
                 {renderText("Choose the correct letter,  ")}{" "}
-                <span className="font-bold mr-2">{renderText("A-H")}</span>{" "}
-                {renderText("next to Questions 21-26")}
+                <span className="font-bold mr-2">{renderText("A-G")}</span>{" "}
+                {renderText("next to Questions 25-30")}
               </h3>
-              <div className="flex items-center justify-center ">
-                <div className="text-center border-2 border-black p-4 space-y-2">
-                  <ul className="list-disc list-inside text-left">
-                    <li className="text-lg">{renderText("A. patterns")}</li>
-                    <li className="text-lg">{renderText("B. names")}</li>
-                    <li className="text-lg">{renderText("C. sources")}</li>
-                    <li className="text-lg">{renderText("D. questions")}</li>
-                    <li className="text-lg">{renderText("E. employees")}</li>
-                    <li className="text-lg">{renderText("F. solutions")}</li>
-                    <li className="text-lg">{renderText("G. headings")}</li>
-                    <li className="text-lg">{renderText("H. officials")}</li>
+              <div className="flex items-center justify-center border border-black py-4 px-4 w-96 mx-auto">
+                <div className="text-center">
+                  <ul className="space-y-1 text-lg">
+                    <li>
+                      {renderText("A. clearly shows the historical period")}
+                    </li>
+                    <li>{renderText("B. contains only parts of the play")}</li>
+                    <li>
+                      {renderText("C. is too similar to another kind of film")}
+                    </li>
+                    <li>
+                      {renderText(
+                        "D. turned out to be unpopular with audiences"
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "E. presents the play in a different period from the original"
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "F. sets the original in a different country"
+                      )}
+                    </li>
+                    <li>
+                      {renderText("G. incorporates a variety of art forms")}
+                    </li>
                   </ul>
-                </div>
+                </div>{" "}
               </div>
 
               <br />
             </div>
           </div>
 
-          {/* select question */}
+          {/* optional question */}
           <div className="space-y-2">
-            {/* ---------- Step 1 ---------- */}
-            <h1 className="text-lg font-bold">
-              {renderText("STAGES IN DOING A TOURISM CASE STUDY")}
-            </h1>
+            {/* ---------- Question 25 ---------- */}
+            <h1 className="text-lg font-bold">{renderText("Films")}</h1>
 
-            <h2 className="text-md font-semibold">{renderText("RESEARCH")}</h2>
-
-            <p className="text-lg">
-              {renderText(
-                "Locate and read relevant articles, noting key information and also"
-              )}
-            </p>
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("21.")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[21] || ""}
-                  onChange={(e) => handleInputChange(21, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="21">{renderText("21")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Step 2 ---------- */}
-            <p className="text-lg">
-              {renderText("Identify a problem or need")}
-            </p>
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("22.")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[22] || ""}
-                  onChange={(e) => handleInputChange(22, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="22">{renderText("22")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Step 3 ---------- */}
-            <p className="text-lg">
-              {renderText("Select interviewees - these may be site")}
-            </p>
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("23.")}</span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[23] || ""}
-                  onChange={(e) => handleInputChange(23, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="23">{renderText("23")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- Step 4 ---------- */}
-            <p className="text-lg">
-              {renderText(
-                "Prepare and carry out interviews. If possible, collect statistics."
-              )}
-            </p>
-
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("24.")}</span>
-              <span className="text-lg">
-                {renderText(
-                  "Check whether ________ of interviewees can be used"
-                )}
-              </span>
-
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="24">{renderText("24")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>
-            </p>
-
-            {/* ---------- ANALYSIS ---------- */}
-            <h2 className="text-md font-semibold">{renderText("ANALYSIS")}</h2>
-
+            {/* ---------- Question 26 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("25.")}</span>
-              <span className="text-lg">
-                {renderText(
-                  "Select relevant information and try to identify ________"
-                )}
-              </span>
-
+              {renderText("Run")}
               <div className="relative w-40">
                 <select
                   value={userAnswers[25] || ""}
@@ -865,24 +827,16 @@ const Listening3Part32018 = () => {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
-              </div>
+              </div>{" "}
             </p>
-
-            {/* ---------- WRITING ---------- */}
-            <h2 className="text-md font-semibold">
-              {renderText("WRITING THE CASE STUDY")}
-            </h2>
-
+            {/* ---------- Question 26 ---------- */}
             <p className="flex items-center gap-2 flex-wrap">
               <span className="font-bold text-lg">{renderText("26.")}</span>
-              <span className="text-lg">
-                {renderText("Do NOT end with ________")}
-              </span>
-
+              {renderText("Much Ado About Nothing")}
               <div className="relative w-40">
                 <select
                   value={userAnswers[26] || ""}
@@ -898,7 +852,111 @@ const Listening3Part32018 = () => {
                   <option value="F">{renderText("F")}</option>
                   <option value="G">{renderText("G")}</option>
                   <option value="H">{renderText("H")}</option>
-                </select>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>{" "}
+            </p>
+
+            {/* ---------- Question 27 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("27.")}</span>
+              {renderText("Romeo & Juliet")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[27] || ""}
+                  onChange={(e) => handleInputChange(27, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="27">{renderText("27")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 28 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("28.")}</span>
+              {renderText("Hamlet")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[28] || ""}
+                  onChange={(e) => handleInputChange(28, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="28">{renderText("28")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 29 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("29.")}</span>
+              {renderText("Prospero's Books")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[29] || ""}
+                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="29">{renderText("29")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* ---------- Question 30 ---------- */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("30.")}</span>
+              {renderText("Looking for Richard")}
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[30] || ""}
+                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="30">{renderText("30")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="G">{renderText("G")}</option>
+                  <option value="H">{renderText("H")}</option>
+                </select>{" "}
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
@@ -906,61 +964,6 @@ const Listening3Part32018 = () => {
             </p>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 27-30")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
-            </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("  The Horton Castle site")}
-            </h1>
-
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 27;
-
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
-
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
           {/* ---------- Marks display ---------- */}
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
           <div className="mt-10">
@@ -1058,9 +1061,9 @@ const Listening3Part32018 = () => {
           </div>
         </div>
       </div>
-      <Listening3Pagination2017></Listening3Pagination2017>
+      <Listening4Pagination2017></Listening4Pagination2017>
     </div>
   );
 };
 
-export default Listening3Part32018;
+export default Listening4Part32017;
