@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
-import Reading4Pagination2017 from "../Pagination2017/Reading4Pagination2017";
+import Reading1Pagination2017 from "../Pagination2017/Reading1Pagination2017";
 
-const Test4Reading2017 = () => {
+const Reading1Part22017 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +22,11 @@ const Test4Reading2017 = () => {
   };
 
   const questions = [
-    "In 1887, HM Ashley had the fastest bottle-producing machine that existed at the time.",
-    "Michael Owens was hired by a large US company to design a fully-automated bottle manufacturing machine for them.",
-    "Nowadays, most glass is produced by large international manufacturers",
-    "Concern for the environment is leading to an increased demand for glass containers.",
-    "It is more expensive to produce recycled glass than to manufacture new glass.",
+    "The number of people buying dolls has grown over the centuries.",
+    "Sixteenth century European dolls were normally made of wax and porcelain.",
+    "Arranging a stamp collection by the size of the stamps is less common than other methods.",
+    "Someone who collects unusual objects may want others to think he or she is also unusual.",
+    "Collecting gives a feeling that other hobbies are unlikely to inspire.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
@@ -38,7 +38,7 @@ const Test4Reading2017 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 9;
+      const answerKey = qIndex + 22;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -57,7 +57,7 @@ const Test4Reading2017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2018/Test 4/reading", newScore);
+    localStorage.setItem("/2017/Test 1/reading", newScore);
   };
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -137,25 +137,27 @@ const Test4Reading2017 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "obsidian",
-    2: "spears",
-    3: "glazes",
-    4: "impurities",
-    5: "Romans",
-    6: "lead",
-    7: "clouding",
-    8: "Excise Act",
-    9: "TRUE",
-    10: "NOT GIVEN",
-    11: "TRUE",
-    12: "TRUE",
-    13: "FALSE",
+    // Questions 14–21 (Note completion)
+    14: "antiques",
+    15: "triumph",
+    16: "information",
+    17: "contact",
+    18: "hunt",
+    19: "aimless",
+    20: "educational",
+    21: "trainspotting",
+
+    // Questions 22–26 (True / False / Not Given)
+    22: "NOT GIVEN",
+    23: "FALSE",
+    24: "NOT GIVEN",
+    25: "TRUE",
+    26: "TRUE",
   };
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 4/reading");
+    const savedScore = localStorage.getItem("/2017/Test 1/reading");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
@@ -173,7 +175,7 @@ const Test4Reading2017 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2018/Test 4/reading");
+    const savedScore = localStorage.getItem("/2017/Test 1/reading");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -187,7 +189,7 @@ const Test4Reading2017 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("   PASSAGE 2")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -204,22 +206,37 @@ const Test4Reading2017 = () => {
               {renderText("       You should spend about 20 minutes on")}
 
               <span className="text-lg font-bold">
-                {renderText("          Questions 1-13")}
+                {renderText("          Questions 14-26")}
               </span>
               {renderText("  which are based on Reading PASSAGE 1 bellow")}
             </h1>
           </div>
-
           {/* left text */}
-          <div className="overflow-x-auto p-5 rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("The History of Glass")}
+          <div>
+            <h1 className="text-2xl font-bold mb-5 text-center">
+              {renderText("COLLECTING AS A HOBBY")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
             <p className="text-lg">
               {renderText(
-                "From our earliest origins, man has been making use of glass. ."
+                "Collecting must be one of the most varied of human activities, and it's one that many of us psychologists find fascinating."
+              )}
+              {renderText(
+                "Many forms of collecting have been dignified with a technical name: an arctophilist collects teddy bears, a philatelist collects postage stamps, and a deltiologist collects postcards."
+              )}
+              {renderText(
+                "Amassing hundreds or even thousands of postcards, chocolate wrappers or whatever, takes time, energy and money that could surely be put to much more productive use."
+              )}
+              {renderText(
+                "And yet there are millions of collectors around the world. Why do they do it?"
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "There are the people who collect because they want to make money - this could be called an instrumental reason for collecting; that is, collecting as a means to an end."
               )}
               <span
                 className={`ml-2 ${
@@ -227,173 +244,154 @@ const Test4Reading2017 = () => {
                 }`}
               >
                 {renderText(
-                  "Historians have discovered that a type of natural glass - obsidian - formed in places such as the mouth of a volcano as a result of the intense heat of an eruption melting sand - was first used as tips for spears"
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    1,2
-                  </span>
-                )}
-              </span>
-
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  " Archaeologists have even found evidence of man-made glass which dates back to 4000 BC; this took the form of glazes used for coating stone beads."
+                  "They'll look for, say, antiques that they can buy cheaply and expect to be able to sell at a profit."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    3
+                    14
                   </span>
                 )}
               </span>
-              {renderText(
-                " It was not until 1500 BC, however, that the first hollow glass container was made by covering a sand core with a layer of molten glass."
-              )}
-            </p>
-
-            <br />
-
-            {/* ---------- Section 2 ---------- */}
-            <p className="text-lg">
-              {renderText(
-                "Glass blowing became the most common way to make glass containers from the first century BC. "
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "The glass made during this time was highly coloured due to the impurities of the raw material."
+                  "But there may well be a psychological element, too - buying cheap and selling dear can give the collector a sense of triumph."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    4
+                    15
                   </span>
                 )}
               </span>
               {renderText(
-                " In the first century AD, methods of creating colourless glass were developed, which was then tinted by the addition of colouring materials. "
+                "And as selling online is so easy, more and more people are joining in."
               )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "The secret of glass making was taken across Europe by the Romans during this century."
+                  "Many collectors collect to develop their social life, attending meetings of a group of collectors and exchanging information on items."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    5
+                    16
                   </span>
                 )}
               </span>
-              {renderText(
-                " However, they guarded the skills and technology required to make glass very closely, and it was not until their empire collapsed in 476 AD that glass-making knowledge became widespread throughout Europe and the Middle East."
-              )}
-            </p>
-
-            <br />
-
-            {/* ---------- Section 3 ---------- */}
-            <p className="text-lg">
-              {renderText(
-                "From the 10th century onwards, the Venetians gained a reputation for technical skill and artistic ability in the making of glass bottles, and many of the city's craftsmen left Italy to set up glassworks throughout Europe."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              {renderText(
-                "A major milestone in the history of glass occurred with the invention of lead crystal glass by the English glass manufacturer George Ravenscroft (1632-1683)."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  " He attempted to counter the effect of clouding that sometimes occurred in blown glass by introducing lead to the raw materials used in the process."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    6,7
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " The new glass he created was softer and easier to decorate, and had a higher refractive index, adding to its brilliance and beauty."
-              )}
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "In Britain, the modern glass industry only really started to develop after the repeal of the Excise Act in 1845. Before that time, heavy taxes had been placed on the amount of glass melted in a glasshouse, and were levied continuously from 1745 to 1845."
+                  "This is a variant on joining a bridge club or a gym, and similarly brings them into contact with like-minded people."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
+                    17
                   </span>
                 )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "From 1887 onwards, glass making developed from traditional mouth-blowing to a semi-automatic process, after factory-owner HM Ashley introduced a machine capable of producing 200 bottles per hour in Castleford, Yorkshire, England - more than three times quicker than any previous production method."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    9
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Then in 1907, the first fully automated machine was developed in the USA by Michael Owens - founder of the Owens Bottle Machine Company - and installed in its factory."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    10
-                  </span>
-                )}
-              </span>
+              </span>{" "}
+              {renderText("It can also help people build lasting friendships.")}
             </p>
 
             <br />
 
             <p className="text-lg">
               {renderText(
-                "Owens' invention could produce an impressive 2,500 bottles per hour. Other developments followed rapidly, but it was not until the First World War, when Britain became cut off from essential glass suppliers, that glass became part of the scientific sector. Previous to this, glass had been seen as a craft rather than a precise science."
+                "Another motive for collecting is the desire to find something special, or a particular example of the collected item, such as a rare early recording by a particular singer."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Some may spend their whole lives in a hunt for this."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    18
+                  </span>
+                )}
+              </span>
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Psychologically, this can give a purpose to a life that otherwise feels aimless."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    19
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "If you think about collecting postage stamps, another potential reason for it - or perhaps a result of collecting - is its educational value."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    20
+                  </span>
+                )}
+              </span>{" "}
+              {renderText(
+                "Stamp collecting opens a window to other countries, and to the plants, animals, or famous people shown on their stamps."
+              )}
+              {renderText(
+                "Similarly, in the 19th century, many collectors amassed fossils, animals and plants from around the globe, providing valuable scientific knowledge."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "In the past, a popular form of collecting, particularly among boys and men, was trainspotting."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    21
+                  </span>
+                )}
+              </span>{" "}
+              {renderText(
+                "This might involve trying to see every locomotive of a particular type and ticking them off as they are seen."
+              )}
+              {renderText(
+                "As a result, many trainspotters become extremely knowledgeable about railway systems."
               )}
             </p>
 
@@ -401,46 +399,106 @@ const Test4Reading2017 = () => {
 
             <p className="text-lg">
               {renderText(
-                "Today, glass making is big business. It has become a modern, hi-tech industry operating in a fiercely competitive global market where quality, design and service levels are critical to maintaining market share."
+                "Collectors of dolls may go beyond enlarging their collection and develop an interest in how dolls are made and the materials used."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "These have changed over the centuries from the wood that was standard in 16th century Europe, through the wax and porcelain of later centuries, to the plastics of today's dolls."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    23
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "Or collectors might be inspired to study how dolls reflect notions of what children like, or ought to like."
               )}
             </p>
 
             <br />
 
             <p className="text-lg">
+              {renderText(
+                "Not all collectors are interested in learning from their hobby, though, so what we might call a psychological reason for collecting is the need for a sense of control, perhaps as a way of dealing with insecurity.Stamp collectors, for instance, arrange their stamps in albums, usually very neatly, organising their collection according to certain commonplace principles - perhaps by country in alphabetical order, or grouping stamps by what they depict - people, birds, maps, and so on."
+              )}
+              {renderText(
+                "Stamp collectors, for example, carefully organise their stamps according to strict systems."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Another reason for collecting may be to express individuality."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "Glass is an ideal material for recycling, and with growing consumer concern for green issues, glass bottles and jars are becoming ever more popular. Recycling is good news for the environment, saves energy, and reduces the need for raw materials."
+                  "Someone who decides to collect something as unexpected as dog collars, for instance, may be conveying their belief that they must be interesting themselves."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    25
                   </span>
                 )}
               </span>
-              {renderText(
-                "Glass recycling is good news for the environment.It saves used glass containers being sent to landfill."
-              )}{" "}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {" "}
+              <p className="text-lg">
+                {renderText(
+                  "To outsiders it may seem eccentric, but collecting can be deeply rewarding."
+                )}
+              </p>
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "As less energy is needed to melt recycled glass than to melt down raw materials, this also saves fuel and production costs."
+                  "More than most hobbies, collecting can be totally absorbing and provide a strong sense of fulfilment."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    26
                   </span>
                 )}
-              </span>
+              </span>{" "}
               {renderText(
-                "Recycling also reduces the need for raw materials to be quarried, thus saving precious resources."
+                "Of course, all hobbies give pleasure, but the common factor in collecting is usually passion: pleasure is putting it far too mildly."
+              )}
+            </p>
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "More than most other hobbies, collecting can be totally engrossing, and can give a strong sense of personal fulfilment."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    26
+                  </span>
+                )}
+              </span>{" "}
+              {renderText(
+                "To non-collectors it may appear an eccentric, if harmless, way of spending time, but potentially, collecting has a lot going for it."
               )}
             </p>
           </div>
@@ -515,10 +573,9 @@ const Test4Reading2017 = () => {
                 )}
               </div>
             </div>
-
             <div>
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 1-8")}
+                {renderText("Questions 14-21")}
               </h2>
 
               <h3 className="text-lg  mb-5">
@@ -532,53 +589,79 @@ const Test4Reading2017 = () => {
 
               <h1 className="text-lg font-semibold">
                 {renderText(
-                  "Write your answers in boxes 1-8 on your answer sheet."
+                  "Write your answers in boxes 14-21 on your answer sheet."
                 )}
               </h1>
               <br />
             </div>
-
             {/* box */}
             <div className="overflow-x-auto border p-5 bg-white rounded-lg">
               <h1 className="text-2xl font-bold text-center mb-4">
-                {renderText("The History of Glass")}
+                {renderText(" Collecting as a Hobby")}
               </h1>
 
-              <ul className="list-disc list-inside space-y-3">
-                <h1 className="text-lg font-bold">Early Uses</h1>
-
+              <ul className="list-disc list-inside space-y-4">
                 <li className="text-lg">
-                  {renderText("Early humans used a material called")}
+                  {renderText("The writer mentions collecting")}
                   <button
-                    onClick={() => toggleButton(1)}
+                    onClick={() => toggleButton(14)}
                     className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[1]
+                      activeButtons[14]
                         ? "bg-yellow-400 border-yellow-500"
                         : "bg-gray-200 border-gray-400"
                     }`}
                   >
-                    1
+                    14
                   </button>
                   <input
-                    value={userAnswers[1] || ""}
-                    onChange={(e) => handleInputChange(1, e.target.value)}
+                    value={userAnswers[14] || ""}
+                    onChange={(e) => handleInputChange(14, e.target.value)}
                     className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                     type="text"
                   />
-                  {renderText("to make the sharp points of their")}
+                  {renderText(
+                    "as an example of collecting in order to make money."
+                  )}
+                </li>
+
+                <li className="text-lg">
+                  {renderText("Collectors may get a feeling of")}
                   <button
-                    onClick={() => toggleButton(2)}
+                    onClick={() => toggleButton(15)}
                     className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[2]
+                      activeButtons[15]
                         ? "bg-yellow-400 border-yellow-500"
                         : "bg-gray-200 border-gray-400"
                     }`}
                   >
-                    2
+                    15
                   </button>
                   <input
-                    value={userAnswers[2] || ""}
-                    onChange={(e) => handleInputChange(2, e.target.value)}
+                    value={userAnswers[15] || ""}
+                    onChange={(e) => handleInputChange(15, e.target.value)}
+                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    type="text"
+                  />
+                  {renderText("from buying and selling items.")}
+                </li>
+
+                <li className="text-lg">
+                  {renderText(
+                    "Collectors' clubs provide opportunities to share"
+                  )}
+                  <button
+                    onClick={() => toggleButton(16)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[16]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    16
+                  </button>
+                  <input
+                    value={userAnswers[16] || ""}
+                    onChange={(e) => handleInputChange(16, e.target.value)}
                     className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                     type="text"
                   />
@@ -586,141 +669,118 @@ const Test4Reading2017 = () => {
                 </li>
 
                 <li className="text-lg">
-                  {renderText("Around 4000 BC,")}
+                  {renderText("Collectors' clubs offer")}
                   <button
-                    onClick={() => toggleButton(3)}
+                    onClick={() => toggleButton(17)}
                     className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[3]
+                      activeButtons[17]
                         ? "bg-yellow-400 border-yellow-500"
                         : "bg-gray-200 border-gray-400"
                     }`}
                   >
-                    3
+                    17
                   </button>
                   <input
-                    value={userAnswers[3] || ""}
-                    onChange={(e) => handleInputChange(3, e.target.value)}
+                    value={userAnswers[17] || ""}
+                    onChange={(e) => handleInputChange(17, e.target.value)}
                     className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                     type="text"
                   />
-                  {renderText(
-                    "made of stone were covered in a coating of man-made glass."
-                  )}
+                  {renderText("with people who have similar interests.")}
+                </li>
+
+                <li className="text-lg">
+                  {renderText("Collecting sometimes involves a life-long")}
+                  <button
+                    onClick={() => toggleButton(18)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[18]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    18
+                  </button>
+                  <input
+                    value={userAnswers[18] || ""}
+                    onChange={(e) => handleInputChange(18, e.target.value)}
+                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    type="text"
+                  />
+                  {renderText("for a special item.")}
                 </li>
 
                 <li className="text-lg">
                   {renderText(
-                    "First century BC: glass was coloured because of the"
+                    "Searching for something particular may prevent people from feeling their life is completely"
                   )}
                   <button
-                    onClick={() => toggleButton(4)}
+                    onClick={() => toggleButton(19)}
                     className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[4]
+                      activeButtons[19]
                         ? "bg-yellow-400 border-yellow-500"
                         : "bg-gray-200 border-gray-400"
                     }`}
                   >
-                    4
+                    19
                   </button>
                   <input
-                    value={userAnswers[4] || ""}
-                    onChange={(e) => handleInputChange(4, e.target.value)}
-                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                    type="text"
-                  />
-                  {renderText("in the material.")}
-                </li>
-
-                <li className="text-lg">
-                  {renderText("Until 476 AD: Only the")}
-                  <button
-                    onClick={() => toggleButton(5)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[5]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    5
-                  </button>
-                  <input
-                    value={userAnswers[5] || ""}
-                    onChange={(e) => handleInputChange(5, e.target.value)}
-                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                    type="text"
-                  />
-                  {renderText("knew how to make glass.")}
-                </li>
-
-                <li className="text-lg">
-                  {renderText(
-                    "17th century: George Ravenscroft developed a process using"
-                  )}
-                  <button
-                    onClick={() => toggleButton(6)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[6]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    6
-                  </button>
-                  <input
-                    value={userAnswers[6] || ""}
-                    onChange={(e) => handleInputChange(6, e.target.value)}
-                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                    type="text"
-                  />
-                  {renderText("to avoid the occurrence of")}
-                  <button
-                    onClick={() => toggleButton(7)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[7]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    7
-                  </button>
-                  <input
-                    value={userAnswers[7] || ""}
-                    onChange={(e) => handleInputChange(7, e.target.value)}
-                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                    type="text"
-                  />
-                  {renderText("in blown glass.")}
-                </li>
-
-                <li className="text-lg">
-                  {renderText(
-                    "Mid-19th century: British glass production developed after changes to laws concerning"
-                  )}
-                  <button
-                    onClick={() => toggleButton(8)}
-                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                      activeButtons[8]
-                        ? "bg-yellow-400 border-yellow-500"
-                        : "bg-gray-200 border-gray-400"
-                    }`}
-                  >
-                    8
-                  </button>
-                  <input
-                    value={userAnswers[8] || ""}
-                    onChange={(e) => handleInputChange(8, e.target.value)}
+                    value={userAnswers[19] || ""}
+                    onChange={(e) => handleInputChange(19, e.target.value)}
                     className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                     type="text"
                   />
                   {renderText(".")}
+                </li>
+
+                <li className="text-lg">
+                  {renderText("Stamp collecting may be")}
+                  <button
+                    onClick={() => toggleButton(20)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[20]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    20
+                  </button>
+                  <input
+                    value={userAnswers[20] || ""}
+                    onChange={(e) => handleInputChange(20, e.target.value)}
+                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    type="text"
+                  />
+                  {renderText(
+                    "because it provides facts about different countries."
+                  )}
+                </li>
+
+                <li className="text-lg">
+                  <button
+                    onClick={() => toggleButton(21)}
+                    className={`mr-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[21]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    21
+                  </button>
+                  <input
+                    value={userAnswers[21] || ""}
+                    onChange={(e) => handleInputChange(21, e.target.value)}
+                    className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
+                    type="text"
+                  />
+                  {renderText("tends to be mostly a male hobby.")}
                 </li>
               </ul>
             </div>
-
+            {/* 2nd step */}
             <div>
-              {" "}
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 9-13")}
+                {renderText("Questions 22-26")}
               </h2>
               <br />
               <h3 className="text-lg font-semibold mb-5">
@@ -728,7 +788,7 @@ const Test4Reading2017 = () => {
                   "Do the following statements agree with the information given in Reading Passage 1?"
                 )}{" "}
                 <br /> <br />
-                {renderText("In boxes 9-13 on your answer sheet, choose")}
+                {renderText("In boxes  22-26 on your answer sheet, choose")}
               </h3>
               <h3 className="flex gap-5 text-lg">
                 <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
@@ -744,55 +804,54 @@ const Test4Reading2017 = () => {
                 </span>{" "}
                 {renderText("if there is no information on this")}
               </h3>
-              <br /> <br />
-              {/* question dynamic */}
-              <div className="space-y-6 leading-relaxed p-4">
-                <h2 className="text-lg font-bold">Questions 9-13</h2>
-                {questions.map((q, qIndex) => {
-                  const answerKey = qIndex + 9;
-                  const correct = correctAnswers[answerKey];
+            </div>
+            <br /> <br />
+            {/* question dynamic */}
+            <div className="space-y-6 leading-relaxed p-4">
+              <h2 className="text-lg font-bold">Questions 22-26</h2>
+              {questions.map((q, qIndex) => {
+                const answerKey = qIndex + 22;
+                const correct = correctAnswers[answerKey];
 
-                  return (
-                    <div key={qIndex} className="flex flex-col gap-2">
-                      <h3 className="text-lg font-medium">
-                        {answerKey}. {q}
-                      </h3>
-                      <ul className="flex flex-col gap-2 ml-4">
-                        {options.map((option, oIndex) => {
-                          const isSelected = selectedOptions[qIndex] === option;
-                          const isCorrect = option === correct;
+                return (
+                  <div key={qIndex} className="flex flex-col gap-2">
+                    <h3 className="text-lg font-medium">
+                      {answerKey}. {q}
+                    </h3>
+                    <ul className="flex flex-col gap-2 ml-4">
+                      {options.map((option, oIndex) => {
+                        const isSelected = selectedOptions[qIndex] === option;
+                        const isCorrect = option === correct;
 
-                          return (
-                            <li
-                              key={oIndex}
-                              onClick={() => handleOptionClick(qIndex, option)}
-                              className="flex items-center gap-2 cursor-pointer"
+                        return (
+                          <li
+                            key={oIndex}
+                            onClick={() => handleOptionClick(qIndex, option)}
+                            className="flex items-center gap-2 cursor-pointer"
+                          >
+                            <span
+                              className={`w-5 h-5 rounded-full border-2 inline-block ${
+                                isSelected
+                                  ? "bg-blue-500 border-blue-500"
+                                  : "border-gray-700"
+                              }`}
+                            ></span>
+                            <span
+                              className={
+                                isSelected ? "text-blue-500" : "text-black"
+                              }
                             >
-                              <span
-                                className={`w-5 h-5 rounded-full border-2 inline-block ${
-                                  isSelected
-                                    ? "bg-blue-500 border-blue-500"
-                                    : "border-gray-700"
-                                }`}
-                              ></span>
-                              <span
-                                className={
-                                  isSelected ? "text-blue-500" : "text-black"
-                                }
-                              >
-                                {option}
-                              </span>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
+                              {option}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
-          {/* 2nd step */}
 
           <br />
           {/* ---------- Marks display ---------- */}
@@ -814,18 +873,18 @@ const Test4Reading2017 = () => {
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
                   <h1 className="text-3xl font-bold mb-2"> Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    Your Score: {score}/12
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1-13)
+                    All Answers (14-26)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -892,10 +951,9 @@ const Test4Reading2017 = () => {
           </div>
         </div>
       </div>
-      <Reading4Pagination2017></Reading4Pagination2017>
-      {/* <Reading4Pagination2018></Reading4Pagination2018> */}
+      <Reading1Pagination2017></Reading1Pagination2017>
     </div>
   );
 };
 
-export default Test4Reading2017;
+export default Reading1Part22017;

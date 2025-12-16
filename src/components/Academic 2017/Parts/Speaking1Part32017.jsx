@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2017 from "../Pagination2017/Speaking4Pagination2017";
 
-const Test4Speaking2017 = () => {
+
+import Speaking1Pagination2017 from "../Pagination2017/Speaking1Pagination2017";
+
+const Speaking1Part32017 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,20 +18,24 @@ const Test4Speaking2017 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "In what kinds of situations should people always arrive early?",
+  "How important is it to arrive early in your country?",
+  "How can modern technology help people to arrive early?",
+  "What kinds of jobs require the most patience?",
+  "Is it always better to be patient in work (or studies)?",
+  "Do you agree or disagree that the older people are, the more patient they are?",
+];
 
-  const questions = [
-    "Did you enjoy doing art lessons when you were a child? ",
-    "Do you ever draw or paint pictures now? ",
-    "When was the last time you went to an art gallery or exhibition?",
-    "What kind of pictures do you like having in your home? ",
-  ];
+const questionKeywords = [
+  ["situations", "arrive early", "timing", "punctuality"],
+  ["importance", "arrive early", "country", "punctuality", "culture"],
+  ["technology", "help", "arrive early", "modern devices", "tools"],
+  ["jobs", "patience", "work", "tasks requiring patience"],
+  ["better", "patient", "work", "studies", "advantage"],
+  ["older people", "patience", "age", "agree", "disagree"],
+];
 
-  const questionKeywords = [
-    ["art", "lessons", "child", "enjoy", "why", "why not"],
-    ["draw", "paint", "pictures", "now", "why", "why not", "art"],
-    ["last time", "art gallery", "exhibition", "visit", "why"],
-    ["pictures", "home", "like", "why", "art style"],
-  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -178,32 +184,34 @@ const Test4Speaking2017 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Art</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Arriving Early & Being Patient
+            </h1>
+
+            <p className="text-lg font-bold">Arriving early</p>
             <li>
-              Did you enjoy doing art lessons when you were a child? [Why/Why
-              not?]
+              In what kinds of situations should people always arrive early?
             </li>
-            <li>Do you ever draw or paint pictures now? [Why/Why not?]</li>
+            <li>How important is it to arrive early in your country?</li>
+            <li>How can modern technology help people to arrive early?</li>
+
+            <p className="text-lg font-bold mt-4">Being patient</p>
+            <li>What kinds of jobs require the most patience?</li>
+            <li>Is it always better to be patient in work (or studies)?</li>
             <li>
-              When was the last time you went to an art gallery or exhibition?
-              [Why?]
-            </li>
-            <li>
-              What kind of pictures do you like having in your home? [Why?]
+              Do you agree or disagree that the older people are, the more
+              patient they are?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -260,10 +268,9 @@ const Test4Speaking2017 = () => {
           </div>
         </div>
       </div>
-      <Speaking4Pagination2017></Speaking4Pagination2017>
-      {/* <Speaking1Pagination2018></Speaking1Pagination2018> */}
+      <Speaking1Pagination2017></Speaking1Pagination2017>
     </div>
   );
 };
 
-export default Test4Speaking2017;
+export default Speaking1Part32017;

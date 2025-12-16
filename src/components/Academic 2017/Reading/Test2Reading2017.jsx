@@ -4,6 +4,7 @@ import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 
 import { IoBookSharp } from "react-icons/io5";
+import Reading2Pagination2017 from "../Pagination2017/Reading2Pagination2017";
 
 const Test2Reading2017 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -832,7 +833,7 @@ const options = [
           </div>
         </div>
       </div>
-      {/* <Reading2Pagination2018></Reading2Pagination2018> */}
+   <Reading2Pagination2017></Reading2Pagination2017>
     </div>
   );
 };

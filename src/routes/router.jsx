@@ -264,6 +264,26 @@ import Listening3Part42017 from "../components/Academic 2017/Parts/Listening3Par
 import Listening4Part22017 from "../components/Academic 2017/Parts/Listening4Part22017";
 import Listening4Part32017 from "../components/Academic 2017/Parts/Listening4Part32017";
 import Listening4Part42017 from "../components/Academic 2017/Parts/Listening4Part42017";
+import Reading1Part22017 from "../components/Academic 2017/Parts/Reading1Part22017";
+import Reading1Part32017 from "../components/Academic 2017/Parts/Reading1Part32017";
+import Reading2Part22017 from "../components/Academic 2017/Parts/Reading2Part22017";
+import Reading2Part32017 from "../components/Academic 2017/Parts/Reading2Part32017";
+import Reading3Part22017 from "../components/Academic 2017/Parts/Reading3Part22017";
+import Reading3Part32017 from "../components/Academic 2017/Parts/Reading3Part32017";
+import Reading4Part22017 from "../components/Academic 2017/Parts/Reading4Part22017";
+import Reading4Part32017 from "../components/Academic 2017/Parts/Reading4Part32017";
+import Writing1Part22017 from "../components/Academic 2017/Parts/Writing1Part22017";
+import Writing2Part22017 from "../components/Academic 2017/Parts/Writing2Part22017";
+import Writing3Part22017 from "../components/Academic 2017/Parts/Writing3Part22017";
+import Writing4Part22017 from "../components/Academic 2017/Parts/Writing4Part22017";
+import Speaking1Part22017 from "../components/Academic 2017/Parts/Speaking1Part22017";
+import Speaking1Part32017 from "../components/Academic 2017/Parts/Speaking1Part32017";
+import Speaking2Part22017 from "../components/Academic 2017/Parts/Speaking2Part22017";
+import Speaking2Part32017 from "../components/Academic 2017/Parts/Speaking2Part32017";
+import Speaking3Part22017 from "../components/Academic 2017/Parts/Speaking3Part22017";
+import Speaking3Part32017 from "../components/Academic 2017/Parts/Speaking3Part32017";
+import Speaking4Part22017 from "../components/Academic 2017/Parts/Speaking4Part22017";
+import Speaking4Part32017 from "../components/Academic 2017/Parts/Speaking4Part32017";
 
 export const router = createBrowserRouter([
   {
@@ -1269,48 +1289,130 @@ export const router = createBrowserRouter([
         Component: Test1Reading2017,
       },
       {
+        path: "/reading1Part22017",
+        Component: Reading1Part22017,
+      },
+      {
+        path: "/reading1Part32017",
+        Component: Reading1Part32017,
+      },
+
+      {
         path: "/2017/Test 2/reading",
         Component: Test2Reading2017,
+      },
+      {
+        path: "/reading2Part22017",
+        Component: Reading2Part22017,
+      },
+      {
+        path: "/reading2Part32017",
+        Component: Reading2Part32017,
       },
       {
         path: "/2017/Test 3/reading",
         Component: Test3Reading2017,
       },
       {
+        path: "/reading3Part22017",
+        Component: Reading3Part22017,
+      },
+      {
+        path: "/reading3Part32017",
+        Component: Reading3Part32017,
+      },
+
+      {
         path: "/2017/Test 4/reading",
         Component: Test4Reading2017,
+      },
+      {
+        path: "/reading4Part22017",
+        Component: Reading4Part22017,
+      },
+      {
+        path: "/reading4Part32017",
+        Component: Reading4Part32017,
       },
       {
         path: "/2017/Test 1/writing",
         Component: Test1Writing2017,
       },
       {
+        path: "/writing1Part22017",
+        Component: Writing1Part22017,
+      },
+      {
         path: "/2017/Test 2/writing",
         Component: Test2Writing2017,
+      },
+      {
+        path: "/writing2Part22017",
+        Component: Writing2Part22017,
       },
       {
         path: "/2017/Test 3/writing",
         Component: Test3Writing2017,
       },
       {
+        path: "/writing3Part22017",
+        Component: Writing3Part22017,
+      },
+      {
         path: "/2017/Test 4/writing",
         Component: Test4Writing2017,
+      },
+      {
+        path: "/writing4Part22017",
+        Component: Writing4Part22017,
       },
       {
         path: "/2017/Test 1/speaking",
         Component: Test1Speaking2017,
       },
       {
+        path: "/speaking1Part22017",
+        Component: Speaking1Part22017,
+      },
+      {
+        path: "/speaking1Part32017",
+        Component: Speaking1Part32017,
+      },
+      {
         path: "/2017/Test 2/speaking",
         Component: Test2Speaking2017,
+      },
+      {
+        path: "/speaking2Part22017",
+        Component: Speaking2Part22017,
+      },
+      {
+        path: "/speaking2Part32017",
+        Component: Speaking2Part32017,
       },
       {
         path: "/2017/Test 3/speaking",
         Component: Test3Speaking2017,
       },
       {
+        path: "/speaking3Part22017",
+        Component: Speaking3Part22017,
+      },
+      {
+        path: "/speaking3Part32017",
+        Component: Speaking3Part32017,
+      },
+      {
         path: "/2017/Test 4/speaking",
         Component: Test4Speaking2017,
+      },
+      {
+        path: "/speaking4Part22017",
+        Component: Speaking4Part22017,
+      },
+      {
+        path: "/speaking4Part32017",
+        Component: Speaking4Part32017,
       },
     ],
   },

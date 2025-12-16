@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2017 from "../Pagination2017/Speaking4Pagination2017";
 
-const Test4Speaking2017 = () => {
+
+import Speaking3Pagination2017 from "../Pagination2017/Speaking3Pagination2017";
+
+const Speaking3Part32017 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,20 +18,24 @@ const Test4Speaking2017 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "Why do some parents give their children money to spend each week?",
+  "Do you agree that schools should teach children how to manage money?",
+  "Do you think it is a good idea for students to earn money while studying?",
+  "Do you think it is true that in today's society money cannot buy happiness?",
+  "What disadvantages are there in a society where the gap between rich and poor is very large?",
+  "Do you think richer countries have a responsibility to help poorer countries?",
+];
 
-  const questions = [
-    "Did you enjoy doing art lessons when you were a child? ",
-    "Do you ever draw or paint pictures now? ",
-    "When was the last time you went to an art gallery or exhibition?",
-    "What kind of pictures do you like having in your home? ",
-  ];
+const questionKeywords = [
+  ["parents", "children", "money", "weekly", "spend", "allowance"],
+  ["schools", "teach", "children", "manage money", "financial education"],
+  ["students", "earn money", "studying", "part-time", "jobs"],
+  ["money", "happiness", "society", "true", "agree"],
+  ["disadvantages", "gap", "rich", "poor", "inequality"],
+  ["richer countries", "help", "poorer countries", "responsibility", "aid"],
+];
 
-  const questionKeywords = [
-    ["art", "lessons", "child", "enjoy", "why", "why not"],
-    ["draw", "paint", "pictures", "now", "why", "why not", "art"],
-    ["last time", "art gallery", "exhibition", "visit", "why"],
-    ["pictures", "home", "like", "why", "art style"],
-  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -178,32 +184,46 @@ const Test4Speaking2017 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Art</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Money and young people & Money and society
+            </h1>
+
+            <p className="text-lg font-bold">Money and young people</p>
             <li>
-              Did you enjoy doing art lessons when you were a child? [Why/Why
-              not?]
-            </li>
-            <li>Do you ever draw or paint pictures now? [Why/Why not?]</li>
-            <li>
-              When was the last time you went to an art gallery or exhibition?
-              [Why?]
+              Why do some parents give their children money to spend each week?
             </li>
             <li>
-              What kind of pictures do you like having in your home? [Why?]
+              Do you agree that schools should teach children how to manage
+              money?
+            </li>
+            <li>
+              Do you think it is a good idea for students to earn money while
+              studying?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Money and society</p>
+            <li>
+              Do you think it is true that in today's society money cannot buy
+              happiness?
+            </li>
+            <li>
+              What disadvantages are there in a society where the gap between
+              rich and poor is very large?
+            </li>
+            <li>
+              Do you think richer countries have a responsibility to help poorer
+              countries?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -260,10 +280,9 @@ const Test4Speaking2017 = () => {
           </div>
         </div>
       </div>
-      <Speaking4Pagination2017></Speaking4Pagination2017>
-      {/* <Speaking1Pagination2018></Speaking1Pagination2018> */}
+      <Speaking3Pagination2017></Speaking3Pagination2017>
     </div>
   );
 };
 
-export default Test4Speaking2017;
+export default Speaking3Part32017;

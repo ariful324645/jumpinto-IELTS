@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading1Pagination2017 from "../Pagination2017/Reading1Pagination2017";
 
 const Test1Reading2017 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -137,22 +138,21 @@ const Test1Reading2017 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  1: "NOT GIVEN",
-  2: "FALSE",
-  3: "NOT GIVEN",
-  4: "TRUE",
-  5: "TRUE",
-  6: "taste",
-  7: "cheap",
-  8: "convenient",
-  9: "image",
-  10: "natural",
-  11: "recycled",
-  12: "biodiversity",
-  13: "desertification",
-};
-
+  const correctAnswers = {
+    1: "NOT GIVEN",
+    2: "FALSE",
+    3: "NOT GIVEN",
+    4: "TRUE",
+    5: "TRUE",
+    6: "taste",
+    7: "cheap",
+    8: "convenient",
+    9: "image",
+    10: "natural",
+    11: "recycled",
+    12: "biodiversity",
+    13: "desertification",
+  };
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/2017/Test 1/reading");
@@ -871,7 +871,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Reading2Pagination2018></Reading2Pagination2018> */}
+      <Reading1Pagination2017></Reading1Pagination2017>
     </div>
   );
 };

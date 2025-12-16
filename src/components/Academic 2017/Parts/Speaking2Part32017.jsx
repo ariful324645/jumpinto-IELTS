@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2017 from "../Pagination2017/Speaking4Pagination2017";
 
-const Test4Speaking2017 = () => {
+import Speaking1Pagination2017 from "../Pagination2017/Speaking1Pagination2017";
+import Speaking2Pagination2017 from "../Pagination2017/Speaking2Pagination2017";
+
+const Speaking2Part32017 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,20 +18,24 @@ const Test4Speaking2017 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "What are the most popular types of films in your country?",
+  "What is the difference between watching a film in the cinema and watching a film at home?",
+  "Do you think cinemas will close in the future?",
+  "How important is the theatre in your country's history?",
+  "How strong a tradition is it today in your country to go to the theatre?",
+  "Do you think the theatre should be run as a business or as a public service?",
+];
 
-  const questions = [
-    "Did you enjoy doing art lessons when you were a child? ",
-    "Do you ever draw or paint pictures now? ",
-    "When was the last time you went to an art gallery or exhibition?",
-    "What kind of pictures do you like having in your home? ",
-  ];
+const questionKeywords = [
+  ["popular", "types", "films", "country", "genres"],
+  ["difference", "cinema", "home", "watching films", "experience"],
+  ["cinemas", "close", "future", "movies", "streaming"],
+  ["theatre", "importance", "history", "culture", "country"],
+  ["tradition", "theatre", "today", "culture", "attendance"],
+  ["theatre", "business", "public service", "government", "funding"],
+];
 
-  const questionKeywords = [
-    ["art", "lessons", "child", "enjoy", "why", "why not"],
-    ["draw", "paint", "pictures", "now", "why", "why not", "art"],
-    ["last time", "art gallery", "exhibition", "visit", "why"],
-    ["pictures", "home", "like", "why", "art style"],
-  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -178,32 +184,38 @@ const Test4Speaking2017 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
-          <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Art</h1>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Watching films/movies & Theatre
+            </h1>
+
+            <p className="text-lg font-bold">Watching films/movies</p>
+            <li>What are the most popular types of films in your country?</li>
             <li>
-              Did you enjoy doing art lessons when you were a child? [Why/Why
-              not?]
+              What is the difference between watching a film in the cinema and
+              watching a film at home?
             </li>
-            <li>Do you ever draw or paint pictures now? [Why/Why not?]</li>
+            <li>Do you think cinemas will close in the future?</li>
+
+            <p className="text-lg font-bold mt-4">Theatre</p>
+            <li>How important is the theatre in your country's history?</li>
             <li>
-              When was the last time you went to an art gallery or exhibition?
-              [Why?]
+              How strong a tradition is it today in your country to go to the
+              theatre?
             </li>
             <li>
-              What kind of pictures do you like having in your home? [Why?]
+              Do you think the theatre should be run as a business or as a
+              public service?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
@@ -260,10 +272,9 @@ const Test4Speaking2017 = () => {
           </div>
         </div>
       </div>
-      <Speaking4Pagination2017></Speaking4Pagination2017>
-      {/* <Speaking1Pagination2018></Speaking1Pagination2018> */}
+      <Speaking2Pagination2017></Speaking2Pagination2017>
     </div>
   );
 };
 
-export default Test4Speaking2017;
+export default Speaking2Part32017;
