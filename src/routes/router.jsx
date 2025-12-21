@@ -284,6 +284,25 @@ import Speaking3Part22017 from "../components/Academic 2017/Parts/Speaking3Part2
 import Speaking3Part32017 from "../components/Academic 2017/Parts/Speaking3Part32017";
 import Speaking4Part22017 from "../components/Academic 2017/Parts/Speaking4Part22017";
 import Speaking4Part32017 from "../components/Academic 2017/Parts/Speaking4Part32017";
+import Test1Listening2016 from "../components/Academic 2016/Listening/Test1Listening2016";
+import Test2Listening2016 from "../components/Academic 2016/Listening/Test2Listening2016";
+import Test3Listening2016 from "../components/Academic 2016/Listening/Test3Listening2016";
+import Test4Listening2016 from "../components/Academic 2016/Listening/Test4Listening2016";
+import Test1Reading2016 from "../components/Academic 2016/Reading/Test1Reading2016";
+import Test2Reading2016 from "../components/Academic 2016/Reading/Test2Reading2016";
+import Test3Reading2016 from "../components/Academic 2016/Reading/Test3Reading2016";
+import Test4Reading2016 from "../components/Academic 2016/Reading/Test4Reading2016";
+import Test1Writing2016 from "../components/Academic 2016/Writing/Test1Writing2016";
+import Test2Writng2016 from "../components/Academic 2016/Writing/Test2Writng2016";
+import Test3Writing2016 from "../components/Academic 2016/Writing/Test3Writing2016";
+import Test4Writng2016 from "../components/Academic 2016/Writing/Test4Writng2016";
+import Test1Speaking2016 from "../components/Academic 2016/Speaking/Test1Speaking2016";
+import Test2Speaking2016 from "../components/Academic 2016/Speaking/Test2Speaking2016";
+import Test3Speaking2016 from "../components/Academic 2016/Speaking/Test3Speaking2016";
+import Test4Speaking2016 from "../components/Academic 2016/Speaking/Test4Speaking2016";
+import Listening1Part22016 from "../components/Academic 2016/Parts/Listening1Part22016";
+import Listening1Part32016 from "../components/Academic 2016/Parts/Listening1Part32016";
+import Listening1Part42016 from "../components/Academic 2016/Parts/Listening1Part42016";
 
 export const router = createBrowserRouter([
   {
@@ -1413,6 +1432,82 @@ export const router = createBrowserRouter([
       {
         path: "/speaking4Part32017",
         Component: Speaking4Part32017,
+      },
+      {
+        path: "/2016/Test 1/listening",
+        Component: Test1Listening2016,
+      },
+      {
+        path: "/listening1Part22016",
+        Component: Listening1Part22016,
+      },
+      {
+        path: "/listening1Part32016",
+        Component: Listening1Part32016,
+      },
+      {
+        path: "/listening1Part42016",
+        Component: Listening1Part42016,
+      },
+      {
+        path: "/2016/Test 2/listening",
+        Component: Test2Listening2016,
+      },
+      {
+        path: "/2016/Test 3/listening",
+        Component: Test3Listening2016,
+      },
+      {
+        path: "/2016/Test 4/listening",
+        Component: Test4Listening2016,
+      },
+      {
+        path: "/2016/Test 1/reading",
+        Component: Test1Reading2016,
+      },
+      {
+        path: "/2016/Test 2/reading",
+        Component: Test2Reading2016,
+      },
+      {
+        path: "/2016/Test 3/reading",
+        Component: Test3Reading2016,
+      },
+      {
+        path: "/2016/Test 4/reading",
+        Component: Test4Reading2016,
+      },
+      {
+        path: "/2016/Test 1/writing",
+        Component: Test1Writing2016,
+      },
+      {
+        path: "/2016/Test 2/writing",
+        Component: Test2Writng2016,
+      },
+      {
+        path: "/2016/Test 3/writing",
+        Component: Test3Writing2016,
+      },
+      {
+        path: "/2016/Test 4/writing",
+        Component: Test4Writng2016,
+      },
+      {
+        path: "/2016/Test 1/speaking",
+        Component: Test1Speaking2016,
+      },
+      {
+        path: "/2016/Test 2/speaking",
+        Component: Test2Speaking2016,
+      },
+      {
+        path: "/2016/Test 3/speaking",
+        Component: Test3Speaking2016,
+      },
+      {
+        path: "/2016/Test 4/speaking",
+        Component: Test4Speaking2016,
       },
     ],
   },
