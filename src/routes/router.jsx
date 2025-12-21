@@ -303,6 +303,9 @@ import Test4Speaking2016 from "../components/Academic 2016/Speaking/Test4Speakin
 import Listening1Part22016 from "../components/Academic 2016/Parts/Listening1Part22016";
 import Listening1Part32016 from "../components/Academic 2016/Parts/Listening1Part32016";
 import Listening1Part42016 from "../components/Academic 2016/Parts/Listening1Part42016";
+import Listening2Part22016 from "../components/Academic 2016/Parts/Listening2Part22016";
+import Listening2Part32016 from "../components/Academic 2016/Parts/Listening2Part32016";
+import Listening2Part42016 from "../components/Academic 2016/Parts/Listening2Part42016";
 
 export const router = createBrowserRouter([
   {
@@ -1452,6 +1455,18 @@ export const router = createBrowserRouter([
       {
         path: "/2016/Test 2/listening",
         Component: Test2Listening2016,
+      },
+      {
+        path: "/listening2Part22016",
+        Component: Listening2Part22016,
+      },
+      {
+        path: "/listening2Part32016",
+        Component: Listening2Part32016,
+      },
+      {
+        path: "/listening2Part42016",
+        Component: Listening2Part42016,
       },
       {
         path: "/2016/Test 3/listening",
