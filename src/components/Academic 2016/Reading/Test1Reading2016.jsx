@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading1Pagination2016 from "../Pagination2016/Reading1Pagination2016";
 
 
 const Test1Reading2016 = () => {
@@ -858,7 +859,7 @@ const Test1Reading2016 = () => {
           </div>
         </div>
       </div>
- 
+ <Reading1Pagination2016></Reading1Pagination2016>
     </div>
   );
 };

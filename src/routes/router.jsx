@@ -306,6 +306,24 @@ import Listening1Part42016 from "../components/Academic 2016/Parts/Listening1Par
 import Listening2Part22016 from "../components/Academic 2016/Parts/Listening2Part22016";
 import Listening2Part32016 from "../components/Academic 2016/Parts/Listening2Part32016";
 import Listening2Part42016 from "../components/Academic 2016/Parts/Listening2Part42016";
+import Listening3Part22016 from "../components/Academic 2016/Parts/Listening3Part22016";
+import Listening3Part32016 from "../components/Academic 2016/Parts/Listening3Part32016";
+import Listening3Part42016 from "../components/Academic 2016/Parts/Listening3Part42016";
+import Reading1Part22016 from "../components/Academic 2016/Parts/Reading1Part22016";
+import Reading1Part32016 from "../components/Academic 2016/Parts/Reading1Part32016";
+import Listening4Part22016 from "../components/Academic 2016/Parts/Listening4Part22016";
+import Listening4Part32016 from "../components/Academic 2016/Parts/Listening4Part32016";
+import Test1Listening2015 from "../components/Academic 2015/Listening/Test1Listening2015";
+import Listening1Part22015 from "../components/Academic 2015/Parts/Listening1Part22015";
+import Listening1Part32015 from "../components/Academic 2015/Parts/Listening1Part32015";
+import Listening1Part42015 from "../components/Academic 2015/Parts/Listening1Part42015";
+import Test2Listening2015 from "../components/Academic 2015/Listening/Test2Listening2015";
+import Test3Listening2015 from "../components/Academic 2015/Listening/Test3Listening2015";
+import Test4Listening2015 from "../components/Academic 2015/Listening/Test4Listening2015";
+import Test1Reading2015 from "../components/Academic 2015/Reading/Test1Reading2015";
+import Test2Reading2015 from "../components/Academic 2015/Reading/Test2Reading2015";
+import Test4Reading2015 from "../components/Academic 2015/Reading/Test4Reading2015";
+import Test3Reading2015 from "../components/Academic 2015/Reading/Test3Reading2015";
 
 export const router = createBrowserRouter([
   {
@@ -1473,12 +1491,40 @@ export const router = createBrowserRouter([
         Component: Test3Listening2016,
       },
       {
+        path: "/listening3Part22016",
+        Component: Listening3Part22016,
+      },
+      {
+        path: "/listening3Part32016",
+        Component: Listening3Part32016,
+      },
+      {
+        path: "/listening3Part42016",
+        Component: Listening3Part42016,
+      },
+      {
         path: "/2016/Test 4/listening",
         Component: Test4Listening2016,
       },
       {
+        path: "/listening4Part22016",
+        Component: Listening4Part22016,
+      },
+      {
+        path: "/listening4Part32016",
+        Component: Listening4Part32016,
+      },
+      {
         path: "/2016/Test 1/reading",
         Component: Test1Reading2016,
+      },
+      {
+        path: "/reading1Part22016",
+        Component: Reading1Part22016,
+      },
+      {
+        path: "/reading1Part32016",
+        Component: Reading1Part32016,
       },
       {
         path: "/2016/Test 2/reading",
@@ -1524,6 +1570,123 @@ export const router = createBrowserRouter([
         path: "/2016/Test 4/speaking",
         Component: Test4Speaking2016,
       },
+      // 2015
+      {
+        path: "/2015/Test 1/listening",
+        Component: Test1Listening2015,
+      },
+      {
+        path: "/listening1Part22015",
+        Component: Listening1Part22015,
+      },
+      {
+        path: "/listening1Part32015",
+        Component: Listening1Part32015,
+      },
+      {
+        path: "/listening1Part42015",
+        Component: Listening1Part42015,
+      },
+      {
+        path: "/2015/Test 2/listening",
+        Component: Test2Listening2015,
+      },
+      // {
+      //   path: "/listening2Part22016",
+      //   Component: Listening2Part22016,
+      // },
+      // {
+      //   path: "/listening2Part32016",
+      //   Component: Listening2Part32016,
+      // },
+      // {
+      //   path: "/listening2Part42016",
+      //   Component: Listening2Part42016,
+      // },
+      {
+        path: "/2015/Test 3/listening",
+        Component: Test3Listening2015,
+      },
+      // {
+      //   path: "/listening3Part22016",
+      //   Component: Listening3Part22016,
+      // },
+      // {
+      //   path: "/listening3Part32016",
+      //   Component: Listening3Part32016,
+      // },
+      // {
+      //   path: "/listening3Part42016",
+      //   Component: Listening3Part42016,
+      // },
+      {
+        path: "/2015/Test 4/listening",
+        Component: Test4Listening2015,
+      },
+      // {
+      //   path: "/listening4Part22016",
+      //   Component: Listening4Part22016,
+      // },
+      // {
+      //   path: "/listening4Part32016",
+      //   Component: Listening4Part32016,
+      // },
+      {
+        path: "/2015/Test 1/reading",
+        Component: Test1Reading2015,
+      },
+      // {
+      //   path: "/reading1Part22016",
+      //   Component: Reading1Part22016,
+      // },
+      // {
+      //   path: "/reading1Part32016",
+      //   Component: Reading1Part32016,
+      // },
+      {
+        path: "/2015/Test 2/reading",
+        Component: Test2Reading2015,
+      },
+      {
+        path: "/2015/Test 3/reading",
+        Component: Test3Reading2015,
+      },
+      {
+        path: "/2015/Test 4/reading",
+        Component: Test4Reading2015,
+      },
+      // {
+      //   path: "/2015/Test 1/writing",
+      //   Component: Test1Writing2016,
+      // },
+      // {
+      //   path: "/2016/Test 2/writing",
+      //   Component: Test2Writng2016,
+      // },
+      // {
+      //   path: "/2016/Test 3/writing",
+      //   Component: Test3Writing2016,
+      // },
+      // {
+      //   path: "/2016/Test 4/writing",
+      //   Component: Test4Writng2016,
+      // },
+      // {
+      //   path: "/2016/Test 1/speaking",
+      //   Component: Test1Speaking2016,
+      // },
+      // {
+      //   path: "/2016/Test 2/speaking",
+      //   Component: Test2Speaking2016,
+      // },
+      // {
+      //   path: "/2016/Test 3/speaking",
+      //   Component: Test3Speaking2016,
+      // },
+      // {
+      //   path: "/2016/Test 4/speaking",
+      //   Component: Test4Speaking2016,
+      // },
     ],
   },
 ]);
