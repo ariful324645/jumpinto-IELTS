@@ -324,6 +324,8 @@ import Test1Reading2015 from "../components/Academic 2015/Reading/Test1Reading20
 import Test2Reading2015 from "../components/Academic 2015/Reading/Test2Reading2015";
 import Test4Reading2015 from "../components/Academic 2015/Reading/Test4Reading2015";
 import Test3Reading2015 from "../components/Academic 2015/Reading/Test3Reading2015";
+import Test1Writing2015 from "../components/Academic 2015/Writing/Test1Writing2015";
+import Test2Writing2015 from "../components/Academic 2015/Writing/Test2Writing2015";
 
 export const router = createBrowserRouter([
   {
@@ -1655,14 +1657,14 @@ export const router = createBrowserRouter([
         path: "/2015/Test 4/reading",
         Component: Test4Reading2015,
       },
-      // {
-      //   path: "/2015/Test 1/writing",
-      //   Component: Test1Writing2016,
-      // },
-      // {
-      //   path: "/2016/Test 2/writing",
-      //   Component: Test2Writng2016,
-      // },
+      {
+        path: "/2015/Test 1/writing",
+        Component: Test1Writing2015,
+      },
+      {
+        path: "/2015/Test 2/writing",
+        Component: Test2Writing2015,
+      },
       // {
       //   path: "/2016/Test 3/writing",
       //   Component: Test3Writing2016,
