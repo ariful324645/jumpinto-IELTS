@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link, useLocation } from "react-router";
 
-const Reading2Pagination2016 = () => {
+const Speaking2Pagination2016 = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -33,10 +33,10 @@ const Reading2Pagination2016 = () => {
   };
 
   const centerLinks = [
-    "/2016/Test%202/reading",
+    "/2016/Test%202/speaking",
 
-    "/reading2Part22016", // page 2
-    "/reading2Part32016", // page 3
+    "/speaking2Part22016", // page 2
+    "/speaking2Part32016", // page 2
   ];
 
   // ---------- Detect Active Page ----------
@@ -84,4 +84,4 @@ const Reading2Pagination2016 = () => {
   );
 };
 
-export default Reading2Pagination2016;
+export default Speaking2Pagination2016;

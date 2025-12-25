@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking2Pagination2016 from "../Pagination2016/Speaking2Pagination2016";
 
 const Test2Speaking2016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,20 +17,19 @@ const Test2Speaking2016 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-const questions = [
-  "How often do you go out with friends? ",
-  "Tell me about your best friend at school.",
-  "How friendly are you with your neighbours?",
-  "Which is more important to you, friends or family? ",
-];
+  const questions = [
+    "How often do you go out with friends? ",
+    "Tell me about your best friend at school.",
+    "How friendly are you with your neighbours?",
+    "Which is more important to you, friends or family? ",
+  ];
 
-const questionKeywords = [
-  ["how often", "go out", "friends", "why", "why not", "socialize", "meet"],
-  ["best friend", "school", "describe", "character", "personality"],
-  ["friendly", "neighbours", "relationship", "why", "why not", "community"],
-  ["friends", "family", "important", "priority", "why", "values"],
-];
-
+  const questionKeywords = [
+    ["how often", "go out", "friends", "why", "why not", "socialize", "meet"],
+    ["best friend", "school", "describe", "character", "personality"],
+    ["friendly", "neighbours", "relationship", "why", "why not", "community"],
+    ["friends", "family", "important", "priority", "why", "values"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -253,8 +253,7 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      {/* <Speaking1Pagination2017></Speaking1Pagination2017> */}
-      {/* <Speaking1Pagination2018></Speaking1Pagination2018> */}
+      <Speaking2Pagination2016></Speaking2Pagination2016>
     </div>
   );
 };

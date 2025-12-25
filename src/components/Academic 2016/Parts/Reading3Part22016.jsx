@@ -4,12 +4,12 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { ImCross } from "react-icons/im";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
-import Reading2Pagination2016 from "../Pagination2016/Reading2Pagination2016";
 
+import Reading3Pagination2016 from "../Pagination2016/Reading3Pagination2016";
 
 //  Marks show
 
-const Test2Reading2016 = () => {
+const Reading3Part22016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +26,11 @@ const Test2Reading2016 = () => {
   };
 
   const questions = [
-    "There is some doubt about what caused the Mary Rose to sink.",
-    "The Mary Rose was the only ship to sink in the battle of 19 July 1545.",
-    "Most of one side of the Mary Rose lay undamaged under the sea..",
-    "Alexander McKee knew that the wreck would contain many valuable historical objects.",
+    "Local gulls and migrating arctic terns behave in the same way when offered food.",
+    "Experts' definitions of migration tend to vary according to their area of study.",
+    "Very few experts agree that the movement of aphids can be considered migration.",
+    "Aphids' journeys are affected by changes in the light that they perceive.",
+    "Dingle's aim is to distinguish between the migratory behaviours of different species",
   ];
 
   const options = ["YES", "NO", "NOT GIVEN"];
@@ -51,7 +52,7 @@ const Test2Reading2016 = () => {
     setSelectedOptions(updatedOptions);
 
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 1;
+      const answerKey = qIndex + 14;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -138,26 +139,27 @@ const Test2Reading2016 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    // Questions 1–4: YES / NO / NOT GIVEN
-    1: "YES", // There is some doubt about what caused the Mary Rose to sink
-    2: "NOT GIVEN", // The Mary Rose was the only ship to sink in the battle
-    3: "YES", // Most of one side lay undamaged
-    4: "NOT GIVEN", // McKee knew about valuable artefacts
+ const correctAnswers = {
+   // Questions 14–18: TRUE / FALSE / NOT GIVEN
+   14: "NO", // Local gulls and migrating arctic terns behave differently
+   15: "YES", // Experts' definitions vary according to study area
+   16: "NOT GIVEN", // No information on experts agreeing about aphids
+   17: "YES", // Aphids respond to changes in light
+   18: "YES", // Dingle compares different species' migratory behaviours
 
-    // Questions 5–8: Matching Dates
-    5: "C", // 1965 – Search launched
-    6: "B", // 1840 – Exploration stopped
-    7: "G", // 1982 – Hull agreed to be raised
-    8: "A", // 1836 – Site found by chance
+   // Questions 19–22: Complete with letters A–G
+   19: "G", // Migratory routes are likely to follow a straight line
+   20: "C", // Animals fatten themselves to prepare for migration
+   21: "D", // Migration is not repeated daily
+   22: "E", // Arctic terns ignore distractions
 
-    // Questions 9–13: Summary Completion
-    9: "lifting frame", // Attached to hull by wires
-    10: "hydraulic jacks", // To prevent hull being sucked into mud
-    11: "stabbing guides", // Legs are placed into
-    12: "lifting cradle", // Hull is lowered into
-    13: "air bags", // Used as extra protection for the hull
-  };
+   // Questions 23–26: Summary completion
+   23: "speed", // Pronghorns rely on eyesight and speed to avoid predators
+   24: "plains", // Winter home is on the plains
+   25: "bottlenecks", // Route contains three bottlenecks
+   26: "corridor", // Narrow corridor of land on the route
+ };
+
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/reading4Part32020");
@@ -192,7 +194,7 @@ const Test2Reading2016 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("   PASSAGE 2")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -209,35 +211,30 @@ const Test2Reading2016 = () => {
               {renderText("       You should spend about 20 minutes on")}
 
               <span className="text-lg font-bold">
-                {renderText("          Questions 1-13")}
+                {renderText("          Questions 14-26")}
               </span>
-              {renderText(" which are based on Reading  PASSAGE 1 below")}
+              {renderText(" which are based on Reading  PASSAGE 2 below")}
             </h1>
           </div>
 
           {/* left text */}
           <div className="w-full bg-white p-6 rounded-lg shadow-md space-y-5 overflow-y-scroll">
             <h1 className="text-2xl font-bold mb-2 text-center">
-              {renderText("Raising the Mary Rose")}
+              {renderText("Great Migrations")}
             </h1>
-
-            <p className="text-center text-lg italic mb-6">
-              {renderText(
-                "How a sixteenth-century warship was recovered from the seabed"
-              )}
-            </p>
 
             {/* A */}
             <h2 className="text-xl font-bold mb-3">{renderText("A")}</h2>
             <p className="text-lg">
+              {" "}
               {renderText(
-                "On 19 July 1545, English and French fleets were engaged in a sea battle off the coast of southern England in the area of water called the Solent, between Portsmouth and the Isle of Wight."
+                "Animal migration, however it is defined, is far more than just the movement of animals."
               )}
               {renderText(
-                " Among the English vessels was a warship by the name of Mary Rose."
+                "It can loosely be described as travel that takes place at regular intervals - often in an annual cycle - that may involve many members of a species, and is rewarded only after a long journey."
               )}
               {renderText(
-                " Built in Portsmouth some 35 years earlier, she had had a long and successful fighting career, and was a favourite of King Henry VIII."
+                " It suggests inherited instinct. The biologist Hugh Dingle has identified five characteristics that apply, in varying degrees and combinations, to all migrations."
               )}
               <span
                 className={`ml-2 ${
@@ -245,123 +242,80 @@ const Test2Reading2016 = () => {
                 }`}
               >
                 {renderText(
-                  "Accounts of what happened to the ship vary: while witnesses agree that she was not hit by the French, some maintain that she was outdated, overladen and sailing too low in the water, others that she was mishandled by undisciplined crew."
+                  "They are prolonged movements that carry animals outside familiar habitats; they tend to be linear, not zigzaggy; they involve special behaviours concerning preparation (such as overfeeding) and arrival; they demand special allocations of energy."
                 )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("1")}
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("19,20")}
+                  </span>
+                )}
+                {renderText(
+                  " And one more: migrating animals maintain an intense attentiveness to the greater mission, which keeps them undistracted by temptations and undeterred by challenges that would turn other animals aside."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("21")}
                   </span>
                 )}
               </span>
-              {renderText(
-                " What is undisputed, however, is that the Mary Rose sank into the Solent that day, taking at least 500 men with her."
-              )}
-              {renderText(
-                " After the battle, attempts were made to recover the ship, but these failed."
-              )}
             </p>
 
             {/* B */}
             <h2 className="text-xl font-bold my-4">{renderText("B")}</h2>
             <p className="text-lg">
-              {renderText(
-                "The Mary Rose came to rest on the seabed, lying on her starboard (right) side at an angle of approximately 60 degrees."
-              )}
-              {renderText(
-                " The hull (the body of the ship) acted as a trap for the sand and mud carried by Solent currents."
-              )}
-              {renderText(
-                " As a result, the starboard side filled rapidly, leaving the exposed port (left) side to be eroded by marine organisms and mechanical degradation."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "Because of the way the ship sank, nearly all of the starboard half survived intact."
-                )}
+                  "An arctic tern, on its 20,000 km flight from the extreme south of South America to the Arctic circle, will take no notice of a nice smelly herring offered from a bird-watcher's boat along the way."
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("3")}
+                    {renderText("14,22")}
                   </span>
                 )}
               </span>
               {renderText(
-                " During the seventeenth and eighteenth centuries, the entire site became covered with a layer of hard grey clay, which minimised further erosion."
+                " While local gulls will dive voraciously for such handouts, the tern flies on."
+              )}
+              {renderText(
+                "Why? The arctic tern resists distraction because it is driven at that moment by an instinctive sense of something we humans find admirable: larger purpose."
+              )}
+              {renderText(
+                " In other words, it is determined to reach its destination. The bird senses that it can eat, rest and mate later. Right now it is totally focused on the journey; its undivided intent is arrival."
               )}
             </p>
 
             {/* C */}
             <h2 className="text-xl font-bold my-4">{renderText("C")}</h2>
             <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Then, on 16 June 1836, some fishermen in the Solent found that their equipment was caught on an underwater obstruction, which turned out to be the Mary Rose."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("8")}
-                  </span>
-                )}
-              </span>
               {renderText(
-                " Diver John Deane happened to be exploring another sunken ship nearby, and the fishermen approached him, asking him to free their gear."
+                "Reaching some gravelly coastline in the Arctic, upon which other arctic terns have converged, will serve its larger purpose as shaped by evolution: finding a place, a time, and a set of circumstances in which it can successfully hatch and rear offspring."
               )}
-              {renderText(
-                " Deane dived down, and found the equipment caught on a timber protruding slightly from the seabed."
-              )}
-              {renderText(
-                " Exploring further, he uncovered several other timbers and a bronze gun."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Deane continued diving on the site intermittently until 1840, recovering several more guns, two bows, various timbers, part of a pump and various other small finds."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("6")}
-                  </span>
-                )}
-              </span>
             </p>
 
             {/* D */}
             <h2 className="text-xl font-bold my-4">{renderText("D")}</h2>
             <p className="text-lg">
-              {renderText(
-                "The Mary Rose then faded into obscurity for another hundred years."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "But in 1965, military historian and amateur diver Alexander McKee, in conjunction with the British Sub-Aqua Club, initiated a project called 'Solent Ships'."
-                )}
+                  "But migration is a complex issue, and biologists define it differently, depending in part on what sorts of animals they study. Joel Berger, of the University of Montana, who works on the American pronghorn and other large terrestrial mammals, prefers what he calls a simple, practical definition suited to his beasts: 'movements from a seasonal home area away to another home area and back again.'"
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("5")}
+                    {renderText("15")}
                   </span>
                 )}
               </span>
               {renderText(
-                " While on paper this was a plan to examine a number of known wrecks in the Solent, what McKee really hoped for was to find the Mary Rose."
-              )}
-              {renderText(
-                " Ordinary search techniques proved unsatisfactory, so McKee entered into collaboration with Harold E. Edgerton, professor of electrical engineering at the Massachusetts Institute of Technology."
-              )}
-              {renderText(
-                " In 1967, Edgerton's side-scan sonar systems revealed a large, unusually shaped object, which McKee believed was the Mary Rose."
+                " Generally the reason for such seasonal back-and-forth movement is to seek resources that aren't available within a single area year-round."
               )}
             </p>
 
@@ -369,75 +323,47 @@ const Test2Reading2016 = () => {
             <h2 className="text-xl font-bold my-4">{renderText("E")}</h2>
             <p className="text-lg">
               {renderText(
-                "Further excavations revealed stray pieces of timber and an iron gun."
+                "But daily vertical movements by zooplankton in the ocean - upward by night to seek food, downward by day to escape predators - can also be considered migration. So can the movement of aphids when, having depleted the young leaves on one food plant, their offspring then fly onward to a different host plant, with no one aphid ever returning to where it started."
               )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "But the climax to the operation came when, on 5 May 1971, part of the ship's frame was uncovered."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("4")}
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " Interest in the project grew, and in 1979, The Mary Rose Trust was formed, with Prince Charles as its President and Dr Margaret Rule its Archaeological Director."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "The operation was not given the go-ahead until January 1982, when all the necessary information was available."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("7")}
-                  </span>
-                )}
-              </span>
             </p>
 
             {/* F */}
             <h2 className="text-xl font-bold my-4">{renderText("F")}</h2>
             <p className="text-lg">
               {renderText(
-                "An important factor in trying to salvage the Mary Rose was that the remaining hull was an open shell."
+                "Dingle is an evolutionary biologist who studies insects. His definition is more intricate than Berger's, citing those five features that distinguish migration from other forms of movement."
               )}
-              {renderText(
-                " This led to an important decision being taken: namely to carry out the lifting operation in three very distinct stages."
-              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "The hull was attached to a lifting frame via a network of bolts and lifting wires."
-                )}
+                  " They allow for the fact that, for example, aphids will become sensitive to blue light (from the sky) when it's time for takeoff on their big journey, and sensitive to yellow light (reflected from tender young leaves) when it's appropriate to land. "
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("9")}
+                    {renderText("17")}
                   </span>
                 )}
               </span>
+              {renderText(
+                "Birds will fatten themselves with heavy feeding in advance of a long migrational flight."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "The problem of the hull being sucked back downwards into the mud was overcome by using 12 hydraulic jacks."
-                )}
+                  " The value of his definition, Dingle argues, is that it focuses attention on what the phenomenon of wildebeest migration shares with the phenomenon of the aphids, and therefore helps guide researchers towards understanding how evolution has produced them all. "
+                )}{" "}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("10")}
+                    {renderText("18")}
                   </span>
                 )}
               </span>
@@ -447,22 +373,87 @@ const Test2Reading2016 = () => {
             <h2 className="text-xl font-bold my-4">{renderText("G")}</h2>
             <p className="text-lg">
               {renderText(
-                "The lifting cradle was designed to fit the hull using archaeological survey drawings, and was fitted with air bags to provide additional cushioning for the hull's delicate timber framework."
+                "Human behaviour, however, is having a detrimental impact on animal migration. The pronghorn, which resembles an antelope, though they are unrelated, is the fastest land mammal of the New World."
               )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
+                {" "}
                 {renderText(
-                  "Finally, on 11 October 1982, millions of people around the world held their breath as the timber skeleton of the Mary Rose was lifted clear of the water, ready to be returned home to Portsmouth."
+                  " One population, which spends the summer in the mountainous Grand Teton National Park of the western USA, follows a narrow route from its summer range in the mountains, across a river, and down onto the plains."
+                )}{" "}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("24")}
+                  </span>
+                )}
+                {renderText(
+                  " Here they wait out the frozen months, feeding mainly on sagebrush blown clear of snow."
+                )}
+                {renderText(
+                  " These pronghorn are notable for the invariance of their migration route and the severity of its constriction at three bottlenecks."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("11")}
+                    {renderText("25")}
                   </span>
                 )}
               </span>
+
+              {renderText(
+                " If they can't pass through each of the three during their spring migration, they can't reach their bounty of summer grazing; if they can't pass through again in autumn, escaping south onto those windblown plains, they are likely to die trying to overwinter in the deep snow."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " Pronghorn, dependent on distance vision and speed to keep safe from predators, traverse high, open shoulders of land, where they can see and run."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("25")}
+                  </span>
+                )}
+                {renderText(
+                  " At one of the bottlenecks, forested hills rise to form a V, leaving a corridor of open ground only about 150 metres wide, filled with private homes."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " Increasing development is leading toward a crisis for the pronghorn, threatening to choke off their passageway."
+              )}
+            </p>
+
+            {/* H */}
+            <h2 className="text-xl font-bold my-4">{renderText("H")}</h2>
+            <p className="text-lg">
+              {renderText(
+                "Conservation scientists, along with some biologists and land managers within the USA's National Park Service and other agencies, are now working to preserve migrational behaviours, not just species and habitats."
+              )}
+              {renderText(
+                " A National Forest has recognised the path of the pronghorn, much of which passes across its land, as a protected migration corridor."
+              )}
+              {renderText(
+                " But neither the Forest Service nor the Park Service can control what happens on private land at a bottleneck."
+              )}
+              {renderText(
+                " And with certain other migrating species, the challenge is complicated further - by vastly greater distances traversed, more jurisdictions, more borders, more dangers along the way."
+              )}
+              {renderText(
+                " We will require wisdom and resoluteness to ensure that migrating species can continue their journeying a while longer."
+              )}
             </p>
           </div>
 
@@ -542,7 +533,7 @@ const Test2Reading2016 = () => {
             {/* 2nd step */}
             <div className="mt-5">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 1-4")}
+                {renderText("Questions 14-18")}
               </h2>
               <br />
               <h3 className="text-lg font-semibold mb-5">
@@ -550,7 +541,7 @@ const Test2Reading2016 = () => {
                   "Do the following statements agree with the information given in Reading Passage 3?"
                 )}{" "}
                 <br /> <br />
-                {renderText("In boxes 1-4 on your answer sheet, choose")}
+                {renderText("In boxes 14-18 on your answer sheet, choose")}
               </h3>
               <h3 className="flex gap-5 text-lg">
                 <span className="text-lg font-bold">{renderText("YES")}</span>{" "}
@@ -575,9 +566,9 @@ const Test2Reading2016 = () => {
               <br /> <br />
               {/* question dynamic */}
               <div className="space-y-6 leading-relaxed p-4">
-                <h2 className="text-lg font-bold">Questions 1-4</h2>
+                <h2 className="text-lg font-bold">Questions 14-18</h2>
                 {questions.map((q, qIndex) => {
-                  const answerKey = qIndex + 1;
+                  const answerKey = qIndex + 14;
                   const correct = correctAnswers[answerKey];
 
                   return (
@@ -622,12 +613,12 @@ const Test2Reading2016 = () => {
             {/* optional question */}
             <div className="space-y-4">
               <h1 className="text-lg font-bold">
-                {renderText("Questions 5-8")}
+                {renderText("Questions 19-22")}
               </h1>
 
               <p>
                 {renderText(
-                  "Look at the following statements (Questions 5-8) and the list of dates below."
+                  "Look at the following statements (Questions 19-22) and the list of dates below."
                 )}
               </p>
 
@@ -637,7 +628,7 @@ const Test2Reading2016 = () => {
 
               <p>
                 {renderText(
-                  "Choose the correct letter, A-G, next to Questions 5-8."
+                  "Choose the correct letter, A-G, next to Questions 19-22."
                 )}
               </p>
 
@@ -645,19 +636,32 @@ const Test2Reading2016 = () => {
               <div className="flex justify-center">
                 <div className="border border-black p-4 w-80">
                   <h2 className="text-xl font-bold text-center mb-3">
-                    {renderText("List of Dates")}
+                    {renderText("List of Behaviours")}
                   </h2>
 
                   <div className="flex items-center justify-center">
-                    {" "}
                     <ul className="space-y-1 text-lg">
-                      <li>{renderText("A. 1836")}</li>
-                      <li>{renderText("B. 1840")}</li>
-                      <li>{renderText("C. 1965")}</li>
-                      <li>{renderText("D. 1967")}</li>
-                      <li>{renderText("E. 1971")}</li>
-                      <li>{renderText("F. 1979")}</li>
-                      <li>{renderText("G. 1982")}</li>
+                      <li>
+                        {renderText("A. be discouraged by difficulties.")}
+                      </li>
+                      <li>
+                        {renderText(
+                          "B. travel on open land where they can look out for predators."
+                        )}
+                      </li>
+                      <li>
+                        {renderText(
+                          "C. eat more than they need for immediate purposes."
+                        )}
+                      </li>
+                      <li>{renderText("D. be repeated daily.")}</li>
+                      <li>{renderText("E. ignore distractions.")}</li>
+                      <li>
+                        {renderText(
+                          "F. be governed by the availability of water."
+                        )}
+                      </li>
+                      <li>{renderText("G. follow a straight line.")}</li>
                     </ul>
                   </div>
                 </div>
@@ -665,20 +669,22 @@ const Test2Reading2016 = () => {
 
               {/* ---------- Questions ---------- */}
               <div className="space-y-4 mt-4">
-                {/* Question 5 */}
+                {/* Question 19 */}
                 <p className="flex items-center gap-3 flex-wrap">
-                  <span className="font-bold text-lg">{renderText("5")}</span>
+                  <span className="font-bold text-lg">{renderText("19")}</span>
                   <span>
-                    {renderText("A search for the Mary Rose was launched.")}
+                    {renderText(
+                      "According to Dingle, migratory routes are likely to"
+                    )}
                   </span>
 
                   <div className="relative w-40">
                     <select
-                      value={userAnswers[5] || ""}
-                      onChange={(e) => handleInputChange(5, e.target.value)}
+                      value={userAnswers[19] || ""}
+                      onChange={(e) => handleInputChange(19, e.target.value)}
                       className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 pr-10"
                     >
-                      <option value="">{renderText("5")}</option>
+                      <option value="">{renderText("19")}</option>
                       <option value="A">A</option>
                       <option value="B">B</option>
                       <option value="C">C</option>
@@ -691,22 +697,22 @@ const Test2Reading2016 = () => {
                   </div>
                 </p>
 
-                {/* Question 6 */}
+                {/* Question 20 */}
                 <p className="flex items-center gap-3 flex-wrap">
-                  <span className="font-bold text-lg">{renderText("6")}</span>
+                  <span className="font-bold text-lg">{renderText("20")}</span>
                   <span>
                     {renderText(
-                      "One person's exploration of the Mary Rose site stopped."
+                      "To prepare for migration, animals are likely to"
                     )}
                   </span>
 
                   <div className="relative w-40">
                     <select
-                      value={userAnswers[6] || ""}
-                      onChange={(e) => handleInputChange(6, e.target.value)}
+                      value={userAnswers[20] || ""}
+                      onChange={(e) => handleInputChange(20, e.target.value)}
                       className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 pr-10"
                     >
-                      <option value="">{renderText("6")}</option>
+                      <option value="">{renderText("20")}</option>
                       <option value="A">A</option>
                       <option value="B">B</option>
                       <option value="C">C</option>
@@ -719,22 +725,20 @@ const Test2Reading2016 = () => {
                   </div>
                 </p>
 
-                {/* Question 7 */}
+                {/* Question 21 */}
                 <p className="flex items-center gap-3 flex-wrap">
-                  <span className="font-bold text-lg">{renderText("7")}</span>
+                  <span className="font-bold text-lg">{renderText("21")}</span>
                   <span>
-                    {renderText(
-                      "It was agreed that the hull of the Mary Rose should be raised."
-                    )}
+                    {renderText("During migration, animals are unlikely to")}
                   </span>
 
                   <div className="relative w-40">
                     <select
-                      value={userAnswers[7] || ""}
-                      onChange={(e) => handleInputChange(7, e.target.value)}
+                      value={userAnswers[21] || ""}
+                      onChange={(e) => handleInputChange(21, e.target.value)}
                       className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 pr-10"
                     >
-                      <option value="">{renderText("7")}</option>
+                      <option value="">{renderText("21")}</option>
                       <option value="A">A</option>
                       <option value="B">B</option>
                       <option value="C">C</option>
@@ -747,22 +751,22 @@ const Test2Reading2016 = () => {
                   </div>
                 </p>
 
-                {/* Question 8 */}
+                {/* Question 22 */}
                 <p className="flex items-center gap-3 flex-wrap">
-                  <span className="font-bold text-lg">{renderText("8")}</span>
+                  <span className="font-bold text-lg">{renderText("22")}</span>
                   <span>
                     {renderText(
-                      "The site of the Mary Rose was found by chance."
+                      "Arctic terns illustrate migrating animals' ability to"
                     )}
                   </span>
 
                   <div className="relative w-40">
                     <select
-                      value={userAnswers[8] || ""}
-                      onChange={(e) => handleInputChange(8, e.target.value)}
+                      value={userAnswers[22] || ""}
+                      onChange={(e) => handleInputChange(22, e.target.value)}
                       className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 pr-10"
                     >
-                      <option value="">{renderText("8")}</option>
+                      <option value="">{renderText("22")}</option>
                       <option value="A">A</option>
                       <option value="B">B</option>
                       <option value="C">C</option>
@@ -782,7 +786,7 @@ const Test2Reading2016 = () => {
           {/* normal title */}
           <div className="space-y-4 leading-relaxed">
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 9-13")}
+              {renderText("Questions 23-26")}
             </h2>
 
             <h3 className="text-lg mb-5">
@@ -796,132 +800,109 @@ const Test2Reading2016 = () => {
 
             <h1 className="text-lg">
               {renderText(
-                "Write your answers in boxes 9-13 on your answer sheet."
+                "Write your answers in boxes 23-26 on your answer sheet."
               )}
             </h1>
 
             <br />
           </div>
-          <div className="flex items-center justify-center">
-            <img
-              className="w-96 h-96"
-              src="https://i.ibb.co.com/3JWd8m8/a11t2r1.jpg"
-              alt="Eikhane image bosabo"
-            />
-          </div>
+
           {/* box text */}
           <div className="overflow-x-auto border-2 p-5 mt-5 border-black bg-white rounded-lg">
             <ul className="space-y-4">
-              {/* Question 9 */}
+              {/* Question 23 */}
               <p className="text-lg">
-                {renderText("Attached to hull by wires")}
+                {renderText("Pronghorns rely on their eyesight and")}
 
                 <button
-                  onClick={() => toggleButton(9)}
+                  onClick={() => toggleButton(23)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
+                    activeButtons[23]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  9
+                  23
                 </button>
 
                 <input
-                  value={userAnswers[9] || ""}
-                  onChange={(e) => handleInputChange(9, e.target.value)}
+                  value={userAnswers[23] || ""}
+                  onChange={(e) => handleInputChange(23, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
               </p>
 
-              {/* Question 10 */}
+              {/* Question 24 */}
               <p className="text-lg">
-                {renderText("To prevent hull being sucked into mud")}
+                {renderText(
+                  "One particular population's summer habitat is a national park, and their winter home is on the"
+                )}
 
                 <button
-                  onClick={() => toggleButton(10)}
+                  onClick={() => toggleButton(24)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
+                    activeButtons[24]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  10
+                  24
                 </button>
 
                 <input
-                  value={userAnswers[10] || ""}
-                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  value={userAnswers[24] || ""}
+                  onChange={(e) => handleInputChange(24, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
               </p>
 
-              {/* Question 11 */}
+              {/* Question 25 */}
               <p className="text-lg">
-                {renderText("Legs are placed into")}
+                {renderText(
+                  "However, their route between these two areas contains three"
+                )}
 
                 <button
-                  onClick={() => toggleButton(11)}
+                  onClick={() => toggleButton(25)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[11]
+                    activeButtons[25]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  11
+                  25
                 </button>
 
                 <input
-                  value={userAnswers[11] || ""}
-                  onChange={(e) => handleInputChange(11, e.target.value)}
+                  value={userAnswers[25] || ""}
+                  onChange={(e) => handleInputChange(25, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
               </p>
 
-              {/* Question 12 */}
+              {/* Question 26 */}
               <p className="text-lg">
-                {renderText("Hull is lowered into")}
+                {renderText(
+                  "One problem is the construction of new homes in a narrow"
+                )}
 
                 <button
-                  onClick={() => toggleButton(12)}
+                  onClick={() => toggleButton(26)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[12]
+                    activeButtons[26]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  12
+                  26
                 </button>
 
                 <input
-                  value={userAnswers[12] || ""}
-                  onChange={(e) => handleInputChange(12, e.target.value)}
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-              </p>
-
-              {/* Question 13 */}
-              <p className="text-lg">
-                {renderText("Used as extra protection for the hull")}
-
-                <button
-                  onClick={() => toggleButton(13)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[13]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  13
-                </button>
-
-                <input
-                  value={userAnswers[13] || ""}
-                  onChange={(e) => handleInputChange(13, e.target.value)}
+                  value={userAnswers[26] || ""}
+                  onChange={(e) => handleInputChange(26, e.target.value)}
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
                 />
@@ -955,11 +936,11 @@ const Test2Reading2016 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1-13)
+                    All Answers (14-26)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -1026,10 +1007,10 @@ const Test2Reading2016 = () => {
           </div>
         </div>
       </div>
- 
-<Reading2Pagination2016></Reading2Pagination2016>
+
+      <Reading3Pagination2016></Reading3Pagination2016>
     </div>
   );
 };
 
-export default Test2Reading2016;
+export default Reading3Part22016;

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+import Speaking4Pagination2016 from "../Pagination2016/Speaking4Pagination2016";
 
 const Test4Speaking2016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,20 +17,19 @@ const Test4Speaking2016 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-const questions = [
-  "How did your parents choose your name?",
-  "Does your name have any special meaning?",
-  "Is your name common or unusual in your country?",
-  "If you could change your name, would you? ",
-];
+  const questions = [
+    "How did your parents choose your name?",
+    "Does your name have any special meaning?",
+    "Is your name common or unusual in your country?",
+    "If you could change your name, would you? ",
+  ];
 
-const questionKeywords = [
-  ["parents", "choose", "name", "how", "reason", "why", "why not"],
-  ["name", "special", "meaning", "significance", "why", "why not"],
-  ["name", "common", "unusual", "popular", "rare", "country", "typical"],
-  ["change", "name", "would", "why", "why not", "prefer", "alter"],
-];
-
+  const questionKeywords = [
+    ["parents", "choose", "name", "how", "reason", "why", "why not"],
+    ["name", "special", "meaning", "significance", "why", "why not"],
+    ["name", "common", "unusual", "popular", "rare", "country", "typical"],
+    ["change", "name", "would", "why", "why not", "prefer", "alter"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -253,6 +253,7 @@ const questionKeywords = [
           </div>
         </div>
       </div>
+      <Speaking4Pagination2016></Speaking4Pagination2016>
       {/* <Speaking1Pagination2017></Speaking1Pagination2017> */}
       {/* <Speaking1Pagination2018></Speaking1Pagination2018> */}
     </div>

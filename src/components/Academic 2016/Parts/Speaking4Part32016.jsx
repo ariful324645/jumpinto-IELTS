@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2016 from "../Pagination2016/Speaking3Pagination2016";
 
-const Test3Speaking2016 = () => {
+
+import Speaking4Pagination2016 from "../Pagination2016/Speaking4Pagination2016";
+
+const Speaking4Part32016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,30 +18,23 @@ const Test3Speaking2016 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
-
 const questions = [
-  "What type of photos do you like taking? ",
-  "What do you do with photos you take?",
-  "When you visit other places, do you take photos or buy postcards? ",
-  "Do you like people taking photos of you?",
+  "What are the most popular kinds of TV programmes in your country? ",
+  "Do you think there are too many game shows on TV nowadays? ",
+  "Do you think TV is the main way for people to get the news in your country? What other ways are there?",
+  "What types of products are advertised most often on TV?",
+  "Do you think that people pay attention to adverts on TV? Why do you think that is?",
+  "How important are regulations on TV advertising?",
 ];
 
 const questionKeywords = [
-  ["type", "photos", "like", "taking", "why", "why not", "favourite", "style"],
-  ["what", "do", "with", "photos", "why", "why not", "share", "keep"],
-  ["visit", "places", "take", "photos", "buy", "postcards", "why", "why not"],
-  [
-    "people",
-    "taking",
-    "photos",
-    "you",
-    "like",
-    "why",
-    "why not",
-    "comfortable",
-  ],
+  ["TV", "programmes", "popular", "country", "why"],
+  ["game shows", "too many", "TV", "nowadays", "why"],
+  ["TV", "main way", "news", "people", "other ways"],
+  ["products", "advertised", "TV", "types", "common"],
+  ["people", "pay attention", "adverts", "TV", "why"],
+  ["regulations", "TV", "advertising", "importance", "rules"],
 ];
-
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -188,25 +183,42 @@ const questionKeywords = [
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
+          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Photographs</h1>
-            <li>What type of photos do you like taking? [Why/Why not?]</li>
-            <li>What do you do with photos you take? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Different types of TV programmes & TV advertising
+            </h1>
+
+            <p className="text-lg font-bold">
+              Different types of TV programmes
+            </p>
             <li>
-              When you visit other places, do you take photos or buy postcards?
-              [Why/Why not?]
+              What are the most popular kinds of TV programmes in your country?
+              Why is this?
             </li>
-            <li>Do you like people taking photos of you? [Why/Why not?]</li>
+            <li>
+              Do you think there are too many game shows on TV nowadays? Why?
+            </li>
+            <li>
+              Do you think TV is the main way for people to get the news in your
+              country? What other ways are there?
+            </li>
+
+            <p className="text-lg font-bold mt-4">TV advertising</p>
+            <li>What types of products are advertised most often on TV?</li>
+            <li>
+              Do you think that people pay attention to adverts on TV? Why do
+              you think that is?
+            </li>
+            <li>How important are regulations on TV advertising?</li>
           </ul>
         </div>
 
@@ -266,9 +278,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-   <Speaking3Pagination2016></Speaking3Pagination2016>
+      <Speaking4Pagination2016></Speaking4Pagination2016>
     </div>
   );
 };
 
-export default Test3Speaking2016;
+export default Speaking4Part32016;

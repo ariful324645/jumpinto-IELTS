@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2016 from "../Pagination2016/Speaking3Pagination2016";
 
-const Test3Speaking2016 = () => {
+import Speaking2Pagination2016 from "../Pagination2016/Speaking2Pagination2016";
+
+const Speaking2Part32016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,30 +17,23 @@ const Test3Speaking2016 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const questions = [
+    "What kinds of books are most popular with children in your country? ",
+    "Why do you think some children do not read books very often?",
+    "How do you think children can be encouraged to read more?",
+    "Are there any occasions when reading at speed is a useful skill to have? ",
+    "Are there any jobs where people need to read a lot?",
+    "Do you think that reading novels is more interesting than reading factual books? ",
+  ];
 
-const questions = [
-  "What type of photos do you like taking? ",
-  "What do you do with photos you take?",
-  "When you visit other places, do you take photos or buy postcards? ",
-  "Do you like people taking photos of you?",
-];
-
-const questionKeywords = [
-  ["type", "photos", "like", "taking", "why", "why not", "favourite", "style"],
-  ["what", "do", "with", "photos", "why", "why not", "share", "keep"],
-  ["visit", "places", "take", "photos", "buy", "postcards", "why", "why not"],
-  [
-    "people",
-    "taking",
-    "photos",
-    "you",
-    "like",
-    "why",
-    "why not",
-    "comfortable",
-  ],
-];
-
+  const questionKeywords = [
+    ["books", "children", "popular", "country", "why"],
+    ["children", "not read", "books", "reasons", "habits"],
+    ["encouraged", "children", "read more", "motivation", "methods"],
+    ["reading speed", "useful", "occasions", "skill"],
+    ["jobs", "read a lot", "reading", "work", "professions"],
+    ["novels", "factual books", "interesting", "comparison", "why"],
+  ];
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -188,25 +182,44 @@ const questionKeywords = [
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
+          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Photographs</h1>
-            <li>What type of photos do you like taking? [Why/Why not?]</li>
-            <li>What do you do with photos you take? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Reading and children & Reading for different purposes
+            </h1>
+
+            <p className="text-lg font-bold">Reading and children</p>
             <li>
-              When you visit other places, do you take photos or buy postcards?
-              [Why/Why not?]
+              What kinds of books are most popular with children in your
+              country? Why do you think that is?
             </li>
-            <li>Do you like people taking photos of you? [Why/Why not?]</li>
+            <li>
+              Why do you think some children do not read books very often?
+            </li>
+            <li>How do you think children can be encouraged to read more?</li>
+
+            <p className="text-lg font-bold mt-4">
+              Reading for different purposes
+            </p>
+            <li>
+              Are there any occasions when reading at speed is a useful skill to
+              have? What are they?
+            </li>
+            <li>
+              Are there any jobs where people need to read a lot? What are they?
+            </li>
+            <li>
+              Do you think that reading novels is more interesting than reading
+              factual books? Why is that?
+            </li>
           </ul>
         </div>
 
@@ -266,9 +279,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-   <Speaking3Pagination2016></Speaking3Pagination2016>
+      <Speaking2Pagination2016></Speaking2Pagination2016>
     </div>
   );
 };
 
-export default Test3Speaking2016;
+export default Speaking2Part32016;
