@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2016 from "../Pagination2016/Speaking3Pagination2016";
 
-const Test3Speaking2016 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+
+import Speaking1Pagination2016 from "../Pagination2016/Speaking1Pagination2016";
+
+const Speaking1Part22016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,29 +18,18 @@ const Test3Speaking2016 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
 
 const questions = [
-  "What type of photos do you like taking? ",
-  "What do you do with photos you take?",
-  "When you visit other places, do you take photos or buy postcards? ",
-  "Do you like people taking photos of you?",
+  "Whose house or apartment this is?",
+  "Where the house or apartment is?",
+  "What it looks like inside?",
 ];
 
 const questionKeywords = [
-  ["type", "photos", "like", "taking", "why", "why not", "favourite", "style"],
-  ["what", "do", "with", "photos", "why", "why not", "share", "keep"],
-  ["visit", "places", "take", "photos", "buy", "postcards", "why", "why not"],
-  [
-    "people",
-    "taking",
-    "photos",
-    "you",
-    "like",
-    "why",
-    "why not",
-    "comfortable",
-  ],
+  ["whose", "owner", "house", "apartment", "belong"],
+  ["where", "location", "area", "house", "apartment"],
+  ["what", "looks", "inside", "interior", "rooms", "design"],
 ];
 
 
@@ -188,26 +180,38 @@ const questionKeywords = [
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1> <br />
+          <p className="text-lg">
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
+          </p>
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Photographs</h1>
-            <li>What type of photos do you like taking? [Why/Why not?]</li>
-            <li>What do you do with photos you take? [Why/Why not?]</li>
-            <li>
-              When you visit other places, do you take photos or buy postcards?
-              [Why/Why not?]
-            </li>
-            <li>Do you like people taking photos of you? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A house/apartment that someone you know lives in
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a house or apartment that someone you know lives in.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>Whose house or apartment this is</li>
+            <li>Where the house or apartment is</li>
+            <li>What it looks like inside</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            And explain what you like or dislike about this person's house or
+            apartment.
+          </p>
         </div>
 
         {/* right div */}
@@ -266,9 +270,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-   <Speaking3Pagination2016></Speaking3Pagination2016>
+      <Speaking1Pagination2016></Speaking1Pagination2016>
     </div>
   );
 };
 
-export default Test3Speaking2016;
+export default Speaking1Part22016;

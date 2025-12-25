@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2016 from "../Pagination2016/Speaking3Pagination2016";
 
-const Test3Speaking2016 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+import Speaking4Pagination2016 from "../Pagination2016/Speaking4Pagination2016";
+
+const Speaking4Part22016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,30 +17,20 @@ const Test3Speaking2016 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
 
 const questions = [
-  "What type of photos do you like taking? ",
-  "What do you do with photos you take?",
-  "When you visit other places, do you take photos or buy postcards? ",
-  "Do you like people taking photos of you?",
+  "What the documentary was about?",
+  "Why you decided to watch it?",
+  "What you learnt during the documentary?",
 ];
 
 const questionKeywords = [
-  ["type", "photos", "like", "taking", "why", "why not", "favourite", "style"],
-  ["what", "do", "with", "photos", "why", "why not", "share", "keep"],
-  ["visit", "places", "take", "photos", "buy", "postcards", "why", "why not"],
-  [
-    "people",
-    "taking",
-    "photos",
-    "you",
-    "like",
-    "why",
-    "why not",
-    "comfortable",
-  ],
+  ["documentary", "about", "topic", "content"],
+  ["why", "decided", "watch", "reason", "choice"],
+  ["what", "learnt", "during", "documentary", "knowledge", "lesson"],
 ];
+
 
 
   // ▶ Speak current question
@@ -188,26 +180,38 @@ const questionKeywords = [
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1> <br />
+          <p className="text-lg">
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
+          </p>
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Photographs</h1>
-            <li>What type of photos do you like taking? [Why/Why not?]</li>
-            <li>What do you do with photos you take? [Why/Why not?]</li>
-            <li>
-              When you visit other places, do you take photos or buy postcards?
-              [Why/Why not?]
-            </li>
-            <li>Do you like people taking photos of you? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A TV documentary you watched that was particularly interesting
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a TV documentary you watched that was particularly
+              interesting.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>What the documentary was about</li>
+            <li>Why you decided to watch it</li>
+            <li>What you learnt during the documentary</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            And explain why the TV documentary was particularly interesting.
+          </p>
         </div>
 
         {/* right div */}
@@ -266,9 +270,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-   <Speaking3Pagination2016></Speaking3Pagination2016>
+      <Speaking4Pagination2016></Speaking4Pagination2016>
     </div>
   );
 };
 
-export default Test3Speaking2016;
+export default Speaking4Part22016;

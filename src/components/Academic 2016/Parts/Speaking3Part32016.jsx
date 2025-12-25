@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
+
+
 import Speaking3Pagination2016 from "../Pagination2016/Speaking3Pagination2016";
 
-const Test3Speaking2016 = () => {
+const Speaking2Part32016 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,28 +18,22 @@ const Test3Speaking2016 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
-
 const questions = [
-  "What type of photos do you like taking? ",
-  "What do you do with photos you take?",
-  "When you visit other places, do you take photos or buy postcards? ",
-  "Do you like people taking photos of you?",
+  "What types of weather do people in your country dislike most?",
+  "What jobs can be affected by different weather conditions?",
+  "Are there any important festivals in your country that celebrate a season or type of weather?",
+  "How important do you think it is for everyone to check what the next day's weather will be? ",
+  "What is the best way to get accurate information about the weather?",
+  "How easy or difficult is it to predict the weather in your country? Why is that?",
 ];
 
 const questionKeywords = [
-  ["type", "photos", "like", "taking", "why", "why not", "favourite", "style"],
-  ["what", "do", "with", "photos", "why", "why not", "share", "keep"],
-  ["visit", "places", "take", "photos", "buy", "postcards", "why", "why not"],
-  [
-    "people",
-    "taking",
-    "photos",
-    "you",
-    "like",
-    "why",
-    "why not",
-    "comfortable",
-  ],
+  ["weather", "dislike", "people", "country", "why"],
+  ["jobs", "affected", "weather", "conditions", "why"],
+  ["festivals", "celebrate", "season", "weather", "country"],
+  ["weather forecast", "check", "next day", "important", "why"],
+  ["accurate", "weather", "information", "forecast", "best way"],
+  ["predict", "weather", "easy", "difficult", "country", "why"],
 ];
 
 
@@ -188,25 +184,46 @@ const questionKeywords = [
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
+          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Photographs</h1>
-            <li>What type of photos do you like taking? [Why/Why not?]</li>
-            <li>What do you do with photos you take? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Types of weather & Weather forecasts
+            </h1>
+
+            <p className="text-lg font-bold">Types of weather</p>
             <li>
-              When you visit other places, do you take photos or buy postcards?
-              [Why/Why not?]
+              What types of weather do people in your country dislike most? Why
+              is that?
             </li>
-            <li>Do you like people taking photos of you? [Why/Why not?]</li>
+            <li>
+              What jobs can be affected by different weather conditions? Why?
+            </li>
+            <li>
+              Are there any important festivals in your country that celebrate a
+              season or type of weather?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Weather forecasts</p>
+            <li>
+              How important do you think it is for everyone to check what the
+              next day's weather will be? Why?
+            </li>
+            <li>
+              What is the best way to get accurate information about the
+              weather?
+            </li>
+            <li>
+              How easy or difficult is it to predict the weather in your
+              country? Why is that?
+            </li>
           </ul>
         </div>
 
@@ -266,9 +283,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-   <Speaking3Pagination2016></Speaking3Pagination2016>
+      <Speaking3Pagination2016></Speaking3Pagination2016>
     </div>
   );
 };
 
-export default Test3Speaking2016;
+export default Speaking2Part32016;

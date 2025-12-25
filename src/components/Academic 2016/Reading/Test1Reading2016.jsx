@@ -501,7 +501,7 @@ const Test1Reading2016 = () => {
                 )}
               </div>
             </div>
-            {/* 2nd step */}
+            {/* box */}
 
             <div>
               <h2 className="text-lg font-bold mb-3">
