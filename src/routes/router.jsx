@@ -326,7 +326,23 @@ import Test4Reading2015 from "../components/Academic 2015/Reading/Test4Reading20
 import Test3Reading2015 from "../components/Academic 2015/Reading/Test3Reading2015";
 import Test1Writing2015 from "../components/Academic 2015/Writing/Test1Writing2015";
 import Test2Writing2015 from "../components/Academic 2015/Writing/Test2Writing2015";
-
+import Listening2Part22015 from "../components/Academic 2015/Parts/Listening2Part22015";
+import Listening2Part32015 from "../components/Academic 2015/Parts/Listening2Part32015";
+import Listening2Part42015 from "../components/Academic 2015/Parts/Listening2Part42015";
+import Listening3Part22015 from "../components/Academic 2015/Parts/Listening3Part22015";
+import Listening3Part32015 from "../components/Academic 2015/Parts/Listening3Part32015";
+import Listening3Part42015 from "../components/Academic 2015/Parts/Listening3Part42015";
+import Listening4Part22015 from "../components/Academic 2015/Parts/Listening4Part22015";
+import Listening4Part32015 from "../components/Academic 2015/Parts/Listening4Part32015";
+import Listening4Part42015 from "../components/Academic 2015/Parts/Listening4Part42015";
+import Reading1Part22015 from "../components/Academic 2015/Parts/Reading1Part22015";
+import Reading1Part32015 from "../components/Academic 2015/Parts/Reading1Part32015";
+import Reading2Part32015 from "../components/Academic 2015/Parts/Reading2Part32015";
+import Reading2Part22015 from "../components/Academic 2015/Parts/Reading2Part22015";
+import Reading3Part22015 from "../components/Academic 2015/Parts/Reading3Part22015";
+import Reading3Part32015 from "../components/Academic 2015/Parts/Reading3Part32015";
+import Reading4Part22015 from "../components/Academic 2015/Parts/Reading4Part22015";
+import Reading4Part32015 from "../components/Academic 2015/Parts/Reading4Part32015";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -1589,9 +1605,22 @@ export const router = createBrowserRouter([
         path: "/listening1Part42015",
         Component: Listening1Part42015,
       },
+
       {
         path: "/2015/Test 2/listening",
         Component: Test2Listening2015,
+      },
+      {
+        path: "/listening2Part22015",
+        Component: Listening2Part22015,
+      },
+      {
+        path: "/listening2Part32015",
+        Component: Listening2Part32015,
+      },
+      {
+        path: "/listening2Part42015",
+        Component: Listening2Part42015,
       },
       // {
       //   path: "/listening2Part22016",
@@ -1609,6 +1638,19 @@ export const router = createBrowserRouter([
         path: "/2015/Test 3/listening",
         Component: Test3Listening2015,
       },
+      {
+        path: "/listening3Part22015",
+        Component: Listening3Part22015,
+      },
+      {
+        path: "/listening3Part32015",
+        Component: Listening3Part32015,
+      },
+      {
+        path: "/listening3Part42015",
+        Component: Listening3Part42015,
+      },
+
       // {
       //   path: "/listening3Part22016",
       //   Component: Listening3Part22016,
@@ -1625,6 +1667,18 @@ export const router = createBrowserRouter([
         path: "/2015/Test 4/listening",
         Component: Test4Listening2015,
       },
+      {
+        path: "/listening4Part22015",
+        Component: Listening4Part22015,
+      },
+      {
+        path: "/listening4Part32015",
+        Component: Listening4Part32015,
+      },
+      {
+        path: "/listening4Part42015",
+        Component: Listening4Part42015,
+      },
       // {
       //   path: "/listening4Part22016",
       //   Component: Listening4Part22016,
@@ -1637,6 +1691,15 @@ export const router = createBrowserRouter([
         path: "/2015/Test 1/reading",
         Component: Test1Reading2015,
       },
+      {
+        path: "/reading1Part22015",
+        Component: Reading1Part22015,
+      },
+      {
+        path: "/reading1Part32015",
+        Component: Reading1Part32015,
+      },
+
       // {
       //   path: "/reading1Part22016",
       //   Component: Reading1Part22016,
@@ -1650,12 +1713,37 @@ export const router = createBrowserRouter([
         Component: Test2Reading2015,
       },
       {
+        path: "/reading2Part22015",
+        Component: Reading2Part22015,
+      },
+      {
+        path: "/reading2Part32015",
+        Component: Reading2Part32015,
+      },
+      {
         path: "/2015/Test 3/reading",
         Component: Test3Reading2015,
       },
       {
+        path: "/reading3Part22015",
+        Component: Reading3Part22015,
+      },
+      {
+        path: "/reading3Part32015",
+        Component: Reading3Part32015,
+      },
+
+      {
         path: "/2015/Test 4/reading",
         Component: Test4Reading2015,
+      },
+      {
+        path: "/reading4Part22015",
+        Component: Reading4Part22015,
+      },
+      {
+        path: "/reading4Part32015",
+        Component: Reading4Part32015,
       },
       {
         path: "/2015/Test 1/writing",
