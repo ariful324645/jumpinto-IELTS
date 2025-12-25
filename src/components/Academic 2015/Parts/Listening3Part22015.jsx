@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+import Listening3Pagination2015 from "../Pagination 2015/Listening3Pagination2015";
 
-const Listening1Part42015 = () => {
+const Listening3Part22015 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,78 +28,250 @@ const Listening1Part42015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 4. You will hear a university lecture about an endangered bear in British Columbia, Canada, known as the spirit bear.",
-        "First, you have some time to look at questions 31 to 40.",
-        "Now listen carefully and answer questions 31 to 40.",
+        "Section 1. You will hear a man interviewing a woman in the street about her use of transport.",
+        "First, you have some time to look at questions 1 to 5.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
       ],
     },
     {
-      speaker: "SPEAKER",
+      speaker: "INTERVIEWER",
+      text: ["Excuse me."],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Yes?"],
+    },
+    {
+      speaker: "INTERVIEWER",
       text: [
-        "Today we continue our series on ecology and conservation with a look at a particularly endangered member of the black bear family.",
-        {
-          text: "One in ten black bears is actually born with a white coat, which is the result of a special gene that surfaces in a few.",
-          number: 31,
-        },
-        {
-          text: "Local people have named it the spirit bear, and according to the legends of these communities, its snowy fur brings with it a special power.",
-          number: 32,
-        },
-        {
-          text: "Because of this, it has always been highly regarded by them, so much that they do not speak of seeing it to anyone else.",
-          number: 33,
-        },
-        "It is their way of protecting it when strangers visit the area.",
-        "The white bear's habitat is quite interesting.",
-        "The bear's strong relationship with the old growth rainforest is a complex one.",
-        "The white bear relies on the huge centuries-old trees in the forest in many ways.",
-        {
-          text: "For example, the old growth trees have extremely long roots that help prevent erosion of the soil along the banks of the many fish streams.",
-          number: 34,
-        },
-        "Keeping these banks intact is important, because these streams are home to salmon, which are the bear's main food source.",
-        "In return, the bears' feeding habits nurture the forest.",
-        "As the bears eat the salmon, they discard the skin and bones in great amounts on the forest floor, which provide vital nutrients.",
-        "These produce lush vegetation that sustains thousands of other types of life forms, from birds to insects and more.",
-        {
-          text: "Today, the spirit bear lives off the coast of the province of British Columbia on a few islands.",
-          number: 35,
-        },
-        "There is great concern for their survival, since it is estimated that less than 200 of these white bears remain.",
-        "The best way to protect them is to make every effort to preserve the delicate balance of their forest environment, in other words, their ecosystem.",
-        "The greatest threat to the bear's existence is the loss of its habitat.",
-        "Over many years, logging companies have stripped the land by cutting down a large number of trees.",
-        {
-          text: "In addition, they have built roads which have fractured the areas where the bear usually feeds, and many hibernation sites have also been lost.",
-          number: 36,
-        },
-        {
-          text: "The logging of the trees along the streams has damaged the places where the bears fish.",
-          number: 37,
-        },
-        "To make matters worse, the number of salmon in those streams is declining, because there is no legal limit on fishing at the moment.",
-        {
-          text: "All these influences have a negative impact on the spirit bear's very existence, which is made all the more fragile by the fact that reproduction among these bears has always been disappointingly low.",
-          number: 38,
-        },
-        "And so, what's the situation going forward?",
-        "Community organizations, environmental groups, and the British Columbia government are now working together on the problem.",
-        {
-          text: "The government is now requiring logging companies to adopt a better logging method, which is a positive step.",
-          number: 39,
-        },
-        "However, these measures alone may not be sufficient to ensure a healthy population of the spirit bear in the future.",
-        {
-          text: "While it is important to maintain the spirit bear's habitat, there also needs to be more emphasis on its expansion.",
-          number: 40,
-        },
-        "The move is justified, as it will also create space for other bears that are losing their homes.",
+        "I wonder if you could spare a few minutes to do a survey on transport.",
+        "It won't take long.",
       ],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Uh. No, that's fine."],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "Oh, lovely.",
+        "The survey is on behalf of the local council.",
+        "They'd like to know about what transport you use, and any suggestions for improvement.",
+        "Can I start by asking you how you traveled to town today?",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Sure, I came on the bus."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 4.",
+        "The woman traveled to town by bus, so bus has been written in the space.",
+        "Now we shall begin.",
+        "You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 5.",
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Excuse me."],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Yes?"],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "I wonder if you could spare a few minutes to do a survey on transport.",
+        "It won't take long.",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Uh. No, that's fine."],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "Oh, lovely.",
+        "The survey is on behalf of the local council.",
+        "They'd like to know about what transport you use, and any suggestions for improvement.",
+        "Can I start by asking you how you traveled to town today?",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Sure, I came on the bus."],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "Great.",
+        "Now can I get a few details about yourself?",
+        "OK, what's your name?",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        "It's Luisa.",
+        {
+          text: "Hardie.",
+          number: 1,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Can you spell that please?"],
+    },
+    {
+      speaker: "LUISA",
+      text: ["Yes, it's HARDIE."],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Great, thanks, and can I have your address?"],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        {
+          text: "It's 19 White Stone Road.",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Oh, right, I know that area.", "It's Bradfield, isn't it?"],
+    },
+    {
+      speaker: "LUISA",
+      text: ["That's right."],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Is the postcode GT7?"],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        {
+          text: "It's actually GT82LC.",
+          number: 3,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Great, and could I ask what your job is?", "Are you a student?"],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        "I've actually just finished my training.",
+        {
+          text: "I'm a hairdresser.",
+          number: 4,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "All right, and one more question in this section.",
+        "What is the reason for you coming into town today?",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        "Actually, it's not for shopping today, which would be my normal reason.",
+        {
+          text: "But to see the dentist.",
+          number: 5,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Right, thanks."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the interview, you have some time to look at questions 6 to 10.",
+        "Now listen and answer questions 6 to 10.",
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "Now, in this last section, I'd like you to give us some ideas about the facilities and arrangements in the city for getting to and from work.",
+        "Any suggestions you have for improvements?",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        {
+          text: "Well, something I've thought about for some time is that when I do walk, and I'm doing a later shift, I think the lighting should be better.",
+          number: 6,
+        },
+        "And of course, I think it's a real shame they've been cutting down on the number of footpaths.",
+        "They should have more of those.",
+        "Then people would walk more.",
+        {
+          text: "And I don't think there are enough trains.",
+          number: 7,
+        },
+        "That's why I don't use them.",
+        "You have to wait so long.",
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Thanks, and finally, I'd like to ask your opinion on cycling."],
+    },
+    {
+      speaker: "LUISA",
+      text: [
+        "Well, where I work, there are no safe places to leave your bikes.",
+        {
+          text: "",
+          number: 8,
+        },
+        "Also I'd have to cycle uphill, and on a hot day I'd arrive at work pretty sweaty.",
+        {
+          text: "So, I think I need a shower somewhere at work.",
+          number: 9,
+        },
+        {
+          text: "And I wouldn't feel confident cycling on busy roads. I'd like training for that.",
+          number: 10,
+        },
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: [
+        "Well, that's very helpful.",
+        "Thank you very much for your time.",
+      ],
+    },
+    {
+      speaker: "LUISA",
+      text: ["No problem. Bye."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of Section 1.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -399,7 +571,7 @@ const Listening1Part42015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -430,7 +602,7 @@ const Listening1Part42015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("The Spirit Bear")}
+                {renderText("Transport Survey")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -461,168 +633,190 @@ const Listening1Part42015 = () => {
 
         {/* RIGHT SIDE */}
         <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 31–40")}
-          </h2>
+          {/* ---------- Transport Survey ---------- */}
 
           <p className="mb-4">
             {renderText("Complete the notes below.")} <br />
-            {renderText("Write ONE WORD ONLY for each answer.")}
+            {renderText("Write ONE WORD AND/OR A NUMBER for each answer.")}
           </p>
 
-          <div className="border p-5 rounded-lg bg-white space-y-6">
-            <h3 className="font-bold text-lg">
-              {renderText("THE SPIRIT BEAR")}
-            </h3>
+          <div className="border p-5 rounded-lg bg-white space-y-4">
+            <h2 className="text-lg font-bold mb-3 text-center">
+              {renderText("Transport Survey")}
+            </h2>
+            {/* Example */}
+            <p className="flex items-center gap-2">
+              {renderText("(Example) Travelled to town today: by")}
+              <span className="font-semibold">bus</span>
+            </p>
 
-            {/* ---------- General facts ---------- */}
-            <h4 className="font-semibold">{renderText("General facts")}</h4>
+            {/* Circle style */}
+            {/* w-9 h-9 border-2 rounded-full flex items-center justify-center */}
 
-            {/* Q31 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Its colour comes from an uncommon")}
-              <button className="w-7 h-7 rounded-full border">31</button>
+            {/* 1 */}
+            <p className="flex items-center gap-3">
+              {renderText("Name: Luisa")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                1
+              </span>
               <input
                 type="text"
-                value={userAnswers[31] || ""}
-                onChange={(e) => handleInputChange(31, e.target.value)}
+                value={userAnswers[1] || ""}
+                onChange={(e) => handleInputChange(1, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
             </p>
 
-            {/* Q32 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Local people believe that it has unusual")}
-              <button className="w-7 h-7 rounded-full border">32</button>
+            {/* 2 */}
+            <p className="flex items-center gap-3">
+              {renderText("Address:")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                2
+              </span>
               <input
                 type="text"
-                value={userAnswers[32] || ""}
-                onChange={(e) => handleInputChange(32, e.target.value)}
+                value={userAnswers[2] || ""}
+                onChange={(e) => handleInputChange(2, e.target.value)}
+                className="border px-2 py-1 rounded-md"
+              />
+              {renderText("White Stone Rd")}
+            </p>
+
+            {/* Area */}
+            <p>{renderText("Area: Bradfield")}</p>
+
+            {/* 3 */}
+            <p className="flex items-center gap-3">
+              {renderText("Postcode:")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                3
+              </span>
+              <input
+                type="text"
+                value={userAnswers[3] || ""}
+                onChange={(e) => handleInputChange(3, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
             </p>
 
-            {/* Q33 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("They protect the bear from")}
-              <button className="w-7 h-7 rounded-full border">33</button>
+            {/* 4 */}
+            <p className="flex items-center gap-3">
+              {renderText("Occupation:")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                4
+              </span>
               <input
                 type="text"
-                value={userAnswers[33] || ""}
-                onChange={(e) => handleInputChange(33, e.target.value)}
+                value={userAnswers[4] || ""}
+                onChange={(e) => handleInputChange(4, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
             </p>
 
-            {/* ---------- Habitat ---------- */}
-            <h4 className="font-semibold mt-4">{renderText("Habitat")}</h4>
-
-            {/* Q34 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Tree roots stop")}
-              <button className="w-7 h-7 rounded-full border">34</button>
+            {/* 5 */}
+            <p className="flex items-center gap-3">
+              {renderText("Reason for visit to town: to go to the")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                5
+              </span>
               <input
                 type="text"
-                value={userAnswers[34] || ""}
-                onChange={(e) => handleInputChange(34, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("along salmon streams.")}
-            </p>
-
-            {/* Q35 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("It is currently found on a small number of")}
-              <button className="w-7 h-7 rounded-full border">35</button>
-              <input
-                type="text"
-                value={userAnswers[35] || ""}
-                onChange={(e) => handleInputChange(35, e.target.value)}
+                value={userAnswers[5] || ""}
+                onChange={(e) => handleInputChange(5, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
             </p>
 
-            {/* ---------- Threats ---------- */}
-            <h4 className="font-semibold mt-4">{renderText("Threats")}</h4>
-
-            {/* Q36 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText(
-                "Habitat is being lost due to deforestation and construction of"
-              )}
-              <button className="w-7 h-7 rounded-full border">36</button>
-              <input
-                type="text"
-                value={userAnswers[36] || ""}
-                onChange={(e) => handleInputChange(36, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("by logging companies.")}
+            {/* Suggestions */}
+            <p className="font-semibold mt-4">
+              {renderText("Suggestions for improvement:")}
             </p>
 
-            {/* Q37 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Unrestricted")}
-              <button className="w-7 h-7 rounded-full border">37</button>
+            {/* 6 */}
+            <p className="flex items-center gap-3">
+              {renderText("better")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                6
+              </span>
               <input
                 type="text"
-                value={userAnswers[37] || ""}
-                onChange={(e) => handleInputChange(37, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("is affecting the salmon supply.")}
-            </p>
-
-            {/* Q38 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText(
-                "The bears' existence is also threatened by their low rate of"
-              )}
-              <button className="w-7 h-7 rounded-full border">38</button>
-              <input
-                type="text"
-                value={userAnswers[38] || ""}
-                onChange={(e) => handleInputChange(38, e.target.value)}
+                value={userAnswers[6] || ""}
+                onChange={(e) => handleInputChange(6, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
             </p>
 
-            {/* ---------- Going forward ---------- */}
-            <h4 className="font-semibold mt-4">
-              {renderText("Going forward")}
-            </h4>
+            <p>{renderText("have more footpaths")}</p>
 
-            {/* Q39 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Logging companies must improve their")}
-              <button className="w-7 h-7 rounded-full border">39</button>
+            {/* 7 */}
+            <p className="flex items-center gap-3">
+              {renderText("more frequent")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                7
+              </span>
               <input
                 type="text"
-                value={userAnswers[39] || ""}
-                onChange={(e) => handleInputChange(39, e.target.value)}
+                value={userAnswers[7] || ""}
+                onChange={(e) => handleInputChange(7, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
-              {renderText("of logging.")}
             </p>
 
-            {/* Q40 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Maintenance and")}
-              <button className="w-7 h-7 rounded-full border">40</button>
+            {/* Cycling */}
+            <p className="font-semibold mt-4">
+              {renderText("Things that would encourage cycling to work:")}
+            </p>
+
+            {/* 8 */}
+            <p className="flex items-center gap-3">
+              {renderText("having")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                8
+              </span>
               <input
                 type="text"
-                value={userAnswers[40] || ""}
-                onChange={(e) => handleInputChange(40, e.target.value)}
+                value={userAnswers[8] || ""}
+                onChange={(e) => handleInputChange(8, e.target.value)}
                 className="border px-2 py-1 rounded-md"
               />
-              {renderText("of the spirit bears' territory is needed.")}
+              {renderText("parking places for bicycles")}
+            </p>
+
+            {/* 9 */}
+            <p className="flex items-center gap-3">
+              {renderText("being able to use a")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                9
+              </span>
+              <input
+                type="text"
+                value={userAnswers[9] || ""}
+                onChange={(e) => handleInputChange(9, e.target.value)}
+                className="border px-2 py-1 rounded-md"
+              />
+              {renderText("at work")}
+            </p>
+
+            {/* 10 */}
+            <p className="flex items-center gap-3">
+              {renderText("the opportunity to have cycling")}
+              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                10
+              </span>
+              <input
+                type="text"
+                value={userAnswers[10] || ""}
+                onChange={(e) => handleInputChange(10, e.target.value)}
+                className="border px-2 py-1 rounded-md"
+              />
+              {renderText("on busy roads")}
             </p>
           </div>
         </div>
       </div>
-      <Listening1Pagination2015></Listening1Pagination2015>
+      <Listening3Pagination2015></Listening3Pagination2015>
     </div>
   );
 };
 
-export default Listening1Part42015;
+export default Listening3Part22015;

@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+import Listening2Pagination2015 from "../Pagination 2015/Listening2Pagination2015";
 
-const Listening1Part42015 = () => {
+const Listening2Part32015 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,79 +28,95 @@ const Listening1Part42015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 4. You will hear a university lecture about an endangered bear in British Columbia, Canada, known as the spirit bear.",
-        "First, you have some time to look at questions 31 to 40.",
-        "Now listen carefully and answer questions 31 to 40.",
+        "Section 3. You will hear two anthropology students called Victor and Olivia discussing their joint presentation about a Norwegian explorer called Thor Heyerdahl.",
+        "First, you have some time to look at questions 21 to 24.",
+        "Now listen carefully and answer questions 21 to 24.",
       ],
     },
     {
-      speaker: "SPEAKER",
+      speaker: "VICTOR",
       text: [
-        "Today we continue our series on ecology and conservation with a look at a particularly endangered member of the black bear family.",
+        "Right, well, for our presentation, shall I start with the early life of Thor Heyerdahl?",
         {
-          text: "One in ten black bears is actually born with a white coat, which is the result of a special gene that surfaces in a few.",
-          number: 31,
+          text: "No, it was climbing that he spent his time on as a young man.",
+          number: 21,
         },
+      ],
+    },
+    {
+      speaker: "OLIVIA",
+      text: [
+        "Sure. Why don't you begin with describing the type of boy he was? Especially his passion for collecting things.",
         {
-          text: "Local people have named it the spirit bear, and according to the legends of these communities, its snowy fur brings with it a special power.",
-          number: 32,
+          text: "22",
+          number: 22,
         },
+        "Yeah, he preferred to learn about nature by listening to his mother read to him, and quite early on, he knew he wanted to become an explorer when he grew up. That came from his camping trips he went on in Norway, I think.",
+        "Oh, right. After university, he married a classmate, and together, they decided to experience living on a small island to find out how harsh weather conditions shaped people's lifestyles.",
         {
-          text: "Because of this, it has always been highly regarded by them, so much that they do not speak of seeing it to anyone else.",
-          number: 33,
+          text: "24",
+          number: 24,
         },
-        "It is their way of protecting it when strangers visit the area.",
-        "The white bear's habitat is quite interesting.",
-        "The bear's strong relationship with the old growth rainforest is a complex one.",
-        "The white bear relies on the huge centuries-old trees in the forest in many ways.",
+        "An important part of your talk should be the radical theory Heyerdahl formed from examining mysterious ancient carvings that he happened to find on the island. I think you should finish with that.",
+        "I see. Well what a great life, even though many of his theories have been disproven, he certainly left a lasting impression on many disciplines, didn't he? To my mind, he was the first person to establish what modern academics call practical archaeology.",
+        "I mean that they try to recreate something from the past today. Like he did with his raft trip. It's unfortunate that his ideas about where Polynesians originated from have been completely discredited.",
+        "Yeah, I agree. What about the subject matter? I found it really challenging.",
+      ],
+    },
+    {
+      speaker: "VICTOR",
+      text: [
+        "That's right, he had his own little museum. And I think it's unusual for children to develop their own values, and not join in their parents' hobbies. I'm thinking of how Heyerdahl wouldn't go hunting with his dad for example.",
+        "As part of their preparation, before they left home, they learned basic survival skills like building a shelter. I guess they needed that knowledge in order to live wild in a remote location. With few inhabitants cut off by the sea, which is what they were aiming to do.",
         {
-          text: "For example, the old growth trees have extremely long roots that help prevent erosion of the soil along the banks of the many fish streams.",
-          number: 34,
+          text: "23",
+          number: 23,
         },
-        "Keeping these banks intact is important, because these streams are home to salmon, which are the bear's main food source.",
-        "In return, the bears' feeding habits nurture the forest.",
-        "As the bears eat the salmon, they discard the skin and bones in great amounts on the forest floor, which provide vital nutrients.",
-        "These produce lush vegetation that sustains thousands of other types of life forms, from birds to insects and more.",
+        "OK.",
+        "Yes, they thought that travel from the east was impossible. Because of the huge empty stretch of ocean that lies between the islands and the nearest inhabited land.",
         {
-          text: "Today, the spirit bear lives off the coast of the province of British Columbia on a few islands.",
-          number: 35,
+          text: "25",
+          number: 25,
         },
-        "There is great concern for their survival, since it is estimated that less than 200 of these white bears remain.",
-        "The best way to protect them is to make every effort to preserve the delicate balance of their forest environment, in other words, their ecosystem.",
-        "The greatest threat to the bear's existence is the loss of its habitat.",
-        "Over many years, logging companies have stripped the land by cutting down a large number of trees.",
+        "Yes, that's probably it. And the poor guy suffered a bit at that time, because the war forced him to stop his work for some years.",
+        "Um. I haven't read anywhere that that was his motivation. The most important factor seems to have been that he use only ancient techniques and local materials to build his raft.",
         {
-          text: "In addition, they have built roads which have fractured the areas where the bear usually feeds, and many hibernation sites have also been lost.",
-          number: 36,
+          text: "27",
+          number: 27,
         },
+        "Well, it took them 97 days from South America to the Pacific Islands.",
+        "No, that was later on in Egypt, Olivia.",
+        "But what he wanted to do was talk to the local people about their old stone carvings, and then make one himself. To learn more about the process.",
         {
-          text: "The logging of the trees along the streams has damaged the places where the bears fish.",
-          number: 37,
+          text: "28",
+          number: 28,
         },
-        "To make matters worse, the number of salmon in those streams is declining, because there is no legal limit on fishing at the moment.",
+        "Yes. Right, well, I'll prepare a PowerPoint slide at the end that acknowledges our sources. I mainly used The Life and Work of Thor Heyerdahl by William Oliver. I thought the research methods he used were very sound, although I must say I found the overall tone somewhat old-fashioned.",
         {
-          text: "All these influences have a negative impact on the spirit bear's very existence, which is made all the more fragile by the fact that reproduction among these bears has always been disappointingly low.",
-          number: 38,
+          text: "30",
+          number: 30,
         },
-        "And so, what's the situation going forward?",
-        "Community organizations, environmental groups, and the British Columbia government are now working together on the problem.",
+        "Well, it's a complex issue.",
+      ],
+    },
+    {
+      speaker: "OLIVIA",
+      text: [
+        "Yes, but Heyerdahl spent ages studying the cloud movements, ocean currents, and wind patterns to find if it was actually possible. And another argument was that there was no tradition of large ship building in the communities lying to the east of Polynesia, but Heyerdahl knew they made lots of coastal voyages in locally built canoes.",
         {
-          text: "The government is now requiring logging companies to adopt a better logging method, which is a positive step.",
-          number: 39,
+          text: "26",
+          number: 26,
         },
-        "However, these measures alone may not be sufficient to ensure a healthy population of the spirit bear in the future.",
-        {
-          text: "While it is important to maintain the spirit bear's habitat, there also needs to be more emphasis on its expansion.",
-          number: 40,
-        },
-        "The move is justified, as it will also create space for other bears that are losing their homes.",
+        "Hmm. And after that, Heyerdahl went to Easter Island, didn't he? We should mention the purpose of that trip. I think he sailed there in a boat made out of reeds.",
+        "I see. Well what a great life, even though many of his theories have been disproven, he certainly left a lasting impression on many disciplines, didn't he? To my mind, he was the first person to establish what modern academics call practical archaeology.",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 4.",
-        "You now have half a minute to check your answers.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
+        "Now listen and answer questions 25 to 30.",
+        "That is the end of section 3. You now have half a minute to check your answers.",
       ],
     },
   ];
@@ -399,7 +415,7 @@ const Listening1Part42015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -430,7 +446,7 @@ const Listening1Part42015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("The Spirit Bear")}
+                {renderText("Thor Heyerdahl")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -461,168 +477,179 @@ const Listening1Part42015 = () => {
 
         {/* RIGHT SIDE */}
         <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
+          {/* ---------- Questions 21–24 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 31–40")}
+            {renderText("Questions 21–24")}
           </h2>
 
-          <p className="mb-4">
-            {renderText("Complete the notes below.")} <br />
-            {renderText("Write ONE WORD ONLY for each answer.")}
+          {/* Q21–22 */}
+          <p className="mb-4 font-semibold">
+            {renderText(
+              "Choose TWO letters, A–E. Which TWO hobbies was Thor Heyerdahl very interested in as a youth?"
+            )}
           </p>
 
-          <div className="border p-5 rounded-lg bg-white space-y-6">
-            <h3 className="font-bold text-lg">
-              {renderText("THE SPIRIT BEAR")}
-            </h3>
-
-            {/* ---------- General facts ---------- */}
-            <h4 className="font-semibold">{renderText("General facts")}</h4>
-
-            {/* Q31 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Its colour comes from an uncommon")}
-              <button className="w-7 h-7 rounded-full border">31</button>
+          {[
+            { q: 21, text: "camping" },
+            { q: 21, text: "climbing" },
+            { q: 21, text: "collecting" },
+            { q: 21, text: "hunting" },
+            { q: 21, text: "reading" },
+          ].map((item, index) => (
+            <label
+              key={index}
+              className="flex items-center gap-3 cursor-pointer mb-1"
+            >
               <input
-                type="text"
-                value={userAnswers[31] || ""}
-                onChange={(e) => handleInputChange(31, e.target.value)}
-                className="border px-2 py-1 rounded-md"
+                type="checkbox"
+                name={`q${item.q}`}
+                value={String.fromCharCode(65 + index)}
+                onChange={() =>
+                  handleInputChange(item.q, String.fromCharCode(65 + index))
+                }
               />
-            </p>
+              <span className="font-semibold">
+                {String.fromCharCode(65 + index)}.
+              </span>
+              <span>{renderText(item.text)}</span>
+            </label>
+          ))}
 
-            {/* Q32 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Local people believe that it has unusual")}
-              <button className="w-7 h-7 rounded-full border">32</button>
-              <input
-                type="text"
-                value={userAnswers[32] || ""}
-                onChange={(e) => handleInputChange(32, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            {/* Q33 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("They protect the bear from")}
-              <button className="w-7 h-7 rounded-full border">33</button>
-              <input
-                type="text"
-                value={userAnswers[33] || ""}
-                onChange={(e) => handleInputChange(33, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            {/* ---------- Habitat ---------- */}
-            <h4 className="font-semibold mt-4">{renderText("Habitat")}</h4>
-
-            {/* Q34 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Tree roots stop")}
-              <button className="w-7 h-7 rounded-full border">34</button>
-              <input
-                type="text"
-                value={userAnswers[34] || ""}
-                onChange={(e) => handleInputChange(34, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("along salmon streams.")}
-            </p>
-
-            {/* Q35 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("It is currently found on a small number of")}
-              <button className="w-7 h-7 rounded-full border">35</button>
-              <input
-                type="text"
-                value={userAnswers[35] || ""}
-                onChange={(e) => handleInputChange(35, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            {/* ---------- Threats ---------- */}
-            <h4 className="font-semibold mt-4">{renderText("Threats")}</h4>
-
-            {/* Q36 */}
-            <p className="flex flex-wrap items-center gap-2">
+          {/* Q23–24 */}
+          <div className="mt-6">
+            <p className="mb-4 font-semibold">
               {renderText(
-                "Habitat is being lost due to deforestation and construction of"
+                "Choose TWO letters, A–E. Which are the TWO reasons why Heyerdahl went to live on an island?"
               )}
-              <button className="w-7 h-7 rounded-full border">36</button>
-              <input
-                type="text"
-                value={userAnswers[36] || ""}
-                onChange={(e) => handleInputChange(36, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("by logging companies.")}
             </p>
 
-            {/* Q37 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Unrestricted")}
-              <button className="w-7 h-7 rounded-full border">37</button>
-              <input
-                type="text"
-                value={userAnswers[37] || ""}
-                onChange={(e) => handleInputChange(37, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("is affecting the salmon supply.")}
-            </p>
-
-            {/* Q38 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText(
-                "The bears' existence is also threatened by their low rate of"
-              )}
-              <button className="w-7 h-7 rounded-full border">38</button>
-              <input
-                type="text"
-                value={userAnswers[38] || ""}
-                onChange={(e) => handleInputChange(38, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            {/* ---------- Going forward ---------- */}
-            <h4 className="font-semibold mt-4">
-              {renderText("Going forward")}
-            </h4>
-
-            {/* Q39 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Logging companies must improve their")}
-              <button className="w-7 h-7 rounded-full border">39</button>
-              <input
-                type="text"
-                value={userAnswers[39] || ""}
-                onChange={(e) => handleInputChange(39, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("of logging.")}
-            </p>
-
-            {/* Q40 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Maintenance and")}
-              <button className="w-7 h-7 rounded-full border">40</button>
-              <input
-                type="text"
-                value={userAnswers[40] || ""}
-                onChange={(e) => handleInputChange(40, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("of the spirit bears' territory is needed.")}
-            </p>
+            {[
+              { q: 23, text: "to examine ancient carvings" },
+              { q: 23, text: "to experience an isolated place" },
+              { q: 23, text: "to formulate a new theory" },
+              { q: 23, text: "to learn survival skills" },
+              { q: 23, text: "to study the impact of an extreme environment" },
+            ].map((item, index) => (
+              <label
+                key={index}
+                className="flex items-center gap-3 cursor-pointer mb-1"
+              >
+                <input
+                  type="checkbox"
+                  name={`q${item.q}`}
+                  value={String.fromCharCode(65 + index)}
+                  onChange={() =>
+                    handleInputChange(item.q, String.fromCharCode(65 + index))
+                  }
+                />
+                <span className="font-semibold">
+                  {String.fromCharCode(65 + index)}.
+                </span>
+                <span>{renderText(item.text)}</span>
+              </label>
+            ))}
           </div>
+
+          {/* ---------- Questions 25–30 ---------- */}
+          <h2 className="text-lg font-bold mt-10 mb-3">
+            {renderText("Questions 25–30")}
+          </h2>
+
+          <p className="mb-4 font-semibold">
+            {renderText("Choose the correct letter, A, B or C.")}
+          </p>
+
+          {[
+            {
+              q: 25,
+              question:
+                "According to Victor and Olivia, academics thought that Polynesian migration from the east was impossible due to",
+              options: [
+                "the fact that Eastern countries were far away.",
+                "the lack of materials for boat building.",
+                "the direction of the winds and currents.",
+              ],
+            },
+            {
+              q: 26,
+              question:
+                "Which do the speakers agree was the main reason for Heyerdahl's raft journey?",
+              options: [
+                "to overcome a research setback",
+                "to demonstrate a personal quality",
+                "to test a new theory",
+              ],
+            },
+            {
+              q: 27,
+              question:
+                "What was most important to Heyerdahl about his raft journey?",
+              options: [
+                "the fact that he was the first person to do it",
+                "the speed of crossing the Pacific",
+                "the use of authentic construction methods",
+              ],
+            },
+            {
+              q: 28,
+              question: "Why did Heyerdahl go to Easter Island?",
+              options: [
+                "to build a stone statue",
+                "to sail a reed boat",
+                "to learn the local language",
+              ],
+            },
+            {
+              q: 29,
+              question:
+                "In Olivia's opinion, Heyerdahl's greatest influence was on",
+              options: [
+                "theories about Polynesian origins.",
+                "the development of archaeological methodology.",
+                "establishing archaeology as an academic subject.",
+              ],
+            },
+            {
+              q: 30,
+              question:
+                "Which criticism do the speakers make of William Oliver's textbook?",
+              options: [
+                "Its style is out of date.",
+                "Its content is over-simplified.",
+                "Its methodology is flawed.",
+              ],
+            },
+          ].map((item) => (
+            <div key={item.q} className="mb-6">
+              <p className="font-semibold mb-2">
+                {item.q}. {renderText(item.question)}
+              </p>
+              {item.options.map((opt, index) => (
+                <label
+                  key={index}
+                  className="flex items-center gap-3 cursor-pointer mb-1"
+                >
+                  <input
+                    type="radio"
+                    name={`q${item.q}`}
+                    value={String.fromCharCode(65 + index)}
+                    onChange={() =>
+                      handleInputChange(item.q, String.fromCharCode(65 + index))
+                    }
+                  />
+                  <span className="font-semibold">
+                    {String.fromCharCode(65 + index)}.
+                  </span>
+                  <span>{renderText(opt)}</span>
+                </label>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
-      <Listening1Pagination2015></Listening1Pagination2015>
+      <Listening2Pagination2015></Listening2Pagination2015>
     </div>
   );
 };
 
-export default Listening1Part42015;
+export default Listening2Part32015;

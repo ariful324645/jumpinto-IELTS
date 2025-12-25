@@ -4,11 +4,11 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { ImCross } from "react-icons/im";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
-import Reading2Pagination2015 from "../Pagination 2015/Reading2Pagination2015";
+import Reading1Pagination2015 from "../Pagination 2015/Reading1Pagination2015";
 
 //  Marks show
 
-const Test2Reading2015 = () => {
+const Reading1Part22015 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -185,7 +185,7 @@ const Test2Reading2015 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("PASSAGE 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("PASSAGE 2")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -200,19 +200,19 @@ const Test2Reading2015 = () => {
           <div>
             <h1 className="text-lg">
               {renderText(
-                "You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below."
+                "You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below."
               )}
             </h1>
           </div>
 
           <div>
             <h1 className="text-2xl font-bold mb-2 text-center">
-              {renderText("Tea and the Industrial Revolution")}
+              {renderText("EUROPEAN TRANSPORT SYSTEMS 1990-2010")}
             </h1>
 
             <p className="italic text-center mb-6">
               {renderText(
-                "A Cambridge professor says that a change in drinking habits was the reason for the Industrial Revolution in Britain. Anjana Ahuja reports"
+                "What have been the trends and what are the prospects for European transport systems?"
               )}
             </p>
 
@@ -220,7 +220,12 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("A")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Alan Macfarlane, professor of anthropological science at King’s College, Cambridge, has, like other historians, spent decades wrestling with the enigma of the Industrial Revolution. Why did this particular Big Bang – the world-changing birth of industry – happen in Britain? And why did it strike at the end of the 18th century?"
+                "It is difficult to conceive of vigorous economic growth without an efficient transport system. Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase."
+              )}
+            </p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use. The number of cars on European Union [EU] roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
               )}
             </p>
 
@@ -228,22 +233,12 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("B")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Macfarlane compares the puzzle to a combination lock. “There are about 20 different factors and all of them need to be present before the revolution can happen,” he says."
+                "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production. In the last 20 years, as internal frontiers have been abolished, the EU has moved from a 'stock' economy to a 'flow' economy."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "For industry to take off, there needs to be the technology and power to drive factories, large urban populations to provide cheap labour, easy transport to move goods around, an affluent middle-class willing to buy mass-produced objects, a market-driven economy and a political system that allows this to happen."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "While this was the case for England, other nations, such as Japan, the Netherlands and France, also met some of these criteria but were not industrialising."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "“All these factors must have been necessary but not sufficient to cause the revolution,” says Macfarlane. “After all, Holland had everything except coal, while China also had many of these factors. Most historians are convinced there are one or two missing factors that you need to open the lock.”"
+                "This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
               )}
             </p>
 
@@ -251,17 +246,12 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("C")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "The missing factors, he proposes, are to be found in almost every kitchen cupboard. Tea and beer, two of the nation’s favourite drinks, fuelled the revolution."
+                "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic. In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "The antiseptic properties of tannin, the active ingredient in tea, and of hops in beer – plus the fact that both are made with boiled water – allowed urban communities to flourish at close quarters without succumbing to water-borne diseases such as dysentery."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "The theory sounds eccentric but once he explains the detective work behind his deduction, scepticism gives way to admiration. His case has been strengthened by support from notable figures, including medical historian Roy Porter."
+                "And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s. Between 1990 and 1998, road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although - and this could benefit the enlarged EU - it is still on average at a much higher level than in existing member states."
               )}
             </p>
 
@@ -269,22 +259,12 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("D")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Macfarlane had wondered for a long time how the Industrial Revolution came about. Historians identified one key factor in the mid-18th century that required explanation."
+                "However, a new imperative - sustainable development - offers an opportunity for adapting the EU's common transport policy. This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "Between about 1650 and 1740, Britain’s population was static. Then suddenly there was a burst of population growth."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Macfarlane says the infant mortality rate halved in 20 years, in rural and urban areas and across all classes."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Possible explanations such as medical advances, environmental change and sanitation were ruled out. Food quality even appeared to decline. The reason for falling child deaths remained unexplained."
+                "The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years' time, that is by 2040."
               )}
             </p>
 
@@ -292,17 +272,12 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("E")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "This population growth occurred at exactly the right time to supply labour for industry. But dense populations also increase disease, especially from human waste."
+                "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO₂, the leading greenhouse gas. According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO₂ emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020, compared with the 739 billion tonnes recorded in 1990."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "Historical records showed a change in water-borne disease. Macfarlane concluded that what people drank mattered."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Beer, protected by antibacterial hops, had kept people healthy. But a late-17th-century tax on malt pushed poorer people towards water and gin, increasing mortality – until it suddenly fell again."
+                "Once again, road transport is the main culprit since it alone accounts for 84% of the CO₂ emissions attributable to transport. Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
               )}
             </p>
 
@@ -310,17 +285,7 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("F")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Macfarlane examined Japan, which had large cities and no sanitation but far fewer water-borne diseases."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Tea was common in Japan, and Britain’s own tea consumption rose sharply in the early 18th century, just as infant mortality declined."
-              )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Boiled water and tea’s purifying effects likely improved mothers’ breast milk. No other European nation drank tea on such a scale."
+                "At the same time greater efforts must be made to achieve a modal shift. Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road. This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h. Three possible options have emerged."
               )}
             </p>
 
@@ -328,19 +293,38 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("G")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Why then did Japan not industrialise first? Macfarlane argues that Japan abandoned labour-saving devices, fearing unemployment."
+                "The first approach would consist of focusing on road transport solely through pricing. This option would not be accompanied by complementary measures in the other modes of transport. In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "Despite its sophistication, Japan entered the 19th century having effectively ‘abandoned the wheel’."
+                "However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
               )}
             </p>
 
-            {/* Glossary */}
-            <p className="text-sm italic mt-8">
+            {/* H */}
+            <p className="font-bold mb-1">{renderText("H")}</p>
+            <p className="text-lg mb-5">
               {renderText(
-                "Glossary: Lister’s revolution – Joseph Lister pioneered antiseptic surgical techniques to prevent infection."
+                "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes [better quality of services, logistics, technology]. However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion."
+              )}
+            </p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion's share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes. It is therefore not enough to guarantee the necessary shift of the balance."
+              )}
+            </p>
+
+            {/* I */}
+            <p className="font-bold mb-1">{renderText("I")}</p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network. This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance."
+              )}
+            </p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
               )}
             </p>
           </div>
@@ -348,13 +332,13 @@ const Test2Reading2015 = () => {
 
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
-          {/* table */}
-
           <div className="space-y-6 leading-relaxed">
-            {/* ================= Questions 1–7 ================= */}
-            <h2 className="text-lg font-bold">{renderText("Questions 1–7")}</h2>
+            {/* ================= Questions 14–21 ================= */}
+            <h2 className="text-lg font-bold">
+              {renderText("Questions 14–21")}
+            </h2>
 
-            <p>{renderText("Reading Passage 1 has seven paragraphs, A–G.")}</p>
+            <p>{renderText("Reading Passage 2 has nine paragraphs, A–I.")}</p>
 
             <p>
               {renderText(
@@ -364,7 +348,7 @@ const Test2Reading2015 = () => {
 
             <p>
               {renderText(
-                "Choose the correct number, i–ix, in boxes 1–7 on your answer sheet."
+                "Choose the correct number, i–xi, in boxes 14–21 on your answer sheet."
               )}
             </p>
 
@@ -375,53 +359,61 @@ const Test2Reading2015 = () => {
               </h3>
 
               <ul className="space-y-1 text-lg">
+                <li>{renderText("i. A fresh and important long-term goal")}</li>
                 <li>
                   {renderText(
-                    "i. The search for the reasons for an increase in population"
+                    "ii. Charging for roads and improving other transport methods"
                   )}
                 </li>
                 <li>
                   {renderText(
-                    "ii. Industrialisation and the fear of unemployment"
-                  )}
-                </li>
-                <li>{renderText("iii. The development of cities in Japan")}</li>
-                <li>
-                  {renderText(
-                    "iv. The time and place of the Industrial Revolution"
-                  )}
-                </li>
-                <li>
-                  {renderText("v. The cases of Holland, France and China")}
-                </li>
-                <li>
-                  {renderText("vi. Changes in drinking habits in Britain")}
-                </li>
-                <li>
-                  {renderText(
-                    "vii. Two keys to Britain's industrial revolution"
+                    "iii. Changes affecting the distances goods may be transported"
                   )}
                 </li>
                 <li>
                   {renderText(
-                    "viii. Conditions required for industrialisation"
+                    "iv. Taking all the steps necessary to change transport patterns"
                   )}
                 </li>
                 <li>
-                  {renderText("ix. Comparisons with Japan lead to the answer")}
+                  {renderText("v. The environmental costs of road transport")}
+                </li>
+                <li>
+                  {renderText("vi. The escalating cost of rail transport")}
+                </li>
+                <li>
+                  {renderText("vii. The need to achieve transport rebalance")}
+                </li>
+                <li>
+                  {renderText("viii. The rapid growth of private transport")}
+                </li>
+                <li>
+                  {renderText("ix. Plans to develop major road networks")}
+                </li>
+                <li>
+                  {renderText(
+                    "x. Restricting road use through charging policies alone"
+                  )}
+                </li>
+                <li>
+                  {renderText(
+                    "xi. Transport trends in countries awaiting EU admission"
+                  )}
                 </li>
               </ul>
             </div>
 
-            {/* -------- Questions 1–7 Dropdowns -------- */}
+            {/* -------- Questions 14–21 Dropdowns -------- */}
             {[
-              { q: 1, text: "Paragraph A" },
-              { q: 2, text: "Paragraph B" },
-              { q: 3, text: "Paragraph C" },
-              { q: 4, text: "Paragraph D" },
-              { q: 5, text: "Paragraph E" },
-              { q: 6, text: "Paragraph F" },
-              { q: 7, text: "Paragraph G" },
+              { q: 14, text: "Paragraph A" },
+              { q: 15, text: "Paragraph B" },
+              { q: 16, text: "Paragraph C" },
+              { q: 17, text: "Paragraph D" },
+              { q: 18, text: "Paragraph E" },
+              { q: 19, text: "Paragraph F" },
+              { q: 20, text: "Paragraph G" },
+              { q: 21, text: "Paragraph H" },
+              //   { q: 22, text: "Paragraph I" }, // Actually box 21, keep consistent with numbering
             ].map(({ q, text }) => (
               <p key={q} className="flex items-center gap-3 flex-wrap">
                 <span className="font-bold text-lg">{renderText(`${q}.`)}</span>
@@ -444,6 +436,8 @@ const Test2Reading2015 = () => {
                       "vii",
                       "viii",
                       "ix",
+                      "x",
+                      "xi",
                     ].map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
@@ -457,18 +451,18 @@ const Test2Reading2015 = () => {
               </p>
             ))}
 
-            {/* ================= Questions 8–13 ================= */}
+            {/* ================= Questions 22–26 ================= */}
             <h2 className="text-lg font-bold mt-10">
-              {renderText("Questions 8–13")}
+              {renderText("Questions 22–26")}
             </h2>
 
             <p>
               {renderText(
-                "Do the following statements agree with the information given in Reading Passage 1?"
+                "Do the following statements agree with the information given in Reading Passage 2?"
               )}
             </p>
 
-            <p>{renderText("In boxes 8–13 on your answer sheet, choose")}</p>
+            <p>{renderText("In boxes 22–26 on your answer sheet, choose")}</p>
 
             <ul className="ml-6 text-lg space-y-1">
               <li>
@@ -485,31 +479,27 @@ const Test2Reading2015 = () => {
               </li>
             </ul>
 
-            {/* -------- Questions 8–13 YES/NO/NG -------- */}
+            {/* -------- Questions 22–26 YES/NO/NG -------- */}
             {[
               {
-                q: 8,
-                text: "China's transport system was not suitable for industry in the 18th century.",
+                q: 22,
+                text: "The need for transport is growing, despite technological developments.",
               },
               {
-                q: 9,
-                text: "Tea and beer both helped to prevent dysentery in Britain.",
+                q: 23,
+                text: "To reduce production costs, some industries have been moved closer to their relevant consumers.",
               },
               {
-                q: 10,
-                text: "Roy Porter disagrees with Professor Macfarlane's findings.",
+                q: 24,
+                text: "Cars are prohibitively expensive in some EU candidate countries.",
               },
               {
-                q: 11,
-                text: "After 1740, there was a reduction in population in Britain.",
+                q: 25,
+                text: "The Gothenburg European Council was set up 30 years ago.",
               },
               {
-                q: 12,
-                text: "People in Britain used to make beer at home.",
-              },
-              {
-                q: 13,
-                text: "The tax on malt indirectly caused a rise in the death rate.",
+                q: 26,
+                text: "By the end of this decade, CO₂ emissions from transport are predicted to reach 739 billion tonnes.",
               },
             ].map(({ q, text }) => (
               <div key={q} className="space-y-2 mt-4">
@@ -540,9 +530,9 @@ const Test2Reading2015 = () => {
           </div>
         </div>
       </div>
-      <Reading2Pagination2015></Reading2Pagination2015>
+      <Reading1Pagination2015></Reading1Pagination2015>
     </div>
   );
 };
 
-export default Test2Reading2015;
+export default Reading1Part22015;

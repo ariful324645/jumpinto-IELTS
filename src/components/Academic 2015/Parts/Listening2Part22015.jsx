@@ -6,8 +6,9 @@ import { GrClearOption } from "react-icons/gr";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+import Listening2Pagination2015 from "../Pagination 2015/Listening2Pagination2015";
 
-const Listening1Part32015 = () => {
+const Listening2Part22015 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,283 +29,101 @@ const Listening1Part32015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear a student called John talking to a professor about a design competition he is entering.",
-        "First, you have some time to look at questions 21 to 25.",
-        "Now listen carefully and answer questions 21 to 25.",
+        "Section 2. You will hear a representative of a city council giving information about two new facilities which are opening soon in the city.",
+        "First, you have some time to look at questions 11 to 14.",
+        "Now listen carefully and answer questions 11 to 14.",
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "SPEAKER",
       text: [
-        "Um, hello professor. I'm John Wishart.",
-        "I'm working on my entry for the global design competition.",
-        "My tutor said you might be able to help me with it.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "Oh, yes. I got a copy of your drawings.",
-        "Come in and tell me about it.",
-        "What sort of competition is it?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, it's an international design competition, and we have to come up with a new design for a typical domestic kitchen appliance.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "I see. And are there any special conditions?",
-        "Does it have to save energy for example?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Actually that was the focus in last year's competition.",
-        "This year is different.",
+        "Good morning.",
+        "I'm very pleased to have this opportunity to say a little about two exciting new developments in the city.",
+        "The Brackenside Open-air Swimming Pool, and the children's adventure playground in Central Park.",
+        "As many of you may know, the idea for these initiatives came from you, the public, in the extensive consultation exercise which the City Council conducted last year.",
         {
-          text: "We have to adopt an innovative approach to existing technology, using it in a way that hasn't been thought of before.",
-          number: 21,
+          text: "And they have been realized using money from the SWRDC - the South West Regional Development Commission.",
+          number: 11,
         },
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "I see, that sounds tricky.",
-        "And what kitchen appliance have you chosen?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Well, I decided to choose the dishwasher."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: ["Interesting. What made you choose that?"],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, they're an everyday kitchen appliance in most Australian houses,",
+        "First of all, Brackenside Pool.",
+        "As many of the older members of the audience will remember, there used to be a wonderful open air pool on the seafront 30 years ago, but it had to close when it was judged to be unsafe.",
+        "For the design of this new heated pool, we were very happy to secure the talents of internationally renowned architect, Ellen Wendon,",
+        "who has managed to combine a charming 1930s design which fits so well with many of the other buildings in the area.",
+        "With up to the minute features such as a recycling system, the only one of its kind in the world,",
         {
-          text: "but they're all pretty boring, and almost identical to each other. I think some people will be prepared to pay a little extra for something that looks different.",
-          number: 22,
+          text: "which enables seawater to be used in the pool.",
+          number: 12,
         },
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "It's a nice idea.",
-        "I see you've called your design 'The Rockpool'.",
-        "Why is that?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Basically because it looks like the rock pools you find on a beach.",
-        "The top is made of glass, so that you can look down into it.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "And there's a stone at the bottom.",
-        "Is that just for decoration?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
+        "Now, there's been quite a bit of discussion in the local press about whether there would be enough room for the number of visitors we're hoping to attract,",
         {
-          text: "Actually it does have a function. Instead of pushing a button, you turn the stone.",
-          number: 23,
+          text: "but the design is deceptive, and there have been rigorous checks about capacity.",
+          number: 13,
         },
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: ["So it's really just a novel way of starting the dishwasher."],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That's right."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: ["It's a really nice design, but what makes it innovative?"],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Well, I decided to make a dishwasher that uses carbon dioxide."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: ["In place of water and detergent?", "How will you manage that?"],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "The idea is to pressurize the carbon dioxide so that it becomes a liquid.",
-        "The fluid is then released into the dishwasher where it cleans the dishes all by itself.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "Sounds like a brilliant idea.",
-        "Your system will totally do away with the need for strong detergents.",
-        "So what happens once the dishes are clean?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, to allow them to dry, the liquid carbon dioxide and the waste materials all go to an area called the holding chamber.",
+        "Also just in case you were wondering, we're on schedule for June 15th opening date, and well within budget,",
+        "a testimony to the excellent work of local contractors Hickman's.",
+        "We hope that as many people as possible will be there on June 15th.",
+        "We have engaged award winning actress Coral White to declare the pool open,",
+        "and there'll be drinks and snacks available at the poolside.",
+        "There'll also be a competition for the public to decide on the sculpture we plan to have at the entrance.",
         {
-          text: "That's where the liquid is depressurized, and so it reverts to a gas.",
-          number: 24,
+          text: "You will decide which famous historical figure from the city we should have.",
+          number: 14,
         },
-        "Then the oil and grease are separated out and sent to the waste system.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "It sounds like you've thought it all out very thoroughly.",
-        "So what happens to the carbon dioxide once the process is complete?",
-        "Not wasted, I hope.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        {
-          text: "Actually, that's where the real savings are made. The carbon dioxide is sent back to the cylinder, and can be used again and again.",
-          number: 25,
-        },
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: ["What a terrific idea.", "Do you think it will ever be built?"],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Probably not, but that's OK."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "Well, I'm sure a lot of positive things will come out of your design.",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 26 to 30.",
-        "Now listen and answer questions 26 to 30.",
+        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
+        "Now listen and answer questions 15 to 20.",
       ],
     },
     {
-      speaker: "PROFESSOR",
+      speaker: "SPEAKER",
       text: [
-        "Now you seem to have thought about everything, so what exactly did you need me to help you with?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
+        "And now, moving on to the Central Park playground, which we're pleased to announce has just won the Douglas Award for safety.",
+        "The news came through only last week.",
+        "The unique design is based on the concept of the Global Village,",
+        "with the playground being divided into six areas showing different parts of the world, each with a representative feature.",
+        "For example, there is a section on Asia,",
         {
-          text: "Well, my design has made it to the final stage of the competition, and in a few months' time, I have to give a presentation.",
-          number: 26,
+          text: "and this is represented by rides and equipment in the shape of snakes, orangutans, tigers, and so on.",
+          number: 15,
         },
-        "And that's the part I was hoping you could help me with.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "Right, well that should be easy enough.",
-        "What have you managed to do so far?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, I've got detailed drawings to show how it will work,",
-        "and I've also written a 500-word paper on it.",
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
+        "Fauna native to the forests of the region.",
+        "Moving south to the Antarctic,",
+        "we couldn't run to an ice rink, I'm afraid,",
         {
-          text: "I see. Well, if you want to stand a good chance of winning, you really need a model of the machine.",
-          number: 27,
+          text: "but opted instead for climbing blocks in the shape of mountains.",
+          number: 16,
         },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Yes, I thought I might, but I'm having a few problems."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "What's the main difficulty so far?",
-        "Let me guess, is it the materials?",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
+        "I thought they could have had slides for the glaciers, but the designers did want to avoid being too literal.",
+        "Then onto South America,",
+        "and here the theme is El Dorado, games replicating the search for mines full of precious stones,",
+        "and then moving up to North America.",
         {
-          text: "Yes, I want it to look professional, but everything that's top quality is also very expensive.",
-          number: 28,
+          text: "Here the designers finally opted for rockets and the International Space Station.",
+          number: 17,
         },
-      ],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
-        "Look, projects like this are very important to us.",
-        "They really help lift our profile.",
+        "Eastwards to Europe then,",
+        "and perhaps the most traditional choice of all the areas, medieval castles and other fortifications,",
+        "then last but not least, moving south to Africa.",
         {
-          text: "So why don't you talk to the university about a grant?",
-          number: 29,
+          text: "A whole set of wonderful mosaics and trails to represent the great rivers of this fascinating and varied continent.",
+          number: 19,
         },
-        "I can help you fill out the application forms if you like.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Oh, that would be great."],
-    },
-    {
-      speaker: "PROFESSOR",
-      text: [
         {
-          text: "You'd better show me this paper you've written as well. For a global competition such as this, you need to make sure the technical details you've given are accurate and thorough.",
-          number: 30,
+          text: "Now, the opening date for our Global Playground is the 10th of July.",
+          number: 20,
         },
+        "And again, we'd love to see you there.",
+        "So, make a date and come and see this magnificent original new amenity right in the heart of the city.",
       ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Oh, that would be a great help."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
+        "That is the end of Section 2.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -604,7 +423,7 @@ const Listening1Part32015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -635,7 +454,7 @@ const Listening1Part32015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Global Design Competition")}
+                {renderText("New city developments")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -666,9 +485,9 @@ const Listening1Part32015 = () => {
 
         {/* RIGHT SIDE */}
         <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
-          {/* ---------- Questions 21–25 ---------- */}
+          {/* ---------- Questions 11–14 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 21–25")}
+            {renderText("Questions 11–14")}
           </h2>
 
           <p className="mb-4 font-semibold">
@@ -676,49 +495,18 @@ const Listening1Part32015 = () => {
           </p>
 
           <h3 className="font-bold mb-4">
-            {renderText("Global Design Competition")}
+            {renderText("New city developments")}
           </h3>
 
-          {/* Q21 */}
+          {/* Q11 */}
           <div className="mb-6">
             <p className="font-semibold mb-2">
-              21.{" "}
-              {renderText("Students entering the design competition have to")}
-            </p>
-            {[
-              "produce an energy-efficient design.",
-              "adapt an existing energy-saving appliance.",
-              "develop a new use for current technology.",
-            ].map((item, index) => (
-              <label
-                key={index}
-                className="flex items-center gap-3 cursor-pointer mb-1"
-              >
-                <input
-                  type="radio"
-                  name="q21"
-                  value={String.fromCharCode(65 + index)}
-                  onChange={() =>
-                    handleInputChange(21, String.fromCharCode(65 + index))
-                  }
-                />
-                <span className="font-semibold">
-                  {String.fromCharCode(65 + index)}.
-                </span>
-                <span>{renderText(item)}</span>
-              </label>
-            ))}
-          </div>
-
-          {/* Q22 */}
-          <div className="mb-6">
-            <p className="font-semibold mb-2">
-              22.{" "}
+              11.{" "}
               {renderText(
-                "John chose a dishwasher because he wanted to make dishwashers"
+                "The idea for the two new developments in the city came from"
               )}
             </p>
-            {["more appealing.", "more common.", "more economical."].map(
+            {["local people.", "the City Council.", "the SWRDC."].map(
               (item, index) => (
                 <label
                   key={index}
@@ -726,10 +514,10 @@ const Listening1Part32015 = () => {
                 >
                   <input
                     type="radio"
-                    name="q22"
+                    name="q11"
                     value={String.fromCharCode(65 + index)}
                     onChange={() =>
-                      handleInputChange(22, String.fromCharCode(65 + index))
+                      handleInputChange(11, String.fromCharCode(65 + index))
                     }
                   />
                   <span className="font-semibold">
@@ -741,15 +529,15 @@ const Listening1Part32015 = () => {
             )}
           </div>
 
-          {/* Q23 */}
+          {/* Q12 */}
           <div className="mb-6">
             <p className="font-semibold mb-2">
-              23. {renderText("The stone in John's 'Rockpool' design is used")}
+              12. {renderText("What is unusual about Brackenside pool?")}
             </p>
             {[
-              "for decoration.",
-              "to switch it on.",
-              "to stop water escaping.",
+              "its architectural style",
+              "its heating system",
+              "its method of water treatment",
             ].map((item, index) => (
               <label
                 key={index}
@@ -757,10 +545,10 @@ const Listening1Part32015 = () => {
               >
                 <input
                   type="radio"
-                  name="q23"
+                  name="q12"
                   value={String.fromCharCode(65 + index)}
                   onChange={() =>
-                    handleInputChange(23, String.fromCharCode(65 + index))
+                    handleInputChange(12, String.fromCharCode(65 + index))
                   }
                 />
                 <span className="font-semibold">
@@ -771,15 +559,15 @@ const Listening1Part32015 = () => {
             ))}
           </div>
 
-          {/* Q24 */}
+          {/* Q13 */}
           <div className="mb-6">
             <p className="font-semibold mb-2">
-              24. {renderText("In the holding chamber, the carbon dioxide")}
+              13. {renderText("Local newspapers have raised worries about")}
             </p>
             {[
-              "changes back to a gas.",
-              "dries the dishes.",
-              "is allowed to cool.",
+              "the late opening date.",
+              "the cost of the project.",
+              "the size of the facilities.",
             ].map((item, index) => (
               <label
                 key={index}
@@ -787,10 +575,10 @@ const Listening1Part32015 = () => {
               >
                 <input
                   type="radio"
-                  name="q24"
+                  name="q13"
                   value={String.fromCharCode(65 + index)}
                   onChange={() =>
-                    handleInputChange(24, String.fromCharCode(65 + index))
+                    handleInputChange(13, String.fromCharCode(65 + index))
                   }
                 />
                 <span className="font-semibold">
@@ -801,18 +589,18 @@ const Listening1Part32015 = () => {
             ))}
           </div>
 
-          {/* Q25 */}
+          {/* Q14 */}
           <div className="mb-10">
             <p className="font-semibold mb-2">
-              25.{" "}
+              14.{" "}
               {renderText(
-                "At the end of the cleaning process, the carbon dioxide"
+                "What decision has not yet been made about the pool?"
               )}
             </p>
             {[
-              "is released into the air.",
-              "is disposed of with the waste.",
-              "is collected ready to be re-used.",
+              "whose statue will be at the door",
+              "the exact opening times",
+              "who will open it",
             ].map((item, index) => (
               <label
                 key={index}
@@ -820,10 +608,10 @@ const Listening1Part32015 = () => {
               >
                 <input
                   type="radio"
-                  name="q25"
+                  name="q14"
                   value={String.fromCharCode(65 + index)}
                   onChange={() =>
-                    handleInputChange(25, String.fromCharCode(65 + index))
+                    handleInputChange(14, String.fromCharCode(65 + index))
                   }
                 />
                 <span className="font-semibold">
@@ -834,79 +622,84 @@ const Listening1Part32015 = () => {
             ))}
           </div>
 
-          {/* ---------- Questions 26–30 ---------- */}
+          {/* ---------- Questions 15–20 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 26–30")}
+            {renderText("Questions 15–20")}
           </h2>
 
           <p className="mb-4">
-            {renderText("Complete the notes below.")} <br />
-            {renderText("Write ONE WORD ONLY for each answer.")}
+            {renderText(
+              "Which feature is related to each of the following areas of the world represented in the playground?"
+            )}
+            <br />
+            {renderText(
+              "Choose the correct letter, A–I, next to Questions 15–20."
+            )}
           </p>
 
-          <div className="border p-5 rounded-lg bg-white space-y-4">
-            <p className="flex items-center gap-2">
-              {renderText("John needs help preparing for his")}
-              <span className="font-semibold">26</span>
-              <input
-                type="text"
-                value={userAnswers[26] || ""}
-                onChange={(e) => handleInputChange(26, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+          {/* Features list */}
+          <div className="border p-5 rounded-lg bg-white max-w-sm mx-auto  mb-6 text-center">
+            {[
+              { letter: "A", text: "ancient forts" },
+              { letter: "B", text: "waterways" },
+              { letter: "C", text: "ice and snow" },
+              { letter: "D", text: "jewels" },
+              { letter: "E", text: "local animals" },
+              { letter: "F", text: "mountains" },
+              { letter: "G", text: "music and film" },
+              { letter: "H", text: "space travel" },
+              { letter: "I", text: "volcanoes" },
+            ].map((item) => (
+              <p key={item.letter}>
+                <span className="font-semibold">{item.letter}.</span>{" "}
+                {renderText(item.text)}
+              </p>
+            ))}
+          </div>
 
-            <p className="flex items-center gap-2">
-              {renderText("The professor advises John to make a")}
-              <span className="font-semibold">27</span>
-              <input
-                type="text"
-                value={userAnswers[27] || ""}
-                onChange={(e) => handleInputChange(27, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("of his design.")}
-            </p>
-
-            <p className="flex items-center gap-2">
-              {renderText("John's main problem is getting good quality")}
-              <span className="font-semibold">28</span>
-              <input
-                type="text"
-                value={userAnswers[28] || ""}
-                onChange={(e) => handleInputChange(28, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            <p className="flex items-center gap-2">
-              {renderText("The professor suggests John apply for a")}
-              <span className="font-semibold">29</span>
-              <input
-                type="text"
-                value={userAnswers[29] || ""}
-                onChange={(e) => handleInputChange(29, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            <p className="flex items-center gap-2">
-              {renderText("The professor will check the")}
-              <span className="font-semibold">30</span>
-              <input
-                type="text"
-                value={userAnswers[30] || ""}
-                onChange={(e) => handleInputChange(30, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("information in John's written report.")}
-            </p>
+          {/* Areas of the world */}
+          <div className="">
+            <h1 className="font-bold text-2xl mb-4">Areas of the world</h1>
+            {[
+              { q: 15, text: "Asia" },
+              { q: 16, text: "Antarctic" },
+              { q: 17, text: "South America" },
+              { q: 18, text: "North America" },
+              { q: 19, text: "Europe" },
+              { q: 20, text: "Africa" },
+            ].map((item) => (
+              <div key={item.q} className="flex items-center gap-2 mb-2">
+                {/* Number */}
+                <span className="font-semibold">{item.q}</span>
+                {/* Text */}
+                <span>{item.text}</span>
+                {/* Dropdown */}
+                <select
+                  value={userAnswers[item.q] || ""}
+                  onChange={(e) => handleInputChange(item.q, e.target.value)}
+                  className="border px-2 py-1 rounded-md"
+                >
+                  {/* Placeholder */}
+                  <option value="" disabled>
+                    {item.q} {/* shows number as placeholder */}
+                  </option>
+                  {/* Options A–I */}
+                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map(
+                    (letter) => (
+                      <option key={letter} value={letter}>
+                        {letter}
+                      </option>
+                    )
+                  )}
+                </select>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <Listening1Pagination2015></Listening1Pagination2015>
+      <Listening2Pagination2015></Listening2Pagination2015>
     </div>
   );
 };
 
-export default Listening1Part32015;
+export default Listening2Part22015;

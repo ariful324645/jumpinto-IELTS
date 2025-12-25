@@ -431,22 +431,21 @@ const Listening4Part32017 = () => {
   }, []);
 
   //  Marks show
-const correctAnswers = {
-  // Questions 21–24
-  21: "classification",
-  22: "worst",
-  23: "slides",
-  24: "issues",
+  const correctAnswers = {
+    // Questions 21–24
+    21: "classification",
+    22: "worst",
+    23: "slides",
+    24: "issues",
 
-  // Questions 25–30
-  25: "F",
-  26: "A",
-  27: "E",
-  28: "C",
-  29: "G",
-  30: "B",
-};
-
+    // Questions 25–30
+    25: "F",
+    26: "A",
+    27: "E",
+    28: "C",
+    29: "G",
+    30: "B",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
