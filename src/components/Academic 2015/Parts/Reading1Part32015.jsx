@@ -133,10 +133,9 @@ const Reading1Part32015 = () => {
     return parts;
   };
   const correctAnswers = {
-    // =========== Questions 27–30 (Multiple Choice) ===========
     27: "C", // having a shared objective
     28: "B", // brought complementary skills to their partnership
-    29: "C", // promote loyalty to a group
+    29: "A", // inspire creative thinking
     30: "B", // feel that their contributions are valued
 
     // =========== Questions 31–35 (Sentence Completion) ===========
@@ -144,7 +143,7 @@ const Reading1Part32015 = () => {
     32: "E", // avoid risk
     33: "C", // become competitive
     34: "F", // ignore their duties
-    35: "A", // take chances
+    35: "B", // share their ideas
 
     // =========== Questions 36–40 (YES / NO / NOT GIVEN) ===========
     36: "YES",
@@ -185,6 +184,7 @@ const Reading1Part32015 = () => {
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          {/* Header */}
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("PASSAGE 3")}</h1>
             <div className="flex gap-3">
@@ -198,89 +198,219 @@ const Reading1Part32015 = () => {
             </div>
           </div>
 
-          <div>
-            <h1 className="text-lg">
+          <h1 className="text-lg">
+            {renderText(
+              "You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below."
+            )}
+          </h1>
+
+          <h2 className="text-2xl font-bold text-center">
+            {renderText("The psychology of innovation")}
+          </h2>
+
+          <p className="italic text-center mb-6">
+            {renderText("Why are so few companies truly innovative?")}
+          </p>
+
+          {/* Para 1 */}
+          <p className="text-lg mb-5">
+            {renderText(
+              "Innovation is key to business survival, and companies put substantial resources into inspiring employees to develop new ideas."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below."
+                "There are, nevertheless, people working in luxurious, state-of-the-art centres designed to stimulate innovation who find that their environment doesn't make them feel at all creative."
               )}
-            </h1>
-          </div>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  36
+                </span>
+              )}
+            </span>
+            {renderText(
+              " And there are those who don't have a budget, or much space, but who innovate successfully."
+            )}
+          </p>
 
-          <div>
-            <h1 className="text-2xl font-bold mb-2 text-center">
-              {renderText("The psychology of innovation")}
-            </h1>
-
-            <p className="italic text-center mb-6">
-              {renderText("Why are so few companies truly innovative?")}
-            </p>
-
-            <p className="text-lg mb-5">
+          {/* Para 2 */}
+          <p className="text-lg mb-5">
+            {renderText(
+              "For Robert B. Cialdini, Professor of Psychology at Arizona State University, one reason that companies don't succeed as often as they should is that innovation starts with recruitment."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "Innovation is key to business survival, and companies put substantial resources into inspiring employees to develop new ideas. There are, nevertheless, people working in luxurious, state-of-the-art centres designed to stimulate innovation who find that their environment doesn't make them feel at all creative. And there are those who don't have a budget, or much space, but who innovate successfully."
+                "Research shows that the fit between an employee's values and a company's values makes a difference to what contribution they make and whether, two years after they join, they're still at the company."
               )}
-            </p>
-
-            <p className="text-lg mb-5">
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  31
+                </span>
+              )}
+            </span>
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "For Robert B. Cialdini, Professor of Psychology at Arizona State University, one reason that companies don't succeed as often as they should is that innovation starts with recruitment. Research shows that the fit between an employee's values and a company's values makes a difference to what contribution they make and whether, two years after they join, they're still at the company. Studies at Harvard Business School show that, although some individuals may be more creative than others, almost every individual can be creative in the right circumstances."
+                "Studies at Harvard Business School show that, although some individuals may be more creative than others, almost every individual can be creative in the right circumstances."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  37
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 3 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "One of the most famous photographs in the story of rock'n'roll emphasises Cialdini's views. The 1956 picture of singers Elvis Presley, Carl Perkins, Johnny Cash and Jerry Lee Lewis jamming at a piano in Sun Studios in Memphis tells a hidden story. Missing from the picture is Roy Orbison, a greater natural singer than Lewis, Perkins or Cash. Sam Phillips, who owned Sun, wanted to revolutionise popular music with songs that fused black and white music, and country and blues. Presley, Cash, Perkins and Lewis instinctively understood Phillips's ambition and believed in it. Orbison wasn't inspired by the goal, and only ever achieved one hit with the Sun label."
+                "One of the most famous photographs in the story of rock'n'roll emphasises Cialdini's views."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  27
+                </span>
+              )}
+            </span>
+            {renderText(
+              " The 1956 picture of singers Elvis Presley, Carl Perkins, Johnny Cash and Jerry Lee Lewis jamming at a piano in Sun Studios in Memphis tells a hidden story."
+            )}
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 4 */}
+          <p className="text-lg mb-5">
+            {renderText(
+              "The value fit matters, says Cialdini, because innovation is, in part, a process of change, and under that pressure we, as a species, behave differently."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "The value fit matters, says Cialdini, because innovation is, in part, a process of change, and under that pressure we, as a species, behave differently. 'When things change, we are hard-wired to play it safe.' Managers should therefore adopt an approach that appears counter-intuitive – they should explain what stands to be lost if the company fails to seize a particular opportunity. Studies show that we invariably take more gambles when threatened with a loss than when offered a reward."
+                "'When things change, we are hard-wired to play it safe.'"
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  32
+                </span>
+              )}
+            </span>
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
+              {renderText(
+                "Studies show that we invariably take more gambles when threatened with a loss than when offered a reward."
+              )}
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  33
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 5 */}
+          <p className="text-lg mb-5">
+            {renderText("Managing innovation is a delicate art.")}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "Managing innovation is a delicate art. It's easy for a company to be pulled in conflicting directions as the marketing, product development, and finance departments each get different feedback from different sets of people. And without a system which ensures collaborative exchanges within the company, it's also easy for small 'pockets of innovation' to disappear. Innovation is a contact sport. You can't brief people just by saying, 'We're going in this direction and I'm going to take you with me.'"
+                "And without a system which ensures collaborative exchanges within the company, it's also easy for small 'pockets of innovation' to disappear."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  30
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 6 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "Cialdini believes that this 'follow-the-leader syndrome' is dangerous, not least because it encourages bosses to go it alone. 'It's been scientifically proven that three people will be better than one at solving problems, even if that one person is the smartest person in the field.' To prove his point, Cialdini cites an interview with molecular biologist James Watson. Watson, together with Francis Crick, discovered the structure of DNA, the genetic information carrier of all living organisms. 'When asked how they had cracked the code ahead of an array of highly accomplished rival investigators, he said something that stunned me. He said he and Crick had succeeded because they were aware that they weren't the most intelligent of the scientists pursuing the answer. The smartest scientist was called Rosalind Franklin who, Watson said,"
+                "Cialdini believes that this 'follow-the-leader syndrome' is dangerous."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  34
+                </span>
+              )}
+            </span>
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
+              {renderText(
+                "He said he and Crick had succeeded because they were aware that they weren't the most intelligent of the scientists pursuing the answer."
+              )}
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  28
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 7 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "Teamwork taps into one of the basic drivers of human behaviour. 'The principle of social proof is so pervasive that we don't even recognise it,' says Cialdini. 'If your project is being resisted, for example, by a group of veteran employees, ask another old-timer to speak up for it.' Cialdini is not alone in advocating this strategy. Research shows that peer power, used horizontally not vertically, is much more powerful than any boss's speech."
+                "Research shows that peer power, used horizontally not vertically, is much more powerful than any boss's speech."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  40
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 8 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "Writing, visualising and prototyping can stimulate the flow of new ideas. Cialdini cites scores of research papers and historical events that prove that even something as simple as writing deepens every individual's engagement in the project. It is, he says, the reason why all those competitions on breakfast cereal packets encouraged us to write in saying, in no more than 10 words: 'I like Kellogg's Corn Flakes because...' The very act of writing makes us more likely to believe it."
+                "The very act of writing makes us more likely to believe it."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  29
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 9 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "Authority doesn't have to inhibit innovation but it often does. The wrong kind of leadership will lead to what Cialdini calls 'captainitis, the regrettable tendency of team members to opt out of team responsibilities that are properly theirs'. He calls it captainitis because, he says, 'crew members of multipilot aircraft exhibit a sometimes deadly passivity when the flight captain makes a clearly wrong-headed decision'. This behaviour is not, he says, unique to air travel, but can happen in any workplace where the leader is overbearing."
+                "The wrong kind of leadership will lead to what Cialdini calls 'captainitis'."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  34
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 10 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "At the other end of the scale is the 1980s Memphis design collective, a group of young designers for whom 'the only rule was that there were no rules'. This environment encouraged a free interchange of ideas, which led to more creativity with form, function, colour and materials that revolutionised attitudes to furniture design."
+                "This environment encouraged a free interchange of ideas."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  35
+                </span>
+              )}
+            </span>
+          </p>
 
-            <p className="text-lg mb-5">
+          {/* Para 11 */}
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "Many theorists believe the ideal boss should lead from behind, taking pride in collective accomplishment and giving credit where it is due. Cialdini says: 'Leaders should encourage everyone to contribute and simultaneously assure all concerned that every recommendation is important to making the right decision and will be given full attention.' The frustrating thing about innovation is that there are many approaches, but no magic formula. However, a manager who wants to create a truly innovative culture can make their job a lot easier by recognising these psychological realities."
+                "Leaders should encourage everyone to contribute and simultaneously assure all concerned that every recommendation is important."
               )}
-            </p>
-          </div>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 bg-yellow-700 text-white rounded-sm font-semibold items-center justify-center">
+                  30
+                </span>
+              )}
+            </span>
+          </p>
         </div>
 
         {/* right div */}
@@ -518,6 +648,100 @@ const Reading1Part32015 = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (27–40)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 14 }, (_, i) => i + 27).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

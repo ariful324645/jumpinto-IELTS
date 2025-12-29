@@ -28,231 +28,248 @@ const Listening3Part32015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two anthropology students called Victor and Olivia discussing their joint presentation about a Norwegian explorer called Thor Heyerdahl.",
-        "First, you have some time to look at questions 21 to 24.",
-        "Now listen carefully and answer questions 21 to 24.",
+        "Section 3, you will hear a student called Rob, who is in the first year of a theatre studies course, talking to another student called Mia, who's in the fourth year of the same course.",
+        "First, you have some time to look at questions 21 to 25.",
+        "Now listen carefully and answer questions 21 to 25.",
       ],
     },
     {
-      speaker: "VICTOR",
+      speaker: "MIA",
+      text: ["Hi, Rob. How's the course going?"],
+    },
+    {
+      speaker: "ROB",
       text: [
-        "Right, well, for our presentation, shall I start with the early life of Thor Heyerdahl?",
+        "Oh, hi, Mia. Yeah, great. I can't believe the first term's nearly over.",
       ],
     },
     {
-      speaker: "OLIVIA",
+      speaker: "MIA",
+      text: [
+        "I saw your group's performance last night at the student theater. It was good.",
+      ],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "Really. Yeah, but now we have to write a report on the whole thing, an in-depth analysis. I don't know where to start. Like I have to write about the role I played, the doctor, how I developed the character.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["Well, what was your starting point?"],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "Uh. My grandfather was a doctor before he retired, and I just based it on him.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["OK, but how? Uh. Did you talk to him about it?"],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "He must have all sorts of stories, but he never says much about his work, even now. He has a sort of authority though.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["Hmm, so how did you manage to capture that?"],
+    },
+    {
+      speaker: "ROB",
       text: [
         {
-          text: "Sure. Why don't you begin with describing the type of boy he was? Especially his passion for collecting things.",
-          number: 22,
-        },
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: [
-        "That's right, he had his own little museum.",
-        "And I think it's unusual for children to develop their own values, and not join in their parents' hobbies.",
-        "I'm thinking of how Heyerdahl wouldn't go hunting with his dad for example.",
-      ],
-    },
-    {
-      speaker: "OLIVIA",
-      text: [
-        "Yeah, he preferred to learn about nature by listening to his mother read to him.",
-        "And quite early on, he knew he wanted to become an explorer when he grew up.",
-        "That came from his camping trips he went on in Norway, I think.",
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: [
-        {
-          text: "No, it was climbing that he spent his time on as a young man.",
+          text: "I'd visualize what he must have been like in the past when he was sitting in his consulting room, listening to his patients.",
           number: 21,
         },
       ],
     },
     {
-      speaker: "OLIVIA",
+      speaker: "MIA",
+      text: [
+        "OK, so that's what you explain in your report. Right, then there's the issue of atmosphere. So in the first scene, we needed to know how boring life was in the doctor's village in the 1950s. So when the curtain went up on the first scene in the waiting room, there was that long silence before anyone spoke. And then people kept saying the same thing over and over like 'Cold, isn't it?'",
+        {
+          text: "",
+          number: 22,
+        },
+      ],
+    },
+    {
+      speaker: "ROB",
+      text: ["Yes, and everyone wore grey and brown, and just sat in a row."],
+    },
+    {
+      speaker: "MIA",
+      text: ["Yes, all those details of the production. Hmm."],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "And I have to analyze how I functioned in the group, what I found out about myself. I know I was so frustrated at times when we couldn't agree.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["Hmm. Yes, so did one person emerge as the leader?"],
+    },
+    {
+      speaker: "ROB",
       text: [
         {
-          text: "Oh, right. After university, he married a classmate, and together, they decided to experience living on a small island to find out how harsh weather conditions shaped people's lifestyles.",
+          text: "Sophia did. That was OK. She helped us work out exactly what to do for the production, and that made me feel better, I suppose.",
+          number: 23,
+        },
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["When you understood what needed doing."],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "Yes. And Sophia did some research too. That was useful in developing our approach.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["Like what?"],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        {
+          text: "Well, she found these articles from the 1950s about how relationships between children and their parents, or between the public and people like bank managers or the police were shifting.",
           number: 24,
         },
       ],
     },
     {
-      speaker: "VICTOR",
+      speaker: "MIA",
+      text: [
+        "Interesting, and did you have any practical problems to overcome?",
+      ],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "Well, in the final rehearsal, everything was going fine until the last scene - that's where the doctor's first patient appears on stage on his own.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: ["The one in the wheelchair?"],
+    },
+    {
+      speaker: "ROB",
       text: [
         {
-          text: "As part of their preparation, before they left home, they learned basic survival skills like building a shelter.",
-          number: 23,
+          text: "Yes. And he had this really long speech with the stage all dark except for one spotlight. And then that stuck somehow, so it was shining on the wrong side of the stage.",
+          number: 25,
         },
-        "I guess they needed that knowledge in order to live wild in a remote location.",
-        "With few inhabitants cut off by the sea, which is what they were aiming to do.",
+        "But anyway, we got that fixed, thank goodness.",
       ],
     },
     {
-      speaker: "OLIVIA",
-      text: [
-        "An important part of your talk should be the radical theory Heyerdahl formed from examining mysterious ancient carvings that he happened to find on the island.",
-        "I think you should finish with that.",
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: ["OK."],
+      speaker: "MIA",
+      text: ["Yes, it was fine on the night."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
-        "Now listen and answer questions 25 to 30.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 26 to 30.",
+        "Now listen and answer questions 26 to 30.",
       ],
     },
     {
-      speaker: "OLIVIA",
+      speaker: "ROB",
       text: [
-        "All right, Victor.",
-        "So after your part, I'll talk about Thor Heyerdahl's adult life, continuing from the theory he had about Polynesian migration.",
-        "Up until that time, of course, academics had believed that humans first migrated to the islands in Polynesia from Asia in the west.",
+        "But while you're here, Mia, I wanted to ask you about the year abroad option. Would you recommend doing that?",
       ],
     },
     {
-      speaker: "VICTOR",
+      speaker: "MIA",
       text: [
+        "Yes, definitely. It's a fantastic chance to study in another country for a year.",
+      ],
+    },
+    {
+      speaker: "ROB",
+      text: [
+        "I think I'd like to do it, but it looks very competitive. There's only a limited number of places.",
+      ],
+    },
+    {
+      speaker: "MIA",
+      text: [
+        "Yes, so next year when you're in the second year of the course, you need to work really hard in all your theater studies modules. Only students with good marks get places.",
         {
-          text: "Yes, they thought that travel from the east was impossible, because of the huge empty stretch of ocean that lies between the islands and the nearest inhabited land.",
-          number: 25,
-        },
-      ],
-    },
-    {
-      speaker: "OLIVIA",
-      text: [
-        "Yes, but Heyerdahl spent ages studying the cloud movements, ocean currents, and wind patterns to find if it was actually possible.",
-        "And another argument was that there was no tradition of large ship building in the communities lying to the east of Polynesia.",
-        "But Heyerdahl knew they made lots of coastal voyages in locally built canoes.",
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: [
-        "Yes, or sailing on rafts, as was shown by the long voyage that Heyerdahl did next.",
-        "It was an incredibly risky journey to undertake.",
-        "Sometimes I wonder if he did that trip for private reasons, you know.",
-        "To show others that he could have spectacular adventures.",
-        "What do you think, Olivia?",
-      ],
-    },
-    {
-      speaker: "OLIVIA",
-      text: [
-        {
-          text: "Well, I think it was more a matter of simply trying out his idea, to see if migration from the east was possible.",
+          text: "You have to prove that you know your subject really well.",
           number: 26,
         },
       ],
     },
     {
-      speaker: "VICTOR",
-      text: [
-        "Yes, that's probably it.",
-        "And the poor guy suffered a bit at that time, because the war forced him to stop his work for some years.",
-      ],
+      speaker: "ROB",
+      text: ["Right. So how did you choose where to go?"],
     },
     {
-      speaker: "OLIVIA",
-      text: [
-        "Yes, when he got started again and planned his epic voyage, do you think it was important to him that he achieve it before anyone else did?",
-      ],
-    },
-    {
-      speaker: "VICTOR",
+      speaker: "MIA",
       text: [
         {
-          text: "I haven't read anywhere that that was his motivation.",
+          text: "Well, I decided I wanted a program that would fit in with what I wanted to do after I graduate. So, I looked for a university with emphasis on acting, rather than directing, for example.",
           number: 27,
         },
-        "The most important factor seems to have been that he use only ancient techniques and local materials to build his raft.",
+        "It depends on you. Then about 6 months before you go, you have to email the scheme coordinator with your top 3 choices. I had a friend who missed the deadline and didn't get her first choice, so you do need to get a move on at that stage.",
       ],
     },
     {
-      speaker: "OLIVIA",
-      text: ["Yes, I wonder how fast it went."],
-    },
-    {
-      speaker: "VICTOR",
-      text: [
-        "Well, it took them 97 days from South America to the Pacific Islands.",
-      ],
-    },
-    {
-      speaker: "OLIVIA",
-      text: [
-        "And after that, Heyerdahl went to Easter Island, didn't he?",
-        "We should mention the purpose of that trip.",
-        "I think he sailed there in a boat made out of reeds.",
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: ["No, that was later on in Egypt, Olivia."],
-    },
-    {
-      speaker: "OLIVIA",
-      text: ["Oh, yes, that's right."],
-    },
-    {
-      speaker: "VICTOR",
+      speaker: "ROB",
       text: [
         {
-          text: "But what he wanted to do was talk to the local people about their old stone carvings, and then make one himself.",
+          text: "You'll find that certain places are very popular with everyone.",
           number: 28,
         },
-        "To learn more about the process.",
       ],
     },
     {
-      speaker: "OLIVIA",
+      speaker: "MIA",
+      text: ["And don't you have to write a personal statement at that stage?"],
+    },
+    {
+      speaker: "ROB",
+      text: ["Yes."],
+    },
+    {
+      speaker: "ROB",
       text: [
         {
-          text: "To my mind, he was the first person to establish what modern academics call practical archaeology.",
+          text: "Right. I'll get some of the final year students to give me some tips, maybe see if I can read what they wrote.",
           number: 29,
         },
-        "I mean that they try to recreate something from the past today.",
-        "Like he did with his raft trip.",
-        "It's unfortunate that his ideas about where Polynesians originated from have been completely discredited.",
       ],
     },
     {
-      speaker: "VICTOR",
+      speaker: "MIA",
       text: [
         {
-          text: "I mainly used The Life and Work of Thor Heyerdahl by William Oliver.",
+          text: "I think that's a very good idea. I don't mind showing you what I did, and while you're abroad, don't make the mistake I made. I got so involved, I forgot all about making arrangements for when I came back here for the final year. Make sure you stay in touch so they know your choices for the optional modules. You don't want to miss out doing your preferred specialisms.",
           number: 30,
         },
-        "I thought the research methods he used were very sound, although I must say I found the overall tone somewhat old-fashioned.",
-        "I think they need to do a new revised edition.",
       ],
     },
     {
-      speaker: "OLIVIA",
-      text: [
-        "Yeah, I agree.",
-        "What about the subject matter?",
-        "I found it really challenging.",
-      ],
-    },
-    {
-      speaker: "VICTOR",
-      text: ["Well, it's a complex issue."],
+      speaker: "ROB",
+      text: ["Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
+        "That is the end of section 3.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -484,19 +501,19 @@ const Listening3Part32015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
+    // Questions 21–25 (radio buttons, A–C)
+    21: "B", // the times when he watched his grandfather working
+    22: "A", // repetition of words and phrases.
+    23: "B", // He copes well with stress.
+    24: "B", // changing social attitudes.
+    25: "A", // one person forgetting their words
 
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    // Questions 26–30 (dropdowns, A–G)
+    26: "C", // in the second year of the course -> plan for the final year
+    27: "D", // when first choosing where to go -> make sure the institution's focus is relevant
+    28: "B", // when sending in your choices -> get a letter of recommendation
+    29: "E", // when writing your personal statement -> show ability in Theatre Studies
+    30: "F", // when doing the year abroad -> make travel arrangements and bookings
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -523,7 +540,7 @@ const Listening3Part32015 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/listening3Part32015", newScore);
   };
 
   const toggleButton = (id) => {
@@ -535,12 +552,12 @@ const Listening3Part32015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/listening3Part32015");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/listening3Part32015");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -583,7 +600,7 @@ const Listening3Part32015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Thor Heyerdahl")}
+                {renderText("Theatre Studies Course")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -613,171 +630,240 @@ const Listening3Part32015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
-          <div className="border p-5 rounded-lg bg-white space-y-6">
-            {/* ---------- Questions 21–22 ---------- */}
-            <h2 className="font-bold text-lg">
-              {renderText("Questions 21 and 22")}
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
+          <p className="mb-4">
+            {renderText("Answer the questions below.")} <br />
+            {renderText("Choose the correct letters as instructed.")}
+          </p>
+
+          <div className="p-5 rounded-lg bg-white space-y-6">
+            <h2 className="text-lg font-bold text-center">
+              {renderText("Theatre Studies Course")}
             </h2>
-            <p>{renderText("Choose TWO letters, A–E.")}</p>
 
-            <p className="font-semibold mt-3">
-              {renderText(
-                "21–22 Which TWO hobbies was Thor Heyerdahl very interested in as a youth?"
-              )}
-            </p>
-
-            {[
-              ["A", "camping"],
-              ["B", "climbing"],
-              ["C", "collecting"],
-              ["D", "hunting"],
-              ["E", "reading"],
-            ].map(([key, text]) => (
-              <label key={key} className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  value={key}
-                  onChange={(e) => handleInputChange(21, e.target.value)}
-                />
-                <span className="font-semibold">{key}.</span>
-                {renderText(text)}
-              </label>
-            ))}
-
-            {/* ---------- Questions 23–24 ---------- */}
-            <h2 className="font-bold text-lg mt-8">
-              {renderText("Questions 23 and 24")}
-            </h2>
-            <p>{renderText("Choose TWO letters, A–E.")}</p>
-
-            <p className="font-semibold mt-3">
-              {renderText(
-                "23–24 Which do the speakers say are the TWO reasons why Heyerdahl went to live on an island?"
-              )}
-            </p>
-
-            {[
-              ["A", "to examine ancient carvings"],
-              ["B", "to experience an isolated place"],
-              ["C", "to formulate a new theory"],
-              ["D", "to learn survival skills"],
-              ["E", "to study the impact of an extreme environment"],
-            ].map(([key, text]) => (
-              <label key={key} className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  value={key}
-                  onChange={(e) => handleInputChange(23, e.target.value)}
-                />
-                <span className="font-semibold">{key}.</span>
-                {renderText(text)}
-              </label>
-            ))}
-
-            {/* ---------- Questions 25–30 ---------- */}
-            <h2 className="font-bold text-lg mt-8">
-              {renderText("Questions 25–30")}
-            </h2>
-            <p>{renderText("Choose the correct letter, A, B or C.")}</p>
-
-            <p className="font-bold mt-3">
-              {renderText("The later life of Thor Heyerdahl")}
-            </p>
-
-            {/* Question 25 */}
-            <div className="mt-4">
-              <p className="font-semibold">
-                {renderText(
-                  "25 According to Victor and Olivia, academics thought that Polynesian migration from the east was impossible due to"
-                )}
+            {/* ---------- Questions 21–25 ---------- */}
+            <div>
+              <h3 className="font-bold mb-2">
+                {renderText("Questions 21–25")}
+              </h3>
+              <p className="mb-3">
+                {renderText("Choose the correct letter, A, B or C.")}
               </p>
 
               {[
-                ["A", "the fact that Eastern countries were far away"],
-                ["B", "the lack of materials for boat building"],
-                ["C", "the direction of the winds and currents"],
-              ].map(([key, text]) => (
-                <label key={key} className="flex items-center gap-3">
-                  <input
-                    type="radio"
-                    name="q25"
-                    value={key}
-                    onChange={(e) => handleInputChange(25, e.target.value)}
-                  />
-                  <span className="font-semibold">{key}.</span>
-                  {renderText(text)}
-                </label>
+                {
+                  q: 21,
+                  text: "What helped Rob to prepare to play the character of a doctor?",
+                  options: [
+                    "the stories his grandfather told him",
+                    "the times when he watched his grandfather working",
+                    "the way he imagined his grandfather at work",
+                  ],
+                },
+                {
+                  q: 22,
+                  text: "In the play's first scene, the boredom of village life was suggested by",
+                  options: [
+                    "repetition of words and phrases.",
+                    "scenery painted in dull colours.",
+                    "long pauses within conversations.",
+                  ],
+                },
+                {
+                  q: 23,
+                  text: "What has Rob learned about himself through working in a group?",
+                  options: [
+                    "He likes to have clear guidelines.",
+                    "He copes well with stress.",
+                    "He thinks he is a good leader.",
+                  ],
+                },
+                {
+                  q: 24,
+                  text: "To support the production, research material was used which described",
+                  options: [
+                    "political developments.",
+                    "changing social attitudes.",
+                    "economic transformations.",
+                  ],
+                },
+                {
+                  q: 25,
+                  text: "What problem did the students overcome in the final rehearsal?",
+                  options: [
+                    "one person forgetting their words",
+                    "an equipment failure",
+                    "the injury of one character",
+                  ],
+                },
+              ].map(({ q, text, options }) => (
+                <div key={q} className="mb-4">
+                  <p className="font-semibold">{renderText(`${q}. ${text}`)}</p>
+                  {options.map((opt, idx) => {
+                    const letter = String.fromCharCode(65 + idx);
+                    return (
+                      <label key={letter} className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={`q${q}`}
+                          onChange={() => handleInputChange(q, letter)}
+                        />
+                        <span>
+                          <strong>{letter}.</strong> {renderText(opt)}
+                        </span>
+                      </label>
+                    );
+                  })}
+                </div>
               ))}
             </div>
 
-            {/* Questions 26–30 */}
-            {[
-              [
-                26,
-                "Which do the speakers agree was the main reason for Heyerdahl's raft journey?",
-                [
-                  ["A", "to overcome a research setback"],
-                  ["B", "to demonstrate a personal quality"],
-                  ["C", "to test a new theory"],
-                ],
-              ],
-              [
-                27,
-                "What was most important to Heyerdahl about his raft journey?",
-                [
-                  ["A", "the fact that he was the first person to do it"],
-                  ["B", "the speed of crossing the Pacific"],
-                  ["C", "the use of authentic construction methods"],
-                ],
-              ],
-              [
-                28,
-                "Why did Heyerdahl go to Easter Island?",
-                [
-                  ["A", "to build a stone statue"],
-                  ["B", "to sail a reed boat"],
-                  ["C", "to learn the local language"],
-                ],
-              ],
-              [
-                29,
-                "In Olivia's opinion, Heyerdahl's greatest influence was on",
-                [
-                  ["A", "theories about Polynesian origins"],
-                  ["B", "the development of archaeological methodology"],
-                  ["C", "establishing archaeology as an academic subject"],
-                ],
-              ],
-              [
-                30,
-                "Which criticism do the speakers make of William Oliver's textbook?",
-                [
-                  ["A", "Its style is out of date"],
-                  ["B", "Its content is over-simplified"],
-                  ["C", "Its methodology is flawed"],
-                ],
-              ],
-            ].map(([num, question, options]) => (
-              <div key={num} className="mt-6">
-                <p className="font-semibold">
-                  {renderText(`${num} ${question}`)}
-                </p>
+            {/* ---------- Questions 26–30 ---------- */}
+            <div>
+              <h3 className="font-bold mb-2">
+                {renderText("Questions 26–30")}
+              </h3>
+              <p className="mb-3">
+                {renderText(
+                  "What action is needed for the following stages in doing the 'year abroad' option? Choose the correct letter, A–G."
+                )}
+              </p>
 
-                {options.map(([key, text]) => (
-                  <label key={key} className="flex items-center gap-3">
-                    <input
-                      type="radio"
-                      name={`q${num}`}
-                      value={key}
-                      onChange={(e) => handleInputChange(num, e.target.value)}
-                    />
-                    <span className="font-semibold">{key}.</span>
-                    {renderText(text)}
-                  </label>
-                ))}
+              <div className="border max-w-[200px] mx-auto text-center mb-4 p-4">
+                <p className="mb-2 font-semibold">{renderText("Actions")}</p>
+                <ul className="text-left">
+                  <li>A. be on time</li>
+                  <li>B. get a letter of recommendation</li>
+                  <li>C. plan for the final year</li>
+                  <li>D. make sure the institution's focus is relevant</li>
+                  <li>E. show ability in Theatre Studies</li>
+                  <li>F. make travel arrangements and bookings</li>
+                  <li>G. ask for help</li>
+                </ul>
               </div>
-            ))}
+
+              {[
+                { q: 26, text: "in the second year of the course" },
+                { q: 27, text: "when first choosing where to go" },
+                { q: 28, text: "when sending in your choices" },
+                { q: 29, text: "when writing your personal statement" },
+                { q: 30, text: "when doing the year abroad" },
+              ].map(({ q, text }) => (
+                <div key={q} className="flex items-center gap-2 mb-2">
+                  <span className="font-bold w-6">{q}.</span>
+                  <span>{renderText(text)}</span>
+                  <select
+                    className="border rounded px-2 py-1 ml-2"
+                    onChange={(e) => handleInputChange(q, e.target.value)}
+                  >
+                    <option value="">{q}</option>{" "}
+                    {/* <-- show question number as default */}
+                    {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
+                      <option key={letter} value={letter}>
+                        {letter}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10">
+              {!showResult ? (
+                <div className="flex items-center justify-center">
+                  {" "}
+                  <button
+                    onClick={() => setShowResult(true)}
+                    className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  >
+                    Submit Answers
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Result Card */}
+                  <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                    <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                    <p className="text-green-600 text-2xl font-semibold">
+                      Your Score: {score}/10
+                    </p>
+                  </div>
+
+                  {/* All Answers List */}
+                  <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                    <h3 className="text-xl font-bold text-gray-700 mb-3">
+                      All Answers (21-30)
+                    </h3>
+
+                    <ul className="space-y-3">
+                      {Array.from({ length: 10 }, (_, i) => i + 21).map(
+                        (num) => {
+                          const userAnswer =
+                            userAnswers[num]?.trim().toLowerCase() || "";
+                          const correctAnswer = correctAnswers[num]
+                            ?.trim()
+                            .toLowerCase();
+
+                          const isCorrect =
+                            userAnswer && userAnswer === correctAnswer;
+
+                          const isWrong =
+                            userAnswer && userAnswer !== correctAnswer;
+
+                          const noAnswer = !userAnswer;
+
+                          return (
+                            <li
+                              key={num}
+                              className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                            >
+                              <div className="flex items-center gap-2">
+                                {/* ICONS */}
+                                {isCorrect && (
+                                  <span className="text-green-600 text-xl font-bold">
+                                    <FaDotCircle />
+                                  </span> // GREEN CIRCLE
+                                )}
+                                {(isWrong || noAnswer) && (
+                                  <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-sm font-bold leading-none">
+                                      <ImCross />
+                                    </span>
+                                  </div>
+                                )}
+
+                                <p className="font-bold">Q{num}:</p>
+                              </div>
+
+                              {/* User Answer */}
+                              <p className="ml-8">
+                                <span className="font-semibold">
+                                  Your Answer:
+                                </span>{" "}
+                                {noAnswer ? (
+                                  <span className=" italic">
+                                    No answer provided
+                                  </span>
+                                ) : (
+                                  <span>{userAnswer}</span>
+                                )}
+                              </p>
+
+                              {/* Correct Answer */}
+                              <p className="ml-8">
+                                <span className="font-semibold text-green-600">
+                                  Correct Answer:
+                                </span>{" "}
+                                <span>{correctAnswers[num]}</span>
+                              </p>
+                            </li>
+                          );
+                        }
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

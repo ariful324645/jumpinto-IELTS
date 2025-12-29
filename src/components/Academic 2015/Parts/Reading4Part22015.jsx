@@ -134,25 +134,24 @@ const Reading4Part22015 = () => {
   };
 
   const correctAnswers = {
-    // ================= Questions 27–31 (Summary completion) =================
-    27: "B", // plantation
-    28: "F", // archaeological discovery
-    29: "I", // animals
-    30: "G", // burial urn
-    31: "D", // bones
+    // ================= Questions 14–18 (Summary completion) =================
+    14: "change", // personality change was impossible
+    15: "young age", // by a young age, character tends to be fixed
+    16: "optimism", // easiest quality to acquire
+    17: "skills", // learn a wide variety of skills
+    18: "negative emotions", // must understand and feel negative emotions
 
-    // ================= Questions 32–35 (Multiple choice A–D) =================
-    32: "A", // the canoes that have been discovered offer relatively few clues
-    33: "A", // They sailed beyond the point where land was visible
-    34: "B", // the Lapita's ability to detect signs of land
-    35: "C", // It provided a navigational aid for the Lapita
+    // ================= Questions 19–22 (Match statements to people) =================
+    19: "E", // Todd Kashdan: accept ignorance when trying something new
+    20: "C", // Suzanne Segerstrom: notice good things
+    21: "G", // Cynthia Pury: courage learned via responsibility
+    22: "A", // Christopher Peterson: overcome shyness
 
-    // ================= Questions 36–40 (YES / NO / NOT GIVEN) =================
-    36: "NOT GIVEN", // It is not clear whether the Lapita could sail into a prevailing wind
-    37: "YES", // Extreme climate conditions (El Nino) may have influenced migration
-    38: "NOT GIVEN", // No information suggests they predicted the duration of El Ninos
-    39: "YES", // It remains unclear why they halted their expansion
-    40: "NO", // Majority did not settle on Fiji; only some islands were inhabited
+    // ================= Questions 23–26 (Passage sections A-H) =================
+    23: "D", // rational thinking to achieve physical goals (Suzanne Segerstrom)
+    24: "C", // overcame sad experience (David Fajgenbaum)
+    25: "G", // rethinking academic career path (Mauro Zappaterra)
+    26: "H", // risked career due to duty (Kenneth Pedeleose)
   };
 
   useEffect(() => {
@@ -188,7 +187,7 @@ const Reading4Part22015 = () => {
 
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("PASSAGE 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("PASSAGE 2")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -203,85 +202,215 @@ const Reading4Part22015 = () => {
           <div className="mt-4">
             <h1 className="text-lg">
               {renderText(
-                "You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below."
+                "You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below."
               )}
             </h1>
           </div>
 
           <div className="mt-4">
             <h1 className="text-2xl font-bold mb-4 text-center">
-              {renderText("Beyond the blue horizon")}
+              {renderText("Second nature")}
             </h1>
-            <p className="text-lg mb-5">
+            <p className="text-lg mb-5 italic text-center">
               {renderText(
-                "Ancient voyagers who settled the far-flung islands of the Pacific Ocean."
+                "Your personality isn't necessarily set in stone. With a little experimentation, people can reshape their temperaments and inject passion, optimism, joy and courage into their lives."
               )}
             </p>
 
-            <p className="font-bold mb-1">{renderText("Image 1")}</p>
+            {/* Paragraph A */}
+            <p className="text-lg mb-5 font-bold">{renderText("A")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Psychologists have long held that a person's character cannot undergo a transformation in any meaningful way and that the key traits of personality are determined at a very young age."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    14
+                  </span>
+                )}
+              </span>
               {renderText(
-                "An important archaeological discovery on the island of Efate in the Pacific archipelago of Vanuatu has revealed traces of an ancient seafaring people, the distant ancestors of today's Polynesians. The site came to light only by chance. An agricultural worker, digging in the grounds of a derelict plantation, scraped open a grave - the first of dozens in a burial ground some 3,000 years old. It is the oldest cemetery ever found in the Pacific islands, and it harbors the remains of an ancient people archaeologists call the Lapita."
+                " However, researchers have begun looking more closely at ways we can change. Positive psychologists have identified 24 qualities we admire, such as loyalty and kindness, and are studying them to find out why they come so naturally to some people. What they're discovering is that many of these qualities amount to habitual behaviour that determines the way we respond to the world. The good news is that all this can be learned."
               )}
             </p>
 
+            {/* Paragraph B */}
+            <p className="text-lg mb-5 font-bold">{renderText("B")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  '"The evidence is good that most personality traits can be altered," says Christopher Peterson, professor of psychology at the University of Michigan, who cites himself as an example.'
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    15
+                  </span>
+                )}
+              </span>
               {renderText(
-                "They were daring blue-water adventurers who used basic canoes to rove across the ocean. But they were not just explorers. They were also pioneers who carried with them everything they would need to build new lives - their livestock, taro seedlings and stone tools. Within the span of several centuries, the Lapita stretched the boundaries of their world from the jungle-clad volcanoes of Papua New Guinea to the loneliest coral outliers of Tonga."
+                " Inherently introverted, he realised early on that as an academic, his reticence would prove disastrous in the lecture hall. So he learned to be more outgoing and to entertain his classes. 'Now my extroverted behaviour is spontaneous,' he says."
               )}
             </p>
 
+            {/* Paragraph C */}
+            <p className="text-lg mb-5 font-bold">{renderText("C")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "David Fajgenbaum had to make a similar transition."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    16
+                  </span>
+                )}
+              </span>
               {renderText(
-                "The Lapita left precious few clues about themselves, but Efate expands the volume of data available to researchers dramatically. The remains of 62 individuals have been uncovered so far, and archaeologists were also thrilled to find six complete Lapita pots. Other items included a Lapita burial urn with modeled birds arranged on the rim as though peering down at the human remains sealed inside. 'It's an important discovery,' says Matthew Spriggs, professor of archaeology at the Australian National University and head of the international team digging up the site, 'for it conclusively identifies the remains as Lapita.'"
+                " He was preparing for university, when he had an accident that put an end to his sports career. On campus, he quickly found that beyond ordinary counselling, the university had no services for students who were undergoing physical rehabilitation and suffering from depression like him. He therefore launched a support group to help others in similar situations. He took action despite his own pain - a typical response of an optimist."
               )}
             </p>
 
+            {/* Paragraph D */}
+            <p className="text-lg mb-5 font-bold">{renderText("D")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Suzanne Segerstrom, professor of psychology at the University of Kentucky, believes that the key to increasing optimism is through cultivating optimistic behaviour, rather than positive thinking."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    17
+                  </span>
+                )}
+              </span>
               {renderText(
-                "DNA teased from these human remains may help answer one of the most puzzling questions in Pacific anthropology: did all Pacific islanders spring from one source or many? Was there only one outward migration from a single point in Asia, or several from different points? 'This represents the best opportunity we've had yet,' says Spriggs, 'to find out who the Lapita actually were, where they came from, and who their closest descendants are today'."
+                " She recommends you train yourself to pay attention to good fortune by writing down three positive things that come about each day. This will help you convince yourself that favourable outcomes actually happen all the time, making it easier to begin taking action."
               )}
             </p>
 
+            {/* Paragraph E */}
+            <p className="text-lg mb-5 font-bold">{renderText("E")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "You can recognise a person who is passionate about a pursuit by the way they are so strongly involved in it."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    18
+                  </span>
+                )}
+              </span>
               {renderText(
-                "There is one stubborn question for which archaeology has yet to provide any answers: how did the Lapita accomplish the ancient equivalent of a moon landing, many times over? No-one has found one of their canoes or any rigging, which could reveal how the canoes were sailed. Nor do the oral histories and traditions of later Polynesians offer any insights, for they turn into myths long before they reach as far back in time as the Lapita."
+                " Tanya Streeter's passion is freediving - the sport of plunging deep into the water without tanks or other breathing equipment. Beginning in 1998, she set nine world records and can hold her breath for six minutes. The physical stamina required for this sport is intense but the psychological demands are even more overwhelming. Streeter learned to untangle her fears from her judgment of what her body and mind could do. 'In my career as a competitive freediver, there was a limit to what I could do - but it wasn't anywhere near what I thought it was,' she says."
               )}
             </p>
 
+            {/* Paragraph F */}
+            <p className="text-lg mb-5 font-bold">{renderText("F")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Finding a pursuit that excites you can improve anyone's life."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    19
+                  </span>
+                )}
+              </span>
               {renderText(
-                "'All we can say for certain is that the Lapita had canoes that were capable of ocean voyages, and they had the ability to sail them,' says Geoff Irwin, a professor of archaeology at the University of Auckland. Those sailing skills, he says, were developed and passed down over thousands of years by earlier mariners who worked their way through the archipelagoes of the western Pacific, making short crossings to nearby islands. The real adventure didn't begin, however, until their Lapita descendants sailed out of sight of land, with empty horizons on every side. This must have been as difficult for them as landing on the moon is for us today. Certainly it distinguished them from their ancestors, but what gave them the courage to launch out on such risky voyages?"
+                " The secret about consuming passions, though, according to psychologist Paul Silvia of the University of North Carolina, is that 'they require discipline, hard work and ability, which is why they are so rewarding.' Psychologist Todd Kashdan has this advice for those people taking up a new passion: 'As a newcomer, you also have to tolerate and laugh at your own ignorance. You must be willing to accept the negative feelings that come your way,' he says."
               )}
             </p>
 
+            {/* Paragraph G */}
+            <p className="text-lg mb-5 font-bold">{renderText("G")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "In 2004, physician-scientist Mauro Zappaterra began his PhD research at Harvard Medical School."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    20
+                  </span>
+                )}
+              </span>
               {renderText(
-                "The Lapita's thrust into the Pacific was eastward, against the prevailing trade winds, Irwin notes. Those nagging headwinds, he argues, may have been the key to their success. 'They could sail out for days into the unknown and assess the area, secure in the knowledge that if they didn't find anything, they could turn about and catch a swift ride back on the trade winds. This is what would have made the whole thing work.' Once out there, skilled seafarers would have detected abundant leads to follow to land: seabirds, coconuts and twigs carried out to sea by the tides, and the afternoon pile-up of clouds on the horizon which often indicates an island in the distance."
+                " Unfortunately, he was miserable as his research wasn't compatible with his curiosity about healing. He finally took a break and during eight months in Santa Fe, Zappaterra learned about alternative healing techniques not taught at Harvard. When he got back, he switched labs to study how cerebrospinal fluid nourishes the developing nervous system. He also vowed to look for the joy in everything, including failure, as this could help him learn about his research and himself. One thing that can hold joy back is a person's concentration on avoiding failure rather than their looking forward to doing something well. 'Focusing on being safe might get in the way of your reaching your goals,' explains Kashdan."
               )}
             </p>
 
+            {/* Paragraph H */}
+            <p className="text-lg mb-5 font-bold">{renderText("H")}</p>
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Usually, we think of courage in physical terms but ordinary life demands something else."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    21
+                  </span>
+                )}
+              </span>
               {renderText(
-                "For returning explorers, successful or not, the geography of their own archipelagoes would have provided a safety net. Without this to go by, overshooting their home ports, getting lost and sailing off into eternity would have been all too easy. Vanuatu, for example, stretches more than 500 miles in a northwest-southeast trend, its scores of intervisible islands forming a backstop for mariners riding the trade winds home."
+                " For marketing executive Kenneth Pedeleose, it meant speaking out against something he thought was ethically wrong. The new manager was intimidating staff so Pedeleose carefully recorded each instance of bullying and eventually took the evidence to a senior director, knowing his own job security would be threatened. Eventually the manager was the one to go. According to Cynthia Pury, a psychologist at Clemson University, Pedeleose's story proves the point that courage is not motivated by fearlessness, but by moral obligation. Pury also believes that people can acquire courage. Many of her students said that faced with a risky situation, they first tried to calm themselves down, then looked for a way to mitigate the danger, just as Pedeleose did by documenting his allegations."
               )}
             </p>
 
+            {/* Conclusion */}
             <p className="text-lg mb-5">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Over the long term, picking up a new character trait may help you move toward being the person you want to be."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    22
+                  </span>
+                )}
+              </span>
               {renderText(
-                "All this presupposes one essential detail, says Atholl Anderson, professor of prehistory at the Australian National University: the Lapita had mastered the advanced art of sailing against the wind. 'And there's no proof they could do any such thing,' Anderson says. 'There has been this assumption they did, and people have built canoes to re-create those early voyages based on that assumption. But nobody has any idea what their canoes looked like or how they were rigged.'"
-              )}
-            </p>
-
-            <p className="text-lg mb-5">
-              {renderText(
-                "Rather than give all the credit to human skill, Anderson invokes the winds of chance. El Nino, the same climate disruption that affects the Pacific today, may have helped scatter the Lapita, Anderson suggests. He points out that climate data obtained from slow-growing corals around the Pacific indicate a series of unusually frequent El Ninos around the time of the Lapita expansion. By reversing the regular east-to-west flow of the trade winds for weeks at a time, these 'super El Ninos' might have taken the Lapita on long unplanned voyages."
-              )}
-            </p>
-
-            <p className="text-lg mb-5">
-              {renderText(
-                "However they did it, the Lapita spread themselves a third of the way across the Pacific, then called it quits for reasons known only to them. Ahead lay the vast emptiness of the central Pacific and perhaps they were too thinly stretched to venture farther. They probably never numbered more than a few thousand in total, and in their rapid migration eastward they encountered hundreds of islands - more than 300 in Fiji alone."
+                " And in the short term, the effort itself could be surprisingly rewarding, a kind of internal adventure."
               )}
             </p>
           </div>
@@ -290,214 +419,288 @@ const Reading4Part22015 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
           <div className="space-y-6 leading-relaxed">
-            {/* ================= Questions 27–31 ================= */}
+            {/* ================= Questions 14–18 ================= */}
             <h2 className="text-lg font-bold">
-              {renderText("Questions 27–31")}
+              {renderText("Questions 14–18")}
             </h2>
+
+            <p>{renderText("Complete the summary below.")}</p>
             <p>
               {renderText(
-                "Complete the summary using the list of words or phrases below."
-              )}
-            </p>
-            <p>
-              {renderText(
-                "Choose the correct letter, A–J, in boxes 27–31 on your answer sheet."
-              )}
-            </p>
-            <p>
-              {renderText(
-                "A. proof  B. plantation  C. harbour  D. bones  E. data  F. archaeological discovery  G. burial urn  H. source  I. animals  J. maps"
+                "Choose NO MORE THAN TWO WORDS from the passage for each answer."
               )}
             </p>
 
-            <div className="border p-4 mt-4">
-              <h3 className="font-bold text-xl text-center mb-4">
-                {renderText("The Éfaté burial site")}
-              </h3>
-              {[
-                {
-                  q: 27,
-                  text: "A 3,000-year-old burial ground of a seafaring people called the Lapita has been found on an abandoned",
-                },
-                {
-                  q: 28,
-                  text: "on the Pacific island of Éfaté. The cemetery, which is a significant",
-                },
-                {
-                  q: 29,
-                  text: "The Lapita explored and colonised many Pacific islands over several centuries. They took many things with them on their voyages including",
-                },
-                {
-                  q: 30,
-                  text: "The burial ground increases the amount of information about the Lapita available to scientists. A team of researchers, led by Matthew Spriggs from the Australian National University, are helping with the excavation of the site. Spriggs believes the",
-                },
-                {
-                  q: 31,
-                  text: "which was found at the site is very important since it confirms that the",
-                },
-              ].map(({ q, text }) => (
-                <div key={q} className="flex items-center gap-2 flex-wrap mt-4">
-                  <span className="flex-1">{renderText(text)}</span>
-                  <div className="relative w-24">
-                    <select
-                      value={userAnswers[q] || ""}
-                      onChange={(e) => handleInputChange(q, e.target.value)}
-                      className="appearance-none w-full border-2 border-gray-300 rounded-md px-2 py-2 pr-8"
-                    >
-                      <option value="">{q}</option>
-                      {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
-                        (opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        )
-                      )}
-                    </select>
-                    <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">
-                      <FaChevronDown />
-                    </span>
-                  </div>
-                </div>
-              ))}
+            <div className="border p-5 rounded-md leading-relaxed text-[15px]">
+              <p>
+                {renderText(
+                  "Psychologists have traditionally believed that a personality"
+                )}{" "}
+                <span className="inline-flex items-center gap-1 mx-1">
+                  <span className="text-sm text-gray-500">(14)</span>
+                  <input
+                    type="text"
+                    value={userAnswers[14] || ""}
+                    onChange={(e) => handleInputChange(14, e.target.value)}
+                    className="w-28 border border-gray-400 rounded px-2 py-1"
+                  />
+                </span>
+                {renderText("was impossible and that by a")}{" "}
+                <span className="inline-flex items-center gap-1 mx-1">
+                  <span className="text-sm text-gray-500">(15)</span>
+                  <input
+                    type="text"
+                    value={userAnswers[15] || ""}
+                    onChange={(e) => handleInputChange(15, e.target.value)}
+                    className="w-28 border border-gray-400 rounded px-2 py-1"
+                  />
+                </span>
+                {renderText(
+                  ", a person's character tends to be fixed. This is not true according to positive psychologists, who say that our personal qualities can be seen as habitual behaviour. One of the easiest qualities to acquire is"
+                )}{" "}
+                <span className="inline-flex items-center gap-1 mx-1">
+                  <span className="text-sm text-gray-500">(16)</span>
+                  <input
+                    type="text"
+                    value={userAnswers[16] || ""}
+                    onChange={(e) => handleInputChange(16, e.target.value)}
+                    className="w-28 border border-gray-400 rounded px-2 py-1"
+                  />
+                </span>
+                .
+              </p>
+
+              <p className="mt-3">
+                {renderText(
+                  "However, regardless of the quality, it is necessary to learn a wide variety of different"
+                )}{" "}
+                <span className="inline-flex items-center gap-1 mx-1">
+                  <span className="text-sm text-gray-500">(17)</span>
+                  <input
+                    type="text"
+                    value={userAnswers[17] || ""}
+                    onChange={(e) => handleInputChange(17, e.target.value)}
+                    className="w-28 border border-gray-400 rounded px-2 py-1"
+                  />
+                </span>{" "}
+                {renderText(
+                  "in order for a new quality to develop; for example, a person must understand and feel some"
+                )}{" "}
+                <span className="inline-flex items-center gap-1 mx-1">
+                  <span className="text-sm text-gray-500">(18)</span>
+                  <input
+                    type="text"
+                    value={userAnswers[18] || ""}
+                    onChange={(e) => handleInputChange(18, e.target.value)}
+                    className="w-28 border border-gray-400 rounded px-2 py-1"
+                  />
+                </span>{" "}
+                {renderText("in order to increase their happiness.")}
+              </p>
             </div>
 
-            {/* ================= Questions 32–35 ================= */}
+            {/* ================= Questions 19–22 ================= */}
             <h2 className="text-lg font-bold mt-10">
-              {renderText("Questions 32–35")}
+              {renderText("Questions 19–22")}
             </h2>
-            <p>{renderText("Choose the correct letter, A, B, C or D.")}</p>
 
-            {[
-              {
-                q: 32,
-                text: "According to the writer, there are difficulties explaining how the Lapita accomplished their journeys because",
-                options: [
-                  "A. the canoes that have been discovered offer relatively few clues.",
-                  "B. archaeologists have shown limited interest in this area of research.",
-                  "C. little information relating to this period can be relied upon for accuracy.",
-                  "D. technological advances have altered the way such achievements are viewed.",
-                ],
-              },
-              {
-                q: 33,
-                text: "According to the sixth paragraph, what was extraordinary about the Lapita?",
-                options: [
-                  "A. They sailed beyond the point where land was visible.",
-                  "B. Their cultural heritage discouraged the expression of fear.",
-                  "C. They were able to build canoes that withstood ocean voyages.",
-                  "D. Their navigational skills were passed on from one generation to the next.",
-                ],
-              },
-              {
-                q: 34,
-                text: "What does 'This' refer to in the seventh paragraph?",
-                options: [
-                  "A. the Lapita's seafaring talent",
-                  "B. the Lapita's ability to detect signs of land",
-                  "C. the Lapita's extensive knowledge of the region",
-                  "D. the Lapita's belief they would be able to return home",
-                ],
-              },
-              {
-                q: 35,
-                text: "According to the eighth paragraph, how was the geography of the region significant?",
-                options: [
-                  "A. It played an important role in Lapita culture.",
-                  "B. It meant there were relatively few storms at sea.",
-                  "C. It provided a navigational aid for the Lapita.",
-                  "D. It made a large number of islands habitable.",
-                ],
-              },
-            ].map(({ q, text, options }) => (
-              <div key={q} className="flex flex-col gap-2 mt-4">
-                <p className="font-medium">
-                  {q}. {renderText(text)}
-                </p>
-                {options.map((opt) => (
-                  <label key={opt} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name={`q${q}`}
-                      value={opt[0]}
-                      checked={userAnswers[q] === opt[0]}
-                      onChange={(e) => handleInputChange(q, e.target.value)}
-                      className="radio radio-accent"
-                    />
-                    <span>{renderText(opt)}</span>
-                  </label>
-                ))}
-              </div>
-            ))}
-
-            {/* ================= Questions 36–40 ================= */}
-            <h2 className="text-lg font-bold mt-10">
-              {renderText("Questions 36–40")}
-            </h2>
             <p>
               {renderText(
-                "Do the following statements agree with the claims of the writer in Reading Passage 3?"
+                "Look at the following statements and the list of people below."
               )}
             </p>
-            <p>{renderText("In boxes 36–40 on your answer sheet, choose")}</p>
-            <ul className="list-disc ml-5">
-              <li>
+            <p>
+              {renderText("Match each statement with the correct person, A–G.")}
+            </p>
+
+            <div className="border max-w-[200px] mx-auto p-4">
+              <h2 className="font-bold text-2xl mb-2">List of People</h2>
+              <p className="font-semibold">
                 {renderText(
-                  "YES if the statement agrees with the claims of the writer"
+                  "A. Christopher Peterson  B. David Fajgenbaum  C. Suzanne Segerstrom  D. Tanya Streeter  E. Todd Kashdan  F. Kenneth Pedeleose  G. Cynthia Pury"
                 )}
-              </li>
-              <li>
-                {renderText(
-                  "NO if the statement contradicts the claims of the writer"
-                )}
-              </li>
-              <li>
-                {renderText(
-                  "NOT GIVEN if it is impossible to say what the writer thinks about this"
-                )}
-              </li>
-            </ul>
+              </p>
+            </div>
 
             {[
               {
-                q: 36,
-                text: "It is now clear that the Lapita could sail into a prevailing wind.",
+                q: 19,
+                text: "People must accept that they do not know much when first trying something new.",
               },
               {
-                q: 37,
-                text: "Extreme climate conditions may have played a role in Lapita migration.",
+                q: 20,
+                text: "It is important for people to actively notice when good things happen.",
               },
               {
-                q: 38,
-                text: "The Lapita learnt to predict the duration of El Ninos.",
+                q: 21,
+                text: "Courage can be learned once its origins in a sense of responsibility are understood.",
               },
               {
-                q: 39,
-                text: "It remains unclear why the Lapita halted their expansion across the Pacific.",
-              },
-              {
-                q: 40,
-                text: "It is likely that the majority of Lapita settled on Fiji.",
+                q: 22,
+                text: "It is possible to overcome shyness when faced with the need to speak in public.",
               },
             ].map(({ q, text }) => (
-              <div key={q} className="flex flex-col gap-2 mt-4">
-                <p className="font-medium">
+              <div key={q} className="flex items-center gap-2 mt-4">
+                <span className="">
                   {q}. {renderText(text)}
-                </p>
-                {["YES", "NO", "NOT GIVEN"].map((opt) => (
-                  <label key={opt} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name={`q${q}`}
-                      value={opt}
-                      checked={userAnswers[q] === opt}
-                      onChange={(e) => handleInputChange(q, e.target.value)}
-                      className="radio radio-accent"
-                    />
-                    <span>{renderText(opt)}</span>
-                  </label>
-                ))}
+                </span>
+
+                <select
+                  value={userAnswers[q] || ""}
+                  onChange={(e) => handleInputChange(q, e.target.value)}
+                  className="w-20 border-2 border-gray-300 rounded-md px-2 py-2"
+                >
+                  <option value="">{q}</option>
+                  {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
               </div>
             ))}
+
+            {/* ================= Questions 23–26 ================= */}
+            <h2 className="text-lg font-bold mt-10">
+              {renderText("Questions 23–26")}
+            </h2>
+
+            <p>{renderText("Reading Passage 2 has eight sections, A–H.")}</p>
+            <p>
+              {renderText("Which section contains the following information?")}
+            </p>
+
+            {[
+              {
+                q: 23,
+                text: "a mention of how rational thinking enabled someone to achieve physical goals",
+              },
+              {
+                q: 24,
+                text: "an account of how someone overcame a sad experience",
+              },
+              {
+                q: 25,
+                text: "a description of how someone decided to rethink their academic career path",
+              },
+              {
+                q: 26,
+                text: "an example of how someone risked his career out of a sense of duty",
+              },
+            ].map(({ q, text }) => (
+              <div key={q} className="flex items-center gap-3 mt-4">
+                <span className="">
+                  {q}. {renderText(text)}
+                </span>
+
+                <select
+                  value={userAnswers[q] || ""}
+                  onChange={(e) => handleInputChange(q, e.target.value)}
+                  className="w-20 border-2 border-gray-300 rounded-md px-2 py-2"
+                >
+                  <option value="">{q}</option>
+                  {["A", "B", "C", "D", "E", "F", "G", "H"].map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (14–26)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

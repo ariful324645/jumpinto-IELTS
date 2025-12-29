@@ -28,250 +28,134 @@ const Listening3Part22015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 1. You will hear a man interviewing a woman in the street about her use of transport.",
-        "First, you have some time to look at questions 1 to 5.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
+        "Section 2. You will hear a woman called Alice Bussell talking on the radio about the Dolphin Conservation Trust, an organization which tries to protect dolphins.",
+        "First, you have some time to look at questions 11 to 15.",
+        "Now listen carefully and answer questions 11 to 15.",
       ],
     },
     {
       speaker: "INTERVIEWER",
-      text: ["Excuse me."],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Yes?"],
-    },
-    {
-      speaker: "INTERVIEWER",
       text: [
-        "I wonder if you could spare a few minutes to do a survey on transport.",
-        "It won't take long.",
+        "Today we're pleased to have on the show Alice Bussell from the Dolphin Conservation Trust.",
+        "Tell us about the trust, Alice.",
       ],
     },
     {
-      speaker: "LUISA",
-      text: ["Uh. No, that's fine."],
-    },
-    {
-      speaker: "INTERVIEWER",
+      speaker: "ALICE",
       text: [
-        "Oh, lovely.",
-        "The survey is on behalf of the local council.",
-        "They'd like to know about what transport you use, and any suggestions for improvement.",
-        "Can I start by asking you how you traveled to town today?",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Sure, I came on the bus."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "The woman traveled to town by bus, so bus has been written in the space.",
-        "Now we shall begin.",
-        "You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 5.",
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Excuse me."],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Yes?"],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: [
-        "I wonder if you could spare a few minutes to do a survey on transport.",
-        "It won't take long.",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Uh. No, that's fine."],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: [
-        "Oh, lovely.",
-        "The survey is on behalf of the local council.",
-        "They'd like to know about what transport you use, and any suggestions for improvement.",
-        "Can I start by asking you how you traveled to town today?",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Sure, I came on the bus."],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: [
-        "Great.",
-        "Now can I get a few details about yourself?",
-        "OK, what's your name?",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        "It's Luisa.",
+        "Well, obviously, its purpose is to protect dolphins in seas all around the world.",
+        "It tries to raise people's awareness of the problems these marine creatures are suffering because of pollution and other threats.",
+        "It started 10 years ago, and it's one of the fastest growing animal charities in the country.",
+        "Although it's still fairly small compared with the big players in animal protection, we're particularly proud of the work we do in education.",
+        "Last year, we visited a huge number of schools in different parts of the country, going round to talk to children and young people aged from 5 to 18.",
+        "In fact, about 35% of our members are children.",
+        "The charity uses its money to support campaigns, for example, for changes in fishing policy and so forth.",
         {
-          text: "Hardie.",
-          number: 1,
+          text: "It hopes soon to be able to employ its first full-time biologist with dolphin expertise to monitor populations.",
+          number: 11,
         },
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Can you spell that please?"],
-    },
-    {
-      speaker: "LUISA",
-      text: ["Yes, it's HARDIE."],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Great, thanks, and can I have your address?"],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        {
-          text: "It's 19 White Stone Road.",
-          number: 2,
-        },
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Oh, right, I know that area.", "It's Bradfield, isn't it?"],
-    },
-    {
-      speaker: "LUISA",
-      text: ["That's right."],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Is the postcode GT7?"],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        {
-          text: "It's actually GT82LC.",
-          number: 3,
-        },
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Great, and could I ask what your job is?", "Are you a student?"],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        "I've actually just finished my training.",
-        {
-          text: "I'm a hairdresser.",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: [
-        "All right, and one more question in this section.",
-        "What is the reason for you coming into town today?",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        "Actually, it's not for shopping today, which would be my normal reason.",
-        {
-          text: "But to see the dentist.",
-          number: 5,
-        },
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Right, thanks."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the interview, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: [
-        "Now, in this last section, I'd like you to give us some ideas about the facilities and arrangements in the city for getting to and from work.",
-        "Any suggestions you have for improvements?",
-      ],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        {
-          text: "Well, something I've thought about for some time is that when I do walk, and I'm doing a later shift, I think the lighting should be better.",
-          number: 6,
-        },
-        "And of course, I think it's a real shame they've been cutting down on the number of footpaths.",
-        "They should have more of those.",
-        "Then people would walk more.",
-        {
-          text: "And I don't think there are enough trains.",
-          number: 7,
-        },
-        "That's why I don't use them.",
-        "You have to wait so long.",
-      ],
-    },
-    {
-      speaker: "INTERVIEWER",
-      text: ["Thanks, and finally, I'd like to ask your opinion on cycling."],
-    },
-    {
-      speaker: "LUISA",
-      text: [
-        "Well, where I work, there are no safe places to leave your bikes.",
+        "Of course, many people give their services on a voluntary basis, and we now have volunteers working in observation, office work, and other things.",
         {
           text: "",
-          number: 8,
+          number: 12,
         },
-        "Also I'd have to cycle uphill, and on a hot day I'd arrive at work pretty sweaty.",
+        "I should also tell you about the award we won from the Charity Commission last year, for our work in education.",
+        "Although it's not meant an enormous amount of money for us, it has made our activities even more widely publicized and understood.",
         {
-          text: "So, I think I need a shower somewhere at work.",
-          number: 9,
+          text: "",
+          number: 13,
         },
+        "In the long term, it may not bring in extra members, but we're hoping it'll have this effect.",
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Is it possible to see dolphins in UK waters?"],
+    },
+    {
+      speaker: "ALICE",
+      text: [
+        "Yes, in several locations, and we have a big project in the east part of Scotland.",
+        "This has long been a haven for dolphins, because it has very little shipping.",
+        "However, that may be about to change soon, because oil companies want to increase exploration there.",
+        "We're campaigning against this, because although there'll be little pollution from oil, exploration creates a lot of underwater noise.",
         {
-          text: "And I wouldn't feel confident cycling on busy roads. I'd like training for that.",
-          number: 10,
+          text: "It means the dolphins can't rest and socialize.",
+          number: 14,
         },
+        "This is how I became interested in dolphin conservation in the first place.",
+        "I had never seen one, and I hadn't been particularly interested in them at school.",
+        "Then I came across this story about a family of dolphins who had to leave their home in the Moray Firth,",
+        {
+          text: "because of the oil companies.",
+          number: 15,
+        },
+        "And about a child who campaigned to save them.",
+        "I couldn't put the book down. I was hooked.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the talk, you have some time to look at questions 16 to 20.",
+        "Now listen and answer questions 16 to 20.",
       ],
     },
     {
       speaker: "INTERVIEWER",
       text: [
-        "Well, that's very helpful.",
-        "Thank you very much for your time.",
+        "I'm sure our listeners will want to find out what they can do to help.",
+        "You mentioned the Adopt a Dolphin scheme.",
+        "Can you tell us about that?",
       ],
     },
     {
-      speaker: "LUISA",
-      text: ["No problem. Bye."],
+      speaker: "ALICE",
+      text: [
+        "Of course, people can choose one of our dolphins to sponsor.",
+        "They receive a picture of it, and news updates.",
+        "I'd like to tell you about four, which are currently being adopted by our members.",
+        "Moondancer, Echo, Kiwi, and Samson.",
+        "Unfortunately, Echo is being rather elusive this year, and hasn't yet been sighted by our observers.",
+        {
+          text: "",
+          number: 16,
+        },
+        "But we remain optimistic that he'll be out there soon.",
+        "All the others have been out in force.",
+        "Samson and Moondancer are often photographed together, but it's Kiwi who's our real character, as she seems to love coming up close for the cameras, and we've captured her on film hundreds of times.",
+        {
+          text: "",
+          number: 17,
+        },
+        "They all have their own personalities.",
+        "Moondancer is very elegant and curves out and into the water very smoothly, whereas Samson has a lot of energy.",
+        {
+          text: "He's always leaping out of the water with great vigor.",
+          number: 20,
+        },
+        {
+          text: "",
+          number: 18,
+        },
+        "You'd probably expect him to be the youngest, he's not quite, that's Kiwi, but Samson's the latest of our dolphins to be chosen for the scheme.",
+        {
+          text: "",
+          number: 19,
+        },
+        "Kiwi makes a lot of noise, so we can often pick her out straight away.",
+        "Echo and Moondancer are noisy too, but Moondancer is easy to find, because she has a particularly large fin on her back, which makes her easy to identify.",
+        "So, yes, they're all very different.",
+      ],
+    },
+    {
+      speaker: "INTERVIEWER",
+      text: ["Well, they sound a fascinating group."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 1.",
+        "That is the end of Section 2.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -503,19 +387,20 @@ const Listening3Part22015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
+    // Questions 11 and 12 (Choose TWO letters)
+    11: ["C", "E"],
 
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    // Questions 13–15 (Choose the correct letter)
+    13: "B", // It made the work of the trust better known.
+    14: "A", // Noise.
+    15: "C", // She read a book about them.
+
+    // Questions 16–20 (Dolphins)
+    16: "B", // Echo - It has not been seen this year.
+    17: "C", // Kiwi - It is photographed more than the others.
+    18: "D", // Samson - It is always very energetic.
+    19: "C", // Kiwi - It is the newest one in the scheme.
+    20: "A", // Moondancer - It has an unusual shape.
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -529,20 +414,49 @@ const Listening3Part22015 = () => {
       return updated;
     });
   };
+  const handleCheckboxChange = (qNum, letter) => {
+    setUserAnswers((prev) => {
+      const prevArr = Array.isArray(prev[qNum]) ? prev[qNum] : [];
+      const updatedArr = prevArr.includes(letter)
+        ? prevArr.filter((l) => l !== letter)
+        : [...prevArr, letter];
+
+      const updated = { ...prev, [qNum]: updatedArr };
+      calculateScore(updated);
+      return updated;
+    });
+  };
 
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
+
     Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+      const correct = correctAnswers[key];
+      const user = answers[key];
+
+      // 🔹 Choose TWO letters
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((ans) => user.includes(ans))
+        ) {
+          newScore += 1;
+        }
+      }
+      // 🔹 Single answer
+      else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
+
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -602,7 +516,7 @@ const Listening3Part22015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Transport Survey")}
+                {renderText("Dolphin Conservation Trust")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -632,185 +546,278 @@ const Listening3Part22015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
-          {/* ---------- Transport Survey ---------- */}
-
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           <p className="mb-4">
-            {renderText("Complete the notes below.")} <br />
-            {renderText("Write ONE WORD AND/OR A NUMBER for each answer.")}
+            {renderText("Answer the questions below.")} <br />
+            {renderText("Choose the correct letters as instructed.")}
           </p>
 
-          <div className="border p-5 rounded-lg bg-white space-y-4">
-            <h2 className="text-lg font-bold mb-3 text-center">
-              {renderText("Transport Survey")}
+          <div className=" p-5 rounded-lg bg-white space-y-6">
+            <h2 className="text-lg font-bold text-center">
+              {renderText("Dolphin Conservation Trust")}
             </h2>
-            {/* Example */}
-            <p className="flex items-center gap-2">
-              {renderText("(Example) Travelled to town today: by")}
-              <span className="font-semibold">bus</span>
-            </p>
 
-            {/* Circle style */}
-            {/* w-9 h-9 border-2 rounded-full flex items-center justify-center */}
+            {/* ---------- Questions 11–12 ---------- */}
+            <div>
+              <h3 className="font-bold mb-2">
+                {renderText("Questions 11 and 12")}
+              </h3>
+              <p className="mb-3">{renderText("Choose TWO letters, A–E.")}</p>
 
-            {/* 1 */}
-            <p className="flex items-center gap-3">
-              {renderText("Name: Luisa")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                1
-              </span>
-              <input
-                type="text"
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+              <p className="font-semibold mb-2">
+                {renderText(
+                  "Which TWO things does Alice say about the Dolphin Conservation Trust?"
+                )}
+              </p>
 
-            {/* 2 */}
-            <p className="flex items-center gap-3">
-              {renderText("Address:")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                2
-              </span>
-              <input
-                type="text"
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("White Stone Rd")}
-            </p>
+              {[
+                "Children make up most of the membership.",
+                "It's the country's largest conservation organisation.",
+                "It helps finance campaigns for changes in fishing practices.",
+                "It employs several dolphin experts full-time.",
+                "Volunteers help in various ways.",
+              ].map((text, idx) => {
+                const letter = String.fromCharCode(65 + idx);
+                return (
+                  <label key={letter} className="flex items-start gap-2 mb-2">
+                    <input
+                      type="checkbox"
+                      onChange={() => handleCheckboxChange(11, letter)}
+                    />
+                    <span>
+                      <strong>{letter}.</strong> {renderText(text)}
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
 
-            {/* Area */}
-            <p>{renderText("Area: Bradfield")}</p>
+            {/* ---------- Questions 13–15 ---------- */}
+            <div>
+              <h3 className="font-bold mb-2">
+                {renderText("Questions 13–15")}
+              </h3>
+              <p className="mb-3">
+                {renderText("Choose the correct letter, A, B or C.")}
+              </p>
 
-            {/* 3 */}
-            <p className="flex items-center gap-3">
-              {renderText("Postcode:")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                3
-              </span>
-              <input
-                type="text"
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+              {/* 13 */}
+              <div className="mb-4">
+                <p className="font-semibold">
+                  {renderText(
+                    "13 Why is Alice so pleased the Trust has won the Charity Commission award?"
+                  )}
+                </p>
+                {[
+                  "It has brought in extra money.",
+                  "It made the work of the trust better known.",
+                  "It has attracted more members.",
+                ].map((text, idx) => {
+                  const letter = String.fromCharCode(65 + idx);
+                  return (
+                    <label key={letter} className="flex gap-2">
+                      <input
+                        type="radio"
+                        name="q13"
+                        onChange={() => handleInputChange(13, letter)}
+                      />
+                      <span>
+                        <strong>{letter}.</strong> {renderText(text)}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
 
-            {/* 4 */}
-            <p className="flex items-center gap-3">
-              {renderText("Occupation:")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                4
-              </span>
-              <input
-                type="text"
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+              {/* 14 */}
+              <div className="mb-4">
+                <p className="font-semibold">
+                  {renderText(
+                    "14 Alice says oil exploration causes problems to dolphins because of"
+                  )}
+                </p>
+                {["noise.", "oil leaks.", "movement of ships."].map(
+                  (text, idx) => {
+                    const letter = String.fromCharCode(65 + idx);
+                    return (
+                      <label key={letter} className="flex gap-2">
+                        <input
+                          type="radio"
+                          name="q14"
+                          onChange={() => handleInputChange(14, letter)}
+                        />
+                        <span>
+                          <strong>{letter}.</strong> {renderText(text)}
+                        </span>
+                      </label>
+                    );
+                  }
+                )}
+              </div>
 
-            {/* 5 */}
-            <p className="flex items-center gap-3">
-              {renderText("Reason for visit to town: to go to the")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                5
-              </span>
-              <input
-                type="text"
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+              {/* 15 */}
+              <div>
+                <p className="font-semibold">
+                  {renderText("15 Alice became interested in dolphins when")}
+                </p>
+                {[
+                  "she saw one swimming near her home.",
+                  "she heard a speaker at her school.",
+                  "she read a book about them.",
+                ].map((text, idx) => {
+                  const letter = String.fromCharCode(65 + idx);
+                  return (
+                    <label key={letter} className="flex gap-2">
+                      <input
+                        type="radio"
+                        name="q15"
+                        onChange={() => handleInputChange(15, letter)}
+                      />
+                      <span>
+                        <strong>{letter}.</strong> {renderText(text)}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+            </div>
 
-            {/* Suggestions */}
-            <p className="font-semibold mt-4">
-              {renderText("Suggestions for improvement:")}
-            </p>
+            {/* ---------- Questions 16–20 ---------- */}
+            <div>
+              <h3 className="font-bold mb-2">
+                {renderText("Questions 16–20")}
+              </h3>
+              <p className="mb-3">
+                {renderText(
+                  "Which dolphin does Alice make each of the following comments about?"
+                )}
+              </p>
 
-            {/* 6 */}
-            <p className="flex items-center gap-3">
-              {renderText("better")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                6
-              </span>
-              <input
-                type="text"
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+              <div className="border max-w-[150px] mx-auto text-center">
+                {" "}
+                <p className="mb-2 font-semibold">{renderText("Dolphins")}</p>
+                <ul className="mb-4">
+                  <li>A. Moondancer</li>
+                  <li>B. Echo</li>
+                  <li>C. Kiwi</li>
+                  <li>D. Samson</li>
+                </ul>
+              </div>
 
-            <p>{renderText("have more footpaths")}</p>
+              {[
+                "It has not been seen this year.",
+                "It is photographed more than the others.",
+                "It is always very energetic.",
+                "It is the newest one in the scheme.",
+                "It has an unusual shape.",
+              ].map((text, idx) => {
+                const qNum = 16 + idx;
+                return (
+                  <div key={qNum} className="flex items-center gap-2 mb-2">
+                    <span className="font-bold w-6">{qNum}.</span>
+                    <span>{renderText(text)}</span>
+                    <select
+                      className="border rounded px-2 py-1 ml-2"
+                      onChange={(e) => handleInputChange(qNum, e.target.value)}
+                    >
+                      <option value="">{qNum}</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="D">D</option>
+                    </select>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-10">
+              {!showResult ? (
+                <div className="flex items-center justify-center">
+                  {" "}
+                  <button
+                    onClick={() => setShowResult(true)}
+                    className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  >
+                    Submit Answers
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Result Card */}
+                  <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                    <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                    <p className="text-green-600 text-2xl font-semibold">
+                      Your Score: {score}/10
+                    </p>
+                  </div>
 
-            {/* 7 */}
-            <p className="flex items-center gap-3">
-              {renderText("more frequent")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                7
-              </span>
-              <input
-                type="text"
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
+                  {/* All Answers List */}
+                  <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                    <h3 className="text-xl font-bold text-gray-700 mb-3">
+                      All Answers (11–20)
+                    </h3>
 
-            {/* Cycling */}
-            <p className="font-semibold mt-4">
-              {renderText("Things that would encourage cycling to work:")}
-            </p>
+                    <ul className="space-y-3">
+                      {[11, 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
+                        const user = userAnswers[num];
+                        const correct = correctAnswers[num];
 
-            {/* 8 */}
-            <p className="flex items-center gap-3">
-              {renderText("having")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                8
-              </span>
-              <input
-                type="text"
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("parking places for bicycles")}
-            </p>
+                        const noAnswer =
+                          user === undefined ||
+                          (Array.isArray(user) && user.length === 0);
 
-            {/* 9 */}
-            <p className="flex items-center gap-3">
-              {renderText("being able to use a")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                9
-              </span>
-              <input
-                type="text"
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("at work")}
-            </p>
+                        const isCorrect = Array.isArray(correct)
+                          ? Array.isArray(user) &&
+                            user.length === correct.length &&
+                            correct.every((a) => user.includes(a))
+                          : user === correct;
 
-            {/* 10 */}
-            <p className="flex items-center gap-3">
-              {renderText("the opportunity to have cycling")}
-              <span className="w-9 h-9 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                10
-              </span>
-              <input
-                type="text"
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("on busy roads")}
-            </p>
+                        const isWrong = !noAnswer && !isCorrect;
+
+                        return (
+                          <li
+                            key={num}
+                            className="p-3 rounded-lg bg-white shadow-sm"
+                          >
+                            <div className="flex items-center gap-2">
+                              {isCorrect && (
+                                <span className="text-green-600 text-xl">
+                                  <FaDotCircle />
+                                </span>
+                              )}
+                              {(isWrong || noAnswer) && (
+                                <span className="text-red-600 text-xl">
+                                  <ImCross />
+                                </span>
+                              )}
+                              <p className="font-bold">Q{num}:</p>
+                            </div>
+
+                            <p className="ml-8">
+                              <strong>Your Answer:</strong>{" "}
+                              {noAnswer ? (
+                                <em>No answer provided</em>
+                              ) : Array.isArray(user) ? (
+                                user.join(", ")
+                              ) : (
+                                user
+                              )}
+                            </p>
+
+                            <p className="ml-8 text-green-600">
+                              <strong>Correct Answer:</strong>{" "}
+                              {Array.isArray(correct)
+                                ? correct.join(", ")
+                                : correct}
+                            </p>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

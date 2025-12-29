@@ -134,22 +134,24 @@ const Reading2Part22015 = () => {
   };
 
   const correctAnswers = {
-    // =========== Questions 1–7 (Paragraph headings) ===========
-    1: "i", // Paragraph A → The search for the reasons for an increase in population
-    2: "ii", // Paragraph B → Industrialisation and the fear of unemployment
-    3: "iii", // Paragraph C → The development of cities in Japan
-    4: "iv", // Paragraph D → The time and place of the Industrial Revolution
-    5: "v", // Paragraph E → The cases of Holland, France and China
-    6: "vi", // Paragraph F → Changes in drinking habits in Britain
-    7: "vii", // Paragraph G → Two keys to Britain's industrial revolution
+    // =========== Questions 14–17 (Paragraph containing information) ===========
+    14: "B", // influence of domestic background on the gifted child
+    15: "C", // what can be lost if learners are given too much guidance
+    16: "E", // damaging effects of anxiety
+    17: "D", // classroom techniques favouring socially-disadvantaged children
 
-    // =========== Questions 8–13 (TRUE / FALSE / NOT GIVEN) ===========
-    8: "TRUE", // China's transport system was not suitable for industry in the 18th century
-    9: "TRUE", // Tea and beer both helped to prevent dysentery in Britain
-    10: "FALSE", // Roy Porter disagrees with Professor Macfarlane's findings
-    11: "FALSE", // After 1740, there was a reduction in population in Britain
-    12: "TRUE", // People in Britain used to make beer at home
-    13: "TRUE", // The tax on malt indirectly caused a rise in the death rate
+    // =========== Questions 18–22 (Matching people) ===========
+    18: "A", // Less time on exercises with gifted pupils → Freeman
+    19: "E", // Self-reliance helps gifted students → Boekaerts
+    20: "C", // Channeling feelings → Elshout
+    21: "B", // Benefits from support of relatives → Shore and Kanevsky
+    22: "D", // Successful students learn a lot → Simonton
+
+    // =========== Questions 23–26 (Sentence completion) ===========
+    23: "books, toys", // Strong connection between IQ and availability at home
+    24: "self-reliance", // Average children need more direction because they lack self-reliance
+    25: "self-regulation", // Metacognition involves learning strategies + self-regulation
+    26: "teaching to the test", // Teachers relying on known method produce good test grades
   };
 
   useEffect(() => {
@@ -214,12 +216,47 @@ const Reading2Part22015 = () => {
             <p className="font-bold mb-1">{renderText("A")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Internationally, 'giftedness' is most frequently determined by a score on a general intelligence test, known as an IQ test, which is above a chosen cut-off point, usually at around the top 2–5%. Children's educational environment contributes to the IQ score and the way intelligence is used. For example, a very close positive relationship was found when children's IQ scores were compared with their home educational provision (Freeman, 2010). The higher the children's IQ scores, especially over IQ 130, the better the quality of their educational backup, measured in terms of reported verbal interactions with parents, number of books and activities in their home etc."
+                "Internationally, 'giftedness' is most frequently determined by a score on a general intelligence test, known as an IQ test, which is above a chosen cut-off point, usually at around the top 2–5%."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Children's educational environment contributes to the IQ score and the way intelligence is used."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    14
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " For example, a very close positive relationship was found when children's IQ scores were compared with their home educational provision (Freeman, 2010). The higher the children's IQ scores, especially over IQ 130, the better the quality of their educational backup, measured in terms of reported verbal interactions with parents, number of books and activities in their home etc."
               )}
             </p>
+
             <p className="text-lg mb-5">
               {renderText(
-                "Because IQ tests are decidedly influenced by what the child has learned, they are to some extent measures of current achievement based on age-norms; that is, how well the children have learned to manipulate their knowledge and know-how within the terms of the test. The vocabulary aspect, for example, is dependent on having heard those words. But IQ tests can neither identify the processes of learning and thinking nor predict creativity."
+                "Because IQ tests are decidedly influenced by what the child has learned, they are to some extent measures of current achievement based on age-norms; that is, how well the children have learned to manipulate their knowledge and know-how within the terms of the test."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The vocabulary aspect, for example, is dependent on having heard those words."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    15
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " But IQ tests can neither identify the processes of learning and thinking nor predict creativity."
               )}
             </p>
 
@@ -227,46 +264,143 @@ const Reading2Part22015 = () => {
             <p className="font-bold mb-1">{renderText("B")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Excellence does not emerge without appropriate help. To reach an exceptionally high standard in any area very able children need the means to learn, which includes material to work with and focused challenging tuition – and the encouragement to follow their dream. There appears to be a qualitative difference in the way the intellectually highly able think, compared with more average-ability or older pupils, for whom external regulation by the teacher often compensates for lack of internal regulation."
+                "Excellence does not emerge without appropriate help. To reach an exceptionally high standard in any area very able children need the means to learn, which includes material to work with and focused challenging tuition – and the encouragement to follow their dream."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "There appears to be a qualitative difference in the way the intellectually highly able think, compared with more average-ability or older pupils, for whom external regulation by the teacher often compensates for lack of internal regulation."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    16,17
+                  </span>
+                )}
+              </span>
             </p>
+
             <p className="text-lg mb-5">
               {renderText(
-                "To be at their most effective in their self-regulation, all children can be helped to identify their own ways of learning – metacognition – which will include strategies of planning, monitoring, evaluation, and choice of what to learn. Emotional awareness is also part of metacognition, so children should be helped to be aware of their feelings around the area to be learned, feelings of curiosity or confidence, for example."
+                "To be at their most effective in their self-regulation, all children can be helped to identify their own ways of learning – metacognition – which will include strategies of planning, monitoring, evaluation, and choice of what to learn."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Emotional awareness is also part of metacognition, so children should be helped to be aware of their feelings around the area to be learned, feelings of curiosity or confidence, for example."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    18,19
+                  </span>
+                )}
+              </span>
             </p>
 
             {/* C */}
             <p className="font-bold mb-1">{renderText("C")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "High achievers have been found to use self-regulatory learning strategies more often and more effectively than lower achievers, and are better able to transfer these strategies to deal with unfamiliar tasks. This happens to such a high degree in some children that they appear to be demonstrating talent in particular areas."
+                "High achievers have been found to use self-regulatory learning strategies more often and more effectively than lower achievers, and are better able to transfer these strategies to deal with unfamiliar tasks."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "This happens to such a high degree in some children that they appear to be demonstrating talent in particular areas."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    20
+                  </span>
+                )}
+              </span>
             </p>
+
             <p className="text-lg mb-5">
               {renderText(
-                "Overviewing research on the thinking process of highly able children, Shore and Kanevsky (1993) put the instructor's problem succinctly: 'If they merely think more quickly, then we need only teach more quickly. If they merely make fewer errors, then we can shorten the practice'. But of course, this is not entirely the case; adjustments have to be made in methods of learning and teaching, to take account of the many ways individuals think."
+                "Overviewing research on the thinking process of highly able children, Shore and Kanevsky (1993) put the instructor's problem succinctly: 'If they merely think more quickly, then we need only teach more quickly. If they merely make fewer errors, then we can shorten the practice'."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "But of course, this is not entirely the case; adjustments have to be made in methods of learning and teaching, to take account of the many ways individuals think."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    21,22
+                  </span>
+                )}
+              </span>
             </p>
 
             {/* D */}
             <p className="font-bold mb-1">{renderText("D")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Yet in order to learn by themselves, the gifted do need some support from their teachers. Conversely, teachers who have a tendency to 'overdirect' can diminish their gifted pupils' learning autonomy. Although 'spoon-feeding' can produce extremely high examination results, these are not always followed by equally impressive life successes."
+                "Yet in order to learn by themselves, the gifted do need some support from their teachers."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Conversely, teachers who have a tendency to 'overdirect' can diminish their gifted pupils' learning autonomy."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    23,24
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg mb-5">
+              {renderText(
+                "Although 'spoon-feeding' can produce extremely high examination results, these are not always followed by equally impressive life successes."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "Too much dependence on the teacher risks loss of autonomy and motivation to discover. However, when teachers help pupils to reflect on their own learning and thinking activities, they increase their pupils' self-regulation. Given that a fundamental goal of education is to transfer the control of learning from teachers to pupils, improving pupils' learning to learn techniques should be a major outcome of the school experience, especially for the highly competent."
+                "Too much dependence on the teacher risks loss of autonomy and motivation to discover."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "However, when teachers help pupils to reflect on their own learning and thinking activities, they increase their pupils' self-regulation."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    25,26
+                  </span>
+                )}
+              </span>
             </p>
 
             {/* E */}
             <p className="font-bold mb-1">{renderText("E")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "But scientific progress is not all theoretical; knowledge is also vital to outstanding performance: individuals who know a great deal about a specific domain will achieve at a higher level than those who do not. Research with creative scientists by Simonton (1988) brought him to the conclusion that above a certain high level, characteristics such as independence seemed to contribute more to reaching the highest levels of expertise than intellectual skills."
+                "But scientific progress is not all theoretical; knowledge is also vital to outstanding performance: individuals who know a great deal about a specific domain will achieve at a higher level than those who do not."
+              )}
+            </p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "Research with creative scientists by Simonton (1988) brought him to the conclusion that above a certain high level, characteristics such as independence seemed to contribute more to reaching the highest levels of expertise than intellectual skills."
               )}
             </p>
             <p className="text-lg mb-5">
@@ -279,13 +413,46 @@ const Reading2Part22015 = () => {
             <p className="font-bold mb-1">{renderText("F")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "To sum up, learning is affected by emotions of both the individual and significant others. Positive emotions facilitate the creative aspects of learning and negative emotions inhibit it. Fear, for example, can limit the development of curiosity, which is a strong force in scientific advance."
+                "To sum up, learning is affected by emotions of both the individual and significant others."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Positive emotions facilitate the creative aspects of learning and negative emotions inhibit it."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    27,28
+                  </span>
+                )}
+              </span>
+            </p>
+            <p className="text-lg mb-5">
+              {renderText(
+                "Fear, for example, can limit the development of curiosity, which is a strong force in scientific advance."
               )}
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "In Boekaerts' (1991) review of emotion in the learning of very high IQ and highly achieving children, she found emotional forces in harness. They were not only curious, but often had a strong desire to control their environment, improve their learning efficiency, and increase their own learning resources."
+                "In Boekaerts' (1991) review of emotion in the learning of very high IQ and highly achieving children, she found emotional forces in harness."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "They were not only curious, but often had a strong desire to control their environment, improve their learning efficiency, and increase their own learning resources."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    29,30
+                  </span>
+                )}
+              </span>
             </p>
           </div>
         </div>
@@ -476,6 +643,100 @@ const Reading2Part22015 = () => {
                 />
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (14–26)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

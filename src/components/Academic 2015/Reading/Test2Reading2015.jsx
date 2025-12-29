@@ -153,13 +153,13 @@ const Test2Reading2015 = () => {
   };
 
   useEffect(() => {
-    const savedScore = localStorage.getItem("/reading4Part32020");
+    const savedScore = localStorage.getItem("/2015/Test 2/reading");
     if (savedScore) setScore(Number(savedScore));
   }, []);
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/reading4Part32020");
+    const savedScore = localStorage.getItem("/2015/Test 2/reading");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -220,7 +220,26 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("A")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Alan Macfarlane, professor of anthropological science at King’s College, Cambridge, has, like other historians, spent decades wrestling with the enigma of the Industrial Revolution. Why did this particular Big Bang – the world-changing birth of industry – happen in Britain? And why did it strike at the end of the 18th century?"
+                "Alan Macfarlane, professor of anthropological science at King’s College, Cambridge, has, like other historians, spent decades wrestling with the enigma of the Industrial Revolution."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Why did this particular Big Bang – the world-changing birth of industry – happen in Britain?"
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    1
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " And why did it strike at the end of the 18th century?"
               )}
             </p>
 
@@ -228,8 +247,22 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("B")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Macfarlane compares the puzzle to a combination lock. “There are about 20 different factors and all of them need to be present before the revolution can happen,” he says."
+                "Macfarlane compares the puzzle to a combination lock."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "There are about 20 different factors and all of them need to be present before the revolution can happen."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    2
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -243,16 +276,44 @@ const Test2Reading2015 = () => {
             </p>
             <p className="text-lg mb-5">
               {renderText(
-                "“All these factors must have been necessary but not sufficient to cause the revolution,” says Macfarlane. “After all, Holland had everything except coal, while China also had many of these factors. Most historians are convinced there are one or two missing factors that you need to open the lock.”"
+                "All these factors must have been necessary but not sufficient to cause the revolution."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Most historians are convinced there are one or two missing factors that you need to open the lock."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
+              </span>
             </p>
 
             {/* C */}
             <p className="font-bold mb-1">{renderText("C")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "The missing factors, he proposes, are to be found in almost every kitchen cupboard. Tea and beer, two of the nation’s favourite drinks, fuelled the revolution."
+                "The missing factors, he proposes, are to be found in almost every kitchen cupboard."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Tea and beer, two of the nation’s favourite drinks, fuelled the revolution."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    4
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -269,8 +330,22 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("D")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "Macfarlane had wondered for a long time how the Industrial Revolution came about. Historians identified one key factor in the mid-18th century that required explanation."
+                "Macfarlane had wondered for a long time how the Industrial Revolution came about."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Historians identified one key factor in the mid-18th century that required explanation."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    5
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -292,8 +367,22 @@ const Test2Reading2015 = () => {
             <p className="font-bold mb-1">{renderText("E")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "This population growth occurred at exactly the right time to supply labour for industry. But dense populations also increase disease, especially from human waste."
+                "This population growth occurred at exactly the right time to supply labour for industry."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "But dense populations also increase disease, especially from human waste."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    6
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -312,11 +401,20 @@ const Test2Reading2015 = () => {
               {renderText(
                 "Macfarlane examined Japan, which had large cities and no sanitation but far fewer water-borne diseases."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "Tea was common in Japan, and Britain’s own tea consumption rose sharply in the early 18th century, just as infant mortality declined."
-              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Tea was common in Japan, and Britain’s own tea consumption rose sharply in the early 18th century, just as infant mortality declined."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    7,8
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -327,9 +425,21 @@ const Test2Reading2015 = () => {
             {/* G */}
             <p className="font-bold mb-1">{renderText("G")}</p>
             <p className="text-lg mb-5">
-              {renderText(
-                "Why then did Japan not industrialise first? Macfarlane argues that Japan abandoned labour-saving devices, fearing unemployment."
-              )}
+              {renderText("Why then did Japan not industrialise first?")}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Macfarlane argues that Japan abandoned labour-saving devices, fearing unemployment."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    9
+                  </span>
+                )}
+              </span>
             </p>
             <p className="text-lg mb-5">
               {renderText(
@@ -537,6 +647,100 @@ const Test2Reading2015 = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (1–13)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
