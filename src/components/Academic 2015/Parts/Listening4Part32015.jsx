@@ -6,11 +6,8 @@ import { IoIosArrowDown } from "react-icons/io";
 // import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 // import { ImCross } from "react-icons/im";
 
-<<<<<<< HEAD
-=======
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
->>>>>>> 98b53e3c2b919646c1b0edf2916982ea73884466
 import Listening4Pagination2015 from "../Pagination 2015/Listening4Pagination2015";
 
 const Listening4Part32015 = () => {
