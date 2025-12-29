@@ -1,13 +1,12 @@
- import React, { useEffect, useState } from "react";
-
-import { IoIosArrowDown } from "react-icons/io";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-
-import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import { IoIosArrowDown } from "react-icons/io";
 
-const Listening1Part32017 = () => {
+import Listening3Pagination2016 from "../Pagination2016/Listening3Pagination2016";
+
+const Test1Listening2016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -20,270 +19,116 @@ const Listening1Part32017 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-  // result marks display
   const [showResult, setShowResult] = useState(false);
+ const lines = [
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "Section 4. You will hear part of a lecture to business students about the use of one particular type of research known as ethnography.",
+       "First, you have some time to look at questions 31 to 40.",
+       "Now listen carefully, and answer questions 31 to 40.",
+     ],
+   },
+   {
+     speaker: "SPEAKER",
+     text: [
+       "So what I'm going to talk about to you today is something called ethnography.",
+       "This is a type of research aimed at exploring the way human cultures work.",
+       "It was first developed for use in anthropology, and it's also been used in sociology and communication studies.",
+       "So, what's it got to do with business? You may ask.",
 
-  const lines = [
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
-      ],
-    },
+       {
+         text: "Well, businesses are finding that ethnography can offer them deeper insight into the possible needs of customers, either present or future, as well as providing valuable information about their attitudes towards existing products.",
+         number: 31,
+       },
+       "Let's look at some examples of how ethnographic research works in business.",
+       "One team of researchers did a project for a company manufacturing kitchen equipment.",
+       "They watched how cooks used measuring cups to measure out things like sugar and flour.",
+       "They saw that the cooks had to check and recheck the contents.",
 
-    {
-      speaker: "TRUDIE",
-      text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
-      ],
-    },
+       {
+         text: "Because although the measuring cups had numbers inside them, the cooks couldn't see these easily.",
+         number: 32,
+       },
+       "So, a new design of cup was developed to overcome this problem.",
+       "And it was a top seller.",
+       "Another team of ethnographic researchers looked at how cell phones were used in Uganda in Africa.",
+       "They found that people who didn't have their own phones could pay to use the phones of local entrepreneurs, because these customers paid in advance for their calls.",
 
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
-      ],
-    },
+       {
+         text: "They were eager to know how much time they'd spent on the call so far.",
+         number: 33,
+       },
+       "So the phone company designed phones for use globally with this added feature.",
+       "Ethnographic research has also been carried out in computer companies.",
+       "In one company, IT systems administrators were observed for several weeks.",
+       "It was found that a large amount of their work involved communicating with colleagues in order to solve problems, but that they didn't have a standard way of exchanging information from spreadsheets and so on.",
+       {
+         text: "So, the team came up with an idea for software that would help them to do this.",
+         number: 34,
+       },
+       "In another piece of research, a team observed and talked to nurses working in hospitals.",
 
-    {
-      speaker: "TRUDIE",
-      text: [
-        {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
-        },
-      ],
-    },
+       {
+         text: "This led to the recognition that the nurses needed to access the computer records of their patients, no matter where they were.",
+         number: 35,
+       },
+       "This led to the development of a portable computer tablet that allowed the nurses to check records in locations throughout the hospital.",
+       "Occasionally, research can be done even in environments where the researchers can't be present.",
+       "For example, in one project done for an airline.",
 
-    {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
-    },
+       {
+         text: "Respondents used their smartphones to record information during airline trips, in a study aiming at tracking the emotions of passengers during a flight.",
+         number: 36,
+       },
+       "So, what makes studies like these different from ordinary research?",
+       "Let's look at some of the general principles behind ethnographic research in business.",
+       "First of all, the researcher has to be completely open-minded.",
+       "He or she hasn't thought up a hypothesis to be tested, as is the case in other types of research.",
+       "Instead, they wait for the participants in the research to inform them.",
+       "As far as choosing the participants themselves is concerned, that's not really all that different from ordinary research.",
 
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
+       {
+         text: "The criteria according to which the participants are chosen may be something as simple as the age bracket they fall into, or the researchers may select them according to their income.",
+         number: 37,
+       },
+       "Or they might try to find a set of people who all use a particular product, for example, but it's absolutely crucial to recruit the right people as participants.",
 
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
+       {
+         text: "As well as the criteria I've mentioned, they have to be comfortable talking about themselves, and being watched as they go about their activities.",
+         number: 38,
+       },
+       "Actually, most researchers say that people open up pretty easily.",
+       "Maybe because they're often in their own home or workplace.",
+       "So, what makes this type of research special is that it's not just a matter of sending a questionnaire to the participants.",
 
-        {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
-        },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
-      ],
-    },
+       {
+         text: "Instead, the research is usually based on first-hand observation of what they are doing at the time.",
+         number: 39,
+       },
+       "But that doesn't mean that the researcher never talks to the participants.",
+       "However, unlike in traditional research, in this case, it's the participant rather than the researchers who decides what direction the interview will follow.",
+       "This means that there's less likelihood of the researcher imposing his or her own ideas on the participant.",
+       "But after they've said goodbye to their participants and got back to their office, the researcher's work isn't finished.",
+       {
+         text: "Most researchers estimate that 70 to 80% of their time is spent not on the collecting of data, but on its analysis, looking at photos, listening to recordings and transcribing them, and so on.",
+         number: 40,
+       },
+       "The researchers may end up with hundreds of pages of notes, and to determine what's significant, they don't focus on the sensational things or the unusual things.",
+       "Instead, they try to identify a pattern of some sort in all this data, and to discern the meaning behind it.",
+       "This can result in some compelling insights.",
+       "That can in turn feed back to the whole design process.",
+     ],
+   },
+   {
+     speaker: "ANNOUNCER",
+     text: [
+       "That is the end of Section 4.",
+       "You now have half a minute to check your answers.",
+     ],
+   },
+ ];
 
-    {
-      speaker: "TRUDIE",
-      text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
-        {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
-        },
-        "They won't look anything like the libraries we're used to.",
-      ],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
-        {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
-        },
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
-        {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
-        },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Right. ",
-        {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
-        },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
-        {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
-        {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
-        },
-        "I wonder why it's there. Do you know what his connection was with this area?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of Section 3.",
-        "You now have half a minute to check your answers.",
-      ],
-    },
-  ];
-
-  // different option
-  const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
-  ];
-
-  const options = [
-    [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
-    ],
-
-    [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
-    ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
-    ],
-  ];
-
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-  const handleOptionClick = (qIndex, option) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = option;
-    setSelectedOptions(updatedOptions);
-
-    // Update userAnswers for score calculation
-    setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
-      const updated = { ...prev, [answerKey]: option };
-      calculateScore(updated);
-      return updated;
-    });
-  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -386,17 +231,9 @@ const Listening1Part32017 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "STEWART") {
-        return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "TRUDIE") {
+      if (speaker === "WOMAN") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -405,7 +242,8 @@ const Listening1Part32017 = () => {
           voices[0]
         );
       }
-
+      if (speaker === "ROGER")
+        return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };
 
@@ -451,19 +289,19 @@ const Listening1Part32017 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
-  };
+const correctAnswers = {
+  31: "attitudes",
+  32: "numbers",
+  33: "time",
+  34: "software",
+  35: "patients' records",
+  36: "emotions",
+  37: "income",
+  38: "comfortable",
+  39: "observation",
+  40: "analysis",
+};
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -489,7 +327,7 @@ const Listening1Part32017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/2017/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -501,12 +339,12 @@ const Listening1Part32017 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/2017/Test 1/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/2017/Test 1/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +356,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +387,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("ETHNOGRAPHY IN BUSINESS")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -579,7 +417,7 @@ const Listening1Part32017 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -625,256 +463,306 @@ const Listening1Part32017 = () => {
             </div>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
-            </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
-            </h1>
-
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
-
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
-
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 2st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
+            {renderText("Questions 31–40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
             {renderText("Complete the notes below.")} <br /> <br />
             {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
             {renderText(" for each answer.")}
           </h3>
-
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
+              {renderText("ETHNOGRAPHY IN BUSINESS")}
             </h1>
 
+            {/* ---------- Definition ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  24
-                </button>
-
-                <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of its own")}</span>
+                {renderText(
+                  "Ethnography: research which explores human cultures"
+                )}
               </li>
-
-              {/* 25 */}
               <li className="text-lg">
-                <span>
-                  {renderText(
-                    "how it's affected by laws regarding all aspects of"
-                  )}
-                </span>
+                {renderText(
+                  "It can be used in business to investigate customer needs and"
+                )}
 
                 <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
+                  onClick={() => toggleButton(31)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  25
+                  31
                 </button>
 
                 <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
-
-              {/* 26 */}
               <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
+                {renderText("to help companies develop new designs")}
+              </li>
+            </ul>
+
+            {/* ---------- Examples ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Examples of ethnographic research in business")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText(
+                  "Kitchen equipment: Researchers found that cooks could not easily see the"
+                )}
 
                 <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
+                  onClick={() => toggleButton(32)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[32]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  26
+                  32
                 </button>
 
                 <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of customers into account")}</span>
+                {renderText("in measuring cups.")}
               </li>
 
-              {/* 27 */}
               <li className="text-lg">
-                <span>{renderText("what")}</span>
+                {renderText(
+                  "Cell phones: In Uganda, customers paid to use the cell phones of entrepreneurs. These customers wanted to check the"
+                )}
 
                 <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
+                  onClick={() => toggleButton(33)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[33]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  27
+                  33
                 </button>
 
                 <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("is required in case of accidents")}</span>
+                {renderText("used.")}
               </li>
 
-              {/* 28 */}
               <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
+                {renderText("Computer companies: There was a need to develop")}
 
                 <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
+                  onClick={() => toggleButton(34)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  28
+                  34
                 </button>
 
                 <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("is located in the library")}</span>
+                {renderText(
+                  "to improve communication between system administrators and colleagues."
+                )}
               </li>
 
-              {/* 29 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
+                {renderText(
+                  "Hospitals: Nurses needed to access information about"
+                )}
 
                 <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
+                  onClick={() => toggleButton(35)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  29
+                  35
                 </button>
 
                 <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of local organisations")}</span>
+                {renderText("in different parts of the hospital.")}
               </li>
 
-              {/* 30 */}
               <li className="text-lg">
-                <span>
-                  {renderText("how it's different from a library in a")}
-                </span>
+                {renderText(
+                  "Airlines: Respondents recorded information about their"
+                )}
 
                 <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
+                  onClick={() => toggleButton(36)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[36]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  30
+                  36
                 </button>
 
                 <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+
+                {renderText("while travelling.")}
+              </li>
+            </ul>
+
+            {/* ---------- Principles ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Principles of ethnographic research in business")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText(
+                  "The researcher does not start off with a hypothesis."
+                )}
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "Participants may be selected by criteria such as age,"
+                )}
+
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                {renderText("or product used.")}
+              </li>
+
+              <li className="text-lg">
+                {renderText("The participants must feel")}
+
+                <button
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[38]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  38
+                </button>
+
+                <input
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                {renderText("about taking part in the research.")}
+              </li>
+
+              <li className="text-lg">
+                {renderText("There is usually direct")}
+
+                <button
+                  onClick={() => toggleButton(39)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[39]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  39
+                </button>
+
+                <input
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                {renderText("of the participants.")}
+              </li>
+
+              <li className="text-lg">
+                {renderText("A lot of time is needed for the")}
+
+                <button
+                  onClick={() => toggleButton(40)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[40]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  40
+                </button>
+
+                <input
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                {renderText(
+                  "of the data. Researchers look for a meaningful pattern in the data."
+                )}
               </li>
             </ul>
           </div>
@@ -905,11 +793,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +864,9 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      <Listening3Pagination2016></Listening3Pagination2016>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Test1Listening2016;

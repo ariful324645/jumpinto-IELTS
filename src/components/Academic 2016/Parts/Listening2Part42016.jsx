@@ -1,13 +1,13 @@
- import React, { useEffect, useState } from "react";
-
-import { IoIosArrowDown } from "react-icons/io";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-
-import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import { IoIosArrowDown } from "react-icons/io";
 
-const Listening1Part32017 = () => {
+import Listening2Pagination2016 from "../Pagination2016/Listening2Pagination2016";
+
+
+const Listening2Part42016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -20,270 +20,89 @@ const Listening1Part32017 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-  // result marks display
   const [showResult, setShowResult] = useState(false);
-
-  const lines = [
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
-
-        {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
-        },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
-        {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
-        },
-        "They won't look anything like the libraries we're used to.",
-      ],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
-        {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
-        },
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
-        {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
-        },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Right. ",
-        {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
-        },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
-        {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
-        {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
-        },
-        "I wonder why it's there. Do you know what his connection was with this area?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of Section 3.",
-        "You now have half a minute to check your answers.",
-      ],
-    },
-  ];
-
-  // different option
-  const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
-  ];
-
-  const options = [
-    [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
+const lines = [
+  {
+    speaker: "ANNOUNCER",
+    text: [
+      "Section 4. You will hear part of a lecture to students of architecture about the design of a public building.",
+      "First, you have some time to look at questions 31 to 40.",
+      "Now listen carefully and answer questions 31 to 40.",
     ],
+  },
+  {
+    speaker: "SPEAKER",
+    text: [
+      "We've been discussing the factors the architect has to consider when designing domestic buildings.",
+      "I'm going to move on now to consider the design of public buildings.",
+      "And I'll illustrate this by referring to the new Taylor Concert Hall that's recently been completed here in the city.",
+      "So, as with a domestic building, when designing a public building, an architect needs to consider the function of the building.",
+      "Uh. For example, is it to be used primarily for entertainment? Or for education, or for administration.The second thing the architect needs to think about is the context of the building. ",
+      {
+        text: "This includes its physical location obviously, but it also includes the social meaning of the building.",
+        number: 31,
+      },
+      "How it relates to the people it's built for.",
+      "And finally, for important public buildings, the architect may also be looking for a central symbolic idea on which to base the design.",
+      "A sort of metaphor for the building, and the way in which it is used.",
+      "Let's look at the new Taylor Concert Hall in relation to these ideas.",
+      "The location chosen was a site in a rundown district that has been ignored in previous redevelopment plans.",
 
-    [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
+      {
+        text: "It was occupied by a factory that had been empty for some years.",
+        number: 32,
+      },
+      "The whole area was some distance from the high-rise office blocks of the central business district and shopping center. But it was only 1 km from the ring road.",
+      {
+        text: " The site itself was bordered to the north by a canal, which had once been used by boats bringing in raw materials when the area was used for manufacturing.",
+        number: 33,
+      },
+      "The architect chosen for the project was Tom Harrison. He found the main design challenge was the location of the site, in an area that had no neighboring buildings of any importance. To reflect the fact that the significance of the building in this quite run-down location was as yet unknown, he decided to create a building centered around the idea of a mystery. Something whose meaning still has to be discovered.Well, Harrison decided to create pedestrian access to the building. And to make use of the presence of water on the site.",
+      {
+        text: " As people approach the entrance, they therefore have to cross over a bridge.",
+        number: 34,
+      },
+      "He wanted to give people a feeling of suspense. As they see the building first from a distance, and then close up. ",
+      {
+        text: "And the initial impression he wanted to create from the shape of the building as a whole was that of a box.",
+        number: 35,
+      },
+      "The first side that people see, the southern wall, is just a high flat wall, uninterrupted by any windows. Ha, this might sound off-putting. But it supports Harrison's concept of the building, that the person approaching is intrigued, and wonders what will be inside. And this flat wall also has another purpose.",
+      {
+        text: " At night time, projectors are switched on, and it functions as a huge screen onto which images are projected.",
+        number: 36,
+      },
+      "The auditorium itself seats 1500 people. The floor's supported by 10 massive pads.",
+      {
+        text: " These are constructed from rubber, and so are able to absorb any vibrations from outside.",
+        number: 37,
+      },
+      "And prevent them from affecting the auditorium. The walls are made of several layers of honey-colored wood, all sourced from local beech trees.",
+      {
+        text: " In order to improve the acoustic properties of the auditorium and to amplify the sound, they are not straight, they are curved.",
+        number: 38,
+      },
+      "The acoustics are also adjustable. According to the size of orchestra and the type of music being played, in order to achieve this, there are nine movable panels in the ceiling above the orchestra,",
+      {
+        text: " which are all individually motorized, and the walls also have curtains, which can be opened or closed to change the acoustics.",
+        number: 39,
+      },
+      "The reaction of the public to the new building has generally been positive. However, the evaluation of some critics has been less enthusiastic.",
+      {
+        text: " In spite of Harrison's efforts to use local materials, they criticize the style of the design as being international, rather than local, and say it doesn't reflect features of the landscape or society for which it is built.",
+        number: 40,
+      },
     ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
+  },
+  {
+    speaker: "ANNOUNCER",
+    text: [
+      "That is the end of Section 4.",
+      "You now have half a minute to check your answers.",
     ],
-  ];
+  },
+];
 
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-  const handleOptionClick = (qIndex, option) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = option;
-    setSelectedOptions(updatedOptions);
-
-    // Update userAnswers for score calculation
-    setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
-      const updated = { ...prev, [answerKey]: option };
-      calculateScore(updated);
-      return updated;
-    });
-  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -386,17 +205,9 @@ const Listening1Part32017 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "STEWART") {
-        return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "TRUDIE") {
+      if (speaker === "WOMAN") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -405,7 +216,8 @@ const Listening1Part32017 = () => {
           voices[0]
         );
       }
-
+      if (speaker === "ROGER")
+        return voices.find((v) => v.name.includes("David")) || voices[0];
       return voices[0];
     };
 
@@ -451,19 +263,18 @@ const Listening1Part32017 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
-  };
+ const correctAnswers = {
+   31: "social",
+   32: "factory",
+   33: "canal",
+   34: "bridge",
+   35: "box",
+   36: "screen",
+   37: "rubber",
+   38: "curved",
+   39: "curtains",
+   40: "international",
+ };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -489,7 +300,7 @@ const Listening1Part32017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/2017/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -501,12 +312,12 @@ const Listening1Part32017 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/2017/Test 1/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/2017/Test 1/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +329,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +360,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Designing Taylor Concert Hall")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -579,7 +390,7 @@ const Listening1Part32017 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -625,256 +436,266 @@ const Listening1Part32017 = () => {
             </div>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
-            </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
-            </h1>
-
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
-
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
-
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 2st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
+            {renderText("Questions 31–40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
             {renderText("Complete the notes below.")} <br /> <br />
             {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
             {renderText(" for each answer.")}
           </h3>
-
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
+              {renderText(
+                "DESIGNING A PUBLIC BUILDING: THE TAYLOR CONCERT HALL"
+              )}
             </h1>
 
+            {/* ---------- Introduction ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
+                {renderText(
+                  "Introduction: The designer of a public building may need to consider the building's function, physical and"
+                )}
                 <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
+                  onClick={() => toggleButton(31)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  24
+                  31
                 </button>
-
                 <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                {renderText("context, symbolic meaning")}
+              </li>
+            </ul>
 
-                <span>{renderText("of its own")}</span>
+            {/* ---------- Location and Concept ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Location and Concept of the Concert Hall")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText("On the site of a disused")}
+                <button
+                  onClick={() => toggleButton(32)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[32]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  32
+                </button>
+                <input
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText("factory")}
               </li>
 
-              {/* 25 */}
               <li className="text-lg">
-                <span>
-                  {renderText(
-                    "how it's affected by laws regarding all aspects of"
-                  )}
-                </span>
-
+                {renderText("Beside a")}
                 <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
+                  onClick={() => toggleButton(33)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[33]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  25
+                  33
                 </button>
-
                 <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+              
               </li>
 
-              {/* 26 */}
               <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
+                {renderText("The design is based on the concept of a mystery")}
+              </li>
+            </ul>
 
+            {/* ---------- Building Design ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Building Design")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText("It's approached by a")}
                 <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
+                  onClick={() => toggleButton(34)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[34]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  26
+                  34
                 </button>
-
                 <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-
-                <span>{renderText("of customers into account")}</span>
+                {renderText("bridge for pedestrians")}
               </li>
 
-              {/* 27 */}
               <li className="text-lg">
-                <span>{renderText("what")}</span>
-
+                {renderText("The building is the shape of a")}
                 <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
+                  onClick={() => toggleButton(35)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  27
+                  35
                 </button>
-
                 <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-
-                <span>{renderText("is required in case of accidents")}</span>
+                {renderText("box")}
               </li>
 
-              {/* 28 */}
               <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
-
+                {renderText("One exterior wall acts as a large")}
                 <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
+                  onClick={() => toggleButton(36)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[36]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  28
+                  36
                 </button>
-
                 <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                {renderText("screen for projections")}
+              </li>
+            </ul>
 
-                <span>{renderText("is located in the library")}</span>
+            {/* ---------- Auditorium ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("In the Auditorium")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText("The floor is built on huge pads made of")}
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText("rubber")}
               </li>
 
-              {/* 29 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
+                {renderText("The walls are made of local wood and are")}
                 <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[38]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  29
+                  38
                 </button>
-
                 <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
-
-                <span>{renderText("of local organisations")}</span>
+                {renderText("curved in shape")}
               </li>
 
-              {/* 30 */}
               <li className="text-lg">
-                <span>
-                  {renderText("how it's different from a library in a")}
-                </span>
-
+                {renderText("Ceiling panels and")}
                 <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
+                  onClick={() => toggleButton(39)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[39]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  30
+                  39
                 </button>
-
                 <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+                {renderText("curtains on walls allow adjustment of acoustics")}
+              </li>
+            </ul>
+
+            {/* ---------- Evaluation ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Evaluation")}
+            </h2>
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                {renderText("Some critics say the")}
+                <button
+                  onClick={() => toggleButton(40)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[40]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  40
+                </button>
+                <input
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+                {renderText("style of the building is inappropriate")}
               </li>
             </ul>
           </div>
@@ -905,11 +726,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +797,9 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      <Listening2Pagination2016></Listening2Pagination2016>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Listening2Part42016;

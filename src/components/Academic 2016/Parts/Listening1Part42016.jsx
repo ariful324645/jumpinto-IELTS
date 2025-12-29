@@ -1,13 +1,12 @@
- import React, { useEffect, useState } from "react";
-
-import { IoIosArrowDown } from "react-icons/io";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-
-import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import { IoIosArrowDown } from "react-icons/io";
 
-const Listening1Part32017 = () => {
+import Listening1Pagination2016 from "../Pagination2016/Listening1Pagination2016";
+
+const Listening1Part42016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -20,270 +19,120 @@ const Listening1Part32017 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-  // result marks display
   const [showResult, setShowResult] = useState(false);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
+        "Section 4. You will hear part of a student presentation about the variety of different species that live in the world's oceans.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully, and answer questions 31 to 40.",
       ],
     },
-
     {
-      speaker: "TRUDIE",
+      speaker: "SPEAKER",
       text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
+        "I've been looking at ocean biodiversity.",
+        "That's the diversity of species that live in the world's oceans.",
+        "About 20 years ago, biologists developed the idea of what they called biodiversity hotspots.",
+        "These are the areas which have the greatest mixture of species, so one example is Madagascar.",
+        "These hotspots are significant.",
 
         {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
+          text: "Because they allow us to locate key areas for focusing efforts at conservation.",
+          number: 31,
         },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
+        "Biologists can identify hotspots on land fairly easily.",
+        "But until recently, very little was known about species distribution and diversity in the oceans, and no one even knew if hotspots existed there.",
+        "Then a Canadian biologist called Boris Worm did some research in 2005 on data on ocean species that he got from the fishing industry.",
+        "Worm located five hotspots for large ocean predators like sharks, and looked at what they had in common.",
+        "The main thing he'd expected to find was that they had very high concentrations of food.",
         {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
+          text: "But to his surprise, that was only true for four of the hotspots.",
+          number: 32,
         },
-        "They won't look anything like the libraries we're used to.",
+        "The remaining hotspots were quite badly off in that regard.",
+
+        {
+          text: "But what he did find was that in all cases, the water at the surface of the ocean had relatively high temperatures.",
+          number: 33,
+        },
+        "Even when it was cool at greater depths.",
+        "So, this seemed to be a factor in supporting a diverse range of these large predators.",
+
+        {
+          text: "However, this wasn't enough on its own, because he also found that the water needed to have enough oxygen in it.",
+          number: 34,
+        },
+        "So these two factors seem necessary to support the high metabolic rate of these large fish.",
+        "A couple of years later, in 2007, a researcher called Lisa Balance, who was working in California, also started looking for ocean hotspots.",
+        "But not for fish.",
+
+        {
+          text: "What she was interested in was marine mammals, things like seals.",
+          number: 35,
+        },
+        "And she found three places in the oceans which were hotspots.",
+        "And what these had in common was that these hotspots were all located at boundaries between ocean currents.",
+        "This seems to be the sort of place that has lots of the plankton that some of these species feed on.",
+        "So now people who want to protect the species that are endangered need to get as much information as possible.",
+        "For example, there's an international project called the Census of Marine Life.",
+        "They've been surveying oceans all over the world, including the Arctic.",
+
+        {
+          text: "One thing they found there, which stunned other researchers, was that there were large numbers of species which live below the ice.",
+          number: 36,
+        },
+        "Sometimes under a layer up to 20 meters thick.",
+        "Some of these species had never been seen before.",
+        "They've even found species of octopus living in these conditions.",
+        "And other scientists working on the same project, but researching very different habitats on the ocean floor, have found large numbers of species congregating around volcanoes.",
+        "Attracted to them by the warmth and nutrients there.",
+        "However, biologists still don't know how serious the threat to their survival is for each individual species.",
+        "So a body called the Global Marine Species Assessment is now creating a list of endangered species.",
+        "They consider things like the size of the population, how many members of one species there are in a particular place.",
+        "And then they look at their distribution in geographical terms.",
+        "Although this is quite difficult when you're looking at fish, because they're so mobile.",
+        {
+          text: "And then thirdly, they calculate the rate at which the decline of the species is happening.",
+          number: 37,
+        },
+        "So far, only 1,500 species have been assessed, but they want to increase this figure to 20,000.",
+        "For each one they assess, ",
+        {
+          text: "they use the data they collect to produce a map showing its distribution.",
+          number: 38,
+        },
+        "Ultimately, they will be able to use these to figure out not only where most species are located.",
+        "But also where they are most threatened.",
+        "So finally, what can be done to retain the diversity of species in the world's oceans?",
+        "Firstly, we need to set up more reserves in our oceans, places where marine species are protected.",
+        "We have some, but not enough.",
+        "In addition, to preserve species such as leatherback turtles, which live out in the high seas, but have their nesting sites on the American coast.",
+        {
+          text: "We need to create corridors for migration, so they can get from one area to another safely.",
+          number: 39,
+        },
+        "As well as this, action needs to be taken to lower the levels of fishing quotas.",
+        "To prevent overfishing of endangered species.",
+        "And finally, there's the problem of by-catch.",
+        "This refers to the catching of unwanted fish by fishing boats.",
+        "They're returned to the sea, but they're often dead or dying.",
+        {
+          text: "If these commercial fishing boats used equipment which was more selective, this problem could be overcome.",
+          number: 40,
+        },
+        "So does anyone have any questions?",
       ],
     },
-
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
-        {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
-        },
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
-        {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
-        },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Right. ",
-        {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
-        },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
-        {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
-        {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
-        },
-        "I wonder why it's there. Do you know what his connection was with this area?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of Section 3.",
+        "That is the end of section 4.",
         "You now have half a minute to check your answers.",
       ],
     },
   ];
-
-  // different option
-  const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
-  ];
-
-  const options = [
-    [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
-    ],
-
-    [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
-    ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
-    ],
-  ];
-
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-  const handleOptionClick = (qIndex, option) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = option;
-    setSelectedOptions(updatedOptions);
-
-    // Update userAnswers for score calculation
-    setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
-      const updated = { ...prev, [answerKey]: option };
-      calculateScore(updated);
-      return updated;
-    });
-  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -386,26 +235,12 @@ const Listening1Part32017 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "STEWART") {
+      if (speaker === "TC EMPLOYEE")
+        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+      if (speaker === "OFFICER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "TRUDIE") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
       return voices[0];
     };
 
@@ -442,28 +277,22 @@ const Listening1Part32017 = () => {
     };
     speakNextChunk();
   };
-  useEffect(() => {
-    window.speechSynthesis.onvoiceschanged = () => {
-      const list = window.speechSynthesis.getVoices();
-      console.log("Available voices:", list);
-    };
-  }, []);
 
   //  Marks show
 
-  const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
-  };
+ const correctAnswers = {
+   31: "land",
+   32: "food",
+   33: "surface",
+   34: "oxygen",
+   35: "mammals",
+   36: "ice",
+   37: "decline",
+   38: "map",
+   39: "migration",
+   40: "consumption",
+ };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -489,7 +318,7 @@ const Listening1Part32017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/2017/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -501,12 +330,12 @@ const Listening1Part32017 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/2017/Test 1/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/2017/Test 1/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +347,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +378,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Ocean Biodiversity")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -579,7 +408,7 @@ const Listening1Part32017 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -625,254 +454,311 @@ const Listening1Part32017 = () => {
             </div>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
-            </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
-            </h1>
-
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
-
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
-
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 2st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
+            {renderText("Questions 31-40")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
             {renderText("Complete the notes below.")} <br /> <br />
             {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
             {renderText(" for each answer.")}
           </h3>
-
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
+              {renderText("OCEAN BIODIVERSITY")}
             </h1>
 
+            {/* ---------- Biodiversity Hotspots ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Biodiversity hotspots")}
+            </h2>
+
             <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  24
-                </button>
-
-                <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of its own")}</span>
+                {renderText("areas containing many different species")}
               </li>
 
-              {/* 25 */}
               <li className="text-lg">
-                <span>
-                  {renderText(
-                    "how it's affected by laws regarding all aspects of"
-                  )}
-                </span>
+                {renderText("important for locating targets for conservation")}
+              </li>
 
+              <li className="text-lg">
                 <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
+                  onClick={() => toggleButton(31)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[31]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  25
+                  31
                 </button>
 
+                <span>{renderText("at first only identified on")}</span>
+
                 <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[31] || ""}
+                  onChange={(e) => handleInputChange(31, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
+            </ul>
 
-              {/* 26 */}
+            {/* ---------- Boris Worm ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Boris Worm, 2005")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
+                {renderText(
+                  "identified hotspots for large ocean predators (e.g. sharks)"
+                )}
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("were not always rich in")}</span>
 
                 <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
+                  onClick={() => toggleButton(32)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[32]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  26
+                  32
                 </button>
 
                 <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[32] || ""}
+                  onChange={(e) => handleInputChange(32, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("had higher temperatures at the")}</span>
+
+                <button
+                  onClick={() => toggleButton(33)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[33]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  33
+                </button>
+
+                <input
+                  value={userAnswers[33] || ""}
+                  onChange={(e) => handleInputChange(33, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("had sufficient")}</span>
+
+                <button
+                  onClick={() => toggleButton(34)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[34]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  34
+                </button>
+
+                <input
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of customers into account")}</span>
+                <span>{renderText("in the water")}</span>
               </li>
+            </ul>
 
-              {/* 27 */}
+            {/* ---------- Lisa Ballance ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Lisa Ballance, 2007")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("what")}</span>
+                <span>{renderText("looked for hotspots for marine")}</span>
 
                 <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
+                  onClick={() => toggleButton(35)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[35]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  27
+                  35
                 </button>
 
                 <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                {renderText(
+                  "found these were located where ocean currents meet"
+                )}
+              </li>
+            </ul>
+
+            {/* ---------- Census of Marine Life ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Census of Marine Life")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                <span>{renderText("found new species living under the")}</span>
+
+                <button
+                  onClick={() => toggleButton(36)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[36]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  36
+                </button>
+
+                <input
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                {renderText("near volcanoes on the ocean floor")}
+              </li>
+            </ul>
+
+            {/* ---------- Global Marine Species Assessment ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Global Marine Species Assessment")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
+              <li className="text-lg">
+                <span>{renderText("rate of")}</span>
+
+                <button
+                  onClick={() => toggleButton(37)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[37]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  37
+                </button>
+
+                <input
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("make a distribution")}</span>
+
+                <button
+                  onClick={() => toggleButton(38)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[38]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  38
+                </button>
+
+                <input
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("is required in case of accidents")}</span>
+                <span>{renderText("for each species")}</span>
               </li>
+            </ul>
 
-              {/* 28 */}
+            {/* ---------- Recommendations ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Recommendations")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
+                <span>{renderText("establish")}</span>
 
                 <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
+                  onClick={() => toggleButton(39)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[39]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  28
+                  39
                 </button>
 
                 <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("is located in the library")}</span>
+                <span>{renderText("corridors (e.g. turtles)")}</span>
               </li>
 
-              {/* 29 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
+                <span>{renderText("catch fish only for the purpose of")}</span>
 
                 <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
+                  onClick={() => toggleButton(40)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[40]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  29
+                  40
                 </button>
 
                 <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of local organisations")}</span>
-              </li>
-
-              {/* 30 */}
-              <li className="text-lg">
-                <span>
-                  {renderText("how it's different from a library in a")}
-                </span>
-
-                <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  30
-                </button>
-
-                <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[40] || ""}
+                  onChange={(e) => handleInputChange(40, e.target.value)}
+                  className="border-2 border-gray-300 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
@@ -905,11 +791,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (31-40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +862,10 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      {/* <Listening1Pagination2017></Listening1Pagination2017> */}
+      <Listening1Pagination2016></Listening1Pagination2016>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Listening1Part42016;

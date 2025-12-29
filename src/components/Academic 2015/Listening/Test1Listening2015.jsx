@@ -1,13 +1,12 @@
- import React, { useEffect, useState } from "react";
-
-import { IoIosArrowDown } from "react-icons/io";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-
-import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import { IoIosArrowDown } from "react-icons/io";
+import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+// import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
 
-const Listening1Part32017 = () => {
+const Test1Listening2015 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -20,270 +19,222 @@ const Listening1Part32017 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
-
-  // result marks display
   const [showResult, setShowResult] = useState(false);
-
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
+        "Section 1. You will hear a telephone conversation between a travel agent and a customer.",
+        "First, you have some time to look at questions 1 to 6.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
       ],
     },
-
     {
-      speaker: "TRUDIE",
+      speaker: "TRAVEL AGENT",
       text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
+        "Good morning, World Tours. My name is Jamie. How can I help you?",
       ],
     },
-
     {
-      speaker: "STEWART",
+      speaker: "ANDREA",
       text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
+        "Good morning. I want some information on self-drive tours in the USA.",
+        "Could you send me a brochure?",
       ],
     },
-
     {
-      speaker: "TRUDIE",
-      text: [
-        {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
-        },
-      ],
+      speaker: "TRAVEL AGENT",
+      text: ["Of course. Could I have your name please?"],
     },
-
     {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
+      speaker: "ANDREA",
+      text: ["Andrea Brown."],
     },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
-
-        {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
-        },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
-        {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
-        },
-        "They won't look anything like the libraries we're used to.",
-      ],
-    },
-
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
+        "The customer's name is Andrea Brown, so Brown has been written in the space.",
+        "Now we shall begin.",
+        "You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 to 6.",
       ],
     },
-
     {
-      speaker: "TRUDIE",
+      speaker: "TRAVEL AGENT",
       text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
+        "Good morning, World Tours. My name is Jamie. How can I help you?",
       ],
     },
-
     {
-      speaker: "STEWART",
+      speaker: "ANDREA",
       text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
+        "Good morning, I want some information on self-drive tours in the USA.",
+        "Could you send me a brochure?",
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Of course. Could I have your name please?"],
+    },
+    {
+      speaker: "ANDREA",
+      text: ["Andrea Brown."],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Thank you. And your address?"],
+    },
+    {
+      speaker: "ANDREA",
+      text: [{ text: "24 Ardleigh Road.", number: 1 }],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Can you spell that?"],
+    },
+    {
+      speaker: "ANDREA",
+      text: ["ARDLEIGH Road."],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Post code?"],
+    },
+    {
+      speaker: "ANDREA",
+      text: ["BH5 2OP."],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Thanks, and can I have your phone number?"],
+    },
+    {
+      speaker: "ANDREA",
+      text: ["Is a mobile all right?"],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Fine."],
+    },
+    {
+      speaker: "ANDREA",
+      text: ["It's 07786643091."],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "Thank you. And can I ask you where you heard about World Tours?",
+        "From a friend, or did you see an advert somewhere?",
+      ],
+    },
+    {
+      speaker: "ANDREA",
+      text: [{ text: "I read about you in the newspaper.", number: 2 }],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "OK, I'll get the brochures in the post to you.",
+        "But can I give you some information over the phone?",
+        "What kinds of things do you want to do on your holiday?",
+      ],
+    },
+    {
+      speaker: "ANDREA",
+      text: [
+        "I'm interested in going to California with my family.",
+        "I've got two children, and we want to hire a car.",
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "The first tour begins in Los Angeles, and there's plenty of time to visit some of the theme parks there.",
+        { text: "Theme parks are included.", number: 3 },
+      ],
+    },
+    {
+      speaker: "ANDREA",
+      text: [
+        "That's something on my children's list, so I'd want to include that.",
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "Then you drive to San Francisco.",
+        "From there, you go to Yosemite Park where you spend a couple of nights.",
+        "You can stay in a lodge or on a campsite.",
+      ],
+    },
+    {
+      speaker: "ANDREA",
+      text: [
+        { text: "I don't like the idea of staying in a tent.", number: 4 },
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: ["Right. And the tour ends in Las Vegas."],
+    },
+    {
+      speaker: "ANDREA",
+      text: [
         {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
+          text: "Someone told me there's a really nice castle near Cambria.",
+          number: 5,
         },
       ],
     },
-
     {
-      speaker: "TRUDIE",
-      text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
-      ],
+      speaker: "TRAVEL AGENT",
+      text: ["Hearst Castle is on that road, so you could stop there."],
     },
-
     {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
-        {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
-        },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
+      speaker: "ANDREA",
+      text: [{ text: "That's good for beaches, isn't it?", number: 6 }],
     },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Right. ",
-        {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
-        },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
-        {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
-        {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
-        },
-        "I wonder why it's there. Do you know what his connection was with this area?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
-    },
-
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
+        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "Now listen and answer questions 7 to 10.",
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "The first tour lasts 12 days and covers 2,020 kilometres.",
+        { text: "The total distance is 2,020 km.", number: 7 },
+        "The cost is £525 per person.",
+        { text: "Meals are not included.", number: 8 },
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        "The second trip lasts nine days and costs £429 per person.",
+        { text: "It is almost £100 cheaper.", number: 9 },
+      ],
+    },
+    {
+      speaker: "TRAVEL AGENT",
+      text: [
+        {
+          text: "Flights are not included, but dinner is provided.",
+          number: 10,
+        },
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 1.",
         "You now have half a minute to check your answers.",
       ],
     },
   ];
-
-  // different option
-  const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
-  ];
-
-  const options = [
-    [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
-    ],
-
-    [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
-    ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
-    ],
-  ];
-
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-  const handleOptionClick = (qIndex, option) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = option;
-    setSelectedOptions(updatedOptions);
-
-    // Update userAnswers for score calculation
-    setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
-      const updated = { ...prev, [answerKey]: option };
-      calculateScore(updated);
-      return updated;
-    });
-  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -386,26 +337,12 @@ const Listening1Part32017 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "STEWART") {
+      if (speaker === "TC EMPLOYEE")
+        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+      if (speaker === "OFFICER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "TRUDIE") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
       return voices[0];
     };
 
@@ -442,27 +379,20 @@ const Listening1Part32017 = () => {
     };
     speakNextChunk();
   };
-  useEffect(() => {
-    window.speechSynthesis.onvoiceschanged = () => {
-      const list = window.speechSynthesis.getVoices();
-      console.log("Available voices:", list);
-    };
-  }, []);
 
   //  Marks show
 
   const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
+    1: "ardleigh",
+    2: "newspaper",
+    3: "theme",
+    4: "campsite",
+    5: "castle",
+    6: "beach",
+    7: "2020",
+    8: "flight",
+    9: "429",
+    10: "dinner",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -489,7 +419,7 @@ const Listening1Part32017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/2017/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -501,12 +431,12 @@ const Listening1Part32017 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/2015/Test 1/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/2015/Test 1/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +448,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +479,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Self-drive tours in USA")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -579,7 +509,7 @@ const Listening1Part32017 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll pb-10">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           <div className="flex justify-end items-center p-4 text-gray-500">
             {/* clear icon */}
             <div className="relative group">
@@ -625,258 +555,337 @@ const Listening1Part32017 = () => {
             </div>
           </div>
 
-          {/* question dynamic */}
-          <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
-            </h2>
-            <p className="text-xl">
-              {renderText("  Choose the correct letter,")}
-              <span className="font-bold"> {renderText("  A, B or C")}</span>.
-            </p>
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
-            </h1>
-
-            {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
-
-              return (
-                <div key={qIndex} className="flex flex-col gap-2">
-                  <h3 className="text-lg">
-                    {answerKey}. {q}
-                  </h3>
-
-                  <ul className="flex flex-col  gap-2 ml-4">
-                    {options[qIndex].map((option, oIndex) => {
-                      const isSelected = selectedOptions[qIndex] === option;
-
-                      return (
-                        <li
-                          key={oIndex}
-                          onClick={() => handleOptionClick(qIndex, option)}
-                          className="flex items-center gap-2 cursor-pointer"
-                        >
-                          <span
-                            className={`w-5 h-5 rounded-full border-2 inline-block ${
-                              isSelected
-                                ? "bg-blue-500 border-blue-500"
-                                : "border-gray-700"
-                            }`}
-                          ></span>
-
-                          <span
-                            className={
-                              isSelected ? "text-blue-500" : "text-black"
-                            }
-                          >
-                            {option}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 2st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
+            {renderText("Questions 1–6")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
             {renderText("Complete the notes below.")} <br /> <br />
             {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
             {renderText(" for each answer.")}
           </h3>
-
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
+              {renderText("SELF-DRIVE TOURS IN THE USA")}
             </h1>
 
+            {/* ---------- Example Section ---------- */}
             <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
+                {renderText("(Example) Name: Andrea Brown")}
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("Address: 24")}</span>
 
                 <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
+                  onClick={() => toggleButton(1)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[1]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  24
+                  1
                 </button>
 
                 <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[1] || ""}
+                  onChange={(e) => handleInputChange(1, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of its own")}</span>
+                <span>{renderText("Road")}</span>
               </li>
 
-              {/* 25 */}
+              <li className="text-lg">
+                <span>{renderText("Postcode: BH5")}</span>
+
+                <button
+                  onClick={() => toggleButton(2)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[2]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  2
+                </button>
+
+                <input
+                  value={userAnswers[2] || ""}
+                  onChange={(e) => handleInputChange(2, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                <span>{renderText("OP")}</span>
+              </li>
+
+              <li className="text-lg">
+                {renderText("Phone (mobile): 077 8664 3091")}
+              </li>
+            </ul>
+
+            {/* ---------- Possible Tours ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Possible self-drive tours")}
+            </h2>
+
+            <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
                 <span>
                   {renderText(
-                    "how it's affected by laws regarding all aspects of"
+                    "Trip One: Los Angeles – customer wants to visit some"
                   )}
                 </span>
 
                 <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
+                  onClick={() => toggleButton(3)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[3]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  25
+                  3
                 </button>
 
                 <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-
-              {/* 26 */}
-              <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
-
-                <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  26
-                </button>
-
-                <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[3] || ""}
+                  onChange={(e) => handleInputChange(3, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of customers into account")}</span>
+                <span>{renderText("parks with her children")}</span>
               </li>
 
-              {/* 27 */}
-              <li className="text-lg">
-                <span>{renderText("what")}</span>
-
-                <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  27
-                </button>
-
-                <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is required in case of accidents")}</span>
-              </li>
-
-              {/* 28 */}
-              <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
-
-                <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  28
-                </button>
-
-                <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is located in the library")}</span>
-              </li>
-
-              {/* 29 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  29
-                </button>
-
-                <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of local organisations")}</span>
-              </li>
-
-              {/* 30 */}
               <li className="text-lg">
                 <span>
-                  {renderText("how it's different from a library in a")}
+                  {renderText(
+                    "Yosemite Park – wants to stay in a lodge, not a"
+                  )}
                 </span>
 
                 <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
+                  onClick={() => toggleButton(4)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[4]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  30
+                  4
                 </button>
 
                 <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  value={userAnswers[4] || ""}
+                  onChange={(e) => handleInputChange(4, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+              </li>
+
+              <li className="text-lg">
+                <span>{renderText("Trip Two – wants to see the")}</span>
+
+                <button
+                  onClick={() => toggleButton(5)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[5]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  5
+                </button>
+
+                <input
+                  value={userAnswers[5] || ""}
+                  onChange={(e) => handleInputChange(5, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                <span>{renderText("on the way to Cambria")}</span>
+              </li>
+
+              <li className="text-lg">
+                <span>
+                  {renderText("At San Diego, wants to spend time on the")}
+                </span>
+
+                <button
+                  onClick={() => toggleButton(6)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                    activeButtons[6]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  6
+                </button>
+
+                <input
+                  value={userAnswers[6] || ""}
+                  onChange={(e) => handleInputChange(6, e.target.value)}
+                  className="border-2 rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
               </li>
             </ul>
+          </div>
+          <div className="space-y-6 leading-relaxed p-4">
+            <h1 className="text-2xl font-bold text-center mb-5">
+              {renderText("Self-drive tour details")}
+            </h1>
+
+            <table className="w-full border border-gray-400 text-lg">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-400 p-2">
+                    {renderText("Trip")}
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    {renderText("Number of days")}
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    {renderText("Total distance")}
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    {renderText("Price (per person)")}
+                  </th>
+                  <th className="border border-gray-400 p-2">
+                    {renderText("Includes")}
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {/* ---------- Trip One ---------- */}
+                <tr>
+                  <td className="border border-gray-400 p-2 font-semibold">
+                    {renderText("Trip One")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    {renderText("12 days")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    <button
+                      onClick={() => toggleButton(7)}
+                      className={`mx-2 h-8 w-8 rounded-full font-semibold border ${
+                        activeButtons[7]
+                          ? "bg-yellow-400 border-yellow-500 text-white"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      7
+                    </button>
+                    <input
+                      value={userAnswers[7] || ""}
+                      onChange={(e) => handleInputChange(7, e.target.value)}
+                      className="w-[100px] border rounded-md px-2 py-1"
+                      type="text"
+                    />
+                    <span className="ml-2">{renderText("km")}</span>
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    {renderText("£525")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2 space-y-1">
+                    <div>{renderText("accommodation")}</div>
+                    <div>{renderText("car")}</div>
+                    <div className="flex items-center gap-2">
+                      {renderText("one")}
+                      <button
+                        onClick={() => toggleButton(8)}
+                        className={`h-8 w-8 rounded-full font-semibold border ${
+                          activeButtons[8]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400"
+                        }`}
+                      >
+                        8
+                      </button>
+                      <input
+                        value={userAnswers[8] || ""}
+                        onChange={(e) => handleInputChange(8, e.target.value)}
+                        className="w-[120px] border rounded-md px-2 py-1"
+                        type="text"
+                      />
+                    </div>
+                  </td>
+                </tr>
+
+                {/* ---------- Trip Two ---------- */}
+                <tr>
+                  <td className="border border-gray-400 p-2 font-semibold">
+                    {renderText("Trip Two")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    {renderText("9 days")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    {renderText("980 km")}
+                  </td>
+
+                  <td className="border border-gray-400 p-2">
+                    <span>{renderText("£")}</span>
+                    <button
+                      onClick={() => toggleButton(9)}
+                      className={`mx-2 h-8 w-8 rounded-full font-semibold border ${
+                        activeButtons[9]
+                          ? "bg-yellow-400 border-yellow-500 text-white"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      9
+                    </button>
+                    <input
+                      value={userAnswers[9] || ""}
+                      onChange={(e) => handleInputChange(9, e.target.value)}
+                      className="w-[100px] border rounded-md px-2 py-1"
+                      type="text"
+                    />
+                  </td>
+
+                  <td className="border border-gray-400 p-2 space-y-1">
+                    <div>{renderText("accommodation")}</div>
+                    <div>{renderText("car")}</div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => toggleButton(10)}
+                        className={`h-8 w-8 rounded-full font-semibold border ${
+                          activeButtons[10]
+                            ? "bg-yellow-400 border-yellow-500 text-white"
+                            : "bg-gray-200 border-gray-400"
+                        }`}
+                      >
+                        10
+                      </button>
+                      <input
+                        value={userAnswers[10] || ""}
+                        onChange={(e) => handleInputChange(10, e.target.value)}
+                        className="w-[120px] border rounded-md px-2 py-1"
+                        type="text"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -905,11 +914,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (1–10)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +985,9 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      <Listening1Pagination2015></Listening1Pagination2015>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Test1Listening2015;

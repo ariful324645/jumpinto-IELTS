@@ -6,9 +6,9 @@ import { GrClearOption } from "react-icons/gr";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
-import Listening4Pagination2017 from "../Pagination2017/Listening4Pagination2017";
+import Listening3Pagination2016 from "../Pagination2016/Listening3Pagination2016";
 
-const Listening4Part32017 = () => {
+const Listening2Part22017 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,247 +24,200 @@ const Listening4Part32017 = () => {
 
   // result marks display
   const [showResult, setShowResult] = useState(false);
-  const lines = [
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Section 3. You will hear two students, Katie and Joe discussing a presentation in their Film Studies course.",
-        "First, you have some time to look at questions 21 to 24.",
-        "Listen carefully, and answer questions 21 to 24.",
-      ],
-    },
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Joe, you know I'm giving a presentation in our film studies class next week.",
-      ],
-    },
+const lines = [
+  {
+    speaker: "ANNOUNCER",
+    text: [
+      "Section 2. You will hear a talk given by a woman called Shona Ferguson about changes in a town called Barford.",
+      "First, you have some time to look at questions 11 to 15.",
+      "Now listen carefully and answer questions 11 to 15.",
+    ],
+  },
 
-    {
-      speaker: "JOE",
-      text: ["Yes."],
-    },
+  {
+    speaker: "MAN",
+    text: [
+      "First of all, let me thank you all for coming to this public meeting to discuss the future of our town.",
+      "Our first speaker is Shona Ferguson from Barford Town Council.",
+      "Shona.",
+    ],
+  },
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Well, could we discuss it? I could do with getting someone else's opinion.",
-      ],
-    },
+  {
+    speaker: "SHONA",
+    text: [
+      "Thank you.",
+      "First I'll briefly give you some background information, then I'll be asking you for your comments on developments in the town.",
+      "Well, as you don't need me to tell you, Barford has changed a great deal in the last 50 years.",
+      "These are some of the main changes.",
+      "Fifty years ago, buses linked virtually every part of the town and the neighbouring towns and villages.",
 
-    {
-      speaker: "JOE",
-      text: ["Of course, Katie. What are you going to talk about?"],
-    },
+      {
+        text: "Most people used them frequently, but not now, because the bus companies concentrate on just the routes that attract most passengers.",
+        number: 11,
+      },
+      "So parts of the town are no longer served by buses.",
+      "Even replacing old uncomfortable buses with smart new ones has had little impact on passenger numbers.",
+      "It's sometimes said that bus fares are too high.",
+      "But in relation to average incomes, fares are not much higher than they were 50 years ago.",
+      "Changes in the road network are affecting the town.",
+      "The centre was recently closed to traffic on a trial basis, making it much safer for pedestrians.",
+      "The impact of this is being measured.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "It's about film adaptations of Shakespeare's plays. I've got very interested in all the different approaches that film directors take.",
+      {
+        text: "The new cycle paths separating bikes from cars in most main roads are being used far more than was expected, reducing traffic and improving air quality.",
+        number: 12,
+      },
+      "And although the council's attempts to have a bypass constructed have failed, we haven't given up hope of persuading the government to change its mind.",
+      "Shopping in the town centre has changed over the years.",
+      "Many of us can remember when the town was crowded with people going shopping.",
+      "Numbers have been falling for several years.",
+      "Despite efforts to attract shoppers, for instance by opening new car parks.",
+      "Some people combine shopping with visits to the town's restaurants and cafes.",
 
-        {
-          text: "So I thought I'd start with Giannetti, who's a professor of film and literature, and in one of his books, he came up with a straightforward classification of film adaptations based on how faithful they are to the original plays and novels.",
-          number: 21,
-        },
-      ],
-    },
+      {
+        text: "Most shops are small independent stores, which is good, but many people prefer to use supermarkets and department stores in nearby large towns,As there are so few well-known chain stores here.",
+        number: 13,
+      },
 
-    {
-      speaker: "JOE",
-      text: ["Right."],
-    },
+      "Turning now to medical facilities, the town is served by family doctors in several medical practices, fewer than 50 years ago, but each catering for far more patients.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "I've already made some notes on that, so I just need to sort those out before the presentation.",
-        {
-          text: " I thought that next, I'd ask the class to come up with the worst examples of Shakespeare adaptations that they've seen.",
-          number: 22,
-        },
-        "And to say why, that should be more fun than having their favorite versions.",
-      ],
-    },
+      {
+        text: "Our hospital closed 15 years ago, which means journeys to other towns are unavoidable.",
+        number: 14,
+      },
 
-    {
-      speaker: "JOE",
-      text: ["Yes, I can certainly think of a couple."],
-    },
+      "On the other hand, there are more dentists than there used to be.",
+      "Employment patterns have changed along with almost everything else.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Hmm. Right, next, I want to talk about Rachel Malchow. I came across something on the internet about her work on film adaptations. And I was thinking of showing some film clips to illustrate her ideas.",
-        "Will you have enough time though, both to prepare and during the presentation? After all, I doubt if you'll be able to find all the clips you want.",
+      {
+        text: "The number of schools and colleges has increased, making that the main employment sector.",
+        number: 15,
+      },
 
-        "Hmm. Perhaps you're right.  ",
-        { text: "OK, well, I'd better do some slides instead.", number: 23 },
-        "Saying how various films relate to what she says, that should encourage discussion.",
-      ],
-    },
+      "Services such as website design and accountancy have grown in importance, and surprisingly perhaps, manufacturing hasn't seen the decline that has affected it in other parts of the country.",
+    ],
+  },
 
-    {
-      speaker: "JOE",
-      text: ["Hmm."],
-    },
+  {
+    speaker: "ANNOUNCER",
+    text: [
+      "Before you hear the rest of the talk, you have some time to look at questions 16 to 20.",
+      "Now listen and answer questions 16 to 20.",
+    ],
+  },
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Next, I want to say something about how plays may be chosen for adaptation.",
-        {
-          text: " Because they're concerned with issues of the time when the film is made.",
-          number: 24,
-        },
-      ],
-    },
+  {
+    speaker: "SHONA",
+    text: [
+      "Now, I'll very quickly outline current plans for some of the town's facilities before asking for your comments.",
+      "As you'll know, if you regularly use the car park at the railway station, it's usually full.",
+      "The railway company applied for permission to replace it with a multi-storey car park.",
+      "But that was refused.",
 
-    {
-      speaker: "JOE",
-      text: ["You mean things like patriotism, or the role of governments?"],
-    },
+      {
+        text: "Instead, the company has bought some adjoining land, and this will be used to increase the number of parking spaces.",
+        number: 16,
+      },
+      "This will be used to increase the number of parking spaces.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Exactly. It's quite tricky, but I've got a few ideas I'd like to discuss.",
-      ],
-    },
+      {
+        text: "The Grand, the old cinema in the High Street, will close at the end of the year.And reopen on a different site.",
+        number: 17,
+      },
 
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
-        "Listen and answer questions 25 to 30.",
-      ],
-    },
+      "You've probably seen the building under construction.",
+      "The plan is to have three screens with fewer seats, rather than just the one large auditorium in the old cinema.",
+      "I expect many of you shop in the indoor market.",
+      "It's become more and more shabby-looking, and because of fears about safety, it was threatened with demolition.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "And finally, I want to talk about a few adaptations that I think illustrate a range of approaches, and make some comments on them. Do you know the Japanese film Ran?",
-      ],
-    },
+      {
+        text: "The good news is that it will close for six weeks to be made safe and redecorated, and the improved building will open in July.",
+        number: 18,
+      },
+      "It will close for six weeks and reopen in July.",
+      "Lots of people use the library, including school and college students who go there to study.",
 
-    {
-      speaker: "JOE",
-      text: [
-        "I haven't seen it. It was based on Shakespeare's King Lear, wasn't it?",
-      ],
-    },
+      {
+        text: "The council has managed to secure funding to keep the library open later into the evening, twice a week.",
+        number: 19,
+      },
+      "The library will stay open later twice a week.",
+      "We would like to enlarge the building in the not too distant future, but this is by no means definite.",
+      "There's no limit on access to the nature reserve on the edge of town.",
+      "And this will continue to be the case.",
 
-    {
-      speaker: "KATIE",
-      text: [
-        "That's right. ",
-        {
-          text: "It was a very loose adaptation, using the same situation and story, but moving it to 16th century Japan.Instead of 16th century Britain",
-          number: 25,
-        },
-        "So, for example, the king's daughters become sons, because in Japanese culture at that time women couldn't succeed to the throne.",
-      ],
-    },
+      {
+        text: "What will change though, is that the council will no longer be in charge of the area.Instead, it will become the responsibility of a national body that administers most nature reserves in the country.",
+        number: 20,
+      },
+      "It will become the responsibility of a national body.",
+      "OK, now let me ask you, if you have...",
+    ],
+  },
 
-    {
-      speaker: "JOE",
-      text: [
-        "OK, I hope you're going to talk about the 1993 film of Much Ado About Nothing. I think that's one of the best Shakespeare films. It really brings the play to life, doesn't it?",
-      ],
-    },
+  {
+    speaker: "ANNOUNCER",
+    text: [
+      "That is the end of section 2.",
+      "You now have half a minute to check your answers.",
+    ],
+  },
+];
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Yes, I agree. ",
-        {
-          text: "And I think filming it in Italy, where the play is set, makes you see what life was like at the time of the play.",
-          number: 26,
-        },
-      ],
-    },
 
-    {
-      speaker: "JOE",
-      text: ["Absolutely, right, what's next?"],
-    },
 
-    {
-      speaker: "KATIE",
-      text: [
-        {
-          text: "Uh. Next, I thought Romeo and Juliet, the 1996 film, which moves the action into the present day.",
-          number: 27,
-        },
-      ],
-    },
+  // different option
+ const questions = [
+   "In Shona's opinion, why do fewer people use buses in Barford these days?",
+   "What change in the road network is known to have benefited the town most?",
+   "What is the problem affecting shopping in the town centre?",
+   "What does Shona say about medical facilities in Barford?",
+   "The largest number of people are employed in",
+ ];
 
-    {
-      speaker: "JOE",
-      text: [
-        "Yes. It worked really well, I thought, changing the two feuding families in the original to two competing business empires, even though they're speaking in the English of the original play.",
-        "You'd expect it would sound really bizarre, but I found I soon got used to it.",
-      ],
-    },
+ const options = [
+   [
+     "A. The buses are old and uncomfortable.",
+     "B. Fares have gone up too much.",
+     "C. There are not so many bus routes.",
+   ],
+   [
+     "A. the construction of a bypass",
+     "B. the development of cycle paths",
+     "C. the banning of cars from certain streets",
+   ],
+   [
+     "A. lack of parking spaces",
+     "B. lack of major retailers",
+     "C. lack of restaurants and cafés",
+   ],
+   [
+     "A. There is no hospital.",
+     "B. New medical practices are planned.",
+     "C. The number of dentists is too low.",
+   ],
+   ["A. manufacturing.", "B. services.", "C. education."],
+ ];
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Me too. Then I thought I'd include a real Hollywood film. One that's intended to appeal to a mass commercial audience.",
-        "Yes, but I've picked the 1996 film of Hamlet.",
-        {
-          text: " It included every line of the text, but it's more like a typical action hero movie.",
-          number: 28,
-        },
-        "There are loads of special effects, but no unifying interpretation of the play.",
-      ],
-    },
 
-    {
-      speaker: "JOE",
-      text: ["All show and no substance."],
-    },
+  const [selectedOptions, setSelectedOptions] = useState(
+    Array(questions.length).fill(null)
+  );
+  const handleOptionClick = (qIndex, option) => {
+    const updatedOptions = [...selectedOptions];
+    updatedOptions[qIndex] = option;
+    setSelectedOptions(updatedOptions);
 
-    {
-      speaker: "KATIE",
-      text: [
-        "Exactly. Then there's Prospero's Books, based on The Tempest. That was really innovative from a stylistic point of view.",
-
-        {
-          text: "Didn't it include dance and singing and animation as well as live actors?",
-          number: 29,
-        },
-        "Yes, it did. I also want to mention Looking for Richard. Did you ever see it?",
-        "No, but I've read about it. ",
-      ],
-    },
-
-    {
-      speaker: "KATIE",
-      text: [
-        {
-          text: "It was a blend of a documentary with a few scenes from Richard III, wasn't it?",
-          number: 30,
-        },
-        "That's right. It's more a way of looking into how people nowadays connect with the playwright. The play is really just the starting point, and that'll be where I finish.",
-      ],
-    },
-
-    {
-      speaker: "JOE",
-      text: ["Well, it sounds as though it'll be very interesting."],
-    },
-
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of Section 3.",
-        "You now have half a minute to check your answers.",
-      ],
-    },
-  ];
-
-  // Updated questions and options
+    // Update userAnswers for score calculation
+    setUserAnswers((prev) => {
+      const answerKey = qIndex + 11;
+      const updated = { ...prev, [answerKey]: option };
+      calculateScore(updated);
+      return updated;
+    });
+  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -372,12 +325,12 @@ const Listening4Part32017 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "JOE") {
+      if (speaker === "RUSS") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "KATIE") {
+      if (speaker === "JOY PARKINS") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -431,21 +384,22 @@ const Listening4Part32017 = () => {
   }, []);
 
   //  Marks show
-  const correctAnswers = {
-    // Questions 21–24
-    21: "classification",
-    22: "worst",
-    23: "slides",
-    24: "issues",
+const correctAnswers = {
+  // Section 2 – Changes in Barford (Questions 11–15)
+  11: "C. There are not so many bus routes.",
+  12: "B. the development of cycle paths",
+  13: "B. lack of major retailers",
+  14: "A. There is no hospital.",
+  15: "C. education.",
 
-    // Questions 25–30
-    25: "F",
-    26: "A",
-    27: "E",
-    28: "C",
-    29: "G",
-    30: "B",
-  };
+  // Questions 16–20 (Plans)
+  16: "G", // railway station car park → It will be expanded
+  17: "A", // cinema → It will move to a new location
+  18: "C", // indoor market → It will be refurbished
+  19: "B", // library → It will have its opening hours extended
+  20: "F", // nature reserve → It will have new management
+};
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -471,7 +425,7 @@ const Listening4Part32017 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part22019", newScore);
+    localStorage.setItem("/listening2Part32018", newScore);
   };
 
   const toggleButton = (id) => {
@@ -483,12 +437,12 @@ const Listening4Part32017 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part22019");
+    localStorage.removeItem("/listening2Part32018");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part22019");
+    const savedScore = localStorage.getItem("/listening2Part32018");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -500,7 +454,7 @@ const Listening4Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -531,7 +485,7 @@ const Listening4Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Film adaptations on Shakespeare's plays")}
+                {renderText("Changes in Barford over the last 50 years")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -606,356 +560,248 @@ const Listening4Part32017 = () => {
               )}
             </div>
           </div>
-          {/* 1st section */}
 
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <div className="mt-5">
-              <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 21-24")}
-              </h2>
-              <h3 className="text-lg font-semibold mb-5">
-                {renderText("Complete the notes below.")} <br /> <br />
-                {renderText("Write")}{" "}
-                <span className="font-bold">{renderText("ONLY ONE WORD")}</span>{" "}
-                {renderText("for each answer.")}
-              </h3>
-              <h1 className="text-2xl font-bold text-center mb-5">
-                {renderText(
-                  "   Presentation on film adaptations of Shakespeare's plays"
-                )}
-              </h1>
-              <tbody>
-                {/* Task 21 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div className="flex flex-wrap items-center gap-2">
-                      {renderText(
-                        " Introduce Giannetti's book containing a of adaptations"
-                      )}
-                      <button
-                        onClick={() => toggleButton(21)}
-                        className={`h-8 w-8 rounded-full font-semibold border ${
-                          activeButtons[21]
-                            ? "bg-yellow-400 border-yellow-500 text-white"
-                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
-                        }`}
-                      >
-                        21
-                      </button>
-                      <input
-                        value={userAnswers[21] || ""}
-                        onChange={(e) => handleInputChange(21, e.target.value)}
-                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
-                        type="text"
-                        placeholder=""
-                      />
-                    </div>
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    {renderText("Organise notes")}
-                  </td>
-                </tr>
+            <h2 className="text-lg font-bold">
+              {renderText("Questions 11-15")}
+            </h2>
+            <p className="text-xl">
+              {renderText("  Choose the correct letter,")}
+              <span className="font-bold"> {renderText("  A, B or C")}</span>.
+            </p>
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("  Changes in Barford over the last 50 years")}
+            </h1>
 
-                {/* Task 22 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div className="flex flex-wrap items-center gap-2">
-                      {renderText(" Ask class to suggest the adaptations")}
-                      <button
-                        onClick={() => toggleButton(22)}
-                        className={`h-8 w-8 rounded-full  font-semibold border ${
-                          activeButtons[22]
-                            ? "bg-yellow-400 border-yellow-500 text-white"
-                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
-                        }`}
-                      >
-                        22
-                      </button>
-                      <input
-                        value={userAnswers[22] || ""}
-                        onChange={(e) => handleInputChange(22, e.target.value)}
-                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
-                        type="text"
-                        placeholder=""
-                      />
-                    </div>
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    {renderText("No further work needed")}
-                  </td>
-                </tr>
+            {questions.map((q, qIndex) => {
+              const answerKey = qIndex + 11;
 
-                {/* Task 23 */}
-                <tr>
-                  {" "}
-                  <td className="border border-gray-400 text-lg p-2">
-                    {renderText("Present Rachel Malchow's ideas ")}
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div className="flex flex-wrap items-center gap-2">
-                      {renderText("  Prepare some")}
-                      <button
-                        onClick={() => toggleButton(23)}
-                        className={`h-8 w-8 rounded-full font-semibold border ${
-                          activeButtons[23]
-                            ? "bg-yellow-400 border-yellow-500 text-white"
-                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
-                        }`}
-                      >
-                        23
-                      </button>
-                      <input
-                        value={userAnswers[23] || ""}
-                        onChange={(e) => handleInputChange(23, e.target.value)}
-                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
-                        type="text"
-                        placeholder=""
-                      />
-                    </div>
-                  </td>
-                </tr>
+              return (
+                <div key={qIndex} className="flex flex-col gap-2">
+                  <h3 className="text-lg">
+                    {answerKey}. {q}
+                  </h3>
 
-                {/* Task 24 */}
-                <tr>
-                  <td className="border border-gray-400 text-lg p-2">
-                    <div className="flex flex-wrap items-center gap-2">
-                      {renderText(
-                        "Discuss relationship between adaptations and at the time of making the film"
-                      )}
-                      <button
-                        onClick={() => toggleButton(24)}
-                        className={`h-8 w-8 rounded-full font-semibold border ${
-                          activeButtons[24]
-                            ? "bg-yellow-400 border-yellow-500 text-white"
-                            : "bg-gray-200 border-gray-400 text-gray-700 hover:bg-gray-300"
-                        }`}
-                      >
-                        24
-                      </button>
-                      <input
-                        value={userAnswers[24] || ""}
-                        onChange={(e) => handleInputChange(24, e.target.value)}
-                        className="w-[120px] border border-gray-300 rounded-md px-2 py-1 text-lg"
-                        type="text"
-                        placeholder=""
-                      />
-                    </div>
-                  </td>
-                  <td className="border border-gray-400 text-lg p-2">
-                    {renderText("No further work needed")}
-                  </td>
-                </tr>
-              </tbody>
-            </div>
+                  <ul className="flex flex-col  gap-2 ml-4">
+                    {options[qIndex].map((option, oIndex) => {
+                      const isSelected = selectedOptions[qIndex] === option;
+
+                      return (
+                        <li
+                          key={oIndex}
+                          onClick={() => handleOptionClick(qIndex, option)}
+                          className="flex items-center gap-2 cursor-pointer"
+                        >
+                          <span
+                            className={`w-5 h-5 rounded-full border-2 inline-block ${
+                              isSelected
+                                ? "bg-blue-500 border-blue-500"
+                                : "border-gray-700"
+                            }`}
+                          ></span>
+
+                          <span
+                            className={
+                              isSelected ? "text-blue-500" : "text-black"
+                            }
+                          >
+                            {option}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
+
+          {/* 2st section */}
 
           <div>
             {/* normal title*/}
             <div className="space-y-4 leading-relaxed">
               <h2 className="text-lg font-bold mb-3">
-                {renderText("Questions 25-30")}
+                {renderText("Questions 16-20")}
               </h2>
 
               <h3 className="text-lg mb-5">
-                {renderText(
-                  "What did findings of previous research claim about the personality traits a child is likely to have because of their position in the family?"
-                )}{" "}
-                <br /> <br />
+                {renderText("Level the map below")} <br /> <br />
                 {renderText("Choose the correct letter,  ")}{" "}
                 <span className="font-bold mr-2">{renderText("A-G")}</span>{" "}
-                {renderText("next to Questions 25-30")}
+                {renderText("next to Questions 16-20.")}
               </h3>
-              <div className="flex items-center justify-center border border-black py-4 px-4 w-96 mx-auto">
-                <div className="text-center">
-                  <ul className="space-y-1 text-lg">
-                    <li>
-                      {renderText("A. clearly shows the historical period")}
+              <div className="flex items-center justify-center ">
+                <div className="text-center border-2 border-black p-4 space-y-2">
+                  <ul className="list-disc list-inside text-left">
+                    <h1 className="text-lg font-bold text-center">
+                      {renderText("Plans")}
+                    </h1>
+
+                    <li className="text-lg">
+                      {renderText("A. It will move to a new location.")}
                     </li>
-                    <li>{renderText("B. contains only parts of the play")}</li>
-                    <li>
-                      {renderText("C. is too similar to another kind of film")}
-                    </li>
-                    <li>
+                    <li className="text-lg">
                       {renderText(
-                        "D. turned out to be unpopular with audiences"
+                        "B. It will have its opening hours extended."
                       )}
                     </li>
-                    <li>
+                    <li className="text-lg">
+                      {renderText("C. It will be refurbished.")}
+                    </li>
+                    <li className="text-lg">
                       {renderText(
-                        "E. presents the play in a different period from the original"
+                        "D. It will be used for a different purpose."
                       )}
                     </li>
-                    <li>
-                      {renderText(
-                        "F. sets the original in a different country"
-                      )}
+                    <li className="text-lg">
+                      {renderText("E. It will have its opening hours reduced.")}
                     </li>
-                    <li>
-                      {renderText("G. incorporates a variety of art forms")}
+                    <li className="text-lg">
+                      {renderText("F. It will have new management.")}
+                    </li>
+                    <li className="text-lg">
+                      {renderText("G. It will be expanded.")}
                     </li>
                   </ul>
-                </div>{" "}
+                </div>
               </div>
 
               <br />
             </div>
           </div>
 
-          {/* optional question */}
           <div className="space-y-2">
-            {/* ---------- Question 25 ---------- */}
-            <h1 className="text-lg font-bold">{renderText("Films")}</h1>
+            {/* ---------- Step 1 ---------- */}
+            <h1 className="text-lg font-bold">{renderText("Facilities")}</h1>
 
-            {/* ---------- Question 26 ---------- */}
+            {/* 17 - Joy Parkins */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("25.")}</span>
-              {renderText("Run")}
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="25">{renderText("25")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>{" "}
-            </p>
-            {/* ---------- Question 26 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("26.")}</span>
-              {renderText("Much Ado About Nothing")}
-              <div className="relative w-40">
-                <select
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
-                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
-                >
-                  <option value="26">{renderText("26")}</option>
-                  <option value="A">{renderText("A")}</option>
-                  <option value="B">{renderText("B")}</option>
-                  <option value="C">{renderText("C")}</option>
-                  <option value="D">{renderText("D")}</option>
-                  <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
-                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FaChevronDown />
-                </span>
-              </div>{" "}
-            </p>
+              <span className="font-bold text-lg">{renderText("16.")}</span>
+              <span className="text-lg">
+                {renderText("railway station car park")}
+              </span>
 
-            {/* ---------- Question 27 ---------- */}
-            <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("27.")}</span>
-              {renderText("Romeo & Juliet")}
               <div className="relative w-40">
                 <select
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
+                  value={userAnswers[16] || ""}
+                  onChange={(e) => handleInputChange(16, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="27">{renderText("27")}</option>
+                  <option value="16">{renderText("16")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
                   <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 28 ---------- */}
+            {/* 17 - Joy Parkins */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("28.")}</span>
-              {renderText("Hamlet")}
+              <span className="font-bold text-lg">{renderText("17.")}</span>
+              <span className="text-lg">{renderText("Cinema")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
+                  value={userAnswers[17] || ""}
+                  onChange={(e) => handleInputChange(17, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="28">{renderText("28")}</option>
+                  <option value="17">{renderText("17")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 29 ---------- */}
+            {/* 18 - David Field */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("29.")}</span>
-              {renderText("Prospero's Books")}
+              <span className="font-bold text-lg">{renderText("18.")}</span>
+              <span className="text-lg">{renderText("indoor market")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
+                  value={userAnswers[18] || ""}
+                  onChange={(e) => handleInputChange(18, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="29">{renderText("29")}</option>
+                  <option value="18">{renderText("18")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
               </div>
             </p>
 
-            {/* ---------- Question 30 ---------- */}
+            {/* 19 - Dexter Wills */}
             <p className="flex items-center gap-2 flex-wrap">
-              <span className="font-bold text-lg">{renderText("30.")}</span>
-              {renderText("Looking for Richard")}
+              <span className="font-bold text-lg">{renderText("19.")}</span>
+              <span className="text-lg">{renderText("Library")}</span>
+
               <div className="relative w-40">
                 <select
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  value={userAnswers[19] || ""}
+                  onChange={(e) => handleInputChange(19, e.target.value)}
                   className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  <option value="30">{renderText("30")}</option>
+                  <option value="19">{renderText("19")}</option>
                   <option value="A">{renderText("A")}</option>
                   <option value="B">{renderText("B")}</option>
                   <option value="C">{renderText("C")}</option>
                   <option value="D">{renderText("D")}</option>
                   <option value="E">{renderText("E")}</option>
-                  <option value="F">{renderText("F")}</option>
-                  <option value="G">{renderText("G")}</option>
-                  <option value="H">{renderText("H")}</option>
-                </select>{" "}
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
+
+            {/* 20 - Mike Smith */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("20.")}</span>
+              <span className="text-lg">{renderText("nature reserve")}</span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[20] || ""}
+                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="20">{renderText("20")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                   <FaChevronDown />
                 </span>
@@ -989,11 +835,11 @@ const Listening4Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (11-20)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -1060,9 +906,10 @@ const Listening4Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening4Pagination2017></Listening4Pagination2017>
+      {/* <Listening2Pagination2017></Listening2Pagination2017> */}
+      <Listening3Pagination2016></Listening3Pagination2016>
     </div>
   );
 };
 
-export default Listening4Part32017;
+export default Listening2Part22017;

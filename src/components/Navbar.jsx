@@ -156,7 +156,7 @@ const Navbar = () => {
     "/2017/test 1/listening": 7 * 60 + 30,
     "/2017/test 2/listening": 7 * 60,
     "/2017/test 3/listening": 7 * 60 + 30,
-    "/2017/test 4/listening": 79 * 60 + 30,
+    "/2017/test 4/listening": 7 * 60 + 30,
     // listening part time
     "/listening1Part22017": 7 * 60,
     "/listening1Part32017": 7 * 60,
@@ -195,6 +195,96 @@ const Navbar = () => {
     "/Writing2Part22017": 40 * 60,
     "/Writing3Part22017": 40 * 60,
     "/Writing4Part22017": 40 * 60,
+
+    // 2016  listening
+
+    "/2016/test 1/listening": 8 * 60 + 30,
+    "/2016/test 2/listening": 8 * 60,
+    "/2016/test 3/listening": 8 * 60 + 30,
+    "/2016/test 4/listening": 7 * 60 + 30,
+    // listening part time
+    "/listening1Part22016": 7 * 60,
+    "/listening1Part32016": 8 * 60,
+    "/listening1Part42016": 9 * 60 + 30,
+    "/listening2Part22016": 8 * 60,
+    "/listening2Part32016": 7 * 60 + 30,
+    "/listening2Part42016": 9 * 60 + 30,
+    "/listening3Part22016": 7 * 60,
+    "/listening3Part32016": 8 * 60,
+    "/listening3Part42016": 7 * 60,
+    "/listening4Part22016": 8 * 60 + 30,
+    "/listening4Part32016": 8 * 60 + 30,
+    "/listening4Part42016": 9 * 60 + 30,
+    // 2016  reading
+    "/2016/Test 1/reading": 20 * 60,
+    "/2016/Test 2/reading": 20 * 60,
+    "/2016/Test 3/reading": 20 * 60,
+    "/2016/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22016": 20 * 60,
+    "/Reading1Part32016": 20 * 60,
+    "/Reading2Part22016": 20 * 60,
+    "/Reading2Part32016": 20 * 60,
+    "/Reading3Part22016": 20 * 60,
+    "/Reading3Part32016": 20 * 60,
+    "/Reading4Part22016": 20 * 60,
+    "/Reading4Part32016": 20 * 60,
+    // 2016 writing
+    "/2016/Test 1/writing": 20 * 60,
+    "/2016/Test 2/writing": 20 * 60,
+    "/2016/Test 3/writing": 20 * 60,
+    "/2016/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22016": 40 * 60,
+    "/Writing2Part22016": 40 * 60,
+    "/Writing3Part22016": 40 * 60,
+    "/Writing4Part22016": 40 * 60,
+
+    // 2015  listening
+
+    "/2015/test 1/listening": 7 * 60 + 30,
+    "/2015/test 2/listening": 8 * 60,
+    "/2015/test 3/listening": 7 * 60 + 30,
+    "/2015/test 4/listening": 9 * 60 + 30,
+    // listening part time
+    "/listening1Part22015": 7 * 60,
+    "/listening1Part32015": 7 * 60,
+    "/listening1Part42015": 9 * 60 + 30,
+    "/listening2Part22015": 8 * 60,
+    "/listening2Part32015": 7 * 60 + 30,
+    "/listening2Part42015": 9 * 60 + 30,
+    "/listening3Part22015": 7 * 60,
+    "/listening3Part32015": 8 * 60,
+    "/listening3Part42015": 7 * 60,
+    "/listening4Part22015": 7 * 60 + 30,
+    "/listening4Part32015": 8 * 60 + 30,
+    "/listening4Part42015": 8 * 60 + 30,
+    // 2017  reading
+    "/2015/Test 1/reading": 20 * 60,
+    "/2015/Test 2/reading": 20 * 60,
+    "/2015/Test 3/reading": 20 * 60,
+    "/2015/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22015": 20 * 60,
+    "/Reading1Part32015": 20 * 60,
+    "/Reading2Part22015": 20 * 60,
+    "/Reading2Part32015": 20 * 60,
+    "/Reading3Part22015": 20 * 60,
+    "/Reading3Part32015": 20 * 60,
+    "/Reading4Part22015": 20 * 60,
+    "/Reading4Part32015": 20 * 60,
+    // 2018 writing
+    "/2015/Test 1/writing": 20 * 60,
+    "/2015/Test 2/writing": 20 * 60,
+    "/2015/Test 3/writing": 20 * 60,
+    "/2015/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22015": 40 * 60,
+    "/Writing2Part22015": 40 * 60,
+    "/Writing3Part22015": 40 * 60,
+    "/Writing4Part22015": 40 * 60,
   };
 
   // Format seconds to mm:ss

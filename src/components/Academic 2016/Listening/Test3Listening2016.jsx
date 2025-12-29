@@ -1,13 +1,13 @@
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import Listening3Pagination2016 from "../Pagination2016/Listening3Pagination2016";
 
-const Listening1Part32017 = () => {
+const Test3Listening2016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,245 +28,288 @@ const Listening1Part32017 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
+        "Section 1. You will hear a woman telephoning a tourist office to ask about free activities.",
+        "First, you have some time to look at questions 1 to 6.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
+      text: ["Good morning, this is Burnham tourist office, Martin speaking."],
+    },
+
+    {
+      speaker: "SUE",
       text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
+        "Oh, hello. I saw a poster about free things to do in the area, and it said people should phone you for information.",
+        "I'm coming to Burnham with my husband and two children for a few days on June the 27th, or possibly the 28th, and I'd like some ideas for things to do on the 29th.",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "MARTIN",
+      text: ["Yes, of course."],
+    },
+
+    {
+      speaker: "ANNOUNCER",
       text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
+        "The date that the woman wants information about is 29 June. So the letter C has been circled.",
+        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully, and answer questions 1 to 6.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
+      text: [
+        "OK. Then let's start with a couple of events especially for children.",
+        "The art gallery is holding an event called Family Welcome that day, when there are activities and trails to use throughout the gallery.",
+      ],
+    },
+
+    {
+      speaker: "SUE",
+      text: ["That sounds interesting. What time does it start?"],
+    },
+
+    {
+      speaker: "MARTIN",
       text: [
         {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
+          text: "The gallery opens at 10, and the Family Welcome event runs from 10:30 until 2:00.",
+          number: 1,
+        },
+        "The gallery stays open until 5. And several times during the day, they're going to show a short film that the gallery has produced..",
+        {
+          text: " It demonstrates how ceramics are made, and there'll be equipment and materials for children to have a go themselves",
+          number: 2,
+        },
+        "Last time they ran the event, there was a film about painting, which went down very well with the children, and they're now working on one about sculpture.",
+      ],
+    },
+
+    {
+      speaker: "SUE",
+      text: [
+        "I like the sound of that. And what other events happen in Burnham?",
+      ],
+    },
+
+    {
+      speaker: "MARTIN",
+      text: ["Well, do you all enjoy listening to music?"],
+    },
+
+    {
+      speaker: "SUE",
+      text: ["Oh, yes."],
+    },
+
+    {
+      speaker: "MARTIN",
+      text: [
+        "Well, there are several free concerts taking place at different times, 1 or 2 in the morning. ",
+        {
+          text: "The majority at lunchtime and a couple in the evening, and they range from pop music to Latin American.",
+          number: 3,
         },
       ],
     },
 
     {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
+      speaker: "SUE",
+      text: ["The Latin American could be fun. What time is that?"],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
       text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
-
+        "It's being repeated several times in different places. ",
         {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
+          text: "They're performing in the Central Library at 1 o'clock, then at 4 it's in the City Museum, and in the evening at 7.30 there's a longer concert in the theater.",
+          number: 4,
         },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "SUE",
+      text: ["Right, I'll suggest that to the rest of the family."],
+    },
+
+    {
+      speaker: "MARTIN",
       text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
+        "Something else you might be interested in is the boat race along the river.",
       ],
     },
 
     {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
+      speaker: "SUE",
+      text: ["Oh, yes, do tell me about that."],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
       text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
         {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
+          text: "The race starts at Offord Marina, to the north of Burnham, and goes as far as Summer Pool.",
+          number: 5,
         },
-        "They won't look anything like the libraries we're used to.",
+        "The best place to watch it from is Charlesworth Bridge, though that does get rather crowded.",
+      ],
+    },
+
+    {
+      speaker: "SUE",
+      text: ["And who's taking part?"],
+    },
+
+    {
+      speaker: "MARTIN",
+      text: [
+        "Well, local boat clubs, but the standard is very high. .",
+        {
+          text: "One of them came first in the west of England regional championship in May this year",
+          number: 6,
+        },
+        "It was the first time a team from Burnham has won. It means that next year, they'll be representing the region in the national championship.",
       ],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
+        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "Now listen and answer questions 7 to 10.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "SUE",
       text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
+        "Now, I've heard something about Paxton Nature Reserve.",
         {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
+          text: " It's a good place for spotting unusual birds, isn't it?",
+          number: 7,
         },
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
       text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
+        "That's right throughout the year. There is a lake there, as well as a river. And they provide a very attractive habitat, so it's a good idea to bring binoculars if you have them. ",
+        {
+          text: "And just at the moment you can see various flowers that are pretty unusual.",
+          number: 8,
+        },
+        "The soil at Paxton isn't very common. They're looking good right now.",
       ],
     },
 
     {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
-        {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
-        },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
+      speaker: "SUE",
+      text: ["Right. My husband will be particularly interested in that."],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "MARTIN",
       text: [
-        "Right. ",
         {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
-        },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
-        {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
+          text: "And there's going to be a talk and slide show about mushrooms, and you'll be able to go out and pick some afterwards, and study the different varieties.",
+          number: 9,
         },
       ],
     },
 
     {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
+      speaker: "SUE",
+      text: ["Huh, and is it possible for children to swim in the river?"],
     },
 
     {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
+      speaker: "MARTIN",
       text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
         {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
+          text: "Yes, part of it has been fenced off to make it safe for children to swim in.",
+          number: 10,
         },
-        "I wonder why it's there. Do you know what his connection was with this area?",
+        "It's very shallow, and there's a life guard on duty whenever it's open. The lake is too deep, so swimming isn't allowed there.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "SUE",
       text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
+        "OK, we must remember to bring their swimming things, in case we go to Paxton. How long does it take to get there by car from Burnham?",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "MARTIN",
       text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
+        "Hmm. About 20 minutes, but parking is very limited, so it's usually much easier to go by bus, and it takes about the same time.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
+      speaker: "SUE",
+      text: [
+        "Right. Well, I'll discuss the options with the rest of the family. Thanks very much for all your help.",
+      ],
+    },
+
+    {
+      speaker: "MARTIN",
+      text: ["You're welcome."],
+    },
+
+    {
+      speaker: "SUE",
+      text: ["Goodbye."],
+    },
+
+    {
+      speaker: "MARTIN",
+      text: ["Bye."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
+        "That is the end of section 1.",
         "You now have half a minute to check your answers.",
       ],
     },
   ];
 
   // different option
-  const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
-  ];
+const questions = [
+  "The 'Family Welcome' event in the art gallery begins at",
+  "The film that is now shown in the 'Family Welcome' event is about",
+  "When do most of the free concerts take place?",
+  "Where will the 4 pm concert of Latin American music take place?",
+  "The boat race begins at",
+  "One of the boat race teams",
+];
 
-  const options = [
-    [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
-    ],
+const options = [
+  ["A. 10 am.", "B. 10.30 am.", "C. 2 pm."],
+  ["A. sculpture.", "B. painting.", "C. ceramics."],
+  ["A. in the morning", "B. at lunchtime", "C. in the evening"],
+  ["A. in a museum", "B. in a theatre", "C. in a library"],
+  ["A. Summer Pool.", "B. Charlesworth Bridge.", "C. Offord Marina."],
+  [
+    "A. won a regional competition earlier this year.",
+    "B. has represented the region in a national competition.",
+    "C. has won several regional competitions.",
+  ],
+];
 
-    [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
-    ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
-    ],
-  ];
 
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
@@ -278,7 +321,7 @@ const Listening1Part32017 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
+      const answerKey = qIndex + 1;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -452,18 +495,21 @@ const Listening1Part32017 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
+    // Section 1 – Free activities in Burnham area
+    1: "B. 10.30 am.",
+    2: "C. ceramics.",
+    3: "B. at lunchtime",
+    4: "B. in a theatre",
+    5: "C. Offord Marina.",
+    6: "A. won a regional competition earlier this year.",
+
+    // Section 1 – Paxton Nature Reserve
+    7: "birds",
+    8: "flowers",
+    9: "mushrooms",
+    10: "river",
   };
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -518,7 +564,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +595,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Free activities in Burnham area")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -627,19 +673,17 @@ const Listening1Part32017 = () => {
 
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
-            <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
-            </h2>
+            <h2 className="text-lg font-bold">{renderText("Questions 1-6")}</h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
+              {renderText("  Free activities in the Burnham area")}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
+              const answerKey = qIndex + 1;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -683,7 +727,7 @@ const Listening1Part32017 = () => {
 
           {/* 2st section */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
+            {renderText("Questions 7-10")}
           </h2>
           <br />
           <h3 className="text-lg mb-5">
@@ -696,185 +740,118 @@ const Listening1Part32017 = () => {
           {/* box text */}
           <div className="overflow-x-auto border p-5 bg-white rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
+              {renderText("Paxton Nature Reserve: Possible Questions")}
             </h1>
 
             <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
+              {/* 7 */}
               <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
+                <span>
+                  {renderText("Paxton is a good place for seeing rare")}
+                </span>
 
                 <button
-                  onClick={() => toggleButton(24)}
+                  onClick={() => toggleButton(7)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
+                    activeButtons[7]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  24
+                  7
                 </button>
 
                 <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
+                  value={userAnswers[7] || ""}
+                  onChange={(e) => handleInputChange(7, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of its own")}</span>
+                <span>{renderText("all year round.")}</span>
               </li>
 
-              {/* 25 */}
+              {/* 8 */}
               <li className="text-lg">
                 <span>
                   {renderText(
-                    "how it's affected by laws regarding all aspects of"
+                    "This is a particularly good time for seeing certain unusual"
                   )}
                 </span>
 
                 <button
-                  onClick={() => toggleButton(25)}
+                  onClick={() => toggleButton(8)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
+                    activeButtons[8]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  25
+                  8
                 </button>
 
                 <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-
-              {/* 26 */}
-              <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
-
-                <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  26
-                </button>
-
-                <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
+                  value={userAnswers[8] || ""}
+                  onChange={(e) => handleInputChange(8, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
 
-                <span>{renderText("of customers into account")}</span>
+                <span>{renderText(".")}</span>
               </li>
 
-              {/* 27 */}
-              <li className="text-lg">
-                <span>{renderText("what")}</span>
-
-                <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  27
-                </button>
-
-                <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is required in case of accidents")}</span>
-              </li>
-
-              {/* 28 */}
-              <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
-
-                <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  28
-                </button>
-
-                <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is located in the library")}</span>
-              </li>
-
-              {/* 29 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  29
-                </button>
-
-                <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of local organisations")}</span>
-              </li>
-
-              {/* 30 */}
+              {/* 9 */}
               <li className="text-lg">
                 <span>
-                  {renderText("how it's different from a library in a")}
+                  {renderText("Visitors will be able to learn about")}
                 </span>
 
                 <button
-                  onClick={() => toggleButton(30)}
+                  onClick={() => toggleButton(9)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
+                    activeButtons[9]
                       ? "bg-yellow-400 border-yellow-500"
                       : "bg-gray-200 border-gray-400"
                   }`}
                 >
-                  30
+                  9
                 </button>
 
                 <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
+                  value={userAnswers[9] || ""}
+                  onChange={(e) => handleInputChange(9, e.target.value)}
                   className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
                   type="text"
                 />
+
+                <span>{renderText("and then collect some.")}</span>
+              </li>
+
+              {/* 10 */}
+              <li className="text-lg">
+                <span>{renderText("Part of the")}</span>
+
+                <button
+                  onClick={() => toggleButton(10)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[10]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  10
+                </button>
+
+                <input
+                  value={userAnswers[10] || ""}
+                  onChange={(e) => handleInputChange(10, e.target.value)}
+                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
+                  type="text"
+                />
+
+                <span>
+                  {renderText("has been made suitable for swimming.")}
+                </span>
               </li>
             </ul>
           </div>
@@ -905,11 +882,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (1-10)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +953,10 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      {/* <Listening1Pagination2017></Listening1Pagination2017> */}
+      <Listening3Pagination2016></Listening3Pagination2016>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Test3Listening2016;

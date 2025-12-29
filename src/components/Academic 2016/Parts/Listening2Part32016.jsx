@@ -1,13 +1,13 @@
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import Listening2Pagination2016 from "../Pagination2016/Listening2Pagination2016";
 
-const Listening1Part32017 = () => {
+const Listening2Part22016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,208 +28,248 @@ const Listening1Part32017 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
+        "Section 3. You will hear two biology students called Helen and Colin talking about the report they're writing on their recent field trip to a seaside area called Rocky Bay.",
+        "First, you have some time to look at questions 21 to 26.",
+        "Now listen carefully, and answer questions 21 to 26.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "HELEN",
       text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
+        "I've brought my notes on our biology field trip to Rocky Bay, Colin.",
+        "So we can work on our report on the research we did together.",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "COLIN",
       text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
+        "OK, I've got mine too.",
+        "Let's look at the aims of the trip first.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "HELEN",
+      text: ["Right, what did you have?"],
+    },
+
+    {
+      speaker: "COLIN",
       text: [
         {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
+          text: "I just put something about getting experience of the different sorts of procedures used on a field trip, but we need something about what causes different organisms to choose particular habitats.",
           number: 21,
         },
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "HELEN",
       text: [
-        "We could include something about changes in the source of funding too.",
+        "I agree.",
+        "And something about finding out how to protect organisms in danger of dying out?",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "COLIN",
+      text: ["In our aims? But we weren't really looking at that."],
+    },
+
+    {
+      speaker: "HELEN",
       text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
+        "OK, now there's the list of equipment we all had to bring on the field trip.",
+        "What did they tell us to bring a ruler for?",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "COLIN",
       text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
+        "It was something about measuring the slope of the shore.",
+        "But of course we didn't need it, because we were measuring wind direction, and we'd brought the compass for that.",
+      ],
+    },
 
+    {
+      speaker: "HELEN",
+      text: [
         {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
+          text: "But not the piece of string to hold up in the air.",
           number: 22,
         },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
+        "Didn't Mr Blake make a fuss about us leaving that behind?",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "COLIN",
       text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
+        "Yeah. He does go on.",
+        "Anyway, it was easy to get one from another of the students.",
       ],
     },
 
     {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
+      speaker: "HELEN",
       text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
+        "Now, the next section's the procedure.",
+        "I sent you the draft of that.",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "COLIN",
       text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
         {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
+          text: "Yeah. It was clear, but I don't think we need all these details of what time we left and what time we got back, and how we divided up the different research tasks.",
           number: 23,
         },
-        "They won't look anything like the libraries we're used to.",
       ],
     },
 
     {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
-      ],
+      speaker: "HELEN",
+      text: ["OK. I'll look at that again."],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "COLIN",
       text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
+        "Then we have to describe our method of investigation in detail, so let's begin with how we measured wave speed.",
         {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
+          text: "I was surprised how straightforward that was.",
           number: 24,
         },
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "HELEN",
       text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
+        "I'd expected us to have some sort of high-tech device, not just stand there and count the number of waves per minute.",
+        "Not very precise, but I suppose it was good enough.",
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "HELEN",
       text: [
-        "Ah. I've often wondered.",
+        "But the way we measured the amount of salt in the water from the rock pools was interesting.",
+        "I wanted to check the chemicals we used in the lab.",
+        "Was it potassium chromate and silver nitrate?",
+      ],
+    },
+
+    {
+      speaker: "COLIN",
+      text: ["That's right."],
+    },
+
+    {
+      speaker: "HELEN",
+      text: [
         {
-          text: " Then there are things like how the library is affected by employment laws.",
+          text: "I had to draw the map of the seashore while the tide was low, but I started it from the beach.",
           number: 25,
         },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
+        "Then I realized I should have gone higher to get better visibility.",
+        "So I had to start again, but at least I had the squared paper.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "COLIN",
       text: [
-        "Right. ",
+        "Yeah, it looks good.",
+        "We could get a map of the region off the internet.",
+      ],
+    },
+
+    {
+      speaker: "HELEN",
+      text: [
+        "I tried, but I couldn't find anything.",
+        "But you took some photos, didn't you?",
+      ],
+    },
+
+    {
+      speaker: "COLIN",
+      text: ["Yeah, I'll email them to you."],
+    },
+
+    {
+      speaker: "HELEN",
+      text: [
         {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
+          text: "Great. I'll use them to make my amendments and scan the map into our report.",
           number: 26,
         },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
+      ],
+    },
+
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "Now listen and answer questions 27 to 30.",
+      ],
+    },
+
+    {
+      speaker: "HELEN",
+      text: [
+        "When we get to our findings, I thought we could divide them into different zones on the shore.",
+      ],
+    },
+
+    {
+      speaker: "COLIN",
+      text: ["The splash zone."],
+    },
+
+    {
+      speaker: "HELEN",
+      text: [
         {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
+          text: "The shells prevent organisms from drying out when they're exposed to the air.",
           number: 27,
         },
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "COLIN",
       text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
         {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
+          text: "They also need shelter so they don't get too hot.",
           number: 28,
         },
-        "I wonder why it's there. Do you know what his connection was with this area?",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "COLIN",
       text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
         {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
+          text: "I'm not sure we identified all the species correctly.",
           number: 29,
         },
       ],
     },
 
     {
-      speaker: "STEWART",
+      speaker: "HELEN",
       text: [
-        "Right.",
         {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
+          text: "We might have missed some organisms that were hiding under rocks.",
           number: 30,
         },
-        "They must be very different.",
       ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
     },
 
     {
@@ -243,28 +283,56 @@ const Listening1Part32017 = () => {
 
   // different option
   const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
+    "What do the students agree should be included in their aims?",
+    "What equipment did they forget to take on the Field Trip?",
+    "In Helen's procedure section, Colin suggests a change in",
+    "What do they say about the method they used to measure wave speed?",
+    "What mistake did Helen make when first drawing the map?",
+    "What do they decide to do next with their map?",
+    "What problem affects organisms in the splash zone related to drying out?",
+    "What problem affects organisms in the splash zone related to heat?",
+    "Which reason for possible error relates to identifying organisms incorrectly?",
+    "Which reason for possible error relates to missing some organisms during counting?",
   ];
 
   const options = [
     [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
+      "A. factors affecting where organisms live",
+      "B. the need to preserve endangered species",
+      "C. techniques for classifying different organisms",
     ],
-
+    ["A. string", "B. a compass", "C. a ruler"],
     [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
+      "A. the order in which information is given",
+      "B. the way the information is divided up",
+      "C. the amount of information provided",
     ],
-
     [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
+      "A. It provided accurate results",
+      "B. It was simple to carry out",
+      "C. It required special equipment",
+    ],
+    [
+      "A. She chose the wrong scale",
+      "B. She stood in the wrong place",
+      "C. She did it at the wrong time",
+    ],
+    [
+      "A. scan it onto a computer",
+      "B. check it using photographs",
+      "C. add information from the internet",
+    ],
+    ["A. lack of water", "B. lack of food", "C. strong winds"], // Answer: A
+    ["A. high temperatures", "B. strong winds", "C. large waves"], // Answer: A
+    [
+      "A. inaccurate records of habitat",
+      "B. incorrect identification of organisms",
+      "C. small sample size",
+    ], // Answer: B
+    [
+      "A. influence by observer",
+      "B. missing some organisms when counting",
+      "C. incorrect habitat mapping",
     ],
   ];
 
@@ -391,12 +459,12 @@ const Listening1Part32017 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "STEWART") {
+      if (speaker === "COLIN") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "TRUDIE") {
+      if (speaker === "HELEN") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -450,20 +518,18 @@ const Listening1Part32017 = () => {
   }, []);
 
   //  Marks show
-
-  const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
-  };
+const correctAnswers = {
+  21: "A. factors affecting where organisms live", //
+  22: "A. string", //
+  23: "C. the amount of information provided", //
+  24: "B. simple to carry out", //
+  25: "B. stood in the wrong place", //
+  26: "B. check it using photographs", //
+  27: "A. lack of water", //
+  28: "A. high temperatures", //
+  29: "B. incorrect identification of organisms", //
+  30: "B. missing some organisms when counting", //
+};
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -549,7 +615,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Rocky Bay field trip")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -628,14 +694,14 @@ const Listening1Part32017 = () => {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
+              {renderText("Questions 21-30")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
+              {renderText("  Rocky Bay field trip")}
             </h1>
 
             {questions.map((q, qIndex) => {
@@ -679,204 +745,6 @@ const Listening1Part32017 = () => {
                 </div>
               );
             })}
-          </div>
-
-          {/* 2st section */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
-          </h2>
-          <br />
-          <h3 className="text-lg mb-5">
-            {renderText("Complete the notes below.")} <br /> <br />
-            {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
-            {renderText(" for each answer.")}
-          </h3>
-
-          {/* box text */}
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
-            </h1>
-
-            <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  24
-                </button>
-
-                <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of its own")}</span>
-              </li>
-
-              {/* 25 */}
-              <li className="text-lg">
-                <span>
-                  {renderText(
-                    "how it's affected by laws regarding all aspects of"
-                  )}
-                </span>
-
-                <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  25
-                </button>
-
-                <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-
-              {/* 26 */}
-              <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
-
-                <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  26
-                </button>
-
-                <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of customers into account")}</span>
-              </li>
-
-              {/* 27 */}
-              <li className="text-lg">
-                <span>{renderText("what")}</span>
-
-                <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  27
-                </button>
-
-                <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is required in case of accidents")}</span>
-              </li>
-
-              {/* 28 */}
-              <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
-
-                <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  28
-                </button>
-
-                <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is located in the library")}</span>
-              </li>
-
-              {/* 29 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  29
-                </button>
-
-                <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of local organisations")}</span>
-              </li>
-
-              {/* 30 */}
-              <li className="text-lg">
-                <span>
-                  {renderText("how it's different from a library in a")}
-                </span>
-
-                <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  30
-                </button>
-
-                <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-            </ul>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -976,9 +844,10 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      {/* <Listening2Pagination2017></Listening2Pagination2017> */}
+      <Listening2Pagination2016></Listening2Pagination2016>
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Listening2Part22016;

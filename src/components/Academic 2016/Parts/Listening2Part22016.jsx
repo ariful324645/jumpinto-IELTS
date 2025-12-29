@@ -1,13 +1,13 @@
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2017 from "../Pagination2017/Listening1Pagination2017";
+import Listening2Pagination2016 from "../Pagination2016/Listening2Pagination2016";
 
-const Listening1Part32017 = () => {
+const Listening2Part22016 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,214 +28,116 @@ const Listening1Part32017 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3. You will hear two students called Trudie and Stewart, who are both studying to be librarians, discussing a paper that they are going to write together.",
-        "First, you have some time to look at questions 21 to 23.",
-        "Now listen carefully and answer questions 21 to 23.",
+        "Section 2. You will hear a woman who works in a theatre talking to two new staff members on their first day of work.",
+        "First, you have some time to look at questions 11 to 16.",
+        "Now listen carefully and answer questions 11 to 16.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "JODY",
       text: [
-        "OK, Stewart, we need to start planning our paper on public libraries. Have you thought of an angle yet?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, there's so much we could look into, how libraries have changed over the centuries, for instance, or how different countries organize them, what do you think, Trudie?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
+        "Hi, great to see you.",
+        "I'm Jody, and I'll be looking after both of you for the first month you're working here at the Amersham Theatre.",
+        "I'll tell you something about the theatre now, then take you to meet two of the other staff.",
+        "It's an old building, and it's been modernized several times.",
+        "In fact, as you can see, we're carrying out a major refurbishment at the moment.",
+        "The interior has just been repainted, and we're about to start on the exterior of the building.",
+        "That'll be a big job.",
+        "The work's running over budget, so we've had to postpone installing an elevator.",
+        "I hope you're happy running up and down stairs.",
+        "When the theatre was built, people were generally slimmer and shorter than now.",
+        "And the seats were very close together.",
         {
-          text: "Maybe we should concentrate on this country and try to relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.",
-          number: 21,
+          text: "We've replaced them with larger seats with more legroom.",
+          number: 12,
         },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "We could include something about changes in the source of funding too.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.",
-        "Right, well, shall we just brainstorm a few ideas to get started?",
-        "OK, we obviously need to look at the impact of new technology, particularly the internet. Now that lots of books have been digitalized, people can access them from their own computers at home.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "And if everyone did that, libraries would be obsolete.",
-        "Yes.",
+        "This means fewer seats in total.",
+        "But we've taken the opportunity to install seats that can easily be moved to create different acting spaces.",
 
         {
-          text: "But the digitalized books that are available online for free are mostly out of copyright, aren't they?",
-          number: 22,
+          text: "We've also turned a few storerooms over to other purposes like using them for meetings.",
+          number: 11,
         },
-        "And copyright in this country lasts for 70 years after the author dies. So you won't find the latest best-seller or up-to-date information.",
-      ],
-    },
+        "We try hard to involve members of the public in the theatre.",
 
-    {
-      speaker: "TRUDIE",
-      text: [
-        "That's an important point. Anyway, I find it hard to concentrate when I'm reading a long text on a screen. I'd much rather read a physical book, and it takes longer to read on a screen.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: ["Oh, I prefer it. I suppose it's just a personal preference."],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Hmm, I expect libraries will go on evolving in the next few years. Some have already become centers where community activities take place. Like local clubs meeting there, I think that'll become even more common.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "I'd like to think so, and that they'll still be serving their traditional function, but I'm not so sure. There are financial implications after all.",
         {
-          text: " What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.",
-          number: 23,
+          text: "One way is by organizing backstage tours, so people can be shown round the building.",
+          number: 13,
         },
-        "They won't look anything like the libraries we're used to.",
+        "And learn how a theatre operates.",
+        "These are proving very popular.",
+        "What we're finding is that people want to have lunch or a cup of coffee while they're here.",
+        "So we're looking into the possibility of opening a café in due course.",
+
+        {
+          text: "We have a bookshop, which specializes in books about drama, and that attracts plenty of customers.",
+          number: 14,
+        },
+        "Then there are two large rooms that will be decorated next month and available for hire.",
+        "They'll be used for conferences and private functions such as parties.",
+        "We're also considering hiring out costumes to amateur drama clubs.",
+        "Now I want to tell you about our workshops.",
+        "We recently started a program of workshops that anyone can join.",
+        "Eventually, we intend to run courses in acting.",
+        "But we're waiting until we've got the right people in place as trainers.",
+
+        {
+          text: "There's a big demand to learn about the technical side of productions.Our lighting workshop has already started with great success.",
+          number: 16,
+        },
+        "We're going to start one on sound next month.",
+        "A number of people have inquired about workshops on makeup.",
+        "That's something we're considering for the future.",
+        {
+          text: "A surprise success is the workshop on making puppets.",
+          number: 15,
+        },
+        "We happen to have someone working here who does it as a hobby.",
+        "She offered to run a workshop, and it was so popular we're now running them every month.",
       ],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.",
-        "Now listen and answer questions 24 to 30.",
+        "Before you hear the rest of the talk, you have some time to look at questions 17 to 20.",
+        "Now listen and answer questions 17 to 20.",
       ],
     },
 
     {
-      speaker: "TRUDIE",
+      speaker: "JODY",
       text: [
-        "I've just had an idea. Why don't we make an in-depth study of our local public library as background to our paper?",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that'd be interesting, and raise all sorts of issues. Let's make a list of possible things we could ask about, then work out some sort of structure. .",
+        "Now, a word about the layout of the building.",
+        "The auditorium, stage and dressing rooms are all below ground level.",
+        "Here on the ground floor, we have most of the rooms the public doesn't see.",
+        "The majority are internal, so they have windows in the roof.",
+        "Standing here in the foyer, you're probably wondering why the box office isn't here.",
         {
-          text: "For instance, um, we could interview some of the staff, and find out whether the library has its own budget, or if that's controlled by the local council",
-          number: 24,
+          text: "Although it's part of this building, it's next door with a separate entrance.",
+          number: 17,
         },
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "And what their policies are. I know they don't allow food, but I'd love to find out what types of noise they ban. There always seems to be a lot of talking, but never music. Hmm, I don't know if that's a policy or it just happens.",
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Ah. I've often wondered.",
         {
-          text: " Then there are things like how the library is affected by employment laws.",
-          number: 25,
+          text: "For the theatre manager's office, go through the double doors and turn right.",
+          number: 18,
         },
-        "I suppose there are rules about working hours, facilities for staff and so on.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "Right. ",
         {
-          text: "Then there are other issues relating to the design of the building and how customers use it, like what measures does the library take to ensure their safety?",
-          number: 26,
+          text: "The lighting box is at the back of the building.",
+          number: 19,
         },
-        "They'd need floor coverings that aren't slippery, and emergency exits for instance. ",
         {
-          text: "Oh, and another thing, there's the question of the kind of insurance the library needs to have, in case anyone gets injured.",
-          number: 27,
+          text: "The artistic director's office is the first room on the right.",
+          number: 20,
         },
+        "And finally, the relaxation room, which I'll take you to next.",
       ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Yes, that's something else to find out. You know something I've often wondered.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["What's that?"],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Well, you know they've got an archive of local newspapers going back years. ",
-        {
-          text: "Well, next to it, they've got the diary of a well-known politician from the late 19th century.",
-          number: 28,
-        },
-        "I wonder why it's there. Do you know what his connection was with this area?",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: [
-        "No idea. Let's add it to our list of things to find out. Oh, I've just thought - you know people might ask in the library about local organizations, like sports clubs? ",
-        {
-          text: "Hmm. Well, I wonder if they keep a database, or whether they just look online.",
-          number: 29,
-        },
-      ],
-    },
-
-    {
-      speaker: "STEWART",
-      text: [
-        "Right.",
-        {
-          text: " I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.",
-          number: 30,
-        },
-        "They must be very different.",
-      ],
-    },
-
-    {
-      speaker: "TRUDIE",
-      text: ["Hmm, then something else I'd like to know is..."],
     },
 
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
+        "That is the end of Section 2.",
         "You now have half a minute to check your answers.",
       ],
     },
@@ -243,29 +145,29 @@ const Listening1Part32017 = () => {
 
   // different option
   const questions = [
-    "What will be the main topic of Trudie and Stewart's paper?",
-    "They agree that one disadvantage of free digitalised books is that",
-    "Stewart expects that in the future libraries will",
+    "What change has been made to some rooms during the refurbishment?",
+    "What change has been made to the seating in the theatre?",
+    "Which facility does the theatre currently offer to the public?",
+    "Which other facility is available at the theatre?",
+    "Which workshop is currently offered at the theatre?",
+    "Which other workshop is already running?",
   ];
 
   const options = [
     [
-      "A. how public library services are organised in different countries",
-      "B. how changes in society are reflected in public libraries",
-      "C. how the funding of public libraries has changed",
+      "A. An elevator has been installed",
+      "B. Some rooms now have a different use",
+      "C. The exterior of the building has been repaired",
     ],
-
     [
-      "A. they may take a long time to read.",
-      "B. they can be difficult to read.",
-      "C. they are generally old.",
+      "A. Extra seats have been added",
+      "B. The seats are closer together",
+      "C. A different type of seating has been installed",
     ],
-
-    [
-      "A. maintain their traditional function.",
-      "B. become centres for local communities.",
-      "C. no longer contain any books.",
-    ],
+    ["A. A café", "B. Backstage tours", "C. Costume hire"],
+    ["A. A restaurant", "B. Rooms for private parties", "C. A bookshop"],
+    ["A. Acting", "B. Making puppets", "C. Make-up"],
+    ["A. Sound", "B. Lighting", "C. Acting"],
   ];
 
   const [selectedOptions, setSelectedOptions] = useState(
@@ -278,7 +180,7 @@ const Listening1Part32017 = () => {
 
     // Update userAnswers for score calculation
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 21;
+      const answerKey = qIndex + 11;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -391,12 +293,12 @@ const Listening1Part32017 = () => {
       if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
       }
-      if (speaker === "STEWART") {
+      if (speaker === "RUSS") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
       }
 
       // Erica: female
-      if (speaker === "TRUDIE") {
+      if (speaker === "JODY") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -450,20 +352,24 @@ const Listening1Part32017 = () => {
   }, []);
 
   //  Marks show
+const correctAnswers = {
+  // Section 2 – Amersham Theatre
 
-  const correctAnswers = {
-    // Section 3 – Public Libraries
-    21: "B. how changes in society are reflected in public libraries",
-    22: "C. they are generally old.",
-    23: "A. maintain their traditional function.",
-    24: "budget",
-    25: "employment",
-    26: "safety",
-    27: "insurance",
-    28: "diary",
-    29: "database",
-    30: "museum",
-  };
+  11: "B. Some rooms now have a different use",
+  12: "C. A different type of seating has been installed",
+  13: "B. Backstage tours",
+  14: "C. A bookshop",
+  15: "B. Making puppets",
+  16: "B. Lighting",
+
+  // Questions 17–20 (Map / Layout)
+
+  17: "A", // Box office
+  18: "D", // Theatre manager’s office
+  19: "F", // Lighting box
+  20: "B", // Artistic director’s office
+};
+
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -518,7 +424,7 @@ const Listening1Part32017 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +455,7 @@ const Listening1Part32017 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Paper on Public libraries")}
+                {renderText("Theatre trip to Munich")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -628,18 +534,18 @@ const Listening1Part32017 = () => {
           {/* question dynamic */}
           <div className="space-y-6 leading-relaxed p-4">
             <h2 className="text-lg font-bold">
-              {renderText("Questions 21-23")}
+              {renderText("Questions 11-15")}
             </h2>
             <p className="text-xl">
               {renderText("  Choose the correct letter,")}
               <span className="font-bold"> {renderText("  A, B or C")}</span>.
             </p>
             <h1 className="text-2xl font-bold text-center">
-              {renderText("  Paper on Public Libraries")}
+              {renderText("  Theatre trip to Munich")}
             </h1>
 
             {questions.map((q, qIndex) => {
-              const answerKey = qIndex + 21;
+              const answerKey = qIndex + 11;
 
               return (
                 <div key={qIndex} className="flex flex-col gap-2">
@@ -682,201 +588,145 @@ const Listening1Part32017 = () => {
           </div>
 
           {/* 2st section */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 24–30")}
-          </h2>
-          <br />
-          <h3 className="text-lg mb-5">
-            {renderText("Complete the notes below.")} <br /> <br />
-            {renderText("Write ")}
-            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
-            {renderText(" for each answer.")}
-          </h3>
 
-          {/* box text */}
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              {renderText("Study of Local Library: Possible Questions")}
-            </h1>
+          <div>
+            {/* normal title*/}
+            <div className="space-y-4 leading-relaxed">
+              <h2 className="text-lg font-bold mb-3">
+                {renderText("Questions 17-20")}
+              </h2>
 
-            <ul className="list-disc list-inside space-y-3">
-              {/* 24 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(24)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[24]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  24
-                </button>
-
-                <input
-                  value={userAnswers[24] || ""}
-                  onChange={(e) => handleInputChange(24, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
+              <h3 className="text-lg mb-5">
+                {renderText("Level the map below")} <br /> <br />
+                {renderText("Choose the correct letter,  ")}{" "}
+                <span className="font-bold mr-2">{renderText("A-G")}</span>{" "}
+                {renderText("next to Questions 17-20.")}
+              </h3>
+              <div className="flex items-center justify-center">
+                <img
+                  className="h-full w-96"
+                  src="https://i.ibb.co.com/Xf0brZ1y/w1.jpg"
+                  alt="Eikhane image bosabo"
                 />
+              </div>
 
-                <span>{renderText("of its own")}</span>
-              </li>
+              <br />
+            </div>
+          </div>
 
-              {/* 25 */}
-              <li className="text-lg">
-                <span>
-                  {renderText(
-                    "how it's affected by laws regarding all aspects of"
-                  )}
+          {/* optional question */}
+          {/* Stages in the experiment */}
+          <div className="space-y-2">
+            {/* ---------- Step 1 ---------- */}
+            <h1 className="text-lg font-bold">{renderText("Days")}</h1>
+
+            {/* 17 - Joy Parkins */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("17.")}</span>
+              <span className="text-lg">{renderText("box office")}</span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[17] || ""}
+                  onChange={(e) => handleInputChange(17, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="17">{renderText("17")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>
+                  <option value="F">{renderText("G")}</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
+              </div>
+            </p>
 
-                <button
-                  onClick={() => toggleButton(25)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[25]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
+            {/* 17 - Joy Parkins */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("18.")}</span>
+              <span className="text-lg">
+                {renderText("theatre manager's office")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[18] || ""}
+                  onChange={(e) => handleInputChange(18, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  25
-                </button>
-
-                <input
-                  value={userAnswers[25] || ""}
-                  onChange={(e) => handleInputChange(25, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-
-              {/* 26 */}
-              <li className="text-lg">
-                <span>{renderText("how the design needs to take the")}</span>
-
-                <button
-                  onClick={() => toggleButton(26)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[26]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  26
-                </button>
-
-                <input
-                  value={userAnswers[26] || ""}
-                  onChange={(e) => handleInputChange(26, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of customers into account")}</span>
-              </li>
-
-              {/* 27 */}
-              <li className="text-lg">
-                <span>{renderText("what")}</span>
-
-                <button
-                  onClick={() => toggleButton(27)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[27]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  27
-                </button>
-
-                <input
-                  value={userAnswers[27] || ""}
-                  onChange={(e) => handleInputChange(27, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is required in case of accidents")}</span>
-              </li>
-
-              {/* 28 */}
-              <li className="text-lg">
-                <span>{renderText("why a famous person's")}</span>
-
-                <button
-                  onClick={() => toggleButton(28)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[28]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  28
-                </button>
-
-                <input
-                  value={userAnswers[28] || ""}
-                  onChange={(e) => handleInputChange(28, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("is located in the library")}</span>
-              </li>
-
-              {/* 29 */}
-              <li className="text-lg">
-                <span>{renderText("whether it has a")}</span>
-
-                <button
-                  onClick={() => toggleButton(29)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[29]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  29
-                </button>
-
-                <input
-                  value={userAnswers[29] || ""}
-                  onChange={(e) => handleInputChange(29, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-
-                <span>{renderText("of local organisations")}</span>
-              </li>
-
-              {/* 30 */}
-              <li className="text-lg">
-                <span>
-                  {renderText("how it's different from a library in a")}
+                  <option value="18">{renderText("18")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
                 </span>
+              </div>
+            </p>
 
-                <button
-                  onClick={() => toggleButton(30)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[30]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
+            {/* 18 - David Field */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("19.")}</span>
+              <span className="text-lg">{renderText("Lighting box")}</span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[19] || ""}
+                  onChange={(e) => handleInputChange(19, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
                 >
-                  30
-                </button>
+                  <option value="19">{renderText("19")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
 
-                <input
-                  value={userAnswers[30] || ""}
-                  onChange={(e) => handleInputChange(30, e.target.value)}
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-            </ul>
+            {/* 19 - Dexter Wills */}
+            <p className="flex items-center gap-2 flex-wrap">
+              <span className="font-bold text-lg">{renderText("20.")}</span>
+              <span className="text-lg">
+                {renderText("artistic director's office")}
+              </span>
+
+              <div className="relative w-40">
+                <select
+                  value={userAnswers[20] || ""}
+                  onChange={(e) => handleInputChange(20, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-4 py-2 text-gray-700 pr-10 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="20">{renderText("20")}</option>
+                  <option value="A">{renderText("A")}</option>
+                  <option value="B">{renderText("B")}</option>
+                  <option value="C">{renderText("C")}</option>
+                  <option value="D">{renderText("D")}</option>
+                  <option value="E">{renderText("E")}</option>
+                  <option value="F">{renderText("F")}</option>{" "}
+                  <option value="F">{renderText("G")}</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+            </p>
           </div>
 
           {/* ---------- Marks display ---------- */}
@@ -905,11 +755,11 @@ const Listening1Part32017 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (21-30)
+                    All Answers (11-20)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -976,9 +826,10 @@ const Listening1Part32017 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2017></Listening1Pagination2017>
+      <Listening2Pagination2016></Listening2Pagination2016>
+      {/* <Listening2Pagination2017></Listening2Pagination2017> */}
     </div>
   );
 };
 
-export default Listening1Part32017;
+export default Listening2Part22016;
