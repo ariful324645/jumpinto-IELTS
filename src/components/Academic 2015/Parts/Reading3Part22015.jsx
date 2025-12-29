@@ -134,25 +134,26 @@ const Reading3Part22015 = () => {
   };
 
   const correctAnswers = {
-    // ================= Questions 27–31 (Summary completion) =================
-    27: "B", // mass production
-    28: "J", // readers
-    29: "L", // assistants
-    30: "E", // paints
-    31: "D", // public
+    // ================= Questions 14–18 (Paragraph location A–I) =================
+    14: "C", // a description of the substance responsible for the red colouration of leaves → Paragraph C (anthocyanins)
+    15: "B", // the reason why trees drop their leaves in autumn → Paragraph B (chlorophyll breakdown / leaf discard)
+    16: "H", // some evidence to confirm a theory about the purpose of the red leaves → Paragraph H (reddest leaves on sun-facing side)
+    17: "B", // an explanation of the function of chlorophyll → Paragraph B
+    18: "E", // a suggestion that the red colouration in leaves could serve as a warning signal → Paragraph E (signal to insects)
 
-    // ================= Questions 32–35 (Multiple choice A–D) =================
-    32: "C", // the negative effect a museum can have on visitors' opinions of themselves
-    33: "D", // they feel their personal reaction is of no significance
-    34: "A", // the variety of works on display and the way they are arranged
-    35: "D", // have a specific beginning or end
+    // ================= Questions 19–22 (Notes: ONE WORD ONLY) =================
+    19: "sun", // most vividly coloured red leaves on the side of the tree facing the sun
+    20: "upper", // the upper surfaces of leaves contain the most red pigment
+    21: "dry", // red leaves most abundant in dry and sunny weather
+    22: "north", // intensity increases as you go further north
 
-    // ================= Questions 36–40 (YES / NO / NOT GIVEN) =================
-    36: "NOT GIVEN", // Art history should focus on discovering the meaning of art using a range of media
-    37: "YES", // The approach of art historians conflicts with that of art museums
-    38: "YES", // People should be encouraged to give their opinions openly on works of art
-    39: "NOT GIVEN", // Reproductions of fine art should only be sold to the public if they are of high quality
-    40: "NOT GIVEN", // In the future, those with power are likely to encourage more people to enjoy art
+    // ================= Questions 23–25 (TRUE / FALSE / NOT GIVEN) =================
+    23: "TRUE", // red pigments help protect the leaf from freezing temperatures
+    24: "TRUE", // 'light screen' hypothesis seems to contradict what is known about chlorophyll
+    25: "NOT GIVEN", // leaves turning other colours → no info about likelihood of damage
+
+    // ================= Question 26 (Multiple choice A–D) =================
+    26: "B", // explanation offered for how leaves turn orange and yellow in autumn
   };
 
   useEffect(() => {
@@ -209,82 +210,206 @@ const Reading3Part22015 = () => {
           </div>
 
           <div className="mt-4">
-            <h1 className="text-2xl font-bold mb-4 text-center">
+            <h1 className="text-2xl font-bold mb-2 text-center">
               {renderText("Autumn leaves")}
             </h1>
-            <p className="text-lg mb-5">
+            <p className="text-center italic mb-6">
               {renderText(
-                "Canadian writer Jay Ingram investigates the mystery of why leaves turn red in the fall."
+                "Canadian writer Jay Ingram investigates the mystery of why leaves turn red in the fall"
               )}
             </p>
 
-            {/* Paragraphs A–I */}
-            <p className="font-bold mb-1">{renderText("A")}</p>
+            {/* A */}
             <p className="text-lg mb-5">
               {renderText(
-                "One of the most captivating natural events of the year in many areas throughout North America is the turning of the leaves in the fall. The colours are magnificent, but the question of exactly why some trees turn yellow or orange, and others red or purple, is something which has long puzzled scientists."
+                "One of the most captivating natural events of the year in many areas throughout North America is the turning of the leaves in the fall."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The colours are magnificent, but the question of exactly why some trees turn yellow or orange, and others red or purple, is something which has long puzzled scientists."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    14
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("B")}</p>
+            {/* B */}
             <p className="text-lg mb-5">
               {renderText(
-                "Summer leaves are green because they are full of chlorophyll, the molecule that captures sunlight and converts that energy into new building materials for the tree. As fall approaches in the northern hemisphere, the amount of solar energy available declines considerably. For many trees - evergreen conifers being an exception - the best strategy is to abandon photosynthesis until the spring. So rather than maintaining the now redundant leaves throughout the winter, the tree saves its precious resources and discards them. But before letting its leaves go, the tree dismantles their chlorophyll molecules and ships their valuable nitrogen back into the twigs. As chlorophyll is depleted, other colours that have been dominated by it throughout the summer begin to be revealed. This unmasking explains the autumn colours of yellow and orange, but not the brilliant reds and purples of trees such as the maple or sumac."
+                "Summer leaves are green because they are full of chlorophyll, the molecule that captures sunlight and converts that energy into new building materials for the tree."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "As fall approaches in the northern hemisphere, the amount of solar energy available declines considerably."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    15
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("C")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "The source of the red is widely known: it is created by anthocyanins, water-soluble plant pigments reflecting the red to blue range of the visible spectrum. They belong to a class of sugar-based chemical compounds also known as flavonoids. What's puzzling is that anthocyanins are actually newly minted, made in the leaves at the same time as the tree is preparing to drop them. But it is hard to make sense of the manufacture of anthocyanins - why should a tree bother making new chemicals in its leaves when it's already scrambling to withdraw and preserve the ones already there?"
+                "For many trees – evergreen conifers being an exception – the best strategy is to abandon photosynthesis until the spring."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "As chlorophyll is depleted, other colours that have been dominated by it throughout the summer begin to be revealed."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    26
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("D")}</p>
+            {/* C */}
             <p className="text-lg mb-5">
               {renderText(
-                "Some theories about anthocyanins have argued that they might act as a chemical defence against attacks by insects or fungi, or that they might attract fruit-eating birds or increase a leaf's tolerance to freezing. However, there are problems with each of these theories, including the fact that leaves are red for such a relatively short period that the expense of energy needed to manufacture the anthocyanins would outweigh any anti-fungal or anti-herbivore activity achieved."
+                "The source of the red is widely known: it is created by anthocyanins, water-soluble plant pigments reflecting the red to blue range of the visible spectrum."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "They belong to a class of sugar-based chemical compounds also known as flavonoids."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    14
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("E")}</p>
+            {/* D */}
             <p className="text-lg mb-5">
               {renderText(
-                "It has also been proposed that trees may produce vivid red colours to convince herbivorous insects that they are healthy and robust and would be easily able to mount chemical defences against infestation. If insects paid attention to such advertisements, they might be prompted to lay their eggs on a duller, and presumably less resistant host. The flaw in this theory lies in the lack of proof to support it. No one has as yet ascertained whether more robust trees sport the brightest leaves, or whether insects make choices according to colour intensity."
+                "Some theories about anthocyanins have argued that they might act as a chemical defence against attacks by insects or fungi."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "However there are problems with each of these theories."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    23
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("F")}</p>
+            {/* E */}
             <p className="text-lg mb-5">
               {renderText(
-                "Perhaps the most plausible suggestion as to why leaves would go to the trouble of making anthocyanins when they're busy packing up for the winter is the theory known as the 'light screen' hypothesis. It sounds paradoxical, because the idea behind this hypothesis is that the red pigment is made in autumn leaves to protect chlorophyll, the light-absorbing chemical, from too much light. Why does chlorophyll need protection when it is the natural world's supreme light absorber? Why protect chlorophyll at a time when the tree is breaking it down to salvage as much of it as possible?"
+                "It has also been proposed that trees may produce vivid red colours to convince herbivorous insects that they are healthy and robust."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "If insects paid attention to such advertisements, they might be prompted to lay their eggs on a duller host."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    18
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("G")}</p>
+            {/* F */}
             <p className="text-lg mb-5">
               {renderText(
-                "Chlorophyll, although exquisitely evolved to capture the energy of sunlight, can sometimes be overwhelmed by it, especially in situations of drought, low temperatures, or nutrient deficiency. Moreover, the problem of oversensitivity to light is even more acute in the fall, when the leaf is busy preparing for winter by dismantling its internal machinery. The energy absorbed by the chlorophyll molecules of the unstable autumn leaf is not immediately channelled into useful products and processes, as it would be in an intact summer leaf. The weakened fall leaf then becomes vulnerable to the highly destructive effects of the oxygen created by the excited chlorophyll molecules."
+                "Perhaps the most plausible suggestion is the theory known as the 'light screen' hypothesis."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The idea is that the red pigment is made in autumn leaves to protect chlorophyll from too much light."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    24
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("H")}</p>
+            {/* H */}
             <p className="text-lg mb-5">
               {renderText(
-                "Even if you had never suspected that this is what was going on when leaves turn red, there are clues out there. One is straightforward: on many trees, the leaves that are the reddest are those on the side of the tree which gets most sun. Not only that, but the red is brighter on the upper side of the leaf. It has also been recognised for decades that the best conditions for intense red colours are dry, sunny days and cool nights, conditions that nicely match those that make leaves susceptible to excess light. And finally, trees such as maples usually get much redder the more north you travel in the northern hemisphere. It's colder there, they're more stressed, their chlorophyll is more sensitive and it needs more sunblock."
+                "On many trees, the leaves that are the reddest are those on the side of the tree which gets most sun."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Not only that, but the red is brighter on the upper side of the leaf."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    16,19,20
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="font-bold mb-1">{renderText("I")}</p>
             <p className="text-lg mb-5">
               {renderText(
-                "What is still not fully understood, however, is why some trees resort to producing red pigments while others don't bother, and simply reveal their orange or yellow hues. Do these trees have other means at their disposal to prevent overexposure to light in autumn? Their story, though not as spectacular to the eye, will surely turn out to be as subtle and as complex."
+                "The best conditions for intense red colours are dry, sunny days and cool nights."
               )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Trees such as maples usually get much redder the more north you travel."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    21,22
+                  </span>
+                )}
+              </span>
             </p>
 
-            <p className="text-lg mb-5 font-medium">
+            {/* I */}
+            <p className="text-lg mb-5">
               {renderText(
-                "* photosynthesis: the production of new material from sunlight, water and carbon dioxide"
+                "What is still not fully understood, however, is why some trees resort to producing red pigments while others don't bother."
               )}
             </p>
           </div>
@@ -329,8 +454,8 @@ const Reading3Part22015 = () => {
               },
             ].map(({ q, text }) => (
               <div key={q} className="flex items-center gap-2 flex-wrap mt-4">
-                <span className="flex-1">{renderText(text)}</span>
-                <div className="relative w-24">
+                <span className="">{renderText(text)}</span>
+                <div className="relative w-20">
                   <select
                     value={userAnswers[q] || ""}
                     onChange={(e) => handleInputChange(q, e.target.value)}
@@ -488,6 +613,100 @@ const Reading3Part22015 = () => {
                 </label>
               ))}
             </div>
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (14–26)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

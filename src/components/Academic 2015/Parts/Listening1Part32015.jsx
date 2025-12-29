@@ -536,19 +536,18 @@ const Listening1Part32015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
+    21: "C",
+    22: "A",
+    23: "C",
+    24: "B",
+    25: "C",
 
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    // Questions 26–30
+    26: "presentation",
+    27: "model",
+    28: "images",
+    29: "grant",
+    30: "technical",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -575,7 +574,7 @@ const Listening1Part32015 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/listening1Part32015", newScore);
   };
 
   const toggleButton = (id) => {
@@ -587,12 +586,12 @@ const Listening1Part32015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/listening1Part32015");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/listening1Part32015");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -665,7 +664,7 @@ const Listening1Part32015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ---------- Questions 21–25 ---------- */}
           <h2 className="text-lg font-bold mb-3">
             {renderText("Questions 21–25")}
@@ -901,6 +900,99 @@ const Listening1Part32015 = () => {
               />
               {renderText("information in John's written report.")}
             </p>
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (21–30)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 21).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

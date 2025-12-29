@@ -326,7 +326,6 @@ import Test4Reading2015 from "../components/Academic 2015/Reading/Test4Reading20
 import Test3Reading2015 from "../components/Academic 2015/Reading/Test3Reading2015";
 import Test1Writing2015 from "../components/Academic 2015/Writing/Test1Writing2015";
 import Test2Writing2015 from "../components/Academic 2015/Writing/Test2Writing2015";
-<<<<<<< HEAD
 import Listening2Part22015 from "../components/Academic 2015/Parts/Listening2Part22015";
 import Listening2Part32015 from "../components/Academic 2015/Parts/Listening2Part32015";
 import Listening2Part42015 from "../components/Academic 2015/Parts/Listening2Part42015";
@@ -344,9 +343,7 @@ import Reading3Part22015 from "../components/Academic 2015/Parts/Reading3Part220
 import Reading3Part32015 from "../components/Academic 2015/Parts/Reading3Part32015";
 import Reading4Part22015 from "../components/Academic 2015/Parts/Reading4Part22015";
 import Reading4Part32015 from "../components/Academic 2015/Parts/Reading4Part32015";
-=======
 import Writing1Part22016 from "../components/Academic 2016/Parts/Writing1Part22016";
-
 import Writing2Part22016 from "../components/Academic 2016/Parts/Writing2Part22016";
 import Writing3Part22016 from "../components/Academic 2016/Parts/Writing3Part22016";
 import Writing4Part22016 from "../components/Academic 2016/Parts/Writing4Part22016";
@@ -365,7 +362,6 @@ import Reading3Part32016 from "../components/Academic 2016/Parts/Reading3Part320
 import Reading4Part22016 from "../components/Academic 2016/Parts/Reading4Part22016";
 import Reading4Part32016 from "../components/Academic 2016/Parts/Reading4Part32016";
 
->>>>>>> 988829686322e3ae5190aa741dc6599308622852
 export const router = createBrowserRouter([
   {
     path: "/",

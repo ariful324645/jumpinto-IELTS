@@ -5,8 +5,6 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
-import Listening2Pagination2015 from "../Pagination 2015/Listening2Pagination2015";
 import Listening4Pagination2015 from "../Pagination 2015/Listening4Pagination2015";
 
 const Listening4Part32015 = () => {
@@ -17,7 +15,8 @@ const Listening4Part32015 = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentLine, setCurrentLine] = useState(null);
   const [currentChunk, setCurrentChunk] = useState(null);
-
+  const [score, setScore] = useState(0);
+  const [userAnswers, setUserAnswers] = useState({});
   const [selectedText, setSelectedText] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
@@ -494,26 +493,21 @@ const Listening4Part32015 = () => {
 
   //  Marks show
 
-  const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
+  const multiChoiceQuestions = [21, 23];
 
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+  // Correct answers
+  const correctAnswers = {
+    21: ["A", "E"], // Q21–22 together
+    23: ["B", "C"], // Q23–24 together
+    25: "F",
+    26: "C",
+    27: "G",
+    28: "A",
+    29: "E",
+    30: "C",
   };
 
-  const [userAnswers, setUserAnswers] = useState({});
-  const [score, setScore] = useState(0);
-
-  // --- Handle input change and auto-check ---
+  // --- Handle input change (checkbox or dropdown) ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       const updated = { ...prev, [id]: value };
@@ -522,40 +516,80 @@ const Listening4Part32015 = () => {
     });
   };
 
-  // --- Calculate live score ---
+  // --- Calculate score ---
   const calculateScore = (answers) => {
     let newScore = 0;
+
     Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+      const q = Number(key);
+      const correct = correctAnswers[q];
+      const user = answers[q];
+
+      // 🔹 Choose TWO letters
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((ans) => user.includes(ans))
+        ) {
+          newScore += 1;
+        }
+      }
+      // 🔹 Single answer
+      else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
+
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/listening4Part32015", newScore);
   };
 
-  const toggleButton = (id) => {
-    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+  // --- Restore from localStorage ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/listening4Part32015");
+    if (savedScore) setScore(Number(savedScore));
+  }, []);
 
+  // --- Clear all ---
   const handleClear = () => {
     setUserAnswers({});
     setScore(0);
-    setActiveButtons({});
-    setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    setShowResult(false);
+    localStorage.removeItem("/listening4Part32015");
   };
 
-  // --- Restore answers from localStorage (optional) ---
-  useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
-    if (savedScore) {
-      setScore(Number(savedScore));
-    }
-  }, []);
+  // --- Render multi-choice options ---
+  const renderCheckboxes = (questionNumber, options) => {
+    return options.map(([letter, text]) => {
+      const prev = userAnswers[questionNumber] || [];
+      const checked = prev.includes(letter);
+      return (
+        <label key={letter} className="flex items-center gap-3">
+          <input
+            type="checkbox"
+            value={letter}
+            checked={checked}
+            onChange={() => {
+              let updated = [];
+              if (prev.includes(letter)) {
+                updated = prev.filter((l) => l !== letter);
+              } else {
+                updated = [...prev, letter];
+              }
+              handleInputChange(questionNumber, updated);
+            }}
+          />
+          <span className="font-semibold">{letter}.</span> {text}
+        </label>
+      );
+    });
+  };
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -645,14 +679,24 @@ const Listening4Part32015 = () => {
             ["C", "IT"],
             ["D", "marketing"],
             ["E", "organisation"],
-          ].map(([key, text]) => (
-            <label key={key} className="flex items-center gap-3">
+          ].map(([letter, text]) => (
+            <label key={letter} className="flex items-center gap-3">
               <input
                 type="checkbox"
-                value={key}
-                onChange={(e) => handleInputChange(21, e.target.value)}
+                value={letter}
+                checked={userAnswers[21]?.includes(letter) || false}
+                onChange={() => {
+                  const prev = userAnswers[21] || [];
+                  let updated = [];
+                  if (prev.includes(letter)) {
+                    updated = prev.filter((l) => l !== letter);
+                  } else {
+                    updated = [...prev, letter];
+                  }
+                  handleInputChange(21, updated);
+                }}
               />
-              <span className="font-semibold">{key}.</span>
+              <span className="font-semibold">{letter}.</span>{" "}
               {renderText(text)}
             </label>
           ))}
@@ -677,14 +721,24 @@ const Listening4Part32015 = () => {
             ["C", "an improved image"],
             ["D", "new clients"],
             ["E", "a growth in sales"],
-          ].map(([key, text]) => (
-            <label key={key} className="flex items-center gap-3">
+          ].map(([letter, text]) => (
+            <label key={letter} className="flex items-center gap-3">
               <input
                 type="checkbox"
-                value={key}
-                onChange={(e) => handleInputChange(23, e.target.value)}
+                value={letter}
+                checked={userAnswers[23]?.includes(letter) || false}
+                onChange={() => {
+                  const prev = userAnswers[23] || [];
+                  let updated = [];
+                  if (prev.includes(letter)) {
+                    updated = prev.filter((l) => l !== letter);
+                  } else {
+                    updated = [...prev, letter];
+                  }
+                  handleInputChange(23, updated);
+                }}
               />
-              <span className="font-semibold">{key}.</span>
+              <span className="font-semibold">{letter}.</span>{" "}
               {renderText(text)}
             </label>
           ))}
@@ -722,7 +776,7 @@ const Listening4Part32015 = () => {
           </div>
 
           {/* Stages of work placement */}
-          <div className="">
+          <div>
             <h1 className="font-bold text-2xl mb-4">
               Stages of the work placement procedure
             </h1>
@@ -735,7 +789,7 @@ const Listening4Part32015 = () => {
               { q: 30, text: "requesting a reference" },
             ].map((item) => (
               <div key={item.q} className="flex items-center gap-2 mb-2">
-                <span className="font-semibold">{item.q}</span>
+                <span className="font-semibold">{item.q}.</span>
                 <span>{item.text}</span>
                 <select
                   value={userAnswers[item.q] || ""}
@@ -743,7 +797,7 @@ const Listening4Part32015 = () => {
                   className="border px-2 py-1 rounded-md"
                 >
                   <option value="" disabled>
-                    {item.q} {/* placeholder */}
+                    Select
                   </option>
                   {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
                     <option key={letter} value={letter}>
@@ -753,6 +807,101 @@ const Listening4Part32015 = () => {
                 </select>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (21–30)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {[21, 23, 25, 26, 27, 28, 29, 30].map((num) => {
+                      const user = userAnswers[num];
+                      const correct = correctAnswers[num];
+
+                      const noAnswer =
+                        user === undefined ||
+                        (Array.isArray(user) && user.length === 0);
+
+                      const isCorrect = Array.isArray(correct)
+                        ? Array.isArray(user) &&
+                          user.length === correct.length &&
+                          correct.every((a) => user.includes(a))
+                        : user === correct;
+
+                      const isWrong = !noAnswer && !isCorrect;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <span className="text-red-600 text-xl">
+                                <ImCross />
+                              </span>
+                            )}
+                            <p className="font-bold">
+                              Q{num}
+                              {num === 21 && "–22"}
+                              {num === 23 && "–24"}:
+                            </p>
+                          </div>
+
+                          <p className="ml-8">
+                            <strong>Your Answer:</strong>{" "}
+                            {noAnswer ? (
+                              <em>No answer provided</em>
+                            ) : Array.isArray(user) ? (
+                              user.join(", ")
+                            ) : (
+                              user
+                            )}
+                          </p>
+
+                          <p className="ml-8 text-green-600">
+                            <strong>Correct Answer:</strong>{" "}
+                            {Array.isArray(correct)
+                              ? correct.join(", ")
+                              : correct}
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

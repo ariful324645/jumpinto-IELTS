@@ -335,19 +335,16 @@ const Listening4Part42015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
-
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    31: "C",
+    32: "B",
+    33: "C",
+    34: "materials",
+    35: "space",
+    36: "capacity",
+    37: "solar",
+    38: "oil",
+    39: "waste",
+    40: "data",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -374,7 +371,7 @@ const Listening4Part42015 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/listening4Part42015", newScore);
   };
 
   const toggleButton = (id) => {
@@ -386,12 +383,12 @@ const Listening4Part42015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/listening4Part42015");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/listening4Part42015");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -479,52 +476,108 @@ const Listening4Part42015 = () => {
           </h3>
 
           {/* Question 31 */}
-          <div className="mb-4">
-            <p className="font-semibold">
+          <div className="mb-6">
+            <p className="font-semibold mb-2">
               {renderText(
                 "31. The speaker says that one problem with nanotechnology is that"
               )}
             </p>
-            <ul className="list-disc list-inside ml-5 space-y-1">
-              <li>{renderText("A. it could threaten our way of life.")}</li>
-              <li>{renderText("B. it could be used to spy on people.")}</li>
-              <li>{renderText("C. it is misunderstood by the public.")}</li>
-            </ul>
+
+            {["A", "B", "C"].map((opt) => (
+              <label
+                key={opt}
+                className="flex items-center gap-2 ml-5 mb-1 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="q31"
+                  value={opt}
+                  checked={userAnswers[31] === opt}
+                  onChange={() => handleInputChange(31, opt)}
+                  className="radio radio-sm"
+                />
+
+                <span>
+                  {renderText(
+                    opt === "A"
+                      ? "A. it could threaten our way of life."
+                      : opt === "B"
+                      ? "B. it could be used to spy on people."
+                      : "C. it is misunderstood by the public."
+                  )}
+                </span>
+              </label>
+            ))}
           </div>
 
           {/* Question 32 */}
-          <div className="mb-4">
-            <p className="font-semibold">
+          <div className="mb-6">
+            <p className="font-semibold mb-2">
               {renderText(
                 "32. According to the speaker, some scientists believe that nano-particles"
               )}
             </p>
-            <ul className="list-disc list-inside ml-5 space-y-1">
-              <li>
-                {renderText("A. should be restricted to secure environments.")}
-              </li>
-              <li>{renderText("B. should be used with more caution.")}</li>
-              <li>
-                {renderText(
-                  "C. should only be developed for essential products."
-                )}
-              </li>
-            </ul>
+
+            {["A", "B", "C"].map((opt) => (
+              <label
+                key={opt}
+                className="flex items-center gap-2 ml-5 mb-1 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="q32"
+                  value={opt}
+                  checked={userAnswers[32] === opt}
+                  onChange={() => handleInputChange(32, opt)}
+                  className="radio radio-sm"
+                />
+                <span>
+                  {renderText(
+                    opt === "A"
+                      ? "A. should be restricted to secure environments."
+                      : opt === "B"
+                      ? "B. should be used with more caution."
+                      : "C. should only be developed for essential products."
+                  )}
+                </span>
+              </label>
+            ))}
           </div>
 
           {/* Question 33 */}
-          <div className="mb-4">
-            <p className="font-semibold">
+          <div className="mb-6">
+            <p className="font-semibold mb-2">
               {renderText(
                 "33. In the speaker's opinion, research into nanotechnology"
               )}
             </p>
-            <ul className="list-disc list-inside ml-5 space-y-1">
-              <li>{renderText("A. has yet to win popular support.")}</li>
-              <li>{renderText("B. could be seen as unethical.")}</li>
-              <li>{renderText("C. ought to be continued.")}</li>
-            </ul>
+
+            {["A", "B", "C"].map((opt) => (
+              <label
+                key={opt}
+                className="flex items-center gap-2 ml-5 mb-1 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="q33"
+                  value={opt}
+                  checked={userAnswers[33] === opt}
+                  onChange={() => handleInputChange(33, opt)}
+                  className="radio radio-sm"
+                />
+                <span>
+                  {renderText(
+                    opt === "A"
+                      ? "A. has yet to win popular support."
+                      : opt === "B"
+                      ? "B. could be seen as unethical."
+                      : "C. ought to be continued."
+                  )}
+                </span>
+              </label>
+            ))}
           </div>
+
           <h2 className="text-lg font-bold mb-3">
             {renderText("Questions 31–33")}
           </h2>
@@ -701,6 +754,100 @@ const Listening4Part42015 = () => {
                 )}
               </li>
             </ul>
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (31–40)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

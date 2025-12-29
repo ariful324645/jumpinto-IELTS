@@ -28,7 +28,7 @@ const Listening3Part42015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 4. You will hear a business student predicting how management might change in the next few years.",
+        "Section 4, you will hear part of a lecture about leadership, introducing a theory called self-regulatory focus theory.",
         "First, you have some time to look at questions 31 to 40.",
         "Now listen carefully and answer questions 31 to 40.",
       ],
@@ -36,73 +36,77 @@ const Listening3Part42015 = () => {
     {
       speaker: "SPEAKER",
       text: [
-        "Well, I've been talking to managers in a number of businesses, and reading surveys about the future of management.",
-        "And what I'm going to present in this seminar is a few ideas about how the activity is likely to change in the next 10 years.",
-        "It isn't a scientific statistical analysis, just some ideas for us to discuss.",
-        "One area I want to mention is business markets, and I'm sure a really significant development will be a major increase in competition with companies from all around the world trying to sell similar products.",
+        "Today, I want to talk about self-regulatory focus theory, and how the actions of leaders can affect the way followers approach different situations.",
+        "Self-regulatory focus theory is a theory developed by Tori Higgins.",
+        "He says that a person's focus at any given time is to either approach pleasure or avoid pain.",
+        "These are two basic motivations that each and every one of us has, and they cause us to have different kinds of goals.",
+        "Promotion goals in different life situations emphasize achievement.",
         {
-          text: "Consumers will have much more choice, for instance, food products sold in Australia might be manufactured in the USA, China, Finland, and dozens of other countries.",
+          text: "Promotion goals in different life situations emphasize achievement.",
           number: 31,
         },
+        "Prevention goals are oriented towards the avoidance of punishment.",
         {
-          text: "At the same time, mergers and takeovers mean that governments are actually losing power to major global corporations.",
+          text: "Prevention goals are oriented towards the avoidance of punishment.",
           number: 32,
         },
+        "In a specific situation, our thoughts might focus more on promotion goals, or more on prevention goals.",
+        "The theory suggests that two factors affect which goals we are focusing on.",
+        "First, there is a chronic factor.",
+        "This factor is connected to a person's personality, and says that each person has a basic tendency to either focus more on promotion goals or focus more on prevention goals.",
         {
-          text: "In the rapidly expanding economies such as India, China, Brazil and Russia, demand is growing very fast.",
+          text: "This factor is connected to a person's personality, and says that each person has a basic tendency to either focus more on promotion goals or focus more on prevention goals.",
           number: 33,
         },
+        "Second, there is a situational factor, which means that the context we are in can make us more likely to focus on one set of goals or the other.",
         {
-          text: "This is putting pressure on resources all over the world.",
-        },
-        {
-          text: "I think businesses are becoming more open to external influences, in particular, companies are consulting customers more and more before making their business decisions.",
+          text: "Second, there is a situational factor, which means that the context we are in can make us more likely to focus on one set of goals or the other.",
           number: 34,
         },
-        "Companies are finding out what they want and providing it, instead of making products and then trying to sell them, which is the model of years ago.",
-        "Another influence is that concerns about the environment will force manufacturers to extend product life cycles to reduce the amount of pollution and waste.",
+        "In contrast, if we are working on an important project for our boss, we are more likely to try to avoid making mistakes.",
+        "And therefore have more prevention goals in our mind.",
+        "Research has shown that the goals we are focusing on at a given time affect the way we think, for example, when focusing on promotion goals, people consider their ideal self.",
+        "Their aspirations and gains.",
         {
-          text: "And in some cases, regulation will need to be strengthened.",
+          text: "They don't think about what they can lose, so they think in a happier mode, they feel more inspired.",
           number: 35,
         },
-        "Many societies are much more fluid and democratic, and the structure of companies is changing to reflect that.",
+        "When people are focusing on prevention goals, they think about their ought self, what are they supposed to be?",
+        "What are people expecting from them?",
+        "They consider their obligations to others.",
+        "As a result, they experience more anxiety and try to avoid situations where they could lose.",
+        "Now that I have talked about the two focuses, and how they affect people, I want to look at the idea that the way leaders behave or their style of leading can affect the focus that followers adopt in a specific situation.",
         {
-          text: "I think we're going to see a greater emphasis within companies on teams created with a specific project in mind.",
+          text: "In talking about leadership, we often mention transformational leaders and transactional leaders.",
           number: 36,
         },
-        "And when they're completed, the teams will be disbanded and new ones formed.",
-        "More and more people see work as simply one part of their lifestyle.",
-        "And not the most important one, and as the workforce is shrinking in some countries, businesses are having to compete for staff instead of being able to choose among a lot of applicants.",
-        "Typical examples that will attract and retain staff are traditional ones like flexible hours, and something that has been made possible by advances in technology.",
+        "Transformational leaders, when interacting with their followers, focus on their development.",
+        "In their words and actions, transformational leaders highlight change.",
         {
-          text: "Remote working, with people based at their home, abroad, or almost anywhere they choose.",
+          text: "Their speech is passionate and conveys a definitive vision.",
           number: 37,
         },
-        "Management styles will almost certainly continue to change.",
-        "Senior managers will require a lot more than the efficiency that they've always needed.",
+        "All of these things can encourage followers to think about what could be.",
+        "In other words, they inspire a promotion focus in their followers.",
+        "In contrast, transactional leaders focus on developing clear structures that tell their followers exactly what is expected of them.",
         {
-          text: "Above all, they'll need great skills in leadership.",
+          text: "While they do explain the rewards people will get for following orders, they emphasize more how a follower will be punished.",
           number: 38,
         },
-        "So that their organization can initiate and respond to change in a fast-moving world, where they face lots of competing requirements and potential conflicts.",
-        "In most of the world, the senior managers of large businesses are mainly men in their 50s and 60s.",
+        "Or that a follower won't get rewarded, if his or her behavior doesn't change.",
+        "In short, they emphasize the consequences of making a mistake.",
+        "This emphasis will clearly lead followers to focus on avoiding punishment and problems.",
+        "This is clearly a prevention focus.",
         {
-          text: "The predominant style of management will almost certainly become more consultative and collaborative.",
+          text: "In conclusion, it is important to understand that one focus is not necessarily better than the other one.",
           number: 39,
         },
-        "Caused, above all, by more women moving into senior management positions.",
-        "Many of the changes are influenced by developments in the wider economy.",
-        "The traditional emphasis of business was manufacturing, and of course the service sector is very important.",
-        "But we shouldn't overlook the growing financial contribution of IP.",
-        "That is intellectual property.",
-        "Some books and films generate enormous sums from the sale of related DVDs, music, games, clothes, and so on.",
-        "Another point I'd like to make is that although I've been talking about companies, one trend that they have to face is the move away from people working for the same employer for years.",
+        "For a designer who works in a field where a lot of innovation is needed, a promotion focus is probably better.",
+        "In contrast, a prevention focus, which causes people to work more cautiously, and produce higher quality work, might be very appropriate for a job like a surgeon, for example.",
         {
-          text: "Instead, more and more people are becoming self-employed to gain the freedom and control over their lives.",
+          text: "The main point of the research though, is that the actions of leaders can greatly influence whether people approach a situation with more of a promotion focus or more of a prevention focus.",
           number: 40,
         },
-        "That they're unlikely to get from being employed.",
-        "OK, well, that's all I wanna say, so let's open it up for discussion.",
       ],
     },
     {
@@ -340,19 +344,17 @@ const Listening3Part42015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    // Questions 11 and 12 (Choose TWO: A and C)
-    11: "A", // the gym (recently refurbished with 10 new running machines)
-    12: "C", // the indoor pool (expanded to eight lanes, making it much wider)
-
-    // Questions 13–20 (Notes completion)
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    // Questions 31–40 (Self-Regulatory Focus Theory)
+    31: "achievement", // Promotion goals focus on achievement
+    32: "personality", // Chronic factor comes from one's personality
+    33: "situational", // Situational factor
+    34: "friend", // Focus on promotion goals when with a friend
+    35: "aspirations", // Promotion focus: think about ideal self, aspirations and gains
+    36: "leadership", // Leadership behaviour affects people's focus
+    37: "development", // Transformational leaders pay special attention to the development of followers
+    38: "vision", // Passionately communicate a clear vision
+    39: "structures", // Transactional leaders create structures
+    40: "innovation", // Promotion focus good for jobs requiring innovation
   };
 
   const [userAnswers, setUserAnswers] = useState({});
@@ -379,7 +381,7 @@ const Listening3Part42015 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/listening2Part32018", newScore);
+    localStorage.setItem("/listening3Part42015", newScore);
   };
 
   const toggleButton = (id) => {
@@ -391,12 +393,12 @@ const Listening3Part42015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening2Part32018");
+    localStorage.removeItem("/listening3Part42015");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening2Part32018");
+    const savedScore = localStorage.getItem("/listening3Part42015");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -408,7 +410,7 @@ const Listening3Part42015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -439,7 +441,7 @@ const Listening3Part42015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("The future of Management")}
+                {renderText("Self Regulatory Focus Theory")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -469,7 +471,7 @@ const Listening3Part42015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           <div className="border p-5 rounded-lg bg-white space-y-6">
             <h2 className="font-bold text-lg">
               {renderText("Questions 31–40")}
@@ -481,16 +483,18 @@ const Listening3Part42015 = () => {
             </p>
 
             <p className="font-bold mt-4">
-              {renderText("THE FUTURE OF MANAGEMENT")}
+              {renderText("'Self-regulatory focus theory' and leadership")}
             </p>
 
-            {/* Business markets */}
+            {/* Self-regulatory focus theory */}
             <p className="font-semibold mt-3">
-              {renderText("Business markets")}
+              {renderText("Self-regulatory focus theory")}
             </p>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("greater")}
+              {renderText(
+                "People's focus is to approach pleasure or avoid pain. Promotion goals focus on"
+              )}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 31
               </span>
@@ -500,11 +504,10 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText("among companies")}
             </div>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("increase in power of large")}
+              {renderText("Prevention goals emphasise avoiding")}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 32
               </span>
@@ -514,11 +517,10 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText("companies")}
             </div>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("rising")}
+              {renderText("Factors that affect people's focus: The Chronic")}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 33
               </span>
@@ -528,16 +530,12 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText("in certain countries")}
             </div>
 
-            {/* External influences */}
-            <p className="font-semibold mt-4">
-              {renderText("External influences on businesses")}
-            </p>
-
             <div className="flex items-center gap-3 mt-1">
-              {renderText("more discussion with")}
+              {renderText(
+                "We are more likely to focus on promotion goals when with a"
+              )}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 34
               </span>
@@ -547,11 +545,12 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText("before making business decisions")}
             </div>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("environmental concerns which may lead to more")}
+              {renderText(
+                "Promotion Focus: People think about an ideal version of themselves, their"
+              )}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 35
               </span>
@@ -561,15 +560,14 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
+              {renderText("and their gains.")}
             </div>
 
-            {/* Business structures */}
-            <p className="font-semibold mt-4">
-              {renderText("Business structures")}
-            </p>
+            {/* Leaders */}
+            <p className="font-semibold mt-4">{renderText("Leaders")}</p>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("more teams will be formed to work on a particular")}
+              {renderText("Leadership behaviour and")}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 36
               </span>
@@ -579,10 +577,13 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(36, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
+              {renderText("affects people's focus.")}
             </div>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("businesses may need to offer hours that are")}
+              {renderText(
+                "Transformational Leaders pay special attention to the"
+              )}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 37
               </span>
@@ -592,16 +593,10 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText(", or the chance to work remotely")}
             </div>
 
-            {/* Management styles */}
-            <p className="font-semibold mt-4">
-              {renderText("Management styles")}
-            </p>
-
             <div className="flex items-center gap-3 mt-1">
-              {renderText("increasing need for managers to provide good")}
+              {renderText("Passionately communicate a clear")}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 38
               </span>
@@ -611,10 +606,11 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
+              {renderText("to inspire promotion focus in followers.")}
             </div>
 
             <div className="flex items-center gap-3 mt-1">
-              {renderText("changes influenced by")}
+              {renderText("Transactional Leaders create")}
               <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
                 39
               </span>
@@ -624,31 +620,121 @@ const Listening3Part42015 = () => {
                 onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border px-2 py-1 rounded-md w-24"
               />
-              {renderText("taking senior roles")}
+              {renderText(
+                "to make expectations clear and emphasise the results of a mistake."
+              )}
             </div>
 
-            {/* Changes in the economy */}
-            <p className="font-semibold mt-4">
-              {renderText("Changes in the economy")}
-            </p>
-
-            <div className="flex flex-col gap-2 mt-1">
-              <p>{renderText("service sector continues to be important")}</p>
-              <p>{renderText("increasing value of intellectual property")}</p>
-              <div className="flex items-center gap-3">
-                {renderText("more and more")}
-                <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
-                  40
-                </span>
-                <input
-                  type="text"
-                  value={userAnswers[40] || ""}
-                  onChange={(e) => handleInputChange(40, e.target.value)}
-                  className="border px-2 py-1 rounded-md w-24"
-                />
-                {renderText("workers")}
+            <div className="flex items-center gap-3 mt-1">
+              {renderText(
+                "Conclusion: Promotion Focus is good for jobs requiring"
+              )}
+              <span className="w-8 h-8 border-1 rounded-full flex items-center justify-center font-bold bg-gray-50">
+                40
+              </span>
+              <input
+                type="text"
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border px-2 py-1 rounded-md w-24"
+              />
+              {renderText(
+                "Prevention Focus is good for work such as a surgeon. Leaders' actions affect which focus people use."
+              )}
+            </div>
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
               </div>
-            </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (31-40)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

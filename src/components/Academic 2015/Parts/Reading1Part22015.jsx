@@ -132,24 +132,23 @@ const Reading1Part22015 = () => {
     });
     return parts;
   };
-
   const correctAnswers = {
-    // =========== Questions 1–7 (Paragraph headings) ===========
-    1: "i", // Paragraph A → The search for the reasons for an increase in population
-    2: "ii", // Paragraph B → Industrialisation and the fear of unemployment
-    3: "iii", // Paragraph C → The development of cities in Japan
-    4: "iv", // Paragraph D → The time and place of the Industrial Revolution
-    5: "v", // Paragraph E → The cases of Holland, France and China
-    6: "vi", // Paragraph F → Changes in drinking habits in Britain
-    7: "vii", // Paragraph G → Two keys to Britain's industrial revolution
+    // =========== Questions 14–21 (Paragraph Headings) ===========
+    14: "viii", // Paragraph A – The rapid growth of private transport
+    15: "vi", // Paragraph B – The escalating cost of rail transport
+    16: "iii", // Paragraph C – Changes affecting the distances goods may be transported
+    17: "ix", // Paragraph D – Plans to develop major road networks
+    18: "iv", // Paragraph E – Taking all the steps necessary to change transport patterns
+    19: "vii", // Paragraph G – The need to achieve transport rebalance
+    20: "ii", // Paragraph H – Charging for roads and improving other transport methods
+    21: "xi", // Paragraph I – Transport trends in countries awaiting EU admission
 
-    // =========== Questions 8–13 (TRUE / FALSE / NOT GIVEN) ===========
-    8: "TRUE", // China's transport system was not suitable for industry in the 18th century
-    9: "TRUE", // Tea and beer both helped to prevent dysentery in Britain
-    10: "FALSE", // Roy Porter disagrees with Professor Macfarlane's findings
-    11: "FALSE", // After 1740, there was a reduction in population in Britain
-    12: "TRUE", // People in Britain used to make beer at home
-    13: "TRUE", // The tax on malt indirectly caused a rise in the death rate
+    // =========== Questions 22–26 (TRUE / FALSE / NOT GIVEN) ===========
+    22: "TRUE",
+    23: "TRUE",
+    24: "NOT GIVEN",
+    25: "FALSE",
+    26: "FALSE",
   };
 
   useEffect(() => {
@@ -184,6 +183,7 @@ const Reading1Part22015 = () => {
         {/* LEFT SIDE (dynamic texts) */}
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+          {/* Header */}
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("PASSAGE 2")}</h1>
             <div className="flex gap-3">
@@ -197,137 +197,237 @@ const Reading1Part22015 = () => {
             </div>
           </div>
 
-          <div>
-            <h1 className="text-lg">
-              {renderText(
-                "You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below."
-              )}
-            </h1>
-          </div>
+          <p className="text-lg">
+            {renderText(
+              "You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below."
+            )}
+          </p>
 
-          <div>
-            <h1 className="text-2xl font-bold mb-2 text-center">
-              {renderText("EUROPEAN TRANSPORT SYSTEMS 1990-2010")}
-            </h1>
+          {/* Title */}
+          <h2 className="text-2xl font-bold text-center">
+            {renderText("EUROPEAN TRANSPORT SYSTEMS 1990–2010")}
+          </h2>
 
-            <p className="italic text-center mb-6">
-              {renderText(
-                "What have been the trends and what are the prospects for European transport systems?"
-              )}
-            </p>
+          <p className="italic text-center mb-6">
+            {renderText(
+              "What have been the trends and what are the prospects for European transport systems?"
+            )}
+          </p>
 
-            {/* A */}
-            <p className="font-bold mb-1">{renderText("A")}</p>
-            <p className="text-lg mb-5">
+          {/* A */}
+          <p className="font-bold">{renderText("A")}</p>
+          <p className="text-lg mb-5">
+            {renderText(
+              "It is difficult to conceive of vigorous economic growth without an efficient transport system."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "It is difficult to conceive of vigorous economic growth without an efficient transport system. Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase."
+                "Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase."
               )}
-            </p>
-            <p className="text-lg mb-5">
+              {highlight && (
+                <span className="ml-2 inline-flex w-10 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  22
+                </span>
+              )}
+            </span>
+            {renderText(
+              " There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use. The number of cars on European Union [EU] roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
+                "The number of cars on European Union [EU] roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-10 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  14
+                </span>
+              )}
+            </span>
+          </p>
 
-            {/* B */}
-            <p className="font-bold mb-1">{renderText("B")}</p>
-            <p className="text-lg mb-5">
+          {/* B */}
+          <p className="font-bold">{renderText("B")}</p>
+          <p className="text-lg mb-5">
+            {renderText(
+              "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production. In the last 20 years, as internal frontiers have been abolished, the EU has moved from a 'stock' economy to a 'flow' economy."
+                "In the last 20 years, as internal frontiers have been abolished, the EU has moved from a 'stock' economy to a 'flow' economy."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
+              {highlight && (
+                <span className="ml-2 inline-flex w-12 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  15,23
+                </span>
               )}
-            </p>
+            </span>
+            {renderText(
+              " This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
+            )}
+          </p>
 
-            {/* C */}
-            <p className="font-bold mb-1">{renderText("C")}</p>
-            <p className="text-lg mb-5">
+          {/* C */}
+          <p className="font-bold">{renderText("C")}</p>
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic. In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes."
+                "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s. Between 1990 and 1998, road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although - and this could benefit the enlarged EU - it is still on average at a much higher level than in existing member states."
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  16
+                </span>
               )}
-            </p>
+            </span>
+            {renderText(
+              " In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes."
+            )}
+            {renderText(
+              " And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s."
+            )}
+            {renderText(
+              " Between 1990 and 1998, road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although – and this could benefit the enlarged EU – it is still on average at a much higher level than in existing member states."
+            )}
+          </p>
 
-            {/* D */}
-            <p className="font-bold mb-1">{renderText("D")}</p>
-            <p className="text-lg mb-5">
+          {/* D */}
+          <p className="font-bold">{renderText("D")}</p>
+          <p className="text-lg mb-5">
+            {renderText(
+              "However, a new imperative – sustainable development – offers an opportunity for adapting the EU's common transport policy."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "However, a new imperative - sustainable development - offers an opportunity for adapting the EU's common transport policy. This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy."
+                "This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years' time, that is by 2040."
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  17
+                </span>
               )}
-            </p>
+            </span>
+            {renderText(
+              " The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years' time, that is by 2040."
+            )}
+          </p>
 
-            {/* E */}
-            <p className="font-bold mb-1">{renderText("E")}</p>
-            <p className="text-lg mb-5">
+          {/* E */}
+          <p className="font-bold">{renderText("E")}</p>
+          <p className="text-lg mb-5">
+            {renderText(
+              "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO₂, the leading greenhouse gas."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO₂, the leading greenhouse gas. According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO₂ emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020, compared with the 739 billion tonnes recorded in 1990."
+                "According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO₂ emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020, compared with the 739 billion tonnes recorded in 1990."
               )}
-            </p>
-            <p className="text-lg mb-5">
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  26
+                </span>
+              )}
+            </span>
+            {renderText(
+              " Once again, road transport is the main culprit since it alone accounts for 84% of the CO₂ emissions attributable to transport."
+            )}
+            <span className={highlight ? "bg-yellow-100 ml-1" : "ml-1"}>
               {renderText(
-                "Once again, road transport is the main culprit since it alone accounts for 84% of the CO₂ emissions attributable to transport. Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
+                "Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
               )}
-            </p>
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  18
+                </span>
+              )}
+            </span>
+          </p>
 
-            {/* F */}
-            <p className="font-bold mb-1">{renderText("F")}</p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "At the same time greater efforts must be made to achieve a modal shift. Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road. This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h. Three possible options have emerged."
-              )}
-            </p>
+          {/* F */}
+          <p className="font-bold">{renderText("F")}</p>
+          <p className="text-lg mb-5">
+            {renderText(
+              "At the same time greater efforts must be made to achieve a modal shift."
+            )}
+            {renderText(
+              " Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road."
+            )}
+            {renderText(
+              " This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h."
+            )}
+            {renderText(" Three possible options have emerged.")}
+          </p>
 
-            {/* G */}
-            <p className="font-bold mb-1">{renderText("G")}</p>
-            <p className="text-lg mb-5">
+          {/* G */}
+          <p className="font-bold">{renderText("G")}</p>
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "The first approach would consist of focusing on road transport solely through pricing. This option would not be accompanied by complementary measures in the other modes of transport. In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport."
+                "The first approach would consist of focusing on road transport solely through pricing."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  19
+                </span>
               )}
-            </p>
+            </span>
+            {renderText(
+              " This option would not be accompanied by complementary measures in the other modes of transport."
+            )}
+            {renderText(
+              " In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport."
+            )}
+            {renderText(
+              " However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
+            )}
+          </p>
 
-            {/* H */}
-            <p className="font-bold mb-1">{renderText("H")}</p>
-            <p className="text-lg mb-5">
+          {/* H */}
+          <p className="font-bold">{renderText("H")}</p>
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes [better quality of services, logistics, technology]. However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion."
+                "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes"
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion's share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes. It is therefore not enough to guarantee the necessary shift of the balance."
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  20
+                </span>
               )}
-            </p>
+            </span>
+            {renderText(
+              " [better quality of services, logistics, technology]."
+            )}
+            {renderText(
+              " However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion."
+            )}
+            {renderText(
+              " It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion's share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes."
+            )}
+            {renderText(
+              " It is therefore not enough to guarantee the necessary shift of the balance."
+            )}
+          </p>
 
-            {/* I */}
-            <p className="font-bold mb-1">{renderText("I")}</p>
-            <p className="text-lg mb-5">
+          {/* I */}
+          <p className="font-bold">{renderText("I")}</p>
+          <p className="text-lg mb-5">
+            <span className={highlight ? "bg-yellow-100" : ""}>
               {renderText(
-                "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network. This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance."
+                "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network."
               )}
-            </p>
-            <p className="text-lg mb-5">
-              {renderText(
-                "It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
+              {highlight && (
+                <span className="ml-2 inline-flex w-8 h-6 items-center justify-center bg-yellow-700 text-white rounded-sm font-semibold">
+                  21
+                </span>
               )}
-            </p>
-          </div>
+            </span>
+            {renderText(
+              " This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance."
+            )}
+            {renderText(
+              " It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
+            )}
+          </p>
         </div>
 
         {/* right div */}
@@ -527,6 +627,100 @@ const Reading1Part22015 = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  {renderText("Submit Answers")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    {renderText("Your Score: ")}
+                    {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (14–26)")}
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{userAnswers[num]}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
