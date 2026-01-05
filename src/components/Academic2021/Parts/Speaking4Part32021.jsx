@@ -1,11 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking1Pagination2021 from "../Pagination 2021/Speaking1Pagination2021";
 
+import Speaking4Pagination2021 from "../Pagination 2021/Speaking4Pagination2021";
 
-
-const Test1Speaking2021 = () => {
+const Speaking4Part32021 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,20 +16,33 @@ const Test1Speaking2021 = () => {
 
   const recognitionRef = useRef(null);
 
-  const questions = [
-    "Who do you spend most time studying or working with?",
-    "What kinds of things do you study or work on with other people?",
-    "Are there times when you study or work better by yourself?",
-    "Is it important to like the people you study or work with?",
-  ];
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
-  // ✅ keywords for each question (at least 2-3 keywords per question)
-  const questionKeywords = [
-    ["friend", "classmate", "colleague", "family", "partner", "team"],
-    ["project", "assignment", "study", "discussion", "work", "task"],
-    ["alone", "myself", "quiet", "focus", "concentration", "independent"],
-    ["like", "respect", "friend", "relationship", "teamwork", "important"],
-  ];
+const questions = [
+  "What kinds of computer games do people play in your country?",
+  "Why do people enjoy playing computer games?",
+  "Do you think that all computer games should have a minimum age for players?",
+  "In what ways can technology in the classroom be helpful?",
+  "Do you agree that students are often better at using technology than their teachers?",
+  "Do you believe that computers will ever replace human teachers?",
+];
+
+const questionKeywords = [
+  ["computer games", "people", "play", "country", "types", "popular"],
+  ["why", "enjoy", "playing", "games", "reasons", "fun"],
+  [
+    "computer games",
+    "minimum age",
+    "players",
+    "rules",
+    "restrictions",
+    "safety",
+  ],
+  ["technology", "classroom", "helpful", "students", "learning", "education"],
+  ["students", "better", "technology", "teachers", "skills", "knowledge"],
+  ["computers", "replace", "human teachers", "education", "future", "AI"],
+];
+
 
   // ▶ Speak current question
   const handleStartClick = () => {
@@ -51,16 +63,15 @@ const Test1Speaking2021 = () => {
   };
 
   // ✅ keyword-based mark calculation
-  // ✅ Live answer only, do not show "No answer given"
   const calculateMark = (answer, questionIdx) => {
     const text = answer.toLowerCase();
-    if (!text) return 0; // empty answer → 0 mark
+    if (!text) return 0;
 
     const keywords = questionKeywords[questionIdx];
     for (let kw of keywords) {
-      if (text.includes(kw)) return 1; // match → 1 mark
+      if (text.includes(kw)) return 1;
     }
-    return 0; // no keyword → 0 mark
+    return 0;
   };
 
   // 🎤 Microphone click
@@ -104,14 +115,22 @@ const Test1Speaking2021 = () => {
       const answerText = finalTranscript.trim() || currentAnswer.trim();
       const mark = calculateMark(answerText, questionIndex);
 
-      setAnswers((prev) => [
-        ...prev,
+      const updatedAnswers = [
+        ...answers,
         {
           question: questions[questionIndex],
           answer: answerText || "No answer given",
           mark,
         },
-      ]);
+      ];
+
+      setAnswers(updatedAnswers);
+
+      const total = updatedAnswers.reduce((sum, a) => sum + a.mark, 0);
+      setTotalMark(total);
+
+      // ✅ Save mark to localStorage
+      localStorage.setItem(storageKey, total);
 
       setTimeout(() => {
         if (questionIndex < questions.length - 1) {
@@ -119,15 +138,6 @@ const Test1Speaking2021 = () => {
           setSpokenQuestion("");
           setCurrentAnswer("");
         } else {
-          const total = [
-            ...answers,
-            {
-              question: questions[questionIndex],
-              answer: answerText || "No answer given",
-              mark,
-            },
-          ].reduce((sum, a) => sum + a.mark, 0);
-          setTotalMark(total);
           setShowResult(true);
         }
       }, 800);
@@ -142,7 +152,7 @@ const Test1Speaking2021 = () => {
     return (
       <div className="p-6 max-w-2xl mx-auto border rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
-          🎉 Speaking Test Complete!
+          Speaking Test Complete!
         </h1>
 
         <ul className="space-y-6 text-left">
@@ -166,7 +176,7 @@ const Test1Speaking2021 = () => {
 
         <div className="text-center mt-8">
           <p className="text-xl font-bold text-blue-700 mb-4">
-            🏆 Total Score: {totalMark} / {questions.length}
+            Total Score: {totalMark} / {questions.length}
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -185,36 +195,41 @@ const Test1Speaking2021 = () => {
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1> <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">PART 3</h1> <br />
           <br />
-          <h1 className="text-2xl font-bold"> EXAMPLE</h1> <br />
+          <h1 className="text-2xl font-bold">Discussion topics:</h1> <br />
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <li className="">
-              {" "}
-              How much walking do you do in your daily life?
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Computer games & Technology in the classroom
+            </h1>
+
+            <p className="text-lg font-bold">Computer games</p>
+            <li>
+              What kinds of computer games do people play in your country?
             </li>
-            <li className="">
-              {" "}
-              Did you walk more when you were at school than now?
+            <li>Why do people enjoy playing computer games?</li>
+            <li>
+              Do you think that all computer games should have a minimum age for
+              players?
             </li>
-            <li className="">
-              {" "}
-              What places are there to go for a walk near where you live?
+
+            <p className="text-lg font-bold mt-4">
+              Technology in the classroom
+            </p>
+            <li>In what ways can technology in the classroom be helpful?</li>
+            <li>
+              Do you agree that students are often better at using technology
+              than their teachers?
             </li>
-            <li className="">
-              {" "}
-              Would you ever like to go on a walking holiday?
+            <li>
+              Do you believe that computers will ever replace human teachers?
             </li>
           </ul>
         </div>
+
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
-            {" "}
             <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
               2/3 speaking practices finished in 180 minutes.
             </span>
@@ -268,9 +283,9 @@ const Test1Speaking2021 = () => {
           </div>
         </div>
       </div>
-      <Speaking1Pagination2021></Speaking1Pagination2021>
+      <Speaking4Pagination2021></Speaking4Pagination2021>
     </div>
   );
 };
 
-export default Test1Speaking2021;
+export default Speaking4Part32021;
