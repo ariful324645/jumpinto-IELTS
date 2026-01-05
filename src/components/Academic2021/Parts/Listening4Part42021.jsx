@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening2Pagination2021 from "../Pagination 2021/Listening2Pagination2021";
+import Listening4Pagination2021 from "../Pagination 2021/Listening4Pagination2021";
 
-const Test2Listening2021 = () => {
+const Listening4Part42021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -23,261 +23,91 @@ const Test2Listening2021 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a woman phoning a company that converts old photographs to digital format.",
-        "First, you have some time to look at questions 1 to 3.",
-        "Now listen carefully and answer questions 1 to 3.",
+        "Part 4, you will hear part of an environmental science lecture about a large bird called the dodo, which is now extinct.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "EMPLOYEE",
-      text: ["Hello, Picturerep. Can I help you?"],
-    },
-    {
-      speaker: "WOMAN",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi.",
-        "I saw your advertisement about copying pictures to disk, and I'd like a bit more information about what you do.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, what would you like to know?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Well, I've got a box full of old family photos that's been up in the attic for years.",
-        "Some of them must be 50 or 60 years old.",
-        "And I'd like to get them converted to digital format.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, we can do that for you."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Right, and what about size?",
-        "The photos are all sorts of sizes.",
-        "Are there any restrictions?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Well, the maximum size of photo we can do with our normal service is 30 centimeters,",
-        "and each picture must be at least 4 cm.",
-        "That's the minimum we can cope with.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Oh, that should be fine.",
-        "And some of them are in a frame.",
-        { text: "Should I take them out before I send them?", number: 1 },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, please.",
-        "We can't copy them otherwise, and also the photos must all be separate,",
-        "they mustn't be stuck into an album.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, that's not a problem.",
-        "So, can you give me an idea of how much this will cost?",
-        "I've got about 360 photos, I think.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
+        "One of the most famous cases of extinction is that of a bird known as the dodo.",
+        "In fact, there's even a saying in English, as dead as the dodo.",
+        "Used to refer to something which no longer exists.",
+        "But for many centuries, the dodo was alive and well, although it could only be found in one place, the island of Mauritius in the Indian Ocean.",
+        "It was a very large bird, about 1 meter tall, and over the centuries it had lost the ability to fly, but it survived happily under the trees that covered the island.",
+        "Then, in the year 1507, the first Portuguese ships stopped at the island.",
+        "The sailors were carrying spices back to Europe.",
         {
-          text: "We charge £195 for 300 to 400 photos for the basic service.",
-          number: 2,
+          text: "And found the island a convenient stopping place where they could stock up with food and water for the rest of the voyage, but they didn't settle on Mauritius.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK, and does that include the disk?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Yes, one disk, but you can get extra ones for £5 each."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "That's good.",
-        "So, do I need to pay when I send you the photos?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "No, we won't need anything until we've actually copied the pictures.",
+        "However, in 1638 the Dutch arrived and set up a colony there.",
         {
-          text: "Then we'll let you know how much it is, and once we've received the payment, we'll send the parcel off to you.",
-          number: 3,
+          text: "These first human inhabitants of the island found the dodo birds a convenient source of meat, although not everyone liked the taste.",
+          number: 32,
         },
+        "It's hard to get an accurate description of what the dodo actually looked like.",
+        "We do have some written records from sailors, and a few pictures.",
+        "But we don't know how reliable these are.",
+        {
+          text: "The best known picture is a Dutch painting, in which the bird appears to be extremely fat, but this may not be accurate.",
+          number: 33,
+        },
+        "An Indian painting done at the same time shows a much thinner bird.",
+        "Although attempts were made to preserve the bodies of some of the birds, no complete specimen survives.",
+        "In the early 17th century, four dried parts of a bird were known to exist.",
+        "Of these, three have disappeared.",
+        {
+          text: "So only one example of soft tissue from the dodo survives, a dodo head.",
+          number: 34,
+        },
+        "Bones have also been found, but there's only one complete skeleton in existence.",
+        "This single dodo skeleton has recently been the subject of scientific research, which suggests that many of the earlier beliefs about dodos may have been incorrect.",
+        "For example, early accounts of the birds mention how slow and clumsy it was, but scientists now believe the bird's strong knee joints would have made it capable of movement, which was not slow, but actually quite fast.",
+        {
+          text: "In fact, one 17th century sailor wrote that he found the birds hard to catch.",
+          number: 35,
+        },
+        "It's true that the dodo's small wings wouldn't have allowed it to leave the ground, but the scientists suggest that these were probably employed for balance,",
+        { text: "while going over uneven ground.", number: 36 },
+        "Another group of scientists carried out analysis of the dodo's skull.",
+        "They found that the reports of the lack of intelligence of the dodo were not borne out by their research, which suggested the bird's brain was not small.",
+        { text: "But average in size.", number: 37 },
+        "In fact, in relation to its body size, it was similar to that of the pigeon, which is known to be a highly intelligent bird.",
+        "The researchers also found that the structure of the bird's skull suggested that one sense which was particularly well developed was that of smell.",
+        {
+          text: "So, the dodo may also have been particularly good at locating ripe fruit and other food in the island's thick vegetation.",
+          number: 38,
+        },
+        "So it looks as if the dodo was better able to survive and defend itself than was originally believed, yet less than 200 years after Europeans first arrived on the island, they had become extinct.",
+        "So what was the reason for this?",
+        "For a long time, it was believed that the dodos were hunted to extinction, but scientists now believe the situation was more complicated than this.",
+        "Another factor may have been the new species brought to the island by the sailors.",
+        "These included dogs, which would have been a threat to the dodos, and also monkeys, which ate the fruit that was the main part of the dodo's diet.",
+        "These were brought to the island deliberately.",
+        "The ships also brought another type of creature, rats, which came to land from the ships and rapidly overran the island.",
+        {
+          text: "These upset the ecology of the island, not just the dodos, but other species too.",
+          number: 39,
+        },
+        "However, they were a particular danger to the dodos, because they consumed their eggs, and since each dodo only laid one at a time.",
+        "This probably had a devastating effect on populations.",
+        "However, we now think that probably the main cause of the bird's extinction was not the introduction of non-native species.",
+        "But the introduction of agriculture.",
+        {
+          text: "This meant that the forest that had once covered all the island, and that had provided a perfect home for the dodo, was cut down.",
+          number: 40,
+        },
+        "So that crops such as sugar could be grown.",
+        "So, although the dodo had survived for thousands of years, suddenly it was gone.",
       ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
-        "Now listen and answer questions 4 to 10.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Is there anything else you'd like to ask about our services?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Yes, I've roughly sorted out the photos into groups according to what they're about.",
-        "So, can you keep them in those groups when you copy them?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Sure, we'll save each group in a different folder on the disk,",
-        "and if you like, you can suggest a name for each folder.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        {
-          text: "So, I could have one called 'Grandparents' for instance?",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Exactly."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "And do you do anything besides scan the photos?",
-        "Like, can you make any improvements?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, in the standard service, each photo is checked,",
-        {
-          text: "and we can sometimes touch up the color a bit, or improve the contrast,",
-          number: 5,
-        },
-        "that can make a big difference.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, and some of the photos are actually quite fragile.",
-        "They won't get damaged in the process, will they?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        {
-          text: "No, if any look particularly fragile, we'd do them by hand.",
-          number: 6,
-        },
-        "We do realize how precious these old photos can be.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "And another thing is we can make changes to a photo if you want,",
-        {
-          text: "so, if you want to remove an object from a photo, or maybe alter the background,",
-          number: 7,
-        },
-        "we can do that.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Really?",
-        "I might be interested in that.",
-        "I'll have a look through the photos and see.",
-        "Oh, and talking of fixing photos.",
-        { text: "I've got a few that aren't properly in focus.", number: 8 },
-        "Can you do anything to make that better?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["No, I'm afraid that's one thing we can't do."],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Any other information I can give you?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Er... oh, how long will it all take?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [{ text: "We aim to get the copying done in 10 days.", number: 9 }],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Fine.",
-        "Right, well, I'll get the photos packed up in a box and post them off to you.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Right, if you've got a strong cardboard box, that's best.",
-        {
-          text: "We've found that plastic ones sometimes break in the post.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK.", "Right, thanks for your help.", "Bye."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Bye."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have half a minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -427,19 +257,19 @@ const Test2Listening2021 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "frame",
-    2: "195",
-    3: "payment",
-    4: "grandparents",
-    5: "colour",
-    6: "hand",
-    7: "background",
-    8: "focus",
-    9: "10 days",
-    10: "plastic",
+    31: "spices", // Portuguese ships transporting spices
+    32: "colony", // Dutch established a colony
+    33: "fat", // Dutch painting shows dodo was fat
+    34: "head", // Only remaining soft tissue is a dried head
+    35: "movement", // Birds capable of rapid movement
+    36: "balance", // Wings used to maintain balance
+    37: "brain", // Their brain was of average size
+    38: "smell", // Sense of smell enabled them to find food
+    39: "rats", // Rats also escaped and ate eggs
+    40: "forest", // Farming destroyed the forest
   };
+
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -464,7 +294,7 @@ const Test2Listening2021 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening4Part42021", newScore);
   };
 
   const toggleButton = (id) => {
@@ -476,12 +306,12 @@ const Test2Listening2021 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("listening4Part42021");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("listening4Part42021");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -493,7 +323,7 @@ const Test2Listening2021 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -524,7 +354,7 @@ const Test2Listening2021 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Picture Conversion Service")}
+                {renderText("The Dodo: From History to Extinction")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -557,281 +387,231 @@ const Test2Listening2021 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
           <div className="border p-6 rounded-lg space-y-6 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Copying photos to digital format")}
+              {renderText("THE EXTINCTION OF THE DODO BIRD")}
             </h1>
 
-            {/* ---------- Company ---------- */}
-            <p className="text-lg">
-              {renderText("Name of company: ")}
-              <span className="font-semibold">{renderText("Picturerep")}</span>
-            </p>
-
-            {/* ---------- Requirements ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Requirements")}
-            </h2>
-
             <p className="text-lg">
               {renderText(
-                "Maximum size of photos is 30 cm, minimum size 4 cm."
+                "The dodo was a large flightless bird which used to inhabit the island of Mauritius."
               )}
             </p>
 
-            {/* Q1 */}
+            <p className="text-lg font-semibold">{renderText("History")}</p>
+
+            {/* Q31 */}
             <p className="text-lg">
-              {renderText("Photos must not be in a")}
+              {renderText("1507 - Portuguese ships transporting")}
               <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(31)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                1
+                31
               </button>
               <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("or an album.")}
+              {renderText(" stopped at the island to collect food and water.")}
             </p>
 
-            {/* ---------- Cost ---------- */}
-            <h2 className="text-lg font-bold mt-6">{renderText("Cost")}</h2>
-
-            {/* Q2 */}
+            {/* Q32 */}
             <p className="text-lg">
-              {renderText("The cost for 360 photos is £")}
+              {renderText("1638 - The Dutch established a")}
               <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(32)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                2
+                32
               </button>
               <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("(including one disk).")}
+              {renderText(" on the island.")}
             </p>
 
-            {/* Q3 */}
             <p className="text-lg">
-              {renderText("Before the completed order is sent,")}
+              {renderText("They killed the dodo birds for their meat.")}
+              <br />
+              {renderText("The last one was killed in 1681.")}
+            </p>
+
+            <p className="text-lg font-semibold">{renderText("Description")}</p>
+
+            {/* Q33 */}
+            <p className="text-lg">
+              {renderText("A Dutch painting suggests the dodo was very")}
               <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(33)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                3
+                33
               </button>
               <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("is required.")}
+              .
             </p>
 
-            {/* ---------- Services Included ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Services included in the price")}
-            </h2>
+            {/* Q34 */}
+            <p className="text-lg">
+              {renderText("The only remaining soft tissue is a dried")}
+              <button
+                onClick={() => toggleButton(34)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
 
-            {/* Q4 */}
+            {/* Q35 */}
             <p className="text-lg">
               {renderText(
-                "Photos can be placed in a folder, e.g. with the name"
+                "Recent studies of a dodo skeleton suggest the birds were capable of rapid"
               )}
               <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(35)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                4
+                35
               </button>
               <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               .
             </p>
 
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("The")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("and contrast can be improved if necessary.")}
-            </p>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("Photos which are very fragile will be scanned by")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
-            </p>
-
-            {/* ---------- Special Restore ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Special restore service (costs extra)")}
-            </h2>
-
-            {/* Q7 */}
+            {/* Q36 */}
             <p className="text-lg">
               {renderText(
-                "It may be possible to remove an object from a photo, or change the"
+                "It's thought they were able to use their small wings to maintain"
               )}
               <button
-                onClick={() => toggleButton(7)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(36)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                7
+                36
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               .
             </p>
 
-            {/* Q8 */}
+            {/* Q37 */}
             <p className="text-lg">
-              {renderText("A photo which is not correctly in")}
+              {renderText("Their")}
               <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(37)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                8
+                37
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("cannot be fixed.")}
+              {renderText(" was of average size.")}
             </p>
 
-            {/* ---------- Other Information ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Other information")}
-            </h2>
-
-            {/* Q9 */}
+            {/* Q38 */}
             <p className="text-lg">
-              {renderText("Orders are completed within")}
+              {renderText("Their sense of")}
               <button
-                onClick={() => toggleButton(9)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(38)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                9
+                38
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              .
+              {renderText(" enabled them to find food.")}
             </p>
 
-            {/* Q10 */}
+            <p className="text-lg font-semibold">
+              {renderText("Reasons for extinction")}
+            </p>
+
             <p className="text-lg">
-              {renderText("Send the photos in a box (not")}
+              {renderText("Hunting was probably not the main cause.")}
+              <br />
+              {renderText("Sailors brought dogs and monkeys.")}
+            </p>
+
+            {/* Q39 */}
+            <p className="text-lg">
               <button
-                onClick={() => toggleButton(10)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(39)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                10
+                39
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              ).
+              {renderText(
+                " also escaped onto the island and ate the birds' eggs."
+              )}
+            </p>
+
+            {/* Q40 */}
+            <p className="text-lg">
+              {renderText("The arrival of farming meant the")}
+              <button
+                onClick={() => toggleButton(40)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" was destroyed.")}
             </p>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -840,7 +620,7 @@ const Test2Listening2021 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -849,23 +629,20 @@ const Test2Listening2021 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
                         ?.trim()
                         .toLowerCase();
-
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-
                       const isWrong =
                         userAnswer && userAnswer !== correctAnswer;
-
                       const noAnswer = !userAnswer;
 
                       return (
@@ -874,11 +651,10 @@ const Test2Listening2021 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {/* ICONS */}
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
                             {(isWrong || noAnswer) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
@@ -887,23 +663,18 @@ const Test2Listening2021 = () => {
                                 </span>
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
-                          {/* User Answer */}
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className=" italic">
-                                No answer provided
-                              </span>
+                              <span className="italic">No answer provided</span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
                           </p>
 
-                          {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
                               Correct Answer:
@@ -920,9 +691,9 @@ const Test2Listening2021 = () => {
           </div>
         </div>
       </div>
-      <Listening2Pagination2021></Listening2Pagination2021>
+      <Listening4Pagination2021></Listening4Pagination2021>
     </div>
   );
 };
 
-export default Test2Listening2021;
+export default Listening4Part42021;

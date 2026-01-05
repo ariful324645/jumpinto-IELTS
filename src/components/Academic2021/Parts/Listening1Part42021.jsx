@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { FaDotCircle } from "react-icons/fa";
-import { GrClearOption } from "react-icons/gr";
-import { ImCross } from "react-icons/im";
-import { IoIosArrowDown } from "react-icons/io";
-import Listening2Pagination2021 from "../Pagination 2021/Listening2Pagination2021";
 
-const Test2Listening2021 = () => {
+import { IoIosArrowDown } from "react-icons/io";
+import { GrClearOption } from "react-icons/gr";
+
+import { FaChevronDown, FaDotCircle } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+import Listening1Pagination2021 from "../Pagination 2021/Listening1Pagination2021";
+
+const Listening1Part42021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,269 +20,140 @@ const Test2Listening2021 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+
+  // result marks display
   const [showResult, setShowResult] = useState(false);
+
   const lines = [
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a woman phoning a company that converts old photographs to digital format.",
-        "First, you have some time to look at questions 1 to 3.",
-        "Now listen carefully and answer questions 1 to 3.",
+        "Part 4. You will hear a professor of philosophy giving a talk on the ancient philosophy of Stoicism.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "EMPLOYEE",
-      text: ["Hello, Picturerep. Can I help you?"],
-    },
-    {
-      speaker: "WOMAN",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi.",
-        "I saw your advertisement about copying pictures to disk, and I'd like a bit more information about what you do.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, what would you like to know?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Well, I've got a box full of old family photos that's been up in the attic for years.",
-        "Some of them must be 50 or 60 years old.",
-        "And I'd like to get them converted to digital format.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, we can do that for you."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Right, and what about size?",
-        "The photos are all sorts of sizes.",
-        "Are there any restrictions?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Well, the maximum size of photo we can do with our normal service is 30 centimeters,",
-        "and each picture must be at least 4 cm.",
-        "That's the minimum we can cope with.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Oh, that should be fine.",
-        "And some of them are in a frame.",
-        { text: "Should I take them out before I send them?", number: 1 },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, please.",
-        "We can't copy them otherwise, and also the photos must all be separate,",
-        "they mustn't be stuck into an album.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, that's not a problem.",
-        "So, can you give me an idea of how much this will cost?",
-        "I've got about 360 photos, I think.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
+        "Ancient philosophy is not just about talking or lecturing, or even reading long dense books.",
+        "In fact, it is something people have used throughout history to solve their problems and to achieve their greatest triumphs.",
+        "Specifically, I am referring to Stoicism, which in my opinion is the most practical of all philosophies, and therefore the most appealing.",
         {
-          text: "We charge £195 for 300 to 400 photos for the basic service.",
-          number: 2,
+          text: "Stoicism was founded in ancient Greece by Zeno of Citium in the early third century BC.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK, and does that include the disk?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Yes, one disk, but you can get extra ones for £5 each."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "That's good.",
-        "So, do I need to pay when I send you the photos?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "No, we won't need anything until we've actually copied the pictures.",
+        "It was later practiced by figures such as Epictetus, Cato, Seneca, and Marcus Aurelius.",
         {
-          text: "Then we'll let you know how much it is, and once we've received the payment, we'll send the parcel off to you.",
-          number: 3,
+          text: "Amazingly, we still have access to these ideas, despite the fact that the most famous Stoics never wrote anything down for publication.",
+          number: 32,
         },
+        "Cato definitely didn't, Marcus Aurelius never intended his Meditations to be anything but personal, and Seneca's letters were, well, letters.",
+        "Epictetus' thoughts come to us by way of a note-taking student.",
+        "Stoic principles were based on the idea that followers could achieve unshakable happiness in this life, and the key to this was virtue.",
+        "The road to virtue lay in understanding that destructive emotions like anger and jealousy are under our conscious control.",
+        {
+          text: "According to Epictetus, while we cannot control external events, we can control how we respond to them.",
+          number: 33,
+        },
+        "The modern-day philosopher and writer Nassim Nicholas Taleb defines a Stoic as someone who has a different perspective on experiences.",
+        {
+          text: "These are experiences which most people would consider wholly negative.",
+          number: 34,
+        },
+        "A Stoic transforms fear into caution, pain into transformation, mistakes into initiation, and desire into undertaking.",
+        "Using this definition, we can see that throughout history Stoicism has influenced kings, presidents, artists, writers, and entrepreneurs.",
+        "The founding fathers of the United States were inspired by the philosophy.",
+        {
+          text: "George Washington was introduced to Stoicism at the age of seventeen and later staged a play about Cato to inspire his troops.",
+          number: 35,
+        },
+        "Thomas Jefferson kept a copy of Seneca beside his bed.",
+        "Artists and writers were also influenced by Stoic ideas.",
+        "The French Romantic painter Eugène Delacroix described Stoicism as his consoling religion.",
+        {
+          text: "The economist Adam Smith was influenced by Stoicism through his early education under a teacher who translated Marcus Aurelius.",
+          number: 36,
+        },
+        "Modern political leaders are no exception.",
+        "Former US President Bill Clinton rereads Marcus Aurelius every year.",
+        "Many have compared Barack Obama's calm leadership style to that of Cato.",
+        "Wen Jiabao, the former prime minister of China, has said that Meditations is one of the two books he travels with and that he has read it over a hundred times.",
+        "Stoicism also had a profound influence on Albert Ellis, the founder of cognitive behaviour therapy.",
+        {
+          text: "This form of therapy is commonly used to treat depression by changing how people think and behave.",
+          number: 37,
+        },
+        "The idea behind it is that we can take control of our lives by challenging irrational beliefs.",
+        {
+          text: "These beliefs create faulty thinking patterns and behaviours, which can be corrected using logic.",
+          number: 38,
+        },
+        "Stoicism has also gained popularity in the world of business.",
+        "Stoic principles help build resilience and the mindset needed to overcome setbacks.",
+        {
+          text: "They teach people how to turn obstacles into opportunities, a lesson every entrepreneur needs.",
+          number: 39,
+        },
+        "I would argue that Stoicism is just as relevant today as it was two thousand years ago.",
+        "At its core is a simple idea: control what you can and accept what you cannot.",
+        {
+          text: "This way of living requires great discipline and practice, and it can take a lifetime to master.",
+          number: 40,
+        },
+        "The Stoics believed that the foundation of a good life is not money, fame, power, or pleasure, but a principled and disciplined character.",
+        "This idea continues to resonate strongly with people today.",
       ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
-        "Now listen and answer questions 4 to 10.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Is there anything else you'd like to ask about our services?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Yes, I've roughly sorted out the photos into groups according to what they're about.",
-        "So, can you keep them in those groups when you copy them?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Sure, we'll save each group in a different folder on the disk,",
-        "and if you like, you can suggest a name for each folder.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        {
-          text: "So, I could have one called 'Grandparents' for instance?",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Exactly."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "And do you do anything besides scan the photos?",
-        "Like, can you make any improvements?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, in the standard service, each photo is checked,",
-        {
-          text: "and we can sometimes touch up the color a bit, or improve the contrast,",
-          number: 5,
-        },
-        "that can make a big difference.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, and some of the photos are actually quite fragile.",
-        "They won't get damaged in the process, will they?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        {
-          text: "No, if any look particularly fragile, we'd do them by hand.",
-          number: 6,
-        },
-        "We do realize how precious these old photos can be.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "And another thing is we can make changes to a photo if you want,",
-        {
-          text: "so, if you want to remove an object from a photo, or maybe alter the background,",
-          number: 7,
-        },
-        "we can do that.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Really?",
-        "I might be interested in that.",
-        "I'll have a look through the photos and see.",
-        "Oh, and talking of fixing photos.",
-        { text: "I've got a few that aren't properly in focus.", number: 8 },
-        "Can you do anything to make that better?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["No, I'm afraid that's one thing we can't do."],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Any other information I can give you?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Er... oh, how long will it all take?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [{ text: "We aim to get the copying done in 10 days.", number: 9 }],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Fine.",
-        "Right, well, I'll get the photos packed up in a box and post them off to you.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Right, if you've got a strong cardboard box, that's best.",
-        {
-          text: "We've found that plastic ones sometimes break in the post.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK.", "Right, thanks for your help.", "Bye."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Bye."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have half a minute to check your answers to part 1.",
+        "That is the end of Part 4.",
+        "You now have one minute to check your answers to Part 4.",
       ],
     },
   ];
+
+  // different option
+  const questions = [
+    "Which TWO facilities at the leisure club have recently been improved?",
+  ];
+
+  const options = [
+    [
+      "A. the gym",
+      "B. the tracks",
+      "C. the indoor pool",
+      "D. the outdoor pool",
+      "E. the sports training for children",
+    ],
+  ];
+  const notesQuestions = [
+    "New members should describe any ____.",
+    "The ____ will be explained to you before you use the equipment.",
+    "You will be given a six-week ____.",
+    "There is a compulsory £90 ____ fee for members.",
+    "Gold members are given ____ to all the LP clubs.",
+    "Premier members are given priority during ____ hours.",
+    "Premier members can bring some ____ every month.",
+    "Members should always take their ____ with them.",
+  ];
+  const [selectedOptions, setSelectedOptions] = useState(
+    Array(questions.length).fill(null)
+  );
+  const handleOptionClick = (qIndex, option) => {
+    const updatedOptions = [...selectedOptions];
+    updatedOptions[qIndex] = option;
+    setSelectedOptions(updatedOptions);
+
+    // Update userAnswers for score calculation
+    setUserAnswers((prev) => {
+      const answerKey = qIndex + 11;
+      const updated = { ...prev, [answerKey]: option };
+      calculateScore(updated);
+      return updated;
+    });
+  };
 
   const handleTextSelect = () => {
     const selection = window.getSelection();
@@ -383,12 +256,26 @@ const Test2Listening2021 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-      if (speaker === "ANNOUNCER")
+
+      // Announcer: male
+      if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "TC EMPLOYEE")
-        return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "OFFICER")
+      }
+      if (speaker === "RUSS") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
+
+      // Erica: female
+      if (speaker === "JOY PARKINS") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
+
       return voices[0];
     };
 
@@ -425,21 +312,26 @@ const Test2Listening2021 = () => {
     };
     speakNextChunk();
   };
-
-  //  Marks show
-
+  useEffect(() => {
+    window.speechSynthesis.onvoiceschanged = () => {
+      const list = window.speechSynthesis.getVoices();
+      console.log("Available voices:", list);
+    };
+  }, []);
+  // Marks show
   const correctAnswers = {
-    1: "frame",
-    2: "195",
-    3: "payment",
-    4: "grandparents",
-    5: "colour",
-    6: "hand",
-    7: "background",
-    8: "focus",
-    9: "10 days",
-    10: "plastic",
+    31: "modern",
+    32: "public",
+    33: "choices",
+    34: "negative",
+    35: "play",
+    36: "economics",
+    37: "depression",
+    38: "logic",
+    39: "opportunities",
+    40: "discipline",
   };
+
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -464,7 +356,7 @@ const Test2Listening2021 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening1Part22021", newScore);
   };
 
   const toggleButton = (id) => {
@@ -476,12 +368,12 @@ const Test2Listening2021 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/listening1Part22021");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening1Part22021");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -493,7 +385,7 @@ const Test2Listening2021 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -524,7 +416,9 @@ const Test2Listening2021 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Picture Conversion Service")}
+                {renderText(
+                  "The Significance and Influence of Stoicism Throughout History"
+                )}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -554,275 +448,285 @@ const Test2Listening2021 = () => {
         </div>
 
         {/* RIGHT SIDE */}
+        {/* ---------- Questions 11–12 ---------- */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
-            {renderText("Complete the notes below.")} <br />
+            {renderText("Complete the notes below.")}
+            <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
           <div className="border p-6 rounded-lg space-y-6 bg-white">
-            <h1 className="text-2xl font-bold text-center">
-              {renderText("Copying photos to digital format")}
-            </h1>
+            {/* Stoicism */}
+            <h2 className="text-lg font-bold">{renderText("Stoicism")}</h2>
 
-            {/* ---------- Company ---------- */}
             <p className="text-lg">
-              {renderText("Name of company: ")}
-              <span className="font-semibold">{renderText("Picturerep")}</span>
+              {renderText("Stoicism is still relevant today because of its")}
+              <button
+                onClick={() => toggleButton(31)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[31]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                31
+              </button>
+              <input
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("appeal.")}
             </p>
 
-            {/* ---------- Requirements ---------- */}
+            {/* Ancient Stoics */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Requirements")}
+              {renderText("Ancient Stoics")}
             </h2>
 
-            <p className="text-lg">
+            <p>
               {renderText(
-                "Maximum size of photos is 30 cm, minimum size 4 cm."
+                "Stoicism was founded over 2,000 years ago in Greece."
               )}
             </p>
 
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Photos must not be in a")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("or an album.")}
-            </p>
-
-            {/* ---------- Cost ---------- */}
-            <h2 className="text-lg font-bold mt-6">{renderText("Cost")}</h2>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("The cost for 360 photos is £")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("(including one disk).")}
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Before the completed order is sent,")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("is required.")}
-            </p>
-
-            {/* ---------- Services Included ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Services included in the price")}
-            </h2>
-
-            {/* Q4 */}
             <p className="text-lg">
               {renderText(
-                "Photos can be placed in a folder, e.g. with the name"
+                "The Stoics' ideas are surprisingly well known, despite not being intended for"
               )}
               <button
-                onClick={() => toggleButton(4)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                4
+                32
               </button>
               <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               .
             </p>
 
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("The")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("and contrast can be improved if necessary.")}
-            </p>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("Photos which are very fragile will be scanned by")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
-            </p>
-
-            {/* ---------- Special Restore ---------- */}
+            {/* Stoic principles */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Special restore service (costs extra)")}
+              {renderText("Stoic principles")}
             </h2>
 
-            {/* Q7 */}
+            <p>
+              {renderText(
+                "Happiness could be achieved by leading a virtuous life."
+              )}
+            </p>
+            <p>{renderText("Controlling emotions was essential.")}</p>
+
             <p className="text-lg">
               {renderText(
-                "It may be possible to remove an object from a photo, or change the"
+                "Epictetus said that external events cannot be controlled but the"
               )}
               <button
-                onClick={() => toggleButton(7)}
+                onClick={() => toggleButton(33)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
+                  activeButtons[33]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                7
+                33
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("people make in response can be controlled.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "A Stoic is someone who has a different view on experiences which others would consider as"
+              )}
+              <button
+                onClick={() => toggleButton(34)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[34]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               .
             </p>
 
-            {/* Q8 */}
-            <p className="text-lg">
-              {renderText("A photo which is not correctly in")}
-              <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                8
-              </button>
-              <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("cannot be fixed.")}
-            </p>
-
-            {/* ---------- Other Information ---------- */}
+            {/* Influence */}
             <h2 className="text-lg font-bold mt-6">
-              {renderText("Other information")}
+              {renderText("The influence of Stoicism")}
             </h2>
 
-            {/* Q9 */}
             <p className="text-lg">
-              {renderText("Orders are completed within")}
+              {renderText("George Washington organised a")}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(35)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[35]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                35
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("about Cato to motivate")}
+            </p>
+
+            <p>{renderText("The French artist Delacroix was a Stoic.")}</p>
+
+            <p className="text-lg">
+              {renderText("Adam Smith's ideas on")}
+              <button
+                onClick={() => toggleButton(36)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[36]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("were influenced by Stoicism.")}
+            </p>
+
+            <p>
+              {renderText(
+                "Some of today's political leaders are inspired by the Stoics."
+              )}
+            </p>
+
+            {/* CBT */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Cognitive Behaviour Therapy (CBT)")}
+            </h2>
+
+            <p className="text-lg">
+              {renderText("the treatment for")}
+              <button
+                onClick={() => toggleButton(37)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("is based on ideas from Stoicism")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("people learn to base their thinking on")}
+              <button
+                onClick={() => toggleButton(38)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               .
             </p>
 
-            {/* Q10 */}
             <p className="text-lg">
-              {renderText("Send the photos in a box (not")}
+              {renderText(
+                "In business, people benefit from Stoicism by identifying obstacles as"
+              )}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(39)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[39]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                39
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              ).
+              .
+            </p>
+
+            {/* Relevance */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Relevance of Stoicism")}
+            </h2>
+
+            <p className="text-lg">
+              {renderText("It requires a lot of")}
+              <button
+                onClick={() => toggleButton(40)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("but Stoicism can help people to lead a good life.")}
+            </p>
+
+            <p>
+              {renderText(
+                "It teaches people that having a strong character is more important than anything else."
+              )}
             </p>
           </div>
           <div className="mt-10">
@@ -849,11 +753,11 @@ const Test2Listening2021 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -920,9 +824,9 @@ const Test2Listening2021 = () => {
           </div>
         </div>
       </div>
-      <Listening2Pagination2021></Listening2Pagination2021>
+      <Listening1Pagination2021></Listening1Pagination2021>
     </div>
   );
 };
 
-export default Test2Listening2021;
+export default Listening1Part42021;

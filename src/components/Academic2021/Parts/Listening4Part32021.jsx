@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening4Pagination2015 from "../Pagination 2015/Listening4Pagination2015";
+import Listening4Pagination2021 from "../Pagination 2021/Listening4Pagination2021";
 
-const Listening4Part32015 = () => {
+const Listening4Part32021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +15,7 @@ const Listening4Part32015 = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentLine, setCurrentLine] = useState(null);
   const [currentChunk, setCurrentChunk] = useState(null);
-  const [score, setScore] = useState(0);
-  const [userAnswers, setUserAnswers] = useState({});
+
   const [selectedText, setSelectedText] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
@@ -29,90 +28,120 @@ const Listening4Part32015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3, you will hear two psychology students called Tim and Laura talking about Laura's work placement first.",
-        "You have some time to look at questions 21 to 24.",
+        "Part 3. You will hear two urban planning students discussing bike-sharing schemes in different cities.",
+        "First, you have some time to look at questions 21 to 24.",
         "Now listen carefully and answer questions 21 to 24.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "Hi, Laura, could you spare a few minutes to talk about the work placement you did last summer? I'm thinking of doing one myself.",
+        "Now that we've done all the research into bike-sharing schemes in cities around the world, we need to think about how we're going to organize our report.",
       ],
     },
     {
-      speaker: "LAURA",
-      text: ["Hi, Tim. Sure."],
-    },
-    {
-      speaker: "TIM",
-      text: ["Didn't you do yours at an environmental services company?"],
-    },
-    {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "That's right. It's only a very small company, and they needed someone to produce a company brochure. And I wanted to get some business experience, because I'm interested in a career in occupational psychology in a business environment. It was good, because I had overall responsibility for the project.",
+        "Right. I think we should start by talking about the benefits. I mean it's great that so many cities have introduced these schemes where anyone can pick up a bike from dozens of different locations and hire it for a few hours. It makes riding a bike very convenient for people.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "What kind of skills do you think you developed on the placement? I mean apart from the ones you already had. Did you have to do all the artwork for the brochure? The layout and everything.",
+        "Yes, but the costs can add up, and that puts people on low incomes off in some places.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "We hired the services of a professional photographer for that. I did have to use my IT skills to a certain extent, because I cut and pasted text from marketing leaflets. But that didn't involve anything I hadn't done before.",
+        "Hmm, I suppose so. But if it means more people in general are cycling rather than driving, then because they're increasing the amount of physical activity they do, it's good for their health.",
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: [
+        "OK. But isn't that of less importance? I mean, doesn't the impact of reduced emissions on air pollution have a more significant effect on people's health?",
         {
-          text: "Oh, definitely. There was so much pressure to meet the project deadline, and I also got better at explaining things, and asserting my opinions. Because I had to have weekly consultations with the marketing manager, and give him a progress report.",
-          number: 21,
-        },
-        {
-          text: "Oh, definitely. There was so much pressure to meet the project deadline, and I also got better at explaining things, and asserting my opinions. Because I had to have weekly consultations with the marketing manager, and give him a progress report.",
+          text: "Reduced emissions from bike-sharing can have a significant effect on public health.",
           number: 22,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: ["It sounds as if you got a lot out of it then."],
-    },
-    {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "Absolutely. It was really worthwhile, but you know, the company benefited too.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Yes, they must have done. After all, if they'd used a professional advertising agency to produce their brochure, instead of doing it in-house. Presumably they'd have paid a lot more.",
-      ],
-    },
-    {
-      speaker: "LAURA",
-      text: [
-        "Oh yes, I worked it out. It would have been 250% more, and I thought the end result was good. Even though we did everything on site, the company has quite a powerful computer, and I managed to borrow some scanning software from the university. The new brochure looks really professional. It enhances the image of the company straight away.",
+        "Certainly in some cities, bike-sharing has made a big contribution to that, and also helped to cut the number of cars on the road significantly.",
         {
-          text: "Even though we did everything on site, the company has quite a powerful computer, and I managed to borrow some scanning software from the university. The new brochure looks really professional. It enhances the image of the company straight away.",
+          text: "Bike-sharing reduces car use and traffic in cities.",
+          number: 21,
+        },
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: ["Which is the main point."],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "Exactly. But I'd say it's had less of an impact on noise pollution, because there are still loads of buses and lorries around.",
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: ["Right."],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "Shall we quickly discuss the recommendations we're going to make?",
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: ["In order to ensure bike-sharing schemes are successful?"],
+    },
+    {
+      speaker: "AMY",
+      text: ["Yes."],
+    },
+    {
+      speaker: "JAKE",
+      text: [
+        "OK. Well, while I think it's nice to have really state-of-the-art bikes with things like GPS, I wouldn't say they're absolutely necessary.",
+      ],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "But some technical things are really important, like a fully functional app, so people can make payments and book bikes easily.",
+        {
+          text: "Technical infrastructure like apps is crucial for bike-sharing success.",
           number: 23,
         },
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: [
+        "Good point. Some people say there shouldn't be competing companies offering separate bike-sharing schemes. But in some really big cities, competition's beneficial. And anyway, one company might not be able to manage the whole thing.",
+      ],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "Right. Deciding how much to invest is a big question. Cities which have opened loads of new bike lanes at the same time as introducing bike-sharing schemes have generally been more successful, but there are examples of successful schemes where this hasn't happened. What does matter though, is having a big publicity campaign.",
         {
-          text: "The new brochure looks really professional. It enhances the image of the company straight away.",
+          text: "Investment in infrastructure and publicity affects the success of bike-sharing schemes.",
           number: 24,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "So, in the long run, it should help them to attract clients and improve their sales figures.",
+        "Definitely. If people don't know how to use the scheme, or don't understand its benefits, they won't use it. People need a lot of persuasion to stop using their cars.",
       ],
-    },
-    {
-      speaker: "LAURA",
-      text: ["That's the idea, yeah."],
     },
     {
       speaker: "ANNOUNCER",
@@ -122,194 +151,170 @@ const Listening4Part32015 = () => {
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "AMY",
       text: [
-        "Well, all in all, it sounds very positive. I think I'll go ahead and apply for a placement myself. How do I go about it?",
+        "Shall we look at some examples now, and say what we think is good or bad about them?",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "JAKE",
       text: [
-        "It's easy enough to do. Because there's a government agency called STEP - S T E P - that organizes placements for students. You should start by getting their booklet with all the details. I expect you can download one from their website.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Actually, they've got copies in the psychology department. I've seen them there. I'll just go to the office and pick one up.",
+        "I suppose we should start with Amsterdam, as this was one of the first cities to have a bike-sharing scheme.",
         {
-          text: "I've seen them there. I'll just go to the office and pick one up.",
+          text: "Amsterdam is a leading example of a bike-sharing scheme.",
           number: 25,
         },
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "Right, and then, if I were you, after I'd looked at it, I'd go over all the options with someone.",
+        "Yes. There was already a strong culture of cycling here. In a way, it's strange that there was such a demand for bike-sharing, because you'd have thought most people would have used their own bikes.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "I suppose I should ask my tutor's advice. He knows more about me than anyone.",
-      ],
-    },
-    {
-      speaker: "LAURA",
-      text: [
-        "One of the career officers would be better. They've got more knowledge about the jobs market than your personal tutor would have.",
+        "And yet it's one of the best used schemes. Dublin's an interesting example of a success story.",
         {
-          text: "They've got more knowledge about the jobs market than your personal tutor would have.",
+          text: "Dublin's bike-sharing success shows demand can grow even with other transport options.",
           number: 26,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: ["OK."],
-    },
-    {
-      speaker: "LAURA",
+      speaker: "JAKE",
       text: [
-        "And then, when you know what you want, you can register with STEP. You'll find their address in the booklet, and once you've registered, they assign you to a mentor who looks after your application.",
+        "Hmm. Not really. There's no underground, but there are trams and a good bus network. I'd say price has a lot to do with it. It's one of the cheapest schemes in Europe to join.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "AMY",
       text: [
-        "And then I suppose you just sit back and wait till you hear something.",
+        "But the buses are really slow. Anyway, the weather certainly can't be a factor.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "JAKE",
       text: [
-        "They told me at the careers office that it's best to be proactive and get updates yourself. By checking the website for new placement alerts.",
+        "No, definitely not. The London scheme's been quite successful.",
         {
-          text: "By checking the website for new placement alerts.",
+          text: "London's bike-sharing scheme is popular and well maintained.",
           number: 27,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "AMY",
       text: [
-        "I don't suppose it's a good idea to get in touch with companies directly, is it?",
+        "Yes, it's been a really good thing for the city. The bikes are popular, and the whole system is well maintained, but it isn't expanding quickly enough.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "JAKE",
       text: [
-        "Not really, but it is the company who notifies you if they want you to go for an interview. You get a letter of invitation or an email from the personnel department.",
+        "Basically not enough's been spent on increasing the number of cycle lanes, hopefully that'll change.",
+      ],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "Yes, now what about outside Europe?",
         {
-          text: "You get a letter of invitation or an email from the personnel department.",
+          text: "Bike-sharing schemes vary widely outside Europe.",
           number: 28,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "And do I reply directly to them?",
-        {
-          text: "And do I reply directly to them?",
-          number: 28,
-        },
+        "Well, bike-sharing schemes have taken off in places like Buenos Aires.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "Yes, you do. STEP only gets involved again once you've been made a job offer.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Right, so once you've had an interview, you should let your mentor know what the outcome is. I mean, whether you're offered a job, and whether you've decided to accept it.",
+        "Hmm, they built a huge network of cycle lanes to support the introduction of the scheme there, didn't they? It attracted huge numbers of cyclists where previously there were hardly any.",
         {
-          text: "I mean, whether you're offered a job, and whether you've decided to accept it.",
+          text: "Buenos Aires invested in cycle lanes, increasing bike usage.",
           number: 29,
         },
       ],
     },
     {
-      speaker: "LAURA",
-      text: [
-        "That's right. They'll inform the careers office once a placement has been agreed, so you don't have to do that.",
-      ],
+      speaker: "JAKE",
+      text: ["An example of good planning."],
     },
     {
-      speaker: "TIM",
-      text: ["Is that all then?"],
-    },
-    {
-      speaker: "LAURA",
+      speaker: "AMY",
       text: [
-        "More or less. Only once you've accepted an offer, you'll probably have to supply a reference, because the placement will be conditional on that, and that's something you should ask your own tutor to provide. He knows about your academic ability, and also about your qualities like reliability.",
+        "Absolutely. New York is a good example of how not to introduce a scheme. When they launched it, it was more than 10 times the price of most other schemes.",
         {
-          text: "He knows about your academic ability, and also about your qualities like reliability.",
+          text: "New York's scheme failed due to high cost.",
           number: 30,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "JAKE",
       text: [
-        "Well, thanks very much for the information. I'm starting to look forward to...",
+        "More than it costs to take a taxi, crazy. I think the organizers lacked vision and ambition there.",
       ],
+    },
+    {
+      speaker: "AMY",
+      text: [
+        "I think so too. Sydney would be a good example to use. I would have expected it to have grown pretty quickly here.",
+      ],
+    },
+    {
+      speaker: "JAKE",
+      text: [
+        "Yes, I can't quite work out why it hasn't been an instant success like some of the others.",
+      ],
+    },
+    {
+      speaker: "AMY",
+      text: ["It's a shame really."],
+    },
+    {
+      speaker: "JAKE",
+      text: ["I know. OK, so now we've thought about all those."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
-        "You now have half a minute to check your answers.",
+        "That is the end of Part 3.",
+        "You now have half a minute to check your answers to Part 3.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "According to the manager, what do most people like about the job of kitchen assistant?",
-    "The manager is concerned about some of the new staff's",
-    "The manager says that the day is likely to be busy for kitchen staff because",
-    "Only kitchen staff who are 18 or older are allowed to use",
-    "What is one reason the job of kitchen assistant can be stressful?",
-    "What is another reason the job of kitchen assistant can be stressful?",
+    "Which TWO facilities at the leisure club have recently been improved?",
   ];
 
   const options = [
     [
-      "A. the variety of work",
-      "B. the friendly atmosphere",
-      "C. the opportunities for promotion",
-    ],
-
-    ["A. jewellery.", "B. hair styles.", "C. shoes."],
-
-    [
-      "A. it is a public holiday.",
-      "B. the head chef is absent.",
-      "C. the restaurant is almost fully booked.",
-    ],
-
-    [
-      "A. the waste disposal unit.",
-      "B. the electric mixer.",
-      "C. the meat slicer.",
-    ],
-    [
-      "A. They have to follow orders immediately.",
-      "B. The kitchen gets very hot.",
-      "C. They may not be able to take a break.",
-    ],
-    [
-      "A. They have to do overtime.",
-      "B. The work is physically demanding.",
-      "C. They have to clean customer areas.",
+      "A. the gym",
+      "B. the tracks",
+      "C. the indoor pool",
+      "D. the outdoor pool",
+      "E. the sports training for children",
     ],
   ];
-
+  const notesQuestions = [
+    "New members should describe any ____.",
+    "The ____ will be explained to you before you use the equipment.",
+    "You will be given a six-week ____.",
+    "There is a compulsory £90 ____ fee for members.",
+    "Gold members are given ____ to all the LP clubs.",
+    "Premier members are given priority during ____ hours.",
+    "Premier members can bring some ____ every month.",
+    "Members should always take their ____ with them.",
+  ];
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
@@ -492,43 +497,52 @@ const Listening4Part32015 = () => {
   }, []);
 
   //  Marks show
-
-  const multiChoiceQuestions = [21, 23];
-
-  // Correct answers
   const correctAnswers = {
-    "21-22": ["A", "E"], // Q21–22 together
-    "23-24": ["B", "C"], // Q23–24 together
-    25: "F",
-    26: "C",
-    27: "G",
-    28: "A",
-    29: "E",
-    30: "C",
+    // Questions 21–22: TWO benefits of city bike-sharing schemes
+    "21-22": ["B", "D"], // B: reducing traffic congestion, D: encouraging health and fitness
+
+    // Questions 23–24: TWO necessary things for successful bike-sharing schemes
+
+    "23-24": ["B", "C"], // same as Q23 for the second part
+
+    // Questions 25–30: Opinion of bike-sharing schemes in each city
+    25: "C", // Amsterdam – surprised it has been so successful
+    26: "C", // Dublin – surprised it has been so successful
+    27: "D", // London – more investment required
+    28: "C", // Buenos Aires – surprised it has been so successful
+    29: "A", // New York – disappointing
+    30: "F", // Sydney – disagree about the reasons for success
   };
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
 
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
-      let updated = { ...prev };
+      const updated = { ...prev };
 
-      // Multi-select (arrays) for 11-12, 13-14
-      if (id === "21-22" || id === "23-24") {
+      // If it's a multiple-answer question
+      if (Array.isArray(correctAnswers[id])) {
         const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
+
         if (prevAnswers.includes(value)) {
-          updated[id] = prevAnswers.filter((v) => v !== value);
+          // Uncheck: remove from array
+          updated[id] = prevAnswers.filter((ans) => ans !== value);
         } else {
+          // Check: add to array
           updated[id] = [...prevAnswers, value];
         }
       } else {
-        // Single-select (string) for 15–20
+        // Single-answer question
         updated[id] = value;
       }
 
-      calculateScore(updated); // recalc score immediately
+      calculateScore(updated);
       return updated;
     });
   };
-  // --- Calculate score ---
+
+  // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
 
@@ -556,46 +570,25 @@ const Listening4Part32015 = () => {
     setScore(newScore);
   };
 
-  // --- Restore from localStorage ---
-  useEffect(() => {
-    const savedScore = localStorage.getItem("/listening4Part32015");
-    if (savedScore) setScore(Number(savedScore));
-  }, []);
+  const toggleButton = (id) => {
+    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
 
-  // --- Clear all ---
   const handleClear = () => {
     setUserAnswers({});
     setScore(0);
-    setShowResult(false);
-    localStorage.removeItem("/listening4Part32015");
+    setActiveButtons({});
+    setIsOpen(false);
+    localStorage.removeItem("/listening4Part32021");
   };
 
-  // --- Render multi-choice options ---
-  const renderCheckboxes = (questionNumber, options) => {
-    return options.map(([letter, text]) => {
-      const prev = userAnswers[questionNumber] || [];
-      const checked = prev.includes(letter);
-      return (
-        <label key={letter} className="flex items-center gap-3">
-          <input
-            type="checkbox"
-            value={letter}
-            checked={checked}
-            onChange={() => {
-              let updated = [];
-              if (prev.includes(letter)) {
-                updated = prev.filter((l) => l !== letter);
-              } else {
-                updated = [...prev, letter];
-              }
-              handleInputChange(questionNumber, updated);
-            }}
-          />
-          <span className="font-semibold">{letter}.</span> {text}
-        </label>
-      );
-    });
-  };
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/listening4Part32021");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -634,7 +627,7 @@ const Listening4Part32015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Laura's work placement")}
+                {renderText("Analyzing and Discussing Bike-sharing Schemes")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -664,78 +657,82 @@ const Listening4Part32015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
-          {/* ---------- Questions 21–22 ---------- */}
+        {/* ---------- Questions 11–12 ---------- */}
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
+          {/* ---------- Questions 21–24 ---------- */}
           <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 21–24")}
+          </h2>
+          <p className="mb-4 font-semibold">
+            {renderText("Choose TWO letters, A–E.")}
+          </p>
+
+          {/* Q21–22 */}
+          <p className="mb-4 font-semibold">
             {renderText("Questions 21 and 22")}
-          </h2>
-          <p className="mb-4 font-semibold">
-            {renderText("Choose TWO letters, A–E.")}
           </p>
-
-          <p className="font-semibold mt-3">
+          <p className="mb-2">Choose TWO letters, A–E.</p>
+          <p className="mb-4">
             {renderText(
-              "21–22 Which TWO skills did Laura improve as a result of her work placement?"
-            )}
-          </p>
-          {["communication", "design", "IT", "marketing", "organisation"].map(
-            (optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
-
-              const selectedOptions = userAnswers["21-22"] || [];
-              const isChecked = selectedOptions.includes(value);
-
-              // Disable other options once TWO are selected
-              const isDisabled = selectedOptions.length === 2 && !isChecked;
-
-              return (
-                <label
-                  key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    disabled={isDisabled}
-                    onChange={() => handleInputChange("21-22", value)}
-                  />
-
-                  <span className="font-semibold">{value}.</span>
-                  <span>{renderText(optionText)}</span>
-                </label>
-              );
-            }
-          )}
-
-          {/* ---------- Questions 23–24 ---------- */}
-          <h2 className="font-bold text-lg mt-8">
-            {renderText("Questions 23 and 24")}
-          </h2>
-          <p className="mb-4 font-semibold">
-            {renderText("Choose TWO letters, A–E.")}
-          </p>
-
-          <p className="font-semibold mt-3">
-            {renderText(
-              "23–24 Which TWO immediate benefits did the company get from Laura's work placement?"
+              "Which TWO benefits of city bike-sharing schemes do the students agree are the most important?"
             )}
           </p>
 
           {[
-            "updates for its software",
-            "cost savings",
-            "an improved image",
-            "new clients",
-            "a growth in sales",
+            "reducing noise pollution",
+            "reducing traffic congestion",
+            "improving air quality",
+            "encouraging health and fitness",
+            "making cycling affordable",
           ].map((optionText, index) => {
-            const value = String.fromCharCode(65 + index); // A–E
+            const value = String.fromCharCode(65 + index);
+
+            const selectedOptions = userAnswers["21-22"] || [];
+            const isChecked = selectedOptions.includes(value);
+            const isDisabled = selectedOptions.length === 2 && !isChecked;
+
+            return (
+              <label
+                key={index}
+                className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                  isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  disabled={isDisabled}
+                  onChange={() => handleInputChange("21-22", value)}
+                />
+
+                <span className="font-semibold">{value}.</span>
+                <span>{renderText(optionText)}</span>
+              </label>
+            );
+          })}
+
+          {/* Q23–24 */}
+          <p className="mt-8 mb-4 font-semibold">
+            {renderText("Questions 23 and 24")}
+          </p>
+          <p className="mb-2">Choose TWO letters, A–E.</p>
+          <p className="mb-4">
+            {renderText(
+              "Which TWO things do the students think are necessary for successful bike-sharing schemes?"
+            )}
+          </p>
+
+          {[
+            "Bikes should have a GPS system.",
+            "The app should be easy to use.",
+            "Public awareness should be raised.",
+            "Only one scheme should be available.",
+            "There should be a large network of cycle lanes.",
+          ].map((optionText, index) => {
+            const value = String.fromCharCode(65 + index);
 
             const selectedOptions = userAnswers["23-24"] || [];
             const isChecked = selectedOptions.includes(value);
-
-            // Disable other options once TWO are selected
             const isDisabled = selectedOptions.length === 2 && !isChecked;
 
             return (
@@ -759,61 +756,56 @@ const Listening4Part32015 = () => {
           })}
 
           {/* ---------- Questions 25–30 ---------- */}
-          <h2 className="font-bold text-lg mt-8">
-            {renderText("Questions 25–30")}
-          </h2>
-          <p className="mb-4">
-            {renderText(
-              "What source of information should Tim use at each of the following stages of the work placement?"
-            )}
-            <br />
-            {renderText(
-              "Choose the correct letter, A–G, next to Questions 25–30."
-            )}
-          </p>
+          <div className="mb-6 p-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">
+              {renderText("Questions 25–30")}
+            </h2>
+            <p className="text-gray-700 mb-4">
+              {renderText(
+                "What is the speakers' opinion of the bike-sharing schemes in each of the following cities? Choose the correct letter, A–G, next to Questions 25–30."
+              )}
+            </p>
 
-          {/* Sources list */}
-          <div className="border p-5 rounded-lg bg-white max-w-sm mx-auto mb-6 text-center">
-            {[
-              { letter: "A", text: "company manager" },
-              { letter: "B", text: "company's personnel department" },
-              { letter: "C", text: "personal tutor" },
-              { letter: "D", text: "psychology department" },
-              { letter: "E", text: "mentor" },
-              { letter: "F", text: "university careers officer" },
-              { letter: "G", text: "internet" },
-            ].map((item) => (
-              <p key={item.letter}>
-                <span className="font-semibold">{item.letter}.</span>{" "}
-                {renderText(item.text)}
-              </p>
-            ))}
+            <div className="border border-gray-400 rounded-md p-4 max-w-sm mx-auto bg-white shadow-sm">
+              <h3 className="font-semibold text-center mb-3">
+                {renderText("Opinion of bike-sharing scheme")}
+              </h3>
+              <ul className="space-y-1 text-gray-700">
+                {[
+                  "A. They agree it has been disappointing",
+                  "B. They think it should be cheaper",
+                  "C. They are surprised it has been so successful",
+                  "D. They agree that more investment is required",
+                  "E. They think the system has been well designed",
+                  "F. They disagree about the reasons for its success",
+                  "G. They think it has expanded too quickly",
+                ].map((item, index) => (
+                  <li key={index} className="ml-2">
+                    {renderText(item)}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Stages of work placement */}
-          <div>
-            <h1 className="font-bold text-2xl mb-4">
-              Stages of the work placement procedure
-            </h1>
+          <div className="p-5 rounded-lg bg-white space-y-4">
             {[
-              { q: 25, text: "obtaining booklet" },
-              { q: 26, text: "discussing options" },
-              { q: 27, text: "getting updates" },
-              { q: 28, text: "responding to invitation for interview" },
-              { q: 29, text: "informing about outcome of interview" },
-              { q: 30, text: "requesting a reference" },
-            ].map((item) => (
-              <div key={item.q} className="flex items-center gap-2 mb-2">
-                <span className="font-semibold">{item.q}.</span>
-                <span>{item.text}</span>
+              { qNum: 25, city: "Amsterdam" },
+              { qNum: 26, city: "Dublin" },
+              { qNum: 27, city: "London" },
+              { qNum: 28, city: "Buenos Aires" },
+              { qNum: 29, city: "New York" },
+              { qNum: 30, city: "Sydney" },
+            ].map(({ qNum, city }) => (
+              <div key={qNum} className="flex items-center gap-2">
+                <span className="font-semibold">{qNum}.</span>
+                <span>{city}</span>
                 <select
-                  value={userAnswers[item.q] || ""}
-                  onChange={(e) => handleInputChange(item.q, e.target.value)}
-                  className="border px-2 py-1 rounded-md"
+                  value={userAnswers[qNum] || ""}
+                  onChange={(e) => handleInputChange(qNum, e.target.value)}
+                  className="border rounded-md px-2 py-1"
                 >
-                  <option value="" disabled>
-                    Select
-                  </option>
+                  <option value="">{qNum}</option>
                   {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
                     <option key={letter} value={letter}>
                       {letter}
@@ -824,6 +816,7 @@ const Listening4Part32015 = () => {
             ))}
           </div>
 
+          {/* Result Section */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -831,26 +824,23 @@ const Listening4Part32015 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  {renderText("Submit Answers")}
+                  Submit Answers
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">
-                    {renderText("Result")}
-                  </h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    {renderText("Your Score: ")}
-                    {score}/10
+                    Your Score: {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    {renderText("All Answers (21–30)")}
+                    All Answers (21–30)
                   </h3>
 
                   <ul className="space-y-3">
@@ -867,14 +857,13 @@ const Listening4Part32015 = () => {
                           );
                         } else {
                           return (
-                            user?.trim().toLowerCase() ===
-                            correct?.trim().toLowerCase()
+                            user?.trim().toUpperCase() ===
+                            correct?.trim().toUpperCase()
                           );
                         }
                       })();
 
                       const noAnswer = !user;
-
                       const userAnswerDisplay = Array.isArray(user)
                         ? user.join(", ")
                         : user?.trim() || "";
@@ -924,9 +913,9 @@ const Listening4Part32015 = () => {
           </div>
         </div>
       </div>
-      <Listening4Pagination2015></Listening4Pagination2015>
+      <Listening4Pagination2021></Listening4Pagination2021>
     </div>
   );
 };
 
-export default Listening4Part32015;
+export default Listening4Part32021;

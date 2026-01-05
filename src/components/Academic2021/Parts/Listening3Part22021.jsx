@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+import Listening3Pagination2021 from "../Pagination 2021/Listening3Pagination2021";
 
-const Listening1Part22015 = () => {
+const Listening3Part22021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,97 +28,116 @@ const Listening1Part22015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 2. You will hear a fitness manager of a leisure club talking to some new members.",
-        "First, you have some time to look at questions 11 and 12.",
-        "Now listen and answer questions 11 and 12.",
+        "Part 2. You will hear a recruitment officer called Megan Baker, giving a talk at a jobs fair about opportunities for those interested in the food and agriculture sectors.",
+        "First, you have some time to look at questions 11 to 14.",
+        "Now listen carefully and answer questions 11 to 14.",
       ],
     },
     {
-      speaker: "SPEAKER",
+      speaker: "MEGAN BAKER",
       text: [
-        "On behalf of LP clubs, I'd like to welcome you all here today.",
-        "My name is Sandy Fisher, and I'm one of the fitness managers here.",
-        "Before we start our tour of the club, I'll just run through some basic information about the facilities we have here, including recent improvements, and explain the types of membership available.",
-        "Our greatest asset is probably our swimming pool, which at 25 meters isn't Olympic sized, but now we've expanded it to eight lanes, it's much wider.",
+        "Hello, everyone.",
+        "My name is Megan Baker, and I'm a recruitment consultant at AVT Recruitment Specialists.",
+        "Now, our company specializes in positions that involve working in the agriculture and horticulture sectors, so that's fresh food production,",
+        "garden and park maintenance and so on, and these sectors do provide some very special career opportunities.",
+        "For a start, they often offer opportunities for those who don't want to be stuck with a 40-hour week,",
         {
-          text: "This means there are rarely more than a couple of people at a time in each lane.",
+          text: "but need to juggle work with other responsibilities, such as childcare.",
           number: 12,
         },
-        "Unfortunately, there isn't space for an outdoor pool here, but the glass roof on the swimming pool is partly retractable.",
-        "Which means you can enjoy something of the open air experience on warmer days.",
-        "Our recently refurbished fitness suite has all the latest exercise equipment, including 10 new running machines.",
-        { text: "And a wide range of weight training machines.", number: 11 },
-        "Each member is given full training in how to operate the equipment, and there is always a trainer on duty to offer help and advice.",
-        "Although we do have adult only times after 6, and at certain times at weekends.",
-        "Children are well catered for, older children continue to benefit from a wide range of tuition, anything from trampolining to yoga.",
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 13 to 20.",
-        "Now listen and answer questions 13 to 20.",
-      ],
-    },
-    {
-      speaker: "SPEAKER",
-      text: [
-        "One thing all our members appreciate about us is that we take very good care of them.",
-        "This starts on day 1 with your personal assessment.",
+        "And this is very important for many of our recruits.",
+        "Some people like working in a rural setting, surrounded by plants and trees instead of buildings.",
+        "Although we can't guarantee that.",
+        "But there are certainly health benefits,",
         {
-          text: "You are asked to fill in a questionnaire giving details of any health problems.",
-          number: 13,
+          text: "especially in jobs where you're not sitting all day looking at a screen.",
+          number: 11,
         },
-        "One of our personal trainers will then go through this with you.",
+        "A big plus for many people.",
+        "Salaries can sometimes be good too, although there's a lot of variety here.",
+        "And you may have the opportunity in some types of jobs for travel overseas,",
+        "although that obviously depends on the job, and not everyone is keen to do it.",
+        "Of course, working outdoors does have its challenges.",
+        "It's fine in summer, but can be extremely unpleasant when it's cold and windy.",
         {
-          text: "The trainer will then take you through the safety rules for using the equipment in the fitness suite.",
+          text: "You may need to be pretty fit for some jobs.",
           number: 14,
         },
-        "During your next exercise session, a personal trainer will work with you to make sure you understand these.",
-        "It's very important to do this, because we really do want to avoid having any sports injuries.",
-        "There's a lot more to looking after yourself than simply lifting weights.",
+        "Though with modern technology, that's not as important as it once was.",
+        "And standards of health and safety are much higher now than they used to be.",
+        "So there are fewer work-related accidents,",
+        "but if you like a lively city environment surrounded by lots of people,",
         {
-          text: "At the end of the personal assessment, the trainer will draw up a plan, outlining what you should try to achieve within a 6 week period.",
-          number: 15,
+          text: "these jobs are probably not for you.",
+          number: 13,
         },
-        "This will then be reviewed at the end of the 6 weeks.",
-        "Now, I'll just quickly run through the types of membership we have available.",
-        {
-          text: "All members must pay a joining fee of £90, in addition to the rates for the monthly membership fees.",
-          number: 16,
-        },
-        {
-          text: "Gold membership entitles you to free entry at all LP clubs.",
-          number: 17,
-        },
-        "There are now LP clubs in all major cities and towns, so if you travel a lot this will be a great advantage.",
-        "Individual gold membership costs £50 a month, and joint membership for you and your partner will cost £75.",
-        {
-          text: "Premier membership is for professional people whose work commitments make it difficult for them to use the club during the day.",
-          number: 18,
-        },
-        "And so LP gives booking preferences to premier members at peak times.",
-        "This means you'll find it easier to book the sessions at times that suit you.",
-        {
-          text: "Reciprocal arrangements with other LP clubs are available to Premier members.",
-          number: 19,
-        },
-        "Premier membership is for individuals only, but you'll be sent passes for guests every month.",
-        "The monthly fee is £65.",
-        "You don't have to have any special clothes or equipment when you visit the club.",
-        "We provide robes and hairdryers in the changing rooms, but it's very important to remember your photo card.",
-        {
-          text: "Because you won't be able to get in without it.",
-          number: 20,
-        },
-        "For people who aren't working during the day.",
+        "They're often in pretty remote areas,",
+        "and some people worry about finding a suitable place to live,",
+        "but in our experience, this usually turns out fine.",
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 2.",
-        "You now have half a minute to check your answers.",
+        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
+        "Now listen and answer questions 15 to 20.",
+      ],
+    },
+    {
+      speaker: "MEGAN BAKER",
+      text: [
+        "Now, let me tell you about some of the exciting jobs that we have on our books right now.",
+        "One is for a fresh food commercial manager.",
+        "Our client here is a very large fresh food producer, supplying a range of top supermarkets.",
+        "They operate in a very fast-paced environment with low profit margins.",
+        {
+          text: "The staff there work hard, but they play hard as well.",
+          number: 15,
+        },
+        "So, if you have a sociable personality, this may be for you.",
+        "We have an exciting post as an agronomist, advising farmers on issues such as crop nutrition,",
+        "protection against pests, and the latest legislation on farming and agricultural practices.",
+        "There are good opportunities for the right person to quickly make their way up the career ladder,",
+        {
+          text: "but a deep knowledge of the agricultural sector is expected of applicants.",
+          number: 16,
+        },
+        "A leading supermarket is looking for a fresh produce buyer,",
+        "who is available for a 12-month maternity cover contract.",
+        {
+          text: "You need to have experience in administration, planning and buying in the fresh produce industry.",
+          number: 17,
+        },
+        "In return, you will receive a very competitive salary.",
+        "We have also received a request for a sales manager for a chain of garden centres.",
+        "You will be visiting centres in the region to ensure their high levels of customer service are maintained.",
+        {
+          text: "This post is only suitable for someone who is prepared to live in the region.",
+          number: 18,
+        },
+        "There is also a vacancy for a tree technician to carry out tree cutting, forestry and conservation work.",
+        "Candidates must have a clean driving licence and have training in safety procedures.",
+        "A year's experience would be preferred,",
+        {
+          text: "but the company might be prepared to consider someone who has just completed an appropriate training course.",
+          number: 19,
+        },
+        "Finally, we have a position for a farm worker.",
+        "This will involve a wide range of farm duties, including crop sowing and harvesting,",
+        "machine maintenance and animal care.",
+        "Perks of the job include the possibility of renting a small cottage on the estate,",
+        {
+          text: "and a chance to earn a competitive salary.",
+          number: 20,
+        },
+        "A driving licence and tractor driving experience are essential.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of Part 2.",
+        "You now have half a minute to check your answers to Part 2.",
       ],
     },
   ];
@@ -327,33 +346,27 @@ const Listening1Part22015 = () => {
       console.log("Available voices:", list);
     };
   }, []);
-
-  //  Marks show
-
+  // Marks show
   const correctAnswers = {
-    // 11: "AC", // the gym + indoor pool
-    "11-12": ["A", "C"],
-    // optional if you want second checkbox logic; or you can combine 11–12 as one
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    "11-12": ["C", "E"], // Q11 and Q12 combined
+    "13-14": ["C", "E"],
+    15: "D",
+    16: "F",
+    17: "A",
+    18: "H",
+    19: "C",
+    20: "G",
   };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
-  // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       let updated = { ...prev };
 
       // Multi-select (arrays) for 11-12, 13-14
-      if (id === "11-12") {
+      if (id === "11-12" || id === "13-14") {
         const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
         if (prevAnswers.includes(value)) {
           updated[id] = prevAnswers.filter((v) => v !== value);
@@ -370,7 +383,27 @@ const Listening1Part22015 = () => {
     });
   };
 
-  // --- Calculate live score ---
+  // const handleMultiSelectChange = (questionId, letter) => {
+  //   setUserAnswers((prev) => {
+  //     const current = prev[questionId] || [];
+
+  //     let updated;
+  //     if (current.includes(letter)) {
+  //       // Remove the letter if already selected
+  //       updated = {
+  //         ...prev,
+  //         [questionId]: current.filter((l) => l !== letter),
+  //       };
+  //     } else {
+  //       // Add the letter
+  //       updated = { ...prev, [questionId]: [...current, letter] };
+  //     }
+
+  //     calculateScore(updated); // recalc score immediately
+  //     return updated;
+  //   });
+  // };
+
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
@@ -398,6 +431,7 @@ const Listening1Part22015 = () => {
 
     setScore(newScore);
   };
+
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -407,12 +441,12 @@ const Listening1Part22015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening1Part22015");
+    localStorage.removeItem("/listening1Part22021");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening1Part22015");
+    const savedScore = localStorage.getItem("/listening1Part22021");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -455,7 +489,7 @@ const Listening1Part22015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Joining the leisure club")}
+                {renderText("Food and Agriculture Sector Job Opportunities")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -487,57 +521,95 @@ const Listening1Part22015 = () => {
         {/* RIGHT SIDE */}
         {/* ---------- Questions 11–12 ---------- */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
+          {/* ---------- Questions 11–12 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 11 and 12")}
+            {renderText("Questions 11–12")}
           </h2>
-
-          <p className="mb-2 font-semibold">
+          <p className="mb-4 font-semibold">
             {renderText("Choose TWO letters, A–E.")}
           </p>
 
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
             {renderText(
-              "Which TWO facilities at the leisure club have recently been improved?"
+              "According to Megan, what are the TWO main advantages of working in the agriculture and horticulture sectors?"
             )}
           </p>
 
-          <div className="mb-10">
+          {[
+            "the active lifestyle",
+            "the above-average salaries",
+            "the flexible working opportunities",
+            "the opportunities for overseas travel",
+            "the chance to be in a natural environment",
+          ].map((optionText, index) => {
+            const value = String.fromCharCode(65 + index); // A, B, C, ...
+
+            const selectedOptions = userAnswers["11-12"] || [];
+            const isChecked = selectedOptions.includes(value);
+
+            // Disable other checkboxes if 2 are already selected
+            const isDisabled = selectedOptions.length === 2 && !isChecked;
+
+            return (
+              <label
+                key={index}
+                className={`flex items-center gap-3 cursor-pointer mb-1 ${
+                  isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={userAnswers["11-12"]?.includes(value) || false}
+                  onChange={() => handleInputChange("11-12", value)}
+                />
+
+                <span className="font-semibold">{value}.</span>
+                <span>{renderText(optionText)}</span>
+              </label>
+            );
+          })}
+
+          {/* ---------- Questions 13–14 ---------- */}
+          <div className="mt-8">
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 11–12")}
+              {renderText("Questions 13–14")}
             </h2>
             <p className="mb-4 font-semibold">
+              {renderText("Choose TWO letters, A–E.")}
+            </p>
+
+            <p className="mb-4 font-semibold">
               {renderText(
-                "Which TWO facilities at the leisure club have recently been improved?"
+                "Which TWO of the following are likely to be disadvantages for people working outdoors?"
               )}
             </p>
 
             {[
-              "the gym",
-              "the tracks",
-              "the indoor pool",
-              "the outdoor pool",
-              "the sports training for children",
+              "the increasing risk of accidents",
+              "being in a very quiet location",
+              "difficult weather conditions at times",
+              "the cost of housing",
+              "the level of physical fitness required",
             ].map((optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
+              const value = String.fromCharCode(65 + index); // A, B, C, D, E
 
-              const selectedOptions = userAnswers["11-12"] || [];
+              const selectedOptions = userAnswers["13-14"] || [];
               const isChecked = selectedOptions.includes(value);
 
-              // Disable other options once TWO are selected
+              // Disable other checkboxes if 2 are already selected
               const isDisabled = selectedOptions.length === 2 && !isChecked;
 
               return (
                 <label
                   key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                  className={`flex items-center gap-3 cursor-pointer mb-1 ${
                     isDisabled ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                 >
                   <input
                     type="checkbox"
-                    checked={isChecked}
-                    disabled={isDisabled}
-                    onChange={() => handleInputChange("11-12", value)}
+                    checked={userAnswers["13-14"]?.includes(value) || false}
+                    onChange={() => handleInputChange("13-14", value)}
                   />
 
                   <span className="font-semibold">{value}.</span>
@@ -547,140 +619,80 @@ const Listening1Part22015 = () => {
             })}
           </div>
 
-          {/* ---------- Questions 13–20 ---------- */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 13–20")}
-          </h2>
+          {/* ---------- Questions 15–20 ---------- */}
+          <div className="mt-10">
+            <h2 className="text-xl font-bold mb-3">
+              {renderText("Questions 15–20")}
+            </h2>
 
-          <p className="mb-4">
-            {renderText("Complete the notes below.")} <br />
-            {renderText("Write NO MORE THAN TWO WORDS for each answer.")}
-          </p>
-
-          <div className="border p-5 rounded-lg bg-white space-y-5">
-            <h3 className="font-bold text-lg">
-              {renderText("Joining the leisure club")}
-            </h3>
-
-            <h4 className="font-semibold">
-              {renderText("Personal Assessment")}
-            </h4>
-
-            {/* Q13 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("New members should describe any")}
-              <button className="w-7 h-7 rounded-full border">13</button>
-              <input
-                type="text"
-                value={userAnswers[13] || ""}
-                onChange={(e) => handleInputChange(13, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            {/* Q14 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("The")}
-              <button className="w-7 h-7 rounded-full border">14</button>
-              <input
-                type="text"
-                value={userAnswers[14] || ""}
-                onChange={(e) => handleInputChange(14, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
+            <p className="mb-4 font-semibold">
               {renderText(
-                "will be explained to you before you use the equipment."
+                "What information does Megan give about each of the following job opportunities?"
               )}
             </p>
 
-            {/* Q15 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("You will be given a six-week")}
-              <button className="w-7 h-7 rounded-full border">15</button>
-              <input
-                type="text"
-                value={userAnswers[15] || ""}
-                onChange={(e) => handleInputChange(15, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
+            <p className="mb-6 font-semibold">
+              {renderText(
+                "Choose the correct letter, A–H, next to Questions 15–20."
+              )}
             </p>
 
-            <h4 className="font-semibold mt-4">
-              {renderText("Types of membership")}
-            </h4>
+            {/* Information box */}
+            <div className="border border-gray-400 rounded-md p-4 max-w-sm mx-auto bg-white shadow-sm mb-6">
+              <h3 className="font-semibold text-center mb-3">
+                {renderText("Information")}
+              </h3>
+              <ul className="space-y-1 text-gray-700">
+                {[
+                  "A. not a permanent job",
+                  "B. involves leading a team",
+                  "C. experience not essential",
+                  "D. intensive work but also fun",
+                  "E. chance to earn more through overtime",
+                  "F. chance for rapid promotion",
+                  "G. accommodation available",
+                  "H. local travel involved",
+                ].map((item, index) => (
+                  <li key={index}>{renderText(item)}</li>
+                ))}
+              </ul>
+            </div>
 
-            {/* Q16 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("There is a compulsory £90")}
-              <button className="w-7 h-7 rounded-full border">16</button>
-              <input
-                type="text"
-                value={userAnswers[16] || ""}
-                onChange={(e) => handleInputChange(16, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("fee for members.")}
-            </p>
-
-            {/* Q17 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Gold members are given")}
-              <button className="w-7 h-7 rounded-full border">17</button>
-              <input
-                type="text"
-                value={userAnswers[17] || ""}
-                onChange={(e) => handleInputChange(17, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("to all the LP clubs.")}
-            </p>
-
-            {/* Q18 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Premier members are given priority during")}
-              <button className="w-7 h-7 rounded-full border">18</button>
-              <input
-                type="text"
-                value={userAnswers[18] || ""}
-                onChange={(e) => handleInputChange(18, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("hours.")}
-            </p>
-
-            {/* Q19 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Premier members can bring some")}
-              <button className="w-7 h-7 rounded-full border">19</button>
-              <input
-                type="text"
-                value={userAnswers[19] || ""}
-                onChange={(e) => handleInputChange(19, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("every month.")}
-            </p>
-
-            {/* Q20 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Members should always take their")}
-              <button className="w-7 h-7 rounded-full border">20</button>
-              <input
-                type="text"
-                value={userAnswers[20] || ""}
-                onChange={(e) => handleInputChange(20, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("with them.")}
-            </p>
+            {/* Job list */}
+            <div className="p-5 rounded-lg bg-white space-y-4">
+              {[
+                { qNum: 15, job: "Fresh food commercial manager" },
+                { qNum: 16, job: "Agronomist" },
+                { qNum: 17, job: "Fresh produce buyer" },
+                { qNum: 18, job: "Garden centre sales manager" },
+                { qNum: 19, job: "Tree technician" },
+                { qNum: 20, job: "Farm worker" },
+              ].map(({ qNum, job }) => (
+                <div key={qNum} className="flex items-center gap-2">
+                  <span className="font-semibold">{qNum}.</span>
+                  <span className="">{renderText(job)}</span>
+                  <select
+                    value={userAnswers[qNum] || ""}
+                    onChange={(e) => handleInputChange(qNum, e.target.value)}
+                    className="border rounded-md px-2 py-1"
+                  >
+                    <option value="">{qNum}</option>
+                    {["A", "B", "C", "D", "E", "F", "G", "H"].map((letter) => (
+                      <option key={letter} value={letter}>
+                        {letter}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -689,7 +701,7 @@ const Listening1Part22015 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -702,33 +714,45 @@ const Listening1Part22015 = () => {
                   </h3>
 
                   <ul className="space-y-3">
-                    {["11-12", 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
+                    {["11-12", "13-14", 15, 16, 17, 18, 19, 20].map((num) => {
                       const user = userAnswers[num];
                       const correct = correctAnswers[num];
 
+                      // Check correctness
                       const isCorrect = (() => {
                         if (Array.isArray(correct)) {
+                          // Multi-select questions
                           return (
                             Array.isArray(user) &&
                             user.length === correct.length &&
                             correct.every((val) => user.includes(val))
                           );
-                        } else {
+                        } else if (typeof user === "string") {
+                          // Single-answer questions
                           return (
-                            user?.trim().toLowerCase() ===
-                            correct?.trim().toLowerCase()
+                            user.trim().toLowerCase() ===
+                            correct.trim().toLowerCase()
                           );
+                        } else {
+                          // No answer or invalid type
+                          return false;
                         }
                       })();
 
                       const noAnswer = !user;
 
+                      // For display
                       const userAnswerDisplay = Array.isArray(user)
                         ? user.join(", ")
-                        : user?.trim() || "";
+                        : typeof user === "string"
+                        ? user.trim()
+                        : "";
+
                       const correctAnswerDisplay = Array.isArray(correct)
                         ? correct.join(", ")
-                        : correct?.trim();
+                        : typeof correct === "string"
+                        ? correct.trim()
+                        : "";
 
                       return (
                         <li
@@ -772,9 +796,9 @@ const Listening1Part22015 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2015></Listening1Pagination2015>
+      <Listening3Pagination2021></Listening3Pagination2021>
     </div>
   );
 };
 
-export default Listening1Part22015;
+export default Listening3Part22021;

@@ -3,9 +3,8 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening2Pagination2021 from "../Pagination 2021/Listening2Pagination2021";
-
-const Test2Listening2021 = () => {
+import Listening4Pagination2022 from "../Pagination2022/Listening4Pagination2022";
+const Listening4Part42022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -23,261 +22,87 @@ const Test2Listening2021 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a woman phoning a company that converts old photographs to digital format.",
-        "First, you have some time to look at questions 1 to 3.",
-        "Now listen carefully and answer questions 1 to 3.",
+        "Part 4, you will hear a presentation by a food science student about the production of maple syrup.",
+        "For first, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "EMPLOYEE",
-      text: ["Hello, Picturerep. Can I help you?"],
-    },
-    {
-      speaker: "WOMAN",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi.",
-        "I saw your advertisement about copying pictures to disk, and I'd like a bit more information about what you do.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, what would you like to know?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Well, I've got a box full of old family photos that's been up in the attic for years.",
-        "Some of them must be 50 or 60 years old.",
-        "And I'd like to get them converted to digital format.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, we can do that for you."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Right, and what about size?",
-        "The photos are all sorts of sizes.",
-        "Are there any restrictions?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Well, the maximum size of photo we can do with our normal service is 30 centimeters,",
-        "and each picture must be at least 4 cm.",
-        "That's the minimum we can cope with.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Oh, that should be fine.",
-        "And some of them are in a frame.",
-        { text: "Should I take them out before I send them?", number: 1 },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, please.",
-        "We can't copy them otherwise, and also the photos must all be separate,",
-        "they mustn't be stuck into an album.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, that's not a problem.",
-        "So, can you give me an idea of how much this will cost?",
-        "I've got about 360 photos, I think.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
+        "Hello, everyone. Today we're going to look at another natural food product, and that's maple syrup.",
+        "What is this exactly? Well, maple syrup looks rather like clear honey, but it's not made by bees.",
+        "It's produced from the plant fluid or sap inside the maple tree, and that makes maple syrup a very natural product.",
+        "Maple syrup is a thick, golden, sweet-tasting liquid.",
         {
-          text: "We charge £195 for 300 to 400 photos for the basic service.",
-          number: 2,
+          text: "That can be bought in bottles or jars, and poured onto foods such as waffles and ice cream, or used in the baking of cakes and pastries.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK, and does that include the disk?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Yes, one disk, but you can get extra ones for £5 each."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "That's good.",
-        "So, do I need to pay when I send you the photos?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "No, we won't need anything until we've actually copied the pictures.",
+        "It contains no preservatives or added ingredients, and it provides a healthy alternative to refined sugar.",
         {
-          text: "Then we'll let you know how much it is, and once we've received the payment, we'll send the parcel off to you.",
-          number: 3,
+          text: "Let's just talk a bit about the maple tree itself, which is where maple syrup comes from.",
+          number: 32,
         },
+        "So, there are many species of maple tree. And they'll grow without fertilizer in areas where there's plenty of moisture in the soil.",
+        "However, they'll only do this if another important criterion is fulfilled, which is that they must have full or partial sun exposure during the day and very cool nights, and I'll talk more about that in a minute.",
+        "There are only certain parts of the world that provide all these conditions. One is Canada, and by that, I mean all parts of Canada. And the other is the northeastern states of North America.",
+        "In these areas, the climate suits the trees perfectly.",
+        {
+          text: "In fact, Canada produces over two thirds of the world's maple syrup.",
+          number: 33,
+        },
+        "Which is why the five pointed maple leaf is a Canadian symbol, and has featured on the flag since 1964.",
+        "So how did maple syrup production begin? Well, long before Europeans settled in these parts of the world, the indigenous communities had started producing maple sugar.",
+        "They bored holes in the trunks of maple trees, and used containers made of tree bark to collect the liquid sap as it poured out.",
+        "As they were unable to keep the liquid for any length of time, they didn't have storage facilities in those days.",
+        {
+          text: "They boiled the liquid by placing pieces of rock that had become scorching hot from the sun into the sap.",
+          number: 34,
+        },
+        "They did this until it turned into sugar, and they were then able to use this to sweeten their food and drinks.",
+        "Since that time, improvements have been made to the process, but it has changed very little overall.",
+        "So, let's look at the production of maple syrup today.",
+        "Clearly, the maple forests are a valuable resource in many Canadian and North American communities.",
+        "The trees have to be well looked after, and they cannot be used to make syrup until the trunks reach a diameter of around 25 cm.",
+        { text: "This can take anything up to 40 years.", number: 35 },
+        "As I've already mentioned, maple trees need the right conditions to grow, and also to produce sap.",
+        "Why is this? Well, what happens is that during a cold night, the tree absorbs water from the soil, and that rises through the tree's vascular system.",
+        "But then in the warmer daytime, the change in temperature causes the water to be pushed back down to the bottom of the tree.",
+        "This continual movement up and down leads to the formation of the sap needed for maple syrup production.",
+        "When the tree is ready, it can be tapped, and this involves drilling a small hole into the trunk, and inserting a tube into it that ends in a bucket.",
+        {
+          text: "The trees can often take several taps, though the workers take care not to cause any damage to the healthy growth of the tree itself.",
+          number: 36,
+        },
+        "The sap that comes out of the trees consists of 98% water and 2% sugar and other nutrients.",
+        "It has to be boiled, so that much of that water evaporates.",
+        "And this process has to take place immediately, using what are called evaporators.",
+        {
+          text: "These are basically extremely large pans. The sap is poured into these, a fire is built, and the pans are then heated until the sap boils.",
+          number: 37,
+        },
+        "As it does this, the water evaporates, and the syrup begins to form.",
+        "The evaporation process creates large quantities of steam, and the sap becomes thicker and denser, and at just the right moment, when the sap is thick enough to be called maple syrup, the worker removes it from the heat.",
+        {
+          text: "After this process, something called sugar sand has to be filtered out, as this builds up during the boiling and gives the syrup a cloudy appearance and a slightly gritty taste.",
+          number: 38,
+        },
+        {
+          text: "Once this has been done, the syrup is ready to be packaged, so that it can be used for a whole variety of products.",
+          number: 39,
+        },
+        {
+          text: "It takes 40 liters of sap to produce 1 liter of maple syrup.",
+          number: 40,
+        },
+        "So you can get an idea of how much is needed. So that's the basic process. In places like Quebec where...",
       ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
-        "Now listen and answer questions 4 to 10.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Is there anything else you'd like to ask about our services?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Yes, I've roughly sorted out the photos into groups according to what they're about.",
-        "So, can you keep them in those groups when you copy them?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Sure, we'll save each group in a different folder on the disk,",
-        "and if you like, you can suggest a name for each folder.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        {
-          text: "So, I could have one called 'Grandparents' for instance?",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Exactly."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "And do you do anything besides scan the photos?",
-        "Like, can you make any improvements?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, in the standard service, each photo is checked,",
-        {
-          text: "and we can sometimes touch up the color a bit, or improve the contrast,",
-          number: 5,
-        },
-        "that can make a big difference.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, and some of the photos are actually quite fragile.",
-        "They won't get damaged in the process, will they?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        {
-          text: "No, if any look particularly fragile, we'd do them by hand.",
-          number: 6,
-        },
-        "We do realize how precious these old photos can be.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "And another thing is we can make changes to a photo if you want,",
-        {
-          text: "so, if you want to remove an object from a photo, or maybe alter the background,",
-          number: 7,
-        },
-        "we can do that.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Really?",
-        "I might be interested in that.",
-        "I'll have a look through the photos and see.",
-        "Oh, and talking of fixing photos.",
-        { text: "I've got a few that aren't properly in focus.", number: 8 },
-        "Can you do anything to make that better?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["No, I'm afraid that's one thing we can't do."],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Any other information I can give you?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Er... oh, how long will it all take?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [{ text: "We aim to get the copying done in 10 days.", number: 9 }],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Fine.",
-        "Right, well, I'll get the photos packed up in a box and post them off to you.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Right, if you've got a strong cardboard box, that's best.",
-        {
-          text: "We've found that plastic ones sometimes break in the post.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK.", "Right, thanks for your help.", "Bye."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Bye."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have half a minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -427,19 +252,19 @@ const Test2Listening2021 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "frame",
-    2: "195",
-    3: "payment",
-    4: "grandparents",
-    5: "colour",
-    6: "hand",
-    7: "background",
-    8: "focus",
-    9: "10 days",
-    10: "plastic",
+    31: "golden", // colour described as very golden
+    32: "healthy", // compared to refined sugar, provides a healthy alternative
+    33: "regions", // best growing conditions and regions are in Canada and North America
+    34: "rocks", // used hot rocks to heat the sap
+    35: "diameter", // tree trunks may not have the correct diameter until 40 years
+    36: "tube", // a tap is drilled into the trunk and a tube carries the sap
+    37: "fire", // evaporators are heated by means of a fire
+    38: "steam", // a lot of steam is produced during evaporation
+    39: "cloudy", // sugar sand makes syrup look cloudy and affects taste
+    40: "liter", // a huge quantity of sap is needed to make 1 liter of maple syrup
   };
+
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -493,7 +318,7 @@ const Test2Listening2021 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -524,7 +349,7 @@ const Test2Listening2021 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Picture Conversion Service")}
+                {renderText("Advice on Surfing Holidays")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -557,281 +382,253 @@ const Test2Listening2021 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6 rounded-lg space-y-6 bg-white">
+          <div className="border p-6 rounded-lg space-y-4 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Copying photos to digital format")}
+              {renderText("Maple Syrup")}
             </h1>
 
-            {/* ---------- Company ---------- */}
+            {/* What is maple syrup? */}
+            <h2 className="font-semibold text-lg mt-4">
+              {renderText("What is maple syrup?")}
+            </h2>
             <p className="text-lg">
-              {renderText("Name of company: ")}
-              <span className="font-semibold">{renderText("Picturerep")}</span>
+              {renderText("Made from the sap of the maple tree")}
+            </p>
+            <p className="text-lg">
+              {renderText("Added to food or used in cooking")}
             </p>
 
-            {/* ---------- Requirements ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Requirements")}
-            </h2>
+            <p className="text-lg">
+              {renderText("Colour described as")}
+              <button
+                onClick={() => toggleButton(31)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                31
+              </button>
+              <input
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
 
+            <p className="text-lg">{renderText("Compared to refined sugar")}</p>
+            <p className="text-lg">
+              <button
+                onClick={() => toggleButton(32)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                32
+              </button>
+              <input
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
+
+            {/* The maple tree */}
+            <h2 className="font-semibold text-lg mt-4">
+              {renderText("The maple tree")}
+            </h2>
+            <p className="text-lg">{renderText("Has many species")}</p>
+            <p className="text-lg">
+              {renderText("Needs sunny days and cool nights")}
+            </p>
             <p className="text-lg">
               {renderText(
-                "Maximum size of photos is 30 cm, minimum size 4 cm."
+                "Maple leaf has been on the Canadian flag since 1964"
+              )}
+            </p>
+            <p className="text-lg">
+              {renderText(
+                "Needs moist soil but does not need fertiliser as well"
               )}
             </p>
 
-            {/* Q1 */}
             <p className="text-lg">
-              {renderText("Photos must not be in a")}
+              {renderText("Best growing conditions and")}
               <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(33)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                1
+                33
               </button>
               <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("or an album.")}
             </p>
 
-            {/* ---------- Cost ---------- */}
-            <h2 className="text-lg font-bold mt-6">{renderText("Cost")}</h2>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("The cost for 360 photos is £")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("(including one disk).")}
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Before the completed order is sent,")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("is required.")}
-            </p>
-
-            {/* ---------- Services Included ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Services included in the price")}
+            {/* Early maple sugar producers */}
+            <h2 className="font-semibold text-lg mt-4">
+              {renderText("Early maple sugar producers")}
             </h2>
+            <p className="text-lg">
+              {renderText("Made holes in the tree trunks")}
+            </p>
 
-            {/* Q4 */}
+            <p className="text-lg">
+              {renderText("Used hot")}
+              <button
+                onClick={() => toggleButton(34)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("to heat the sap")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("Used tree bark to make containers for collection")}
+            </p>
+            <p className="text-lg">
+              {renderText("Sweetened food and drink with sugar")}
+            </p>
+
+            {/* Today's maple syrup */}
+            <h2 className="font-semibold text-lg mt-4">
+              {renderText("Today's maple syrup")}
+            </h2>
+            <p className="text-lg">{renderText("The trees")}</p>
+
+            <p className="text-lg">
+              {renderText("Tree trunks may not have the correct")}
+              <button
+                onClick={() => toggleButton(35)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                35
+              </button>
+              <input
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("until they have been growing for 40 years.")}
+            </p>
+
             <p className="text-lg">
               {renderText(
-                "Photos can be placed in a folder, e.g. with the name"
+                "The changing temperature and movement of water within the tree produces the sap."
               )}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
             </p>
 
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("The")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("and contrast can be improved if necessary.")}
-            </p>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("Photos which are very fragile will be scanned by")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
-            </p>
-
-            {/* ---------- Special Restore ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Special restore service (costs extra)")}
+            <h2 className="font-semibold text-lg mt-4">
+              {renderText("The production")}
             </h2>
+            <p className="text-lg">
+              {renderText("A tap is drilled into the trunk and a")}
+              <button
+                onClick={() => toggleButton(36)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("carries the sap into a bucket.")}
+            </p>
 
-            {/* Q7 */}
             <p className="text-lg">
               {renderText(
-                "It may be possible to remove an object from a photo, or change the"
+                "Large pans of sap called evaporators are heated by means of a"
               )}
               <button
-                onClick={() => toggleButton(7)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(37)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                7
+                37
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              .
+              {renderText(".")}
             </p>
 
-            {/* Q8 */}
             <p className="text-lg">
-              {renderText("A photo which is not correctly in")}
+              {renderText("A lot of")}
               <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(38)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                8
+                38
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("cannot be fixed.")}
+              {renderText("is produced during the evaporation process.")}
             </p>
 
-            {/* ---------- Other Information ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Other information")}
-            </h2>
-
-            {/* Q9 */}
             <p className="text-lg">
-              {renderText("Orders are completed within")}
+              {renderText(
+                "'Sugar sand' is removed because it makes the syrup look"
+              )}
               <button
-                onClick={() => toggleButton(9)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(39)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                9
+                39
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              .
+              {renderText("and affects the taste.")}
             </p>
 
-            {/* Q10 */}
             <p className="text-lg">
-              {renderText("Send the photos in a box (not")}
+              {renderText(
+                "The syrup is ready for use. A huge quantity of sap is needed to make a"
+              )}
               <button
-                onClick={() => toggleButton(10)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(40)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                10
+                40
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              ).
+              {renderText("of maple syrup.")}
             </p>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -840,7 +637,7 @@ const Test2Listening2021 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -849,23 +646,17 @@ const Test2Listening2021 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
-                      const userAnswer =
-                        userAnswers[num]?.trim().toLowerCase() || "";
-                      const correctAnswer = correctAnswers[num]
-                        ?.trim()
-                        .toLowerCase();
-
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
+                      const userAnswer = userAnswers[num]?.trim() || "";
+                      const correctAnswer = correctAnswers[num]?.trim();
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-
                       const isWrong =
                         userAnswer && userAnswer !== correctAnswer;
-
                       const noAnswer = !userAnswer;
 
                       return (
@@ -874,11 +665,10 @@ const Test2Listening2021 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {/* ICONS */}
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
                             {(isWrong || noAnswer) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
@@ -891,19 +681,15 @@ const Test2Listening2021 = () => {
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
-                          {/* User Answer */}
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className=" italic">
-                                No answer provided
-                              </span>
+                              <span className="italic">No answer provided</span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
                           </p>
 
-                          {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
                               Correct Answer:
@@ -920,9 +706,9 @@ const Test2Listening2021 = () => {
           </div>
         </div>
       </div>
-      <Listening2Pagination2021></Listening2Pagination2021>
+      <Listening4Pagination2022></Listening4Pagination2022>
     </div>
   );
 };
 
-export default Test2Listening2021;
+export default Listening4Part42022;

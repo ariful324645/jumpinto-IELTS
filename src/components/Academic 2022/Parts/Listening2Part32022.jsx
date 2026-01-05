@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening4Pagination2015 from "../Pagination 2015/Listening4Pagination2015";
+import Listening2Pagination2022 from "../Pagination2022/Listening2Pagination2022";
 
-const Listening4Part32015 = () => {
+const Listening2Part32022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +15,7 @@ const Listening4Part32015 = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentLine, setCurrentLine] = useState(null);
   const [currentChunk, setCurrentChunk] = useState(null);
-  const [score, setScore] = useState(0);
-  const [userAnswers, setUserAnswers] = useState({});
+
   const [selectedText, setSelectedText] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
@@ -29,287 +28,322 @@ const Listening4Part32015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 3, you will hear two psychology students called Tim and Laura talking about Laura's work placement first.",
-        "You have some time to look at questions 21 to 24.",
-        "Now listen carefully and answer questions 21 to 24.",
+        "Part 3, you will hear two Theater Studies students discussing stage and screen performances of Shakespeare's play Romeo and Juliet.",
+        "First, you have some time to look at questions 21 and 22.",
+        "Now listen carefully and answer questions 21 and 22.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "ED",
       text: [
-        "Hi, Laura, could you spare a few minutes to talk about the work placement you did last summer? I'm thinking of doing one myself.",
+        "Did you make notes while you were watching the performances of Romeo and Juliet, Gemma?",
       ],
     },
     {
-      speaker: "LAURA",
-      text: ["Hi, Tim. Sure."],
-    },
-    {
-      speaker: "TIM",
-      text: ["Didn't you do yours at an environmental services company?"],
-    },
-    {
-      speaker: "LAURA",
+      speaker: "GEMMA",
       text: [
-        "That's right. It's only a very small company, and they needed someone to produce a company brochure. And I wanted to get some business experience, because I'm interested in a career in occupational psychology in a business environment. It was good, because I had overall responsibility for the project.",
+        "Yes, I did. I found it quite hard though. I kept getting too involved in the play.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "ED",
       text: [
-        "What kind of skills do you think you developed on the placement? I mean apart from the ones you already had. Did you have to do all the artwork for the brochure? The layout and everything.",
+        "Me too. I ended up not taking notes. I wrote down my impressions when I got home. Do you mind if I check a few things with you, in case I've missed anything, and I've also got some questions about our assignment.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "GEMMA",
       text: [
-        "We hired the services of a professional photographer for that. I did have to use my IT skills to a certain extent, because I cut and pasted text from marketing leaflets. But that didn't involve anything I hadn't done before.",
+        "No, it's good to talk things through. I may have missed things too.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
+        "OK, great. So first of all I'm not sure how much information we should include in our reviews.",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
+        "Right. Well, I don't think we need to describe what happens, especially as Romeo and Juliet is one of Shakespeare's most well-known plays.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
+        "Yeah, everyone knows the story. In an essay, we'd focus on the poetry and Shakespeare's use of imagery, et cetera. But that isn't really relevant in a review. We're supposed to focus on how effective this particular production is.",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: ["Hmm, we should say what made it a success or a failure."],
+    },
+    {
+      speaker: "ED",
+      text: [
         {
-          text: "Oh, definitely. There was so much pressure to meet the project deadline, and I also got better at explaining things, and asserting my opinions. Because I had to have weekly consultations with the marketing manager, and give him a progress report.",
+          text: "And part of that means talking about the emotional impact the performance had on us.",
           number: 21,
         },
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
         {
-          text: "Oh, definitely. There was so much pressure to meet the project deadline, and I also got better at explaining things, and asserting my opinions. Because I had to have weekly consultations with the marketing manager, and give him a progress report.",
+          text: "Yes. And we should definitely mention how well the director handled important bits of the play, like when Romeo climbs onto Juliet's balcony.",
           number: 22,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: ["It sounds as if you got a lot out of it then."],
+      speaker: "ED",
+      text: ["And the fight between Mercutio and Tybalt."],
     },
     {
-      speaker: "LAURA",
+      speaker: "GEMMA",
       text: [
-        "Absolutely. It was really worthwhile, but you know, the company benefited too.",
+        "Yes. It would also be interesting to mention the theater space, and how the director used it, but I don't think we'll have space in 800 words.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "ED",
+      text: ["No, OK. That all sounds quite straightforward."],
+    },
+    {
+      speaker: "ANNOUNCER",
       text: [
-        "Yes, they must have done. After all, if they'd used a professional advertising agency to produce their brochure, instead of doing it in-house. Presumably they'd have paid a lot more.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 23 to 30.",
+        "Now listen and answer questions 23 to 30.",
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "ED",
+      text: ["So, what about the Emporium Theater's production of the play?"],
+    },
+    {
+      speaker: "GEMMA",
       text: [
-        "Oh yes, I worked it out. It would have been 250% more, and I thought the end result was good. Even though we did everything on site, the company has quite a powerful computer, and I managed to borrow some scanning software from the university. The new brochure looks really professional. It enhances the image of the company straight away.",
+        "I thought some things worked really well, but there were some problems too.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: ["Yeah. What about the set for example?"],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
         {
-          text: "Even though we did everything on site, the company has quite a powerful computer, and I managed to borrow some scanning software from the university. The new brochure looks really professional. It enhances the image of the company straight away.",
+          text: "I think it was visually really stunning. I'd say that was probably the most memorable thing about this production.",
           number: 23,
         },
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
+        "You're right. The set design was really amazing, but actually I have seen similar ideas used in other productions.",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
+        "Hmm. What about the lighting? Some of the scenes were so dimly lit, it was quite hard to see.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
         {
-          text: "The new brochure looks really professional. It enhances the image of the company straight away.",
+          text: "I didn't dislike it. It helped to change the mood of the quieter scenes.",
           number: 24,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: [
-        "So, in the long run, it should help them to attract clients and improve their sales figures.",
-      ],
+      speaker: "GEMMA",
+      text: ["That's a good point."],
     },
     {
-      speaker: "LAURA",
-      text: ["That's the idea, yeah."],
+      speaker: "ED",
+      text: ["What did you think of the costumes?"],
     },
     {
-      speaker: "ANNOUNCER",
+      speaker: "GEMMA",
       text: [
-        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
-        "Now listen and answer questions 25 to 30.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Well, all in all, it sounds very positive. I think I'll go ahead and apply for a placement myself. How do I go about it?",
-      ],
-    },
-    {
-      speaker: "LAURA",
-      text: [
-        "It's easy enough to do. Because there's a government agency called STEP - S T E P - that organizes placements for students. You should start by getting their booklet with all the details. I expect you can download one from their website.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Actually, they've got copies in the psychology department. I've seen them there. I'll just go to the office and pick one up.",
         {
-          text: "I've seen them there. I'll just go to the office and pick one up.",
+          text: "I was a bit surprised by the contemporary dress, I must say.",
           number: 25,
         },
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "ED",
       text: [
-        "Right, and then, if I were you, after I'd looked at it, I'd go over all the options with someone.",
+        "Yeah. I think it worked well, but I had assumed it would be more conventional.",
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "GEMMA",
       text: [
-        "I suppose I should ask my tutor's advice. He knows more about me than anyone.",
-      ],
-    },
-    {
-      speaker: "LAURA",
-      text: [
-        "One of the career officers would be better. They've got more knowledge about the jobs market than your personal tutor would have.",
         {
-          text: "They've got more knowledge about the jobs market than your personal tutor would have.",
+          text: "Me too. I liked the music at the beginning, and I thought the musicians were brilliant. But I thought they were wasted, because the music didn't have much impact in Acts 2 and 3.",
           number: 26,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: ["OK."],
+      speaker: "ED",
+      text: ["Yes, that was a shame."],
     },
     {
-      speaker: "LAURA",
+      speaker: "GEMMA",
       text: [
-        "And then, when you know what you want, you can register with STEP. You'll find their address in the booklet, and once you've registered, they assign you to a mentor who looks after your application.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "And then I suppose you just sit back and wait till you hear something.",
-      ],
-    },
-    {
-      speaker: "LAURA",
-      text: [
-        "They told me at the careers office that it's best to be proactive and get updates yourself. By checking the website for new placement alerts.",
         {
-          text: "By checking the website for new placement alerts.",
+          text: "One problem with this production was that the actors didn't deliver the lines that well. They were speaking too fast.",
           number: 27,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "ED",
       text: [
-        "I don't suppose it's a good idea to get in touch with companies directly, is it?",
+        {
+          text: "It was a problem I agree, but I thought it was because they weren't speaking loudly enough, especially at key points in the play.",
+          number: 27,
+        },
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "GEMMA",
+      text: ["I actually didn't have a problem with that."],
+    },
+    {
+      speaker: "ED",
       text: [
-        "Not really, but it is the company who notifies you if they want you to go for an interview. You get a letter of invitation or an email from the personnel department.",
+        "It's been an interesting experience watching different versions of Romeo and Juliet, hasn't it?",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
+        "Definitely. It's made me realize how relevant the play still is.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
+        "Right. I mean a lot's changed since Shakespeare's time, but in many ways nothing's changed. There are always disagreements and tension between teenagers and their parents.",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
         {
-          text: "You get a letter of invitation or an email from the personnel department.",
+          text: "Yes. That's something all young people can relate to, more than the violence and the extreme emotions in the play.",
           number: 28,
         },
       ],
     },
     {
-      speaker: "TIM",
-      text: [
-        "And do I reply directly to them?",
-        {
-          text: "And do I reply directly to them?",
-          number: 28,
-        },
-      ],
+      speaker: "ED",
+      text: ["How did you find watching it in translation?"],
     },
     {
-      speaker: "LAURA",
+      speaker: "GEMMA",
       text: [
-        "Yes, you do. STEP only gets involved again once you've been made a job offer.",
-      ],
-    },
-    {
-      speaker: "TIM",
-      text: [
-        "Right, so once you've had an interview, you should let your mentor know what the outcome is. I mean, whether you're offered a job, and whether you've decided to accept it.",
         {
-          text: "I mean, whether you're offered a job, and whether you've decided to accept it.",
+          text: "Really interesting. I expected to find it more challenging, but I could follow the story pretty well.",
           number: 29,
         },
       ],
     },
     {
-      speaker: "LAURA",
+      speaker: "ED",
       text: [
-        "That's right. They'll inform the careers office once a placement has been agreed, so you don't have to do that.",
+        "I stopped worrying about not being able to understand all the words, and focused on the actors' expressions. The ending was pretty powerful.",
       ],
     },
     {
-      speaker: "TIM",
-      text: ["Is that all then?"],
+      speaker: "GEMMA",
+      text: [
+        {
+          text: "Yes, that somehow intensified the emotion for me.",
+          number: 29,
+        },
+      ],
     },
     {
-      speaker: "LAURA",
+      speaker: "ED",
       text: [
-        "More or less. Only once you've accepted an offer, you'll probably have to supply a reference, because the placement will be conditional on that, and that's something you should ask your own tutor to provide. He knows about your academic ability, and also about your qualities like reliability.",
+        "Did you know Shakespeare's been translated into more languages than any other writer?",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
         {
-          text: "He knows about your academic ability, and also about your qualities like reliability.",
+          text: "What's the reason for his international appeal, do you think?",
           number: 30,
         },
       ],
     },
     {
-      speaker: "TIM",
+      speaker: "ED",
       text: [
-        "Well, thanks very much for the information. I'm starting to look forward to...",
+        "I was reading that it's because his plays are about basic themes that people everywhere are familiar with.",
       ],
+    },
+    {
+      speaker: "GEMMA",
+      text: [
+        "Yeah. And they can also be understood on different levels. The characters have such depth.",
+      ],
+    },
+    {
+      speaker: "ED",
+      text: [
+        "Right. Which allows directors to experiment and find new angles.",
+      ],
+    },
+    {
+      speaker: "GEMMA",
+      text: ["That's really important, because..."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 3.",
-        "You now have half a minute to check your answers.",
+        "That is the end of Part 3. You now have half a minute to check your answers to Part 3.",
       ],
     },
   ];
 
   // different option
   const questions = [
-    "According to the manager, what do most people like about the job of kitchen assistant?",
-    "The manager is concerned about some of the new staff's",
-    "The manager says that the day is likely to be busy for kitchen staff because",
-    "Only kitchen staff who are 18 or older are allowed to use",
-    "What is one reason the job of kitchen assistant can be stressful?",
-    "What is another reason the job of kitchen assistant can be stressful?",
+    "Which TWO facilities at the leisure club have recently been improved?",
   ];
 
   const options = [
     [
-      "A. the variety of work",
-      "B. the friendly atmosphere",
-      "C. the opportunities for promotion",
-    ],
-
-    ["A. jewellery.", "B. hair styles.", "C. shoes."],
-
-    [
-      "A. it is a public holiday.",
-      "B. the head chef is absent.",
-      "C. the restaurant is almost fully booked.",
-    ],
-
-    [
-      "A. the waste disposal unit.",
-      "B. the electric mixer.",
-      "C. the meat slicer.",
-    ],
-    [
-      "A. They have to follow orders immediately.",
-      "B. The kitchen gets very hot.",
-      "C. They may not be able to take a break.",
-    ],
-    [
-      "A. They have to do overtime.",
-      "B. The work is physically demanding.",
-      "C. They have to clean customer areas.",
+      "A. the gym",
+      "B. the tracks",
+      "C. the indoor pool",
+      "D. the outdoor pool",
+      "E. the sports training for children",
     ],
   ];
-
+  const notesQuestions = [
+    "New members should describe any ____.",
+    "The ____ will be explained to you before you use the equipment.",
+    "You will be given a six-week ____.",
+    "There is a compulsory £90 ____ fee for members.",
+    "Gold members are given ____ to all the LP clubs.",
+    "Premier members are given priority during ____ hours.",
+    "Premier members can bring some ____ every month.",
+    "Members should always take their ____ with them.",
+  ];
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
@@ -490,29 +524,28 @@ const Listening4Part32015 = () => {
       console.log("Available voices:", list);
     };
   }, []);
-
-  //  Marks show
-
-  const multiChoiceQuestions = [21, 23];
-
-  // Correct answers
+  // Marks show
   const correctAnswers = {
-    "21-22": ["A", "E"], // Q21–22 together
-    "23-24": ["B", "C"], // Q23–24 together
-    25: "F",
-    26: "C",
+    "21-22": ["D", "E"],
+    23: "D",
+    24: "F",
+    25: "A",
+    26: "E",
     27: "G",
-    28: "A",
-    29: "E",
+    28: "B",
+    29: "C",
     30: "C",
   };
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
 
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       let updated = { ...prev };
 
       // Multi-select (arrays) for 11-12, 13-14
-      if (id === "21-22" || id === "23-24") {
+      if (id === "21-22") {
         const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
         if (prevAnswers.includes(value)) {
           updated[id] = prevAnswers.filter((v) => v !== value);
@@ -528,7 +561,8 @@ const Listening4Part32015 = () => {
       return updated;
     });
   };
-  // --- Calculate score ---
+
+  // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
 
@@ -554,48 +588,28 @@ const Listening4Part32015 = () => {
     });
 
     setScore(newScore);
+    localStorage.setItem("/listening2Part32022", newScore);
   };
 
-  // --- Restore from localStorage ---
-  useEffect(() => {
-    const savedScore = localStorage.getItem("/listening4Part32015");
-    if (savedScore) setScore(Number(savedScore));
-  }, []);
+  const toggleButton = (id) => {
+    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
 
-  // --- Clear all ---
   const handleClear = () => {
     setUserAnswers({});
     setScore(0);
-    setShowResult(false);
-    localStorage.removeItem("/listening4Part32015");
+    setActiveButtons({});
+    setIsOpen(false);
+    localStorage.removeItem("/listening2Part32022");
   };
 
-  // --- Render multi-choice options ---
-  const renderCheckboxes = (questionNumber, options) => {
-    return options.map(([letter, text]) => {
-      const prev = userAnswers[questionNumber] || [];
-      const checked = prev.includes(letter);
-      return (
-        <label key={letter} className="flex items-center gap-3">
-          <input
-            type="checkbox"
-            value={letter}
-            checked={checked}
-            onChange={() => {
-              let updated = [];
-              if (prev.includes(letter)) {
-                updated = prev.filter((l) => l !== letter);
-              } else {
-                updated = [...prev, letter];
-              }
-              handleInputChange(questionNumber, updated);
-            }}
-          />
-          <span className="font-semibold">{letter}.</span> {text}
-        </label>
-      );
-    });
-  };
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/listening2Part32022");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -603,7 +617,7 @@ const Listening4Part32015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -634,7 +648,7 @@ const Listening4Part32015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Laura's work placement")}
+                {renderText("Romeo and Juliet")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -664,166 +678,191 @@ const Listening4Part32015 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="p-4 max-w-4xl mx-auto overflow-y-scroll">
+        {/* ---------- Questions 11–12 ---------- */}
+        <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ---------- Questions 21–22 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 21 and 22")}
+            {renderText("Questions 21–22")}
           </h2>
           <p className="mb-4 font-semibold">
             {renderText("Choose TWO letters, A–E.")}
           </p>
 
-          <p className="font-semibold mt-3">
-            {renderText(
-              "21–22 Which TWO skills did Laura improve as a result of her work placement?"
-            )}
-          </p>
-          {["communication", "design", "IT", "marketing", "organisation"].map(
-            (optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
-
-              const selectedOptions = userAnswers["21-22"] || [];
-              const isChecked = selectedOptions.includes(value);
-
-              // Disable other options once TWO are selected
-              const isDisabled = selectedOptions.length === 2 && !isChecked;
-
-              return (
-                <label
-                  key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    disabled={isDisabled}
-                    onChange={() => handleInputChange("21-22", value)}
-                  />
-
-                  <span className="font-semibold">{value}.</span>
-                  <span>{renderText(optionText)}</span>
-                </label>
-              );
-            }
-          )}
-
-          {/* ---------- Questions 23–24 ---------- */}
-          <h2 className="font-bold text-lg mt-8">
-            {renderText("Questions 23 and 24")}
-          </h2>
           <p className="mb-4 font-semibold">
-            {renderText("Choose TWO letters, A–E.")}
-          </p>
-
-          <p className="font-semibold mt-3">
             {renderText(
-              "23–24 Which TWO immediate benefits did the company get from Laura's work placement?"
+              "Which TWO things do the students agree they need to include in their reviews of Romeo and Juliet?"
             )}
           </p>
 
           {[
-            "updates for its software",
-            "cost savings",
-            "an improved image",
-            "new clients",
-            "a growth in sales",
+            "analysis of the text",
+            "a summary of the plot",
+            "a description of the theatre",
+            "a personal reaction",
+            "a reference to particular scenes",
           ].map((optionText, index) => {
-            const value = String.fromCharCode(65 + index); // A–E
-
-            const selectedOptions = userAnswers["23-24"] || [];
+            const value = String.fromCharCode(65 + index); // A, B, C, D, E
+            const selectedOptions = userAnswers["21-22"] || [];
             const isChecked = selectedOptions.includes(value);
-
-            // Disable other options once TWO are selected
             const isDisabled = selectedOptions.length === 2 && !isChecked;
 
             return (
               <label
                 key={index}
-                className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                className={`flex items-center gap-3 cursor-pointer mb-1 ${
                   isDisabled ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 <input
                   type="checkbox"
                   checked={isChecked}
-                  disabled={isDisabled}
-                  onChange={() => handleInputChange("23-24", value)}
+                  onChange={() => handleInputChange("21-22", value)}
                 />
-
                 <span className="font-semibold">{value}.</span>
                 <span>{renderText(optionText)}</span>
               </label>
             );
           })}
 
-          {/* ---------- Questions 25–30 ---------- */}
-          <h2 className="font-bold text-lg mt-8">
-            {renderText("Questions 25–30")}
-          </h2>
-          <p className="mb-4">
-            {renderText(
-              "What source of information should Tim use at each of the following stages of the work placement?"
-            )}
-            <br />
-            {renderText(
-              "Choose the correct letter, A–G, next to Questions 25–30."
-            )}
-          </p>
+          {/* ---------- Questions 23–27 ---------- */}
+          <div className="mt-8">
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 23–27")}
+            </h2>
+            <p className="mb-4 font-semibold">
+              {renderText(
+                "Which opinion do the speakers give about each of the following aspects of The Emporium's production of Romeo and Juliet?"
+              )}
+            </p>
+            <p className="mb-4 font-semibold">
+              {renderText(
+                "Choose the correct letter, A–G, next to Questions 23–27."
+              )}
+            </p>
 
-          {/* Sources list */}
-          <div className="border p-5 rounded-lg bg-white max-w-sm mx-auto mb-6 text-center">
-            {[
-              { letter: "A", text: "company manager" },
-              { letter: "B", text: "company's personnel department" },
-              { letter: "C", text: "personal tutor" },
-              { letter: "D", text: "psychology department" },
-              { letter: "E", text: "mentor" },
-              { letter: "F", text: "university careers officer" },
-              { letter: "G", text: "internet" },
-            ].map((item) => (
-              <p key={item.letter}>
-                <span className="font-semibold">{item.letter}.</span>{" "}
-                {renderText(item.text)}
-              </p>
-            ))}
+            {/* Opinions box */}
+            <div className="border border-gray-400 rounded-md p-4 max-w-sm mx-auto bg-white shadow-sm mb-6">
+              <h3 className="font-semibold text-center mb-3">
+                {renderText("Opinions")}
+              </h3>
+              <ul className="space-y-1 text-gray-700">
+                {[
+                  "A. They both expected this to be more traditional.",
+                  "B. They both thought this was original.",
+                  "C. They agree this created the right atmosphere.",
+                  "D. They agree this was a major strength.",
+                  "E. They were both disappointed by this.",
+                  "F. They disagree about why this was an issue.",
+                  "G. They disagree about how this could be improved.",
+                ].map((item, index) => (
+                  <li key={index}>{renderText(item)}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Aspects list */}
+            <div className="p-5 rounded-lg bg-white space-y-4">
+              {[
+                { qNum: 23, aspect: "the set" },
+                { qNum: 24, aspect: "the lighting" },
+                { qNum: 25, aspect: "the costume design" },
+                { qNum: 26, aspect: "the music" },
+                { qNum: 27, aspect: "the actors' delivery" },
+              ].map(({ qNum, aspect }) => (
+                <div key={qNum} className="flex items-center gap-2">
+                  <span className="font-semibold">{qNum}.</span>
+                  <span>{renderText(aspect)}</span>
+                  <select
+                    value={userAnswers[qNum] || ""}
+                    onChange={(e) => handleInputChange(qNum, e.target.value)}
+                    className="border rounded-md px-2 py-1"
+                  >
+                    <option value="">{qNum}</option>
+                    {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
+                      <option key={letter} value={letter}>
+                        {letter}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Stages of work placement */}
-          <div>
-            <h1 className="font-bold text-2xl mb-4">
-              Stages of the work placement procedure
-            </h1>
+          {/* ---------- Questions 28–30 ---------- */}
+          <div className="mt-10">
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 28–30")}
+            </h2>
+            <p className="mb-4 font-semibold">
+              {renderText("Choose the correct letter, A, B or C.")}
+            </p>
+
             {[
-              { q: 25, text: "obtaining booklet" },
-              { q: 26, text: "discussing options" },
-              { q: 27, text: "getting updates" },
-              { q: 28, text: "responding to invitation for interview" },
-              { q: 29, text: "informing about outcome of interview" },
-              { q: 30, text: "requesting a reference" },
-            ].map((item) => (
-              <div key={item.q} className="flex items-center gap-2 mb-2">
-                <span className="font-semibold">{item.q}.</span>
-                <span>{item.text}</span>
-                <select
-                  value={userAnswers[item.q] || ""}
-                  onChange={(e) => handleInputChange(item.q, e.target.value)}
-                  className="border px-2 py-1 rounded-md"
-                >
-                  <option value="" disabled>
-                    Select
-                  </option>
-                  {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
-                    <option key={letter} value={letter}>
-                      {letter}
-                    </option>
-                  ))}
-                </select>
+              {
+                qNum: 28,
+                question:
+                  "The students think the story of Romeo and Juliet is still relevant for young people today because",
+                options: [
+                  {
+                    letter: "A",
+                    text: "it illustrates how easily conflict can start.",
+                  },
+                  {
+                    letter: "B",
+                    text: "it deals with problems that families experience.",
+                  },
+                  { letter: "C", text: "it teaches them about relationships." },
+                ],
+              },
+              {
+                qNum: 29,
+                question:
+                  "The students found watching Romeo and Juliet in another language",
+                options: [
+                  { letter: "A", text: "frustrating." },
+                  { letter: "B", text: "demanding." },
+                  { letter: "C", text: "moving." },
+                ],
+              },
+              {
+                qNum: 30,
+                question:
+                  "Why do the students think Shakespeare's plays have such international appeal?",
+                options: [
+                  { letter: "A", text: "The stories are exciting." },
+                  { letter: "B", text: "There are recognisable characters." },
+                  {
+                    letter: "C",
+                    text: "They can be interpreted in many ways.",
+                  },
+                ],
+              },
+            ].map(({ qNum, question, options }) => (
+              <div key={qNum} className="flex flex-col gap-2 mt-4">
+                <span className="font-semibold">{qNum}.</span>
+                <span className="mb-2">{renderText(question)}</span>
+
+                {options.map(({ letter, text }) => (
+                  <label
+                    key={letter}
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name={`q${qNum}`}
+                      value={letter}
+                      checked={userAnswers[qNum] === letter}
+                      onChange={() => handleInputChange(qNum, letter)}
+                      className="w-4 h-4"
+                    />
+                    <span className="font-semibold">{letter}.</span>
+                    <span>{renderText(text)}</span>
+                  </label>
+                ))}
               </div>
             ))}
           </div>
-
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -854,7 +893,7 @@ const Listening4Part32015 = () => {
                   </h3>
 
                   <ul className="space-y-3">
-                    {["21-22", "23-24", 25, 26, 27, 28, 29, 30].map((num) => {
+                    {["21-22", 23, 24, 25, 26, 27, 28, 29, 30].map((num) => {
                       const user = userAnswers[num];
                       const correct = correctAnswers[num];
 
@@ -924,9 +963,9 @@ const Listening4Part32015 = () => {
           </div>
         </div>
       </div>
-      <Listening4Pagination2015></Listening4Pagination2015>
+      <Listening2Pagination2022></Listening2Pagination2022>
     </div>
   );
 };
 
-export default Listening4Part32015;
+export default Listening2Part32022;

@@ -3,9 +3,8 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening2Pagination2021 from "../Pagination 2021/Listening2Pagination2021";
-
-const Test2Listening2021 = () => {
+import Listening3Pagination2022 from "../Pagination2022/Listening3Pagination2022";
+const Listening3Part42022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -23,261 +22,85 @@ const Test2Listening2021 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a woman phoning a company that converts old photographs to digital format.",
-        "First, you have some time to look at questions 1 to 3.",
-        "Now listen carefully and answer questions 1 to 3.",
+        "Part 4. You will hear a zoology student giving a presentation on bird migration.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "EMPLOYEE",
-      text: ["Hello, Picturerep. Can I help you?"],
-    },
-    {
-      speaker: "WOMAN",
+      speaker: "SPEAKER",
       text: [
-        "Oh, hi.",
-        "I saw your advertisement about copying pictures to disk, and I'd like a bit more information about what you do.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, what would you like to know?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Well, I've got a box full of old family photos that's been up in the attic for years.",
-        "Some of them must be 50 or 60 years old.",
-        "And I'd like to get them converted to digital format.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Sure, we can do that for you."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Right, and what about size?",
-        "The photos are all sorts of sizes.",
-        "Are there any restrictions?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Well, the maximum size of photo we can do with our normal service is 30 centimeters,",
-        "and each picture must be at least 4 cm.",
-        "That's the minimum we can cope with.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Oh, that should be fine.",
-        "And some of them are in a frame.",
-        { text: "Should I take them out before I send them?", number: 1 },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, please.",
-        "We can't copy them otherwise, and also the photos must all be separate,",
-        "they mustn't be stuck into an album.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, that's not a problem.",
-        "So, can you give me an idea of how much this will cost?",
-        "I've got about 360 photos, I think.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
+        "Scientists believe that a majority of the Earth's bird population migrate in some fashion or other.",
+        "Some travel seasonally for relatively short distances, such as birds that move from their winter habitats in lowlands to mountaintops for the summers.",
+        "Others, like the Arctic Tern, travel more than 25,000 miles seasonally, between the northern and southern poles.",
+        "Bird migration has been studied over many centuries through a variety of observations, but until relatively recently, where birds went to in the winter was considered something of a mystery.",
+        "The lack of modern science and technology led to many theories that we now recognize as error-filled, and even somewhat amusing.",
+        "Take hibernation theory for example.",
+        "Two thousand years ago, it was commonly believed that when birds left an area, they went underwater to hibernate in the seas and oceans.",
+        "Another theory for the regular appearance and disappearance of birds was that they spent winter hidden in mud, till the weather changed and food became abundant again.",
         {
-          text: "We charge £195 for 300 to 400 photos for the basic service.",
-          number: 2,
+          text: "The theory that some birds hibernate persisted until experiments were done on caged birds in the 1940s, which demonstrated that birds have no hibernation instinct.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK, and does that include the disk?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Yes, one disk, but you can get extra ones for £5 each."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "That's good.",
-        "So, do I need to pay when I send you the photos?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "No, we won't need anything until we've actually copied the pictures.",
+        "One of the earliest naturalists and philosophers from ancient Greece was Aristotle, who was the first writer to discuss the disappearance and reappearance of some bird species at certain times of year.",
+        "He developed the theory of transmutation, the seasonal change of one species into another, by observing redstarts and robins.",
         {
-          text: "Then we'll let you know how much it is, and once we've received the payment, we'll send the parcel off to you.",
-          number: 3,
+          text: "He observed that in the autumn, small birds called redstarts began to lose their feathers, which convinced Aristotle that they changed into robins for the winter.",
+          number: 32,
         },
+        "And back into redstarts in the summer.",
+        {
+          text: "These assumptions are understandable, given that this pair of species are similar in shape, but are a classic example of an incorrect interpretation based on correct observations.",
+          number: 33,
+        },
+        "The most bizarre theory was put forward by an English amateur scientist, Charles Morton, in the 17th century.",
+        "He wrote a surprisingly well regarded paper, claiming that birds migrate to the moon and back every year.",
+        {
+          text: "He came to this conclusion as the only logical explanation for the total disappearance of some species.",
+          number: 34,
+        },
+        "One of the key moments in the development of migration theory came in 1822 when a white stork was shot in Germany.",
+        "This particular stork made history because of the long spear in its neck, which incredibly had not killed it.",
+        {
+          text: "Everyone immediately realized this spear was definitely not European.",
+          number: 35,
+        },
+        "It turned out to be a spear from a tribe in central Africa.",
+        {
+          text: "This was a truly defining moment in the history of ornithology, because it was the first evidence that storks spend their winters in sub-Saharan Africa.",
+          number: 36,
+        },
+        "You can still see the arrow stork in the zoological collection of the University of Rostock in Germany.",
+        "People gradually became aware that European birds moved south in autumn and north in summer, but didn't know much about it until the practice of catching birds and putting rings on their legs became established.",
+        {
+          text: "Before this, very little information was available about the actual destinations of particular species, and how they traveled there.",
+          number: 37,
+        },
+        "People speculated that larger birds provided a kind of taxi service for smaller birds by carrying them on their backs.",
+        {
+          text: "This idea came about because it seemed impossible that small birds weighing only a few grams could fly over vast oceans.",
+          number: 38,
+        },
+        "This idea was supported by observations of bird behavior, such as the harassment of larger birds by smaller birds.",
+        "The development of bird ringing by a Danish school teacher, Hans Christian Cornelius Mortensen, made many discoveries possible.",
+        "This is still common practice today, and relies upon what is known as recovery.",
+        {
+          text: "This is when ringed birds are found dead in the place they have migrated to and identified.",
+          number: 39,
+        },
+        "Huge amounts of data were gathered in the early part of the 20th century, and for the first time in history, people understood where birds actually went to in winter.",
+        {
+          text: "In 1931, an atlas was published showing where the most common species of European birds migrated to.",
+          number: 40,
+        },
+        "More recent theories about bird migration will be discussed next.",
       ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
-        "Now listen and answer questions 4 to 10.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Is there anything else you'd like to ask about our services?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Yes, I've roughly sorted out the photos into groups according to what they're about.",
-        "So, can you keep them in those groups when you copy them?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Sure, we'll save each group in a different folder on the disk,",
-        "and if you like, you can suggest a name for each folder.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        {
-          text: "So, I could have one called 'Grandparents' for instance?",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Exactly."],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "And do you do anything besides scan the photos?",
-        "Like, can you make any improvements?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Yes, in the standard service, each photo is checked,",
-        {
-          text: "and we can sometimes touch up the color a bit, or improve the contrast,",
-          number: 5,
-        },
-        "that can make a big difference.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "OK, and some of the photos are actually quite fragile.",
-        "They won't get damaged in the process, will they?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        {
-          text: "No, if any look particularly fragile, we'd do them by hand.",
-          number: 6,
-        },
-        "We do realize how precious these old photos can be.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "And another thing is we can make changes to a photo if you want,",
-        {
-          text: "so, if you want to remove an object from a photo, or maybe alter the background,",
-          number: 7,
-        },
-        "we can do that.",
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Really?",
-        "I might be interested in that.",
-        "I'll have a look through the photos and see.",
-        "Oh, and talking of fixing photos.",
-        { text: "I've got a few that aren't properly in focus.", number: 8 },
-        "Can you do anything to make that better?",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["No, I'm afraid that's one thing we can't do."],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Any other information I can give you?"],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["Er... oh, how long will it all take?"],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [{ text: "We aim to get the copying done in 10 days.", number: 9 }],
-    },
-    {
-      speaker: "WOMAN",
-      text: [
-        "Fine.",
-        "Right, well, I'll get the photos packed up in a box and post them off to you.",
-      ],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: [
-        "Right, if you've got a strong cardboard box, that's best.",
-        {
-          text: "We've found that plastic ones sometimes break in the post.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "WOMAN",
-      text: ["OK.", "Right, thanks for your help.", "Bye."],
-    },
-    {
-      speaker: "EMPLOYEE",
-      text: ["Bye."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have half a minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -427,19 +250,19 @@ const Test2Listening2021 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "frame",
-    2: "195",
-    3: "payment",
-    4: "grandparents",
-    5: "colour",
-    6: "hand",
-    7: "background",
-    8: "focus",
-    9: "10 days",
-    10: "plastic",
+    31: "mud", // birds hibernated underwater or buried themselves in mud
+    32: "feathers", // redstarts experience the loss of feathers
+    33: "appearance", // the two species had a similar appearance
+    34: "moon", // birds fly to the moon in winter
+    35: "neck", // African spear in its neck
+    36: "proof", // no proof that storks migrate to Africa
+    37: "routes", // routes and journeys of migrating birds
+    38: "distances", // huge distances
+    39: "recovery", // the 'recovery' of dead birds
+    40: "map", // the first map to show migration
   };
+
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -464,7 +287,7 @@ const Test2Listening2021 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("listening3Part42022", newScore);
   };
 
   const toggleButton = (id) => {
@@ -476,12 +299,12 @@ const Test2Listening2021 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/listening3Part42022");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening3Part42022");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -493,7 +316,7 @@ const Test2Listening2021 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -524,7 +347,7 @@ const Test2Listening2021 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Picture Conversion Service")}
+                {renderText("Bird Migration Theory")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -557,281 +380,237 @@ const Test2Listening2021 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6 rounded-lg space-y-6 bg-white">
+          <div className="border p-6 rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Copying photos to digital format")}
+              {renderText("Bird Migration Theory")}
             </h1>
 
-            {/* ---------- Company ---------- */}
             <p className="text-lg">
-              {renderText("Name of company: ")}
-              <span className="font-semibold">{renderText("Picturerep")}</span>
+              {renderText("Most birds are believed to migrate seasonally.")}
             </p>
 
-            {/* ---------- Requirements ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Requirements")}
+            {/* ---------- Hibernation theory ---------- */}
+            <h2 className="text-xl font-bold mt-4">
+              {renderText("Hibernation theory")}
             </h2>
 
             <p className="text-lg">
               {renderText(
-                "Maximum size of photos is 30 cm, minimum size 4 cm."
+                "It was believed that birds hibernated underwater or buried themselves in"
               )}
-            </p>
-
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Photos must not be in a")}
               <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(31)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                1
+                31
               </button>
               <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("or an album.")}
             </p>
 
-            {/* ---------- Cost ---------- */}
-            <h2 className="text-lg font-bold mt-6">{renderText("Cost")}</h2>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("The cost for 360 photos is £")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("(including one disk).")}
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Before the completed order is sent,")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("is required.")}
-            </p>
-
-            {/* ---------- Services Included ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Services included in the price")}
-            </h2>
-
-            {/* Q4 */}
             <p className="text-lg">
               {renderText(
-                "Photos can be placed in a folder, e.g. with the name"
+                "This theory was later disproved by experiments on caged birds."
               )}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
             </p>
 
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("The")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText("and contrast can be improved if necessary.")}
-            </p>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("Photos which are very fragile will be scanned by")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              .
-            </p>
-
-            {/* ---------- Special Restore ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Special restore service (costs extra)")}
+            {/* ---------- Transmutation theory ---------- */}
+            <h2 className="text-xl font-bold mt-4">
+              {renderText("Transmutation theory")}
             </h2>
 
-            {/* Q7 */}
             <p className="text-lg">
               {renderText(
-                "It may be possible to remove an object from a photo, or change the"
+                "Aristotle believed birds changed from one species into another in summer and winter."
+              )}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "In autumn he observed that redstarts experience the loss of"
               )}
               <button
-                onClick={() => toggleButton(7)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(32)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                7
+                32
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              .
+              {renderText("and thought they then turned into robins.")}
             </p>
 
-            {/* Q8 */}
             <p className="text-lg">
-              {renderText("A photo which is not correctly in")}
+              {renderText(
+                "Aristotle’s assumptions were logical because the two species of birds had a similar"
+              )}
               <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(33)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                8
+                33
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText("cannot be fixed.")}
             </p>
 
-            {/* ---------- Other Information ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              {renderText("Other information")}
+            {/* ---------- 17th century ---------- */}
+            <h2 className="text-xl font-bold mt-4">
+              {renderText("17th century")}
             </h2>
 
-            {/* Q9 */}
             <p className="text-lg">
-              {renderText("Orders are completed within")}
+              {renderText(
+                "Charles Morton popularised the idea that birds fly to the"
+              )}
               <button
-                onClick={() => toggleButton(9)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(34)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                9
+                34
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              .
+              {renderText("in winter.")}
             </p>
 
-            {/* Q10 */}
+            {/* ---------- Scientific developments ---------- */}
+            <h2 className="text-xl font-bold mt-4">
+              {renderText("Scientific developments")}
+            </h2>
+
             <p className="text-lg">
-              {renderText("Send the photos in a box (not")}
+              {renderText(
+                "In 1822, a stork was killed in Germany which had an African spear in its"
+              )}
               <button
-                onClick={() => toggleButton(10)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
+                onClick={() => toggleButton(35)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
               >
-                10
+                35
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              ).
+            </p>
+
+            <p className="text-lg">
+              {renderText("Previously there had been no")}
+              <button
+                onClick={() => toggleButton(36)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("that storks migrate to Africa.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("Little was known about the")}
+              <button
+                onClick={() => toggleButton(37)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(
+                "and journeys of migrating birds until the practice of ringing was established."
+              )}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "It was thought large birds carried small birds on some journeys because they were considered incapable of travelling across huge"
+              )}
+              <button
+                onClick={() => toggleButton(38)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
+
+            <p className="text-lg">
+              {renderText("Ringing depended on what is called the '")}
+              <button
+                onClick={() => toggleButton(39)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                39
+              </button>
+              <input
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("' of dead birds.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("In 1931, the first")}
+              <button
+                onClick={() => toggleButton(40)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(
+                "to show the migration of European birds was printed."
+              )}
             </p>
           </div>
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -840,7 +619,7 @@ const Test2Listening2021 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -849,23 +628,17 @@ const Test2Listening2021 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
-                      const userAnswer =
-                        userAnswers[num]?.trim().toLowerCase() || "";
-                      const correctAnswer = correctAnswers[num]
-                        ?.trim()
-                        .toLowerCase();
-
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
+                      const userAnswer = userAnswers[num]?.trim() || "";
+                      const correctAnswer = correctAnswers[num]?.trim();
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-
                       const isWrong =
                         userAnswer && userAnswer !== correctAnswer;
-
                       const noAnswer = !userAnswer;
 
                       return (
@@ -874,11 +647,10 @@ const Test2Listening2021 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {/* ICONS */}
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
                             {(isWrong || noAnswer) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
@@ -891,7 +663,6 @@ const Test2Listening2021 = () => {
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
-                          {/* User Answer */}
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
@@ -903,7 +674,6 @@ const Test2Listening2021 = () => {
                             )}
                           </p>
 
-                          {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
                               Correct Answer:
@@ -920,9 +690,9 @@ const Test2Listening2021 = () => {
           </div>
         </div>
       </div>
-      <Listening2Pagination2021></Listening2Pagination2021>
+      <Listening3Pagination2022></Listening3Pagination2022>
     </div>
   );
 };
 
-export default Test2Listening2021;
+export default Listening3Part42022;

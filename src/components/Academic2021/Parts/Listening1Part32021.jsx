@@ -5,9 +5,9 @@ import { GrClearOption } from "react-icons/gr";
 
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Listening1Pagination2015 from "../Pagination 2015/Listening1Pagination2015";
+import Listening1Pagination2021 from "../Pagination 2021/Listening1Pagination2021";
 
-const Listening1Part22015 = () => {
+const Listening1Part32021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -28,97 +28,241 @@ const Listening1Part22015 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Section 2. You will hear a fitness manager of a leisure club talking to some new members.",
-        "First, you have some time to look at questions 11 and 12.",
-        "Now listen and answer questions 11 and 12.",
+        "Part 3. You will hear two students called Jess and Tom discussing their art projects.",
+        "First, you have some time to look at questions 21 to 24.",
+        "Now listen carefully and answer questions 21 to 24.",
       ],
     },
     {
-      speaker: "SPEAKER",
+      speaker: "JESS",
+      text: ["How are you getting on with your art project, Tom?"],
+    },
+    {
+      speaker: "TOM",
       text: [
-        "On behalf of LP clubs, I'd like to welcome you all here today.",
-        "My name is Sandy Fisher, and I'm one of the fitness managers here.",
-        "Before we start our tour of the club, I'll just run through some basic information about the facilities we have here, including recent improvements, and explain the types of membership available.",
-        "Our greatest asset is probably our swimming pool, which at 25 meters isn't Olympic sized, but now we've expanded it to eight lanes, it's much wider.",
-        {
-          text: "This means there are rarely more than a couple of people at a time in each lane.",
-          number: 12,
-        },
-        "Unfortunately, there isn't space for an outdoor pool here, but the glass roof on the swimming pool is partly retractable.",
-        "Which means you can enjoy something of the open air experience on warmer days.",
-        "Our recently refurbished fitness suite has all the latest exercise equipment, including 10 new running machines.",
-        { text: "And a wide range of weight training machines.", number: 11 },
-        "Each member is given full training in how to operate the equipment, and there is always a trainer on duty to offer help and advice.",
-        "Although we do have adult only times after 6, and at certain times at weekends.",
-        "Children are well catered for, older children continue to benefit from a wide range of tuition, anything from trampolining to yoga.",
+        "OK, like they gave us the theme of birds to base our project on, and I'm not really all that interested in wildlife. But I'm starting to get into it. I've pretty well finished the introductory stage.",
       ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "So have I. When they gave us all those handouts with details of books and websites to look at, I was really put off. But the more I read, the more interested I got.",
+        {
+          text: "I was really put off at first, but gradually got more interested as I read more.",
+          number: 22,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Hmm. Me too. I found I could research so many different aspects of birds in art - color, movement, texture. So I was looking forward to the bird park visit.",
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "What a letdown. It poured with rain, and we hardly saw a single bird. Much less use than the trip to the Natural History Museum.",
+        {
+          text: "The bird park trip was disappointing because it rained and we hardly saw any birds.",
+          number: 21,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Yeah. I liked all the stuff about evolution there. The workshop sessions with Dr Fletcher were good too, especially the brainstorming sessions.",
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Oh. I missed those because I was ill. I wish we could have seen the projects last year's students did.",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Hmm. I suppose they want us to do our own thing, not copy."],
+    },
+    {
+      speaker: "JESS",
+      text: ["Have you drafted your proposal yet?"],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Yes, but I haven't handed it in. I need to amend some parts. I've realized the notes from my research are almost all just descriptions. I haven't actually evaluated anything, so I'll have to fix that.",
+        {
+          text: "My research notes are mainly descriptive; I need to add evaluation.",
+          number: 24,
+        },
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Oh, I didn't know we had to do that. I'll have to look at that too. Did you do a timeline for the project?",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Yes, and a mind map."],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Yeah, so did I. I quite enjoyed that. But it was hard having to explain the basis for my decisions in my action plan.",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["What?"],
+    },
+    {
+      speaker: "JESS",
+      text: ["You know, give a rationale."],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "I didn't realize we had to do that. OK, I can add it now, and I've done the video diary presentation, and worked out what I want my outcome to be in the project.",
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Someone told me it's best not to be too precise about your actual outcome at this stage, so you have more scope to explore your ideas later on. So I'm going to go back to my proposal to make it a bit more vague.",
+        {
+          text: "It's better to keep the project outcome vague at this stage to allow flexibility.",
+          number: 23,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Really? OK, I'll change that too then."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 13 to 20.",
-        "Now listen and answer questions 13 to 20.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 25 to 30.",
+        "Now listen and answer questions 25 to 30.",
       ],
     },
     {
-      speaker: "SPEAKER",
+      speaker: "TOM",
       text: [
-        "One thing all our members appreciate about us is that we take very good care of them.",
-        "This starts on day 1 with your personal assessment.",
-        {
-          text: "You are asked to fill in a questionnaire giving details of any health problems.",
-          number: 13,
-        },
-        "One of our personal trainers will then go through this with you.",
-        {
-          text: "The trainer will then take you through the safety rules for using the equipment in the fitness suite.",
-          number: 14,
-        },
-        "During your next exercise session, a personal trainer will work with you to make sure you understand these.",
-        "It's very important to do this, because we really do want to avoid having any sports injuries.",
-        "There's a lot more to looking after yourself than simply lifting weights.",
-        {
-          text: "At the end of the personal assessment, the trainer will draw up a plan, outlining what you should try to achieve within a 6 week period.",
-          number: 15,
-        },
-        "This will then be reviewed at the end of the 6 weeks.",
-        "Now, I'll just quickly run through the types of membership we have available.",
-        {
-          text: "All members must pay a joining fee of £90, in addition to the rates for the monthly membership fees.",
-          number: 16,
-        },
-        {
-          text: "Gold membership entitles you to free entry at all LP clubs.",
-          number: 17,
-        },
-        "There are now LP clubs in all major cities and towns, so if you travel a lot this will be a great advantage.",
-        "Individual gold membership costs £50 a month, and joint membership for you and your partner will cost £75.",
-        {
-          text: "Premier membership is for professional people whose work commitments make it difficult for them to use the club during the day.",
-          number: 18,
-        },
-        "And so LP gives booking preferences to premier members at peak times.",
-        "This means you'll find it easier to book the sessions at times that suit you.",
-        {
-          text: "Reciprocal arrangements with other LP clubs are available to Premier members.",
-          number: 19,
-        },
-        "Premier membership is for individuals only, but you'll be sent passes for guests every month.",
-        "The monthly fee is £65.",
-        "You don't have to have any special clothes or equipment when you visit the club.",
-        "We provide robes and hairdryers in the changing rooms, but it's very important to remember your photo card.",
-        {
-          text: "Because you won't be able to get in without it.",
-          number: 20,
-        },
-        "For people who aren't working during the day.",
+        "One part of the project I'm unsure about is where we choose some paintings of birds, and say what they mean to us. Like, I chose a painting of a falcon by Landseer. I like it because the bird's standing there with his head turned to one side, but he seems to be staring straight at you. But I can't just say it's a bit scary, can I?",
       ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Hmm. You could talk about the possible danger suggested by the bird's look.",
+        {
+          text: "You can discuss the sense of danger implied by the bird's expression.",
+          number: 25,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Oh, OK."],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "There's a picture of a fish hawk by Audubon I like. It's swooping over the water with a fish in its talons, and with great black wings which take up most of the picture.",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "So you could discuss it in relation to predators and food chains.",
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Well, actually, I think I'll concentrate on the impression of rapid motion it gives.",
+        {
+          text: "Focus on the impression of rapid movement in the painting.",
+          number: 26,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Right."],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Do you know that picture of a kingfisher by van Gosh? It's perching on a reed growing near a stream.",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Yes, it's got these beautiful blue and red and black shades."],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Hmm. I've actually chosen it because I saw a real kingfisher once, when I was little. I was out walking with my grandfather, and I've never forgotten it.",
+        {
+          text: "I chose it due to a personal memory of seeing a kingfisher as a child.",
+          number: 27,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: ["Oh, so we can use a personal link?"],
+    },
+    {
+      speaker: "JESS",
+      text: ["Sure."],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "OK. There's a portrait called William Wells. I can't remember the artist, but it's a middle aged man who's just shot a bird, and his expression, and the way he's holding the bird in his hand, suggests he's not sure about what he's done. To me, it's about how ambiguous people are in the way they exploit the natural world.",
+        {
+          text: "This painting shows human ambiguity in exploiting nature.",
+          number: 28,
+        },
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: [
+        "Interesting. There's Gauguin's picture Vairumati. He did it in Tahiti. It's a woman with a White Bird behind her that is eating a lizard, and what I'm interested in is what idea this bird refers to. Apparently, it's a reference to the never ending cycle of existence.",
+        {
+          text: "The bird in Gauguin's painting represents the cycle of existence.",
+          number: 29,
+        },
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Wow. I chose a portrait of a little boy, Giovanni de Medici. He's holding a tiny bird in one fist. I like the way he's holding it carefully, so he doesn't hurt it.",
+        {
+          text: "The boy carefully holding the bird shows gentleness and care.",
+          number: 30,
+        },
+      ],
+    },
+    {
+      speaker: "JESS",
+      text: ["Uh. Right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "That is the end of Section 2.",
-        "You now have half a minute to check your answers.",
+        "That is the end of Part 3.",
+        "You now have half a minute to check your answers to Part 3.",
       ],
     },
   ];
@@ -329,48 +473,37 @@ const Listening1Part22015 = () => {
   }, []);
 
   //  Marks show
-
   const correctAnswers = {
-    // 11: "AC", // the gym + indoor pool
-    "11-12": ["A", "C"],
-    // optional if you want second checkbox logic; or you can combine 11–12 as one
-    13: "health problems",
-    14: "safety rules",
-    15: "plan",
-    16: "joining",
-    17: "free entry",
-    18: "peak",
-    19: "guests",
-    20: "photo card",
+    "21-22": ["B", "D"],
+    "23-24": ["A", "D"], // changes: giving rationale + providing timeline and mind map
+    // same as above
+    25: "C", // Falcon – fast movement
+    26: "D", // Fish hawk – a potential threat
+    27: "E", // Kingfisher – the power of colour
+    28: "A", // Portrait of William Wells – a childhood memory
+    29: "B", // Vairumati – hope for the future
+    30: "F", // Portrait of Giovanni de Medici – continuity of life
   };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
 
-  // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
-      let updated = { ...prev };
+      const updated = { ...prev };
+      const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
 
-      // Multi-select (arrays) for 11-12, 13-14
-      if (id === "11-12") {
-        const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
-        if (prevAnswers.includes(value)) {
-          updated[id] = prevAnswers.filter((v) => v !== value);
-        } else {
-          updated[id] = [...prevAnswers, value];
-        }
+      if (prevAnswers.includes(value)) {
+        updated[id] = prevAnswers.filter((v) => v !== value);
       } else {
-        // Single-select (string) for 15–20
-        updated[id] = value;
+        updated[id] = [...prevAnswers, value];
       }
 
-      calculateScore(updated); // recalc score immediately
+      calculateScore(updated);
       return updated;
     });
   };
 
-  // --- Calculate live score ---
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
@@ -398,6 +531,7 @@ const Listening1Part22015 = () => {
 
     setScore(newScore);
   };
+
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -407,12 +541,12 @@ const Listening1Part22015 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening1Part22015");
+    localStorage.removeItem("/listening1Part22021");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening1Part22015");
+    const savedScore = localStorage.getItem("/listening1Part22021");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -424,7 +558,7 @@ const Listening1Part22015 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 2")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -455,7 +589,7 @@ const Listening1Part22015 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Joining the leisure club")}
+                {renderText("Discussing an Art Project on Birds")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -487,57 +621,46 @@ const Listening1Part22015 = () => {
         {/* RIGHT SIDE */}
         {/* ---------- Questions 11–12 ---------- */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
+          {/* ---------- Questions 21–24 ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 11 and 12")}
+            {renderText("Questions 21–24")}
           </h2>
-
-          <p className="mb-2 font-semibold">
+          <p className="mb-4 font-semibold">
             {renderText("Choose TWO letters, A–E.")}
           </p>
-
-          <p className="mb-4">
-            {renderText(
-              "Which TWO facilities at the leisure club have recently been improved?"
-            )}
-          </p>
-
-          <div className="mb-10">
-            <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 11–12")}
-            </h2>
+          {/* Q21–22 */}
+          <div className="mt-6">
             <p className="mb-4 font-semibold">
-              {renderText(
-                "Which TWO facilities at the leisure club have recently been improved?"
-              )}
+              {renderText("Questions 21–22: Choose TWO letters, A–E.")}
             </p>
 
             {[
-              "the gym",
-              "the tracks",
-              "the indoor pool",
-              "the outdoor pool",
-              "the sports training for children",
+              "the Bird Park visit",
+              "the workshop sessions",
+              "the Natural History Museum visit",
+              "the projects done in previous years",
+              "the handouts with research sources",
             ].map((optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
+              const value = String.fromCharCode(65 + index); // A, B, C...
 
-              const selectedOptions = userAnswers["11-12"] || [];
+              const selectedOptions = userAnswers["21-22"] || [];
               const isChecked = selectedOptions.includes(value);
 
-              // Disable other options once TWO are selected
+              // 🔥 Disable logic
               const isDisabled = selectedOptions.length === 2 && !isChecked;
 
               return (
                 <label
                   key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
+                  className={`flex items-center gap-3 cursor-pointer mb-1
+          ${isDisabled ? "opacity-50 cursor-not-allowed" : ""}
+        `}
                 >
                   <input
                     type="checkbox"
                     checked={isChecked}
                     disabled={isDisabled}
-                    onChange={() => handleInputChange("11-12", value)}
+                    onChange={() => handleInputChange("21-22", value)}
                   />
 
                   <span className="font-semibold">{value}.</span>
@@ -547,140 +670,116 @@ const Listening1Part22015 = () => {
             })}
           </div>
 
-          {/* ---------- Questions 13–20 ---------- */}
-          <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 13–20")}
-          </h2>
-
-          <p className="mb-4">
-            {renderText("Complete the notes below.")} <br />
-            {renderText("Write NO MORE THAN TWO WORDS for each answer.")}
-          </p>
-
-          <div className="border p-5 rounded-lg bg-white space-y-5">
-            <h3 className="font-bold text-lg">
-              {renderText("Joining the leisure club")}
-            </h3>
-
-            <h4 className="font-semibold">
-              {renderText("Personal Assessment")}
-            </h4>
-
-            {/* Q13 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("New members should describe any")}
-              <button className="w-7 h-7 rounded-full border">13</button>
-              <input
-                type="text"
-                value={userAnswers[13] || ""}
-                onChange={(e) => handleInputChange(13, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
+          {/* Q23–24 */}
+          <div className="mt-6">
+            <p className="mb-4 font-semibold">
+              {renderText("Questions 23–24: Choose TWO letters, A–E.")}
             </p>
 
-            {/* Q14 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("The")}
-              <button className="w-7 h-7 rounded-full border">14</button>
-              <input
-                type="text"
-                value={userAnswers[14] || ""}
-                onChange={(e) => handleInputChange(14, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
+            {[
+              "by giving a rationale for their action plans",
+              "by being less specific about the outcome",
+              "by adding a video diary presentation",
+              "by providing a timeline and a mind map",
+              "by making their notes more evaluative",
+            ].map((optionText, index) => {
+              const value = String.fromCharCode(65 + index); // A, B, C...
+
+              const selectedOptions = userAnswers["23-24"] || [];
+              const isChecked = selectedOptions.includes(value);
+
+              // 🔥 Disable when already 2 selected
+              const isDisabled = selectedOptions.length === 2 && !isChecked;
+
+              return (
+                <label
+                  key={index}
+                  className={`flex items-center gap-3 mb-1 cursor-pointer
+          ${isDisabled ? "opacity-50 cursor-not-allowed" : ""}
+        `}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    disabled={isDisabled}
+                    onChange={() => handleInputChange("23-24", value)}
+                  />
+
+                  <span className="font-semibold">{value}.</span>
+                  <span>{renderText(optionText)}</span>
+                </label>
+              );
+            })}
+          </div>
+
+          {/* ---------- Questions 25–30 ---------- */}
+          <div className="mb-6 p-4 ">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">
+              {renderText("Questions 25–30")}
+            </h2>
+            <p className="text-gray-700 mb-4">
               {renderText(
-                "will be explained to you before you use the equipment."
+                "Which personal meaning do the students decide to give to each of the following pictures? Choose the correct letter, A–H, next to Questions 25–30."
               )}
             </p>
 
-            {/* Q15 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("You will be given a six-week")}
-              <button className="w-7 h-7 rounded-full border">15</button>
-              <input
-                type="text"
-                value={userAnswers[15] || ""}
-                onChange={(e) => handleInputChange(15, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-            </p>
-
-            <h4 className="font-semibold mt-4">
-              {renderText("Types of membership")}
-            </h4>
-
-            {/* Q16 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("There is a compulsory £90")}
-              <button className="w-7 h-7 rounded-full border">16</button>
-              <input
-                type="text"
-                value={userAnswers[16] || ""}
-                onChange={(e) => handleInputChange(16, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("fee for members.")}
-            </p>
-
-            {/* Q17 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Gold members are given")}
-              <button className="w-7 h-7 rounded-full border">17</button>
-              <input
-                type="text"
-                value={userAnswers[17] || ""}
-                onChange={(e) => handleInputChange(17, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("to all the LP clubs.")}
-            </p>
-
-            {/* Q18 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Premier members are given priority during")}
-              <button className="w-7 h-7 rounded-full border">18</button>
-              <input
-                type="text"
-                value={userAnswers[18] || ""}
-                onChange={(e) => handleInputChange(18, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("hours.")}
-            </p>
-
-            {/* Q19 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Premier members can bring some")}
-              <button className="w-7 h-7 rounded-full border">19</button>
-              <input
-                type="text"
-                value={userAnswers[19] || ""}
-                onChange={(e) => handleInputChange(19, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("every month.")}
-            </p>
-
-            {/* Q20 */}
-            <p className="flex flex-wrap items-center gap-2">
-              {renderText("Members should always take their")}
-              <button className="w-7 h-7 rounded-full border">20</button>
-              <input
-                type="text"
-                value={userAnswers[20] || ""}
-                onChange={(e) => handleInputChange(20, e.target.value)}
-                className="border px-2 py-1 rounded-md"
-              />
-              {renderText("with them.")}
-            </p>
+            <div className="border border-gray-400 rounded-md p-4 max-w-sm mx-auto bg-white shadow-sm">
+              <h3 className="font-semibold text-center mb-3">
+                {renderText("Personal meanings")}
+              </h3>
+              <ul className="space-y-1 text-gray-700">
+                {[
+                  "A. a childhood memory",
+                  "B. hope for the future",
+                  "C. fast movement",
+                  "D. a potential threat",
+                  "E. the power of colour",
+                  "F. the continuity of life",
+                  "G. protection of nature",
+                  "H. a confused attitude to nature",
+                ].map((item, index) => (
+                  <li key={index} className="ml-2">
+                    {renderText(item)}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
+          <div className="p-5 rounded-lg bg-white space-y-4">
+            {[
+              { qNum: 25, picture: "Falcon (Landseer)" },
+              { qNum: 26, picture: "Fish hawk (Audubon)" },
+              { qNum: 27, picture: "Kingfisher (van Gogh)" },
+              { qNum: 28, picture: "Portrait of William Wells" },
+              { qNum: 29, picture: "Vairumati (Gauguin)" },
+              { qNum: 30, picture: "Portrait of Giovanni de Medici" },
+            ].map(({ qNum, picture }) => (
+              <div key={qNum} className="flex items-center gap-2">
+                <span className="font-semibold">{qNum}.</span>
+                <span className="">{picture}</span>
+                <select
+                  value={userAnswers[qNum] || ""}
+                  onChange={(e) => handleInputChange(qNum, e.target.value)}
+                  className="border rounded-md px-2 py-1"
+                >
+                  <option value="">{qNum}</option>
+                  {["A", "B", "C", "D", "E", "F", "G", "H"].map((letter) => (
+                    <option key={letter} value={letter}>
+                      {letter}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -689,7 +788,7 @@ const Listening1Part22015 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -698,37 +797,52 @@ const Listening1Part22015 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11–20)
+                    All Answers (21–30)
                   </h3>
 
                   <ul className="space-y-3">
-                    {["11-12", 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
+                    {["21-22", "23-24", 25, 26, 27, 28, 29, 30].map((num) => {
                       const user = userAnswers[num];
                       const correct = correctAnswers[num];
 
+                      // Check correctness
                       const isCorrect = (() => {
+                        // MULTIPLE ANSWER (checkbox)
                         if (Array.isArray(correct)) {
                           return (
                             Array.isArray(user) &&
                             user.length === correct.length &&
                             correct.every((val) => user.includes(val))
                           );
-                        } else {
+                        }
+
+                        // SINGLE ANSWER (select)
+                        if (
+                          typeof user === "string" &&
+                          typeof correct === "string"
+                        ) {
                           return (
-                            user?.trim().toLowerCase() ===
-                            correct?.trim().toLowerCase()
+                            user.toLowerCase().trim() ===
+                            correct.toLowerCase().trim()
                           );
                         }
+
+                        return false;
                       })();
 
                       const noAnswer = !user;
 
                       const userAnswerDisplay = Array.isArray(user)
                         ? user.join(", ")
-                        : user?.trim() || "";
+                        : typeof user === "string"
+                        ? user.trim()
+                        : "No answer";
+
                       const correctAnswerDisplay = Array.isArray(correct)
                         ? correct.join(", ")
-                        : correct?.trim();
+                        : typeof correct === "string"
+                        ? correct.trim()
+                        : "";
 
                       return (
                         <li
@@ -772,9 +886,9 @@ const Listening1Part22015 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2015></Listening1Pagination2015>
+      <Listening1Pagination2021></Listening1Pagination2021>
     </div>
   );
 };
 
-export default Listening1Part22015;
+export default Listening1Part32021;
