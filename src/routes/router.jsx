@@ -435,6 +435,14 @@ import Speaking3Part22022 from "../components/Academic 2022/Parts/Speaking3Part2
 import Speaking3Part32022 from "../components/Academic 2022/Parts/Speaking3Part32022";
 import Speaking4Part2022 from "../components/Academic 2022/Parts/Speaking4Part2022";
 import Speaking4Part32022 from "../components/Academic 2022/Parts/Speaking4Part32022";
+import Test1Writing2013 from "../components/Academic 2013/Writing/Test1Writing2013";
+import Test2Writing2013 from "../components/Academic 2013/Writing/Test2Writing2013";
+import Test3Writing2013 from "../components/Academic 2013/Writing/Test3Writing2013";
+import Test4Writing2013 from "../components/Academic 2013/Writing/Test4Writing2013";
+import Test1Speaking2013 from "../components/Academic 2013/Speaking/Test1Speaking2013";
+import Test2Speaking2013 from "../components/Academic 2013/Speaking/Test2Speaking2013";
+import Test3Speaking2013 from "../components/Academic 2013/Speaking/Test3Speaking2013";
+import Test4Speaking2013 from "../components/Academic 2013/Speaking/Test4Speaking2013";
 
 export const router = createBrowserRouter([
   {
@@ -2178,6 +2186,40 @@ export const router = createBrowserRouter([
       {
         path: "/speaking4Part32015",
         Component: Speaking4Part32015,
+      },
+
+      //2013
+      {
+        path: "/2013/Test 1/writing",
+        Component: Test1Writing2013,
+      },
+      {
+        path: "/2013/Test 2/writing",
+        Component: Test2Writing2013,
+      },
+      {
+        path: "/2013/Test 3/writing",
+        Component: Test3Writing2013,
+      },
+      {
+        path: "/2013/Test 4/writing",
+        Component: Test4Writing2013,
+      },
+      {
+        path: "/2013/Test 1/speaking",
+        Component: Test1Speaking2013,
+      },
+      {
+        path: "/2013/Test 2/speaking",
+        Component: Test2Speaking2013,
+      },
+      {
+        path: "/2013/Test 3/speaking",
+        Component: Test3Speaking2013,
+      },
+      {
+        path: "/2013/Test 4/speaking",
+        Component: Test4Speaking2013,
       },
     ],
   },
