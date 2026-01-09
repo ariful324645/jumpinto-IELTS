@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+import Speaking2Pagination2013 from "../Pagination 2013/Speaking2Pagination2013";
+
+const Speaking2Part32015 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,47 +18,34 @@ const Test3Speaking2015 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  // Trying new activities
+  "Why do you think some people like doing new things?",
+  "What problems can people have when they try new activities for the first time?",
+  "Do you think it's best to do new things on your own or with other people? ",
+  // Learning new things
+  "What kinds of things do children learn to do when they are very young? How important are these things?",
+  "Do you think children and adults learn to do new things in the same way? How is their learning style different?",
+  "Some people say that it is more important to be able to learn new things now than it was in the past. Do you agree or disagree with that? Why?",
+];
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
-
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  // Trying new activities
+  ["new things", "people", "like", "interest", "fun", "experience", "why"],
+  [
+    "problems",
+    "difficulties",
+    "first time",
+    "try",
+    "new activity",
+    "challenge",
+  ],
+  ["own", "alone", "with others", "group", "social", "why", "opinion"],
+  // Learning new things
+  ["children", "learn", "skills", "early age", "importance", "develop"],
+  ["children", "adults", "learn", "ways", "style", "different", "method"],
+  ["learn new things", "important", "now", "past", "agree", "disagree", "why"],
+];
 
 
   // ▶ Speak current question
@@ -206,28 +195,44 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Doing new things & Learning new things
+            </h1>
+
+            <p className="text-lg font-bold">Doing new things</p>
+            <li>Why do you think some people like doing new things?</li>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              What problems can people have when they try new activities for the
+              first time?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Do you think it's best to do new things on your own or with other
+              people? Why?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Learning new things</p>
+            <li>
+              What kinds of things do children learn to do when they are very
+              young? How important are these things?
+            </li>
+            <li>
+              Do you think children and adults learn to do new things in the
+              same way? How is their learning style different?
+            </li>
+            <li>
+              Some people say that it is more important to be able to learn new
+              things now than it was in the past. Do you agree or disagree with
+              that? Why?
             </li>
           </ul>
         </div>
@@ -288,10 +293,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking2Pagination2013></Speaking2Pagination2013>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking2Part32015;

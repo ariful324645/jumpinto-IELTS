@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+
+import Speaking4Pagination2013 from "../Pagination 2013/Speaking4Pagination2013";
+
+const Speaking4Part22013 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,48 +18,18 @@ const Test3Speaking2015 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "Who is this person?",
+  "Where does/did this person live?",
+  "What has he/she done to help people?",
+];
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
-
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["who", "person", "identity", "friend", "family", "colleague", "name"],
+  ["where", "lives", "lived", "home", "city", "country", "location"],
+  ["help", "people", "done", "contribute", "support", "assistance", "work"],
+];
 
 
   // ▶ Speak current question
@@ -206,30 +179,37 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
-            <li>
-              Who do you spend most time talking to on the telephone? [Why?]
-            </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
-            <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A person who has done a lot of work to help people
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a person who has done a lot of work to help people.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>Who this person is/was</li>
+            <li>Where this person lives/lived</li>
+            <li>What he/she has done to help people</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            And explain how you know about this person.
+          </p>
         </div>
 
         {/* right div */}
@@ -288,10 +268,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking4Pagination2013></Speaking4Pagination2013>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking4Part22013;

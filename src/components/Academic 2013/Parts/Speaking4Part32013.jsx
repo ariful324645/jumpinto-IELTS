@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+import Speaking4Pagination2013 from "../Pagination 2013/Speaking4Pagination2013";
+
+const Speaking4Part32015 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,47 +17,34 @@ const Test3Speaking2015 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  // Helping others in the community
+  "What are some of the ways people can help others in the community? Which is most important?",
+  "Why do you think some people like to help other people?",
+  "Some people say that people help others in the community more now than they did in the past. Do you agree or disagree? Why?",
+  // Community services
+  "What types of services, such as libraries or health centres, are available to the people who live in your area? Do you think there are enough of them?",
+  "Which groups of people generally need most support in a community? Why?",
+  "Who do you think should pay for the services that are available to the people in a community? Should it be the government or individual people?",
+];
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
-
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  // Helping others in the community
+  ["help others", "community", "ways", "important", "support", "why"],
+  ["people", "help", "motivation", "reasons", "like", "why"],
+  ["community", "help", "more", "past", "agree", "disagree", "opinion"],
+  // Community services
+  [
+    "services",
+    "libraries",
+    "health centres",
+    "community",
+    "available",
+    "enough",
+  ],
+  ["groups", "support", "community", "people", "need", "why"],
+  ["pay", "services", "community", "government", "individuals", "funding"],
+];
 
 
   // ▶ Speak current question
@@ -206,28 +194,47 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Helping other people in the community & Community Services
+            </h1>
+
+            <p className="text-lg font-bold">
+              Helping other people in the community
+            </p>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              What are some of the ways people can help others in the community?
+              Which is most important?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
+            <li>Why do you think some people like to help other people?</li>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Some people say that people help others in the community more now
+              than they did in the past. Do you agree or disagree? Why?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Community Services</p>
+            <li>
+              What types of services, such as libraries or health centres, are
+              available to the people who live in your area? Do you think there
+              are enough of them?
+            </li>
+            <li>
+              Which groups of people generally need most support in a community?
+              Why?
+            </li>
+            <li>
+              Who do you think should pay for the services that are available to
+              the people in a community? Should it be the government or
+              individual people?
             </li>
           </ul>
         </div>
@@ -288,10 +295,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking4Pagination2013></Speaking4Pagination2013>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking4Part32015;

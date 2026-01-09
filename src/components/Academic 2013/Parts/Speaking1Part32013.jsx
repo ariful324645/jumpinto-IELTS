@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+import Speaking1Pagination2013 from "../Pagination 2013/Speaking1Pagination2013";
+
+const Speaking1Part32015 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -16,47 +18,48 @@ const Test3Speaking2015 = () => {
   const recognitionRef = useRef(null);
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "Do people in your country enjoy going to open-air markets that sell things like food, clothes, or old objects? Which type of market is more popular? ",
+  "Do you think markets are more suitable places for selling certain types of things? Which ones?",
+  "Do you think young people feel the same about shopping at markets as older people? ",
+  "What do you think are the advantages of buying things from shops rather than markets?",
+  "How does advertising influence what people choose to buy? Is this true for everyone?",
+  "Do you think that any recent changes in the way people live have affected general shopping habits? ",
+];
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
-
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  [
+    "open-air markets",
+    "food",
+    "clothes",
+    "old objects",
+    "popular",
+    "why",
+    "country",
+    "enjoy",
+  ],
+  [
+    "suitable",
+    "selling",
+    "market",
+    "products",
+    "food",
+    "clothes",
+    "why",
+    "reason",
+  ],
+  ["young people", "older people", "shopping", "markets", "opinion", "why"],
+  ["advantages", "shops", "buying", "market", "comparison", "benefit"],
+  ["advertising", "influence", "buy", "products", "everyone", "marketing"],
+  [
+    "recent changes",
+    "lifestyle",
+    "shopping habits",
+    "effect",
+    "why",
+    "behavior",
+  ],
+];
 
 
   // ▶ Speak current question
@@ -206,28 +209,47 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Shopping at markets & Shopping in general
+            </h1>
+
+            <p className="text-lg font-bold">Shopping at markets</p>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              Do people in your country enjoy going to open-air markets that
+              sell things like food, clothes, or old objects? Which type of
+              market is more popular? Why?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Do you think markets are more suitable places for selling certain
+              types of things? Which ones? Why do you think this is?
+            </li>
+            <li>
+              Do you think young people feel the same about shopping at markets
+              as older people? Why is that?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Shopping in general</p>
+            <li>
+              What do you think are the advantages of buying things from shops
+              rather than markets?
+            </li>
+            <li>
+              How does advertising influence what people choose to buy? Is this
+              true for everyone?
+            </li>
+            <li>
+              Do you think that any recent changes in the way people live have
+              affected general shopping habits? Why is this?
             </li>
           </ul>
         </div>
@@ -288,10 +310,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking1Pagination2013></Speaking1Pagination2013>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking1Part32015;
