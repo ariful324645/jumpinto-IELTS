@@ -439,6 +439,39 @@ import Reading3Part22023 from "../components/Academic 2023/Parts/Reading3Part220
 import Reading3Part32023 from "../components/Academic 2023/Parts/Reading3Part32023";
 import Reading4Part22023 from "../components/Academic 2023/Parts/Reading4Part22023";
 import Reading4Part32023 from "../components/Academic 2023/Parts/Reading4Part32023";
+import Writing2Part22021 from "../components/Academic2021/Parts/Writing2Part22021";
+import Writing1Part22021 from "../components/Academic2021/Parts/Writing1Part22021";
+import Writing3Part22021 from "../components/Academic2021/Parts/Writing3Part22021";
+import Writing4Part22021 from "../components/Academic2021/Parts/Writing4Part22021";
+import Speaking1Part22021 from "../components/Academic2021/Parts/Speaking1Part22021";
+import Speaking1Part32021 from "../components/Academic2021/Parts/Speaking1Part32021";
+import Speaking2Part22021 from "../components/Academic2021/Parts/Speaking2Part22021";
+import Speaking2Part32021 from "../components/Academic2021/Parts/Speaking2Part32021";
+import Speaking3Part22021 from "../components/Academic2021/Parts/Speaking3Part22021";
+import Speaking3Part32021 from "../components/Academic2021/Parts/Speaking3Part32021";
+import Speaking4Part22021 from "../components/Academic2021/Parts/Speaking4Part22021";
+import Speaking4Part32021 from "../components/Academic2021/Parts/Speaking4Part32021";
+import Writing1Part22022 from "../components/Academic 2022/Parts/Writing1Part22022";
+import Writing2Part22022 from "../components/Academic 2022/Parts/Writing2Part22022";
+import Writing3Part22022 from "../components/Academic 2022/Parts/Writing3Part22022";
+import Writing4Part22022 from "../components/Academic 2022/Parts/Writing4Part22022";
+import Speaking1Part22022 from "../components/Academic 2022/Parts/Speaking1Part22022";
+import Speaking1Part32022 from "../components/Academic 2022/Parts/Speaking1Part32022";
+import Speaking2Part22022 from "../components/Academic 2022/Parts/Speaking2Part22022";
+import Speaking2Part32022 from "../components/Academic 2022/Parts/Speaking2Part32022";
+import Speaking3Part22022 from "../components/Academic 2022/Parts/Speaking3Part22022";
+import Speaking3Part32022 from "../components/Academic 2022/Parts/Speaking3Part32022";
+import Speaking4Part2022 from "../components/Academic 2022/Parts/Speaking4Part2022";
+import Speaking4Part32022 from "../components/Academic 2022/Parts/Speaking4Part32022";
+import Test1Writing2013 from "../components/Academic 2013/Writing/Test1Writing2013";
+import Test2Writing2013 from "../components/Academic 2013/Writing/Test2Writing2013";
+import Test3Writing2013 from "../components/Academic 2013/Writing/Test3Writing2013";
+import Test4Writing2013 from "../components/Academic 2013/Writing/Test4Writing2013";
+import Test1Speaking2013 from "../components/Academic 2013/Speaking/Test1Speaking2013";
+import Test2Speaking2013 from "../components/Academic 2013/Speaking/Test2Speaking2013";
+import Test3Speaking2013 from "../components/Academic 2013/Speaking/Test3Speaking2013";
+import Test4Speaking2013 from "../components/Academic 2013/Speaking/Test4Speaking2013";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -856,32 +889,81 @@ export const router = createBrowserRouter([
         Component: Test1Writing2022,
       },
       {
+        path: "/writing1Part22022",
+        Component: Writing1Part22022,
+      },
+      {
         path: "/2022/Test 2/writing",
         Component: Test2Writing2022,
+      },
+      {
+        path: "/writing2Part22022",
+        Component: Writing2Part22022,
       },
       {
         path: "/2022/Test 3/writing",
         Component: Test3Writing2022,
       },
       {
+        path: "/writing3Part22022",
+        Component: Writing3Part22022,
+      },
+
+      {
         path: "/2022/Test 4/writing",
         Component: Test4Writing2022,
+      },
+      {
+        path: "/writing4Part22022",
+        Component: Writing4Part22022,
       },
       {
         path: "/2022/Test 1/speaking",
         Component: Test1Speaking2022,
       },
       {
+        path: "/speaking1Part22022",
+        Component: Speaking1Part22022,
+      },
+      {
+        path: "/speaking1Part32022",
+        Component: Speaking1Part32022,
+      },
+      {
         path: "/2022/Test 2/speaking",
         Component: Test2Speaking2022,
+      },
+      {
+        path: "/speaking2Part22022",
+        Component: Speaking2Part22022,
+      },
+      {
+        path: "/speaking2Part32022",
+        Component: Speaking2Part32022,
       },
       {
         path: "/2022/Test 3/speaking",
         Component: Test3Speaking2022,
       },
       {
+        path: "/speaking3Part22022",
+        Component: Speaking3Part22022,
+      },
+      {
+        path: "/speaking3Part32022",
+        Component: Speaking3Part32022,
+      },
+      {
         path: "/2022/Test 4/speaking",
         Component: Test4Speaking2022,
+      },
+      {
+        path: "/speaking4Part22022",
+        Component: Speaking4Part2022,
+      },
+      {
+        path: "/speaking4Part32022",
+        Component: Speaking4Part32022,
       },
       {
         path: "/2021/test 1/listening",
@@ -1000,32 +1082,80 @@ export const router = createBrowserRouter([
         Component: Test1Writing2021,
       },
       {
+        path: "/writing1Part22021",
+        Component: Writing1Part22021,
+      },
+      {
         path: "/2021/Test 2/writing",
         Component: Test2Writing2021,
+      },
+      {
+        path: "/writing2Part22021",
+        Component: Writing2Part22021,
       },
       {
         path: "/2021/Test 3/writing",
         Component: Test3Writing2021,
       },
       {
+        path: "/writing3Part22021",
+        Component: Writing3Part22021,
+      },
+      {
         path: "/2021/Test 4/writing",
         Component: Test4Writing2021,
+      },
+      {
+        path: "/writing4Part22021",
+        Component: Writing4Part22021,
       },
       {
         path: "/2021/Test 1/speaking",
         Component: Test1Speaking2021,
       },
       {
+        path: "/speaking1Part22021",
+        Component: Speaking1Part22021,
+      },
+      {
+        path: "/speaking1Part32021",
+        Component: Speaking1Part32021,
+      },
+      {
         path: "/2021/Test 2/speaking",
         Component: Test2Speaking2021,
+      },
+      {
+        path: "/speaking2Part22021",
+        Component: Speaking2Part22021,
+      },
+      {
+        path: "/speaking2Part32021",
+        Component: Speaking2Part32021,
       },
       {
         path: "/2021/Test 3/speaking",
         Component: Test3Speaking2021,
       },
       {
+        path: "/speaking3Part22021",
+        Component: Speaking3Part22021,
+      },
+      {
+        path: "/speaking3Part32021",
+        Component: Speaking3Part32021,
+      },
+      {
         path: "/2021/Test 4/speaking",
         Component: Test4Speaking2021,
+      },
+      {
+        path: "/speaking4Part22021",
+        Component: Speaking4Part22021,
+      },
+      {
+        path: "/speaking4Part32021",
+        Component: Speaking4Part32021,
       },
 
       {
@@ -2198,6 +2328,40 @@ export const router = createBrowserRouter([
       {
         path: "/speaking4Part32015",
         Component: Speaking4Part32015,
+      },
+
+      //2013
+      {
+        path: "/2013/Test 1/writing",
+        Component: Test1Writing2013,
+      },
+      {
+        path: "/2013/Test 2/writing",
+        Component: Test2Writing2013,
+      },
+      {
+        path: "/2013/Test 3/writing",
+        Component: Test3Writing2013,
+      },
+      {
+        path: "/2013/Test 4/writing",
+        Component: Test4Writing2013,
+      },
+      {
+        path: "/2013/Test 1/speaking",
+        Component: Test1Speaking2013,
+      },
+      {
+        path: "/2013/Test 2/speaking",
+        Component: Test2Speaking2013,
+      },
+      {
+        path: "/2013/Test 3/speaking",
+        Component: Test3Speaking2013,
+      },
+      {
+        path: "/2013/Test 4/speaking",
+        Component: Test4Speaking2013,
       },
     ],
   },

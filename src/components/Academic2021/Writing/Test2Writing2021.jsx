@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import Writing2Pagination2021 from "../Pagination 2021/Writing2Pagination2021";
 
 const Test2Writing2021 = () => {
   const [message, setMessage] = useState("");
@@ -32,9 +33,9 @@ const Test2Writing2021 = () => {
   return (
     <div className="px-3">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6 ">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -132,6 +133,7 @@ const Test2Writing2021 = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing2Pagination2021></Writing2Pagination2021>
     </div>
   );
 };

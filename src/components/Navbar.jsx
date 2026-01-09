@@ -14,6 +14,100 @@ const Navbar = () => {
 
   // Define timer for each page
   const pathTimes = {
+
+    //2022
+    "/2022/test 1/listening": 8 * 60,
+    "/2022/test 2/listening": 7 * 60 + 30,
+    "/2022/test 3/listening": 8 * 60,
+    "/2022/test 4/listening": 7 * 60,
+    // listening part time
+    "/listening1Part22022": 7 * 60 + 30,
+    "/listening1Part32022": 8 * 60,
+    "/listening1Part42022": 7 * 60,
+    "/listening2Part22022": 7 * 60 + 30,
+    "/listening2Part32022": 7 * 60 + 30,
+    "/listening2Part42022": 8 * 60 + 30,
+    "/listening3Part22022": 9 * 60 + 30,
+    "/listening3Part32022": 8 * 60 + 30,
+    "/listening3Part42022": 7 * 60 + 30,
+    "/listening4Part22022": 8 * 60,
+    "/listening4Part32022": 7 * 60 + 30,
+    "/listening4Part42022": 8 * 60 + 30,
+
+    //   reading
+    "/2022/Test 1/reading": 20 * 60,
+    "/2022/Test 2/reading": 20 * 60,
+    "/2022/Test 3/reading": 20 * 60,
+    "/2022/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22022": 20 * 60,
+    "/Reading1Part32022": 20 * 60,
+    "/Reading2Part22022": 20 * 60,
+    "/Reading2Part32022": 20 * 60,
+    "/Reading3Part22022": 20 * 60,
+    "/Reading3Part32022": 20 * 60,
+    "/Reading4Part22022": 20 * 60,
+    "/Reading4Part32022": 20 * 60,
+
+    //  writing
+    "/2022/Test 1/writing": 20 * 60,
+    "/2022/Test 2/writing": 20 * 60,
+    "/2022/Test 3/writing": 20 * 60,
+    "/2022/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22022": 40 * 60,
+    "/Writing2Part22022": 40 * 60,
+    "/Writing3Part22022": 40 * 60,
+    "/Writing4Part22022": 40 * 60,
+
+    // 2021  listening
+
+    "/2021/test 1/listening": 8 * 60,
+    "/2021/test 2/listening": 7 * 60 + 30,
+    "/2021/test 3/listening": 9 * 60,
+    "/2021/test 4/listening": 7 * 60,
+    // listening part time
+    "/listening1Part22021": 7 * 60 + 30,
+    "/listening1Part32021": 8 * 60,
+    "/listening1Part42021": 8 * 60,
+    "/listening2Part22021": 7 * 60 + 30,
+    "/listening2Part32021": 7 * 60 + 30,
+    "/listening2Part42021": 8 * 60 + 30,
+    "/listening3Part22021": 7 * 60 + 30,
+    "/listening3Part32021": 8 * 60 + 30,
+    "/listening3Part42021": 7 * 60 + 30,
+    "/listening4Part22021": 8 * 60,
+    "/listening4Part32021": 7 * 60 + 30,
+    "/listening4Part42021": 7 * 60 + 30,
+
+    // 2020  reading
+    "/2021/Test 1/reading": 20 * 60,
+    "/2021/Test 2/reading": 20 * 60,
+    "/2021/Test 3/reading": 20 * 60,
+    "/2021/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22021": 20 * 60,
+    "/Reading1Part32021": 20 * 60,
+    "/Reading2Part22021": 20 * 60,
+    "/Reading2Part32021": 20 * 60,
+    "/Reading3Part22021": 20 * 60,
+    "/Reading3Part32021": 20 * 60,
+    "/Reading4Part22021": 20 * 60,
+    "/Reading4Part32021": 20 * 60,
+
+    // 2020 writing
+    "/2021/Test 1/writing": 20 * 60,
+    "/2021/Test 2/writing": 20 * 60,
+    "/2021/Test 3/writing": 20 * 60,
+    "/2021/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22021": 40 * 60,
+    "/Writing2Part22021": 40 * 60,
+    "/Writing3Part22021": 40 * 60,
+    "/Writing4Part22021": 40 * 60,
+
     // 2020  listening
 
     "/2020/test 1/listening": 7 * 60,
