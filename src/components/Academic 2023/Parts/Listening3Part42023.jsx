@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2023 from "../Pagination 2023/Listening1Pagination2023";
+import Listening3Pagination2023 from "../Pagination 2023/Listening3Pagination2023";
 
-const Test1Listening2023 = () => {
+const Listening3Part42023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,273 +24,84 @@ const Test1Listening2023 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear an interview with a woman who is doing a survey on transport.",
-        "First, you have some time to look at questions 1 to 5.",
-        "Now listen carefully and answer questions 1 to 5.",
+        "Part 4, you will hear part of a lecture for astronomy students about the need for a system to manage satellites and other objects orbiting the Earth.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "SPEAKER",
       text: [
-        "Excuse me, would you mind if I asked you some questions?",
-        "We're doing a survey on transport.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, that's OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["First of all can I take your name?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it's Sadie Jones."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Thanks very much.",
-        "And could I have your date of birth?",
-        "Just the year will do, actually.",
-        "Is that all right?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Uh. Yes, that's fine.", "It's 1991."],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, next your post code please."],
-    },
-    {
-      speaker: "SADIE",
-      text: [{ text: "It's DW307YZ.", number: 1 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Great, thanks.", "Is that in Wells?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, it's actually in Harborne.",
-        "Wells isn't far from there, though.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I really like that area.",
-        "My grandmother lived there when I was a kid.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it is nice."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Right, so now I want to ask you some questions about how you traveled here today.",
-        "Did you use public transport?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, I came by bus."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, and that was today.",
-        { text: "It's the 24th of April, isn't it?", number: 2 },
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Isn't it the 25th?", "Uh, no, ha, actually you're right."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Ha ha ha.",
-        "And what was the reason for your trip today?",
-        "I can see you've got some shopping with you.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Yes, I did some shopping,",
+        "In today's astronomy lecture, I'm going to talk about the need for a system to manage the movement of satellites and other objects in orbit around the Earth.",
+        "In other words, a Space Traffic Management system.",
+        "We already have effective Air Traffic Control systems that are used internationally to ensure that planes navigate our skies safely.",
+        "Well, Space Traffic Management is a similar concept, but focusing on the control of satellites.",
+        "The aim of such a system would be to prevent the danger of collisions in space, between the objects in orbit around the Earth.",
         {
-          text: "but the main reason I came here was to go to the dentist.",
-          number: 3,
+          text: "In order to do this, we'd need to have a set of legal measures.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["That's not much fun.", "Hope it was nothing serious."],
-    },
-    {
-      speaker: "SADIE",
-      text: ["No, it was just a check-up.", "It's fine."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Good.", "Do you normally travel by bus into the city center?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Yes, I stopped driving ages ago,",
+        "And we'd also have to develop the technical systems to enable us to prevent such accidents, but unfortunately, at present, we don't actually have a Space Traffic Management system that works.",
+        "So why not? What are the problems in developing such a system?",
+        "Well, for one thing, satellites are relatively cheap these days.",
         {
-          text: "because parking was so difficult to find, and it cost so much.",
-          number: 4,
+          text: "Compared with how they were in the past, meaning that more people can afford to put them into space.",
+          number: 32,
         },
+        "So there's a lot more of them out there, and people aren't just launching single satellites.",
+        "But whole constellations consisting of thousands of them designed to work together, so space is getting more crowded every day.",
+        {
+          text: "But in spite of this, one thing you may be surprised to learn is that you can launch a satellite into space, and once it's out there, it doesn't have to send back any information to Earth to allow its identification.",
+          number: 33,
+        },
+        "So while we have international systems for ensuring we know where the planes in our skies are, and to prevent them from colliding with one another.",
+        "When it comes to the safety of satellites, at present we don't have anything like enough proper ways of tracking them.",
+        {
+          text: "And it isn't just entire satellites that we need to consider. A greater threat is the huge amount of space debris in orbit around the Earth, broken bits of satellite and junk from space stations and so on.",
+          number: 35,
+        },
+        "And some of these are so small that they can be very hard to identify, but they can still be very dangerous.",
+        "In addition, some operators may be unwilling to share information about the satellites they've launched.",
+        {
+          text: "For example, a satellite may be designed for military purposes.",
+          number: 36,
+        },
+        "Or it may have been launched for commercial reasons, and the operators don't want competitors to have information about it, and even if the operators are willing to provide it.",
+        "The information isn't easy to collect.",
+        {
+          text: "Details are needed about the object itself, as well as about its location at a particular time.",
+          number: 37,
+        },
+        "And remember that a satellite isn't very big, and it's likely to be moving at thousands of kilometers an hour.",
+        "We don't have any sensors that can constantly follow something moving so fast, so all that the scientists can do is to put forward a prediction concerning where the satellite is heading next.",
+        {
+          text: "So those are some of the problems that we're facing.",
+          number: 38,
+        },
+        "Let's consider now some of the solutions that have been suggested.",
+        "One key issue is the way in which information is dealt with.",
+        "We need more information, but it also needs to be accessible at a global level.",
+        "So we need to establish shared standards that we can all agree on for the way in which this information is presented.",
+        "We already do this in other areas of science.",
+        "So although this is a challenge, it's not an impossible task.",
+        "Then as all this information's collected, it needs to be put together so it can be used.",
+        {
+          text: "And that will involve creating a single database on which it can be entered, as we continue to push forward new developments, congestion of the space environment is only going to increase.",
+          number: 39,
+        },
+        "To cope with this, we need to develop a system like the one I've described to coordinate the work of the numerous spacecraft operators.",
+        {
+          text: "But it's also essential that this system is one that establishes trust in the people that use it, both nationally and at a global level.",
+          number: 40,
+        },
+        "One interesting development that I'll mention...",
       ],
-    },
-    {
-      speaker: "MAN",
-      text: ["I see."],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "The bus is much more convenient too.",
-        "It only takes about 30 minutes.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["That's good.", "So where did you start your journey?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [{ text: "At the bus stop on Claxby Street.", number: 5 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Is that CLAXBY?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["That's right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "And how satisfied with the service are you?",
-        "Do you have any complaints?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, as I said, it's very convenient and quick when it's on time.",
-        {
-          text: "But this morning it was late, only about 10 minutes, but still.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, I understand that's annoying.",
-        "And what about the timetable?",
-        "Do you have any comments about that?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Hmm, I suppose I mainly use the bus during the day,",
-        "but anytime I've been in town in the evening,",
-        "for dinner or at the cinema,",
-        {
-          text: "I've noticed you have to wait a long time for a bus.",
-          number: 7,
-        },
-        "There aren't that many.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, thanks.", "So now, I'd like to ask you about your car use."],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I have got a car, but I don't use it that often.",
-        {
-          text: "Mainly just to go to the supermarket.",
-          number: 8,
-        },
-        "But that's about it really.",
-        "My husband uses it at the weekends to go to the golf club.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["And what about a bicycle?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["I don't actually have one at the moment."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "What about the city bikes you can rent?",
-        "Do you ever use those?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, I'm not keen on cycling there",
-        {
-          text: "because of all the pollution.",
-          number: 9,
-        },
-        "But I would like to get a bike.",
-        "It would be good to use it to get to work.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, why haven't you got one now?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I live in a flat on the 2nd floor.",
-        {
-          text: "And it doesn't have any storage, so we'd have to leave it in the hall outside the flat.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["I see.", "OK, well I think that's all we need from you today."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -406,7 +217,7 @@ const Test1Listening2023 = () => {
       }
 
       // Erica: female
-      if (speaker === "SADIE") {
+      if (speaker === "SPEAKER") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -454,18 +265,17 @@ const Test1Listening2023 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "DW307YZ",
-    2: "24",
-    3: "dentist",
-    4: "parking",
-    5: "claxby",
-    6: "late",
-    7: "evening",
-    8: "supermarket",
-    9: "pollution",
-    10: "storage",
+    31: "legal",
+    32: "cheap",
+    33: "thousands",
+    34: "identification",
+    35: "tracking",
+    36: "military",
+    37: "location",
+    38: "prediction",
+    39: "database",
+    40: "trust",
   };
 
   // --- Handle input change and auto-check ---
@@ -489,7 +299,7 @@ const Test1Listening2023 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening3Part42023", newScore);
   };
 
   const toggleButton = (id) => {
@@ -506,7 +316,7 @@ const Test1Listening2023 = () => {
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening3Part42023");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +328,7 @@ const Test1Listening2023 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +359,7 @@ const Test1Listening2023 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Transport Survey")}
+                {renderText("Space Traffic Management")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -582,257 +392,260 @@ const Test1Listening2023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6 max-w-2xl mx-auto rounded-lg space-y-5 bg-white">
+          <div className="border p-6  rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Transport survey")}
+              {renderText("Space Traffic Management")}
             </h1>
 
-            <p className="text-lg">{renderText("Name: Sadie Jones")}</p>
-
-            <p className="text-lg">{renderText("Year of birth: 1991")}</p>
-
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Postcode:")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bus")}
-            </h3>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("Date of bus journey:")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Reason for trip: shopping and visit to the")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q4 */}
-            <p className="text-lg">
-              {renderText("Travelled by bus because cost of")}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" too high")}
-            </p>
-
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("Got on bus at")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" Street")}
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Complaints about bus service")}
-            </h3>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("bus today was")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q7 */}
-            <p className="text-lg">
-              {renderText("frequency of buses in the")}
-              <button
-                onClick={() => toggleButton(7)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                7
-              </button>
-              <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by car")}
-            </h3>
-
-            {/* Q8 */}
-            <p className="text-lg">
-              {renderText("Goes to the")}
-              <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                8
-              </button>
-              <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" by car")}
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bicycle")}
-            </h3>
-
-            {/* Q9 */}
             <p className="text-lg">
               {renderText(
-                "Dislikes travelling by bike in the city centre because of the"
+                "A Space Traffic Management system is a concept similar to Air Traffic Control, but for satellites rather than planes."
               )}
+            </p>
+            <p className="text-lg">
+              {renderText("It would aim to set up legal and")}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                31
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(
+                " ways of improving safety. It does not actually exist at present."
+              )}
             </p>
 
-            {/* Q10 */}
+            <h3 className="font-semibold mt-4">
+              {renderText(
+                "Problems in developing effective Space Traffic Management"
+              )}
+            </h3>
+
+            {/* Q32 */}
             <p className="text-lg">
-              {renderText("Doesn't own a bike because of a lack of")}
+              {renderText("Satellites are now quite")}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                32
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
             </p>
+            <p>
+              {renderText(
+                " and therefore more widespread (e.g. there are constellations made up of"
+              )}
+              <button
+                onClick={() => toggleButton(33)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[33]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                33
+              </button>
+              <input
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" of satellites).")}
+            </p>
+
+            {/* Q34 */}
+            <p className="text-lg">
+              {renderText(
+                "At present, satellites are not required to transmit information to help with their"
+              )}
+              <button
+                onClick={() => toggleButton(34)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[34]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q35 */}
+            <p className="text-lg">
+              {renderText("There are few systems for")}
+              <button
+                onClick={() => toggleButton(35)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[35]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                35
+              </button>
+              <input
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(
+                " satellites. Small pieces of debris may be difficult to identify."
+              )}
+            </p>
+
+            {/* Q36 */}
+            <p className="text-lg">
+              {renderText(
+                "Operators may be unwilling to share details of satellites used for"
+              )}
+              <button
+                onClick={() => toggleButton(36)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[36]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" or commercial reasons.")}
+            </p>
+
+            {/* Q37 */}
+            <p className="text-lg">
+              {renderText("It may be hard to collect details of the object's")}
+              <button
+                onClick={() => toggleButton(37)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" at a given time.")}
+            </p>
+
+            {/* Q38 */}
+            <p className="text-lg">
+              {renderText("Scientists can only make a")}
+              <button
+                onClick={() => toggleButton(38)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" about where the satellite will go.")}
+            </p>
+
+            <h3 className="font-semibold mt-4">{renderText("Solutions")}</h3>
+
+            {/* Q39 */}
+            <p className="text-lg">
+              {renderText("The information should be combined in one")}
+              <button
+                onClick={() => toggleButton(39)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[39]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                39
+              </button>
+              <input
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q40 */}
+            <p className="text-lg">
+              {renderText("A coordinated system must be designed to create")}
+              <button
+                onClick={() => toggleButton(40)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" in its users.")}
+            </p>
           </div>
+
+          {/* ---------- Submit & Result ---------- */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -841,7 +654,7 @@ const Test1Listening2023 = () => {
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
                   <p className="text-green-600 text-2xl font-semibold">
                     Your Score: {score}/10
                   </p>
@@ -850,11 +663,11 @@ const Test1Listening2023 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -863,10 +676,6 @@ const Test1Listening2023 = () => {
 
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-
-                      const isWrong =
-                        userAnswer && userAnswer !== correctAnswer;
-
                       const noAnswer = !userAnswer;
 
                       return (
@@ -875,41 +684,35 @@ const Test1Listening2023 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {/* ICONS */}
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
-                            {(isWrong || noAnswer) && (
+                            {(noAnswer || (!isCorrect && userAnswer)) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
                                 <span className="text-white text-sm font-bold leading-none">
                                   <ImCross />
                                 </span>
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
-                          {/* User Answer */}
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className=" italic">
-                                No answer provided
-                              </span>
+                              <span className="italic">No answer provided</span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              userAnswer
                             )}
                           </p>
 
-                          {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
                               Correct Answer:
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            {correctAnswers[num]}
                           </p>
                         </li>
                       );
@@ -921,9 +724,9 @@ const Test1Listening2023 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2023></Listening1Pagination2023>
+      <Listening3Pagination2023></Listening3Pagination2023>
     </div>
   );
 };
 
-export default Test1Listening2023;
+export default Listening3Part42023;

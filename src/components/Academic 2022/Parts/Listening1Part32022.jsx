@@ -18,6 +18,8 @@ const Listening1Part32022 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [highlightedTexts, setHighlightedTexts] = useState([]);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const lines = [
     {
@@ -372,9 +374,6 @@ const Listening1Part32022 = () => {
     29: "D", // Animal disease – They both found the reading required for this was difficult
     30: "F", // Wildlife medication – They were both surprised how little is known about some aspects of this
   };
-
-  const [userAnswers, setUserAnswers] = useState({});
-  const [score, setScore] = useState(0);
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {

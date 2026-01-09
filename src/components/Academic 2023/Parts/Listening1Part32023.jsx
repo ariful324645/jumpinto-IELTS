@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2022 from "../Pagination2022/Listening1Pagination2022";
+import Listening1Pagination2023 from "../Pagination 2023/Listening1Pagination2023";
 
-const Listening1Part22022 = () => {
+const Listening1Part32023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,85 +24,102 @@ const Listening1Part22022 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 2. You will hear a tour guide, Lou Miller, speaking to a group of people about a boat trip they are going to take around the Australian island of Tasmania.",
-        "First, you have some time to look at questions 11 to 14.",
-        "Now listen carefully and answer questions 11 to 14.",
+        "Part 3, you will hear two students called Hugo and Chantal discussing a talk they have just attended at the start of their course in fashion design.",
+        "First, you have some time to look at questions 21 to 26.",
+        "Now listen carefully and answer questions 21 to 26.",
       ],
     },
     {
-      speaker: "LOU MILLER",
+      speaker: "HUGO",
       text: [
-        "So, hello everyone, my name is Lou Miller, and I'm going to be your tour guide today, as we take this fantastic boat trip around the Tasmanian coast.",
-        "Before we set off, I just want to tell you a few things about our journey.",
-        "Our boats aren't huge, as you can see, we already have three staff members on board.",
-        "And on top of that, we can transport a further 15 people, that's you, around the coastline.",
+        "Hi, Chantal. What did you think of the talk then?",
         {
-          text: "But please note, if there are more than 9 people on either side of the boat, we'll move some of you over. Ha, otherwise all 18 of us will end up in the sea.",
-          number: 11,
+          text: "Oh, were the people beside you chatting or something?",
+          number: 21,
         },
-        "We've recently upgraded all our boats.",
-        "They used to be jet black, but our new ones now have these comfortable dark red seats and a light green exterior.",
+        "It's hard to see through people's heads, isn't it?",
+        "Yeah, but it looks like there's a whole range of areas of work that we hadn't even thought of.",
         {
-          text: "In order to stand out from others and help promote our company. This gives our boats a rather unique appearance, don't you think?",
-          number: 12,
+          text: "Like fashion journalism for instance.",
+          number: 22,
         },
-        "We offer you a free lunch box during the trip. And we have three types.",
-        "Lunch Box 1 contains ham and tomato sandwiches.",
-        "Lunch Box 2 contains a cheddar cheese roll.",
+        "Hmm, overall she had quite a strong message, didn't she?",
+        "Perhaps she thinks students are a bit narrow-minded about the industry.",
         {
-          text: "And lunch box 3 is salad based, and also contains eggs and tuna. All three lunch boxes also have a packet of crisps and chocolate bar inside. Please let staff know which lunch box you prefer.",
-          number: 13,
+          text: "We know it's a tough industry.",
+          number: 23,
         },
-        "I'm sure I don't have to ask you not to throw anything into the sea.",
+        "Yeah, and we're only first years after all. We've got a lot to learn.",
         {
-          text: "We don't have any bins to put litter in, but Jess, myself or Ray, our other guide, will collect it from you after lunch and put it all in a large plastic sack.",
-          number: 14,
+          text: "Do you think our secondary-school education should have been more career focused?",
+          number: 24,
+        },
+        "Well, we had numerous talks on careers, which was good, but none of them were very inspiring.",
+        "They could have asked more people like today's speaker to talk to us.",
+        {
+          text: "Well, I promised myself that I'd go through this course and keep an open mind till the end.",
+          number: 25,
+        },
+        "But I think it's better to pick an area of the industry now, and then aim to get better and better at it.",
+        "Well, I think we'll just have to differ on that issue.",
+        "One thing's for certain though. From what she said, we'll be unpaid assistants in the industry for quite a long time.",
+        {
+          text: "I'm prepared for that, aren't you?",
+          number: 26,
+        },
+        "Actually, I'm not going to accept that view.",
+        "Really? But she knows it's the case, and everyone else says the same.",
+        "That doesn't mean it has to be true for me.",
+        "OK, well I hope you're right.",
+      ],
+    },
+    {
+      speaker: "CHANTAL",
+      text: [
+        "Hi, Hugo. I thought it was good once I'd moved seats.",
+        {
+          text: "It wasn't that. I went early so that I'd get a seat and not have to stand, but then this guy sat right in front of me, and he was so tall.",
+          number: 21,
+        },
+        "Impossible. Anyway, to answer your question, I thought it was really interesting. Especially what the speaker said about the job market.",
+        "Yeah, I wasn't expecting so many career options.",
+        "She did. She kept saying things like 'I know you all think this, but...' and then she'd tell us how it really is.",
+        {
+          text: "It was a bit harsh though.",
+          number: 23,
+        },
+        "Exactly. Do you think our secondary-school education should have been more career focused?",
+        "I agree. We were told about lots of different careers, just when we needed to be, but not by the experts who really know stuff.",
+        {
+          text: "Well, I promised myself that I'd go through this course and keep an open mind till the end.",
+          number: 25,
+        },
+        "Mmm.",
+        "It must have felt amazing. Though she said all she was looking for back then was experience, not financial reward.",
+        {
+          text: "I'm always considering my own clothes, but now I can see you should be focusing on your client.",
+          number: 27,
+        },
+        "She obviously regretted losing the job.",
+        {
+          text: "This would be especially suitable if you have done some acting.",
+          number: 28,
+        },
+        "Yeah, it would be good to know that kind of thing.",
+        "Yeah.",
+        {
+          text: "Yeah, people don't give up searching. They also take things back to the store if they aren't right.",
+          number: 30,
         },
       ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the talk, you have some time to look at questions 15 to 20.",
-        "Now listen and answer questions 15 to 20.",
-      ],
-    },
-    {
-      speaker: "LOU MILLER",
-      text: [
-        "The engine on the boat makes quite a lot of noise, so before we head off, let me tell you a few things about what you're going to see.",
-        "This area is famous for its ancient lighthouse, which you'll see from the boat as we turn past the first little island.",
-        "It was built in 1838 to protect sailors, as a number of shipwrecks had led to significant loss of life.",
-        {
-          text: "The construction itself was complicated, as some of the original drawings kept by the local council show.",
-          number: 15,
-        },
-        "It sits right on top of the cliffs in a very isolated spot.",
-        "In the 19th century, there were many jobs there, such as polishing the brass lamps, chopping firewood, and cleaning windows that kept lighthouse keepers busy.",
-        "These workers were mainly prison convicts until the middle of that century, when ordinary families willing to live in such circumstances took over.",
-        {
-          text: "Some of you have asked me what creatures we can expect to see. I know everyone loves the penguins, but they're very shy, and unfortunately tend to hide from passing boats. But you might see birds in the distance, such as sea eagles flying around the cliff edges where they nest. When we get to the rocky area inhabited by fur seals, we'll stop and watch them swimming around the coast.",
-          number: 16,
-        },
-        {
-          text: "They're inquisitive creatures, so don't be surprised if one pops up right in front of you. Their predators, orca whales, hunt along the coastline too. But spotting one of these is rare. Dolphins on the other hand can sometimes approach on their own or in groups, as they ride the waves beside us.",
-          number: 17,
-        },
-        {
-          text: "Lastly, I want to mention the caves. Tasmania is famous for its caves, and the ones we'll pass by are so amazing that people are lost for words when they see them. They can only be approached by sea, but if you feel that you want to see more than we're able to show you, then you can take a kayak into the area on another day.",
-          number: 18,
-        },
-        {
-          text: "And one of our staff will give you more information on that. What we'll do is to go through a narrow channel, past some incredible rock formations. And from there, we'll be able to see the openings to the caves, and at that point, we'll talk to you about what lies beyond.",
-          number: 19,
-        },
-      ],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 2.",
-        "You now have half a minute to check your answers to part 2.",
+        "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "Now listen and answer questions 27 to 30.",
+        "That is the end of part 3.",
+        "You now have 30 seconds to check your answers to part 3.",
       ],
     },
   ];
@@ -252,22 +269,19 @@ const Listening1Part22022 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    // Questions 11–14 (Choose the correct letter, A, B, or C)
-    11: "C", // 18 people
-    12: "A", // dark red
-    13: "B", // Lunchbox 2
-    14: "C", // put it in the bins provided on the boat
+    21: "A", // Her view of the speaker was blocked
+    22: "B", // There is more variety in it than they had realised
+    23: "C", // critical of the industry
+    24: "C", // who gave the advice
+    25: "B", // when to choose a career in fashion
+    26: "A", // He is realistic about the practice
 
-    // Questions 15–16 (Choose TWO letters, A–E)
-    "15-16": ["A", "E"], // why it was built, what it was built with
+    // Questions 27–28 (Choose TWO letters, A–E)
+    "27-28": ["B", "E"], // paying too much attention to how she looked, openly disliking her client
 
-    // Questions 17–18 (Choose TWO letters, A–E)
-    "17-18": ["B", "C"], // fur seals, dolphins
-
-    // Questions 19–20 (Choose TWO letters, A–E)
-    "19-20": ["B", "D"], // entrances often blocked, someone explains inside
+    // Questions 29–30 (Choose TWO letters, A–E)
+    "29-30": ["A", "C"], // the reasons people return fashion items, fashion designs people want but can't find
   };
 
   // --- Handle input change and auto-check ---
@@ -276,7 +290,7 @@ const Listening1Part22022 = () => {
       let updated = { ...prev };
 
       // Multi-select (arrays) for 11-12, 13-14
-      if (id === "15-16" || id === "17-18" || id === "19-20") {
+      if (id === "27-28" || id === "29-30") {
         const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
         if (prevAnswers.includes(value)) {
           updated[id] = prevAnswers.filter((v) => v !== value);
@@ -319,7 +333,7 @@ const Listening1Part22022 = () => {
     });
 
     setScore(newScore);
-    localStorage.setItem("/listening1Part22022", newScore);
+    localStorage.setItem("/listening1Part32023", newScore);
   };
 
   const toggleButton = (id) => {
@@ -331,12 +345,12 @@ const Listening1Part22022 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/listening1Part22022");
+    localStorage.removeItem("/listening1Part32023");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/listening1Part22022");
+    const savedScore = localStorage.getItem("/listening1Part32023");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -348,7 +362,7 @@ const Listening1Part22022 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 3")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -379,7 +393,7 @@ const Listening1Part22022 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Boat trip round Tasmania")}
+                {renderText("Talk on jobs in fashion design")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -412,252 +426,204 @@ const Listening1Part22022 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 11–20")}
+            {renderText("Questions 21–30")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText(
-              "Choose the correct letter A, B, C or choose TWO letters, A–E as instructed."
+              "Choose the correct letter, A, B or C, or choose TWO letters as instructed."
             )}
           </h3>
 
-          {/* ---------- Questions 11–14 (single choice) ---------- */}
-          <div className=" p-6 rounded-lg space-y-6 bg-white">
+          <div className="p-6 rounded-lg space-y-8 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Boat trip round Tasmania")}
+              {renderText("Talk on jobs in fashion design")}
             </h1>
 
-            {/* Q11 */}
-            {/* Q11 */}
-            <p className="text-lg font-bold">
-              11{" "}
-              {renderText(
-                "What is the maximum number of people who can stand on each side of the boat?"
-              )}
-            </p>
-
-            <div className="flex flex-col space-y-2 mt-1">
-              {["A. 9", "B. 15", "C. 18"].map((opt, idx) => (
-                <label key={idx} className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="q11"
-                    value={opt[0]}
-                    checked={userAnswers[11] === opt[0]}
-                    onChange={(e) => handleInputChange(11, e.target.value)}
-                    className="form-radio"
-                  />
-                  <span>{opt}</span>
-                </label>
-              ))}
-            </div>
-
-            {/* Q12 */}
-            {/* Q12 */}
-            <p className="text-lg font-bold mt-2">
-              12 {renderText("What colour are the tour boats?")}
-            </p>
-
-            <div className="flex flex-col space-y-2 mt-1">
-              {["A. dark red", "B. jet black", "C. light green"].map(
-                (opt, idx) => (
-                  <label key={idx} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name="q12"
-                      value={opt[0]}
-                      checked={userAnswers[12] === opt[0]}
-                      onChange={(e) => handleInputChange(12, e.target.value)}
-                      className="form-radio"
-                    />
-                    <span>{opt}</span>
-                  </label>
-                )
-              )}
-            </div>
-
-            {/* Q13 */}
-            <p className="text-lg font-bold">
-              13{" "}
-              {renderText(
-                "Which lunchbox is suitable for someone who doesn't eat meat or fish?"
-              )}
-            </p>
-
-            <div className="flex flex-col space-y-2 mt-1">
-              {["A. Lunchbox 1", "B. Lunchbox 2", "C. Lunchbox 3"].map(
-                (opt, idx) => (
-                  <label key={idx} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name="q13"
-                      value={opt[0]}
-                      checked={userAnswers[13] === opt[0]}
-                      onChange={(e) => handleInputChange(13, e.target.value)}
-                      className="form-radio"
-                    />
-                    <span>{opt}</span>
-                  </label>
-                )
-              )}
-            </div>
-
-            {/* Q14 */}
-            {/* Q14 */}
-            <p className="text-lg font-bold mt-2">
-              14 {renderText("What should people do with their litter?")}
-            </p>
-
-            <div className="flex flex-col space-y-1 mt-1">
-              {[
-                "A. take it home",
-                "B. hand it to a member of staff",
-                "C. put it in the bins provided on the boat",
-              ].map((opt, idx) => (
-                <label key={idx} className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="q14"
-                    value={opt[0]}
-                    checked={userAnswers[14] === opt[0]}
-                    onChange={(e) => handleInputChange(14, e.target.value)}
-                    className="form-radio"
-                  />
-                  <span>{opt}</span>
-                </label>
-              ))}
-            </div>
-
+            {/* ================= Questions 21–26 ================= */}
             <h2 className="font-bold text-xl">
-              {renderText("Questions 15 and 16.")}
+              {renderText("Questions 21–26")}
             </h2>
-            <p className="mb-3">
+            <p>{renderText("Choose the correct letter, A, B or C.")}</p>
+
+            {/* Questions 21–26 */}
+            {[
+              {
+                num: 21,
+                question:
+                  "What problem did Chantal have at the start of the talk?",
+                options: [
+                  "A. Her view of the speaker was blocked.",
+                  "B. She was unable to find an empty seat.",
+                  "C. The students next to her were talking.",
+                ],
+              },
+              {
+                num: 22,
+                question:
+                  "What were Hugo and Chantal surprised to hear about the job market?",
+                options: [
+                  "A. It has become more competitive than it used to be.",
+                  "B. There is more variety in it than they had realised.",
+                  "C. Some areas of it are more exciting than others.",
+                ],
+              },
+              {
+                num: 23,
+                question:
+                  "Hugo and Chantal agree that the speaker's message was",
+                options: [
+                  "A. unfair to them at times.",
+                  "B. hard for them to follow.",
+                  "C. critical of the industry.",
+                ],
+              },
+              {
+                num: 24,
+                question:
+                  "What do Hugo and Chantal criticise about their school careers advice?",
+                options: [
+                  "A. when they received the advice",
+                  "B. how much advice was given",
+                  "C. who gave the advice",
+                ],
+              },
+              {
+                num: 25,
+                question:
+                  "When discussing their future, Hugo and Chantal disagree on",
+                options: [
+                  "A. which is the best career in fashion.",
+                  "B. when to choose a career in fashion.",
+                  "C. why they would like a career in fashion.",
+                ],
+              },
+              {
+                num: 26,
+                question: "How does Hugo feel about being an unpaid assistant?",
+                options: [
+                  "A. He is realistic about the practice.",
+                  "B. He feels the practice is dishonest.",
+                  "C. He thinks others want to change the practice.",
+                ],
+              },
+            ].map(({ num, question, options }) => (
+              <div key={num} className="mt-4">
+                <p className="font-bold text-lg">
+                  {num} {renderText(question)}
+                </p>
+                {options.map((opt, idx) => (
+                  <label key={idx} className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name={`q${num}`}
+                      value={opt[0]}
+                      checked={userAnswers[num] === opt[0]}
+                      onChange={(e) => handleInputChange(num, e.target.value)}
+                    />
+                    <span>{renderText(opt)}</span>
+                  </label>
+                ))}
+              </div>
+            ))}
+
+            {/* ================= Questions 27–28 ================= */}
+            <h2 className="font-bold text-xl mt-6">
+              {renderText("Questions 27–28")}
+            </h2>
+            <p>
               {renderText("Choose TWO letters, ")}
               <span className="font-bold">A–E</span>.
             </p>
-
-            {/* ---------- Questions 15–16 (choose TWO letters) ---------- */}
-            <p className="text-lg mt-6">
-              <span className="font-bold">15-16 </span>
+            <p className="font-bold text-lg mt-3">
+              27–28{" "}
               {renderText(
-                "Which TWO features of the lighthouse does Lou mention?"
+                "Which TWO mistakes did the speaker admit she made in her first job?"
               )}
             </p>
-            {[
-              " why it was built",
-              "who built it",
-              "how long it took to build",
-              "who staffed it",
-              "what it was built with",
-            ].map((optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
 
-              const selectedOptions = userAnswers["15-16"] || [];
-              const isChecked = selectedOptions.includes(value);
-
-              // Disable other options once TWO are selected
-              const isDisabled = selectedOptions.length === 2 && !isChecked;
-
-              return (
-                <label
-                  key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    disabled={isDisabled}
-                    onChange={() => handleInputChange("15-16", value)}
-                  />
-
-                  <span className="font-semibold">{value}.</span>
-                  <span>{renderText(optionText)}</span>
-                </label>
-              );
-            })}
-
-            {/* ---------- Questions 17–18 (choose TWO letters) ---------- */}
-            <p className="text-lg mt-6">
-              <span className="font-bold">17-18 </span>
-              {renderText(
-                "Which TWO types of creature might come close to the boat?"
-              )}
-            </p>
-            {["sea eagles", "fur seals", "dolphins", "whales", "penguins"].map(
-              (optionText, index) => {
-                const value = String.fromCharCode(65 + index); // A–E
-
-                const selectedOptions = userAnswers["17-18"] || [];
-                const isChecked = selectedOptions.includes(value);
-
-                // Disable other options once TWO are selected
-                const isDisabled = selectedOptions.length === 2 && !isChecked;
+            <div className="space-y-2">
+              {[
+                "being dishonest to her employer",
+                "paying too much attention to how she looked",
+                "expecting to become well known",
+                "trying to earn a lot of money",
+                "openly disliking her client",
+              ].map((opt, idx) => {
+                const value = String.fromCharCode(65 + idx);
+                const selected = userAnswers["27-28"] || [];
+                const isChecked = selected.includes(value);
+                const isDisabled = selected.length === 2 && !isChecked;
 
                 return (
                   <label
-                    key={index}
-                    className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                      isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                    key={idx}
+                    className={`flex items-center gap-2 ${
+                      isDisabled ? "opacity-50" : ""
                     }`}
                   >
                     <input
                       type="checkbox"
                       checked={isChecked}
                       disabled={isDisabled}
-                      onChange={() => handleInputChange("17-18", value)}
+                      onChange={() => handleInputChange("27-28", value)}
                     />
-
                     <span className="font-semibold">{value}.</span>
-                    <span>{renderText(optionText)}</span>
+                    <span>{renderText(opt)}</span>
                   </label>
                 );
-              }
-            )}
+              })}
+            </div>
 
-            {/* ---------- Questions 19–20 (choose TWO letters) ---------- */}
-            <p className="text-lg mt-6">
-              <span className="font-bold">19-20 </span>
-              {renderText("Which TWO points does Lou make about the caves?")}
+            {/* ================= Questions 29–30 ================= */}
+            <h2 className="font-bold text-xl mt-6">
+              {renderText("Questions 29–30")}
+            </h2>
+            <p>
+              {renderText("Choose TWO letters, ")}
+              <span className="font-bold">A–E</span>.
             </p>
-            {[
-              "Only large tourist boats can visit them.",
-              "The entrances to them are often blocked.",
-              "It is too dangerous for individuals to go near them.",
-              "Someone will explain what is inside them.",
-              "They cannot be reached on foot.",
-            ].map((optionText, index) => {
-              const value = String.fromCharCode(65 + index); // A–E
+            <p className="font-bold text-lg mt-3">
+              29–30{" "}
+              {renderText(
+                "Which TWO pieces of retail information do Hugo and Chantal agree would be useful?"
+              )}
+            </p>
 
-              const selectedOptions = userAnswers["19-20"] || [];
-              const isChecked = selectedOptions.includes(value);
+            <div className="space-y-2">
+              {[
+                "the reasons people return fashion items",
+                "how much time people have to shop for clothes",
+                "fashion designs people want but can't find",
+                "the best time of year for fashion buying",
+                "the most popular fashion sizes",
+              ].map((opt, idx) => {
+                const value = String.fromCharCode(65 + idx);
+                const selected = userAnswers["29-30"] || [];
+                const isChecked = selected.includes(value);
+                const isDisabled = selected.length === 2 && !isChecked;
 
-              // Disable other options once TWO are selected
-              const isDisabled = selectedOptions.length === 2 && !isChecked;
-
-              return (
-                <label
-                  key={index}
-                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    disabled={isDisabled}
-                    onChange={() => handleInputChange("19-20", value)}
-                  />
-
-                  <span className="font-semibold">{value}.</span>
-                  <span>{renderText(optionText)}</span>
-                </label>
-              );
-            })}
+                return (
+                  <label
+                    key={idx}
+                    className={`flex items-center gap-2 ${
+                      isDisabled ? "opacity-50" : ""
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      disabled={isDisabled}
+                      onChange={() => handleInputChange("29-30", value)}
+                    />
+                    <span className="font-semibold">{value}.</span>
+                    <span>{renderText(opt)}</span>
+                  </label>
+                );
+              })}
+            </div>
           </div>
 
-          {/* ---------- Submit / Result ---------- */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -665,27 +631,30 @@ const Listening1Part22022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/10
+                    {renderText("Your Score: ")}
+                    {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11–20)
+                    {renderText("All Answers (21–30)")}
                   </h3>
 
                   <ul className="space-y-3">
-                    {[11, 12, 13, 14, "15-16", "17-18", "19-20"].map((num) => {
+                    {[21, 22, 23, 24, 25, 26, "27-28", "29-30"].map((num) => {
                       const user = userAnswers[num];
                       const correct = correctAnswers[num];
 
@@ -755,9 +724,9 @@ const Listening1Part22022 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2022></Listening1Pagination2022>
+      <Listening1Pagination2023></Listening1Pagination2023>
     </div>
   );
 };
 
-export default Listening1Part22022;
+export default Listening1Part32023;

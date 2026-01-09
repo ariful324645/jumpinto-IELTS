@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2023 from "../Pagination 2023/Listening1Pagination2023";
+import Listening4Pagination2023 from "../Pagination 2023/Listening4Pagination2023";
 
-const Test1Listening2023 = () => {
+const Listening4Part42023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,273 +24,89 @@ const Test1Listening2023 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear an interview with a woman who is doing a survey on transport.",
-        "First, you have some time to look at questions 1 to 5.",
-        "Now listen carefully and answer questions 1 to 5.",
+        "Part 4, you will hear a literature student giving a talk about Victor Hugo, a famous 19th century French writer.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "SPEAKER",
       text: [
-        "Excuse me, would you mind if I asked you some questions?",
-        "We're doing a survey on transport.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, that's OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["First of all can I take your name?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it's Sadie Jones."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Thanks very much.",
-        "And could I have your date of birth?",
-        "Just the year will do, actually.",
-        "Is that all right?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Uh. Yes, that's fine.", "It's 1991."],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, next your post code please."],
-    },
-    {
-      speaker: "SADIE",
-      text: [{ text: "It's DW307YZ.", number: 1 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Great, thanks.", "Is that in Wells?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, it's actually in Harborne.",
-        "Wells isn't far from there, though.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I really like that area.",
-        "My grandmother lived there when I was a kid.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it is nice."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Right, so now I want to ask you some questions about how you traveled here today.",
-        "Did you use public transport?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, I came by bus."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, and that was today.",
-        { text: "It's the 24th of April, isn't it?", number: 2 },
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Isn't it the 25th?", "Uh, no, ha, actually you're right."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Ha ha ha.",
-        "And what was the reason for your trip today?",
-        "I can see you've got some shopping with you.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Yes, I did some shopping,",
+        "The person I've chosen to talk about is the French writer Victor Hugo.",
+        "Many people have heard of him because his novel, Les Miserables, which he wrote in 1862, is famous around the world.",
+        "It became a stage musical in the 1980s, and a film version was also released in 2012.",
+        "So some of us, I'm sure, have a pretty general idea of the plot, but we know much less about the author.",
         {
-          text: "but the main reason I came here was to go to the dentist.",
-          number: 3,
+          text: "Today, I'm going to provide a little more insight into this talented man.",
+          number: 31,
+        },
+        "And I'm going to talk particularly about the home he had on the island of Guernsey in the British Channel Islands, but first, his early career.",
+        "As I've said, he was a writer.",
+        "He was at the height of his career in Paris, and he was very highly regarded by his colleagues.",
+        "As far as literature was concerned, he was the leading figure of the Romantic movement.",
+        {
+          text: "However, as well as being a literary genius, he also gave many speeches about issues like the level of poverty in his society.",
+          number: 32,
+        },
+        "He felt very strongly about this, and about other areas where change was needed, like education.",
+        "This kind of outspoken criticism was not well liked by the rulers of France.",
+        {
+          text: "And eventually the emperor - Napoleon III - told Victor Hugo to leave Paris and not return.",
+          number: 33,
+        },
+        "In other words, he sent him into exile.",
+        "So Victor Hugo was forced to reside in other parts of Europe.",
+        { text: "Guernsey was actually his third place of exile.", number: 34 },
+        "And he landed there in 1855.",
+        "He produced a lot while on Guernsey, including Les Miserables.",
+        "And to do this, he had to spend a great deal of time in the home that he had there.",
+        "This was a property that he bought using the money he'd made in France, from the publication of a collection of his poetry.",
+        {
+          text: "It was the only property he ever owned, and he was very proud of it.",
+          number: 35,
+        },
+        "The property Victor Hugo bought on Guernsey was a large five-storey house in the capital town of St Peter Port, and he lived there for 15 years.",
+        "Returning to France in 1870 when Napoleon's empire collapsed.",
+        "He decorated and furnished each level or floor of the house in unique and wonderful ways, and many people consider the inside of the house to be a work of art.",
+        "Today, it's a museum that attracts 200,000 visitors a year.",
+        "He lived in the house with his family, and portraits of its members still hang in rooms on the ground floor, along with drawings that he did during his travels.",
+        { text: "That he felt were important to him.", number: 36 },
+        "In other ground floor rooms, there are huge tapestries that he would have designed and loved.",
+        "The walls are covered in dark wood panelling that Victor Hugo created himself using wooden furniture that he bought in the market.",
+        {
+          text: "The items were relatively inexpensive, and he used them to create intricate carvings.",
+          number: 37,
+        },
+        "They gave an atmosphere on the lower level that was shadowy, and rather solemn.",
+        "On the next level of the house, there are two impressive lounges where he entertained his guests.",
+        "One lounge has entirely red furnishings, such as sofas and wall coverings, and the other blue.",
+        "There's a strong Chinese influence in these areas, in things like the wallpaper pattern.",
+        "And the lamps, which he would have made himself by copying original versions.",
+        {
+          text: "His library, where he left many of his favorite books, forms the hallway to the third floor, and was a comfortable area where he could relax and enjoy his afternoons.",
+          number: 38,
+        },
+        "And then, at the very top of the house, there's a room called the Lookout, called that because it looks out over the harbor.",
+        "In contrast to the rather dark lower levels, it's full of light, and was like a glass office where he would write until lunchtime.",
+        "Often at his desk.",
+        "So Victor Hugo was a man of many talents, but he was also true to his values.",
+        "While living in his house on Guernsey, he entertained many other famous writers, but he also invited a large group of local children from the deprived areas of the island to dinner once a week.",
+        {
+          text: "What's more, he served them their food, which was an extraordinary gesture for the time period.",
+          number: 39,
+        },
+        "In 1927, the house was owned by his relatives, and they decided to donate it to the city of Paris.",
+        {
+          text: "It has since been restored using photographs from the period, and as I mentioned earlier, is now a museum that is open to the public.",
+          number: 40,
         },
       ],
-    },
-    {
-      speaker: "MAN",
-      text: ["That's not much fun.", "Hope it was nothing serious."],
-    },
-    {
-      speaker: "SADIE",
-      text: ["No, it was just a check-up.", "It's fine."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Good.", "Do you normally travel by bus into the city center?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Yes, I stopped driving ages ago,",
-        {
-          text: "because parking was so difficult to find, and it cost so much.",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["I see."],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "The bus is much more convenient too.",
-        "It only takes about 30 minutes.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["That's good.", "So where did you start your journey?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [{ text: "At the bus stop on Claxby Street.", number: 5 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Is that CLAXBY?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["That's right."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "And how satisfied with the service are you?",
-        "Do you have any complaints?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, as I said, it's very convenient and quick when it's on time.",
-        {
-          text: "But this morning it was late, only about 10 minutes, but still.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, I understand that's annoying.",
-        "And what about the timetable?",
-        "Do you have any comments about that?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Hmm, I suppose I mainly use the bus during the day,",
-        "but anytime I've been in town in the evening,",
-        "for dinner or at the cinema,",
-        {
-          text: "I've noticed you have to wait a long time for a bus.",
-          number: 7,
-        },
-        "There aren't that many.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, thanks.", "So now, I'd like to ask you about your car use."],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I have got a car, but I don't use it that often.",
-        {
-          text: "Mainly just to go to the supermarket.",
-          number: 8,
-        },
-        "But that's about it really.",
-        "My husband uses it at the weekends to go to the golf club.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["And what about a bicycle?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["I don't actually have one at the moment."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "What about the city bikes you can rent?",
-        "Do you ever use those?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, I'm not keen on cycling there",
-        {
-          text: "because of all the pollution.",
-          number: 9,
-        },
-        "But I would like to get a bike.",
-        "It would be good to use it to get to work.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, why haven't you got one now?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I live in a flat on the 2nd floor.",
-        {
-          text: "And it doesn't have any storage, so we'd have to leave it in the hall outside the flat.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["I see.", "OK, well I think that's all we need from you today."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -453,19 +269,18 @@ const Test1Listening2023 = () => {
     speakNextChunk();
   };
 
-  //  Marks show
-
+  // Marks show
   const correctAnswers = {
-    1: "DW307YZ",
-    2: "24",
-    3: "dentist",
-    4: "parking",
-    5: "claxby",
-    6: "late",
-    7: "evening",
-    8: "supermarket",
-    9: "pollution",
-    10: "storage",
+    31: "plot", // We know more about its overall ___ than about its author
+    32: "poverty", // Social issues, such as ___ and education
+    33: "Europe", // Exile: he had to live elsewhere in ___
+    34: "poetry", // Income from the sale of some ___ he had written
+    35: "drawings", // Ground floor: portraits, ___, and tapestries
+    36: "furniture", // Cheap ___ made of wood used for carvings
+    37: "lamps", // First floor: wallpaper and ___ with Chinese design
+    38: "harbor", // Room at top of house with view of ___
+    39: "children", // Entertained other writers and poor ___
+    40: "relatives", // Gave ownership of house to city of Paris in 1927
   };
 
   // --- Handle input change and auto-check ---
@@ -489,7 +304,7 @@ const Test1Listening2023 = () => {
       }
     });
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/2023/Test 4/listening", newScore);
   };
 
   const toggleButton = (id) => {
@@ -501,12 +316,12 @@ const Test1Listening2023 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/2023/Test 4/listening");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/2023/Test 4/listening");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -518,7 +333,7 @@ const Test1Listening2023 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +364,7 @@ const Test1Listening2023 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Transport Survey")}
+                {renderText("Victor Hugo")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -582,257 +397,254 @@ const Test1Listening2023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6 max-w-2xl mx-auto rounded-lg space-y-5 bg-white">
+          <div className="border p-6  rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Transport survey")}
+              {renderText("Victor Hugo")}
             </h1>
 
-            <p className="text-lg">{renderText("Name: Sadie Jones")}</p>
-
-            <p className="text-lg">{renderText("Year of birth: 1991")}</p>
-
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Postcode:")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bus")}
-            </h3>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("Date of bus journey:")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Reason for trip: shopping and visit to the")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q4 */}
-            <p className="text-lg">
-              {renderText("Travelled by bus because cost of")}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" too high")}
-            </p>
-
-            {/* Q5 */}
-            <p className="text-lg">
-              {renderText("Got on bus at")}
-              <button
-                onClick={() => toggleButton(5)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                5
-              </button>
-              <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" Street")}
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Complaints about bus service")}
-            </h3>
-
-            {/* Q6 */}
-            <p className="text-lg">
-              {renderText("bus today was")}
-              <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                6
-              </button>
-              <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q7 */}
-            <p className="text-lg">
-              {renderText("frequency of buses in the")}
-              <button
-                onClick={() => toggleButton(7)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                7
-              </button>
-              <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by car")}
-            </h3>
-
-            {/* Q8 */}
-            <p className="text-lg">
-              {renderText("Goes to the")}
-              <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                8
-              </button>
-              <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" by car")}
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bicycle")}
-            </h3>
-
-            {/* Q9 */}
+            {/* Q31 */}
             <p className="text-lg">
               {renderText(
-                "Dislikes travelling by bike in the city centre because of the"
+                "His novel, Les Miserables has been adapted for theatre and cinema."
               )}
+              <br />
+              {renderText("We know more about its overall")}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                31
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" than about its author.")}
             </p>
 
-            {/* Q10 */}
+            {/* Q32 */}
             <p className="text-lg">
-              {renderText("Doesn't own a bike because of a lack of")}
+              {renderText("He spoke publicly about social issues, such as")}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                32
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" and education.")}
+            </p>
+
+            {/* Q33 */}
+            <p className="text-lg">
+              {renderText(
+                "His exile from France forced him to live elsewhere in"
+              )}
+              <button
+                onClick={() => toggleButton(33)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[33]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                33
+              </button>
+              <input
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q34 */}
+            <p className="text-lg">
+              {renderText("He used his income from the sale of some")}
+              <button
+                onClick={() => toggleButton(34)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[34]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" he had written to buy a house on Guernsey.")}
+            </p>
+
+            {/* Q35 */}
+            <p className="text-lg">
+              {renderText("The ground floor contains portraits,")}
+              <button
+                onClick={() => toggleButton(35)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[35]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                35
+              </button>
+              <input
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" and tapestries that he valued.")}
+            </p>
+
+            {/* Q36 */}
+            <p className="text-lg">
+              {renderText("He bought cheap")}
+              <button
+                onClick={() => toggleButton(36)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[36]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(
+                " made of wood and turned this into beautiful wall carvings."
+              )}
+            </p>
+
+            {/* Q37 */}
+            <p className="text-lg">
+              {renderText(
+                "The first floor consists of furnished areas with wallpaper and"
+              )}
+              <button
+                onClick={() => toggleButton(37)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" that have a Chinese design.")}
+            </p>
+
+            {/* Q38 */}
+            <p className="text-lg">
+              {renderText(
+                "He wrote in a room at the top of the house that had a view of the"
+              )}
+              <button
+                onClick={() => toggleButton(38)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q39 */}
+            <p className="text-lg">
+              {renderText("He entertained other writers as well as poor")}
+              <button
+                onClick={() => toggleButton(39)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[39]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                39
+              </button>
+              <input
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" in his house.")}
+            </p>
+
+            {/* Q40 */}
+            <p className="text-lg">
+              {renderText("Victor Hugo's")}
+              <button
+                onClick={() => toggleButton(40)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(
+                " gave ownership of the house to the city of Paris in 1927."
+              )}
             </p>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={() => setShowResult(true)}
-                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
                   Submit Answers
                 </button>
@@ -850,23 +662,19 @@ const Test1Listening2023 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
-
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
                         ?.trim()
                         .toLowerCase();
-
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-
                       const isWrong =
                         userAnswer && userAnswer !== correctAnswer;
-
                       const noAnswer = !userAnswer;
 
                       return (
@@ -879,7 +687,7 @@ const Test1Listening2023 = () => {
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
                             {(isWrong || noAnswer) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
@@ -896,9 +704,7 @@ const Test1Listening2023 = () => {
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className=" italic">
-                                No answer provided
-                              </span>
+                              <span className="italic">No answer provided</span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
@@ -921,9 +727,9 @@ const Test1Listening2023 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2023></Listening1Pagination2023>
+      <Listening4Pagination2023></Listening4Pagination2023>
     </div>
   );
 };
 
-export default Test1Listening2023;
+export default Listening4Part42023;

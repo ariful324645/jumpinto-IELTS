@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
-
+import Reading2Pagination2022 from "../Pagination2022/Reading2Pagination2022";
 const Test2Reading2022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+
+  // result marks display
+  const [showResult, setShowResult] = useState(false);
 
   const handleClear = () => {
     setActiveButtons({});
@@ -16,31 +21,50 @@ const Test2Reading2022 = () => {
   };
 
   const questions = [
-    "The Bedouin teenagers who found the scrolls were disappointed by how little money they received for them.",
-    "There is agreement among academics about the origin of the Dead Sea Scrolls.",
-    "Most of the books of the Bible written on the scrolls are incomplete..",
-    "The information on the Copper Scroll is written in an unusual way.",
-    "Mar Samuel was given some of the scrolls as a gift.",
-    "In the early 1950s, a number of educational establishments in the US were keen to buy scrolls from Mar Samuel.",
-    "The scroll that was pieced together in 2017 contains information about annual occasions in the Qumran area 2,000 years ago.",
-    "Academics at the University of Haifa are currently researching how to decipher the final scroll.",
+    "Methods for predicting the Earth's population have recently changed.",
+    "Human beings are responsible for some of the destruction to food-producing land.",
+    "The crops produced in vertical farms will depend on the season.",
+    "Some damage to food crops is caused by climate change.",
+    "Fertilisers will be needed for certain crops in vertical farms.",
+    "Vertical farming will make plants less likely to be affected by infectious diseases.",
   ];
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
+  const handleOptionClick = (qNum, option) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [qNum]: option,
+    }));
 
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
-  );
-
-  const [activeNumbers, setActiveNumbers] = useState(
-    Array(questions.length).fill(false)
-  );
-
-  const handleOptionClick = (qIndex, oIndex) => {
-    const updatedOptions = [...selectedOptions];
-    updatedOptions[qIndex] = oIndex;
-    setSelectedOptions(updatedOptions);
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [qNum]: option }; // ✅ FIX
+      calculateScore(updated);
+      return updated;
+    });
   };
+
+  const calculateScore = (answers) => {
+    let newScore = 0;
+
+    Object.keys(correctAnswers).forEach((key) => {
+      const userAnswer = answers[key];
+      const correctAnswer = correctAnswers[key];
+
+      if (
+        typeof userAnswer === "string" &&
+        userAnswer.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
+      ) {
+        newScore += 1;
+      }
+    });
+
+    setScore(newScore);
+    localStorage.setItem("/2022/Test 1/reading", newScore);
+  };
+
+  const [selectedOptions, setSelectedOptions] = useState({});
+
+  const [activeNumbers, setActiveNumbers] = useState(Array(14).fill(false));
 
   const handleNumberClick = (qIndex) => {
     const updatedActive = [...activeNumbers];
@@ -54,8 +78,109 @@ const Test2Reading2022 = () => {
       [id]: !prev[id],
     }));
   };
+
+  // text highlight and clear
+
+  const [selectedText, setSelectedText] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [highlightedTexts, setHighlightedTexts] = useState([]);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const handleTextSelect = () => {
+    const selection = window.getSelection();
+    if (selection && selection.toString()) {
+      const range = selection.getRangeAt(0).getBoundingClientRect();
+      setModalPosition({
+        top: range.bottom + window.scrollY,
+        left: range.left + window.scrollX,
+      });
+      setSelectedText(selection.toString());
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleHighlight = () => {
+    if (selectedText) {
+      setHighlightedTexts((prev) => [...prev, selectedText]);
+      setSelectedText("");
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleClearHighlight = () => {
+    setHighlightedTexts([]);
+    setSelectedText("");
+    setIsModalOpen(false);
+  };
+
+  const renderText = (chunk) => {
+    const text = typeof chunk === "string" ? chunk : chunk.text;
+    let parts = [text];
+    highlightedTexts.forEach((ht) => {
+      parts = parts.flatMap((part) =>
+        typeof part === "string"
+          ? part.split(ht).flatMap((p, i, arr) =>
+              i < arr.length - 1
+                ? [
+                    p,
+                    <span key={Math.random()} className="bg-yellow-200 ">
+                      {ht}
+                    </span>,
+                  ]
+                : [p]
+            )
+          : [part]
+      );
+    });
+    return parts;
+  };
+
+  //  Marks show
+  const correctAnswers = {
+    // Questions 1–5 (ONE WORD ONLY)
+    1: "noise", // "threw a noise of breaking" → likely "stone" or "noise", based on context. Using your mapping: "population" seems placeholder
+    2: "cave", // "teenagers went into the ____"
+    3: "clay", // "containers made of ____"
+    4: "Essenes", // "group of people known as the ____"
+    5: "Hebrew", // "written mainly in the ____ language"
+
+    // Questions 6–13 (TRUE / FALSE / NOT GIVEN)
+    6: "FALSE", // "The Bedouin teenagers were disappointed..." → FALSE
+    7: "NOT GIVEN", // "agreement among academics..." → NOT GIVEN
+    8: "TRUE", // "Most of the books of the Bible written on the scrolls are incomplete." → TRUE
+    9: "TRUE", // "Copper Scroll is written in unusual way" → TRUE
+    10: "TRUE", // "Mar Samuel was given some scrolls as a gift" → TRUE
+    11: "TRUE", // "Educational establishments in US were keen to buy scrolls" → TRUE
+    12: "TRUE", // "Scroll pieced together in 2017 contains info about annual occasions" → TRUE
+    13: "NOT GIVEN", // "Academics at University of Haifa are researching final scroll" → NOT GIVEN
+  };
+
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2021/Test 1/reading");
+    if (savedScore) setScore(Number(savedScore));
+  }, []);
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
+
+  // --- Handle input change and auto-check ---
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [id]: value };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2021/Test 1/reading");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
+
   return (
-    <div className="px-3">
+    <div onMouseUp={handleTextSelect} className="px-3">
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
@@ -76,464 +201,467 @@ const Test2Reading2022 = () => {
 
           <div>
             <h1 className="text-lg">
-              You should spend about 20 minutes on{" "}
-              <span className="text-lg font-bold">Questions 1-13</span>, which
-              are based on Reading Passage 1 below.
+              You should spend about 20 minutes on
+              <span className="text-lg font-bold"> Questions 1-13</span>
+              which are based on Reading Passage 1 below.
             </h1>
           </div>
 
-          <h1 className="text-2xl font-bold text-center">
-            The Dead Sea Scrolls
-          </h1>
+          {/* Reading Passage */}
+          <div>
+            <h1 className="text-2xl font-bold mb-5 text-center">
+              The Dead Sea Scrolls
+            </h1>
 
-          <p className="text-lg">
-            In late 1946 or early 1947, three Bedouin teenagers were tending
-            their goats and sheep near the ancient settlement of Qumran, located
-            on the northwest shore of the Dead Sea in what is now known as the
-            West Bank.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              One of these young shepherds tossed a rock into an opening on the
-              side of a cliff and was surprised to hear a shattering sound.{" "}
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  1
-                </span>
-              )}
-              He and his companions later entered the cave and stumbled across a
-              collection of large clay jars, seven of which contained scrolls
-              with writing on them.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  2,3
-                </span>
-              )}
-            </span>
-            The teenagers took the seven scrolls to a nearby town where they
-            were sold for a small sum to a local antiquities dealer.Word of the
-            find spread, and Bedouins and archaeologists eventually unearthed
-            tens of thousands of additional scroll fragments from 10 nearby
-            caves; together they make up between 800 and 900 manuscripts.It soon
-            became clear that this was one of the greatest archaeological
-            discoveries ever made.
-          </p>
+            <p className="text-lg">
+              In late 1946 or early 1947, three Bedouin teenagers were tending
+              their goats and sheep near the ancient settlement of Qumran,
+              located on the northwest shore of the Dead Sea in what is now
+              known as the West Bank.
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                One of these young shepherds tossed a rock into an opening on
+                the side of a cliff and was surprised to hear a shattering
+                sound.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    1
+                  </span>
+                )}
+              </span>
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                He and his companions later entered the cave and stumbled across
+                a collection of large clay jars, seven of which contained
+                scrolls with writing on them.
+                {highlight && (
+                  <>
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                      2
+                    </span>
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
+                      3
+                    </span>
+                  </>
+                )}
+              </span>
+              The teenagers took the seven scrolls to a nearby town where they
+              were sold for a small sum to a local antiquities dealer. Word of
+              the find spread, and Bedouins and archaeologists eventually
+              unearthed tens of thousands of additional scroll fragments from 10
+              nearby caves; together they make up between 800 and 900
+              manuscripts. It soon became clear that this was one of the
+              greatest archaeological discoveries ever made.
+            </p>
 
-          <p className="text-lg">
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
+            <br />
+
+            <p className="text-lg">
               The origin of the Dead Sea Scrolls, which were written around
               2,000 years ago between 150 BCE and 70 CE, is still the subject of
               scholarly debate even today.
               {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
                   7
                 </span>
               )}
-            </span>
-            According to the prevailing theory, they are the work of a
-            population that inhabited the area until Roman troops destroyed the
-            settlement around 70 CE.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              The area was known as Judea at that time, and the people are
-              thought to have belonged to a group called the Essenes, a devout
-              Jewish sect.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  4
-                </span>
-              )}
-            </span>
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
+              According to the prevailing theory, they are the work of a
+              population that inhabited the area until Roman troops destroyed
+              the settlement around 70 CE.
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                The area was known as Judea at that time, and the people are
+                thought to have belonged to a group called the Essenes, a devout
+                Jewish sect.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    4
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
               The majority of the texts on the Dead Sea Scrolls are in Hebrew,
               with some fragments written in an ancient version of its alphabet
               thought to have fallen out of use in the fifth century BCE.
               {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
                   5
                 </span>
               )}
-            </span>
-            But there are other languages as well.Some scrolls are in Aramaic,
-            the language spoken by many inhabitants of the region from the sixth
-            century BCE to the siege of Jerusalem in 70 CE.In addition, several
-            texts feature translations of the Hebrew Bible into Greek. The Dead
-            Sea Scrolls include fragments from every book of the Old Testament
-            of the Bible except for the Book of Esther.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              The only entire book of the Hebrew Bible preserved among the
-              manuscripts from Qumran is Isaiah; this copy, dated to the first
-              century BCE, is considered the earliest biblical manuscript still
-              in existence.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  8
-                </span>
-              )}
-            </span>
-            Along with biblical texts, the scrolls include documents about
-            sectarian regulations and religious writings that do not appear in
-            the Old Testament.
-          </p>
+              But there are other languages as well. Some scrolls are in
+              Aramaic, the language spoken by many inhabitants of the region
+              from the sixth century BCE to the siege of Jerusalem in 70 CE. In
+              addition, several texts feature translations of the Hebrew Bible
+              into Greek.
+            </p>
 
-          <p className="text-lg">
-            The writing on the Dead Sea Scrolls is mostly in black or
-            occasionally red ink, and the scrolls themselves are nearly all made
-            of either parchment (animal skin) or an early form of paper called
-            'papyrus'.The only exception is the scroll numbered 3Q15, which was
-            created out of a combination of copper and tin.Known as the Copper
-            Scroll, this curious document features letters chiselled onto metal
-            - perhaps, as some have theorized, to better withstand the passage
-            of time.One of the most intriguing manuscripts from Qumran, this is
-            a sort of ancient treasure map that lists dozens of gold and silver
-            caches.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              Using an unconventional vocabulary and odd spelling, it describes
-              64 underground hiding places that supposedly contain riches buried
-              for safekeeping.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  9
-                </span>
-              )}
-            </span>
-            None of these hoards have been recovered, possibly because the
-            Romans pillaged Judea during the first century CE.According to
-            various hypotheses, the treasure belonged to local people, or was
-            rescued from the Second Temple before its destruction or never
-            existed to begin with.
-          </p>
+            <br />
 
-          <p className="text-lg">
-            Some of the Dead Sea Scrolls have been on interesting journeys.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              In 1948, a Syrian Orthodox archbishop known as Mar Samuel acquired
+            <p className="text-lg">
+              The Dead Sea Scrolls include fragments from every book of the Old
+              Testament of the Bible except for the Book of Esther.
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                The only entire book of the Hebrew Bible preserved among the
+                manuscripts from Qumran is Isaiah; this copy, dated to the first
+                century BCE, is considered the earliest biblical manuscript
+                still in existence.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    8
+                  </span>
+                )}
+              </span>
+              Along with biblical texts, the scrolls include documents about
+              sectarian regulations and religious writings that do not appear in
+              the Old Testament.
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              The writing on the Dead Sea Scrolls is mostly in black or
+              occasionally red ink, and the scrolls themselves are nearly all
+              made of either parchment (animal skin) or an early form of paper
+              called 'papyrus'. The only exception is the scroll numbered 3Q15,
+              which was created out of a combination of copper and tin. Known as
+              the Copper Scroll, this curious document features letters
+              chiselled onto metal - perhaps, as some have theorized, to better
+              withstand the passage of time.
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                One of the most intriguing manuscripts from Qumran, this is a
+                sort of ancient treasure map that lists dozens of gold and
+                silver caches. Using an unconventional vocabulary and odd
+                spelling, it describes 64 underground hiding places that
+                supposedly contain riches buried for safekeeping.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    9
+                  </span>
+                )}
+              </span>
+              None of these hoards have been recovered, possibly because the
+              Romans pillaged Judea during the first century CE. According to
+              various hypotheses, the treasure belonged to local people, or was
+              rescued from the Second Temple before its destruction or never
+              existed to begin with.
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              Some of the Dead Sea Scrolls have been on interesting journeys. In
+              1948, a Syrian Orthodox archbishop known as Mar Samuel acquired
               four of the original seven scrolls from a Jerusalem shoemaker and
-              part-time antiquity dealer, paying less than $100 for them.10He
-              then travelled to the United States and unsuccessfully offered
-              them to a number of universities, including Yale.
+              part-time antiquity dealer, paying less than $100 for them.
               {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  11
+                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  10
                 </span>
               )}
-            </span>
-            Finally, in 1954, he placed an advertisement in the business
-            newspaper The Wall Street Journal - under the category
-            "Miscellaneous Items for Sale" - that read: "Biblical Manuscripts
-            dating back to at least 200 B.C. are for sale.This would be an ideal
-            gift to an educational or religious institution by an individual or
-            group."Fortunately, Israeli archaeologist and statesman Yigael Yadin
-            negotiated their purchase and brought the scrolls back to Jerusalem,
-            where they remain to this day.
-          </p>
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                He then travelled to the United States and unsuccessfully
+                offered them to a number of universities, including Yale.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    11
+                  </span>
+                )}
+              </span>
+              Finally, in 1954, he placed an advertisement in the business
+              newspaper The Wall Street Journal - under the category
+              "Miscellaneous Items for Sale" - that read: "Biblical Manuscripts
+              dating back to at least 200 B.C. are for sale. This would be an
+              ideal gift to an educational or religious institution by an
+              individual or group." Fortunately, Israeli archaeologist and
+              statesman Yigael Yadin negotiated their purchase and brought the
+              scrolls back to Jerusalem, where they remain to this day.
+            </p>
 
-          <p className="text-lg">
-            In 2017, researchers from the University of Haifa restored and
-            deciphered one of the last untranslated scrolls.The university's
-            Eshbal Ratson and Jonathan Ben-Dov spent one year reassembling the
-            60 fragments that make up the scroll.Deciphered from a band of coded
-            text on parchment, the find provides insight into the community of
-            people who wrote it and the 364-day calendar they would have used.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
+            <br />
+
+            <p className="text-lg">
+              In 2017, researchers from the University of Haifa restored and
+              deciphered one of the last untranslated scrolls. The university's
+              Eshbal Ratson and Jonathan Ben-Dov spent one year reassembling the
+              60 fragments that make up the scroll. Deciphered from a band of
+              coded text on parchment, the find provides insight into the
+              community of people who wrote it and the 364-day calendar they
+              would have used.
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                The scroll names celebrations that indicate shifts in seasons
+                and details two yearly religious events known from another Dead
+                Sea Scroll.
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    12
+                  </span>
+                )}
+              </span>
+              Only one more known scroll remains untranslated.
+            </p>
+          </div>
+
+          {/* Highlight modal */}
+          {isModalOpen && (
+            <div
+              style={{ top: modalPosition.top + 5, left: modalPosition.left }}
+              className="absolute bg-white p-3 rounded-lg shadow-lg flex gap-3 z-50"
             >
-              The scroll names celebrations that indicate shifts in seasons and
-              details two yearly religious events known from another Dead Sea
-              Scroll.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  12
-                </span>
-              )}
-            </span>
-            Only one more known scroll remains untranslated.
-          </p>
+              <button
+                onClick={handleHighlight}
+                className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
+              >
+                Highlight
+              </button>
+              <button
+                onClick={handleClearHighlight}
+                className="bg-gray-300 px-3 py-1 rounded-md hover:bg-gray-400 transition"
+              >
+                Clear Highlight
+              </button>
+            </div>
+          )}
         </div>
 
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
-          {/* table */}
-          <div className="space-y-4 leading-relaxed">
-            <div className="flex justify-end items-center p-4 text-gray-500">
-              {/* clear icon */}
+          {/* ================= Questions 1–5 ================= */}
+          <h2 className="text-lg font-bold mb-3">Questions 1–5</h2>
 
-              <div className="relative group">
-                <div className="flex justify-between items-center">
-                  <span
-                    onClick={() => setIsOpen(true)}
-                    className="text-xl cursor-pointer"
-                  >
-                    <GrClearOption />
-                  </span>
-                </div>
-                {/* Tooltip */}
+          <p className="mb-4">
+            Complete the notes below. <br />
+            Choose <strong>ONE WORD ONLY</strong> from the passage for each
+            answer. <br />
+            Write your answers in boxes 1-5 on your answer sheet.
+          </p>
 
-                <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  Clear answer
-                </span>
-
-                {isOpen && (
-                  <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                    <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                      <h2 className="text-lg font-semibold mb-4">
-                        Are you sure you want to clear all answers?
-                      </h2>
-                      <div className="flex justify-center gap-4">
-                        <button
-                          onClick={() => setIsOpen(false)}
-                          className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                        >
-                          No, keep them
-                        </button>
-                        <button
-                          onClick={handleClear}
-                          className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                        >
-                          Yes, clear them
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <h2 className="text-lg font-bold mb-3">Questions 1-8</h2>
-
-            <h3 className="text-lg  mb-5">
-              Complete the notes below. <br /> <br />
-              Choose{" "}
-              <span className="font-bold mr-2">ONE WORD AND/OR A NUMBER</span>
-              from the passage for each answer.
+          <div className="border p-5 space-y-4">
+            <h3 className="text-xl font-bold text-center mb-4">
+              The Dead Sea Scrolls
             </h3>
 
-            <h1 className="text-lg font-semibold">
-              Write your answers in boxes 1-8 on your answer sheet.
-            </h1>
-            <br />
-          </div>
-          <div className="overflow-x-auto border p-5 bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              The Dead Sea Scrolls
-            </h1>
-
-            {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Discovery</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>heard a noise of breaking when one teenager threw a</span>
-                <button
-                  onClick={() => toggleButton(1)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  1
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span></span>
-              </li>
-              <li className="text-lg">
-                <span>teenagers went into the</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
-              <li className="text-lg">
-                <span>and found a number of containers made of</span>
-                <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  3
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
+            <ul className="list-disc list-inside space-y-4 text-lg">
+              {[
+                "three Bedouin shepherds in their teens were near an opening on side of cliff heard a noise of breaking when one teenager threw a",
+                "teenagers went into the",
+                "and found a number of containers made of",
+                "The scrolls date from between 150 BCE and 70 CE thought to have been written by group of people known as the",
+                "written mainly in the language most are on religious topics, written using ink on parchment or papyrus",
+              ].map((text, index) => {
+                const qNum = index + 1;
+                return (
+                  <li key={qNum} className="flex flex-wrap items-center gap-2">
+                    <span>{text}</span>
+                    <span className="w-8 h-8 flex items-center justify-center rounded-full border font-bold">
+                      {qNum}
+                    </span>
+                    <input
+                      type="text"
+                      className="border rounded px-2 py-1 w-32"
+                      onChange={(e) => handleInputChange(qNum, e.target.value)}
+                    />
+                  </li>
+                );
+              })}
             </ul>
-
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">The scrolls</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">date from between 150 BCE and 70 CE</li>
-
-              <li className="text-lg">
-                <span>
-                  thought to have been written by group of people known as the
-                </span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span></span>
-              </li>
-              <li className="text-lg">
-                <span>written mainly in the</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
-                  type="text"
-                />
-                <span>language.</span>
-              </li>
-              <li className="text-lg">
-                most are on religious topics, written using ink on parchment or
-                papyrus
-              </li>
-            </ul>
-
-            {/* ---------- Section 3 ---------- */}
-
-         
           </div>
-          <br />
-          {/* 2nd step     */}
-          <h2 className="text-lg font-bold mb-3">Questions 6-13 </h2> <br />
-          <h3 className="text-lg font-semibold mb-5">
+
+          {/* ================= Questions 6–13 ================= */}
+          <h2 className="text-lg font-bold mt-6">Questions 6–13</h2>
+
+          <p className="mb-4">
             Do the following statements agree with the information given in
-            Reading Passage 1? <br /> <br />
-            In boxes 6-13 on your answer sheet, choose
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">TRUE</span> if the statement
-            agrees with the information
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">FALSE</span>if the statement
-            contradicts the information
-          </h3>
-          <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
-            information on this
-          </h3>{" "}
-          <br /> <br />
-          <div className="space-y-6 leading-relaxed p-4">
-            {questions.map((q, qIndex) => (
-              <div key={qIndex} className="flex flex-col gap-4">
-                <div className="flex items-start gap-3">
-                  <div
-                    onClick={() => handleNumberClick(qIndex)}
-                    className={`
-                              w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
-                              border-2
-                              ${
-                                activeNumbers[qIndex]
-                                  ? "bg-yellow-400 border-yellow-500"
-                                  : "bg-white border-gray-300 hover:border-yellow-400"
-                              }
-                              cursor-pointer
-                            `}
-                  >
-                    {qIndex + 6}
+            Reading Passage 1? <br />
+            In boxes 6-13 on your answer sheet, choose:
+          </p>
+
+          <div className="mb-4 space-y-1">
+            <p>
+              <strong>TRUE</strong> if the statement agrees with the information
+            </p>
+            <p>
+              <strong>FALSE</strong> if the statement contradicts the
+              information
+            </p>
+            <p>
+              <strong>NOT GIVEN</strong> if there is no information on this
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              "The Bedouin teenagers who found the scrolls were disappointed by how little money they received for them.",
+              "There is agreement among academics about the origin of the Dead Sea Scrolls.",
+              "Most of the books of the Bible written on the scrolls are incomplete.",
+              "The information on the Copper Scroll is written in an unusual way.",
+              "Mar Samuel was given some of the scrolls as a gift.",
+              "In the early 1950s, a number of educational establishments in the US were keen to buy scrolls from Mar Samuel.",
+              "The scroll that was pieced together in 2017 contains information about annual occasions in the Qumran area 2,000 years ago.",
+              "Academics at the University of Haifa are currently researching how to decipher the final scroll.",
+            ].map((statement, index) => {
+              const qNum = index + 6;
+              return (
+                <div key={qNum} className="space-y-3">
+                  <div className="flex gap-3 items-start">
+                    <div
+                      onClick={() => handleNumberClick(qNum)}
+                      className={`w-9 h-9 flex items-center justify-center font-bold border-2 rounded-lg cursor-pointer ${
+                        activeNumbers[qNum]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "border-gray-300"
+                      }`}
+                    >
+                      {qNum}
+                    </div>
+                    <p className="text-lg">{statement}</p>
                   </div>
-                  <h1 className="text-lg">{q}</h1>
+
+                  <div className="ml-12 space-y-2">
+                    {["TRUE", "FALSE", "NOT GIVEN"].map((option) => (
+                      <div
+                        key={option}
+                        onClick={() => handleOptionClick(qNum, option)}
+                        className="flex items-center gap-3 cursor-pointer"
+                      >
+                        <span
+                          className={`w-5 h-5 rounded-full border-2 ${
+                            selectedOptions[qNum] === option
+                              ? "bg-blue-500 border-blue-500"
+                              : "border-gray-500"
+                          }`}
+                        />
+                        <span
+                          className={
+                            selectedOptions[qNum] === option
+                              ? "text-blue-500"
+                              : ""
+                          }
+                        >
+                          {option}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* ================= Submit & Result ================= */}
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/13
+                  </p>
                 </div>
 
-                <ul className="list-none ml-12 flex flex-col gap-3">
-                  {options.map((option, oIndex) => (
-                    <li
-                      key={oIndex}
-                      onClick={() => handleOptionClick(qIndex, oIndex)}
-                      className="flex items-center gap-2 text-lg cursor-pointer"
-                    >
-                      <span
-                        className={`w-5 h-5 rounded-full border-2 inline-block transition-colors duration-300 ${
-                          selectedOptions[qIndex] === oIndex
-                            ? "bg-blue-500 border-blue-500"
-                            : "border-gray-700"
-                        }`}
-                      ></span>
-                      <span
-                        className={`transition-colors duration-300 ${
-                          selectedOptions[qIndex] === oIndex
-                            ? "text-blue-500"
-                            : "text-black"
-                        }`}
-                      >
-                        {option}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–13)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer = userAnswers[num]?.trim();
+                      const correctAnswer = correctAnswers[num]?.trim();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">No answer provided</span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
+      <Reading2Pagination2022></Reading2Pagination2022>
     </div>
   );
 };

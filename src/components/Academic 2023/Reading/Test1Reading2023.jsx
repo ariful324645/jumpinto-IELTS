@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
+import Reading1Pagination2023 from "../Pagination 2023/Reading1Pagination2023";
 
 const Test1Reading2023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
+  const [userAnswers, setUserAnswers] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
   const handleClear = () => {
     setActiveButtons({});
     const inputs = document.querySelectorAll("input[type='text']");
@@ -29,6 +34,34 @@ const Test1Reading2023 = () => {
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questions.length).fill(null)
   );
+  const correctAnswers = {
+    1: "strawberries",
+    2: "1,000 kg",
+    3: "consumption",
+    4: "pesticides",
+    5: "varieties",
+    6: "producers",
+    7: "flavour",
+    8: "TRUE",
+    9: "TRUE",
+    10: "TRUE",
+    11: "NOT GIVEN",
+    12: "FALSE",
+    13: "TRUE",
+  };
+  const handleSubmit = () => {
+    setShowResult(true);
+  };
+
+  useEffect(() => {
+    let newScore = 0;
+    for (let i = 1; i <= 13; i++) {
+      const answer = userAnswers[i]?.toString().trim().toLowerCase() || "";
+      const correct = correctAnswers[i]?.toString().trim().toLowerCase() || "";
+      if (answer && answer === correct) newScore += 1;
+    }
+    setScore(newScore);
+  }, [userAnswers]);
 
   const [activeNumbers, setActiveNumbers] = useState(
     Array(questions.length).fill(false)
@@ -38,6 +71,13 @@ const Test1Reading2023 = () => {
     const updatedOptions = [...selectedOptions];
     updatedOptions[qIndex] = oIndex;
     setSelectedOptions(updatedOptions);
+
+    // Map qIndex 0–5 to question numbers 8–13
+    const questionNumber = qIndex + 8;
+    setUserAnswers((prev) => ({
+      ...prev,
+      [questionNumber]: options[oIndex],
+    }));
   };
 
   const handleNumberClick = (qIndex) => {
@@ -304,7 +344,14 @@ const Test1Reading2023 = () => {
                 <input
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
+                  onChange={(e) =>
+                    setUserAnswers((prev) => ({
+                      ...prev,
+                      [1]: e.target.value, // change 1 to match the question number
+                    }))
+                  }
                 />
+
                 <span>and herbs.</span>
               </li>
 
@@ -325,6 +372,12 @@ const Test1Reading2023 = () => {
                 <input
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
+                  onChange={(e) =>
+                    setUserAnswers((prev) => ({
+                      ...prev,
+                      [2]: e.target.value, // change 1 to match the question number
+                    }))
+                  }
                 />
                 <span>in weight of fruit and vegetables.</span>
               </li>
@@ -346,6 +399,12 @@ const Test1Reading2023 = () => {
                 <input
                   className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                   type="text"
+                  onChange={(e) =>
+                    setUserAnswers((prev) => ({
+                      ...prev,
+                      [3]: e.target.value, // change 1 to match the question number
+                    }))
+                  }
                 />
                 <span>overall.</span>
               </li>
@@ -363,10 +422,7 @@ const Test1Reading2023 = () => {
             <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
               <thead>
                 <tr>
-                  <th
-                    colSpan="4"
-                    className="border  text-lg font-bold p-2"
-                  >
+                  <th colSpan="4" className="border  text-lg font-bold p-2">
                     Intensive farming versus aeroponic urban farming
                   </th>
                 </tr>
@@ -396,8 +452,14 @@ const Test1Reading2023 = () => {
                       4
                     </button>
                     <input
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          [4]: e.target.value, // change 1 to match the question number
+                        }))
+                      }
                     />
                     <span>used</span>
                   </td>
@@ -417,8 +479,14 @@ const Test1Reading2023 = () => {
                       5
                     </button>
                     <input
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          [5]: e.target.value, // change 1 to match the question number
+                        }))
+                      }
                     />
                     <span>used</span>
                   </td>
@@ -436,8 +504,14 @@ const Test1Reading2023 = () => {
                       6
                     </button>
                     <input
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          [6]: e.target.value, // change 1 to match the question number
+                        }))
+                      }
                     />
                     <span>receive very little of overall income.</span>
                   </td>
@@ -463,8 +537,14 @@ const Test1Reading2023 = () => {
                       7
                     </button>
                     <input
-                      className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
+                      className="mx-2 border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1"
                       type="text"
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          [7]: e.target.value, // change 1 to match the question number
+                        }))
+                      }
                     />
                     <span>.</span>
                   </td>
@@ -546,8 +626,102 @@ const Test1Reading2023 = () => {
               </div>
             ))}
           </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
+                <button
+                  onClick={handleSubmit}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–13)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+      <Reading1Pagination2023></Reading1Pagination2023>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
 import Listening1Pagination2023 from "../Pagination 2023/Listening1Pagination2023";
 
-const Test1Listening2023 = () => {
+const Listening1Part42023 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,273 +24,138 @@ const Test1Listening2023 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear an interview with a woman who is doing a survey on transport.",
-        "First, you have some time to look at questions 1 to 5.",
-        "Now listen carefully and answer questions 1 to 5.",
+        "Part 4.",
+        "You will hear a zoology student giving a presentation on the process of moving wild elephants to a new reserve known as translocation.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "MAN",
+      speaker: "SPEAKER",
       text: [
-        "Excuse me, would you mind if I asked you some questions?",
-        "We're doing a survey on transport.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, that's OK."],
-    },
-    {
-      speaker: "MAN",
-      text: ["First of all can I take your name?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it's Sadie Jones."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Thanks very much.",
-        "And could I have your date of birth?",
-        "Just the year will do, actually.",
-        "Is that all right?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Uh. Yes, that's fine.", "It's 1991."],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, next your post code please."],
-    },
-    {
-      speaker: "SADIE",
-      text: [{ text: "It's DW307YZ.", number: 1 }],
-    },
-    {
-      speaker: "MAN",
-      text: ["Great, thanks.", "Is that in Wells?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, it's actually in Harborne.",
-        "Wells isn't far from there, though.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "I really like that area.",
-        "My grandmother lived there when I was a kid.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, it is nice."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Right, so now I want to ask you some questions about how you traveled here today.",
-        "Did you use public transport?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Yes, I came by bus."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "OK, and that was today.",
-        { text: "It's the 24th of April, isn't it?", number: 2 },
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: ["Isn't it the 25th?", "Uh, no, ha, actually you're right."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Ha ha ha.",
-        "And what was the reason for your trip today?",
-        "I can see you've got some shopping with you.",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Yes, I did some shopping,",
+        "For my presentation today, I want to tell you about how groups of elephants have been moved and settled in new reserves.",
+        "This is known as translocation, and has been carried out in Malawi in Africa in recent years.",
+        "The reason this is being done is because of overpopulation of elephants in some areas.",
+        "Overpopulation is a good problem to have, and not one we tend to hear about very often.",
+        "In Malawi's Majete National Park, the elephant population had been wiped out by poachers who killed the elephants for their ivory.",
+        "But in 2003 the park was restocked, and effective law enforcement was introduced.",
+        "Since then, not a single elephant has been poached.",
+        "In this safe environment, the elephant population boomed.",
+        "Breeding went so well that there were more elephants than the park could support.",
+        "This led to a number of problems.",
+        "Firstly, there was more competition for food, which meant that some elephants were suffering from hunger.",
+        "As there was a limit to the amount of food in the national park, some elephants began looking further afield.",
+        "Elephants were routinely knocking down fences around the park,",
         {
-          text: "but the main reason I came here was to go to the dentist.",
-          number: 3,
+          text: "which then had to be repaired at a significant cost.",
+          number: 31,
         },
       ],
     },
     {
-      speaker: "MAN",
-      text: ["That's not much fun.", "Hope it was nothing serious."],
-    },
-    {
-      speaker: "SADIE",
-      text: ["No, it was just a check-up.", "It's fine."],
-    },
-    {
-      speaker: "MAN",
-      text: ["Good.", "Do you normally travel by bus into the city center?"],
-    },
-    {
-      speaker: "SADIE",
+      speaker: "SPEAKER",
       text: [
-        "Yes, I stopped driving ages ago,",
+        "To solve this problem, the decision was made to move dozens of elephants from Majete National Park to Nkhotakota Wildlife Park,",
+        "where there were no elephants.",
+        "But obviously, attempting to move significant numbers of elephants to a new home 300 kilometers away is quite a challenge.",
+        "So, how did this translocation process work in practice?",
+        "Elephants were moved in groups of between eight and 20, all belonging to one family,",
         {
-          text: "because parking was so difficult to find, and it cost so much.",
-          number: 4,
+          text: "because relationships are very important to elephants.",
+          number: 32,
         },
       ],
     },
     {
-      speaker: "MAN",
-      text: ["I see."],
-    },
-    {
-      speaker: "SADIE",
+      speaker: "SPEAKER",
       text: [
-        "The bus is much more convenient too.",
-        "It only takes about 30 minutes.",
+        "They all had to be moved at the same time.",
+        "A team of vets and park rangers flew over the park in helicopters and targeted a group.",
+        "The elephants were rounded up and directed to a designated open plain,",
+        {
+          text: "where the vets then used darts to immobilize them.",
+          number: 33,
+        },
       ],
     },
     {
-      speaker: "MAN",
-      text: ["That's good.", "So where did you start your journey?"],
+      speaker: "SPEAKER",
+      text: [
+        "This was a tricky maneuver, as they not only had to select the right dose of tranquilizer for different sized elephants,",
+        "but they also had to dart the elephants as they were running around.",
+        {
+          text: "This had to be done as quickly as possible to minimize stress.",
+          number: 34,
+        },
+      ],
     },
     {
-      speaker: "SADIE",
-      text: [{ text: "At the bus stop on Claxby Street.", number: 5 }],
+      speaker: "SPEAKER",
+      text: [
+        "As soon as the elephants began to fall to the ground, the team moved in to take care of them.",
+        "To avoid the risk of suffocation, the team had to make sure none of the elephants were lying on their chests.",
+        "Their lungs could be crushed in this position,",
+        {
+          text: "so all the elephants had to be placed on their sides.",
+          number: 35,
+        },
+      ],
     },
     {
-      speaker: "MAN",
-      text: ["Is that CLAXBY?"],
+      speaker: "SPEAKER",
+      text: [
+        "One person stayed with each elephant while they waited for the vets to do checks.",
+        "It was very important to keep an eye on their breathing.",
+        {
+          text: "If there were fewer than six breaths per minute, urgent medical attention was needed.",
+          number: 36,
+        },
+      ],
     },
     {
-      speaker: "SADIE",
-      text: ["That's right."],
+      speaker: "SPEAKER",
+      text: [
+        "Collars were fitted to the matriarch in each group so their movements could be tracked in their new home.",
+        "Measurements were taken of each elephant’s tusks.",
+        "Elephants with large tusks would be at greater risk from poachers,",
+        { text: "and measurements were also taken of their feet.", number: 37 },
+      ],
+    },
+    {
+      speaker: "SPEAKER",
+      text: [
+        "The elephants were then taken to a recovery area before being loaded onto trucks and transported to their new home.",
+        "The elephants translocated to Nkhotakota settled in very well.",
+        "The project has generally been accepted to have been a huge success.",
+        "And not just for the elephants.",
+        "Employment prospects have improved enormously, contributing to rising living standards for the whole community,",
+        { text: "and poaching is no longer an issue.", number: 38 },
+      ],
+    },
+    {
+      speaker: "SPEAKER",
+      text: [
+        "Former poachers are now able to find more reliable sources of income.",
+        "In fact, many of them volunteered to give up their weapons,",
+        { text: "as they were no longer of any use to them.", number: 39 },
+      ],
+    },
+    {
+      speaker: "SPEAKER",
+      text: [
+        "More than two dozen elephants have been born at Nkhotakota since relocation.",
+        "With an area of more than 1,800 square kilometers, there is plenty of space for the population to continue to grow.",
+        "Their presence is helping to rebalance Nkhotakota’s damaged ecosystem.",
+        "It is also providing a sustainable conservation model which could be replicated in other parks.",
+        "All this has been a big draw for tourism, which contributes five times more than the illegal wildlife trade to GDP,",
+        { text: "and this is mainly because of the elephants.", number: 40 },
+      ],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.",
-        "Now listen and answer questions 6 to 10.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "And how satisfied with the service are you?",
-        "Do you have any complaints?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, as I said, it's very convenient and quick when it's on time.",
-        {
-          text: "But this morning it was late, only about 10 minutes, but still.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "Yes, I understand that's annoying.",
-        "And what about the timetable?",
-        "Do you have any comments about that?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Hmm, I suppose I mainly use the bus during the day,",
-        "but anytime I've been in town in the evening,",
-        "for dinner or at the cinema,",
-        {
-          text: "I've noticed you have to wait a long time for a bus.",
-          number: 7,
-        },
-        "There aren't that many.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["OK, thanks.", "So now, I'd like to ask you about your car use."],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I have got a car, but I don't use it that often.",
-        {
-          text: "Mainly just to go to the supermarket.",
-          number: 8,
-        },
-        "But that's about it really.",
-        "My husband uses it at the weekends to go to the golf club.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["And what about a bicycle?"],
-    },
-    {
-      speaker: "SADIE",
-      text: ["I don't actually have one at the moment."],
-    },
-    {
-      speaker: "MAN",
-      text: [
-        "What about the city bikes you can rent?",
-        "Do you ever use those?",
-      ],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "No, I'm not keen on cycling there",
-        {
-          text: "because of all the pollution.",
-          number: 9,
-        },
-        "But I would like to get a bike.",
-        "It would be good to use it to get to work.",
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["So, why haven't you got one now?"],
-    },
-    {
-      speaker: "SADIE",
-      text: [
-        "Well, I live in a flat on the 2nd floor.",
-        {
-          text: "And it doesn't have any storage, so we'd have to leave it in the hall outside the flat.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "MAN",
-      text: ["I see.", "OK, well I think that's all we need from you today."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -406,7 +271,7 @@ const Test1Listening2023 = () => {
       }
 
       // Erica: female
-      if (speaker === "SADIE") {
+      if (speaker === "SARAH") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -454,18 +319,17 @@ const Test1Listening2023 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "DW307YZ",
-    2: "24",
-    3: "dentist",
-    4: "parking",
-    5: "claxby",
-    6: "late",
-    7: "evening",
-    8: "supermarket",
-    9: "pollution",
-    10: "storage",
+    31: "fences",
+    32: "family",
+    33: "helicopters",
+    34: "stress",
+    35: "sides",
+    36: "breathing",
+    37: "feet",
+    38: "employment",
+    39: "weapons",
+    40: "tourism",
   };
 
   // --- Handle input change and auto-check ---
@@ -518,7 +382,7 @@ const Test1Listening2023 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -549,7 +413,7 @@ const Test1Listening2023 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("Transport Survey")}
+                {renderText("Elephant Translocation")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -582,248 +446,273 @@ const Test1Listening2023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6 max-w-2xl mx-auto rounded-lg space-y-5 bg-white">
+          <div className="border p-6 max-w-3xl mx-auto rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Transport survey")}
+              {renderText("Elephant translocation")}
             </h1>
 
-            <p className="text-lg">{renderText("Name: Sadie Jones")}</p>
+            <h3 className="font-semibold mt-4">
+              {renderText("Reasons for overpopulation at Majete National Park")}
+            </h3>
 
-            <p className="text-lg">{renderText("Year of birth: 1991")}</p>
-
-            {/* Q1 */}
             <p className="text-lg">
-              {renderText("Postcode:")}
+              {renderText("• strict enforcement of anti-poaching laws")}
+            </p>
+            <p className="text-lg">{renderText("• successful breeding")}</p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Problems caused by elephant overpopulation")}
+            </h3>
+
+            <p className="text-lg">
+              {renderText("greater competition, causing hunger for elephants")}
+            </p>
+
+            {/* Q31 */}
+            <p className="text-lg">
+              {renderText("damage to")}
               <button
-                onClick={() => toggleButton(1)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                1
+                31
               </button>
               <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" in the park")}
             </p>
 
             <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bus")}
+              {renderText("The translocation process")}
             </h3>
 
-            {/* Q2 */}
+            {/* Q32 */}
             <p className="text-lg">
-              {renderText("Date of bus journey:")}
+              {renderText("a suitable group of elephants from the same")}
               <button
-                onClick={() => toggleButton(2)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                2
+                32
               </button>
               <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" was selected")}
+            </p>
+
+            {/* Q33 */}
+            <p className="text-lg">
+              {renderText("vets and park staff made use of")}
+              <button
+                onClick={() => toggleButton(33)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[33]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                33
+              </button>
+              <input
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" to help guide the elephants into an open plain")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("elephants were immobilised with tranquilisers")}
+            </p>
+
+            {/* Q34 */}
+            <p className="text-lg">
+              {renderText("this process had to be completed quickly to reduce")}
+              <button
+                onClick={() => toggleButton(34)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[34]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
             </p>
 
-            {/* Q3 */}
+            {/* Q35 */}
             <p className="text-lg">
-              {renderText("Reason for trip: shopping and visit to the")}
+              {renderText("elephants had to be turned on their")}
               <button
-                onClick={() => toggleButton(3)}
+                onClick={() => toggleButton(35)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
+                  activeButtons[35]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                3
+                35
               </button>
               <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" to avoid damage to their lungs")}
             </p>
 
-            {/* Q4 */}
+            {/* Q36 */}
             <p className="text-lg">
-              {renderText("Travelled by bus because cost of")}
+              {renderText("elephants’")}
               <button
-                onClick={() => toggleButton(4)}
+                onClick={() => toggleButton(36)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
+                  activeButtons[36]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                4
+                36
               </button>
               <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" too high")}
+              {renderText(" had to be monitored constantly")}
             </p>
 
-            {/* Q5 */}
             <p className="text-lg">
-              {renderText("Got on bus at")}
+              {renderText("tracking devices were fitted to the matriarchs")}
+            </p>
+
+            {/* Q37 */}
+            <p className="text-lg">
+              {renderText("data including the size of their tusks and")}
               <button
-                onClick={() => toggleButton(5)}
+                onClick={() => toggleButton(37)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
+                  activeButtons[37]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                5
+                37
               </button>
               <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" Street")}
+              {renderText(" was taken")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("elephants were taken by truck to their new reserve")}
             </p>
 
             <h3 className="font-semibold mt-4">
-              {renderText("Complaints about bus service")}
+              {renderText(
+                "Advantages of translocation at Nkhotakota Wildlife Park"
+              )}
             </h3>
 
-            {/* Q6 */}
+            {/* Q38 */}
             <p className="text-lg">
-              {renderText("bus today was")}
               <button
-                onClick={() => toggleButton(6)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
+                onClick={() => toggleButton(38)}
+                className={`mr-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                6
+                38
               </button>
               <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" opportunities")}
             </p>
 
-            {/* Q7 */}
+            {/* Q39 */}
             <p className="text-lg">
-              {renderText("frequency of buses in the")}
+              {renderText("a reduction in the number of poachers and")}
               <button
-                onClick={() => toggleButton(7)}
+                onClick={() => toggleButton(39)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
+                  activeButtons[39]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                7
+                39
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
             </p>
 
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by car")}
-            </h3>
-
-            {/* Q8 */}
-            <p className="text-lg">
-              {renderText("Goes to the")}
-              <button
-                onClick={() => toggleButton(8)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                8
-              </button>
-              <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" by car")}
-            </p>
-
-            <h3 className="font-semibold mt-4">
-              {renderText("Travelling by bicycle")}
-            </h3>
-
-            {/* Q9 */}
             <p className="text-lg">
               {renderText(
-                "Dislikes travelling by bike in the city centre because of the"
+                "an example of conservation that other parks can follow"
               )}
-              <button
-                onClick={() => toggleButton(9)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                9
-              </button>
-              <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
             </p>
 
-            {/* Q10 */}
+            {/* Q40 */}
             <p className="text-lg">
-              {renderText("Doesn't own a bike because of a lack of")}
+              {renderText("an increase in")}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(40)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[40]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                40
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" as a contributor to GDP")}
             </p>
           </div>
           <div className="mt-10">
@@ -850,11 +739,11 @@ const Test1Listening2023 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -926,4 +815,4 @@ const Test1Listening2023 = () => {
   );
 };
 
-export default Test1Listening2023;
+export default Listening1Part42023;

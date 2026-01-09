@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
 import { IoBookSharp } from "react-icons/io5";
-
+import Reading4Pagination2022 from "../Pagination2022/Reading4Pagination2022";
 const Test4Reading2022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+  const [showResult, setShowResult] = useState(false);
+  const [userAnswers, setUserAnswers] = useState({});
 
   const handleClear = () => {
     setActiveButtons({});
@@ -22,8 +26,22 @@ const Test4Reading2022 = () => {
     "Habitat modification has resulted in indigenous bats in Madagascar becoming useful to farmers.",
     "The Malagasy mouse-eared bat is more common than other indigenous bat species in Madagascar.",
     "Bats may feed on paddy swarming caterpillars and grass webworms..",
-   
   ];
+  const correctAnswers = {
+    1: "FALSE",
+    2: "TRUE",
+    3: "NOT GIVEN",
+    4: "TRUE",
+    5: "FALSE",
+    6: "TRUE",
+    7: "droppings", // Example one-word answer
+    8: "rice",
+    9: "mosquitoes",
+    10: "protein",
+    11: "unclean",
+    12: "culture",
+    13: "bat houses",
+  };
 
   const options = ["TRUE", "FALSE", "NOT GIVEN"];
 
@@ -39,6 +57,12 @@ const Test4Reading2022 = () => {
     const updatedOptions = [...selectedOptions];
     updatedOptions[qIndex] = oIndex;
     setSelectedOptions(updatedOptions);
+
+    // Save to userAnswers
+    setUserAnswers((prev) => ({
+      ...prev,
+      [qIndex + 1]: options[oIndex], // +1 because question numbers start from 1
+    }));
   };
 
   const handleNumberClick = (qIndex) => {
@@ -46,7 +70,10 @@ const Test4Reading2022 = () => {
     updatedActive[qIndex] = !updatedActive[qIndex]; // toggle active state
     setActiveNumbers(updatedActive);
   };
-
+  const score = Object.entries(userAnswers).reduce((acc, [key, val]) => {
+    if (val === correctAnswers[key]) return acc + 1;
+    return acc;
+  }, 0);
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({
       ...prev,
@@ -487,7 +514,15 @@ const Test4Reading2022 = () => {
                     <input
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
+                      value={userAnswers[7] || ""} // bind the input to userAnswers
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          7: e.target.value, // 7 is the question number
+                        }))
+                      }
                     />
+
                     <span></span>
                   </td>
                 </tr>
@@ -496,7 +531,7 @@ const Test4Reading2022 = () => {
                   <td className="border border-gray-400 text-lg  p-2">
                     Findings
                   </td>
-                  <td className="border border-gray-400 text-lg p-2">
+                  <td className="border border-gray-400 space-y-4 text-lg p-2">
                     <p className="">
                       <span>
                         were most active in rice fields located on hills ate
@@ -515,7 +550,15 @@ const Test4Reading2022 = () => {
                       <input
                         className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
+                        value={userAnswers[8] || ""} // controlled input
+                        onChange={(e) =>
+                          setUserAnswers((prev) => ({
+                            ...prev,
+                            8: e.target.value, // store the value under question number 7
+                          }))
+                        }
                       />
+
                       <span>"</span>
                     </p>
                     <p className="">
@@ -536,6 +579,13 @@ const Test4Reading2022 = () => {
                       <input
                         className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
+                        value={userAnswers[9] || ""} // controlled input
+                        onChange={(e) =>
+                          setUserAnswers((prev) => ({
+                            ...prev,
+                            9: e.target.value, // store the value under question number 7
+                          }))
+                        }
                       />
                       <span>.</span>
                     </p>
@@ -558,6 +608,13 @@ const Test4Reading2022 = () => {
                       <input
                         className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
+                        value={userAnswers[10] || ""} // controlled input
+                        onChange={(e) =>
+                          setUserAnswers((prev) => ({
+                            ...prev,
+                            10: e.target.value, // store the value under question number 7
+                          }))
+                        }
                       />
                       <span>.</span>
                     </p>
@@ -576,6 +633,13 @@ const Test4Reading2022 = () => {
                       <input
                         className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
+                        value={userAnswers[11] || ""} // controlled input
+                        onChange={(e) =>
+                          setUserAnswers((prev) => ({
+                            ...prev,
+                            11: e.target.value, // store the value under question number 7
+                          }))
+                        }
                       />
                       <span>.</span>
                     </p>
@@ -594,6 +658,13 @@ const Test4Reading2022 = () => {
                       <input
                         className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                         type="text"
+                        value={userAnswers[12] || ""} // controlled input
+                        onChange={(e) =>
+                          setUserAnswers((prev) => ({
+                            ...prev,
+                            12: e.target.value, // store the value under question number 7
+                          }))
+                        }
                       />
                       <span>.</span>
                     </p>
@@ -619,6 +690,13 @@ const Test4Reading2022 = () => {
                     <input
                       className="mx-1 w-[100px] border border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-1 py-0.5 text-lg"
                       type="text"
+                      value={userAnswers[13] || ""} // controlled input
+                      onChange={(e) =>
+                        setUserAnswers((prev) => ({
+                          ...prev,
+                          13: e.target.value, // store the value under question number 7
+                        }))
+                      }
                     />
                     <span>to support the bat population</span>
                   </td>
@@ -626,8 +704,91 @@ const Test4Reading2022 = () => {
               </tbody>
             </table>
           </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
+                >
+                  Submit Answers
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/13
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–13)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer = userAnswers[num]?.trim();
+                      const correctAnswer = correctAnswers[num]?.trim();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">No answer provided</span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+      <Reading4Pagination2022></Reading4Pagination2022>
     </div>
   );
 };
