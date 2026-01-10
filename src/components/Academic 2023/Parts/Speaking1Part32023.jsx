@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking4Pagination2023 from "../Pagination 2023/Speaking4Pagination2023";
 
-const Test4Speaking2023 = () => {
+
+
+import Speaking1Pagination2023 from "../Pagination 2023/Speaking1Pagination2023";
+
+const Speaking1Part32023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -14,19 +17,27 @@ const Test4Speaking2023 = () => {
   const [totalMark, setTotalMark] = useState(0);
 
   const recognitionRef = useRef(null);
+
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+
 const questions = [
-  "How many hours do you usually sleep at night?",
-  "Do you sometimes sleep during the day? ",
-  "What do you do if you can't get to sleep at night?",
-  "Do you ever remember the dreams you've had while you were asleep?",
+  "What kinds of things can children learn to cook?",
+  "Do you think it is important for children to learn to cook?",
+  "Do you think young people should learn to cook at home or at school?",
+  "How enjoyable do you think it would be to work as a professional chef?",
+  "What skills does a person need to be a great chef?",
+  "How much influence do celebrity or TV chefs have on what ordinary people cook?",
 ];
 
 const questionKeywords = [
-  ["how many", "hours", "sleep", "night", "usually"],
-  ["sometimes", "sleep", "day", "nap", "tired"],
-  ["can't", "sleep", "night", "relax", "music", "phone"],
-  ["remember", "dreams", "asleep", "sleep", "night"],
+  ["children", "learn", "cook", "food", "things"],
+  ["important", "children", "learn", "cook", "opinion"],
+  ["young people", "learn", "cook", "home", "school"],
+  ["working as a chef", "professional chef", "enjoyable", "job", "career"],
+  ["skills", "great chef", "cooking", "experience", "ability"],
+  ["celebrity chefs", "TV chefs", "influence", "ordinary people", "cook"],
 ];
+
 
 
   // ▶ Speak current question
@@ -48,16 +59,15 @@ const questionKeywords = [
   };
 
   // ✅ keyword-based mark calculation
-  // ✅ Live answer only, do not show "No answer given"
   const calculateMark = (answer, questionIdx) => {
     const text = answer.toLowerCase();
-    if (!text) return 0; // empty answer → 0 mark
+    if (!text) return 0;
 
     const keywords = questionKeywords[questionIdx];
     for (let kw of keywords) {
-      if (text.includes(kw)) return 1; // match → 1 mark
+      if (text.includes(kw)) return 1;
     }
-    return 0; // no keyword → 0 mark
+    return 0;
   };
 
   // 🎤 Microphone click
@@ -101,14 +111,22 @@ const questionKeywords = [
       const answerText = finalTranscript.trim() || currentAnswer.trim();
       const mark = calculateMark(answerText, questionIndex);
 
-      setAnswers((prev) => [
-        ...prev,
+      const updatedAnswers = [
+        ...answers,
         {
           question: questions[questionIndex],
           answer: answerText || "No answer given",
           mark,
         },
-      ]);
+      ];
+
+      setAnswers(updatedAnswers);
+
+      const total = updatedAnswers.reduce((sum, a) => sum + a.mark, 0);
+      setTotalMark(total);
+
+      // ✅ Save mark to localStorage
+      localStorage.setItem(storageKey, total);
 
       setTimeout(() => {
         if (questionIndex < questions.length - 1) {
@@ -116,15 +134,6 @@ const questionKeywords = [
           setSpokenQuestion("");
           setCurrentAnswer("");
         } else {
-          const total = [
-            ...answers,
-            {
-              question: questions[questionIndex],
-              answer: answerText || "No answer given",
-              mark,
-            },
-          ].reduce((sum, a) => sum + a.mark, 0);
-          setTotalMark(total);
           setShowResult(true);
         }
       }, 800);
@@ -139,7 +148,7 @@ const questionKeywords = [
     return (
       <div className="p-6 max-w-2xl mx-auto border rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
-          🎉 Speaking Test Complete!
+          Speaking Test Complete!
         </h1>
 
         <ul className="space-y-6 text-left">
@@ -163,7 +172,7 @@ const questionKeywords = [
 
         <div className="text-center mt-8">
           <p className="text-xl font-bold text-blue-700 mb-4">
-            🏆 Total Score: {totalMark} / {questions.length}
+            Total Score: {totalMark} / {questions.length}
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -182,25 +191,34 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
           <br />
-
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-
-          <h2 className="text-2xl font-bold mb-2">Sleep</h2>
 
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <li>How many hours do you usually sleep at night?</li>
-            <li>Do you sometimes sleep during the day? Why or why not?</li>
-            <li>What do you do if you can't get to sleep at night? Why?</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Young people and cooking & Working as a chef
+            </h1>
+
+            <p className="text-lg font-bold">Young people and cooking</p>
+            <li>What kinds of things can children learn to cook?</li>
+            <li>Do you think it is important for children to learn to cook?</li>
             <li>
-              Do you ever remember the dreams you've had while you were asleep?
+              Do you think young people should learn to cook at home or at
+              school?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Working as a chef</p>
+            <li>
+              How enjoyable do you think it would be to work as a professional
+              chef?
+            </li>
+            <li>What skills does a person need to be a great chef?</li>
+            <li>
+              How much influence do celebrity or TV chefs have on what ordinary
+              people cook?
             </li>
           </ul>
         </div>
@@ -208,7 +226,6 @@ const questionKeywords = [
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
-            {" "}
             <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
               2/3 speaking practices finished in 180 minutes.
             </span>
@@ -262,10 +279,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking4Pagination2023></Speaking4Pagination2023>
-      {/* <Speaking1Pagination2022></Speaking1Pagination2022> */}
+      <Speaking1Pagination2023></Speaking1Pagination2023>
     </div>
   );
 };
 
-export default Test4Speaking2023;
+export default Speaking1Part32023;

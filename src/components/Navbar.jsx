@@ -14,6 +14,51 @@ const Navbar = () => {
 
   // Define timer for each page
   const pathTimes = {
+    //2023
+    "/2023/test 1/listening": 8 * 60,
+    "/2023/test 2/listening": 7 * 60 + 30,
+    "/2023/test 3/listening": 8 * 60,
+    "/2023/test 4/listening": 9 * 60,
+    // listening part time
+    "/listening1Part22023": 7 * 60 + 30,
+    "/listening1Part32023": 8 * 60,
+    "/listening1Part42023": 7 * 60,
+    "/listening2Part22023": 7 * 60 + 30,
+    "/listening2Part32023": 7 * 60 + 30,
+    "/listening2Part42023": 8 * 60 + 30,
+    "/listening3Part22023": 7 * 60 + 30,
+    "/listening3Part32023": 8 * 60 + 30,
+    "/listening3Part42023": 7 * 60 + 30,
+    "/listening4Part22023": 8 * 60,
+    "/listening4Part32023": 7 * 60 + 30,
+    "/listening4Part42023": 8 * 60 + 30,
+
+    //   reading
+    "/2023/Test 1/reading": 20 * 60,
+    "/2023/Test 2/reading": 20 * 60,
+    "/2023/Test 3/reading": 20 * 60,
+    "/2023/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22023": 20 * 60,
+    "/Reading1Part32023": 20 * 60,
+    "/Reading2Part22023": 20 * 60,
+    "/Reading2Part32023": 20 * 60,
+    "/Reading3Part22023": 20 * 60,
+    "/Reading3Part32023": 20 * 60,
+    "/Reading4Part22023": 20 * 60,
+    "/Reading4Part32023": 20 * 60,
+
+    //  writing
+    "/2023/Test 1/writing": 20 * 60,
+    "/2023/Test 2/writing": 20 * 60,
+    "/2023/Test 3/writing": 20 * 60,
+    "/2023/Test 4/writing": 20 * 60,
+    // writing part
+    "/Writing1Part22023": 40 * 60,
+    "/Writing2Part22023": 40 * 60,
+    "/Writing3Part22023": 40 * 60,
+    "/Writing4Part22023": 40 * 60,
 
     //2022
     "/2022/test 1/listening": 8 * 60,
