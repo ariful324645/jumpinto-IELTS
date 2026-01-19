@@ -235,28 +235,29 @@ const Reading1Part22022 = () => {
           {/* Reading Passage */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              Stadiums: past, present and future
+              {renderText("Stadiums: past, present and future")}
             </h1>
 
-            <p className="text-lg font-bold">A</p>
+            {/* ================= Paragraph A ================= */}
+            <p className="text-lg font-bold">{renderText("A")}</p>
             <p className="text-lg">
-              Stadiums are among the oldest forms of urban architecture: vast
-              stadiums where the public could watch sporting events were at the
-              centre of western city life as far back as the ancient Greek and
-              Roman Empires, well before the construction of the great medieval
-              cathedrals and the grand 19th- and 20th-century railway stations
-              which dominated urban skylines in later eras.
+              {renderText(
+                "Stadiums are among the oldest forms of urban architecture: vast stadiums where the public could watch sporting events were at the centre of western city life as far back as the ancient Greek and Roman Empires, well before the construction of the great medieval cathedrals and the grand 19th- and 20th-century railway stations which dominated urban skylines in later eras."
+              )}
             </p>
-            <p className="text-lg">
-              Today, however, stadiums are regarded with growing scepticism.
+
+            <p className="text-lg mt-3">
+              {renderText(
+                "Today, however, stadiums are regarded with growing scepticism."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Construction costs can soar above £1 billion, and stadiums
-                finished for major events such as the Olympic Games or the FIFA
-                World Cup have notably fallen into disuse and disrepair.
+                {renderText(
+                  "Construction costs can soar above £1 billion, and stadiums finished for major events such as the Olympic Games or the FIFA World Cup have notably fallen into disuse and disrepair."
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     14
@@ -264,59 +265,73 @@ const Reading1Part22022 = () => {
                 )}
               </span>
             </p>
-            <p className="text-lg">
-              But this need not be the case. History shows that stadiums can
-              drive urban development and adapt to the culture of every age.
-              Even today, architects and planners are finding new ways to adapt
-              the mono-functional sports arenas which became emblematic of
-              modernisation during the 20th century.
+
+            <p className="text-lg mt-3">
+              {renderText("But this need not be the case.")}
+              {renderText(
+                " History shows that stadiums can drive urban development and adapt to the culture of every age."
+              )}
+              {renderText(
+                " Even today, architects and planners are finding new ways to adapt the mono-functional sports arenas which became emblematic of modernisation during the 20th century."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">B</p>
+            {/* ================= Paragraph B ================= */}
+            <p className="text-lg font-bold">{renderText("B")}</p>
             <p className="text-lg">
-              The amphitheatre* of Arles in southwest France, with a capacity of
-              25,000 spectators, is perhaps the best example of just how
-              versatile stadiums can be. Built by the Romans in 90 AD, it became
-              a fortress with four towers after the fifth century, and was then
-              transformed into a village containing more than 200 houses.
+              {renderText(
+                "The amphitheatre of Arles in southwest France, with a capacity of 25,000 spectators, is perhaps the best example of just how versatile stadiums can be."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                With the growing interest in conservation during the 19th
-                century, it was converted back into an arena for the staging of
-                bullfights, thereby returning the structure to its original use
-                as a venue for public spectacles.
+                {renderText(
+                  " Built by the Romans in 90 AD, it became a fortress with four towers after the fifth century, and was then transformed into a village containing more than 200 houses."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      18
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      19
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    18
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " With the growing interest in conservation during the 19th century, it was converted back into an arena for the staging of bullfights, thereby returning the structure to its original use as a venue for public spectacles."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    19
+                  </span>
                 )}
               </span>
             </p>
-            <p className="text-lg">
-              Another example is the imposing arena of Verona in northern Italy,
-              with space for 30,000 spectators, which was built 60 years before
-              the Arles amphitheatre and 40 years before Rome's famous
-              Colosseum.
+
+            <p className="text-lg mt-3">
+              {renderText(
+                "Another example is the imposing arena of Verona in northern Italy, with space for 30,000 spectators, which was built 60 years before the Arles amphitheatre and 40 years before Rome's famous Colosseum."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                It has endured the centuries and is currently considered one of
-                the world's prime sites for opera, thanks to its outstanding
-                acoustics.
+                {renderText(
+                  " It has endured the centuries and is currently considered one of the world's prime sites for opera, thanks to its outstanding acoustics."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     20
                   </span>
                 )}
@@ -325,36 +340,42 @@ const Reading1Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">C</p>
+            {/* ================= Paragraph C ================= */}
+            <p className="text-lg font-bold">{renderText("C")}</p>
             <p className="text-lg">
-              The area in the centre of the Italian town of Lucca, known as the
-              Piazza dell'Anfiteatro, is yet another impressive example of an
-              amphitheatre becoming absorbed into the fabric of the city.
+              {renderText(
+                "The area in the centre of the Italian town of Lucca, known as the Piazza dell'Anfiteatro, is yet another impressive example of an amphitheatre becoming absorbed into the fabric of the city."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The site evolved in a similar way to Arles and was progressively
-                filled with buildings from the Middle Ages until the 19th
-                century, variously used as houses, a salt depot and a prison.
+                {renderText(
+                  " The site evolved in a similar way to Arles and was progressively filled with buildings from the Middle Ages until the 19th century, variously used as houses, a salt depot and a prison."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     21
                   </span>
                 )}
               </span>
+              {renderText(
+                " But rather than reverting to an arena, it became a market square, designed by Romanticist architect Lorenzo Nottolini."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But rather than reverting to an arena, it became a market
-                square, designed by Romanticist architect Lorenzo Nottolini.
-                Today, the ruins of the amphitheatre remain embedded in the
-                various shops and residences surrounding the public square.
+                {" "}
+                {renderText(
+                  " Today, the ruins of the amphitheatre remain embedded in the various shops and residences surrounding the public square."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     22
                   </span>
                 )}
@@ -363,36 +384,55 @@ const Reading1Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">D</p>
+            {/* ================= Paragraph D ================= */}
+            <p className="text-lg font-bold">{renderText("D")}</p>
             <p className="text-lg">
-              There are many similarities between modern stadiums and the
-              ancient amphitheatres intended for games. But some of the
-              flexibility was lost at the beginning of the 20th century, as
-              stadiums were developed using new products such as steel and
-              reinforced concrete, and made use of bright lights for night-time
-              matches.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  24
-                </span>
+              {renderText(
+                "There are many similarities between modern stadiums and the ancient amphitheatres intended for games."
               )}
-            </p>
-            <p className="text-lg">
-              Many such stadiums are situated in suburban areas, designed for
-              sporting use only and surrounded by parking lots.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  23
-                </span>
-              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                These factors mean that they may not be as accessible to the
-                general public, require more energy to run and contribute to
-                urban heat.
+                {renderText(
+                  " But some of the flexibility was lost at the beginning of the 20th century, as stadiums were developed using new products such as steel and reinforced concrete, and made use of bright lights for night-time matches."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    24
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg mt-3">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "Many such stadiums are situated in suburban areas, designed for sporting use only and surrounded by parking lots."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    23
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " These factors mean that they may not be as accessible to the general public, require more energy to run and contribute to urban heat."
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     17
@@ -403,128 +443,119 @@ const Reading1Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">E</p>
+            {/* ================= Paragraph E ================= */}
+            <p className="text-lg font-bold">{renderText("E")}</p>
             <p className="text-lg">
-              But many of today's most innovative architects see scope for the
-              stadium to help improve the city. Among the current strategies,
-              two seem to be having particular success: the stadium as an urban
-              hub, and as a power plant.
+              {renderText(
+                "But many of today's most innovative architects see scope for the stadium to help improve the city."
+              )}
+              {renderText(
+                " Among the current strategies, two seem to be having particular success: the stadium as an urban hub, and as a power plant."
+              )}
             </p>
-            <p className="text-lg">
+
+            <p className="text-lg mt-3">
+              {renderText(
+                "There's a growing trend for stadiums to be equipped with public spaces and services that serve a function beyond sport."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                There's a growing trend for stadiums to be equipped with public
-                spaces and services that serve a function beyond sport, such as
-                hotels, retail outlets, conference centres, restaurants and
-                bars, children's playgrounds and green space.
+                {renderText(
+                  " Creating mixed-use developments such as this reinforces compactness and multi-functionality, making more efficient use of land and helping to regenerate urban spaces."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     16
                   </span>
                 )}
               </span>
-              Creating mixed-use developments such as this reinforces
-              compactness and multi-functionality, making more efficient use of
-              land and helping to regenerate urban spaces.
             </p>
-            <p className="text-lg">
+
+            <p className="text-lg mt-3">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                This opens the space up to families and a wider cross-section of
-                society, instead of catering only to sportspeople and
-                supporters.
+                {" "}
+                {renderText(
+                  "This opens the space up to families and a wider cross-section of society, instead of catering only to sportspeople and supporters."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     25
                   </span>
                 )}
               </span>
-              There have been many examples of this in the UK: the mixed-use
-              facilities at Wembley and Old Trafford have become a blueprint for
-              many other stadiums in the world.
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">F</p>
+            {/* ================= Paragraph F ================= */}
+            <p className="text-lg font-bold">{renderText("F")}</p>
             <p className="text-lg">
-              The phenomenon of stadiums as power stations has arisen from the
-              idea that energy problems can be overcome by integrating
-              interconnected buildings by means of a smart grid, which is an
-              electricity supply network that uses digital communications
-              technology to detect and react to local changes in usage, without
-              significant energy losses.
+              {renderText(
+                "The phenomenon of stadiums as power stations has arisen from the idea that energy problems can be overcome by integrating interconnected buildings by means of a smart grid."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Stadiums are ideal for these purposes, because their canopies
-                have a large surface area for fitting photovoltaic panels and
-                rise high enough (more than 40 metres) to make use of micro wind
-                turbines.
+                {renderText(
+                  " Stadiums are ideal for these purposes, because their canopies have a large surface area for fitting photovoltaic panels and rise high enough to make use of micro wind turbines."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     26
                   </span>
                 )}
               </span>
             </p>
-            <p className="text-lg">
-              Freiburg Mage Solar Stadium in Germany is the first of a new wave
-              of stadiums as power plants, which also includes the Amsterdam
-              Arena and the Kaohsiung Stadium. The latter, inaugurated in 2009,
-              has 8,844 photovoltaic panels producing up to 1.14 GWh of
-              electricity annually.
+
+            <p className="text-lg mt-3">
+              {renderText(
+                "Freiburg Mage Solar Stadium in Germany is the first of a new wave of stadiums as power plants."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                This reduces the annual output of carbon dioxide by 660 tons and
-                supplies up to 80 percent of the surrounding area when the
-                stadium is not in use.
+                {" "}
+                {renderText(
+                  " This reduces carbon dioxide output and supplies up to 80 percent of the surrounding area when the stadium is not in use."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      15
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    15
+                  </span>
                 )}
               </span>
-              This is proof that a stadium can serve its city, and have a
-              decidedly positive impact in terms of reduction of CO2 emissions.
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">G</p>
+            {/* ================= Paragraph G ================= */}
+            <p className="text-lg font-bold">{renderText("G")}</p>
             <p className="text-lg">
-              Sporting arenas have always been central to the life and culture
-              of cities. In every era, the stadium has acquired new value and
-              uses: from military fortress to residential village, public space
-              to theatre and most recently a field for experimentation in
-              advanced engineering.
-            </p>
-            <p className="text-lg">
-              The stadium of today now brings together multiple functions, thus
-              helping cities to create a sustainable future.
+              {renderText(
+                "Sporting arenas have always been central to the life and culture of cities."
+              )}
+              {renderText(
+                " In every era, the stadium has acquired new value and uses."
+              )}
             </p>
 
-            <br />
-
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg italic">
-              * amphitheatre: (especially in Greek and Roman architecture) an
-              open circular or oval building with a central space surrounded by
-              tiers of seats for spectators, for the presentation of dramatic or
-              sporting events.
+            <p className="text-lg mt-3">
+              {renderText(
+                "The stadium of today now brings together multiple functions, thus helping cities to create a sustainable future."
+              )}
             </p>
           </div>
 
@@ -553,13 +584,21 @@ const Reading1Part22022 = () => {
         {/* right div */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ================= Questions 14–17 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 14–17</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 14–17")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Reading Passage 2 has seven sections, A-G. <br />
-            Which section contains the following information? <br />
-            Choose the correct letter, A-G, in boxes 14–17 on your answer sheet.{" "}
+            {renderText("Reading Passage 2 has seven sections, A-G.")} <br />
+            {renderText(
+              "Which section contains the following information?"
+            )}{" "}
             <br />
-            NB You may use any letter more than once.
+            {renderText(
+              "Choose the correct letter, A-G, in boxes 14–17 on your answer sheet."
+            )}{" "}
+            <br />
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
           {[
@@ -581,19 +620,17 @@ const Reading1Part22022 = () => {
             },
           ].map((q) => (
             <div key={q.num} className="flex flex-wrap items-center gap-3 mb-3">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full border-1 font-bold">
-                {q.num}
-              </span>
-              <span>{q.text}</span>
+              <span className=" font-bold">{renderText(String(q.num))}</span>
+              <span>{renderText(q.text)}</span>
               <select
-                className="border-1 rounded px-2 py-1 w-20 ml-3"
+                className="border-1 rounded px-2 py-1 w-15 ml-3"
                 value={userAnswers[q.num] || ""}
                 onChange={(e) => handleInputChange(q.num, e.target.value)}
               >
-                <option value="">Select</option>
+                <option value="">{q.num}</option>
                 {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
                   <option key={letter} value={letter}>
-                    {letter}
+                    {renderText(letter)}
                   </option>
                 ))}
               </select>
@@ -601,58 +638,173 @@ const Reading1Part22022 = () => {
           ))}
 
           {/* ================= Questions 18–22 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 18–22</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 18–22")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Complete the summary below. Choose ONE WORD ONLY from the passage
-            for each answer.
+            {renderText(
+              "Complete the summary below. Choose ONE WORD ONLY from the passage for each answer."
+            )}
           </p>
 
-          <div className="border p-5 space-y-4">
-            <h3 className="text-xl font-bold text-center mb-4">
-              Roman amphitheatres
-            </h3>
-            <ul className="list-disc list-inside space-y-4 text-lg">
-              {[
-                { num: 18, text: "was converted first into a" },
-                {
-                  num: 19,
-                  text: "and finally into an arena where spectators could watch",
-                },
-                { num: 20, text: "is performed" },
-                { num: 21, text: "including the storage of" },
-                {
-                  num: 22,
-                  text: "and homes incorporated into the remains of the Roman amphitheatre",
-                },
-              ].map((q) => (
-                <li key={q.num} className="flex flex-wrap items-center gap-2">
-                  <span className="w-8 h-8 flex items-center justify-center rounded-full border-1 font-bold">
-                    {q.num}
-                  </span>
-                  <span>{q.text}</span>
-                  <input
-                    type="text"
-                    className="border-1 rounded px-2 py-1 w-32 ml-2"
-                    value={userAnswers[q.num] || ""}
-                    onChange={(e) => handleInputChange(q.num, e.target.value)}
-                  />
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-2 text-lg border p-5">
+            <h2 className="text-xl font-bold text-center mt-2">
+              {renderText("Roman amphitheatres")}
+            </h2>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "The Roman stadiums of Europe have proved very versatile. The amphitheatre of Arles, for example, was converted first into a"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(18)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[18]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                18
+              </button>
+
+              <input
+                type="text"
+                className="border rounded px-2 py-1 w-32"
+                onChange={(e) => handleInputChange(18, e.target.value)}
+              />
+
+              <span>
+                {renderText(
+                  ", then into a residential area and finally into an arena where spectators could watch"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(19)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[19]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                19
+              </button>
+
+              <input
+                type="text"
+                className="border rounded px-2 py-1 w-32"
+                onChange={(e) => handleInputChange(19, e.target.value)}
+              />
+
+              <span>{renderText(".")}</span>
+            </p>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "Meanwhile, the arena in Verona, one of the oldest Roman amphitheatres, is famous today as a venue where"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(20)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[20]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                20
+              </button>
+
+              <input
+                type="text"
+                className="border rounded px-2 py-1 w-32"
+                onChange={(e) => handleInputChange(20, e.target.value)}
+              />
+
+              <span>{renderText(" is performed.")}</span>
+            </p>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "The site of Lucca's amphitheatre has also been used for many purposes over the centuries, including the storage of"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(21)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[21]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                21
+              </button>
+
+              <input
+                type="text"
+                className="border rounded px-2 py-1 w-32"
+                onChange={(e) => handleInputChange(21, e.target.value)}
+              />
+
+              <span>{renderText(".")}</span>
+            </p>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>{renderText("It is now a market square with")}</span>
+
+              <button
+                onClick={() => toggleButton(22)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[22]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                22
+              </button>
+
+              <input
+                type="text"
+                className="border rounded px-2 py-1 w-32"
+                onChange={(e) => handleInputChange(22, e.target.value)}
+              />
+
+              <span>
+                {renderText(
+                  " and homes incorporated into the remains of the Roman amphitheatre."
+                )}
+              </span>
+            </p>
           </div>
 
           {/* ================= Questions 23–24 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 23–24</h2>
-          <p className="mb-4 font-semibold">Choose TWO letters, A–E.</p>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 23–24")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            When comparing twentieth-century stadiums to ancient amphitheatres
-            in Section D, which TWO negative features does the writer mention?
+            {renderText("Choose TWO letters, A–E.")}
           </p>
 
-          <div className=" p-5 mb-4">
+          <p className="mb-4 font-semibold">
+            {renderText(
+              "When comparing twentieth-century stadiums to ancient amphitheatres in Section D, which TWO negative features does the writer mention?"
+            )}
+          </p>
+
+          <div className="p-5 mb-4">
             <p className="font-semibold mb-3">
-              When comparing twentieth-century stadiums to ancient amphitheatres
-              in Section D, which TWO negative features does the writer mention?
+              {renderText(
+                "When comparing twentieth-century stadiums to ancient amphitheatres in Section D, which TWO negative features does the writer mention?"
+              )}
             </p>
 
             {[
@@ -682,8 +834,8 @@ const Reading1Part22022 = () => {
                     className="mt-1"
                   />
                   <div>
-                    <span className="font-semibold">{letter}.</span>{" "}
-                    <span>{text}</span>
+                    <span className="font-semibold">{renderText(letter)}.</span>{" "}
+                    <span>{renderText(text)}</span>
                   </div>
                 </label>
               );
@@ -691,17 +843,25 @@ const Reading1Part22022 = () => {
           </div>
 
           {/* ================= Questions 25–26 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 25–26</h2>
-          <p className="mb-4 font-semibold">Choose TWO letters, A–E.</p>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 25–26")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Which TWO advantages of modern stadium design does the writer
-            mention?
+            {renderText("Choose TWO letters, A–E.")}
           </p>
 
-          <div className=" p-5 mb-4">
+          <p className="mb-4 font-semibold">
+            {renderText(
+              "Which TWO advantages of modern stadium design does the writer mention?"
+            )}
+          </p>
+
+          <div className="p-5 mb-4">
             <p className="font-semibold mb-3">
-              Which TWO advantages of modern stadium design does the writer
-              mention?
+              {renderText(
+                "Which TWO advantages of modern stadium design does the writer mention?"
+              )}
             </p>
 
             {[
@@ -746,8 +906,8 @@ const Reading1Part22022 = () => {
                     className="mt-1"
                   />
                   <div>
-                    <span className="font-semibold">{letter}.</span>{" "}
-                    <span>{text}</span>
+                    <span className="font-semibold">{renderText(letter)}.</span>{" "}
+                    <span>{renderText(text)}</span>
                   </div>
                 </label>
               );
@@ -761,24 +921,25 @@ const Reading1Part22022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
-                {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    {renderText("Your Score:")} {score}/13
                   </p>
                 </div>
 
-                {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (14–30)
+                    {renderText("All Answers (14–30)")}
                   </h3>
+
                   <ul className="space-y-3">
                     {[14, 15, 16, 17, 18, 19, 20, 21, 22, "23-24", "25-26"].map(
                       (num) => {
@@ -822,25 +983,30 @@ const Reading1Part22022 = () => {
                                   <ImCross className="text-white text-sm font-bold" />
                                 </div>
                               )}
-                              <p className="font-bold">Q{num}:</p>
+                              <p className="font-bold">
+                                {renderText("Q")}
+                                {num}:
+                              </p>
                             </div>
+
                             <p className="ml-8">
                               <span className="font-semibold">
-                                Your Answer:
+                                {renderText("Your Answer:")}
                               </span>{" "}
                               {noAnswer ? (
                                 <span className="italic">
-                                  No answer provided
+                                  {renderText("No answer provided")}
                                 </span>
                               ) : (
-                                userAnswerDisplay
+                                renderText(userAnswerDisplay)
                               )}
                             </p>
+
                             <p className="ml-8">
                               <span className="font-semibold text-green-600">
-                                Correct Answer:
+                                {renderText("Correct Answer:")}
                               </span>{" "}
-                              {correctAnswerDisplay}
+                              {renderText(correctAnswerDisplay)}
                             </p>
                           </li>
                         );

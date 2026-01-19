@@ -215,146 +215,268 @@ const Test3Reading2022 = () => {
 
           {/* Passage text */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              The thylacine
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("The thylacine")}
             </h1>
 
+            {/* ===================== A ===================== */}
             <p className="text-lg">
-              The extinct thylacine, also known as the Tasmanian tiger, was a
-              marsupial* that bore a superficial resemblance to a dog. Its most
-              distinguishing feature was the 13–19 dark brown stripes over its
-              back, beginning at the rear of the body and extending onto the
-              tail. The thylacine's average nose-to-tail length for adult males
-              was 162.6 cm, compared to 153.7 cm for females.
+              {renderText(
+                "The extinct thylacine, also known as the Tasmanian tiger, was a marsupial that bore a superficial resemblance to a dog."
+              )}
+              {renderText(
+                " Its most distinguishing feature was the 13–19 dark brown stripes over its back, beginning at the rear of the body and extending onto the tail."
+              )}
+              {renderText(
+                " The thylacine's average nose-to-tail length for adult males was 162.6 cm, compared to 153.7 cm for females."
+              )}
             </p>
 
             <br />
 
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              The thylacine appeared to occupy most types of terrain except
-              dense rainforest, with open eucalyptus forest thought to be its
-              prime habitat. In terms of feeding, it was exclusively
-              carnivorous, and its stomach was muscular with an ability to
-              distend so that it could eat large amounts of food at one time,
-              probably an adaptation to compensate for long periods when hunting
-              was unsuccessful and food scarce.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                The thylacine was not a fast runner and probably caught its prey
-                by exhausting it during a long pursuit.
-                {highlight && <NumberBox n={1} />}
-              </span>
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                During long-distance chases, thylacines were likely to have
-                relied more on scent than any other sense.
-                {highlight && <NumberBox n={2} />}
-              </span>
-              They emerged to hunt during the evening, night and early morning
-              and tended to retreat to the hills and forest for shelter during
-              the day. Despite the common name 'tiger', the thylacine had a shy,
-              nervous temperament. Although mainly nocturnal, it was sighted
-              moving during the day and some individuals were even recorded
-              basking in the sun.
-            </p>
+              {renderText(
+                "The thylacine appeared to occupy most types of terrain except dense rainforest, with open eucalyptus forest thought to be its prime habitat."
+              )}
 
-            <br />
-
-            <p className="text-lg">
-              The thylacine had an extended breeding season from winter to
-              spring, with indications that some breeding took place throughout
-              the year. The thylacine, like all marsupials, was tiny and
-              hairless when born. Newborns crawled into the pouch on the belly
-              of their mother, and attached themselves to one of the four teats,
-              remaining there for up to three months.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                When old enough to leave the pouch, the young stayed in a lair
-                such as a deep rocky cave, well-hidden nest or hollow log,
-                whilst the mother hunted.
-                {highlight && <NumberBox n={3} />}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " In terms of feeding, it was exclusively carnivorous, and its stomach was muscular with an ability to distend so that it could eat large amounts of food at one time, probably an adaptation to compensate for long periods when hunting was unsuccessful and food scarce."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    1
+                  </span>
+                )}
               </span>
             </p>
 
             <br />
 
             <p className="text-lg">
-              Approximately 4,000 years ago, the thylacine was widespread
-              throughout New Guinea and most of mainland Australia, as well as
-              the island of Tasmania. The most recent, well-dated occurrence of
-              a thylacine on the mainland is a carbon-dated fossil from Murray
-              Cave in Western Australia, which is around 3,100 years old.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                Its extinction coincided closely with the arrival of wild dogs
-                called dingoes in Australia and a similar predator in New
-                Guinea.
-                {highlight && <NumberBox n={4} />}
-              </span>
-              Dingoes never reached Tasmania, and most scientists see this as
-              the main reason for the thylacine's survival there.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              The dramatic decline of the thylacine in Tasmania, which began in
-              the 1830s and continued for a century, is generally attributed to
-              the relentless efforts of sheep farmers and bounty hunters* with
-              shotguns.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                While this determined campaign undoubtedly played a large part,
-                it is likely that various other factors also contributed to the
-                decline and eventual extinction of the species.
-                {highlight && <NumberBox n={6} />}
-              </span>
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                These include competition with wild dogs introduced by European
-                settlers, loss of habitat along with the disappearance of prey
-                species, and a distemper-like disease which may also have
-                affected the thylacine.
-                {highlight && <NumberBox n={5} />}
+              {renderText(
+                "The thylacine was not a fast runner and probably caught its prey by exhausting it during a long pursuit."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " During long-distance chases, thylacines were likely to have relied more on scent than any other sense."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    2
+                  </span>
+                )}
               </span>
             </p>
 
             <br />
 
             <p className="text-lg">
-              There was only one successful attempt to breed a thylacine in
-              captivity, at Melbourne Zoo in 1899.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                This was despite the large numbers that went through some zoos,
-                particularly London Zoo and Tasmania's Hobart Zoo.
-                {highlight && <NumberBox n={7} />}
+              {renderText(
+                "They emerged to hunt during the evening, night and early morning and tended to retreat to the hills and forest for shelter during the day."
+              )}
+              {renderText(
+                " Despite the common name 'tiger', the thylacine had a shy, nervous temperament."
+              )}
+              {renderText(
+                " Although mainly nocturnal, it was sighted moving during the day and some individuals were even recorded basking in the sun."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== C ===================== */}
+            <p className="text-lg">
+              {renderText(
+                "The thylacine had an extended breeding season from winter to spring, with indications that some breeding took place throughout the year."
+              )}
+              {renderText(
+                " The thylacine, like all marsupials, was tiny and hairless when born."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " Newborns crawled into the pouch on the belly of their mother, and attached themselves to one of the four teats, remaining there for up to three months."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    3
+                  </span>
+                )}
               </span>
             </p>
 
             <br />
 
             <p className="text-lg">
-              However, there seems to have been little public pressure to
-              preserve the thylacine, nor was much concern expressed by
-              scientists at the decline of this species in the decades that
-              followed.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                A notable exception was T.T. Flynn, Professor of Biology at the
-                University of Tasmania.
-                {highlight && <NumberBox n={9} />}
+              {renderText(
+                "When old enough to leave the pouch, the young stayed in a lair such as a deep rocky cave, well-hidden nest or hollow log, whilst the mother hunted."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== D ===================== */}
+            <p className="text-lg">
+              {renderText(
+                "Approximately 4,000 years ago, the thylacine was widespread throughout New Guinea and most of mainland Australia, as well as the island of Tasmania."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " The most recent, well-dated occurrence of a thylacine on the mainland is a carbon-dated fossil from Murray Cave in Western Australia, which is around 3,100 years old."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    4
+                  </span>
+                )}
               </span>
-              In 1914, he was sufficiently concerned about the scarcity of the
-              thylacine to suggest that some should be captured and placed on a
-              small island.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                But it was not until 1929, with the species on the very edge of
-                extinction, that Tasmania's Animals and Birds Protection Board
-                passed a motion protecting thylacines only for the month of
-                December.
-                {highlight && <NumberBox n={11} />}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Its extinction coincided closely with the arrival of wild dogs called dingoes in Australia and a similar predator in New Guinea."
+              )}
+              {renderText(
+                " Dingoes never reached Tasmania, and most scientists see this as the main reason for the thylacine's survival there."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== E ===================== */}
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The dramatic decline of the thylacine in Tasmania, which began in the 1830s and continued for a century, is generally attributed to the relentless efforts of sheep farmers and bounty hunters with shotguns."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    6
+                  </span>
+                )}
               </span>
-              The last known wild thylacine to be killed was shot by a farmer in
-              the north-east of Tasmania in 1930, leaving just captive
-              specimens.
-              <span className={highlight ? "bg-yellow-100 ml-2" : "ml-2"}>
-                Official protection of the species by the Tasmanian government
-                was introduced in July 1936.
-                {highlight && <NumberBox n={12} />}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "While this determined campaign undoubtedly played a large part, it is likely that various other factors also contributed to the decline and eventual extinction of the species."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " These include competition with wild dogs introduced by European settlers, loss of habitat along with the disappearance of prey species, and a distemper-like disease which may also have affected the thylacine."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    5
+                  </span>
+                )}
               </span>
+            </p>
+
+            <br />
+
+            {/* ===================== F ===================== */}
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "There was only one successful attempt to breed a thylacine in captivity, at Melbourne Zoo in 1899."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    7
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  "However, there seems to have been little public pressure to preserve the thylacine, nor was much concern expressed by scientists at the decline of this species in the decades that followed."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    9
+                  </span>
+                )}
+              </span>
+              {renderText(
+                "A notable exception was T.T. Flynn, Professor of Biology at the University of Tasmania.In 1914, he was sufficiently concerned about the scarcity of the thylacine to suggest that some should be captured and placed on a small island"
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The last known wild thylacine to be killed was shot by a farmer in the north-east of Tasmania in 1930, leaving just captive specimens."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    12
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "The species was declared extinct by the Tasmanian government in 1986."
+              )}
             </p>
           </div>
 
@@ -382,22 +504,30 @@ const Test3Reading2022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 1–5 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 1–5</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–5")}
+          </h2>
 
           <p className="mb-4">
-            Complete the notes below. <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
+            {renderText("Complete the notes below.")}
             <br />
-            Write your answers in boxes 1–5 on your answer sheet.
+            {renderText("Choose ")}
+            <strong>{renderText("ONE WORD ONLY")}</strong>
+            {renderText(" from the passage for each answer.")}
+            <br />
+            {renderText(
+              "Write your answers in boxes 1–5 on your answer sheet."
+            )}
           </p>
 
           <div className="border p-5 space-y-4">
             <h3 className="text-xl font-bold text-center mb-4">
-              The thylacine
+              {renderText("The thylacine")}
             </h3>
 
-            <p className="font-semibold">Appearance and behaviour</p>
+            <p className="font-semibold">
+              {renderText("Appearance and behaviour")}
+            </p>
 
             <ul className="space-y-4 text-lg">
               {[
@@ -410,9 +540,9 @@ const Test3Reading2022 = () => {
                 const qNum = index + 1;
                 return (
                   <li key={qNum} className="flex flex-wrap items-center gap-3">
-                    <span>{text}</span>
+                    <span>{renderText(text)}</span>
                     <span className="font-bold h-8 w-8 border text-center rounded-2xl">
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </span>
                     <input
                       type="text"
@@ -424,38 +554,43 @@ const Test3Reading2022 = () => {
               })}
             </ul>
 
-            <p className="font-semibold mt-6">Decline and extinction</p>
+            <p className="font-semibold mt-6">
+              {renderText("Decline and extinction")}
+            </p>
 
             <ul className="space-y-4 text-lg">
-              <li>
-                probably went extinct in mainland Australia due to animals known
-                as dingoes
-              </li>
-              <li>
-                and available sources of food were partly responsible for
-                decline in Tasmania
-              </li>
+              {[
+                "probably went extinct in mainland Australia due to animals known as dingoes",
+                "and available sources of food were partly responsible for decline in Tasmania",
+              ].map((text, idx) => (
+                <li key={idx}>{renderText(text)}</li>
+              ))}
             </ul>
           </div>
 
           {/* ================= Questions 6–13 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 6–13</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 6–13")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the information given in
-            Reading Passage 1?
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}
           </p>
 
           <div className="mb-4 space-y-1">
             <p>
-              <strong>TRUE</strong> if the statement agrees with the information
+              <strong>{renderText("TRUE")}</strong>{" "}
+              {renderText("if the statement agrees with the information")}
             </p>
             <p>
-              <strong>FALSE</strong> if the statement contradicts the
-              information
+              <strong>{renderText("FALSE")}</strong>{" "}
+              {renderText("if the statement contradicts the information")}
             </p>
             <p>
-              <strong>NOT GIVEN</strong> if there is no information on this
+              <strong>{renderText("NOT GIVEN")}</strong>{" "}
+              {renderText("if there is no information on this")}
             </p>
           </div>
 
@@ -482,9 +617,9 @@ const Test3Reading2022 = () => {
                           : "border-gray-300"
                       }`}
                     >
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </div>
-                    <p className="text-lg">{statement}</p>
+                    <p className="text-lg">{renderText(statement)}</p>
                   </div>
 
                   <div className="ml-12 space-y-2">
@@ -508,7 +643,7 @@ const Test3Reading2022 = () => {
                               : ""
                           }
                         >
-                          {option}
+                          {renderText(option)}
                         </span>
                       </div>
                     ))}
@@ -517,6 +652,8 @@ const Test3Reading2022 = () => {
               );
             })}
           </div>
+
+          {/* ================= Submit & Result ================= */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -524,23 +661,25 @@ const Test3Reading2022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    {renderText(`Your Score: ${score}/13`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–13)
+                    {renderText("All Answers (1–13)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -573,23 +712,29 @@ const Test3Reading2022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

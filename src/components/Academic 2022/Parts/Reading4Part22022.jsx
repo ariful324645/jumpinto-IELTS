@@ -9,6 +9,7 @@ const Reading4Part22022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [userAnswers, setUserAnswers] = useState({});
+  const [activeButtons, setActiveButtons] = useState({});
   const [score, setScore] = useState(0);
   const [selectedText, setSelectedText] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,6 +40,12 @@ const Reading4Part22022 = () => {
     setHighlightedTexts([]);
     setSelectedText("");
     setIsModalOpen(false);
+  };
+  const toggleButton = (id) => {
+    setActiveButtons((prev) => ({
+      ...prev,
+      [id]: !prev[id], // toggle true/false
+    }));
   };
 
   const renderText = (chunk) => {
@@ -178,174 +185,187 @@ const Reading4Part22022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Does education fuel economic growth?
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("Does education fuel economic growth?")}
             </h1>
 
-            <p className="text-lg font-bold">A</p>
+            {/* ===================== A ===================== */}
             <p className="text-lg">
-              Over the last decade, a huge database about the lives of southwest
-              German villagers between 1600 and 1900 has been compiled by a team
-              led by Professor Sheilagh Ogilvie at Cambridge University's
-              Faculty of Economics. It includes court records, guild ledgers,
-              parish registers, village censuses, tax lists and - the most
-              recent addition - 9,000 handwritten inventories listing over a
-              million personal possessions belonging to ordinary women and men
-              across three centuries.
+              {renderText(
+                "Over the last decade, a huge database about the lives of southwest German villagers between 1600 and 1900 has been compiled by a team led by Professor Sheilagh Ogilvie at Cambridge University's Faculty of Economics. It includes court records, guild ledgers, parish registers, village censuses, tax lists and - the most recent addition - 9,000 handwritten inventories listing over a million personal possessions belonging to ordinary women and men across three centuries."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Ogilvie, who discovered the inventories in the archives of two
-                German communities 30 years ago, believes they may hold the
-                answer to a conundrum that has long puzzled economists: the lack
-                of evidence for a causal link between education and a country's
-                economic growth.
+                {renderText(
+                  " Ogilvie, who discovered the inventories in the archives of two German communities 30 years ago, believes they may hold the answer to a conundrum that has long puzzled economists: the lack of evidence for a causal link between education and a country's economic growth."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     15
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg font-bold">B</p>
+            <br />
+
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              As Ogilvie explains, "Education helps us to work more
-              productively, invent better technology, and earn more...surely it
-              must be critical for economic growth? But, if you look back
-              through history, there's no evidence that having a high literacy
-              rate made a country industrialise earlier." Between 1600 and 1900,
-              England had only mediocre literacy rates by European standards,
-              yet its economy grew fast and it was the first country to
-              industrialise. During this period, Germany and Scandinavia had
-              excellent literacy rates, but their economies grew slowly and they
-              industrialised late.
+              {renderText(
+                'As Ogilvie explains, "Education helps us to work more productively, invent better technology, and earn more...surely it must be critical for economic growth? But, if you look back through history, there\'s no evidence that having a high literacy rate made a country industrialise earlier."'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Modern cross-country analyses have also struggled to find
-                evidence that education causes economic growth, even though
-                there is plenty of evidence that growth increases education.
+                {renderText(
+                  " Between 1600 and 1900, England had only mediocre literacy rates by European standards, yet its economy grew fast and it was the first country to industrialise. During this period, Germany and Scandinavia had excellent literacy rates, but their economies grew slowly and they industrialised late."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      23
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      24
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    23
+                  </span>
                 )}
               </span>
-            </p>
 
-            <p className="text-lg font-bold">C</p>
-            <p className="text-lg">
-              In the handwritten inventories that Ogilvie is analysing are the
-              belongings of women and men at marriage, remarriage and death.
-              From badger skins to Bibles, sewing machines to scarlet bodices -
-              the villagers' entire worldly goods are included.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Inventories of agricultural equipment and craft tools reveal
-                economic activities; ownership of books and education-related
-                objects like pens and slates suggests how people learned.
+                {renderText(
+                  ' "Modern cross-country analyses have also struggled to find evidence that education causes economic growth, even though there is plenty of evidence that growth increases education," she adds.'
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    18
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    24
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg font-bold">D</p>
+            <br />
+
+            {/* ===================== C ===================== */}
             <p className="text-lg">
-              Ogilvie and her team have been building the vast database of
-              material possessions on top of their full demographic
-              reconstruction of the people who lived in these two German
-              communities. "We can follow the same people - and their
-              descendants - across 300 years of educational and economic
-              change," she says.
+              {renderText(
+                "In the handwritten inventories that Ogilvie is analysing are the belongings of women and men at marriage, remarriage and death. From badger skins to Bibles, sewing machines to scarlet bodices - the villagers' entire worldly goods are included. Inventories of agricultural equipment and craft tools reveal economic activities; ownership of books and education-related objects like pens and slates suggests how people learned. In addition, the tax lists included in the database record the value of farms, workshops, assets and debts; signatures and people's estimates of their age indicate literacy and numeracy levels; and court records reveal obstacles (such as the activities of the guilds*) that stifled industry."
+              )}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "Previous studies usually had just one way of linking education with economic growth - the presence of schools and printing presses, perhaps, or school enrolment, or the ability to sign names. According to Ogilvie, the database provides multiple indicators for the same individuals, making it possible to analyse links between literacy, numeracy, wealth, and industriousness, for individual women and men over the long term."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== D ===================== */}
+            <p className="text-lg">
+              {renderText(
+                'Ogilvie and her team have been building the vast database of material possessions on top of their full demographic reconstruction of the people who lived in these two German communities. "We can follow the same people - and their descendants - across 300 years of educational and economic change," she says. Individual lives have unfolded before their eyes.'
+              )}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "Stories like that of the 24-year-olds Ana Regina and Magdalena Riethmüllerin, who were chastised in 1707 for reading books in church instead of listening to the sermon. This tells us they were continuing to develop their reading skills at least a decade after leaving school, explains Ogilvie."
+              )}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "The database also reveals the case of Juliana Schweickherdt, a 50-year-old spinster living in the small Black Forest community of Wildberg, who was reprimanded in 1752 by the local weavers weaving cloth and combing wool, counter to the guild ordinance"
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Individual lives have unfolded before their eyes. Stories like
-                that of the 24-year-olds Ana Regina and Magdalena Riethmüllerin,
-                who were chastised in 1707 for reading books in church instead
-                of listening to the sermon.
+                {renderText(
+                  " When Juliana continued taking jobs reserved for male guild members, she was summoned before the guild court and told to pay a fine equivalent to one third of a servant's annual wage."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    19
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    21
                   </span>
                 )}
               </span>
-            </p>
 
-            <p className="text-lg font-bold">E</p>
-            <p className="text-lg">
-              The data-gathering phase of the project has been completed and
-              now, according to Ogilvie, it is time 'to ask the big questions'.
-              One way to look at whether education causes economic growth is to
-              'hold wealth constant'. This involves following the lives of
-              different people with the same level of wealth over a period of
-              time.
+              {renderText(
+                " It was a small act of defiance by today's standards, but it reflects a time when laws in Germany and elsewhere regulated people's access to labour markets. "
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                If wealth is constant, it is possible to discover whether
-                education was, for example, linked to the cultivation of new
-                crops, or to the adoption of industrial innovations like sewing
-                machines.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    14
-                  </span>
+                {renderText(
+                  "The dominance of guilds not only prevented people from using their skills, but also held back even the simplest industrial innovation."
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  22
+                </span>
+              )}
             </p>
 
-            <p className="text-lg font-bold">F</p>
+            <br />
+
+            {/* ===================== E ===================== */}
             <p className="text-lg">
-              Ogilvie hopes to start finding answers to these questions over the
-              next few years. One thing is already clear, she says: the
-              relationship between education and economic growth is far from
-              straightforward. "German-speaking central Europe is an excellent
-              laboratory for testing theories of economic growth," she explains.
+              {renderText(
+                "The data-gathering phase of the project has been completed and now, according to Ogilvie, it is time 'to ask the big questions'. "
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Between 1600 and 1900, literacy rates and book ownership were
-                high and yet the region remained poor.
-                {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      25
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      26
-                    </span>
-                  </>
+                {renderText(
+                  "One way to look at whether education causes economic growth is to 'hold wealth constant'."
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  14
+                </span>
+              )}
+              {renderText(
+                " This involves following the lives of different people with the same level of wealth over a period of time. If wealth is constant, it is possible to discover whether education was, for example, linked to the cultivation of new crops, or to the adoption of industrial innovations like sewing machines. The team will also ask what aspect of education helped people engage more with productive and innovative activities. Was it, for instance, literacy, numeracy, book ownership, years of schooling? Was there a threshold level - a tipping point - that needed to be reached to affect economic performance?"
+              )}
             </p>
 
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg italic">
-              * guild: an association of artisans or merchants which oversees
-              the practice of their craft or trade in a particular area
+            <br />
+
+            {/* ===================== F ===================== */}
+            <p className="text-lg">
+              {renderText(
+                "Ogilvie hopes to start finding answers to these questions over the next few years. One thing is already clear, she says: the relationship between education and economic growth is far from straightforward. German-speaking central Europe is an excellent laboratory for testing theories of economic growth, she explains. Between 1600 and 1900, literacy rates and book ownership were high and yet the region remained poor."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " It was also the case that local guilds and merchant associations were extremely powerful and legislated against anything that undermined their monopolies."
+                )}
+              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  26
+                </span>
+              )}
+              {renderText(
+                " In villages throughout the region, guilds blocked labour migration and resisted changes that might reduce their influence. Early findings suggest that the potential benefits of education for the economy can be held back by other barriers, and this has implications for today. Huge amounts are spent improving education in developing countries, but this spending can fail to deliver economic growth if restrictions block people - especially women and the poor - from using their education in economically productive ways. If economic institutions are poorly set up, for instance, education can't lead to growth."
+              )}
             </p>
           </div>
 
@@ -374,13 +394,13 @@ const Reading4Part22022 = () => {
         {/* right div */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ================= Questions 14–18 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 14–18</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 14–18")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Reading Passage 2 has six sections, A-F. <br />
-            Which section contains the following information? <br />
-            Choose the correct letter, A-F, in boxes 14–18 on your answer sheet.{" "}
-            <br />
-            NB You may use any letter more than once.
+            {renderText(
+              "Reading Passage 2 has six sections, A-F. \nWhich section contains the following information? \nChoose the correct letter, A-F, in boxes 14–18 on your answer sheet. \nNB You may use any letter more than once."
+            )}
           </p>
 
           {[
@@ -407,15 +427,15 @@ const Reading4Part22022 = () => {
           ].map((q) => (
             <div key={q.num} className="flex flex-wrap items-center gap-3 mb-3">
               <span className="w-8 h-8 flex items-center justify-center rounded-full border font-bold">
-                {q.num}
+                {renderText(q.num.toString())}
               </span>
-              <span>{q.text}</span>
+              <span>{renderText(q.text)}</span>
               <select
                 className="border rounded px-2 py-1 w-20 ml-3"
                 value={userAnswers[q.num] || ""}
                 onChange={(e) => handleInputChange(q.num, e.target.value)}
               >
-                <option value="">Select</option>
+                <option value="">{renderText("Select")}</option>
                 {["A", "B", "C", "D", "E", "F"].map((letter) => (
                   <option key={letter} value={letter}>
                     {letter}
@@ -426,60 +446,113 @@ const Reading4Part22022 = () => {
           ))}
 
           {/* ================= Questions 19–22 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 19–22</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 19–22")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Complete the summary below. Choose ONE WORD ONLY from the passage
-            for each answer.
+            {renderText(
+              "Complete the summary below. Choose ONE WORD ONLY from the passage for each answer."
+            )}
           </p>
 
           <div className="border p-5 space-y-4">
             <h3 className="text-xl font-bold text-center mb-4">
-              Demographic reconstruction of two German communities
+              {renderText(
+                "Demographic reconstruction of two German communities"
+              )}
             </h3>
             <p className="text-lg">
-              The database that Ogilvie and her team has compiled sheds light on
-              the lives of a range of individuals, as well as those of their{" "}
+              {renderText(
+                "The database that Ogilvie and her team has compiled sheds light on the lives of a range of individuals, as well as those of their "
+              )}
+              <button
+                onClick={() => toggleButton(19)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[19]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                19
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-32 mx-1"
                 value={userAnswers[19] || ""}
                 onChange={(e) => handleInputChange(19, e.target.value)}
               />
-              , over a 300-year period. For example, Ana Regina and Magdalena
-              Riethmüllerin were reprimanded for reading while they should have
-              been paying attention to a{" "}
+              {renderText(
+                ", over a 300-year period. For example, Ana Regina and Magdalena Riethmüllerin were reprimanded for reading while they should have been paying attention to a "
+              )}
+              <button
+                onClick={() => toggleButton(20)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[20]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                20
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-32 mx-1"
                 value={userAnswers[20] || ""}
                 onChange={(e) => handleInputChange(20, e.target.value)}
               />
-              . There was also Juliana Schweickherdt, who came to the notice of
-              the weavers' guild in the year 1752 for breaking guild rules. As a
-              punishment, she was later given a{" "}
+              {renderText(
+                ". There was also Juliana Schweickherdt, who came to the notice of the weavers' guild in the year 1752 for breaking guild rules. As a punishment, she was later given a "
+              )}
+              <button
+                onClick={() => toggleButton(21)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[21]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                21
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-32 mx-1"
                 value={userAnswers[21] || ""}
                 onChange={(e) => handleInputChange(21, e.target.value)}
               />
-              . Cases like this illustrate how the guilds could prevent{" "}
+              {renderText(
+                ". Cases like this illustrate how the guilds could prevent "
+              )}
+              <button
+                onClick={() => toggleButton(22)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[22]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                22
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-32 mx-1"
                 value={userAnswers[22] || ""}
                 onChange={(e) => handleInputChange(22, e.target.value)}
               />{" "}
-              and stop skilled people from working.
+              {renderText("and stop skilled people from working.")}
             </p>
           </div>
 
           {/* ================= Questions 23–24 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 23–24</h2>
-          <p className="mb-4 font-semibold">Choose TWO letters, A–E.</p>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 23–24")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Which TWO of the following statements does the writer make about
-            literacy rates in Section B?
+            {renderText("Choose TWO letters, A–E.")}
+          </p>
+          <p className="mb-4 font-semibold">
+            {renderText(
+              "Which TWO of the following statements does the writer make about literacy rates in Section B?"
+            )}
           </p>
 
           <div className="p-5 mb-4">
@@ -525,7 +598,8 @@ const Reading4Part22022 = () => {
                     className="mt-1"
                   />
                   <div>
-                    <span className="font-semibold">{letter}.</span> {text}
+                    <span className="font-semibold">{renderText(letter)}.</span>{" "}
+                    {renderText(text)}
                   </div>
                 </label>
               );
@@ -533,12 +607,16 @@ const Reading4Part22022 = () => {
           </div>
 
           {/* ================= Questions 25–26 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 25–26</h2>
-          <p className="mb-4 font-semibold">Choose TWO letters, A–E.</p>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 25–26")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Which TWO of the following statements does the writer make in
-            Section F about guilds in German-speaking Central Europe between
-            1600 and 1900?
+            {renderText("Choose TWO letters, A–E.")}
+          </p>
+          <p className="mb-4 font-semibold">
+            {renderText(
+              "Which TWO of the following statements does the writer make in Section F about guilds in German-speaking Central Europe between 1600 and 1900?"
+            )}
           </p>
 
           <div className="p-5 mb-4">
@@ -584,7 +662,8 @@ const Reading4Part22022 = () => {
                     className="mt-1"
                   />
                   <div>
-                    <span className="font-semibold">{letter}.</span> {text}
+                    <span className="font-semibold">{renderText(letter)}.</span>{" "}
+                    {renderText(text)}
                   </div>
                 </label>
               );
@@ -599,23 +678,25 @@ const Reading4Part22022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    {renderText(`Your Score: ${score}/13`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (14–26)
+                    {renderText("All Answers (14–26)")}
                   </h3>
                   <ul className="space-y-3">
                     {[14, 15, 16, 17, 18, 19, 20, 21, 22, "23-24", "25-26"].map(
@@ -660,25 +741,27 @@ const Reading4Part22022 = () => {
                                   <ImCross className="text-white text-sm font-bold" />
                                 </div>
                               )}
-                              <p className="font-bold">Q{num}:</p>
+                              <p className="font-bold">
+                                {renderText(`Q${num}:`)}
+                              </p>
                             </div>
                             <p className="ml-8">
                               <span className="font-semibold">
-                                Your Answer:
+                                {renderText("Your Answer:")}
                               </span>{" "}
                               {noAnswer ? (
                                 <span className="italic">
-                                  No answer provided
+                                  {renderText("No answer provided")}
                                 </span>
                               ) : (
-                                userAnswerDisplay
+                                renderText(userAnswerDisplay)
                               )}
                             </p>
                             <p className="ml-8">
                               <span className="font-semibold text-green-600">
-                                Correct Answer:
+                                {renderText("Correct Answer:")}
                               </span>{" "}
-                              {correctAnswerDisplay}
+                              {renderText(correctAnswerDisplay)}
                             </p>
                           </li>
                         );

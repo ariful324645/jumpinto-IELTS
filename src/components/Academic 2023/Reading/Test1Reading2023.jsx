@@ -7,6 +7,10 @@ import Reading1Pagination2023 from "../Pagination 2023/Reading1Pagination2023";
 
 const Test1Reading2023 = () => {
   const [highlight, setHighlight] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [highlightedTexts, setHighlightedTexts] = useState([]);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const [activeButtons, setActiveButtons] = useState({});
   const [userAnswers, setUserAnswers] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +22,54 @@ const Test1Reading2023 = () => {
     inputs.forEach((input) => (input.value = ""));
     console.log("All answers cleared!");
     setIsOpen(false);
+  };
+  const handleTextSelect = () => {
+    const selection = window.getSelection();
+    if (selection && selection.toString()) {
+      const range = selection.getRangeAt(0).getBoundingClientRect();
+      setModalPosition({
+        top: range.bottom + window.scrollY,
+        left: range.left + window.scrollX,
+      });
+      setSelectedText(selection.toString());
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleHighlight = () => {
+    if (selectedText) {
+      setHighlightedTexts((prev) => [...prev, selectedText]);
+      setSelectedText("");
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleClearHighlight = () => {
+    setHighlightedTexts([]);
+    setSelectedText("");
+    setIsModalOpen(false);
+  };
+
+  const renderText = (chunk) => {
+    const text = typeof chunk === "string" ? chunk : chunk.text;
+    let parts = [text];
+    highlightedTexts.forEach((ht) => {
+      parts = parts.flatMap((part) =>
+        typeof part === "string"
+          ? part.split(ht).flatMap((p, i, arr) =>
+              i < arr.length - 1
+                ? [
+                    p,
+                    <span key={Math.random()} className="bg-yellow-200 ">
+                      {ht}
+                    </span>,
+                  ]
+                : [p]
+            )
+          : [part]
+      );
+    });
+    return parts;
   };
 
   const questions = [
@@ -93,7 +145,7 @@ const Test1Reading2023 = () => {
     }));
   };
   return (
-    <div className="px-3">
+    <div onMouseUp={handleTextSelect} className="px-3">
       {/* Main Layout */}
       <div className="flex gap-6 h-[1000px]">
         {/* LEFT SIDE (dynamic texts) */}
@@ -112,150 +164,208 @@ const Test1Reading2023 = () => {
           </div>
 
           <div className="">
-            <h1 className="text-lg">
-              You should spend about 20 minutes on{" "}
-              <span className="text-lg font-bold">Questions 1-13</span>, which
-              are based on Reading Passage 1 below.
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("Urban farming")}
             </h1>
-          </div>
-          <h1 className="text-2xl font-bold text-center">Urban farming</h1>
-          <h3 className="text-lg font-bold italic text-center">
-            In Paris, urban farmers are trying a soil-free approach to
-            agriculture that uses less space and fewer resources. Could it help
-            cities face the threats to our food supplies?
-          </h3>
-          <p className="text-lg">
-            Pascal Hardy, an engineer and sustainable development consultant,
-            began experimenting with vertical farming and aeroponic growing
-            towers - as the soil-free plastic tubes are known - on his Paris
-            apartment block roof five years ago.The urban rooftop space above
-            the exhibition hall is somewhat bigger: 14,000 square metres and
-            almost exactly the size of a couple of football pitches.Already, the
-            team of young urban farmers who tend it have picked, in one day,
-            3,000 lettuces and 150 punnets of strawberries
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                When the remaining two thirds of the vast open area are in
-                production, 20 staff will harvest up to 1,000 kg of perhaps 35
-                different varieties of fruit and vegetables, every day.{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  2
-                </span>
-              </span>
-            )}
-            "We're not ever, obviously, going to feed the whole city this way,"
-            cautions Hardy."In the urban environment you're working with very
-            significant practical constraints, clearly, on what you can do and
-            where.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                But if enough unused space can be developed like this, there's
-                no reason why you shouldn't eventually target maybe between 5%
-                and 10% of consumption."{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  3
-                </span>
-              </span>
-            )}
-          </p>
-          <p className="text-lg">
-            Perhaps most significantly, however, this is a real-life showcase
-            for the work of Hardy's flourishing urban agriculture consultancy,
-            Agripolis, which is currently fielding enquiries from around the
-            world to design, build and equip a new breed of soil-free inner-city
-            farm."The method's advantages are many," he says.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                "First, I don't much like the fact that most of the fruit and
-                vegetables we eat have been treated with something like 17
-                different pesticides, or that the intensive farming techniques
-                that produced them are such huge generators of greenhouse gases.
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  4
-                </span>
-                I don't much like the fact, either, that they've travelled an
-                average of 2,000 refrigerated kilometres to my plate, that their
-                quality is so poor, because the varieties are selected for their
-                capacity to withstand such substantial journeys, or that 80% of
-                the price I pay goes to wholesalers and transport companies, not
-                the producers."{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  5,6
-                </span>
-              </span>
-            )}
-          </p>
-          <p className="text-lg">
-            Produce grown using this soil-free method, on the other hand - which
-            relies solely on a small quantity of water, enriched with organic
-            nutrients, pumped around a closed circuit of pipes, towers and trays
-            - is "produced up here, and sold locally, just down there.It barely
-            travels at all," Hardy says.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                "You can select crop varieties for their flavour, not their
-                resistance to the transport and storage chain, and you can pick
-                them when they're really at their best, and not before."{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  7
-                </span>
-              </span>
-            )}
-            No soil is exhausted, and the water that gently showers the plants'
-            roots every 12 minutes is recycled, so the method uses 90% less
-            water than a classic intensive farm for the same yield.
-          </p>
-          <p className="text-lg">
-            Urban farming is not, of course, a new phenomenon.Inner-city
-            agriculture is booming from Shanghai to Detroit and Tokyo to
-            Bangkok.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Strawberries are being grown in disused shipping containers,
-                mushrooms in underground carparks.{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  8
-                </span>
-              </span>
-            )}
-            Aeroponic farming, he says, is "virtuous".The equipment weighs
-            little, can be installed on almost any flat surface and is cheap to
-            buy: roughly €100 to €150 per square metre.
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                It is cheap to run, too, consuming a tiny fraction of the
-                electricity used by some techniques.{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  10
-                </span>
-              </span>
-            )}
-          </p>
 
-          <p className="text-lg">
-            {highlight && (
-              <span className="ml-2 bg-yellow-100 ">
-                Produce grown this way typically sells at prices that, while
-                generally higher than those of classic intensive agriculture,
-                are lower than soil-based organic growers.
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  11
-                </span>
-                There are limits to what farmers can grow this way, of course,
-                and much of the produce is suited to the summer months.{" "}
-                <span className="inline-flex items-center justify-center w-8 h-6  bg-yellow-700 rounded-sm  text-white font-semibold">
-                  12
-                </span>
+            <p className="text-lg my-5 text-center font-semibold">
+              {renderText(
+                "In Paris, urban farmers are trying a soil-free approach to agriculture that uses less space and fewer resources. Could it help cities face the threats to our food supplies?"
+              )}
+            </p>
+
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "On top of a striking new exhibition hall in southern Paris, the world's largest urban rooftop farm has started to bear fruit."
+              )}
+              {renderText(
+                " Strawberries that are small, intensely flavoured and resplendently red sprout abundantly from large plastic tubes."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " From identical vertical tubes nearby burst row upon row of lettuces; near those are aromatic herbs, such as basil, sage and peppermint"
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("1")}
+                  </span>
+                )}
               </span>
-            )}
-            "Root vegetables we cannot do, at least not yet," he says."Radishes
-            are OK, but carrots, potatoes, that kind of thing - the roots are
-            simply too long.Fruit trees are obviously not an option.And beans
-            tend to take up a lot of space for not much return."Nevertheless,
-            urban farming of the kind being practised in Paris is one part of a
-            bigger and fast-changing picture that is bringing food production
-            closer to our lives.
-          </p>
+              {renderText(
+                "Peer inside and you see the tubes are completely hollow, the roots of dozens of strawberry plants dangling down inside them.. Opposite, in narrow, horizontal trays packed not with soil but with coconut fibre, grow cherry tomatoes, shiny aubergines and brightly coloured chards."
+              )}
+            </p>
+
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Pascal Hardy, an engineer and sustainable development consultant, began experimenting with vertical farming and aeroponic growing towers on his Paris apartment block roof five years ago."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " The urban rooftop space above the exhibition hall is much bigger: 14,000 square metres, almost exactly the size of a couple of football pitches."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("2")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Already, the team of young urban farmers who tend it have picked 3,000 lettuces and 150 punnets of strawberries in a single day."
+              )}
+            </p>
+
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "When the remaining two thirds of the vast open area are in production, 20 staff will harvest up to 1,000 kilograms of around 35 different varieties of fruit and vegetables every day."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Hardy says this method will never feed the whole city, but believes it could eventually supply between 5% and 10% of local consumption if enough unused urban space is developed."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("3")}
+                  </span>
+                )}
+              </span>
+            </p>
+
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Perhaps most significantly, the project showcases the work of Hardy’s urban agriculture consultancy, Agripolis, which now receives enquiries from across the world."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Hardy criticises conventional agriculture for its heavy pesticide use, high greenhouse gas emissions and long-distance transport of produce."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("4")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " He also objects to the poor quality of supermarket produce and the fact that most of the price consumers pay goes to wholesalers and transport companies rather than farmers."
+              )}
+            </p>
+
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Produce grown using soil-free methods relies on small quantities of water enriched with organic nutrients, circulated in a closed system."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Because the crops are produced locally, they barely travel at all, allowing farmers to select varieties for flavour rather than durability."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("7")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " The method uses 90% less water than conventional intensive farming and does not exhaust soil."
+              )}
+            </p>
+
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Urban farming is not a new phenomenon and is expanding rapidly in cities across the globe, from Shanghai to Detroit."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Aeroponic farming equipment is lightweight, affordable, easy to install and cheap to run, using far less electricity than many alternatives."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("10")}
+                  </span>
+                )}
+              </span>
+            </p>
+
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">{renderText("G")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Although produce grown this way often costs more than conventional crops, it is usually cheaper than soil-based organic food."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " There are limits to what can be grown, such as root vegetables and fruit trees, but urban farming is becoming an important part of a changing food system."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("12")}
+                  </span>
+                )}
+              </span>
+            </p>
+          </div>
+
+          {isModalOpen && (
+            <div
+              style={{
+                top: modalPosition.top,
+                left: modalPosition.left,
+              }}
+              className="fixed bg-white p-3 rounded-lg shadow-lg flex gap-3 z-[9999]"
+            >
+              <button
+                onClick={handleHighlight}
+                className="bg-yellow-400 text-black px-3 py-1 rounded-md"
+              >
+                Highlight
+              </button>
+              <button
+                onClick={handleClearHighlight}
+                className="bg-gray-300 px-3 py-1 rounded-md"
+              >
+                Clear
+              </button>
+            </div>
+          )}
         </div>
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
@@ -263,7 +373,6 @@ const Test1Reading2023 = () => {
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">
               {/* clear icon */}
-
               <div className="relative group">
                 <div className="flex justify-between items-center">
                   <span
@@ -274,63 +383,66 @@ const Test1Reading2023 = () => {
                   </span>
                 </div>
                 {/* Tooltip */}
-
                 <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  Clear answer
+                  {renderText("Clear answer")}
                 </span>
-
-                {isOpen && (
-                  <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                    <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                      <h2 className="text-lg font-semibold mb-4">
-                        Are you sure you want to clear all answers?
-                      </h2>
-                      <div className="flex justify-center gap-4">
-                        <button
-                          onClick={() => setIsOpen(false)}
-                          className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                        >
-                          No, keep them
-                        </button>
-                        <button
-                          onClick={handleClear}
-                          className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                        >
-                          Yes, clear them
-                        </button>
-                      </div>
-                    </div>
+                {isModalOpen && (
+                  <div
+                    style={{
+                      top: modalPosition.top + 5,
+                      left: modalPosition.left,
+                    }}
+                    className="absolute bg-white p-3 rounded-lg shadow-lg flex gap-3 z-50"
+                  >
+                    <button
+                      onClick={handleHighlight}
+                      className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
+                    >
+                      {renderText("Highlight")}
+                    </button>
+                    <button
+                      onClick={handleClearHighlight}
+                      className="bg-gray-300 px-3 py-1 rounded-md hover:bg-gray-400 transition"
+                    >
+                      {renderText("Clear Highlight")}
+                    </button>
                   </div>
                 )}
               </div>
             </div>
 
-            <h2 className="text-lg font-bold mb-3">Questions 1-3</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 1-3")}
+            </h2>
 
             <h3 className="text-lg  mb-5">
-              Complete the notes below. <br /> <br />
-              Choose{" "}
+              {renderText("Complete the notes below.")}
+              <br /> <br />
+              {renderText("Choose ")}
               <span className="font-bold mr-2">
-                NO MORE THAN TWO WORDS AND/OR A NUMBER
+                {renderText("NO MORE THAN TWO WORDS AND/OR A NUMBER")}
               </span>
-              from the passage for each answer.
+              {renderText(" from the passage for each answer.")}
             </h3>
 
             <h1 className="text-lg font-semibold">
-              Write your answers in boxes 1-3 on your answer sheet.
+              {renderText(
+                "Write your answers in boxes 1-3 on your answer sheet."
+              )}
             </h1>
             <br />
           </div>
           <div className="overflow-x-auto border p-5  bg-white rounded-lg">
             <h1 className="text-lg font-bold text-center mb-4">
-              Urban farming in Paris
+              {renderText("Urban farming in Paris")}
             </h1>
 
             {/* ---------- Section 1 ---------- */}
-
             <ul className="list-disc list-inside space-y-3">
               <li className="text-lg">
-                <span>Vertical tubes are used to grow strawberries,</span>
+                <span>
+                  {renderText("Vertical tubes are used to grow strawberries,")}
+                </span>
                 <button
                   onClick={() => toggleButton(1)}
                   className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -347,17 +459,18 @@ const Test1Reading2023 = () => {
                   onChange={(e) =>
                     setUserAnswers((prev) => ({
                       ...prev,
-                      [1]: e.target.value, // change 1 to match the question number
+                      [1]: e.target.value,
                     }))
                   }
                 />
-
-                <span>and herbs.</span>
+                <span>{renderText("and herbs.")}</span>
               </li>
 
               <li className="text-lg">
                 <span>
-                  There will eventually be a daily harvest of as much as
+                  {renderText(
+                    "There will eventually be a daily harvest of as much as"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(2)}
@@ -375,16 +488,18 @@ const Test1Reading2023 = () => {
                   onChange={(e) =>
                     setUserAnswers((prev) => ({
                       ...prev,
-                      [2]: e.target.value, // change 1 to match the question number
+                      [2]: e.target.value,
                     }))
                   }
                 />
-                <span>in weight of fruit and vegetables.</span>
+                <span>{renderText("in weight of fruit and vegetables.")}</span>
               </li>
+
               <li className="text-lg">
                 <span>
-                  It may be possible that the farm's produce will account for as
-                  much as 10% of the city's
+                  {renderText(
+                    "It may be possible that the farm's produce will account for as much as 10% of the city's"
+                  )}
                 </span>
                 <button
                   onClick={() => toggleButton(3)}
@@ -402,45 +517,52 @@ const Test1Reading2023 = () => {
                   onChange={(e) =>
                     setUserAnswers((prev) => ({
                       ...prev,
-                      [3]: e.target.value, // change 1 to match the question number
+                      [3]: e.target.value,
                     }))
                   }
                 />
-                <span>overall.</span>
+                <span>{renderText("overall.")}</span>
               </li>
             </ul>
           </div>
           <br />
           {/* TABLE SECTION */}
           <div className="mt-5 w-full h-full">
-            <h2 className="text-lg font-bold mb-3">Questions 4-7</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 4-7")}
+            </h2>
             <h3 className="text-lg font-semibold mb-5">
-              Complete the notes below. <br /> <br /> Write{" "}
-              <span className="font-bold">ONLY ONE WORD</span> for each answer.
+              {renderText("Complete the notes below.")}
+              <br /> <br /> {renderText("Write ")}
+              <span className="font-bold">
+                {renderText("ONLY ONE WORD")}
+              </span>{" "}
+              {renderText("for each answer.")}
             </h3>
 
             <table className="border-collapse border border-gray-400 w-full text-center text-sm mx-auto">
               <thead>
                 <tr>
                   <th colSpan="4" className="border  text-lg font-bold p-2">
-                    Intensive farming versus aeroponic urban farming
+                    {renderText(
+                      "Intensive farming versus aeroponic urban farming"
+                    )}
                   </th>
                 </tr>
                 <tr>
                   <th className="border p-2"></th>
-                  <th className="border p-2">Growth</th>
-                  <th className="border p-2">Selection</th>
-                  <th className="border p-2">Sale</th>
+                  <th className="border p-2">{renderText("Growth")}</th>
+                  <th className="border p-2">{renderText("Selection")}</th>
+                  <th className="border p-2">{renderText("Sale")}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border text-lg p-2">Intensive farming</td>
-                  <td
-                    className="border
-                   text-lg p-2"
-                  >
-                    <span>wide range of</span>
+                  <td className="border text-lg p-2">
+                    {renderText("Intensive farming")}
+                  </td>
+                  <td className="border text-lg p-2">
+                    <span>{renderText("wide range of")}</span>
                     <button
                       onClick={() => toggleButton(4)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -457,16 +579,17 @@ const Test1Reading2023 = () => {
                       onChange={(e) =>
                         setUserAnswers((prev) => ({
                           ...prev,
-                          [4]: e.target.value, // change 1 to match the question number
+                          [4]: e.target.value,
                         }))
                       }
                     />
-                    <span>used</span>
+                    <span>{renderText("used")}</span>
                   </td>
                   <td className="border text-lg  p-2">
                     <span>
-                      varieties of fruit and vegetables chosen that can survive
-                      long
+                      {renderText(
+                        "varieties of fruit and vegetables chosen that can survive long"
+                      )}
                     </span>
                     <button
                       onClick={() => toggleButton(5)}
@@ -484,13 +607,12 @@ const Test1Reading2023 = () => {
                       onChange={(e) =>
                         setUserAnswers((prev) => ({
                           ...prev,
-                          [5]: e.target.value, // change 1 to match the question number
+                          [5]: e.target.value,
                         }))
                       }
                     />
-                    <span>used</span>
+                    <span>{renderText("used")}</span>
                   </td>
-
                   <td className="border text-lg p-2">
                     <span></span>
                     <button
@@ -509,23 +631,25 @@ const Test1Reading2023 = () => {
                       onChange={(e) =>
                         setUserAnswers((prev) => ({
                           ...prev,
-                          [6]: e.target.value, // change 1 to match the question number
+                          [6]: e.target.value,
                         }))
                       }
                     />
-                    <span>receive very little of overall income.</span>
+                    <span>
+                      {renderText("receive very little of overall income.")}
+                    </span>
                   </td>
                 </tr>
 
                 <tr>
                   <td className="border text-lg p-2">
-                    Aeroponic urban farming
+                    {renderText("Aeroponic urban farming")}
                   </td>
                   <td className="border  text-lg p-2">
-                    nutrients added to water, which is recycled
+                    {renderText("nutrients added to water, which is recycled")}
                   </td>
                   <td className="border  text-lg p-2">
-                    <span>produce chosen because of its</span>
+                    <span>{renderText("produce chosen because of its")}</span>
                     <button
                       onClick={() => toggleButton(7)}
                       className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
@@ -542,38 +666,40 @@ const Test1Reading2023 = () => {
                       onChange={(e) =>
                         setUserAnswers((prev) => ({
                           ...prev,
-                          [7]: e.target.value, // change 1 to match the question number
+                          [7]: e.target.value,
                         }))
                       }
                     />
-                    <span>.</span>
+                    <span>{renderText(".")}</span>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          {/* 2nd step     */}
-          <h2 className="text-lg font-bold mb-3">Questions 8-13 </h2> <br />
+          {/* 2nd step */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 8-13")}
+          </h2>{" "}
+          <br />
           <h3 className="text-lg font-semibold mb-5">
-            Do the following statements agree with the information given in
-            Reading Passage 1? <br /> <br />
-            In boxes 8-13 on your answer sheet, choose
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}
+            <br /> <br />
+            {renderText("In boxes 8-13 on your answer sheet, choose")}
           </h3>
           <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">TRUE</span> if the statement
-            agrees with the information
+            <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
+            {renderText("if the statement agrees with the information")}
           </h3>
           <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">FALSE</span>if the statement
-            contradicts the information
+            <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
+            {renderText("if the statement contradicts the information")}
           </h3>
           <h3 className="flex gap-5 text-lg">
-            {" "}
-            <span className="text-lg font-bold">NOT GIVEN</span> if there is no
-            information on this
-          </h3>{" "}
+            <span className="text-lg font-bold">{renderText("NOT GIVEN")}</span>{" "}
+            {renderText("if there is no information on this")}
+          </h3>
           <br /> <br />
           <div className="space-y-6 leading-relaxed p-4">
             {questions.map((q, qIndex) => (
@@ -582,19 +708,19 @@ const Test1Reading2023 = () => {
                   <div
                     onClick={() => handleNumberClick(qIndex)}
                     className={`
-                              w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
-                              border-2
-                              ${
-                                activeNumbers[qIndex]
-                                  ? "bg-yellow-400 border-yellow-500"
-                                  : "bg-white border-gray-300 hover:border-yellow-400"
-                              }
-                              cursor-pointer
-                            `}
+              w-10 h-10 flex items-center justify-center text-lg font-bold rounded-lg transition-all duration-300
+              border-2
+              ${
+                activeNumbers[qIndex]
+                  ? "bg-yellow-400 border-yellow-500"
+                  : "bg-white border-gray-300 hover:border-yellow-400"
+              }
+              cursor-pointer
+            `}
                   >
                     {qIndex + 8}
                   </div>
-                  <h1 className="text-lg">{q}</h1>
+                  <h1 className="text-lg">{renderText(q)}</h1>
                 </div>
 
                 <ul className="list-none ml-12 flex flex-col gap-3">
@@ -618,7 +744,7 @@ const Test1Reading2023 = () => {
                             : "text-black"
                         }`}
                       >
-                        {option}
+                        {renderText(option)}
                       </span>
                     </li>
                   ))}
@@ -629,28 +755,29 @@ const Test1Reading2023 = () => {
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
-                {" "}
                 <button
                   onClick={handleSubmit}
                   className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/10
+                    {renderText("Your Score:")} {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–13)
+                    {renderText("All Answers (1–13)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -679,7 +806,7 @@ const Test1Reading2023 = () => {
                             {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
-                              </span> // GREEN CIRCLE
+                              </span>
                             )}
                             {(isWrong || noAnswer) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
@@ -689,27 +816,31 @@ const Test1Reading2023 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           {/* User Answer */}
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
                               <span className=" italic">
-                                No answer provided
+                                {renderText("No answer provided")}
                               </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

@@ -214,12 +214,14 @@ const Reading1Part32022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              To catch a king
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("To catch a king")}
             </h1>
-            <p className="text-lg italic text-center mb-6">
-              Anna Keay reviews Charles Spencer's book about the hunt for King
-              Charles II during the English Civil War of the seventeenth century
+
+            <p className="text-sm italic text-center mb-6">
+              {renderText(
+                "Anna Keay reviews Charles Spencer's book about the hunt for King Charles II during the English Civil War of the seventeenth century"
+              )}
             </p>
 
             <p className="text-lg">
@@ -228,77 +230,120 @@ const Reading1Part32022 = () => {
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Charles Spencer's latest book, To Catch a King, tells us the
-                story of the hunt for King Charles II in the six weeks after his
-                resounding defeat at the Battle of Worcester in September 1651.
+                {" "}
+                {renderText(
+                  "Charles Spencer's latest book, To Catch a King, tells us the story of the hunt for King Charles II in the six weeks after his resounding defeat at the Battle of Worcester in September 1651."
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     36
                   </span>
                 )}
               </span>
-              And what a story it is.
+              {renderText(" And what a story it is.")}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                After his father was executed by the Parliamentarians in 1649,
-                the young Charles II sacrificed one of the very principles his
-                father had died for and did a deal with the Scots, thereby
-                accepting Presbyterianism* as the national religion in return
-                for being crowned King of Scots.
+                {" "}
+                {renderText(
+                  " After his father was executed by the Parliamentarians in 1649, the young Charles II sacrificed one of the very principles his father had died for and did a deal with the Scots, thereby accepting Presbyterianism as the national religion in return for being crowned King of Scots."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      27
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      28
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-10 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    27,28
+                  </span>
                 )}
               </span>
+              {renderText(
+                " His arrival in Edinburgh prompted the English Parliamentary army to invade Scotland in a pre-emptive strike."
+              )}
+              {renderText(
+                " This was followed by a Scottish invasion of England."
+              )}
+              {renderText(
+                " The two sides finally faced one another at Worcester in the west of England in 1651."
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " After being comprehensively defeated on the meadows outside the city by the Parliamentarian army, the 21-year-old king found himself the subject of a national manhunt, with a huge sum offered for his capture."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-10 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    29,30
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {" "}
+                {renderText(
+                  " Over the following six weeks he managed, through a series of heart-poundingly close escapes, to evade the Parliamentarians before seeking refuge in France."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    31
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " For the next nine years, the penniless and defeated Charles wandered around Europe with only a small group of loyal supporters."
+              )}
             </p>
 
             <br />
 
             <p className="text-lg">
-              Years later, after his restoration as king, the 50-year-old
-              Charles II requested a meeting with the writer and diarist Samuel
-              Pepys.
+              {renderText(
+                "Years later, after his restoration as king, the 50-year-old Charles II requested a meeting with the writer and diarist Samuel Pepys."
+              )}
+              {renderText(
+                " His intention when asking Pepys to commit his story to paper was to ensure that this most extraordinary episode was never forgotten."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                His intention when asking Pepys to commit his story to paper was
-                to ensure that this most extraordinary episode was never
-                forgotten.
+                {" "}
+                {renderText(
+                  " Over two three-hour sittings, the king related to him in great detail his personal recollections of the six weeks he had spent as a fugitive."
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     33
                   </span>
                 )}
               </span>
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Over two three-hour sittings, the king related to him in great
-                detail his personal recollections of the six weeks he had spent
-                as a fugitive.
+                {" "}
+                {renderText(
+                  ' As the king and secretary settled down (a scene that is surely a gift for a future scriptwriter), Charles commenced his story: "After the battle was so absolutely lost as to be beyond hope of recovery, I began to think of the best way of saving myself."'
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     34
                   </span>
                 )}
               </span>
-              As the king and secretary settled down (a scene that is surely a
-              gift for a future scriptwriter), Charles commenced his story:
-              "After the battle was so absolutely lost as to be beyond hope of
-              recovery, I began to think of the best way of saving myself."
             </p>
 
             <br />
@@ -309,140 +354,124 @@ const Reading1Part32022 = () => {
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                One of the joys of Spencer's book, a result not least of its use
-                of Charles II's own narrative as well as those of his
-                supporters, is just how close the reader gets to the action.
+                {renderText(
+                  "One of the joys of Spencer's book, a result not least of its use of Charles II's own narrative as well as those of his supporters, is just how close the reader gets to the action."
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     35
                   </span>
                 )}
               </span>
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The day-by-day retelling of the fugitives' doings provides
-                delicious details: the cutting of the king's long hair with
-                agricultural shears, the use of walnut leaves to dye his pale
-                skin, and the day Charles spent lying on a branch of the great
-                oak tree in Boscobel Wood as the Parliamentary soldiers scoured
-                the forest floor below.
+                {" "}
+                {renderText(
+                  " The day-by-day retelling of the fugitives' doings provides delicious details: the cutting of the king's long hair with agricultural shears, the use of walnut leaves to dye his pale skin, and the day Charles spent lying on a branch of the great oak tree in Boscobel Wood as the Parliamentary soldiers scoured the forest floor below."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     37
                   </span>
                 )}
               </span>
-              Spencer draws out both the humour - such as the preposterous
-              refusal of Charles's friend Henry Wilmot to adopt disguise on the
-              grounds that it was beneath his dignity - and the emotional
-              tension when the secret of the king's presence was cautiously
-              revealed to his supporters.
+              {renderText(
+                " Spencer draws out both the humour and the emotional tension when the secret of the king's presence was cautiously revealed to his supporters."
+              )}
             </p>
+
             <br />
 
             <p className="text-lg">
-              Charles's adventures after losing the Battle of Worcester hide the
-              uncomfortable truth that whilst almost everyone in England had
-              been appalled by the execution of his father, they had not
-              welcomed the arrival of his son with the Scots army, but had
-              instead firmly bolted their doors. This was partly because he rode
-              at the head of what looked like a foreign invasion force and
-              partly because, after almost a decade of civil war, people were
-              desperate to avoid it beginning again. This makes it all the more
-              interesting that Charles II himself loved the story so much ever
-              after. As well as retelling it to anyone who would listen, causing
-              eyerolling among courtiers,
+              {renderText(
+                "Charles's adventures after losing the Battle of Worcester hide the uncomfortable truth that whilst almost everyone in England had been appalled by the execution of his father, they had not welcomed the arrival of his son with the Scots army."
+              )}
+              {renderText(
+                " This was partly because he rode at the head of what looked like a foreign invasion force and partly because, after almost a decade of civil war, people were desperate to avoid it beginning again."
+              )}
+              {renderText(
+                " This makes it all the more interesting that Charles II himself loved the story so much ever after."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                he set in train a series of initiatives to memorialise it.
+                {" "}
+                {renderText(
+                  " As well as retelling it to anyone who would listen, he set in train a series of initiatives to memorialise it."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     38
                   </span>
                 )}
               </span>
-              There was to be a new order of chivalry, the Knights of the Royal
-              Oak. A series of enormous oil paintings depicting the episode were
-              produced, including a two-metre-wide canvas of Boscobel Wood and a
-              set of six similarly enormous paintings of the king on the run. In
-              1660, Charles II commissioned the artist John Michael Wright to
-              paint a flying squadron of cherubs* carrying an oak tree to the
-              heavens on the ceiling of his bedchamber. It is hard to imagine
-              many other kings marking the lowest point in their life so
-              enthusiastically, or indeed pulling off such an escape in the
-              first place.
+              {renderText(
+                " It is hard to imagine many other kings marking the lowest point in their life so enthusiastically, or indeed pulling off such an escape in the first place."
+              )}
             </p>
 
             <br />
 
             <p className="text-lg">
-              Charles Spencer is the perfect person to pass the story on to a
-              new generation. His pacey, readable prose steers deftly clear of
-              modern idioms and elegantly brings to life the details of the
-              great tale. He has even-handed sympathy for both the fugitive king
-              and the fierce republican regime that hunted him, and
+              {renderText(
+                "Charles Spencer is the perfect person to pass the story on to a new generation."
+              )}
+              {renderText(
+                " His pacey, readable prose steers deftly clear of modern idioms and elegantly brings to life the details of the great tale."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                he succeeds in his desire to explore far more of the background
-                of the story than previous books on the subject have done.
+                {" "}
+                {renderText(
+                  " He succeeds in his desire to explore far more of the background of the story than previous books on the subject have done."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     39
                   </span>
                 )}
               </span>
-              Indeed, the opening third of the book is about how Charles II
-              found himself at Worcester in the first place, which for some will
-              be reason alone to read To Catch a King.
             </p>
 
             <br />
 
             <p className="text-lg">
-              The tantalising question left, in the end, is that of what it all
-              meant.
+              {renderText(
+                "The tantalising question left, in the end, is that of what it all meant."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Would Charles II have been a different king had these six weeks
-                never happened?
+                {" "}
+                {renderText(
+                  " Would Charles II have been a different king had these six weeks never happened?"
+                )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     40
                   </span>
                 )}
               </span>
-              The days and nights spent in hiding must have affected him in some
-              way. Did the need to assume disguises, to survive on wit and charm
-              alone, to use trickery and subterfuge to escape from tight corners
-              help form him? This is the one area where the book doesn't quite
-              hit the mark. Instead its depiction of Charles II in his final
-              years as an ineffective, pleasure-loving monarch doesn't do
-              justice to the man (neither is it accurate), or to the complexity
-              of his character. But this one niggle aside, To Catch a King is an
-              excellent read, and those who come to it knowing little of the
-              famous tale will find they have a treat in store.
-            </p>
 
-            <br />
-
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg italic">
-              * Presbyterianism: part of the reformed Protestant religion
-            </p>
-            <p className="text-lg italic">
-              * cherub: an image of angelic children used in paintings
+              {renderText(
+                " This is the one area where the book doesn't quite hit the mark."
+              )}
+              {renderText(
+                " But this one niggle aside, To Catch a King is an excellent read, and those who come to it knowing little of the famous tale will find they have a treat in store."
+              )}
             </p>
           </div>
 
@@ -471,13 +500,20 @@ const Reading1Part32022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–31 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–31</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–31")}
+          </h2>
 
           <p className="mb-4">
-            Complete the summary using the list of words or phrases below.
+            {renderText(
+              "Complete the summary using the list of words or phrases below."
+            )}
             <br />
-            Choose the correct letter, A–J, in boxes 27–31 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–J, in boxes 27–31 on your answer sheet."
+            )}
           </p>
+
           <div className="space-y-1 border mb-4 p-4 max-w-[220px] mx-auto text-lg">
             {[
               "A. military innovation",
@@ -491,93 +527,204 @@ const Reading1Part32022 = () => {
               "I. popular solution",
               "J. religious conviction",
             ].map((option) => (
-              <p key={option}>{option}</p>
+              <p key={option}>{renderText(option)}</p>
             ))}
           </div>
 
-          <div className="border max-w-6xl  p-5 space-y-4">
-            <h3 className="text-xl font-bold text-center mb-4">
-              The story behind the hunt for Charles II
-            </h3>
-            <ul className="list-decimal list-inside space-y-4 text-lg">
-              {[
-                "Charles II's father was executed by the Parliamentarian forces in 1649 .Charles II then formed a",
-                "with the Scots, and in order to become King of Scots, he abandoned an important",
-                "that was held by his father and had contributed to his father's death. The opposing sides then met outside Worcester in 1651. The battle led to a",
-                "for the Parliamentarians and Charles had to flee for his life. A",
-                "was offered for Charles's capture, but after six weeks spent in hiding, he eventually managed to reach the",
-              ].map((text, index) => {
-                const qNum = 27 + index;
-                const options = [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H",
-                  "I",
-                  "J",
-                ];
+          <div className="space-y-4 text-lg leading-relaxed border p-4">
+            <h2 className="text-xl font-bold text-center">
+              {renderText("The story behind the hunt for Charles II")}
+            </h2>
 
-                return (
-                  <li key={qNum} className="flex gap-2">
-                    <span>{text}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="w-8 h-8 flex items-center justify-center rounded-full border font-bold">
-                        {qNum}
-                      </span>
-                      <select
-                        className="border rounded px-2 py-1 w-20"
-                        onChange={(e) =>
-                          handleInputChange(qNum, e.target.value)
-                        }
-                        defaultValue=""
-                      >
-                        <option value="" disabled></option>
-                        {options.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "Charles II's father was executed by the Parliamentarian forces in 1649. Charles II then formed a"
+                )}
+              </span>
+              <button
+                onClick={() => toggleButton(27)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[27]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                27
+              </button>
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(27, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
+                  (opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  )
+                )}
+              </select>
 
-            <p className="mt-4">
-              Word/Phrase list: A.military innovation B.large reward
-              C.widespread conspiracy D.relative safety E.new government
-              F.decisive victory G.political debate H.strategic alliance
-              I.popular solution J.religious conviction
+              <span>
+                {renderText(
+                  "with the Scots, and in order to become King of Scots, he abandoned an important"
+                )}
+              </span>
+              <button
+                onClick={() => toggleButton(28)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[28]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                28
+              </button>
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(28, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
+                  (opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <span>
+                {renderText(
+                  "that was held by his father and had contributed to his father's death."
+                )}
+              </span>
+            </p>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "The opposing sides then met outside Worcester in 1651. The battle led to a"
+                )}
+              </span>
+              <button
+                onClick={() => toggleButton(29)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[29]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                29
+              </button>
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(29, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
+                  (opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <span>
+                {renderText(
+                  "for the Parliamentarians and Charles had to flee for his life. A"
+                )}
+              </span>
+              <button
+                onClick={() => toggleButton(30)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[30]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                30
+              </button>
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(30, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
+                  (opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <span>
+                {renderText(
+                  "was offered for Charles's capture, but after six weeks spent in hiding, he eventually managed to reach the"
+                )}
+              </span>
+              <button
+                onClick={() => toggleButton(31)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[31]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                31
+              </button>
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(31, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"].map(
+                  (opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <span>{renderText("of continental Europe.")}</span>
             </p>
           </div>
 
           {/* ================= Questions 32–35 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 32–35</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 32–35")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the claims of the writer in
-            Reading Passage 3?
+            {renderText(
+              "Do the following statements agree with the claims of the writer in Reading Passage 3?"
+            )}
             <br />
-            In boxes 32–35 on your answer sheet, choose
+            {renderText("In boxes 32–35 on your answer sheet, choose")}
           </p>
 
           <div className="mb-4 space-y-1">
             <p>
-              <strong>YES</strong> if the statement agrees with the claims of
-              the writer
+              {renderText("YES")}{" "}
+              {renderText(
+                "if the statement agrees with the claims of the writer"
+              )}
             </p>
             <p>
-              <strong>NO</strong> if the statement contradicts the claims of the
-              writer
+              {renderText("NO")}{" "}
+              {renderText(
+                "if the statement contradicts the claims of the writer"
+              )}
             </p>
             <p>
-              <strong>NOT GIVEN</strong> if it is impossible to say what the
-              writer thinks about this
+              {renderText("NOT GIVEN")}{" "}
+              {renderText(
+                "if it is impossible to say what the writer thinks about this"
+              )}
             </p>
           </div>
 
@@ -601,9 +748,9 @@ const Reading1Part32022 = () => {
                   : "border-gray-300"
               }`}
                     >
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </div>
-                    <p className="text-lg">{q}</p>
+                    <p className="text-lg">{renderText(q)}</p>
                   </div>
 
                   <div className="ml-12 space-y-2">
@@ -628,7 +775,7 @@ const Reading1Part32022 = () => {
                               : ""
                           }
                         >
-                          {option}
+                          {renderText(option)}
                         </span>
                       </div>
                     ))}
@@ -639,9 +786,13 @@ const Reading1Part32022 = () => {
           </div>
 
           {/* ================= Questions 36–40 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 36–40</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 36–40")}
+          </h2>
 
-          <p className="mb-4">Choose the correct letter, A, B, C or D.</p>
+          <p className="mb-4">
+            {renderText("Choose the correct letter, A, B, C or D.")}
+          </p>
 
           <div className="space-y-6">
             {[
@@ -709,9 +860,9 @@ const Reading1Part32022 = () => {
                 : "border-gray-300"
             }`}
                     >
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </div>
-                    <p className="text-lg">{qObj.question}</p>
+                    <p className="text-lg">{renderText(qObj.question)}</p>
                   </div>
 
                   <div className="ml-12 space-y-2">
@@ -736,7 +887,7 @@ const Reading1Part32022 = () => {
                               : ""
                           }
                         >
-                          {optionText}
+                          {renderText(optionText)}
                         </span>
                       </div>
                     ))}
@@ -754,23 +905,25 @@ const Reading1Part32022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (27–40)
+                    {renderText("All Answers (27–40)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -802,23 +955,29 @@ const Reading1Part32022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

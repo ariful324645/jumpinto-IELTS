@@ -210,266 +210,229 @@ const Reading3Part32023 = () => {
           </div>
 
           {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              The case for mixed-ability classes
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("The case for mixed-ability classes")}
             </h1>
 
-            <p className="text-lg">
-              Picture this scene.It's an English literature lesson in a UK
-              school, and the teacher has just read an extract from
-              Shakespeare's Romeo and Juliet with a class of 15-year-olds.He's
-              given some of the students copies of No Fear Shakespeare, a
-              kid-friendly translation of the original.For three students, even
-              these literacy demands are beyond them.Another girl simply can't
-              focus and he gives her pens and paper to draw with.
+            <p className="text-lg my-5">
+              {renderText(
+                "Picture this scene. It's an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare's Romeo and Juliet with a class of 15-year-olds. He's given some of the students copies of No Fear Shakespeare, a kid-friendly translation of the original. For three students, even these literacy demands are beyond them. Another girl simply can't focus and he gives her pens and paper to draw with. "
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The teacher can ask the No Fear group to identify the key
-                characters and maybe provide a tentative plot summary.
+                {renderText(
+                  "The teacher can ask the No Fear group to identify the key characters and maybe provide a tentative plot summary."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    27
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("27")}
                   </span>
                 )}
               </span>
-              He can ask most of the class about character development, and five
-              of them might be able to support their statements with textual
-              evidence.Now two curious students are wondering whether
-              Shakespeare advocates living a life of moderation or one of
-              passionate engagement.
+              {renderText(
+                " He can ask most of the class about character development, and five of them might be able to support their statements with textual evidence. Now two curious students are wondering whether Shakespeare advocates living a life of moderation or one of passionate engagement."
+              )}
             </p>
 
-            <p className="text-lg">
-              As a teacher myself, I'd think my lesson would be going rather
-              well if the discussion went as described above.But wouldn't this
-              kind of class work better if there weren't such a huge gap between
-              the top and the bottom?If we put all the kids who needed literacy
-              support into one class, and all the students who want to discuss
-              the virtue of moderation into another?
+            <p className="text-lg my-5">
+              {renderText(
+                "As a teacher myself, I'd think my lesson would be going rather well if the discussion went as described above. But wouldn't this kind of class work better if there weren't such a huge gap between the top and the bottom? If we put all the kids who needed literacy support into one class, and all the students who want to discuss the virtue of moderation into another?"
+              )}
             </p>
 
-            <p className="text-lg">
-              The practice of 'streaming', or 'tracking', involves separating
-              students into classes depending on their diagnosed levels of
-              attainment.At a macro level, it requires the establishment of
-              academically selective schools for the brightest students, and
-              comprehensive schools for the rest.Within schools, it means
-              selecting students into a 'stream' of general ability, or 'sets'
-              of subject specific ability.
+            <p className="text-lg my-5">
+              {renderText(
+                "The practice of 'streaming', or 'tracking', involves separating students into classes depending on their diagnosed levels of attainment. At a macro level, it requires the establishment of academically selective schools for the brightest students, and comprehensive schools for the rest. Within schools, it means selecting students into a 'stream' of general ability, or 'sets' of subject specific ability. The practice is intuitively appealing to almost every stakeholder."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The practice is intuitively appealing to almost every
-                stakeholder.
+                {renderText(" ")}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    28
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("28")}
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg">
-              I have heard the mixed-ability model attacked by way of analogy: a
-              group hike.The fittest in the group take the lead and set a brisk
-              pace, only to have to stop and wait every 20 minutes.This is
-              frustrating, and their enthusiasm wanes.Meanwhile, the slowest
-              ones are not only embarrassed but physically struggling to keep
-              up.What's worse, they never get a long enough break.They honestly
-              just want to quit.Hiking, they feel, is not for them.
+            <p className="text-lg my-5">
+              {renderText(
+                "I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a brisk pace, only to have to stop and wait every 20 minutes. This is frustrating, and their enthusiasm wanes. Meanwhile, the slowest ones are not only embarrassed but physically struggling to keep up. What's worse, they never get a long enough break. They honestly just want to quit. Hiking, they feel, is not for them."
+              )}
             </p>
 
-            <p className="text-lg">
-              Mixed-ability classes bore students, frustrate parents and burn
-              out teachers.
+            <p className="text-lg my-5">
+              {renderText(
+                "Mixed-ability classes bore students, frustrate parents and burn out teachers. The brightest ones will never summit Mount Qomolangma, and the stragglers won't enjoy the lovely stroll in the park they are perhaps more suited to."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The brightest ones will never summit Mount Qomolangma, and the
-                stragglers won't enjoy the lovely stroll in the park they are
-                perhaps more suited to.
+                {renderText(
+                  " Individuals suffer at the demands of the collective, mediocrity prevails."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    29
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("29")}
                   </span>
                 )}
               </span>
-              Individuals suffer at the demands of the collective, mediocrity
-              prevails.So: is learning like hiking?
+              {renderText(" So: is learning like hiking?")}
             </p>
 
-            <p className="text-lg">
-              The current pedagogical paradigm is arguably that of
-              constructivism, which emerged out of the work of psychologist Lev
-              Vygotsky.In the 1930s, Vygotsky emphasised the importance of
-              targeting a student's specific 'zone of proximal development'
-              (ZPD).This is the gap between what they can achieve only with
-              support - teachers, textbooks, worked examples, parents and so on
-              - and what they can achieve independently.
+            <p className="text-lg my-5">
+              {renderText(
+                "The current pedagogical paradigm is arguably that of constructivism, which emerged out of the work of psychologist Lev Vygotsky. In the 1930s, Vygotsky emphasised the importance of targeting a student's specific 'zone of proximal development' (ZPD). This is the gap between what they can achieve only with support - teachers, textbooks, worked examples, parents and so on - and what they can achieve independently. The purpose of teaching is to provide and then gradually remove this 'scaffolding' until they are autonomous."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The purpose of teaching is to provide and then gradually remove
-                this 'scaffolding' until they are autonomous.
+                {renderText(
+                  " If we accept this model, it follows that streaming students with similar ZPDs would be an efficient and effective solution."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    30
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("36")}
                   </span>
                 )}
               </span>
-              If we accept this model, it follows that streaming students with
-              similar ZPDs would be an efficient and effective solution.And that
-              forcing everyone on the same hike - regardless of aptitude - would
-              be madness.
+              {renderText(
+                " And that forcing everyone on the same hike - regardless of aptitude - would be madness."
+              )}
             </p>
 
-            <p className="text-lg">
+            <p className="text-lg my-5">
+              {renderText(
+                "Despite all this, there is limited empirical evidence to suggest that streaming results in better outcomes for students."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Despite all this, there is limited empirical evidence to suggest
-                that streaming results in better outcomes for students.
+                {renderText(
+                  " Professor John Hattie, director of the Melbourne Education Research Institute, notes that 'tracking has minimal effects on learning outcomes'."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    31
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("31")}
                   </span>
                 )}
               </span>
-              Professor John Hattie, director of the Melbourne Education
-              Research Institute, notes that 'tracking has minimal effects on
-              learning outcomes'.
+              {renderText(
+                " What is more, streaming appears to significantly - and negatively - affect those students assigned to the lowest sets."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                What is more, streaming appears to significantly - and
-                negatively - affect those students assigned to the lowest sets.
+                {renderText(
+                  " These students tend to have much higher representation of low socioeconomic class."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    32
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("32")}
                   </span>
                 )}
               </span>
+              {renderText(
+                " Less significant is the small benefit for those lucky clever students in the higher sets."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                These students tend to have much higher representation of low
-                socioeconomic class.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    33
-                  </span>
+                {renderText(
+                  " The overall result is that the smart stay smart and the dumb get dumber, further entrenching the social divide."
                 )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Less significant is the small benefit for those lucky clever
-                students in the higher sets.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    34
-                  </span>
-                )}
-              </span>
-              The overall result is that the smart stay smart and the dumb get
-              dumber, further entrenching the social divide.
-            </p>
-
-            <p className="text-lg">
-              In the latest update of Hattie's influential meta-analysis of
-              factors influencing student achievement, one of the most
-              significant factors is the teachers' estimate of achievement.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Streaming students by diagnosed achievement automatically limits
-                what the teacher feels the student is capable of.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    35
-                  </span>
-                )}
-              </span>
-              Meanwhile, in a mixed environment, teachers' estimates need to be
-              more diverse and flexible.
-            </p>
-
-            <p className="text-lg">
-              While streaming might seem to help teachers effectively target a
-              student's ZPD, it can underestimate the importance of peer-to-peer
-              learning.A crucial aspect of constructivist theory is the role of
-              the MKO - 'more knowledgeable other' - in knowledge
-              construction.While teachers are traditionally the MKOs in
-              classrooms, the value of knowledgeable student peers must not go
-              unrecognised either.
-            </p>
-
-            <p className="text-lg">
-              I find it amazing to watch students get over an idea to their
-              peers in ways that I would never think of.They operate with
-              different language tools and different social tools from teachers
-              and, having just learnt it themselves, they possess similar
-              cognitive structures to their struggling classmates.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                There is also something exciting about passing on skills and
-                knowledge that you yourself have just mastered - a certain pride
-                and zeal, a certain freshness to the interaction between
-                'teacher' and 'learner' that is often lost by the expert for
-                whom the steps are obvious and the joy of discovery forgotten.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    38
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("34")}
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg">
-              Having a variety of different abilities in a collaborative
-              learning environment provides valuable resources for helping
-              students meet their learning needs, not to mention improving their
-              communication and social skills.
+            <p className="text-lg my-5">
+              {renderText(
+                "In the latest update of Hattie's influential meta-analysis of factors influencing student achievement, one of the most significant factors is the teachers' estimate of achievement. Streaming students by diagnosed achievement automatically limits what the teacher feels the student is capable of."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                And today, more than ever, we need the many to flourish - not
-                suffer at the expense of a few bright stars.
+                {renderText(
+                  " Meanwhile, in a mixed environment, teachers' estimates need to be more diverse and flexible."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    39
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("35")}
                   </span>
                 )}
               </span>
-              Once a year, I go on a hike with my class, a mixed bunch of
-              students.It is challenging.The fittest students realise they need
-              to encourage the reluctant.There are lookouts who report back, and
-              extra items to carry for others.We make it - together.
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "While streaming might seem to help teachers effectively target a student's ZPD, it can underestimate the importance of peer-to-peer learning. A crucial aspect of constructivist theory is the role of the MKO - 'more knowledgeable other' - in knowledge construction. While teachers are traditionally the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either."
+              )}
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "I find it amazing to watch students get over an idea to their peers in ways that I would never think of. They operate with different language tools and different social tools from teachers and, having just learnt it themselves, they possess similar cognitive structures to their struggling classmates."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " There is also something exciting about passing on skills and knowledge that you yourself have just mastered - a certain pride and zeal, a certain freshness to the interaction between 'teacher' and 'learner' that is often lost by the expert for whom the steps are obvious and the joy of discovery forgotten."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("38")}
+                  </span>
+                )}
+              </span>
+            </p>
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Having a variety of different abilities in a collaborative learning environment provides valuable resources for helping students meet their learning needs, not to mention improving their communication and social skills. And today, more than ever, we need the many to flourish - not suffer at the expense of a few bright stars."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Once a year, I go on a hike with my class, a mixed bunch of students."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("39")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " It is challenging. The fittest students realise they need to encourage the reluctant. There are lookouts who report back, and extra items to carry for others. We make it - together."
+              )}
             </p>
           </div>
 
@@ -498,8 +461,13 @@ const Reading3Part32023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–30 ================= */}
           <div className="space-y-6 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 27–30</h2>
-            <p className="mb-4">Choose the correct letter, A, B, C or D.</p>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 27–30")}
+            </h2>
+
+            <p className="mb-4">
+              {renderText("Choose the correct letter, A, B, C or D.")}
+            </p>
 
             {[
               {
@@ -545,8 +513,19 @@ const Reading3Part32023 = () => {
             ].map(({ num, text, options }) => (
               <div key={num} className="space-y-2">
                 <p>
-                  <span className="font-bold">{num}</span> {text}
+                  <button
+                    onClick={() => toggleButton(num)}
+                    className={`flex-shrink-0 mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[num]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    {num}
+                  </button>
+                  {renderText(text)}
                 </p>
+
                 <div className="flex flex-col">
                   {options.map((opt) => (
                     <label
@@ -560,7 +539,7 @@ const Reading3Part32023 = () => {
                         checked={userAnswers[num] === opt.charAt(0)}
                         onChange={() => handleInputChange(num, opt.charAt(0))}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
@@ -570,16 +549,22 @@ const Reading3Part32023 = () => {
 
           {/* ================= Questions 31–35 ================= */}
           <div className="space-y-6 mt-8 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 31–35</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 31–35")}
+            </h2>
+
             <p className="mb-4">
-              Complete the summary using the list of words or phrases below.{" "}
+              {renderText(
+                "Complete the summary using the list of words or phrases below."
+              )}
               <br />
-              Choose the correct letter, A–I, in boxes 31–35 on your answer
-              sheet.
+              {renderText(
+                "Choose the correct letter, A–I, in boxes 31–35 on your answer sheet."
+              )}
             </p>
 
             <div className="border max-w-[350px] mx-auto p-4">
-              <ul className=" text-center">
+              <ul className="text-center">
                 {[
                   "A. wrong classes",
                   "B. lower expectations",
@@ -590,97 +575,147 @@ const Reading3Part32023 = () => {
                   "G. weaker students",
                   "H. higher achievements",
                   "I. positive impressions",
-                ].map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                ].map((item) => (
+                  <li key={item}>{renderText(item)}</li>
                 ))}
               </ul>
             </div>
 
             <div className="border p-4 rounded space-y-3 mt-3">
-              <p>
-                According to Professor John Hattie of the Melbourne Education
-                Research Institute, there is very little indication that
-                streaming leads to{" "}
-                <select
-                  className="border rounded px-2 py-1"
-                  value={userAnswers[31] || ""}
-                  onChange={(e) => handleInputChange(31, e.target.value)}
-                >
-                  <option value="">31</option>
-                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-                . He points out that, in schools which use streaming, the most
-                significant impact is on those students placed in the{" "}
-                <select
-                  className="border rounded px-2 py-1"
-                  value={userAnswers[32] || ""}
-                  onChange={(e) => handleInputChange(32, e.target.value)}
-                >
-                  <option value="">32</option>
-                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-                , especially where a large proportion of them have{" "}
-                <select
-                  className="border rounded px-2 py-1"
-                  value={userAnswers[33] || ""}
-                  onChange={(e) => handleInputChange(33, e.target.value)}
-                >
-                  <option value="">33</option>
-                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-                . Meanwhile, for the{" "}
-                <select
-                  className="border rounded px-2 py-1"
-                  value={userAnswers[34] || ""}
-                  onChange={(e) => handleInputChange(34, e.target.value)}
-                >
-                  <option value="">34</option>
-                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-                , there appears to be only minimal advantage. A further issue is
-                that teachers tend to have{" "}
-                <select
-                  className="border rounded px-2 py-1"
-                  value={userAnswers[35] || ""}
-                  onChange={(e) => handleInputChange(35, e.target.value)}
-                >
-                  <option value="">35</option>
-                  {["A", "B", "C", "D", "E", "F", "G", "H", "I"].map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>{" "}
-                of students in streamed groups.
+              <p className="flex flex-wrap items-center gap-2 text-lg">
+                {renderText(
+                  "According to Professor John Hattie of the Melbourne Education Research Institute, there is very little indication that streaming leads to"
+                )}
+
+                {/* Question 31 */}
+                <span className="flex items-center gap-2">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold bg-gray-200 border-gray-400">
+                    31
+                  </span>
+                  <select
+                    className="border rounded px-2 py-1"
+                    value={userAnswers[31] || ""}
+                    onChange={(e) => handleInputChange(31, e.target.value)}
+                  >
+                    <option value=""></option>
+                    {"ABCDEFGHI".split("").map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </span>
+
+                {renderText(
+                  ". He points out that, in schools which use streaming, the most significant impact is on those students placed in the"
+                )}
+
+                {/* Question 32 */}
+                <span className="flex items-center gap-2">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold bg-gray-200 border-gray-400">
+                    32
+                  </span>
+                  <select
+                    className="border rounded px-2 py-1"
+                    value={userAnswers[32] || ""}
+                    onChange={(e) => handleInputChange(32, e.target.value)}
+                  >
+                    <option value=""></option>
+                    {"ABCDEFGHI".split("").map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </span>
+
+                {renderText(
+                  ", especially where a large proportion of them have"
+                )}
+
+                {/* Question 33 */}
+                <span className="flex items-center gap-2">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold bg-gray-200 border-gray-400">
+                    33
+                  </span>
+                  <select
+                    className="border rounded px-2 py-1"
+                    value={userAnswers[33] || ""}
+                    onChange={(e) => handleInputChange(33, e.target.value)}
+                  >
+                    <option value=""></option>
+                    {"ABCDEFGHI".split("").map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </span>
+
+                {renderText(". Meanwhile, for the")}
+
+                {/* Question 34 */}
+                <span className="flex items-center gap-2">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold bg-gray-200 border-gray-400">
+                    34
+                  </span>
+                  <select
+                    className="border rounded px-2 py-1"
+                    value={userAnswers[34] || ""}
+                    onChange={(e) => handleInputChange(34, e.target.value)}
+                  >
+                    <option value=""></option>
+                    {"ABCDEFGHI".split("").map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </span>
+
+                {renderText(
+                  ", there appears to be only minimal advantage. A further issue is that teachers tend to have"
+                )}
+
+                {/* Question 35 */}
+                <span className="flex items-center gap-2">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold bg-gray-200 border-gray-400">
+                    35
+                  </span>
+                  <select
+                    className="border rounded px-2 py-1"
+                    value={userAnswers[35] || ""}
+                    onChange={(e) => handleInputChange(35, e.target.value)}
+                  >
+                    <option value=""></option>
+                    {"ABCDEFGHI".split("").map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </span>
+
+                {renderText("of students in streamed groups.")}
               </p>
             </div>
           </div>
 
           {/* ================= Questions 36–40 ================= */}
           <div className="space-y-6 mt-8 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 36–40</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 36–40")}
+            </h2>
+
             <p className="mb-4">
-              Do the following statements agree with the claims of the writer in
-              Reading Passage 3? <br />
-              In boxes 36–40 on your answer sheet, choose <strong>
-                YES
-              </strong>, <strong>NO</strong>, or <strong>NOT GIVEN</strong>.
+              {renderText(
+                "Do the following statements agree with the claims of the writer in Reading Passage 3?"
+              )}
+              <br />
+              {renderText("In boxes 36–40 on your answer sheet, choose")}
+              <strong> {renderText("YES")}</strong>,{" "}
+              <strong>{renderText("NO")}</strong>, {renderText("or")}{" "}
+              <strong>{renderText("NOT GIVEN")}</strong>.
             </p>
 
             {[
@@ -707,8 +742,12 @@ const Reading3Part32023 = () => {
             ].map(({ num, text }) => (
               <div key={num} className="space-y-2">
                 <p>
-                  <span className="font-bold">{num}</span> {text}
+                  <span className="font-bold">
+                    {renderText(num.toString())}
+                  </span>{" "}
+                  {renderText(text)}
                 </p>
+
                 <div className="flex flex-col">
                   {["YES", "NO", "NOT GIVEN"].map((opt) => (
                     <label
@@ -722,15 +761,13 @@ const Reading3Part32023 = () => {
                         checked={userAnswers[num] === opt}
                         onChange={() => handleInputChange(num, opt)}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-
-          {/* ================= Submit & Results ================= */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -738,26 +775,29 @@ const Reading3Part32023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/{Object.keys(correctAnswers).length}
+                    {renderText("Your Score:")} {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers
+                    {renderText("All Answers (27–40)")}
                   </h3>
+
                   <ul className="space-y-3">
-                    {Object.keys(correctAnswers).map((num) => {
+                    {Array.from({ length: 14 }, (_, i) => i + 27).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -773,24 +813,31 @@ const Reading3Part32023 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {isCorrect ? (
+                            {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
                               </span>
-                            ) : (
+                            )}
+                            {(noAnswer || (!isCorrect && userAnswer)) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
                                 <span className="text-white text-sm font-bold leading-none">
                                   <ImCross />
                                 </span>
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
                               userAnswer
                             )}
@@ -798,7 +845,7 @@ const Reading3Part32023 = () => {
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
                             {correctAnswers[num]}
                           </p>

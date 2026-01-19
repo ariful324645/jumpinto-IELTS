@@ -471,7 +471,26 @@ import Test1Speaking2013 from "../components/Academic 2013/Speaking/Test1Speakin
 import Test2Speaking2013 from "../components/Academic 2013/Speaking/Test2Speaking2013";
 import Test3Speaking2013 from "../components/Academic 2013/Speaking/Test3Speaking2013";
 import Test4Speaking2013 from "../components/Academic 2013/Speaking/Test4Speaking2013";
-
+import Listening1Part22024 from "../components/Academic 2024/Parts/Listening1Part22024";
+import Listening1Part32024 from "../components/Academic 2024/Parts/Listening1Part32024";
+import Listening1Part42024 from "../components/Academic 2024/Parts/Listening1Part42024";
+import Listening2Part22024 from "../components/Academic 2024/Parts/Listening2Part22024";
+import Listening2Part32024 from "../components/Academic 2024/Parts/Listening2Part32024";
+import Listening2Part42024 from "../components/Academic 2024/Parts/Listening2Part42024";
+import Listening3Part22024 from "../components/Academic 2024/Parts/Listening3Part22024";
+import Listening3Part32024 from "../components/Academic 2024/Parts/Listening3Part32024";
+import Listening3Part42024 from "../components/Academic 2024/Parts/Listening3Part42024";
+import Listening4Part22024 from "../components/Academic 2024/Parts/Listening4Part22024";
+import Listening4Part32024 from "../components/Academic 2024/Parts/Listening4Part32024";
+import Listening4Part42024 from "../components/Academic 2024/Parts/Listening4Part42024";
+import Reading1Part22024 from "../components/Academic 2024/Parts/Reading1Part22024";
+import Reading1Part32024 from "../components/Academic 2024/Parts/Reading1Part32024";
+import Reading2Part22024 from "../components/Academic 2024/Parts/Reading2Part22024";
+import Reading2Part32024 from "../components/Academic 2024/Parts/Reading2Part32024";
+import Reading3Part22024 from "../components/Academic 2024/Parts/Reading3Part22024";
+import Reading3Part32024 from "../components/Academic 2024/Parts/Reading3Part32024";
+import Reading4Part32024 from "../components/Academic 2024/Parts/Reading4Part32024";
+import Reading4Part22024 from "../components/Academic 2024/Parts/Reading4Part22024";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -567,32 +586,113 @@ export const router = createBrowserRouter([
         Component: Test1Listening2024,
       },
       {
+        path: "/listening1Part22024",
+        Component: Listening1Part22024,
+      },
+      {
+        path: "/listening1Part32024",
+        Component: Listening1Part32024,
+      },
+      {
+        path: "/listening1Part42024",
+        Component: Listening1Part42024,
+      },
+      {
         path: "/2024/Test 2/listening",
         Component: Test2Listening2024,
       },
       {
+        path: "/listening2Part22024",
+        Component: Listening2Part22024,
+      },
+      {
+        path: "/listening2Part32024",
+        Component: Listening2Part32024,
+      },
+      {
+        path: "/listening2Part42024",
+        Component: Listening2Part42024,
+      },
+
+      {
         path: "/2024/Test 3/listening",
         Component: Test3Listening2024,
+      },
+      {
+        path: "/listening3Part22024",
+        Component: Listening3Part22024,
+      },
+      {
+        path: "/listening3Part32024",
+        Component: Listening3Part32024,
+      },
+      {
+        path: "/listening3Part42024",
+        Component: Listening3Part42024,
       },
       {
         path: "/2024/Test 4/listening",
         Component: Test4Listening2024,
       },
       {
+        path: "/listening4Part22024",
+        Component: Listening4Part22024,
+      },
+      {
+        path: "/listening4Part32024",
+        Component: Listening4Part32024,
+      },
+      {
+        path: "/listening4Part42024",
+        Component: Listening4Part42024,
+      },
+      {
         path: "/2024/Test 1/reading",
         Component: Test1Reading2024,
+      },
+      {
+        path: "/reading1Part22024",
+        Component: Reading1Part22024,
+      },
+      {
+        path: "/reading1Part32024",
+        Component: Reading1Part32024,
       },
       {
         path: "/2024/Test 2/reading",
         Component: Test2Reading2024,
       },
       {
+        path: "/reading2Part22024",
+        Component: Reading2Part22024,
+      },
+      {
+        path: "/reading2Part32024",
+        Component: Reading2Part32024,
+      },
+      {
         path: "/2024/Test 3/reading",
         Component: Test3Reading2024,
       },
       {
+        path: "/reading3Part22024",
+        Component: Reading3Part22024,
+      },
+      {
+        path: "/reading3Part32024",
+        Component: Reading3Part32024,
+      },
+      {
         path: "/2024/Test 4/reading",
         Component: Test4Reading2024,
+      },
+      {
+        path: "/reading4Part22024",
+        Component: Reading4Part22024,
+      },
+      {
+        path: "/reading4Part32024",
+        Component: Reading4Part32024,
       },
       {
         path: "/2024/Test 1/writing",

@@ -181,43 +181,45 @@ const Reading2Part32022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Insight or evolution?
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("Insight or evolution?")}
             </h1>
-            <p className="text-lg italic text-center mb-6">
-              Two scientists consider the origins of discoveries and other
-              innovative behavior
+
+            <p className="text-lg text-center mb-4">
+              {renderText(
+                "Two scientists consider the origins of discoveries and other innovative behavior"
+              )}
             </p>
 
+            {/* ===================== A ===================== */}
             <p className="text-lg">
+              {renderText(
+                "Scientific discovery is popularly believed to result from the sheer genius of such intellectual stars as naturalist Charles Darwin and theoretical physicist Albert Einstein."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Scientific discovery is popularly believed to result from the
-                sheer genius of such intellectual stars as naturalist Charles
-                Darwin and theoretical physicist Albert Einstein.
+                {renderText(
+                  " Our view of such unique contributions to science often disregards the person's prior experience and the efforts of their lesser-known predecessors."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     27
                   </span>
                 )}
               </span>
-              Our view of such unique contributions to science often disregards
-              the person's prior experience and the efforts of their
-              lesser-known predecessors.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Conventional wisdom also places great weight on insight in
-                promoting breakthrough scientific achievements, as if ideas
-                spontaneously pop into someone's head - fully formed and
-                functional.
+                {renderText(
+                  " Conventional wisdom also places great weight on insight in promoting breakthrough scientific achievements, as if ideas spontaneously pop into someone's head – fully formed and functional."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     37
                   </span>
                 )}
@@ -227,17 +229,17 @@ const Reading2Part32022 = () => {
             <br />
 
             <p className="text-lg">
-              There may be some limited truth to this view.
+              {renderText("There may be some limited truth to this view.")}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                However, we believe that it largely misrepresents the real
-                nature of scientific discovery, as well as that of creativity
-                and innovation in many other realms of human endeavor.
+                {renderText(
+                  " However, we believe that it largely misrepresents the real nature of scientific discovery, as well as that of creativity and innovation in many other realms of human endeavor."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     28
                   </span>
                 )}
@@ -246,22 +248,21 @@ const Reading2Part32022 = () => {
 
             <br />
 
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              Setting aside such greats as Darwin and Einstein - whose
-              monumental contributions are duly celebrated - we suggest that
-              innovation is more a process of trial and error, where two steps
-              forward may sometimes come with one step back, as well as one or
-              more steps to the right or left.
+              {renderText(
+                "Setting aside such greats as Darwin and Einstein – whose monumental contributions are duly celebrated – we suggest that innovation is more a process of trial and error, where two steps forward may sometimes come with one step back, as well as one or more steps to the right or left."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                This evolutionary view of human innovation undermines the notion
-                of creative genius and recognizes the cumulative nature of
-                scientific progress.
+                {renderText(
+                  " This evolutionary view of human innovation undermines the notion of creative genius and recognizes the cumulative nature of scientific progress."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     29
                   </span>
                 )}
@@ -270,39 +271,46 @@ const Reading2Part32022 = () => {
 
             <br />
 
+            {/* ===================== C ===================== */}
             <p className="text-lg">
-              Consider one unheralded scientist: John Nicholson, a mathematical
-              physicist working in the 1910s who postulated the existence of
-              'proto-elements' in outer space. By combining different numbers of
-              weights of these proto-elements' atoms, Nicholson could recover
-              the weights of all the elements in the then-known periodic table.
+              {renderText(
+                "Consider one unheralded scientist: John Nicholson, a mathematical physicist working in the 1910s who postulated the existence of 'proto-elements' in outer space."
+              )}
+              {renderText(
+                " By combining different numbers of weights of these proto-elements' atoms, Nicholson could recover the weights of all the elements in the then-known periodic table."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                These successes are all the more noteworthy given the fact that
-                Nicholson was wrong about the presence of proto-elements: they
-                do not actually exist.
+                {renderText(
+                  " These successes are all the more noteworthy given the fact that Nicholson was wrong about the presence of proto-elements: they do not actually exist."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     38
                   </span>
                 )}
               </span>
-              Yet, amid his often fanciful theories and wild speculations,
-              Nicholson also proposed a novel theory about the structure of
-              atoms.
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "Yet, amid his often fanciful theories and wild speculations, Nicholson also proposed a novel theory about the structure of atoms."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Niels Bohr, the Nobel prize-winning father of modern atomic
-                theory, jumped off from this interesting idea to conceive his
-                now-famous model of the atom.
+                {renderText(
+                  " Niels Bohr, the Nobel prize-winning father of modern atomic theory, jumped off from this interesting idea to conceive his now-famous model of the atom."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     30
                   </span>
                 )}
@@ -311,162 +319,81 @@ const Reading2Part32022 = () => {
 
             <br />
 
+            {/* ===================== D ===================== */}
             <p className="text-lg">
-              What are we to make of this story? One might simply conclude that
-              science is a collective and cumulative enterprise. That may be
-              true, but there may be a deeper insight to be gleaned. We propose
-              that science is constantly evolving, much as species of animals
-              do. In biological systems, organisms may display new
-              characteristics that result from random genetic mutations. In the
-              same way, random, arbitrary or accidental mutations of ideas may
-              help pave the way for advances in science. If mutations prove
-              beneficial, then the animal or the scientific theory will continue
-              to thrive and perhaps reproduce.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              Support for this evolutionary view of behavioral innovation comes
-              from many domains. Consider one example of an influential
-              innovation in US horseracing. The so-called 'acey-deucy' stirrup
-              placement, in which the rider's foot in his left stirrup is placed
-              as much as 25 centimeters lower than the right, is believed to
-              confer important speed advantages when turning on oval tracks. It
-              was developed by a relatively unknown jockey named Jackie
-              Westrope. Had Westrope conducted methodical investigations or
-              examined extensive film records in a shrewd plan to outrun his
-              rivals? Had he foreseen the speed advantage that would be
-              conferred by riding acey-deucy? No.
+              {renderText(
+                "What are we to make of this story? One might simply conclude that science is a collective and cumulative enterprise."
+              )}
+              {renderText(
+                " That may be true, but there may be a deeper insight to be gleaned."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He suffered a leg injury, which left him unable to fully bend
-                his left knee.
+                {renderText(
+                  " We propose that science is constantly evolving, much as species of animals do."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     31
                   </span>
                 )}
               </span>
-              His modification just happened to coincide with enhanced left-hand
-              turning performance. This led to the rapid and widespread adoption
-              of riding acey-deucy by many riders, a racing style which
-              continues in today's thoroughbred racing.
             </p>
 
             <br />
 
+            {/* ===================== E ===================== */}
             <p className="text-lg">
+              {renderText(
+                "Plenty of other stories show that fresh advances can arise from error, misadventure, and also pure serendipity – a happy accident."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Plenty of other stories show that fresh advances can arise from
-                error, misadventure, and also pure serendipity - a happy
-                accident.
+                {renderText(
+                  " Such examples give lie to the claim that ingenious, designing minds are responsible for human creativity and invention."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     39
                   </span>
                 )}
               </span>
-              For example, in the early 1970s, two employees of the company 3M
-              each had a problem: Spencer Silver had a product - a glue which
-              was only slightly sticky - and no use for it, while his colleague
-              Art Fry was trying to figure out how to affix temporary bookmarks
-              in his hymn book without damaging its pages. The solution to both
-              these problems was the invention of the brilliantly simple yet
-              phenomenally successful Post-It note. Such examples give lie to
-              the claim that ingenious, designing minds are responsible for
-              human creativity and invention. Far more banal and mechanical
-              forces may be at work; forces that are fundamentally connected to
-              the laws of science.
             </p>
 
             <br />
 
             <p className="text-lg">
-              The notions of insight, creativity and genius are often invoked,
-              but they remain vague and of doubtful scientific utility,
-              especially when one considers the diverse and enduring
-              contributions of individuals such as Plato, Leonardo da Vinci,
-              Shakespeare, Beethoven, Galileo, Newton, Kepler, Curie, Pasteur
-              and Edison.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  32
-                </span>
+              {renderText(
+                "The notions of insight, creativity and genius are often invoked, but they remain vague and of doubtful scientific utility."
               )}
-              These notions merely label rather than explain the evolution of
-              human innovations. We need another approach, and there is a
-              promising candidate.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              The Law of Effect was advanced by psychologist Edward Thorndike in
-              1898, some 40 years after Charles Darwin published his
-              groundbreaking work on biological evolution, On the Origin of
-              Species. This simple law holds that organisms tend to repeat
-              successful behaviors and to refrain from performing unsuccessful
-              ones.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Just like Darwin's Law of Natural Selection, the Law of Effect
-                involves an entirely mechanical process of variation and
-                selection, without any end objective in sight.
-                {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      34
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      40
-                    </span>
-                  </>
+                {renderText(
+                  " These notions merely label rather than explain the evolution of human innovations."
                 )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              Of course, the origin of human innovation demands much further
-              study. In particular,
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                the provenance of the raw material on which the Law of Effect
-                operates is not as clearly known as that of the genetic
-                mutations on which the Law of Natural Selection operates.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    35
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    32
                   </span>
                 )}
               </span>
-              The generation of novel ideas and behaviors may not be entirely
-              random, but constrained by prior successes and failures - of the
-              current individual (such as Bohr) or of predecessors (such as
-              Nicholson).
             </p>
 
             <br />
 
             <p className="text-lg">
-              The time seems right for abandoning the naive notions of
-              intelligent design and genius, and for scientifically exploring
-              the true origins of creative behavior.
+              {renderText(
+                "The time seems right for abandoning the naive notions of intelligent design and genius, and for scientifically exploring the true origins of creative behavior."
+              )}
             </p>
           </div>
 
@@ -495,13 +422,17 @@ const Reading2Part32022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–31 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–31</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–31")}
+          </h2>
 
           <p className="mb-4">
-            Choose the correct letter, <strong>A, B, C or D</strong>.
+            {renderText("Choose the correct letter, ")}
+            <strong>{renderText("A, B, C or D")}</strong>
+            {renderText(".")}
           </p>
 
-          <ul className="  space-y-5 text-lg">
+          <ul className="space-y-5 text-lg">
             {[
               {
                 q: 27,
@@ -556,7 +487,8 @@ const Reading2Part32022 = () => {
             ].map(({ q, text, options }) => (
               <li key={q} className="space-y-2">
                 <p>
-                  <span className="font-bold">{q}</span> {text}
+                  <span className="font-bold">{renderText(q)}</span>{" "}
+                  {renderText(text)}
                 </p>
 
                 <div className="ml-6 space-y-1">
@@ -568,30 +500,40 @@ const Reading2Part32022 = () => {
                         value={opt[0]}
                         onChange={(e) => handleInputChange(q, e.target.value)}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
               </li>
             ))}
           </ul>
+
           {/* ================= Questions 32–36 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 32–36</h2>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 32–36")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the claims of the writer in
-            Reading Passage 3?
+            {renderText(
+              "Do the following statements agree with the claims of the writer in Reading Passage 3?"
+            )}
             <br />
-            In boxes 32–36 on your answer sheet, choose
+            {renderText("In boxes 32–36 on your answer sheet, choose")}
             <br />
-            <strong>YES</strong> if the statement agrees with the claims of the
-            writer
+            <strong>{renderText("YES")}</strong>{" "}
+            {renderText(
+              "if the statement agrees with the claims of the writer"
+            )}
             <br />
-            <strong>NO</strong> if the statement contradicts the claims of the
-            writer
+            <strong>{renderText("NO")}</strong>{" "}
+            {renderText(
+              "if the statement contradicts the claims of the writer"
+            )}
             <br />
-            <strong>NOT GIVEN</strong> if it is impossible to say what the
-            writer thinks about this
+            <strong>{renderText("NOT GIVEN")}</strong>{" "}
+            {renderText(
+              "if it is impossible to say what the writer thinks about this"
+            )}
           </p>
 
           <ul className="space-y-6 text-lg">
@@ -608,8 +550,8 @@ const Reading2Part32022 = () => {
                 <li key={qNum} className="space-y-2">
                   {/* Question */}
                   <div className="flex gap-2">
-                    <span className="font-bold">{qNum}</span>
-                    <span>{text}</span>
+                    <span className="font-bold">{renderText(qNum)}</span>
+                    <span>{renderText(text)}</span>
                   </div>
 
                   {/* Options */}
@@ -624,7 +566,7 @@ const Reading2Part32022 = () => {
                             handleInputChange(qNum, e.target.value)
                           }
                         />
-                        <span>{opt}</span>
+                        <span>{renderText(opt)}</span>
                       </label>
                     ))}
                   </div>
@@ -634,12 +576,18 @@ const Reading2Part32022 = () => {
           </ul>
 
           {/* ================= Questions 37–40 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 37–40</h2>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 37–40")}
+          </h2>
 
           <p className="mb-4">
-            Complete the summary using the list of words or phrases below.
+            {renderText(
+              "Complete the summary using the list of words or phrases below."
+            )}
             <br />
-            Choose the correct letter, <strong>A–G</strong>.
+            {renderText("Choose the correct letter, ")}
+            <strong>{renderText("A–G")}</strong>
+            {renderText(".")}
           </p>
 
           <div className="border p-4 max-w-[220px] mb-4 text-lg mx-auto space-y-1">
@@ -652,40 +600,140 @@ const Reading2Part32022 = () => {
               "F. inspiration",
               "G. experiments",
             ].map((opt) => (
-              <p key={opt}>{opt}</p>
+              <p key={opt}>{renderText(opt)}</p>
             ))}
           </div>
 
-          <div className="space-y-4 text-lg">
-            {[
-              "The traditional view of scientific discovery is that breakthroughs happen when a single great mind has sudden",
-              "In some cases, this process involves",
-              "There is also often an element of",
-              "With both the Law of Natural Selection and the Law of Effect, there may be no clear",
-            ].map((text, idx) => {
-              const qNum = 37 + idx;
-              return (
-                <div key={qNum} className="flex flex-wrap items-center gap-2">
-                  <span className="font-bold">{qNum}</span>
-                  <span>{text}</span>
-                  <select
-                    className="border rounded px-2 py-1"
-                    defaultValue=""
-                    onChange={(e) => handleInputChange(qNum, e.target.value)}
-                  >
-                    <option value="" disabled>
-                      {qNum}
-                    </option>
-                    {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              );
-            })}
+          <div className="space-y-4 text-lg leading-relaxed border p-4">
+            <h2 className="text-xl font-bold text-center">
+              {renderText("The origins of creative behaviour")}
+            </h2>
+
+            <p className="flex flex-wrap items-center gap-2">
+              <span>
+                {renderText(
+                  "The traditional view of scientific discovery is that breakthroughs happen when a single great mind has sudden"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(37)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(37, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+
+              <span>
+                {renderText(
+                  ". Although this can occur, it is not often the case. Advances are more likely to be the result of a longer process. In some cases, this process involves"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(38)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(38, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+
+              <span>
+                {renderText(
+                  ", such as Nicholson's theory about proto-elements. In others, simple necessity may provoke innovation, as with Westrope's decision to modify the position of his riding stirrups. There is also often an element of"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(39)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[39]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                39
+              </button>
+
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(39, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+
+              <span>
+                {renderText(
+                  ", for example, the coincidence of ideas that led to the invention of the Post-It note. With both the Law of Natural Selection and the Law of Effect, there may be no clear"
+                )}
+              </span>
+
+              <button
+                onClick={() => toggleButton(40)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+
+              <select
+                className="border rounded px-2 py-1"
+                onChange={(e) => handleInputChange(40, e.target.value)}
+              >
+                <option value=""></option>
+                {["A", "B", "C", "D", "E", "F", "G"].map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+
+              <span>
+                {renderText(
+                  "involved, but merely a process of variation and selection."
+                )}
+              </span>
+            </p>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -693,23 +741,25 @@ const Reading2Part32022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (27–40)
+                    {renderText("All Answers (27–40)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -741,23 +791,29 @@ const Reading2Part32022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

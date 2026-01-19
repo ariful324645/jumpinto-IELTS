@@ -205,291 +205,304 @@ const Reading3Part22023 = () => {
           </div>
 
           {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              The steam car
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("The steam car")}
             </h1>
-            <p className="text-lg font-medium mb-5 text-center">
-              The successes and failures of the Doble brothers and their steam
-              cars
+
+            <p className="text-lg my-5">
+              {renderText(
+                "The successes and failures of the Doble brothers and their steam cars"
+              )}
             </p>
 
-            <p className="text-lg font-bold">A</p>
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
             <p className="text-lg">
-              When primitive automobiles first began to appear in the 1800s,
-              their engines were based on steam power. Steam had already enjoyed
-              a long and successful career in the railways, so it was only
-              natural that the technology evolved into a miniaturized version
-              which was separate from the trains.
+              {renderText(
+                "When primitive automobiles first began to appear in the 1800s, their engines were based on steam power."
+              )}
+              {renderText(
+                " Steam had already enjoyed a long and successful career in the railways, so it was only natural that the technology evolved into a miniaturized version which was separate from the trains."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But these early cars inherited steam's weaknesses along with its
-                strengths.
+                {renderText(
+                  "But these early cars inherited steam's weaknesses along with its strengths."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    14
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("14")}
                   </span>
                 )}
               </span>
-              The boilers had to be lit by hand, and they required about twenty
-              minutes to build up pressure before they could be driven.
-              Furthermore, their water reservoirs only lasted for about thirty
-              miles before needing replenishment. Despite such shortcomings,
-              these newly designed self-propelled carriages offered quick
-              transportation, and by the early 1900s it was not uncommon to see
-              such machines shuttling wealthy citizens around town.
+              {renderText(
+                "The boilers had to be lit by hand, and they required about twenty minutes to build up pressure before they could be driven. "
+              )}
+              {renderText(
+                " Furthermore, their water reservoirs only lasted for about thirty miles before needing replenishment."
+              )}
+              {renderText(
+                " Despite such shortcomings, these newly designed self-propelled carriages offered quick transportation, and by the early 1900s it was not uncommon to see such machines shuttling wealthy citizens around town."
+              )}
             </p>
 
-            <p className="text-lg font-bold">B</p>
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But the glory days of steam cars were few.
+                {renderText(
+                  "But the glory days of steam cars were few. A new technology called the Internal Combustion Engine soon appeared, which offered the ability to drive down the road just moments after starting up."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    21
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("21")}
                   </span>
                 )}
               </span>
-              A new technology called the Internal Combustion Engine soon
-              appeared, which offered the ability to drive down the road just
-              moments after starting up.
+              {renderText(
+                " At first, these noisy gasoline cars were unpopular because they were more complicated to operate and they had difficult hand-crank starters, which were known to break arms when the engines backfired."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                At first, these noisy gasoline cars were unpopular because they
-                were more complicated to operate and they had difficult
-                hand-crank starters, which were known to break arms when the
-                engines backfired.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    15
-                  </span>
+                {renderText(
+                  " But in 1912 General Motors introduced the electric starter, and over the following few years steam power was gradually phased out."
                 )}
-              </span>
-              But in 1912 General Motors introduced the electric starter, and
-              over the following few years steam power was gradually phased out.
-            </p>
-
-            <p className="text-lg font-bold">C</p>
-            <p className="text-lg">
-              Even as the market was declining, four brothers made one last
-              effort to rekindle the technology. Between 1906 and 1909, while
-              still attending high school, Abner Doble and his three brothers
-              built their first steam car in their parents' basement. It
-              comprised parts taken from a wrecked early steam car but
-              reconfigured to drive an engine of their own design. Though it did
-              not run well, the Doble brothers went on to build a second and
-              third prototype in the following years.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Though the Doble boys' third prototype, nicknamed the Model B,
-                still lacked the convenience of an internal combustion engine,
-                it drew the attention of automobile trade magazines due to its
-                numerous improvements over previous steam cars.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    22
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                The Model B proved to be superior to gasoline automobiles in
-                many ways.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    16
-                  </span>
-                )}
-              </span>
-              Its high-pressure steam drove the engine pistons in virtual
-              silence, in contrast to clattering gas engines which emitted the
-              aroma of burned hydrocarbons. Perhaps most impressively, the Model
-              B was amazingly swift. It could accelerate from zero to sixty
-              miles per hour in just fifteen seconds, a feat described as
-              'remarkable acceleration' by Automobile magazine in 1914.
-            </p>
-
-            <p className="text-lg font-bold">D</p>
-            <p className="text-lg">
-              The following year Abner Doble drove the Model B from
-              Massachusetts to Detroit in order to seek investment in his
-              automobile design, which he used to open the General Engineering
-              Company.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                He and his brothers immediately began working on the Model C,
-                which was intended to expand upon the innovations of the Model
-                B.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    23
-                  </span>
-                )}
-              </span>
-              The brothers added features such as a key-based ignition in the
-              cabin, eliminating the need for the operator to manually ignite
-              the boiler. With these enhancements, the Dobles' new car company
-              promised a steam vehicle which would provide all of the
-              convenience of a gasoline car, but with much greater speed, much
-              simpler driving controls, and a virtually silent powerplant.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                By the following April, the General Engineering Company had
-                received 5,390 deposits for Doble Detroits, which were scheduled
-                for delivery in early 1918.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    17
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("15")}
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg font-bold">E</p>
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
             <p className="text-lg">
-              Later that year Abner Doble delivered unhappy news to those
-              eagerly awaiting the delivery of their modern new cars.
+              {renderText(
+                "Even as the market was declining, four brothers made one last effort to rekindle the technology."
+              )}
+              {renderText(
+                " Between 1906 and 1909, while still attending high school, Abner Doble and his three brothers built their first steam car in their parents' basement."
+              )}
+              {renderText(
+                " It comprised parts taken from a wrecked early steam car but reconfigured to drive an engine of their own design."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Those buyers who received the handful of completed cars
-                complained that the vehicles were sluggish and erratic,
-                sometimes going in reverse when they should go forward.
+                {renderText(
+                  "Though it did not run well, the Doble brothers went on to build a second and third prototype in the following years."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    18
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("22")}
                   </span>
                 )}
               </span>
-              The new engine design, though innovative, was still plagued with
-              serious glitches.
+              {renderText(
+                " Though the Doble boys' third prototype, nicknamed the Model B, still lacked the convenience of an internal combustion engine, it drew the attention of automobile trade magazines due to its numerous improvements over previous steam cars."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The Model B proved to be superior to gasoline automobiles in many ways."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("16")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Its high-pressure steam drove the engine pistons in virtual silence, in contrast to clattering gas engines which emitted the aroma of burned hydrocarbons."
+              )}
+              {renderText(
+                " Perhaps most impressively, the Model B was amazingly swift. It could accelerate from zero to sixty miles per hour in just fifteen seconds, a feat described as 'remarkable acceleration' by Automobile magazine in 1914."
+              )}
             </p>
 
-            <p className="text-lg font-bold">F</p>
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
             <p className="text-lg">
-              The brothers made one final attempt to produce a viable steam
-              automobile. In early 1924, the Doble brothers shipped a Model E to
-              New York City to be road-tested by the Automobile Club of America.
-              After sitting overnight in freezing temperatures, the car was
-              pushed out into the road and left to sit for over an hour in the
-              frosty morning air.
+              {renderText(
+                "The following year Abner Doble drove the Model B from Massachusetts to Detroit in order to seek investment in his automobile design, which he used to open the General Engineering Company."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                At the turn of the key, the boiler lit and reached its operating
-                pressure inside of forty seconds.
+                {renderText(
+                  "He and his brothers immediately began working on the Model C, which was intended to expand upon the innovations of the Model B."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    19
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("23")}
                   </span>
                 )}
               </span>
-              As they drove the test vehicle further, they found that its evenly
-              distributed weight lent it surprisingly good handling, even though
-              it was so heavy. As the new Doble steamer was further developed
-              and tested, its maximum speed was pushed to over a hundred miles
-              per hour, and it achieved about fifteen miles per gallon of
-              kerosene with negligible emissions.
+              {renderText(
+                " The brothers added features such as a key-based ignition in the cabin, eliminating the need for the operator to manually ignite the boiler."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                As the new Doble steamer was further developed and tested, its
-                maximum speed was pushed to over a hundred miles per hour, and
-                it achieved about fifteen miles per gallon of kerosene with
-                negligible emissions.
+                {renderText(
+                  "With these enhancements, the Dobles' new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    24
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("17")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " By the following April, the General Engineering Company had received 5,390 deposits for Doble Detroits, which were scheduled for delivery in early 1918."
+              )}
+            </p>
+
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modern new cars."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("18")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Those buyers who received the handful of completed cars complained that the vehicles were sluggish and erratic, sometimes going in reverse when they should go forward."
+              )}
+              {renderText(
+                " The new engine design, though innovative, was still plagued with serious glitches."
+              )}
+            </p>
+
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "The brothers made one final attempt to produce a viable steam automobile."
+              )}
+              {renderText(
+                " In early 1924, the Doble brothers shipped a Model E to New York City to be road-tested by the Automobile Club of America."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "After sitting overnight in freezing temperatures, the car was pushed out into the road and left to sit for over an hour in the frosty morning air."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("19")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " At the turn of the key, the boiler lit and reached its operating pressure inside of forty seconds."
+              )}
+              {renderText(
+                " As they drove the test vehicle further, they found that its evenly distributed weight lent it surprisingly good handling, even though it was so heavy."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "As the new Doble steamer was further developed and tested, its maximum speed was pushed to over a hundred miles per hour, and it achieved about fifteen miles per gallon of kerosene with negligible emissions."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("24")}
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg font-bold">G</p>
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">{renderText("G")}</h1>
             <p className="text-lg">
-              Sadly, the Dobles' brilliant steam car never was a financial
-              success. Priced at around $18,000 in 1924, it was popular only
-              among the very wealthy. Plus, it is said that no two Model Es were
-              quite the same, because Abner Doble tinkered endlessly with the
-              design.
+              {renderText(
+                "Sadly, the Dobles' brilliant steam car never was a financial success."
+              )}
+              {renderText(
+                " Priced at around $18,000 in 1924, it was popular only among the very wealthy."
+              )}
+              {renderText(
+                " Plus, it is said that no two Model Es were quite the same, because Abner Doble tinkered endlessly with the design."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                By the time the company folded in 1931, fewer than fifty of the
-                amazing Model E steam cars had been produced.
+                {renderText(
+                  "By the time the company folded in 1931, fewer than fifty of the amazing Model E steam cars had been produced."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    25
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("25")}
                   </span>
                 )}
               </span>
-              For his whole career, until his death in 1961, Abner Doble
-              remained adamant that steam-powered automobiles were at least
-              equal to gasoline cars, if not superior. Given the evidence, he
-              may have been right. Many of the Model E Dobles which have
-              survived are still in good working condition, some having been
-              driven over half a million miles with only normal maintenance.
+              {renderText(
+                " For his whole career, until his death in 1961, Abner Doble remained adamant that steam-powered automobiles were at least equal to gasoline cars, if not superior."
+              )}
+              {renderText(
+                " Given the evidence, he may have been right. Many of the Model E Dobles which have survived are still in good working condition, some having been driven over half a million miles with only normal maintenance."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Astonishingly, an unmodified Doble Model E runs clean enough to
-                pass the emissions laws in California today, and they are pretty
-                strict.
+                {renderText(
+                  "Astonishingly, an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    26
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
                   </span>
                 )}
               </span>
-              It is true that the technology poses some difficult problems, but
-              you cannot help but wonder how efficient a steam car might be with
-              the benefit of modern materials and computers.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Under the current pressure to improve automotive performance and
-                reduce emissions, it is not unthinkable that the steam car may
-                rise again.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    20
-                  </span>
-                )}
-              </span>
+              {renderText(
+                " It is true that the technology poses some difficult problems, but you cannot help but wonder how efficient a steam car might be with the benefit of modern materials and computers."
+              )}
+              {renderText(
+                " Under the current pressure to improve automotive performance and reduce emissions, it is not unthinkable that the steam car may rise again."
+              )}
+              {renderText("20")}
             </p>
           </div>
 
@@ -518,12 +531,16 @@ const Reading3Part22023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 14–20 ================= */}
           <div className="space-y-6 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 14–20</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 14–20")}
+            </h2>
+
             <p className="mb-4">
-              Reading Passage 2 has seven paragraphs, A–G.
+              {renderText("Reading Passage 2 has seven paragraphs, A–G.")}
               <br />
-              Choose the correct heading for each paragraph from the dropdown
-              (i–viii).
+              {renderText(
+                "Choose the correct heading for each paragraph from the dropdown (i–viii)."
+              )}
             </p>
 
             {[
@@ -536,33 +553,35 @@ const Reading3Part22023 = () => {
               { num: 20, text: "Paragraph G" },
             ].map(({ num, text }) => (
               <div key={num} className="flex items-center gap-4">
-                <span className=" font-bold">{num}</span>
-                <span className="font-semibold">{text}</span>
+                <span className="font-bold">{renderText(String(num))}</span>
+
+                <span className="font-semibold">{renderText(text)}</span>
+
                 <select
                   className="border rounded px-2 py-1"
                   value={userAnswers[num] || ""}
                   onChange={(e) => handleInputChange(num, e.target.value)}
                 >
-                  <option value="">{num}</option>
-                  <option value="i">i</option>
-                  <option value="ii">ii</option>
-                  <option value="iii">iii</option>
-                  <option value="iv">iv</option>
-                  <option value="v">v</option>
-                  <option value="vi">vi</option>
-                  <option value="vii">vii</option>
-                  <option value="viii">viii</option>
+                  <option value="">{renderText(String(num))}</option>
+                  {["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"].map(
+                    (opt) => (
+                      <option key={opt} value={opt}>
+                        {renderText(opt)}
+                      </option>
+                    )
+                  )}
                 </select>
               </div>
             ))}
           </div>
 
-          {/* ================= Questions 14–20 Headings ================= */}
+          {/* ================= Headings List ================= */}
           <div className="border p-5 max-w-[600px] mx-auto mt-5">
             <h2 className="text-lg font-bold mb-3 text-center">
-              List of Headings
+              {renderText("List of Headings")}
             </h2>
-            <ul className=" text-lg ml-5">
+
+            <ul className="text-lg ml-5">
               {[
                 "i. A period in cold conditions before the technology is assessed",
                 "ii. Marketing issues lead to failure",
@@ -573,14 +592,20 @@ const Reading3Part22023 = () => {
                 "vii. A disappointing outcome for customers",
                 "viii. A better option than the steam car arises",
               ].map((heading, index) => (
-                <li key={index}>{heading}</li>
+                <li key={index}>{renderText(heading)}</li>
               ))}
             </ul>
           </div>
 
           {/* ================= Questions 21–23 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 21–23</h2>
-          <p className="mb-4">Choose the correct letter, A, B, C or D.</p>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 21–23")}
+          </h2>
+
+          <p className="mb-4">
+            {renderText("Choose the correct letter, A, B, C or D.")}
+          </p>
+
           <ul className="space-y-8 text-lg">
             {[
               {
@@ -616,79 +641,119 @@ const Reading3Part22023 = () => {
             ].map(({ num, text, options }) => (
               <li key={num} className="space-y-3">
                 <p>
-                  <span className="font-bold">{num}</span> {text}
+                  <span className="font-bold">{renderText(String(num))}</span>{" "}
+                  {renderText(text)}
                 </p>
-                <div className="flex flex-col">
-                  {options.map((opt) => (
-                    <label
-                      key={opt}
-                      className="flex items-center gap-2 cursor-pointer"
-                    >
-                      <input
-                        type="radio"
-                        name={`question-${num}`}
-                        value={opt.charAt(0)} // stores A/B/C/D
-                        checked={userAnswers[num] === opt.charAt(0)}
-                        onChange={() => handleInputChange(num, opt.charAt(0))}
-                      />
-                      <span>{opt}</span>
-                    </label>
-                  ))}
-                </div>
+
+                {options.map((opt) => (
+                  <label
+                    key={opt}
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name={`question-${num}`}
+                      checked={userAnswers[num] === opt.charAt(0)}
+                      onChange={() => handleInputChange(num, opt.charAt(0))}
+                    />
+                    <span>{renderText(opt)}</span>
+                  </label>
+                ))}
               </li>
             ))}
           </ul>
 
           {/* ================= Questions 24–26 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 24–26</h2>
+          <div></div>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 24–26")}
+          </h2>
+
           <p className="mb-4">
-            Complete the summary below. <br />
-            Choose <strong>ONE WORD AND/OR A NUMBER</strong> from the passage
-            for each answer.
+            {renderText("Complete the summary below.")}
+            <br />
+            {renderText(
+              "Choose ONE WORD AND/OR A NUMBER from the passage for each answer."
+            )}
           </p>
 
-          <div className="space-y-4 text-lg border p-4">
-            <h2 className="font-bold text-xl text-center">The Model E</h2>
+          <div className="space-y-4 text-lg border p-4 max-w-3xl mx-auto">
+            <h2 className="font-bold text-xl text-center">
+              {renderText("The Model E")}
+            </h2>
+
             <p>
-              The Model E was road-tested in 1924 by the Automobile Club of
-              America. They found it easy to drive, despite its weight, and it
-              impressed the spectators. A later version of the Model E raised
-              its
-              <span className="h-8 w-8 border rounded-full items-center justify-center font-bold">
+              {renderText(
+                "The Model E was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its"
+              )}
+
+              <button
+                onClick={() => toggleButton(24)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  activeButtons[24]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
                 24
-              </span>
+              </button>
+
               <input
                 type="text"
-                className="border rounded px-2 py-1 w-32 mx-1 text-center"
+                className="border rounded px-2 py-1 w-24 text-center"
                 value={userAnswers[24] || ""}
                 onChange={(e) => handleInputChange(24, e.target.value)}
-              />{" "}
-              while keeping its emissions extremely low. The steam car was too
-              expensive for many people and its design was constantly being
-              altered. Under
-              <span className="h-8 w-8 border rounded-full items-center justify-center font-bold">
+              />
+
+              {renderText(", while keeping its emissions extremely low.")}
+            </p>
+
+            <p>
+              {renderText(
+                "The steam car was too expensive for many people and its design was constantly being altered. Under"
+              )}
+
+              <button
+                onClick={() => toggleButton(25)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  activeButtons[25]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
                 25
-              </span>
+              </button>
+
               <input
                 type="text"
-                className="border rounded px-2 py-1 w-32 mx-1 text-center"
+                className="border rounded px-2 py-1 w-24 text-center"
                 value={userAnswers[25] || ""}
                 onChange={(e) => handleInputChange(25, e.target.value)}
-              />{" "}
-              cars were produced before the company went out of business.
-              However, even today, there are Model Es on the road in the US.
-              They are straightforward to maintain, and they satisfy
-              California's
-              <span className="h-8 w-8 border rounded-full items-center justify-center font-bold">
+              />
+
+              {renderText(
+                "cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California's"
+              )}
+
+              <button
+                onClick={() => toggleButton(26)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                  activeButtons[26]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
                 26
-              </span>
+              </button>
+
               <input
                 type="text"
-                className="border rounded px-2 py-1 w-32 mx-1 text-center"
+                className="border rounded px-2 py-1 w-24 text-center"
                 value={userAnswers[26] || ""}
                 onChange={(e) => handleInputChange(26, e.target.value)}
-              />{" "}
-              emissions laws.
+              />
+
+              {renderText("emissions laws.")}
             </p>
           </div>
           <div className="mt-10">
@@ -698,26 +763,29 @@ const Reading3Part22023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/{Object.keys(correctAnswers).length}
+                    {renderText("Your Score:")} {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers
+                    {renderText("All Answers (14–26)")}
                   </h3>
+
                   <ul className="space-y-3">
-                    {Object.keys(correctAnswers).map((num) => {
+                    {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -733,24 +801,31 @@ const Reading3Part22023 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {isCorrect ? (
+                            {isCorrect && (
                               <span className="text-green-600 text-xl font-bold">
                                 <FaDotCircle />
                               </span>
-                            ) : (
+                            )}
+                            {(noAnswer || (!isCorrect && userAnswer)) && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
                                 <span className="text-white text-sm font-bold leading-none">
                                   <ImCross />
                                 </span>
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
                               userAnswer
                             )}
@@ -758,7 +833,7 @@ const Reading3Part22023 = () => {
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
                             {correctAnswers[num]}
                           </p>

@@ -212,200 +212,240 @@ const Reading2Part22022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              A second attempt at domesticating the tomato
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("A second attempt at domesticating the tomato")}
             </h1>
 
-            <p className="text-lg font-bold">A</p>
+            {/* ===================== A ===================== */}
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                It took at least 3,000 years for humans to learn how to
-                domesticate the wild tomato and cultivate it for food.
+                {renderText(
+                  "It took at least 3,000 years for humans to learn how to domesticate the wild tomato and cultivate it for food."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      17
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    17
+                  </span>
                 )}
               </span>
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Now two separate teams in Brazil and China have done it all over
-                again in less than three years.
+                {renderText(
+                  " Now two separate teams in Brazil and China have done it all over again in less than three years."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      17
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    17
+                  </span>
                 )}
               </span>
-              And they have done it better in some ways, as the re-domesticated
-              tomatoes are more nutritious than the ones we eat at present.
+
+              {renderText(
+                " And they have done it better in some ways, as the re-domesticated tomatoes are more nutritious than the ones we eat at present."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
-              This approach relies on the revolutionary CRISPR genome editing
-              technique, in which changes are deliberately made to the DNA of a
-              living cell, allowing genetic material to be added, removed or
-              altered. The technique could not only improve existing crops, but
-              could also be used to turn thousands of wild plants into useful
-              and appealing foods. In fact, a third team in the US has already
-              begun to do this with a relative of the tomato called the
-              groundcherry.
+              {renderText(
+                "This approach relies on the revolutionary CRISPR genome editing technique, in which changes are deliberately made to the DNA of a living cell, allowing genetic material to be added, removed or altered."
+              )}
+              {renderText(
+                " The technique could not only improve existing crops, but could also be used to turn thousands of wild plants into useful and appealing foods."
+              )}
+              {renderText(
+                " In fact, a third team in the US has already begun to do this with a relative of the tomato called the groundcherry."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
-              This fast-track domestication could help make the world's food
-              supply healthier and far more resistant to diseases, such as the
-              rust fungus devastating wheat crops.
+              {renderText(
+                "This fast-track domestication could help make the world's food supply healthier and far more resistant to diseases, such as the rust fungus devastating wheat crops."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
-              "This could transform what we eat," says Jorg Kudla at the
-              University of Munster in Germany, a member of the Brazilian team.
+              {renderText(
+                '"This could transform what we eat," says Jorg Kudla at the University of Munster in Germany, a member of the Brazilian team.'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "There are 50,000 edible plants in the world, but 90 percent of
-                our energy comes from just 15 crops."
+                {renderText(
+                  '"There are 50,000 edible plants in the world, but 90 percent of our energy comes from just 15 crops.'
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     23
                   </span>
                 )}
               </span>
             </p>
+
+            <br />
+
             <p className="text-lg">
-              "We can now mimic the known domestication course of major crops
-              like rice, maize, sorghum or others," says Caixia Gao of the
-              Chinese Academy of Sciences in Beijing. "Then we might try to
-              domesticate plants that have never been domesticated."
+              {renderText(
+                '"We can now mimic the known domestication course of major crops like rice, maize, sorghum or others," says Caixia Gao of the Chinese Academy of Sciences in Beijing.'
+              )}
+              {renderText(
+                ' "Then we might try to domesticate plants that have never been domesticated."'
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">B</p>
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              Wild tomatoes, which are native to the Andes region in South
-              America, produce pea-sized fruits. Over many generations, peoples
-              such as the Aztecs and Incas transformed the plant by selecting
-              and breeding plants with mutations* in their genetic structure,
-              which resulted in desirable traits such as larger fruit.
+              {renderText(
+                "Wild tomatoes, which are native to the Andes region in South America, produce pea-sized fruits."
+              )}
+              {renderText(
+                " Over many generations, peoples such as the Aztecs and Incas transformed the plant by selecting and breeding plants with mutations in their genetic structure, which resulted in desirable traits such as larger fruit."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But every time a single plant with a mutation is taken from a
-                larger population for breeding, much genetic diversity is lost.
+                {renderText(
+                  "But every time a single plant with a mutation is taken from a larger population for breeding, much genetic diversity is lost."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     15
                   </span>
                 )}
               </span>
+
+              {renderText(
+                " And sometimes the desirable mutations come with less desirable traits."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                And sometimes the desirable mutations come with less desirable
-                traits. For instance, the tomato strains grown for supermarkets
-                have lost much of their flavour.
+                {renderText(
+                  " For instance, the tomato strains grown for supermarkets have lost much of their flavour."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     24
                   </span>
                 )}
               </span>
             </p>
+
+            <br />
+
             <p className="text-lg">
-              By comparing the genomes of modern plants to those of their wild
-              relatives, biologists have been working out what genetic changes
-              occurred as plants were domesticated. The teams in Brazil and
-              China have now used this knowledge to reintroduce these changes
-              from scratch while maintaining or even enhancing the desirable
-              traits of wild strains.
+              {renderText(
+                "By comparing the genomes of modern plants to those of their wild relatives, biologists have been working out what genetic changes occurred as plants were domesticated."
+              )}
+              {renderText(
+                " The teams in Brazil and China have now used this knowledge to reintroduce these changes from scratch while maintaining or even enhancing the desirable traits of wild strains."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">C</p>
+            {/* ===================== C ===================== */}
             <p className="text-lg">
+              {renderText("Kudla's team made six changes altogether.")}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Kudla's team made six changes altogether. For instance, they
-                tripled the size of fruit by editing a gene called FRUIT WEIGHT,
-                and increased the number of tomatoes per truss by editing
-                another called MULTIFLORA.
+                {renderText(
+                  " For instance, they tripled the size of fruit by editing a gene called FRUIT WEIGHT, and increased the number of tomatoes per truss by editing another called MULTIFLORA."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     25
                   </span>
                 )}
               </span>
             </p>
+
+            <br />
+
             <p className="text-lg">
-              While the historical domestication of tomatoes reduced levels of
-              the red pigment lycopene - thought to have potential health
-              benefits - the team in Brazil managed to boost it instead. The
-              wild tomato has twice as much lycopene as cultivated ones; the
-              newly domesticated one has five times as much.
+              {renderText(
+                "While the historical domestication of tomatoes reduced levels of the red pigment lycopene, thought to have potential health benefits, the team in Brazil managed to boost it instead."
+              )}
+              {renderText(
+                " The wild tomato has twice as much lycopene as cultivated ones; the newly domesticated one has five times as much."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "They are quite tasty," says Kudla.
+                {renderText('"They are quite tasty," says Kudla.')}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     18
                   </span>
                 )}
               </span>
-              "A little bit strong. And very aromatic."
+              {renderText(' "A little bit strong. And very aromatic."')}
             </p>
+
+            <br />
+
             <p className="text-lg">
-              The team in China re-domesticated several strains of wild tomatoes
-              with desirable traits lost in domesticated tomatoes.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                In this way they managed to create a strain resistant to a
-                common disease called bacterial spot race, which can devastate
-                yields.
+                {renderText(
+                  "The team in China re-domesticated several strains of wild tomatoes with desirable traits lost in domesticated tomatoes."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     14
                   </span>
                 )}
               </span>
+
+              {renderText(
+                " They also created another strain that is more salt tolerant and has higher levels of vitamin C."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                They also created another strain that is more salt tolerant -
-                and has higher levels of vitamin C.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     26
                   </span>
                 )}
@@ -414,31 +454,35 @@ const Reading2Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">D</p>
+            {/* ===================== D ===================== */}
             <p className="text-lg">
-              Meanwhile, Joyce Van Eck at the Boyce Thompson Institute in New
-              York state decided to use the same approach to domesticate the
-              groundcherry or goldenberry ("Physalis pruinosa") for the first
-              time. This fruit looks similar to the closely related Cape
-              gooseberry ("Physalis peruviana").
+              {renderText(
+                "Meanwhile, Joyce Van Eck at the Boyce Thompson Institute in New York state decided to use the same approach to domesticate the groundcherry or goldenberry for the first time."
+              )}
+              {renderText(
+                " This fruit looks similar to the closely related Cape gooseberry."
+              )}
             </p>
+
+            <br />
+
             <p className="text-lg">
-              Groundcherries are already sold to a limited extent in the US but
-              they are hard to produce because the plant has a sprawling growth
-              habit and the small fruits fall off the branches when ripe. Van
-              Eck's team has edited the plants to increase fruit size, make
-              their growth more compact and to stop fruits dropping.
+              {renderText(
+                "Groundcherries are already sold to a limited extent in the US but they are hard to produce because the plant has a sprawling growth habit and the small fruits fall off the branches when ripe."
+              )}
+              {renderText(
+                ' "There\'s potential for this to be a commercial crop," says Van Eck.'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "There's potential for this to be a commercial crop," says Van
-                Eck. But she adds that taking the work further would be
-                expensive because of the need to pay for a licence for the
-                CRISPR technology and get regulatory approval.
+                {renderText(
+                  "But she adds that taking the work further would be expensive because of the need to pay for a licence for the CRISPR technology and get regulatory approval."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     22
                   </span>
                 )}
@@ -447,78 +491,79 @@ const Reading2Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">E</p>
+            {/* ===================== E ===================== */}
             <p className="text-lg">
-              This approach could boost the use of many obscure plants, says
-              Jonathan Jones of the Sainsbury Lab in the UK.
+              {renderText(
+                "This approach could boost the use of many obscure plants, says Jonathan Jones of the Sainsbury Lab in the UK."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But it will be hard for new foods to grow so popular with
-                farmers and consumers that they become new staple crops, he
-                thinks.
+                {renderText(
+                  "But it will be hard for new foods to grow so popular with farmers and consumers that they become new staple crops, he thinks"
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     20
                   </span>
                 )}
               </span>
             </p>
+
+            <br />
+
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The three teams already have their eye on other plants that
-                could be "catapulted into the mainstream", including foxtail,
-                oat-grass and cowpea.
+                {renderText(
+                  "The three teams already have their eye on other plants that could be catapulted into the mainstream."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     16
                   </span>
                 )}
               </span>
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                By choosing wild plants that are drought or heat tolerant, says
-                Gao, we could create crops that will thrive even as the planet
-                warms.
+                {renderText(
+                  " By choosing wild plants that are drought or heat tolerant, we could create crops that will thrive even as the planet warms."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     19
                   </span>
                 )}
               </span>
             </p>
+
+            <br />
+
             <p className="text-lg">
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But Kudla didn't want to reveal which species were in his team's
-                sights, because CRISPR has made the process so easy.
+                {" "}
+                {renderText(
+                  "But Kudla did not want to reveal which species were in his team's sights, because CRISPR has made the process so easy."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     21
                   </span>
                 )}
               </span>
-              "Any one with the right skills could go to their lab and do this."
-            </p>
-
-            <br />
-
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg italic">
-              * mutations: changes in an organism's genetic structure that can
-              be passed down to later generations
             </p>
           </div>
 
@@ -547,16 +592,20 @@ const Reading2Part22022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 14–18 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 14–18</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 14–18")}
+          </h2>
 
           <p className="mb-4">
-            Reading Passage 2 has five sections, A–E.
+            {renderText("Reading Passage 2 has five sections, A–E.")}
             <br />
-            Which section contains the following information?
+            {renderText("Which section contains the following information?")}
             <br />
-            Choose the correct letter, A–E, in boxes 14–18 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–E, in boxes 14–18 on your answer sheet."
+            )}
             <br />
-            NB You may use any letter more than once.
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -574,7 +623,8 @@ const Reading2Part22022 = () => {
               return (
                 <li key={qNum} className="flex items-center">
                   <span>
-                    <span className="font-bold">{num}</span> {rest.join(" ")}
+                    <span className="font-bold">{renderText(num)}</span>{" "}
+                    {renderText(rest.join(" "))}
                   </span>
                   <select
                     className="border rounded px-2 py-1 w-15"
@@ -582,11 +632,11 @@ const Reading2Part22022 = () => {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </option>
                     {options.map((opt) => (
                       <option key={opt} value={opt}>
-                        {opt}
+                        {renderText(opt)}
                       </option>
                     ))}
                   </select>
@@ -596,17 +646,24 @@ const Reading2Part22022 = () => {
           </ul>
 
           {/* ================= Questions 19–23 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 19–23</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 19–23")}
+          </h2>
 
           <p className="mb-4">
-            Look at the following statements (Questions 19–23) and the list of
-            researchers below.
+            {renderText(
+              "Look at the following statements (Questions 19–23) and the list of researchers below."
+            )}
             <br />
-            Match each statement with the correct researcher, A–D.
+            {renderText(
+              "Match each statement with the correct researcher, A–D."
+            )}
             <br />
-            Choose the correct letter, A–D, next to Questions 19–23.
+            {renderText(
+              "Choose the correct letter, A–D, next to Questions 19–23."
+            )}
             <br />
-            NB You may use any letter more than once.
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
           <div className="space-y-2 border p-4 max-w-[220px] mb-4 text-lg mx-auto">
@@ -616,7 +673,7 @@ const Reading2Part22022 = () => {
               "C. Joyce Van Eck",
               "D. Jonathan Jones",
             ].map((opt) => (
-              <p key={opt}>{opt}</p>
+              <p key={opt}>{renderText(opt)}</p>
             ))}
           </div>
 
@@ -634,7 +691,8 @@ const Reading2Part22022 = () => {
               return (
                 <li key={qNum} className="flex gap-2 items-center">
                   <span>
-                    <span className="font-bold">{num}</span> {rest.join(" ")}
+                    <span className="font-bold">{renderText(num)}</span>{" "}
+                    {renderText(rest.join(" "))}
                   </span>
                   <select
                     className="border rounded px-2 py-1  w-15"
@@ -642,11 +700,11 @@ const Reading2Part22022 = () => {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </option>
                     {options.map((opt) => (
                       <option key={opt} value={opt}>
-                        {opt}
+                        {renderText(opt)}
                       </option>
                     ))}
                   </select>
@@ -656,49 +714,45 @@ const Reading2Part22022 = () => {
           </ul>
 
           {/* ================= Questions 24–26 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 24–26</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 24–26")}
+          </h2>
 
           <p className="mb-4">
-            Complete the sentences below.
+            {renderText("Complete the sentences below.")}
             <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
+            {renderText("Choose ")}
+            <strong>{renderText("ONE WORD ONLY")}</strong>
+            {renderText(" from the passage for each answer.")}
             <br />
-            Write your answers in boxes 24–26 on your answer sheet.
-          </p>
-
-          {/* ================= Questions 24–26 ================= */}
-          <h2 className="text-lg font-bold mb-2">Questions 24–26</h2>
-
-          <p className="mb-2">Complete the sentences below.</p>
-          <p className="mb-2">
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
-          </p>
-          <p className="mb-4">
-            Write your answers in boxes 24–26 on your answer sheet.
+            {renderText(
+              "Write your answers in boxes 24–26 on your answer sheet."
+            )}
           </p>
 
           <div className="space-y-4 text-lg">
             {/* Question 24 */}
             <div className="flex items-center flex-wrap gap-2">
-              <span className="font-bold">24</span>
-              <span>An undesirable trait such as loss of</span>
+              <span className="font-bold">{renderText("24")}</span>
+              <span>{renderText("An undesirable trait such as loss of")}</span>
               <input
                 type="text"
                 placeholder="24"
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(24, e.target.value)}
               />
-              <span>may be caused by a mutation in a tomato gene.</span>
+              <span>
+                {renderText("may be caused by a mutation in a tomato gene.")}
+              </span>
             </div>
 
             {/* Question 25 */}
             <div className="flex items-center flex-wrap gap-2">
-              <span className="font-bold">25</span>
+              <span className="font-bold">{renderText("25")}</span>
               <span>
-                By modifying one gene in a tomato plant, researchers made the
-                tomato three times its original
+                {renderText(
+                  "By modifying one gene in a tomato plant, researchers made the tomato three times its original"
+                )}
               </span>
               <input
                 type="text"
@@ -706,13 +760,15 @@ const Reading2Part22022 = () => {
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(25, e.target.value)}
               />
-              <span>.</span>
+              <span>{renderText(".")}</span>
             </div>
 
             {/* Question 26 */}
             <div className="flex items-center flex-wrap gap-2">
-              <span className="font-bold">26</span>
-              <span>A type of tomato which was not badly affected by</span>
+              <span className="font-bold">{renderText("26")}</span>
+              <span>
+                {renderText("A type of tomato which was not badly affected by")}
+              </span>
               <input
                 type="text"
                 placeholder="26"
@@ -720,11 +776,13 @@ const Reading2Part22022 = () => {
                 onChange={(e) => handleInputChange(26, e.target.value)}
               />
               <span>
-                , and was rich in vitamin C, was produced by a team of
-                researchers in China.
+                {renderText(
+                  ", and was rich in vitamin C, was produced by a team of researchers in China."
+                )}
               </span>
             </div>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -732,23 +790,25 @@ const Reading2Part22022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (14–26)
+                    {renderText("All Answers (14–26)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -780,23 +840,29 @@ const Reading2Part22022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

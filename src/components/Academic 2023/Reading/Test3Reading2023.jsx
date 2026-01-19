@@ -213,7 +213,7 @@ const Test3Reading2023 = () => {
               {renderText("Materials to take us beyond concrete")}
             </h1>
 
-            <p className="text-lg">
+            <p className="text-lg font-bold text-center">
               {renderText(
                 "Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide - alternatives are being developed."
               )}
@@ -285,7 +285,7 @@ const Test3Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "'Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.'"
+                  "'But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings'"
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -401,7 +401,7 @@ const Test3Reading2023 = () => {
             <p className="text-lg font-bold">{renderText("F")}</p>
             <p className="text-lg">
               {renderText(
-                "Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver."
+                "Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver.Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia."
               )}
               <span
                 className={`ml-2 ${
@@ -409,7 +409,7 @@ const Test3Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia."
+                  "According to Cheeseman, all these factors together make concrete hard to beat"
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -423,7 +423,7 @@ const Test3Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings."
+                  "wood as a real alternative to concrete in constructing tall buildings."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -439,7 +439,7 @@ const Test3Reading2023 = () => {
             <p className="text-lg font-bold">{renderText("G")}</p>
             <p className="text-lg">
               {renderText(
-                "Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way."
+                " Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way."
               )}
               <span
                 className={`ml-2 ${
@@ -447,25 +447,11 @@ const Test3Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions."
+                  "Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix.1Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix.1Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
+                    1
                   </span>
                 )}
               </span>
@@ -507,13 +493,17 @@ const Test3Reading2023 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 1–4 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 1–4</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–4")}
+          </h2>
           <p className="mb-4">
-            Reading Passage 1 has eight sections, A-H.
+            {renderText("Reading Passage 1 has eight sections, A-H.")}
             <br />
-            Which section contains the following information?
+            {renderText("Which section contains the following information?")}
             <br />
-            Choose the correct letter, A-H, in boxes 1-4 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A-H, in boxes 1-4 on your answer sheet."
+            )}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -524,16 +514,18 @@ const Test3Reading2023 = () => {
               "the belief that more high-rise wooden buildings are needed before wood can be regarded as a viable construction material",
             ].map((q, idx) => (
               <li key={idx} className="flex items-center flex-wrap gap-2">
-                <span className="font-bold mr-2">{idx + 1}.</span>
-                <span>{q}</span>
+                <span className="font-bold mr-2">
+                  {renderText((idx + 1).toString())}.
+                </span>
+                <span>{renderText(q)}</span>
                 <select
                   className="border-1 rounded px-2 py-1 w-15"
                   onChange={(e) => handleInputChange(idx + 1, e.target.value)}
                 >
-                  <option value="">{idx + 1}</option>
+                  <option value="">{renderText((idx + 1).toString())}</option>
                   {["A", "B", "C", "D", "E", "F", "G", "H"].map((letter) => (
                     <option key={letter} value={letter}>
-                      {letter}
+                      {renderText(letter)}
                     </option>
                   ))}
                 </select>
@@ -542,29 +534,43 @@ const Test3Reading2023 = () => {
           </ul>
 
           {/* ================= Questions 5–8 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 5–8</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 5–8")}
+          </h2>
           <p className="mb-4">
-            Complete the summary below.
+            {renderText("Complete the summary below.")}
             <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
+            {renderText("Choose ")}
+            <strong>{renderText("ONE WORD ONLY")}</strong>{" "}
+            {renderText("from the passage for each answer.")}
             <br />
-            Write your answers in boxes 5-8 on your answer sheet.
+            {renderText(
+              "Write your answers in boxes 5-8 on your answer sheet."
+            )}
           </p>
 
           <div className="w-full border shadow-md p-6">
             <h1 className="text-2xl font-bold mb-6 text-center">
-              Making buildings with wood
+              {renderText("Making buildings with wood")}
             </h1>
 
             <div className="space-y-6 text-lg">
               <p>
-                Wood is a traditional building material, but current
-                environmental concerns are encouraging
+                {renderText(
+                  "Wood is a traditional building material, but current environmental concerns are encouraging"
+                )}
                 <span className="inline-flex items-center mx-1">
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full font-bold">
+                  <button
+                    onClick={() => toggleButton(5)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[5]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
                     5
-                  </span>
+                  </button>
+
                   <input
                     type="text"
                     className="border rounded px-2 py-1 w-32 text-center ml-2"
@@ -572,12 +578,20 @@ const Test3Reading2023 = () => {
                     onChange={(e) => handleInputChange(5, e.target.value)}
                   />
                 </span>
-                to use wood in modern construction projects. Using wood,
-                however, has its challenges. For example, as
+                {renderText(
+                  "to use wood in modern construction projects. Using wood, however, has its challenges. For example, as"
+                )}
                 <span className="inline-flex items-center mx-1">
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full font-bold">
+                  <button
+                    onClick={() => toggleButton(6)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[6]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
                     6
-                  </span>
+                  </button>
                   <input
                     type="text"
                     className="border rounded px-2 py-1 w-32 text-center ml-2"
@@ -585,18 +599,26 @@ const Test3Reading2023 = () => {
                     onChange={(e) => handleInputChange(6, e.target.value)}
                   />
                 </span>
-                in the atmosphere enters wood, it increases in size.
+                {renderText(
+                  "in the atmosphere enters wood, it increases in size."
+                )}
               </p>
 
               <p>
-                In addition, wood is prone to pests and the risk of fire is
-                greater. However, wood can be turned into a better construction
-                material if it is treated and combined with other materials. In
-                one process,
+                {renderText(
+                  "In addition, wood is prone to pests and the risk of fire is greater. However, wood can be turned into a better construction material if it is treated and combined with other materials. In one process,"
+                )}
                 <span className="inline-flex items-center mx-1">
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full font-bold">
+                  <button
+                    onClick={() => toggleButton(7)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[7]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
                     7
-                  </span>
+                  </button>
                   <input
                     type="text"
                     className="border rounded px-2 py-1 w-32 text-center ml-2"
@@ -604,18 +626,26 @@ const Test3Reading2023 = () => {
                     onChange={(e) => handleInputChange(7, e.target.value)}
                   />
                 </span>
-                of solid wood are glued together to create building blocks.
-                These blocks are lighter than concrete and steel but equal them
-                in strength.
+                {renderText(
+                  "of solid wood are glued together to create building blocks. These blocks are lighter than concrete and steel but equal them in strength."
+                )}
               </p>
 
               <p>
-                Experts say that wooden buildings are an improvement on those
-                made of concrete and steel in terms of the
+                {renderText(
+                  "Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the"
+                )}
                 <span className="inline-flex items-center mx-1">
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full font-bold">
+                  <button
+                    onClick={() => toggleButton(8)}
+                    className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                      activeButtons[8]
+                        ? "bg-yellow-400 border-yellow-500"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
                     8
-                  </span>
+                  </button>
                   <input
                     type="text"
                     className="border rounded px-2 py-1 w-32 text-center ml-2"
@@ -623,33 +653,40 @@ const Test3Reading2023 = () => {
                     onChange={(e) => handleInputChange(8, e.target.value)}
                   />
                 </span>
-                with which they can be constructed and how much noise is
-                generated by the process.
+                {renderText(
+                  "with which they can be constructed and how much noise is generated by the process."
+                )}
               </p>
             </div>
           </div>
 
           {/* ================= Questions 9–13 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 9–13</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 9–13")}
+          </h2>
           <p className="mb-4">
-            Look at the following statements (Questions 9-13) and the list of
-            people below.
+            {renderText(
+              "Look at the following statements (Questions 9-13) and the list of people below."
+            )}
             <br />
-            Match each statement with the correct person, A-D.
+            {renderText("Match each statement with the correct person, A-D.")}
             <br />
-            Choose the correct letter, A-D, next to Questions 9-13.
+            {renderText(
+              "Choose the correct letter, A-D, next to Questions 9-13."
+            )}
             <br />
-            <strong>NB:</strong> You may use any letter more than once.
+            <strong>{renderText("NB:")}</strong>{" "}
+            {renderText("You may use any letter more than once.")}
           </p>
 
           <div className="mb-4 space-y-2 p-4 mt-2 border max-w-[250px] mx-auto">
             <p>
-              <strong>List of People</strong>
+              <strong>{renderText("List of People")}</strong>
             </p>
-            <p>A. Chris Cheeseman</p>
-            <p>B. Markus Mannström</p>
-            <p>C. Anna Surgenor</p>
-            <p>D. Felix Preston and Johanna Lehne</p>
+            <p>{renderText("A. Chris Cheeseman")}</p>
+            <p>{renderText("B. Markus Mannström")}</p>
+            <p>{renderText("C. Anna Surgenor")}</p>
+            <p>{renderText("D. Felix Preston and Johanna Lehne")}</p>
           </div>
 
           <div className="mt-4">
@@ -662,16 +699,18 @@ const Test3Reading2023 = () => {
                 "The environmental damage caused by concrete is due to it being produced in large quantities",
               ].map((q, idx) => (
                 <li key={idx} className="flex items-center flex-wrap gap-2">
-                  <span className="font-bold mr-2">{idx + 9}.</span>
-                  <span>{q}</span>
+                  <span className="font-bold mr-2">
+                    {renderText((idx + 9).toString())}.
+                  </span>
+                  <span>{renderText(q)}</span>
                   <select
                     className="border-1 rounded px-2 py-1 w-15"
                     onChange={(e) => handleInputChange(idx + 9, e.target.value)}
                   >
-                    <option value="">{idx + 9}</option>
+                    <option value="">{renderText((idx + 9).toString())}</option>
                     {["A", "B", "C", "D"].map((letter) => (
                       <option key={letter} value={letter}>
-                        {letter}
+                        {renderText(letter)}
                       </option>
                     ))}
                   </select>
@@ -679,6 +718,8 @@ const Test3Reading2023 = () => {
               ))}
             </ul>
           </div>
+
+          {/* ================= Submit / Result ================= */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -686,23 +727,25 @@ const Test3Reading2023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/10
+                    {renderText("Your Score:")} {score}/10
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–13)
+                    {renderText("All Answers (1–13)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -712,7 +755,6 @@ const Test3Reading2023 = () => {
                       const correctAnswer = correctAnswers[num]
                         ?.trim()
                         .toLowerCase();
-
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
                       const noAnswer = !userAnswer;
@@ -735,13 +777,19 @@ const Test3Reading2023 = () => {
                                 </span>
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
                               userAnswer
                             )}
@@ -749,7 +797,7 @@ const Test3Reading2023 = () => {
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
                             {correctAnswers[num]}
                           </p>

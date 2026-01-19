@@ -196,22 +196,14 @@ const Test4Reading2023 = () => {
           {/* Passage text */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Materials to take us beyond concrete")}
+              {renderText("Green roofs")}
             </h1>
-
-            <p className="text-lg">
-              {renderText(
-                "Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide - alternatives are being developed."
-              )}
-            </p>
-
-            <br />
 
             {/* Section A */}
             <p className="text-lg font-bold">{renderText("A")}</p>
             <p className="text-lg">
               {renderText(
-                "Concrete is the second most used substance in the global economy, after water - and one of the world's biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide."
+                "Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. More and more private companies and city authorities are investing in green roofs, drawn to their wide-ranging benefits. Among the benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even growing food."
               )}
               <span
                 className={`ml-2 ${
@@ -219,7 +211,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live."
+                  "These increasingly radical urban designs can help cities adapt to the monumental problems they face, such as access to resources and a lack of green space due to development."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -233,7 +225,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming."
+                  "But the involvement of city authorities, businesses and other institutions is crucial to ensuring their success - as is research investigating different options to suit the variety of rooftop spaces found in cities."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -247,7 +239,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modern life for many years."
+                  "The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. London is home to much of the UK's green roof market, mainly due to forward-thinking policies such as the London Plan, which has paved the way to more than doubling the area of green roofs in the capital."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -263,7 +255,7 @@ const Test4Reading2023 = () => {
             <p className="text-lg font-bold">{renderText("B")}</p>
             <p className="text-lg">
               {renderText(
-                "The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used."
+                "Ongoing research is showcasing how green roofs in cities can integrate with 'living walls': environmentally friendly walls which are partially or completely covered with greenery, including a growing medium, such as soil or water."
               )}
               <span
                 className={`ml-2 ${
@@ -271,11 +263,25 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "'Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. But it is the scale on which it is used that makes it high carbon. The sheer scale of manufacture is so huge, that is the issue.'"
+                  "Research also indicates that green roofs can be integrated with drainage systems on the ground, such as street trees, so that the water is managed better and the built environment is made more sustainable."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     4
+                  </span>
+                )}
+              </span>
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "There is also evidence to demonstrate the social value of green roofs. Doctors are increasingly prescribing time spent gardening outdoors for patients dealing with anxiety and depression. And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and help people avoid obesity."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    5
                   </span>
                 )}
               </span>
@@ -287,7 +293,7 @@ const Test4Reading2023 = () => {
             <p className="text-lg font-bold">{renderText("C")}</p>
             <p className="text-lg">
               {renderText(
-                "Not only are the ingredients of concrete relatively cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard."
+                "In North America, green roofs have become mainstream, with a wide array of expansive, accessible and food-producing roofs installed in buildings. Again, city leaders and authorities have helped push the movement forward - only recently, San Francisco, USA, created a policy requiring new buildings to have green roofs. Toronto, Canada, has policies dating from the 1990s, encouraging the development of urban farms on rooftops."
               )}
               <span
                 className={`ml-2 ${
@@ -295,21 +301,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    5
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "According to Cheeseman, all these factors together make concrete hard to beat. 'Concrete is amazing stuff. Making anything with similar properties is going to be very difficult.'"
+                  "These countries also benefit from having newer buildings than in many parts of the world, which makes it easier to install green roofs. Being able to keep enough water at roof height and distribute it right across the rooftop is crucial to maintaining the plants on any green roof - especially on 'edible roofs' where fruit and vegetables are farmed."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -317,23 +309,13 @@ const Test4Reading2023 = () => {
                   </span>
                 )}
               </span>
-            </p>
-
-            <br />
-
-            {/* Section D */}
-            <p className="text-lg font-bold">{renderText("D")}</p>
-            <p className="text-lg">
-              {renderText(
-                "A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but climate change is driving architects to turn to treated timber as a possible resource."
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
                 {renderText(
-                  "Recent years have seen the emergence of tall buildings constructed almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings."
+                  "And it's much easier to do this in newer buildings, which can typically hold greater weight, than to retro-fit old ones. Having a stronger roof also makes it easier to grow a greater variety of plants, since the soil can be deeper."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -345,11 +327,11 @@ const Test4Reading2023 = () => {
 
             <br />
 
-            {/* Section E */}
-            <p className="text-lg font-bold">{renderText("E")}</p>
+            {/* Section D */}
+            <p className="text-lg font-bold">{renderText("D")}</p>
             <p className="text-lg">
               {renderText(
-                "Using wood to construct buildings, however, is not straightforward. Wood expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire."
+                "For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. Those responsible for maintaining buildings may have to acquire new skills, such as landscaping, and in some cases, volunteers may be needed to help out."
               )}
               <span
                 className={`ml-2 ${
@@ -357,7 +339,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks."
+                  "Other considerations include installing drainage paths, meeting health and safety requirements and perhaps allowing access for the public, as well as planning restrictions and disruption from regular activities in and around the buildings during installation."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -371,7 +353,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "This material is light but has the strength of concrete and steel. Construction experts say that wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter."
+                  "To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important. The term 'natural capital' has been developed to explain the economic value of nature; for example, measuring the money saved by installing natural solutions to protect against flood damage, adapt to climate change or help people lead healthier and happier lives."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -383,11 +365,11 @@ const Test4Reading2023 = () => {
 
             <br />
 
-            {/* Section F */}
-            <p className="text-lg font-bold">{renderText("F")}</p>
+            {/* Section E */}
+            <p className="text-lg font-bold">{renderText("E")}</p>
             <p className="text-lg">
               {renderText(
-                "Stora Enso is Europe's biggest supplier of cross-laminated timber, and its vice-president Markus Mannström reports that the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver."
+                "As the expertise about green roofs grows, official standards have been developed to ensure that they are designed, constructed and maintained properly, and function well. Improvements in the science and technology underpinning green roof development have also led to new variations in the concept."
               )}
               <span
                 className={`ml-2 ${
@@ -395,7 +377,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia."
+                  "For example, 'blue roofs' enable buildings to hold water over longer periods of time, rather than draining it away quickly - crucial in times of heavier rainfall. There are also combinations of green roofs with solar panels, and 'brown roofs' which are wilder in nature and maximise biodiversity."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -409,7 +391,7 @@ const Test4Reading2023 = () => {
                 }`}
               >
                 {renderText(
-                  "Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings."
+                  "If the trend continues, it could create new jobs and a more vibrant and sustainable local food economy - alongside many other benefits. There are still barriers to overcome, but the evidence so far indicates that green roofs have the potential to transform cities and help them function sustainably long into the future."
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
@@ -417,54 +399,6 @@ const Test4Reading2023 = () => {
                   </span>
                 )}
               </span>
-            </p>
-
-            <br />
-
-            {/* Section G */}
-            <p className="text-lg font-bold">{renderText("G")}</p>
-            <p className="text-lg">
-              {renderText(
-                "Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. Fly ash, a byproduct of coal-burning power plants, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. Iron-ore slag, a byproduct of the iron-ore smelting process, can be used in a similar way."
-              )}
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    12
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {renderText(
-                  "But Anna Surgenor, of the UK's Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward."
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    13
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <br />
-
-            {/* Section H */}
-            <p className="text-lg font-bold">{renderText("H")}</p>
-            <p className="text-lg">
-              {renderText(
-                "While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK's Royal Institute of International Affairs reached the conclusion, 'Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.'"
-              )}
             </p>
           </div>
 
@@ -493,15 +427,20 @@ const Test4Reading2023 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 1–5 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 1–5</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–5")}
+          </h2>
+
           <p className="mb-4">
-            Reading Passage 1 has five paragraphs, A–E.
+            {renderText("Reading Passage 1 has five paragraphs, A–E.")}
             <br />
-            Which paragraph contains the following information?
+            {renderText("Which paragraph contains the following information?")}
             <br />
-            Choose the correct letter, A–E, in boxes 1–5 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–E, in boxes 1–5 on your answer sheet."
+            )}
             <br />
-            NB: You may use any letter more than once.
+            {renderText("NB: You may use any letter more than once.")}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -514,7 +453,7 @@ const Test4Reading2023 = () => {
             ].map((q, idx) => (
               <li key={idx} className="flex items-center flex-wrap gap-2">
                 <span className="font-bold mr-2">{idx + 1}.</span>
-                <span>{q}</span>
+                <span>{renderText(q)}</span>
                 <select
                   className="border rounded px-2 py-1 w-16"
                   onChange={(e) => handleInputChange(idx + 1, e.target.value)}
@@ -531,20 +470,27 @@ const Test4Reading2023 = () => {
           </ul>
 
           {/* ================= Questions 6–9 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 6–9</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 6–9")}
+          </h2>
+
           <p className="mb-4">
-            Complete the summary below.
+            {renderText("Complete the summary below.")}
             <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
+            {renderText(
+              "Choose ONE WORD ONLY from the passage for each answer."
+            )}
             <br />
-            Write your answers in boxes 6–9 on your answer sheet.
+            {renderText(
+              "Write your answers in boxes 6–9 on your answer sheet."
+            )}
           </p>
 
           <div className="border p-5">
             <h2 className="font-bold text-center text-xl mt-4">
-              Advantages of green roofs
+              {renderText("Advantages of green roofs")}
             </h2>
+
             <ul className="space-y-4 text-lg mt-4">
               {[
                 {
@@ -570,25 +516,29 @@ const Test4Reading2023 = () => {
               ].map((q, idx) => (
                 <li key={idx} className="flex items-center flex-wrap gap-2">
                   <span className="font-bold">{idx + 6}.</span>
-                  <span>{q.before}</span>
+                  <span>{renderText(q.before)}</span>
                   <input
                     type="text"
                     className="border rounded px-2 py-1 w-32"
                     onChange={(e) => handleInputChange(idx + 6, e.target.value)}
                   />
-                  <span>{q.after}</span>
+                  <span>{renderText(q.after)}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* ================= Questions 10–11 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 10–11</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 10–11")}
+          </h2>
+
           <p className="mb-4">
-            Choose <strong>TWO letters, A–E</strong>.
+            {renderText("Choose TWO letters, A–E.")}
             <br />
-            Which TWO advantages of using newer buildings for green roofs are
-            mentioned in Paragraph C of the passage?
+            {renderText(
+              "Which TWO advantages of using newer buildings for green roofs are mentioned in Paragraph C of the passage?"
+            )}
           </p>
 
           <div className="space-y-2">
@@ -625,12 +575,16 @@ const Test4Reading2023 = () => {
           </div>
 
           {/* ================= Questions 12–13 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 12–13</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 12–13")}
+          </h2>
+
           <p className="mb-4">
-            Choose <strong>TWO letters, A–E</strong>.
+            {renderText("Choose TWO letters, A–E.")}
             <br />
-            Which TWO aims of new variations on the concept of green roofs are
-            mentioned in Paragraph E of the passage?
+            {renderText(
+              "Which TWO aims of new variations on the concept of green roofs are mentioned in Paragraph E of the passage?"
+            )}
           </p>
 
           <div className="space-y-2">

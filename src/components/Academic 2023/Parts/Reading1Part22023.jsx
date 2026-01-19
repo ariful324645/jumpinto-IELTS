@@ -171,291 +171,171 @@ const Reading1Part22023 = () => {
           </div>
 
           {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Forest management in Pennsylvania, USA
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("Forest management in Pennsylvania, USA")}
             </h1>
-            <p className="text-lg text-center font-medium mb-6">
-              How managing low-quality wood (also known as low-use wood) for
-              bioenergy can encourage sustainable forest management
+            <p className="text-lg my-5">
+              {renderText(
+                "How managing low-quality wood (also known as low-use wood) for bioenergy can encourage sustainable forest management"
+              )}
             </p>
 
-            <p className="text-lg font-bold">A</p>
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
             <p className="text-lg">
-              A tree's 'value' depends on several factors including its species,
-              size, form, condition, quality, function, and accessibility, and
-              depends on the management goals for a given forest.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The same tree can be valued very differently by each person who
-                looks at it.
+                {renderText(
+                  "A tree's 'value' depends on several factors including its species, size, form, condition, quality, function, and accessibility, and depends on the management goals for a given forest."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    15
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("15")}
                   </span>
                 )}
               </span>
-              A large, straight black cherry tree has high value as timber to be
-              cut into logs or made into furniture, but for a landowner more
-              interested in wildlife habitat, the real value of that stem (or
-              trunk) may be the food it provides to animals. Likewise, if the
-              tree suffers from black knot disease, its value for timber
-              decreases, but to a woodworker interested in making bowls, it
-              brings an opportunity for a unique and beautiful piece of art.
+              {renderText(
+                " The same tree can be valued very differently by each person who looks at it. A large, straight black cherry tree has high value as timber to be cut into logs or made into furniture, but for a landowner more interested in wildlife habitat, the real value of that stem (or trunk) may be the food it provides to animals. Likewise, if the tree suffers from black knot disease, its value for timber decreases, but to a woodworker interested in making bowls, it brings an opportunity for a unique and beautiful piece of art."
+              )}
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">B</p>
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
             <p className="text-lg">
-              In the past, Pennsylvania landowners were solely interested in the
-              value of their trees as high-quality timber. The norm was to
-              remove the stems of highest quality and leave behind poorly formed
-              trees that were not as well suited to the site where they grew.
-              This practice, called 'high-grading', has left a legacy of
-              'low-use wood' in the forests.
+              {renderText(
+                "In the past, Pennsylvania landowners were solely interested in the value of their trees as high-quality timber. The norm was to remove the stems of highest quality and leave behind poorly formed trees that were not as well suited to the site where they grew."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Some people even call these 'junk trees', and they are abundant
-                in Pennsylvania.
+                {renderText(
+                  "This practice, called 'high-grading', has left a legacy of 'low-use wood' in the forests. Some people even call these 'junk trees', and they are abundant in Pennsylvania."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    18
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("18")}
                   </span>
                 )}
               </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                These trees have lower economic value for traditional timber
-                markets, compete for growth with higher-value trees, shade out
-                desirable regeneration and decrease the health of a stand*
-                leaving it more vulnerable to poor weather and disease.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    14
-                  </span>
-                )}
-              </span>
-              Management that specifically targets low-use wood can help
-              landowners manage these forest health issues, and wood energy
-              markets help promote this.
+              {renderText(
+                " These trees have lower economic value for traditional timber markets, compete for growth with higher-value trees, shade out desirable regeneration and decrease the health of a stand, leaving it more vulnerable to poor weather and disease. Management that specifically targets low-use wood can help landowners manage these forest health issues, and wood energy markets help promote this."
+              )}
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">C</p>
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
             <p className="text-lg">
-              Wood energy markets can accept less expensive wood material of
-              lower quality than would be suitable for traditional timber
-              markets. Most wood used for energy in Pennsylvania is used to
-              produce heat or electricity through combustion. Many schools and
-              hospitals use wood boiler systems to heat and power their
-              facilities, many homes are primarily heated with wood, and some
-              coal plants incorporate wood into their coal streams to produce
-              electricity. Wood can also be gasified for electrical generation
-              and can even be made into liquid fuels like ethanol and gasoline
-              for lorries and cars.
+              {renderText(
+                "Wood energy markets can accept less expensive wood material of lower quality than would be suitable for traditional timber markets. Most wood used for energy in Pennsylvania is used to produce heat or electricity through combustion. Many schools and hospitals use wood boiler systems to heat and power their facilities, many homes are primarily heated with wood, and some coal plants incorporate wood into their coal streams to produce electricity. Wood can also be gasified for electrical generation and can even be made into liquid fuels like ethanol and gasoline for lorries and cars."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                All these products are made primarily from low-use wood.
+                {renderText(
+                  "All these products are made primarily from low-use wood. Several tree- and plant-cutting approaches, which could greatly improve the long-term quality of a forest, focus strongly or solely on the use of wood for those markets."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    16
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("16")}
                   </span>
                 )}
               </span>
-              Several tree- and plant-cutting approaches, which could greatly
-              improve the long-term quality of a forest, focus strongly or
-              solely on the use of wood for those markets.
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">D</p>
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
             <p className="text-lg">
-              One such approach is called a Timber Stand Improvement (TSI) Cut.
-              In a TSI Cut, really poor-quality tree and plant material is cut
-              down to allow more space, light, and other resources to the
-              highest-valued stems that remain. Removing invasive plants might
-              be another primary goal of a TSI Cut. The stems that are left
-              behind might then grow in size and develop more foliage and larger
-              crowns or tops that produce more coverage for wildlife; they have
-              a better chance to regenerate in a less crowded environment. TSI
-              Cuts can be tailored to one farmer's specific management goals for
-              his or her land.
+              {renderText(
+                "One such approach is called a Timber Stand Improvement (TSI) Cut. In a TSI Cut, really poor-quality tree and plant material is cut down to allow more space, light, and other resources to the highest-valued stems that remain. Removing invasive plants might be another primary goal of a TSI Cut."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "The stems that are left behind might then grow in size and develop more foliage and larger crowns or tops that produce more coverage for wildlife; they have a better chance to regenerate in a less crowded environment. TSI Cuts can be tailored to one farmer's specific management goals for his or her land."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("17")}
+                  </span>
+                )}
+              </span>
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">E</p>
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
             <p className="text-lg">
-              Another approach that might yield a high amount of low-use wood is
-              a Salvage Cut. With the many pests and pathogens visiting forests
-              including hemlock wooly adelgid, Asian longhorned beetle, emerald
-              ash borer, and gypsy moth, to name just a few, it is important to
-              remember that those working in the forests can help ease these
-              issues through cutting procedures.
+              {renderText(
+                "Another approach that might yield a high amount of low-use wood is a Salvage Cut. With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald ash borer, and gypsy moth, to name just a few, it is important to remember that those working in the forests can help ease these issues through cutting procedures."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                These types of cut reduce the number of sick trees and seek to
-                manage the future spread of a pest problem.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    17
-                  </span>
+                {renderText(
+                  "These types of cut reduce the number of sick trees and seek to manage the future spread of a pest problem. They leave vigorous trees that have stayed healthy enough to survive the outbreak."
                 )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                They leave vigorous trees that have stayed healthy enough to
-                survive the outbreak.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    19
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("19")}
                   </span>
                 )}
               </span>
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">F</p>
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
             <p className="text-lg">
-              A Shelterwood Cut, which only takes place in a mature forest that
-              has already been thinned several times, involves removing all the
-              mature trees when other seedlings have become established.
+              {renderText(
+                "A Shelterwood Cut, which only takes place in a mature forest that has already been thinned several times, involves removing all the mature trees when other seedlings have become established. This then allows the forester to decide which tree species are regenerated. It leaves a young forest where all trees are at a similar point in their growth. It can also be used to develop a two-tier forest so that there are two harvests and the money that comes in is spread out over a decade or more."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                This then allows the forester to decide which tree species are
-                regenerated.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    21
-                  </span>
+                {renderText(
+                  "All these practices ensure sustainable forest management while maintaining biodiversity and ecosystem health."
                 )}
-              </span>
-              It leaves a young forest where all trees are at a similar point in
-              their growth.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                It can also be used to develop a two-tier forest so that there
-                are two harvests and the money that comes in is spread out over
-                a decade or more.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    20
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("20")}
                   </span>
                 )}
               </span>
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">G</p>
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">{renderText("G")}</h1>
             <p className="text-lg">
-              Thinnings and dense and dead wood removal for fire prevention also
-              center on the production of low-use wood.
+              {renderText(
+                "Thinnings and dense and dead wood removal for fire prevention also center on the production of low-use wood. However, it is important to remember that some retention of what many would classify as low-use wood is very important. The tops of trees that have been cut down should be left on the site so that their nutrients cycle back into the soil. In addition, trees with many cavities are extremely important habitats for insect predators like woodpeckers, bats and small mammals. They help control problem insects and increase the health and resilience of the forest."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                However, it is important to remember that some retention of what
-                many would classify as low-use wood is very important.
+                {renderText(
+                  "It is also important to remember that not all small trees are low-use. For example, many species like hawthorn provide food for wildlife. Finally, rare species of trees in a forest should also stay behind as they add to its structural diversity."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    22
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
                   </span>
                 )}
               </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                The tops of trees that have been cut down should be left on the
-                site so that their nutrients cycle back into the soil.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    23
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                In addition, trees with many cavities are extremely important
-                habitats for insect predators like woodpeckers, bats and small
-                mammals.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    24
-                  </span>
-                )}
-              </span>
-              They help control problem insects and increase the health and
-              resilience of the forest.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                It is also important to remember that not all small trees are
-                low-use. For example, many species like hawthorn provide food
-                for wildlife.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    25
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Finally, rare species of trees in a forest should also stay
-                behind as they add to its structural diversity.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    26
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg italic">
-              * Stand: An area covered with trees that have common features
-              (e.g. size)
             </p>
           </div>
 
@@ -484,15 +364,19 @@ const Reading1Part22023 = () => {
         {/* right div */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ================= Questions 14–18 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 14–18</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 14–18")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Reading Passage 2 has seven paragraphs, A–G.
+            {renderText("Reading Passage 2 has seven paragraphs, A–G.")}
             <br />
-            Which paragraph contains the following information?
+            {renderText("Which paragraph contains the following information?")}
             <br />
-            Choose the correct letter, A–G, in boxes 14–18 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–G, in boxes 14–18 on your answer sheet."
+            )}
             <br />
-            NB You may use any letter more than once.
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
           {[
@@ -518,17 +402,18 @@ const Reading1Part22023 = () => {
             },
           ].map((q) => (
             <div key={q.num} className="flex flex-wrap items-center gap-3 mb-3">
-              <span className=" font-bold">{q.num}</span>
-              <span className="">{q.text}</span>
+              <span className="font-bold">{renderText(String(q.num))}</span>
+              <span>{renderText(q.text)}</span>
+
               <select
                 className="border rounded px-2 py-1 w-15"
                 value={userAnswers[q.num] || ""}
                 onChange={(e) => handleInputChange(q.num, e.target.value)}
               >
-                <option value="">{q.num}</option>
+                <option value="">{renderText(q.num)}</option>
                 {["A", "B", "C", "D", "E", "F", "G"].map((letter) => (
                   <option key={letter} value={letter}>
-                    {letter}
+                    {renderText(letter)}
                   </option>
                 ))}
               </select>
@@ -536,29 +421,37 @@ const Reading1Part22023 = () => {
           ))}
 
           {/* ================= Questions 19–21 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 19–21</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 19–21")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Look at the following purposes (Questions 19–21) and the list of
-            timber cuts below.
+            {renderText(
+              "Look at the following purposes (Questions 19–21) and the list of timber cuts below."
+            )}
           </p>
           <p className="mb-4 font-semibold">
-            Match each purpose with the correct timber cut, A–C.
+            {renderText("Match each purpose with the correct timber cut, A–C.")}
             <br />
-            NB You may use any letter more than once.
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
-          <div className=" p-4 mb-4">
+          <div className="p-4 mb-4">
             <div className="border p-4 max-w-[320px] mx-auto">
-              <p className="font-bold mb-2">List of Timber Cuts</p>
+              <p className="font-bold mb-2">
+                {renderText("List of Timber Cuts")}
+              </p>
               <ul className="list-disc list-inside mb-4">
-                <li>A. a TSI Cut</li>
-                <li>B. a Salvage Cut</li>
-                <li>C. a Shelterwood Cut</li>
+                <li>{renderText("A. a TSI Cut")}</li>
+                <li>{renderText("B. a Salvage Cut")}</li>
+                <li>{renderText("C. a Shelterwood Cut")}</li>
               </ul>
             </div>
             <div className="mt-5">
               {[
-                { num: 19, text: "to remove trees that are diseased" },
+                {
+                  num: 19,
+                  text: "to remove trees that are diseased",
+                },
                 {
                   num: 20,
                   text: "to generate income across a number of years",
@@ -572,17 +465,17 @@ const Reading1Part22023 = () => {
                   key={q.num}
                   className="flex flex-wrap items-center gap-3 mb-3"
                 >
-                  <span className=" font-bold">{q.num}</span>
-                  <span className="">{q.text}</span>
+                  <span className="font-bold">{renderText(String(q.num))}</span>
+                  <span>{renderText(q.text)}</span>
                   <select
                     className="border rounded px-2 py-1 w-15"
                     value={userAnswers[q.num] || ""}
                     onChange={(e) => handleInputChange(q.num, e.target.value)}
                   >
-                    <option value="">{q.num}</option>
+                    <option value="">{renderText(q.num)}</option>
                     {["A", "B", "C"].map((letter) => (
                       <option key={letter} value={letter}>
-                        {letter}
+                        {renderText(letter)}
                       </option>
                     ))}
                   </select>
@@ -592,11 +485,15 @@ const Reading1Part22023 = () => {
           </div>
 
           {/* ================= Questions 22–26 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 22–26</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 22–26")}
+          </h2>
           <p className="mb-4 font-semibold">
-            Complete the sentences below.
+            {renderText("Complete the sentences below.")}
             <br />
-            Choose ONE WORD ONLY from the passage for each answer.
+            {renderText(
+              "Choose ONE WORD ONLY from the passage for each answer."
+            )}
           </p>
 
           <ul className="list-disc list-inside space-y-4 text-lg border p-5">
@@ -629,8 +526,8 @@ const Reading1Part22023 = () => {
               },
             ].map((q) => (
               <li key={q.num} className="flex flex-wrap items-center gap-2">
-                <span className=" font-bold">{q.num}</span>
-                <span>{q.text}</span>
+                <span className="font-bold">{renderText(String(q.num))}</span>
+                <span>{renderText(q.text)}</span>
                 <input
                   type="text"
                   placeholder={q.num}
@@ -638,10 +535,11 @@ const Reading1Part22023 = () => {
                   value={userAnswers[q.num] || ""}
                   onChange={(e) => handleInputChange(q.num, e.target.value)}
                 />
-                {q.suffix && <span>{q.suffix}</span>}
+                {q.suffix && <span>{renderText(q.suffix)}</span>}
               </li>
             ))}
           </ul>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -649,23 +547,25 @@ const Reading1Part22023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/10
+                    {renderText(`Your Score: ${score}/10`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (14–26)
+                    {renderText("All Answers (14–26)")}
                   </h3>
                   <ul className="space-y-3">
                     {Array.from({ length: 13 }, (_, i) => i + 14).map((num) => {
@@ -700,25 +600,31 @@ const Reading1Part22023 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           {/* User Answer */}
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

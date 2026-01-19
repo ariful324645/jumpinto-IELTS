@@ -212,63 +212,83 @@ const Reading3Part32022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Building the Skyline: The Birth and Growth of Manhattan's
-              Skyscrapers
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText(
+                "Building the Skyline: The Birth and Growth of Manhattan's Skyscrapers"
+              )}
             </h1>
-            <p className="text-lg italic text-center mb-6">
-              Katharine L. Shester reviews a book by Jason Barr about the
-              development of New York City
-            </p>
 
+            {/* ===================== A ===================== */}
             <p className="text-lg">
-              In Building the Skyline, Jason Barr takes the reader through a
-              detailed history of New York City.The book combines geology,
-              history, economics, and a lot of data to explain why business
-              clusters developed where they did and how the early decisions of
-              workers and firms shaped the skyline we see today.
+              {renderText(
+                "Katharine L. Shester reviews a book by Jason Barr about the development of New York City."
+              )}
+              {renderText(
+                " In Building the Skyline, Jason Barr takes the reader through a detailed history of New York City."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Building the Skyline is organized into two distinct parts.The
-                first is primarily historical and addresses New York's
-                settlement and growth from 1609 to 1900; the second deals
-                primarily with the 20th century and is a compilation of chapters
-                commenting on different aspects of New York's urban
-                development.The tone and organization of the book changes
-                somewhat between the first and second parts, as the latter
-                chapters incorporate aspects of Barr's related research papers.
+                {renderText(
+                  " The book combines geology, history, economics, and a lot of data to explain why business clusters developed where they did and how the early decisions of workers and firms shaped the skyline we see today."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     27
                   </span>
                 )}
               </span>
+
+              {renderText(
+                " Building the Skyline is organized into two distinct parts. The first is primarily historical and addresses New York's settlement and growth from 1609 to 1900; the second deals primarily with the 20th century and is a compilation of chapters commenting on different aspects of New York's urban development. The tone and organization of the book changes somewhat between the first and second parts, as the latter chapters incorporate aspects of Barr's related research papers."
+              )}
             </p>
 
             <br />
 
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              Barr begins chapter one by taking the reader on a 'helicopter
-              time-machine' ride - giving a fascinating account of how the New
-              York landscape in 1609 might have looked from the sky.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He then moves on to a subterranean walking tour of the city,
-                indicating the location of rock and water below the subsoil,
-                before taking the reader back to the surface.His love of the
-                city comes through as he describes various fun facts about the
-                location of the New York residence of early 19th-century
-                vice-president Aaron Burr as well as a number of legends about
-                the city.
+                {renderText(
+                  "Barr begins chapter one by taking the reader on a 'helicopter time-machine' ride - giving a fascinating account of how the New York landscape in 1609 might have looked from the sky."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     32
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " He then moves on to a subterranean walking tour of the city, indicating the location of rock and water below the subsoil, before taking the reader back to the surface. His love of the city comes through as he describes various fun facts about the location of the New York residence of early 19th-century vice-president Aaron Burr as well as a number of legends about the city."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== C ===================== */}
+            <p className="text-lg">
+              {renderText(
+                "Chapters two and three take the reader up to the Civil War (1861-1865), with chapter two focusing on the early development of land and the implementation of a grid system in 1811. Chapter three focuses on land use before the Civil War. Both chapters are informative and well researched and set the stage for the economic analysis that comes later in the book."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " I would have liked Barr to expand upon his claim that existing tenements prevented skyscrapers in certain neighborhoods because 'likely no skyscraper developer was interested in performing the necessary slum clearance.' Later in the book, Barr makes the claim that the depth of bedrock was not a limiting factor for developers, as foundation costs were a small fraction of the cost of development. At first glance, it is not obvious why slum clearance would be limiting, while more expensive foundations would not."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    28
                   </span>
                 )}
               </span>
@@ -276,57 +296,21 @@ const Reading3Part32022 = () => {
 
             <br />
 
+            {/* ===================== D ===================== */}
             <p className="text-lg">
-              Chapters two and three take the reader up to the Civil War
-              (1861-1865), with chapter two focusing on the early development of
-              land and the implementation of a grid system in 1811.Chapter three
-              focuses on land use before the Civil War.Both chapters are
-              informative and well researched and set the stage for the economic
-              analysis that comes later in the book.
+              {renderText(
+                "Chapter four focuses on immigration and the location of neighborhoods and tenements in the late 19th century."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                I would have liked Barr to expand upon his claim that existing
-                tenements* prevented skyscrapers in certain neighborhoods
-                because "likely no skyscraper developer was interested in
-                performing the necessary 'slum clearance'".
-                {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      33
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      28
-                    </span>
-                  </>
+                {renderText(
+                  " Barr identifies four primary immigrant enclaves and analyzes their locations in terms of the amenities available in the area. Most of these enclaves were located on the least valuable land, between the industries located on the waterfront and the wealthy neighborhoods bordering Central Park"
                 )}
-              </span>
-              Later in the book, Barr makes the claim that the depth of bedrock*
-              was not a limiting factor for developers, as foundation costs were
-              a small fraction of the cost of development.At first glance, it is
-              not obvious why slum clearance would be limiting, while more
-              expensive foundations would not.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              Chapter four focuses on immigration and the location of
-              neighborhoods and tenements in the late 19th century.Barr
-              identifies four primary immigrant enclaves and analyzes their
-              locations in terms of the amenities available in the area.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Most of these enclaves were located on the least valuable land,
-                between the industries located on the waterfront and the wealthy
-                neighborhoods bordering Central Park.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     35
                   </span>
                 )}
@@ -335,38 +319,33 @@ const Reading3Part32022 = () => {
 
             <br />
 
+            {/* ===================== E ===================== */}
             <p className="text-lg">
-              Part two of the book begins with a discussion of the economics of
-              skyscraper height.In chapter five, Barr distinguishes between
-              engineering height, economic height, and developer height - where
-              engineering height is the tallest building that can be safely made
-              at a given time, economic height is the height that is most
-              efficient from society's point of view, and developer height is
-              the actual height chosen by the developer, who is attempting to
-              maximize return on investment.
+              {renderText(
+                "Part two of the book begins with a discussion of the economics of skyscraper height. In chapter five, Barr distinguishes between engineering height, economic height, and developer height - where engineering height is the tallest building that can be safely made at a given time, economic height is the height that is most efficient from society's point of view, and developer height is the actual height chosen by the developer, who is attempting to maximize return on investment."
+              )}
             </p>
 
             <br />
 
+            {/* ===================== F ===================== */}
             <p className="text-lg">
-              Chapter five also has an interesting discussion of the
-              technological advances that led to the construction of
-              skyscrapers.For example, the introduction of iron and steel
-              skeletal frames made thick, load-bearing walls unnecessary,
-              expanding the usable square footage of buildings and increasing
-              the use of windows and availability of natural light.
+              {renderText(
+                "Chapter five also has an interesting discussion of the technological advances that led to the construction of skyscrapers. For example, the introduction of iron and steel skeletal frames made thick, load-bearing walls unnecessary, expanding the usable square footage of buildings and increasing the use of windows and availability of natural light."
+              )}
+              {renderText(
+                " Chapter six then presents data on building height throughout the 20th century and uses regression analysis to 'predict' building construction. "
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Chapter six then presents data on building height throughout the
-                20th century and uses regression analysis to 'predict' building
-                construction.While less technical than the research paper on
-                which the chapter is based, it is probably more technical than
-                would be preferred by a general audience.
+                {renderText(
+                  "While less technical than the research paper on which the chapter is based, it is probably more technical than would be preferred by a general audience."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     29
                   </span>
                 )}
@@ -375,119 +354,90 @@ const Reading3Part32022 = () => {
 
             <br />
 
+            {/* ===================== G ===================== */}
             <p className="text-lg">
-              Chapter seven tackles the 'bedrock myth', the assumption that the
-              absence of bedrock close to the surface between Downtown and
-              Midtown New York is the reason for skyscrapers not being built
-              between the two urban centers.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Rather, Barr argues that while deeper bedrock does increase
-                foundation costs, these costs were neither prohibitively high
-                nor were they large compared to the overall cost of building a
-                skyscraper.
+                {renderText(
+                  "Chapter seven tackles the 'bedrock myth', the assumption that the absence of bedrock close to the surface between Downtown and Midtown New York is the reason for skyscrapers not being built between the two urban centers."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      37
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      38
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    36
+                  </span>
                 )}
               </span>
-              What I enjoyed the most about this chapter was Barr's discussion
-              of how foundations are actually built.
+
+              {renderText(
+                " What I enjoyed the most about this chapter was Barr's discussion of how foundations are actually built. He describes the use of caissons, which enable workers to dig down for considerable distances, often below the water table, until they reach bedrock. Barr's thorough technological history discusses not only how caissons work, but also the dangers involved."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He describes the use of caissons, which enable workers to dig
-                down for considerable distances, often below the water table,
-                until they reach bedrock.
+                {" "}
+                {renderText(
+                  " Rather, Barr argues that while deeper bedrock does increase foundation costs, these costs were neither prohibitively high nor were they large compared to the overall cost of building a skyscraper."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      40
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    37
+                  </span>
                 )}
               </span>
-              Barr's thorough technological history discusses not only how
-              caissons work, but also the dangers involved.While this chapter
-              references empirical research papers, it is a relatively easy
-              read.
             </p>
 
             <br />
 
+            {/* ===================== H ===================== */}
             <p className="text-lg">
-              Chapters eight and nine focus on the birth of Midtown and the
-              building boom of the 1920s.Chapter eight contains lengthy
-              discussions of urban economic theory that may serve as a
-              distraction to readers primarily interested in New York.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                However, they would be well-suited for undergraduates learning
-                about the economics of cities.
+                {renderText(
+                  "Chapters eight and nine focus on the birth of Midtown and the building boom of the 1920s. Chapter eight contains lengthy discussions of urban economic theory that may serve as a distraction to readers primarily interested in New York."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     30
                   </span>
                 )}
               </span>
-              In the next chapter, Barr considers two of the primary
-              explanations for the building boom of the 1920s - the first being
-              exuberance, and the second being financing.He uses data to assess
-              the viability of these two explanations and finds that supply and
-              demand factors explain much of the development of the 1920s;
-              though it enabled the boom, cheap credit was not, he argues, the
-              primary cause.
+              {renderText(
+                " However, they would be well-suited for undergraduates learning about the economics of cities. In the next chapter, Barr considers two of the primary explanations for the building boom of the 1920s - the first being exuberance, and the second being financing. He uses data to assess the viability of these two explanations and finds that supply and demand factors explain much of the development of the 1920s; though it enabled the boom, cheap credit was not, he argues, the primary cause."
+              )}
             </p>
 
             <br />
 
+            {/* ===================== I ===================== */}
             <p className="text-lg">
-              In the final chapter (chapter 10), Barr discusses another of his
-              empirical papers that estimates Manhattan land values from the
-              mid-19th century to the present day.
+              {renderText(
+                "In the final chapter (chapter 10), Barr discusses another of his empirical papers that estimates Manhattan land values from the mid-19th century to the present day."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The data work that went into these estimations is particularly
-                impressive.
+                {renderText(
+                  " The data work that went into these estimations is particularly impressive."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     31
                   </span>
                 )}
               </span>
-              Toward the end of the chapter, Barr assesses "whether skyscrapers
-              are a cause or an effect of high land values".He finds that
-              changes in land values predict future building height, but the
-              reverse is not true.The book ends with an epilogue, in which Barr
-              discusses the impact of climate change on the city and makes
-              policy suggestions for New York going forward.
-            </p>
-
-            <br />
-
-            <p className="text-lg font-medium mt-4">Glossary</p>
-            <p className="text-lg">
-              * a tenement: a multi-occupancy building of any sort, but
-              particularly a run-down apartment building or slum building
-              <br />* bedrock: the solid, hard rock in the ground that lies
-              under a loose layer of soil
+              {renderText(
+                " Toward the end of the chapter, Barr assesses 'whether skyscrapers are a cause or an effect of high land values'. He finds that changes in land values predict future building height, but the reverse is not true. The book ends with an epilogue, in which Barr discusses the impact of climate change on the city and makes policy suggestions for New York going forward."
+              )}
             </p>
           </div>
 
@@ -516,9 +466,12 @@ const Reading3Part32022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–31 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–31</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–31")}
+          </h2>
           <p className="mb-4">
-            Choose the correct letter, <strong>A, B, C or D</strong>.
+            {renderText("Choose the correct letter, ")}
+            <strong>{renderText("A, B, C or D")}</strong>.
           </p>
 
           <ul className="space-y-5 text-lg">
@@ -576,7 +529,8 @@ const Reading3Part32022 = () => {
             ].map(({ q, text, options }) => (
               <li key={q} className="space-y-2">
                 <p>
-                  <span className="font-bold">{q}</span> {text}
+                  <span className="font-bold">{renderText(q.toString())}</span>{" "}
+                  {renderText(text)}
                 </p>
                 <div className="ml-6 space-y-1">
                   {options.map((opt) => (
@@ -587,7 +541,7 @@ const Reading3Part32022 = () => {
                         value={opt[0]}
                         onChange={(e) => handleInputChange(q, e.target.value)}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
@@ -596,21 +550,30 @@ const Reading3Part32022 = () => {
           </ul>
 
           {/* ================= Questions 32–35 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 32–35</h2>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 32–35")}
+          </h2>
           <p className="mb-4">
-            Do the following statements agree with the claims of the writer in
-            Reading Passage 3?
+            {renderText(
+              "Do the following statements agree with the claims of the writer in Reading Passage 3?"
+            )}
             <br />
-            In boxes 32–35 on your answer sheet, choose
+            {renderText("In boxes 32–35 on your answer sheet, choose")}
             <br />
-            <strong>YES</strong> if the statement agrees with the claims of the
-            writer
+            <strong>{renderText("YES")}</strong>{" "}
+            {renderText(
+              "if the statement agrees with the claims of the writer"
+            )}
             <br />
-            <strong>NO</strong> if the statement contradicts the claims of the
-            writer
+            <strong>{renderText("NO")}</strong>{" "}
+            {renderText(
+              "if the statement contradicts the claims of the writer"
+            )}
             <br />
-            <strong>NOT GIVEN</strong> if it is impossible to say what the
-            writer thinks about this
+            <strong>{renderText("NOT GIVEN")}</strong>{" "}
+            {renderText(
+              "if it is impossible to say what the writer thinks about this"
+            )}
           </p>
 
           <ul className="space-y-6 text-lg">
@@ -624,8 +587,10 @@ const Reading3Part32022 = () => {
               return (
                 <li key={qNum} className="space-y-2">
                   <div className="flex gap-2">
-                    <span className="font-bold">{qNum}</span>
-                    <span>{text}</span>
+                    <span className="font-bold">
+                      {renderText(qNum.toString())}
+                    </span>
+                    <span>{renderText(text)}</span>
                   </div>
                   <div className="ml-6 space-y-1">
                     {["YES", "NO", "NOT GIVEN"].map((opt) => (
@@ -638,7 +603,7 @@ const Reading3Part32022 = () => {
                             handleInputChange(qNum, e.target.value)
                           }
                         />
-                        <span>{opt}</span>
+                        <span>{renderText(opt)}</span>
                       </label>
                     ))}
                   </div>
@@ -648,12 +613,17 @@ const Reading3Part32022 = () => {
           </ul>
 
           {/* ================= Questions 36–40 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 36–40</h2>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 36–40")}
+          </h2>
           <p className="mb-4">
-            Complete the summary using the list of words or phrases below.
+            {renderText(
+              "Complete the summary using the list of words or phrases below."
+            )}
             <br />
-            Choose the correct letter, <strong>A–J</strong>, in boxes 36–40 on
-            your answer sheet.
+            {renderText("Choose the correct letter, ")}
+            <strong>{renderText("A–J")}</strong>
+            {renderText(", in boxes 36–40 on your answer sheet.")}
           </p>
 
           <div className="border p-4 max-w-[220px] mb-4 text-lg mx-auto space-y-1">
@@ -669,7 +639,7 @@ const Reading3Part32022 = () => {
               "I. total expenditure",
               "J. construction guidelines",
             ].map((opt) => (
-              <p key={opt}>{opt}</p>
+              <p key={opt}>{renderText(opt)}</p>
             ))}
           </div>
 
@@ -684,9 +654,9 @@ const Reading3Part32022 = () => {
               const qNum = 36 + idx;
               return (
                 <div key={qNum} className="flex flex-wrap items-center gap-2">
-                  <span>{text}</span>
-                  <div className="w-8 h-8 flex items-center justify-center bg-gray-200  font-bold rounded-full">
-                    {qNum}
+                  <span>{renderText(text)}</span>
+                  <div className="w-8 h-8 flex items-center justify-center bg-gray-200 font-bold rounded-full">
+                    {renderText(qNum.toString())}
                   </div>
                   <select
                     className="border rounded px-2 py-1"
@@ -706,6 +676,7 @@ const Reading3Part32022 = () => {
               );
             })}
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -713,23 +684,25 @@ const Reading3Part32022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (27–40)
+                    {renderText("All Answers (27–40)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -738,8 +711,6 @@ const Reading3Part32022 = () => {
                       const correctAnswer = correctAnswers[num]?.trim();
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-                      const isWrong =
-                        userAnswer && userAnswer !== correctAnswer;
                       const noAnswer = !userAnswer;
 
                       return (
@@ -749,35 +720,36 @@ const Reading3Part32022 = () => {
                         >
                           <div className="flex items-center gap-2">
                             {isCorrect && (
-                              <span className="text-green-600 text-xl font-bold">
-                                <FaDotCircle />
-                              </span>
+                              <FaDotCircle className="text-green-600 text-xl font-bold" />
                             )}
-                            {(isWrong || noAnswer) && (
+                            {!isCorrect && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
-                                <span className="text-white text-sm font-bold leading-none">
-                                  <ImCross />
-                                </span>
+                                <ImCross className="text-white text-sm font-bold leading-none" />
                               </div>
                             )}
-
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              renderText(userAnswer)
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            {renderText(correctAnswers[num])}
                           </p>
                         </li>
                       );

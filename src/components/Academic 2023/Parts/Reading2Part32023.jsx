@@ -209,269 +209,259 @@ const Reading2Part32023 = () => {
             </h1>
           </div>
 
-          {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              An ideal city
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("An ideal city")}
             </h1>
-            <p className="text-lg font-medium mb-5 text-center">
-              Leonardo da Vinci's ideal city was centuries ahead of its time
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Leonardo da Vinci's ideal city was centuries ahead of its time"
+              )}
             </p>
 
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
             <p className="text-lg">
-              The word 'genius' is universally associated with the name of
-              Leonardo da Vinci. A true Renaissance man, he embodied scientific
-              spirit, artistic talent and humanist sensibilities. Five hundred
-              years have passed since Leonardo died in his home at Château du
-              Clos Lucé, outside Tours, France. Yet far from fading into
-              insignificance, his thinking has carried down the centuries and
-              still surprises today.
+              {renderText(
+                "The word 'genius' is universally associated with the name of Leonardo da Vinci."
+              )}
+              {renderText(
+                " A true Renaissance man, he embodied scientific spirit, artistic talent and humanist sensibilities."
+              )}
+              {renderText(
+                " Five hundred years have passed since Leonardo died in his home at Château du Clos Lucé, outside Tours, France."
+              )}
+              {renderText(
+                " Yet far from fading into insignificance, his thinking has carried down the centuries and still surprises today."
+              )}
             </p>
 
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
             <p className="text-lg">
-              The Renaissance marked the transition from the 15th century to
-              modernity and took place after the spread of the plague in the
-              14th century, which caused a global crisis resulting in some 200
-              million deaths across Europe and Asia. Today, the world is on the
-              cusp of a climate crisis, which is predicted to cause widespread
-              displacement, extinctions and death, if left unaddressed.
+              {renderText(
+                "The Renaissance marked the transition from the 15th century to modernity and took place after the spread of the plague in the 14th century, which caused a global crisis resulting in some 200 million deaths across Europe and Asia."
+              )}
+              {renderText(
+                " Today, the world is on the cusp of a climate crisis, which is predicted to cause widespread displacement, extinctions and death, if left unaddressed."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Then, as now, radical solutions were called for to revolutionise
-                the way people lived and safeguard humanity against catastrophe.
+                {renderText(
+                  "Then, as now, radical solutions were called for to revolutionise the way people lived and safeguard humanity against catastrophe."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    29
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("29")}
                   </span>
                 )}
               </span>
             </p>
 
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
             <p className="text-lg">
+              {renderText(
+                "Around 1486 - after a pestilence that killed half the population in Milan, Italy - Leonardo turned his thoughts to urban planning problems."
+              )}
+              {renderText(
+                " Following a typical Renaissance trend, he began to work on an 'ideal city' project, which - due to its excessive costs - would remain unfulfilled."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Around 1486 - after a pestilence that killed half the population
-                in Milan, Italy - Leonardo turned his thoughts to urban planning
-                problems.
+                {renderText(
+                  "Yet given that unsustainable urban models are a key cause of global climate change today, it's only natural to wonder how Leonardo might have changed the shape of modern cities."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    30
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("30")}
                   </span>
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  {renderText("31")}
+                </span>
+              )}
+            </p>
+
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Although the Renaissance is renowned as an era of incredible progress in art and architecture, it is rarely noted that the 15th century also marked the birth of urbanism as a true academic discipline."
+              )}
+              {renderText(
+                " The rigour and method behind the conscious conception of a city had been largely missing in Western thought until the moment when prominent Renaissance men pushed forward large-scale urban projects in Italy."
+              )}
+              {renderText(
+                " These works surely inspired Leonardo's decision to rethink the design of medieval cities, with their winding and overcrowded streets and with houses piled against one another."
+              )}
+            </p>
+
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "It is not easy to identify a coordinated vision of Leonardo's ideal city because of his disordered way of working with notes and sketches."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Following a typical Renaissance trend, he began to work on an
-                'ideal city' project, which - due to its excessive costs - would
-                remain unfulfilled.
+                {renderText(
+                  "But from the largest collection of Leonardo's papers ever assembled, a series of innovative thoughts can be reconstructed regarding the foundation of a new city along the Ticino River."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    30
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("33")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " He designed the city for the easy transport of goods and clean urban spaces, and he wanted a comfortable and spacious city, with well-ordered streets and architecture."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "He recommended 'high, strong walls', with 'towers and battlements of all necessary and pleasant beauty'."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("34")}
                   </span>
                 )}
               </span>
             </p>
 
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
             <p className="text-lg">
+              {renderText(
+                "His plans for a modern and 'rational' city were consistent with Renaissance ideals."
+              )}
+              {renderText(
+                " But, in keeping with his personality, Leonardo included several innovations in his urban design."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Yet given that unsustainable urban models are a key cause of
-                global climate change today, it's only natural to wonder how
-                Leonardo might have changed the shape of modern cities.
+                {renderText(
+                  "Leonardo wanted the city to be built on several levels, linked with vertical outdoor staircases."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    31
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("35")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Indeed, this idea of taking full advantage of the interior spaces wasn't implemented until the 1920s and 1930s."
+              )}
+            </p>
+
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">{renderText("G")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "While in the upper layers of the city, people could walk undisturbed between elegant palaces and streets, the lower layer was the place for services, trade, transport and industry."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "But the true originality of Leonardo's vision was its fusion of architecture and engineering."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("36")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Leonardo designed extensive hydraulic plants to create artificial canals throughout the city."
+              )}
+              {renderText(
+                " Leonardo also thought that the width of the streets ought to match the average height of the adjacent houses."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "This rule is still followed in many contemporary cities across Italy."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("37")}
                   </span>
                 )}
               </span>
             </p>
 
-            <p className="text-lg">
-              Although the Renaissance is renowned as an era of incredible
-              progress in art and architecture, it is rarely noted that the 15th
-              century also marked the birth of urbanism as a true academic
-              discipline. The rigour and method behind the conscious conception
-              of a city had been largely missing in Western thought until the
-              moment when prominent Renaissance men pushed forward large-scale
-              urban projects in Italy, such as the reconfiguration of the town
-              of Pienza and the expansion of the city of Ferrara. These works
-              surely inspired Leonardo's decision to rethink the design of
-              medieval cities, with their winding and overcrowded streets and
-              with houses piled against one another.
-            </p>
-
-            <p className="text-lg">
+            {/* Final Section */}
+            <p className="text-lg mt-5">
+              {renderText(
+                "Although some of these features existed in Roman cities, before Leonardo's drawings there had never been a multi-level, compact modern city which was thoroughly technically conceived."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                It is not easy to identify a coordinated vision of Leonardo's
-                ideal city because of his disordered way of working with notes
-                and sketches.
+                {renderText(
+                  "Indeed, it wasn't until the 19th century that some of his ideas were applied."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    33
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("38")}
                   </span>
                 )}
               </span>
-            </p>
-
-            <p className="text-lg">
-              But from the largest collection of Leonardo's papers ever
-              assembled, a series of innovative thoughts can be reconstructed
-              regarding the foundation of a new city along the Ticino River,
-              which runs from Switzerland into Italy and is 248 kilometres long.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He designed the city for the easy transport of goods and clean
-                urban spaces, and he wanted a comfortable and spacious city,
-                with well-ordered streets and architecture.
+                {renderText(
+                  "This can be seen in Haussmann's renovation of Paris under Emperor Napoleon III."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    34
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("39")}
                   </span>
                 )}
               </span>
-              He recommended 'high, strong walls', with 'towers and battlements
-              of all necessary and pleasant beauty'.
-            </p>
-
-            <p className="text-lg">
-              His plans for a modern and 'rational' city were consistent with
-              Renaissance ideals. But, in keeping with his personality, Leonardo
-              included several innovations in his urban design.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Leonardo wanted the city to be built on several levels, linked
-                with vertical outdoor staircases.
+                {renderText(
+                  "Today, Leonardo's ideas suggest a way forward for modern, sustainable urban planning."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    35
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("40")}
                   </span>
                 )}
               </span>
-              This design can be seen in some of today's high-rise buildings but
-              was unconventional at the time. Indeed, this idea of taking full
-              advantage of the interior spaces wasn't implemented until the
-              1920s and 1930s, with the birth of the Modernist movement.
-            </p>
-
-            <p className="text-lg">
-              While in the upper layers of the city, people could walk
-              undisturbed between elegant palaces and streets, the lower layer
-              was the place for services, trade, transport and industry.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                But the true originality of Leonardo's vision was its fusion of
-                architecture and engineering.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    36
-                  </span>
-                )}
-              </span>
-              Leonardo designed extensive hydraulic plants to create artificial
-              canals throughout the city. The canals, regulated by clocks and
-              basins, were supposed to make it easier for boats to navigate
-              inland.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Leonardo also thought that the width of the streets ought to
-                match the average height of the adjacent houses: a rule still
-                followed in many contemporary cities across Italy, to allow
-                access to sun and reduce the risk of damage from earthquakes.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    37
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Although some of these features existed in Roman cities, before
-                Leonardo's drawings there had never been a multi-level, compact
-                modern city which was thoroughly technically conceived.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    38
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <p className="text-lg">
-              Indeed, it wasn't until the 19th century that some of his ideas
-              were applied.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                For example, the subdivision of the city by function - with
-                services and infrastructures located in the lower levels and
-                wide and well-ventilated boulevards and walkways above for
-                residents - is an idea that can be found in Georges-Eugène
-                Haussmann's renovation of Paris under Emperor Napoleon III
-                between 1853 and 1870.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    39
-                  </span>
-                )}
-              </span>
-            </p>
-
-            <p className="text-lg">
-              Today, Leonardo's ideas are not simply valid, they actually
-              suggest a way forward for urban planning.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Many scholars think that the compact city, built upwards instead
-                of outwards, integrated with nature (especially water systems),
-                with efficient transport infrastructure, could help modern
-                cities become more efficient and sustainable.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    40
-                  </span>
-                )}
-              </span>
-              This is yet another reason why Leonardo was aligned so closely
-              with modern urban planning and centuries ahead of his time.
             </p>
           </div>
 
@@ -499,15 +489,19 @@ const Reading2Part32023 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–33 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–33</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–33")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the information given in
-            Reading Passage 3?
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 3?"
+            )}
             <br />
-            In boxes 27–33 on your answer sheet, choose <strong>
-              TRUE
-            </strong>, <strong>FALSE</strong> or <strong>NOT GIVEN</strong>.
+            {renderText("In boxes 27–33 on your answer sheet, choose ")}
+            <strong>{renderText("TRUE")}</strong>,{" "}
+            <strong>{renderText("FALSE")}</strong> {renderText("or ")}
+            <strong>{renderText("NOT GIVEN")}</strong>.
           </p>
 
           <ul className="space-y-8 text-lg">
@@ -543,7 +537,10 @@ const Reading2Part32023 = () => {
             ].map(({ num, text }) => (
               <li key={num} className="space-y-3">
                 <p>
-                  <span className="font-bold">{num}</span> {text}
+                  <span className="font-bold">
+                    {renderText(num.toString())}
+                  </span>{" "}
+                  {renderText(text)}
                 </p>
 
                 <div className="flex flex-col">
@@ -559,7 +556,7 @@ const Reading2Part32023 = () => {
                         checked={userAnswers[num] === opt}
                         onChange={() => handleInputChange(num, opt)}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
@@ -568,29 +565,40 @@ const Reading2Part32023 = () => {
           </ul>
 
           {/* ================= Questions 34–40 ================= */}
-          <h2 className="text-lg font-bold mt-8 mb-3">Questions 34–40</h2>
+          <h2 className="text-lg font-bold mt-8 mb-3">
+            {renderText("Questions 34–40")}
+          </h2>
 
           <p className="mb-4">
-            Complete the summary below. <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
+            {renderText("Complete the summary below.")}
+            <br />
+            {renderText("Choose ")}
+            <strong>{renderText("ONE WORD ONLY")}</strong>{" "}
+            {renderText("from the passage for each answer.")}
           </p>
 
           <div className="space-y-5 text-lg border p-4">
-            <div className="">
+            <div>
               <h1 className="text-2xl font-bold mb-6 text-center">
-                Leonardo da Vinci's ideal city
+                {renderText("Leonardo da Vinci's ideal city")}
               </h1>
 
               <div className="space-y-4 text-lg">
                 <p>
-                  A collection of Leonardo da Vinci's paperwork reveals his
-                  design of a new city beside the Ticino River. This was to
-                  provide better
+                  {renderText(
+                    "A collection of Leonardo da Vinci's paperwork reveals his design of a new city beside the Ticino River. This was to provide better"
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold h-8 w-8 border rounded-full flex items-center justify-center">
+                    <button
+                      onClick={() => toggleButton(34)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[34]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       34
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -598,15 +606,20 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(34, e.target.value)}
                     />
                   </span>
-                  for trade and a less polluted environment. Although Leonardo
-                  da Vinci's city shared many of the ideals of his time, some of
-                  his innovations were considered unconventional in their
-                  design. They included features that can be seen in some tower
-                  blocks today, such as
+                  {renderText(
+                    "for trade and a less polluted environment. Although Leonardo da Vinci's city shared many of the ideals of his time, some of his innovations were considered unconventional in their design. They included features that can be seen in some tower blocks today, such as"
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold h-8 w-8 border rounded-full flex items-center justify-center">
+                    <button
+                      onClick={() => toggleButton(35)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[35]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       35
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -614,13 +627,24 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(35, e.target.value)}
                     />
                   </span>
-                  on the exterior of a building.
+                  {renderText("on the exterior of a building.")}
                 </p>
 
                 <p>
-                  Leonardo da Vinci wasn't only an architect. His expertise in
+                  {renderText(
+                    "Leonardo da Vinci wasn't only an architect. His expertise in"
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold mr-1">36</span>
+                    <button
+                      onClick={() => toggleButton(36)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[36]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      36
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -628,12 +652,20 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(36, e.target.value)}
                     />
                   </span>
-                  was evident in his plans for artificial canals within his
-                  ideal city. He also believed that the height of houses should
-                  relate to the width of streets in case earthquakes occurred.
-                  The design of many cities in Italy today follows this
+                  {renderText(
+                    "was evident in his plans for artificial canals within his ideal city. He also believed that the height of houses should relate to the width of streets in case earthquakes occurred. The design of many cities in Italy today follows this"
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold mr-1">37</span>
+                    <button
+                      onClick={() => toggleButton(37)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[37]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
+                      37
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -641,15 +673,22 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(37, e.target.value)}
                     />
                   </span>
-                  .
+                  {renderText(".")}
                 </p>
 
                 <p>
-                  While some cities from
+                  {renderText("While some cities from")}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold h-8 w-8 border rounded-full flex items-center justify-center">
+                    <button
+                      onClick={() => toggleButton(38)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[38]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       38
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -657,13 +696,20 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(38, e.target.value)}
                     />
                   </span>
-                  times have aspects that can also be found in Leonardo's
-                  designs, his ideas weren't put into practice until long after
-                  his death.
+                  {renderText(
+                    "times have aspects that can also be found in Leonardo's designs, his ideas weren't put into practice until long after his death."
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold h-8 w-8 border rounded-full flex items-center justify-center">
+                    <button
+                      onClick={() => toggleButton(39)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[39]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       39
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -671,13 +717,20 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(39, e.target.value)}
                     />
                   </span>
-                  is one example of a city that was redesigned in the 19th
-                  century in the way that Leonardo had envisaged. His ideas are
-                  also relevant to today's world, where building
+                  {renderText(
+                    "is one example of a city that was redesigned in the 19th century in the way that Leonardo had envisaged. His ideas are also relevant to today's world, where building"
+                  )}
                   <span className="inline-flex items-center mx-1">
-                    <span className="font-bold h-8 w-8 border rounded-full flex items-center justify-center">
+                    <button
+                      onClick={() => toggleButton(40)}
+                      className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                        activeButtons[40]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       40
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32 text-center"
@@ -685,7 +738,7 @@ const Reading2Part32023 = () => {
                       onChange={(e) => handleInputChange(40, e.target.value)}
                     />
                   </span>
-                  no longer seems to be the best approach.
+                  {renderText("no longer seems to be the best approach.")}
                 </p>
               </div>
             </div>
@@ -699,23 +752,26 @@ const Reading2Part32023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/{Object.keys(correctAnswers).length}
+                    {renderText("Your Score:")} {score}/
+                    {Object.keys(correctAnswers).length}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers
+                    {renderText("All Answers")}
                   </h3>
                   <ul className="space-y-3">
                     {Object.keys(correctAnswers).map((num) => {
@@ -745,13 +801,19 @@ const Reading2Part32023 = () => {
                                 </span>
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
                               userAnswer
                             )}
@@ -759,7 +821,7 @@ const Reading2Part32023 = () => {
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
                             {correctAnswers[num]}
                           </p>

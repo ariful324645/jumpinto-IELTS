@@ -171,285 +171,239 @@ const Reading1Part32023 = () => {
           </div>
 
           {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Conquering Earth's space junk problem
+          {/* Reading Passage */}
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("Conquering Earth's space junk problem")}
             </h1>
-            <p className="text-lg text-center font-medium mb-6">
-              Satellites, rocket shards and collision debris are creating major
-              traffic risks in orbit around the planet. Researchers are working
-              to reduce these threats
+
+            <p className="text-lg my-5">
+              {renderText(
+                "Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet. Researchers are working to reduce these threats."
+              )}
             </p>
 
-            <p className="text-lg font-bold">A</p>
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">{renderText("A")}</h1>
             <p className="text-lg">
-              Last year, commercial companies, military and civil departments
-              and amateurs sent more than 400 satellites into orbit, over four
-              times the yearly average in the previous decade. Numbers could
-              rise even more sharply if leading space companies follow through
-              on plans to deploy hundreds to thousands of large constellations
-              of satellites to space in the next few years.
-            </p>
-            <p className="text-lg">
-              All that traffic can lead to disaster. Ten years ago, a US
-              commercial Iridium satellite smashed into an inactive Russian
-              communications satellite called Cosmos-2251, creating thousands of
-              new pieces of space shrapnel that now threaten other satellites in
-              low Earth orbit - the zone stretching up to 2,000 kilometres in
-              altitude.
+              {renderText(
+                "Last year, commercial companies, military and civil departments and amateurs sent more than 400 satellites into orbit, over four times the yearly average in the previous decade."
+              )}
+              {renderText(
+                " Numbers could rise even more sharply if leading space companies follow through on plans to deploy hundreds to thousands of large constellations of satellites to space in the next few years."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Altogether, there are roughly 20,000 human-made objects in
-                orbit, from working satellites to small rocket pieces.
+                {renderText(
+                  "All that traffic can lead to disaster. Ten years ago, a US commercial Iridium satellite smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel that now threaten other satellites in low Earth orbit — the zone stretching up to 2,000 kilometres in altitude."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    29
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("29")}
                   </span>
                 )}
               </span>
-              And satellite operators can't steer away from every potential
-              crash, because each move consumes time and fuel that could
-              otherwise be used for the spacecraft's main job.
+              {renderText(
+                " Altogether, there are roughly 20,000 human-made objects in orbit, from working satellites to small rocket pieces."
+              )}
+              {renderText(
+                " And satellite operators can't steer away from every potential crash, because each move consumes time and fuel that could otherwise be used for the spacecraft's main job."
+              )}
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">B</p>
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">{renderText("B")}</h1>
             <p className="text-lg">
-              Concern about space junk goes back to the beginning of the
-              satellite era, but the number of objects in orbit is rising so
-              rapidly that researchers are investigating new ways of attacking
-              the problem. Several teams are trying to improve methods for
-              assessing what is in orbit, so that satellite operators can work
-              more efficiently in ever-more-crowded space.
+              {renderText(
+                "Concern about space junk goes back to the beginning of the satellite era, but the number of objects in orbit is rising so rapidly that researchers are investigating new ways of attacking the problem."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Some researchers are now starting to compile a massive data set
-                that includes the best possible information on where everything
-                is in orbit. Others are developing taxonomies of space debris -
-                working on measuring properties such as the shape and size of an
-                object, so that satellite operators know how much to worry about
-                what's coming their way.
+                {renderText(
+                  "Several teams are trying to improve methods for assessing what is in orbit, so that satellite operators can work more efficiently in ever-more-crowded space."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    31
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("31")}
                   </span>
                 )}
               </span>
-            </p>
-            <p className="text-lg">
-              The alternative, many say, is unthinkable. Just a few uncontrolled
-              space crashes could generate enough debris to set off a runaway
-              cascade of fragments, rendering near-Earth space unusable.
+              {renderText(
+                " Some researchers are now starting to compile a massive data set that includes the best possible information on where everything is in orbit."
+              )}
+              {renderText(
+                " Others are developing taxonomies of space debris, working on measuring properties such as the shape and size of an object, so that satellite operators know how much to worry about what's coming their way."
+              )}
+              {renderText(" The alternative, many say, is unthinkable.")}
+              {renderText(
+                " Just a few uncontrolled space crashes could generate enough debris to set off a runaway cascade of fragments, rendering near-Earth space unusable."
+              )}
+              {renderText(
+                ' "If we go on like this, we will reach a point of no return," says Carolin Frueh, an astrodynamical researcher at Purdue University in West Lafayette, Indiana.'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "If we go on like this, we will reach a point of no return,"
-                says Carolin Frueh, an astrodynamical researcher at Purdue
-                University in West Lafayette, Indiana.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    40
-                  </span>
+                {renderText(
+                  "If we go on like this, we will reach a point of no return, says Carolin Frueh, an astrodynamical researcher at Purdue University in West Lafayette, Indiana"
                 )}
-              </span>
-            </p>
-
-            <br />
-
-            <p className="text-lg font-bold">C</p>
-            <p className="text-lg">
-              Even as our ability to monitor space objects increases, so too
-              does the total number of items in orbit.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                That means companies, governments and other players in space are
-                collaborating in new ways to avoid a shared threat.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    27
-                  </span>
-                )}
-              </span>
-              International groups such as the Inter-Agency Space Debris
-              Coordination Committee have developed guidelines on space
-              sustainability.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Those include inactivating satellites at the end of their useful
-                life by venting pressurised materials or leftover fuel that
-                might lead to explosions.
-                {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      33
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      34
-                    </span>
-                  </>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                The intergovernmental groups also advise lowering satellites
-                deep enough into the atmosphere that they will burn up or
-                disintegrate within 25 years.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    32
-                  </span>
-                )}
-              </span>
-              But so far, only about half of all missions have abided by this
-              25-year goal, says Holger Krag, head of the European Space
-              Agency's space-debris office in Darmstadt, Germany.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Operators of the planned large constellations of satellites say
-                they will be responsible stewards in their enterprises in space,
-                but Krag worries that problems could increase, despite their
-                best intentions. "What happens to those that fail or go
-                bankrupt?" he asks.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    35
-                  </span>
-                )}
-              </span>
-              "They are probably not going to spend money to remove their
-              satellites from space."
-            </p>
-
-            <br />
-
-            <p className="text-lg font-bold">D</p>
-            <p className="text-lg">
-              In theory, given the vastness of space, satellite operators should
-              have plenty of room for all these missions to fly safely without
-              ever nearing another object. So some scientists are tackling the
-              problem of space junk by trying to find out where all the debris
-              is to a high degree of precision. That would alleviate the need
-              for many of the unnecessary manoeuvres that are carried out to
-              avoid potential collisions.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                "If you knew precisely where everything was, you would almost
-                never have a problem," says Marlon Sorge, a space-debris
-                specialist at the Aerospace Corporation in El Segundo,
-                California.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    36
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("40")}
                   </span>
                 )}
               </span>
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">E</p>
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">{renderText("C")}</h1>
             <p className="text-lg">
-              The field is called space traffic management, because it's similar
-              to managing traffic on the roads or in the air.
+              {renderText(
+                "Even as our ability to monitor space objects increases, so too does the total number of items in orbit."
+              )}
+              {renderText(
+                " That means companies, governments and other players in space are collaborating in new ways to avoid a shared threat."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Think about a busy day at an airport, says Moriba Jah, an
-                astrodynamicist at the University of Texas at Austin: planes
-                line up in the sky, landing and taking off close to one another
-                in a carefully choreographed routine.
+                {renderText(
+                  "International groups such as the Inter-Agency Space Debris Coordination Committee have developed guidelines on space sustainability."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    30
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("27")}
                   </span>
                 )}
               </span>
-              Air-traffic controllers know the location of the planes down to
-              one metre in accuracy. The same can't be said for space debris.
-              Not all objects in orbit are known, and even those included in
-              databases are not tracked consistently.
+              {renderText(
+                " Those include inactivating satellites at the end of their useful life by venting pressurised materials or leftover fuel that might lead to explosions."
+              )}
+              {renderText(
+                " The intergovernmental groups also advise lowering satellites deep enough into the atmosphere that they will burn up or disintegrate within 25 years."
+              )}
+              {renderText(
+                " But so far, only about half of all missions have abided by this 25-year goal."
+              )}
+              {renderText(
+                " Operators of planned large constellations of satellites say they will be responsible stewards, but concerns remain about satellites that fail or companies that go bankrupt."
+              )}
             </p>
 
-            <br />
-
-            <p className="text-lg font-bold">F</p>
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">{renderText("D")}</h1>
             <p className="text-lg">
-              An additional problem is that there is no authoritative catalogue
-              that accurately lists the orbits of all known space debris. Jah
-              illustrates this with a web-based database that he has developed.
-              It draws on several sources, such as catalogues maintained by the
-              US and Russian governments, to visualise where objects are in
-              space. When he types in an identifier for a particular space
-              object, the database draws a purple line to designate its orbit.
-              Only this doesn't quite work for a number of objects, such as a
-              Russian rocket body designated in the database as object number
-              32280. When Jah enters that number, the database draws two purple
-              lines: the US and Russian sources contain two completely different
-              orbits for the same object.
+              {renderText(
+                "In theory, given the vastness of space, satellite operators should have plenty of room for all these missions to fly safely without ever nearing another object."
+              )}
+
+              {renderText(
+                "Some scientists are tackling the problem by trying to determine where all the debris is to a high degree of precision."
+              )}
+
+              {renderText(
+                " That would alleviate the need for many unnecessary manoeuvres carried out to avoid potential collisions."
+              )}
+              {renderText(" ")}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Jah says that it is almost impossible to tell which is correct,
-                unless a third source of information made it possible to
-                cross-correlate.
+                {renderText(
+                  "If you knew precisely where everything was, you would almost never have a problem, says Marlon Sorge, a space-debris specialist at the Aerospace Corporation in El Segundo, California"
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    39
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("36")}
                   </span>
                 )}
               </span>
             </p>
+
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">{renderText("E")}</h1>
             <p className="text-lg">
-              Jah describes himself as a space environmentalist:
+              {renderText(
+                "The field is called space traffic management, because it is similar to managing traffic on the roads or in the air."
+              )}
+              {renderText(
+                " Think about a busy day at an airport: planes line up in the sky, landing and taking off close to one another in a carefully choreographed routine."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "I want to make space a place that is safe to operate, that is
-                free and useful for generations to come."
+                {renderText(
+                  "Air-traffic controllers know the location of planes down to one metre in accuracy."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      28
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      37
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("30")}
+                  </span>
                 )}
               </span>
-              Until that happens, he argues, the space community will continue
-              devolving into a tragedy in which all spaceflight operators are
-              polluting a common resource.
+              {renderText(
+                " The same cannot be said for space debris, as not all objects in orbit are known or tracked consistently."
+              )}
+            </p>
+
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">{renderText("F")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "An additional problem is that there is no authoritative catalogue that accurately lists the orbits of all known space debris."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "When Jah enters that number, the database draws two purple lines: the US and Russian sources contain two completely different orbits for the same object"
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("39")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Without a third source for cross-checking, resolving these discrepancies can be nearly impossible."
+              )}
+            </p>
+
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">{renderText("G")}</h1>
+            <p className="text-lg">
+              {renderText(
+                "Some researchers describe themselves as space environmentalists who want to make space safe and usable for generations to come."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Until that happens, they argue, the space community risks falling into a tragedy in which all spaceflight operators pollute a shared resource."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("28")}
+                  </span>
+                )}
+              </span>
             </p>
           </div>
 
@@ -478,13 +432,18 @@ const Reading1Part32023 = () => {
         {/* right div */}
         <div className="p-4 w-1/2 mx-auto overflow-y-scroll">
           {/* ================= Questions 27–31 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–31</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–31")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Reading Passage 3 has six sections, A–F.
+            {renderText("Reading Passage 3 has six sections, A–F.")}
             <br />
-            Which section contains the following information?
+            {renderText("Which section contains the following information?")}
             <br />
-            Choose the correct letter, A–F, in boxes 27–31 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–F, in boxes 27–31 on your answer sheet."
+            )}
           </p>
 
           {[
@@ -504,17 +463,17 @@ const Reading1Part32023 = () => {
             { num: 31, text: "a reference to efforts to classify space junk" },
           ].map((q) => (
             <div key={q.num} className="flex flex-wrap items-center gap-3 mb-3">
-              <span className="font-bold">{q.num}</span>
-              <span>{q.text}</span>
+              <span className="font-bold">{renderText(String(q.num))}</span>
+              <span>{renderText(q.text)}</span>
               <select
                 className="border rounded px-2 py-1 w-15"
                 value={userAnswers[q.num] || ""}
                 onChange={(e) => handleInputChange(q.num, e.target.value)}
               >
-                <option value="">{q.num}</option>
+                <option value="">{renderText(String(q.num))}</option>
                 {["A", "B", "C", "D", "E", "F"].map((letter) => (
                   <option key={letter} value={letter}>
-                    {letter}
+                    {renderText(letter)}
                   </option>
                 ))}
               </select>
@@ -522,17 +481,26 @@ const Reading1Part32023 = () => {
           ))}
 
           {/* ================= Questions 32–35 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 32–35</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 32–35")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Complete the summary below.
+            {renderText("Complete the summary below.")}
             <br />
-            Choose ONE WORD ONLY from the passage for each answer.
+            {renderText(
+              "Choose ONE WORD ONLY from the passage for each answer."
+            )}
           </p>
+
           <div>
             <ul className="list-disc list-inside space-y-4 text-lg border p-5">
               <h2 className="font-bold text-center text-xl">
-                The Inter-Agency Space Debris Coordination Committee
+                {renderText(
+                  "The Inter-Agency Space Debris Coordination Committee"
+                )}
               </h2>
+
               {[
                 {
                   num: 32,
@@ -553,39 +521,47 @@ const Reading1Part32023 = () => {
                 },
               ].map((q) => (
                 <li key={q.num} className="flex flex-wrap items-center gap-2">
-                  <span className="font-bold">{q.num}</span>
-                  {q.text && <span>{q.text}</span>}
+                  {q.text && <span>{renderText(q.text)}</span>}
+
+                  <span className="font-semibold h-8 w-8 border-1 rounded-full flex items-center justify-center">
+                    {renderText(String(q.num))}
+                  </span>
+
                   <input
                     type="text"
-                    placeholder={q.num}
                     className="border rounded px-2 py-1 w-32"
                     value={userAnswers[q.num] || ""}
                     onChange={(e) => handleInputChange(q.num, e.target.value)}
                   />
-                  {q.suffix && <span>{q.suffix}</span>}
+
+                  {q.suffix && <span>{renderText(q.suffix)}</span>}
                 </li>
               ))}
             </ul>
           </div>
 
           {/* ================= Questions 36–40 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 36–40</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 36–40")}
+          </h2>
+
           <p className="mb-4 font-semibold">
-            Look at the following statements (Questions 36–40) and the list of
-            people below.
+            {renderText(
+              "Look at the following statements (Questions 36–40) and the list of people below."
+            )}
             <br />
-            Match each statement with the correct person, A–D.
+            {renderText("Match each statement with the correct person, A–D.")}
             <br />
-            NB You may use any letter more than once.
+            {renderText("NB You may use any letter more than once.")}
           </p>
 
           <div className="border p-4 max-w-[320px] mx-auto mb-5">
-            <p className="font-bold mb-2">List of People</p>
+            <p className="font-bold mb-2">{renderText("List of People")}</p>
             <ul className="list-disc list-inside">
-              <li>A. Carolin Frueh</li>
-              <li>B. Holger Krag</li>
-              <li>C. Marlon Sorge</li>
-              <li>D. Moriba Jah</li>
+              <li>{renderText("A. Carolin Frueh")}</li>
+              <li>{renderText("B. Holger Krag")}</li>
+              <li>{renderText("C. Marlon Sorge")}</li>
+              <li>{renderText("D. Moriba Jah")}</li>
             </ul>
           </div>
 
@@ -612,22 +588,23 @@ const Reading1Part32023 = () => {
             },
           ].map((q) => (
             <div key={q.num} className="flex flex-wrap items-center gap-3 mb-3">
-              <span className="font-bold">{q.num}</span>
-              <span>{q.text}</span>
+              <span className="font-bold">{renderText(String(q.num))}</span>
+              <span>{renderText(q.text)}</span>
               <select
                 className="border rounded px-2 py-1 w-15"
                 value={userAnswers[q.num] || ""}
                 onChange={(e) => handleInputChange(q.num, e.target.value)}
               >
-                <option value="">{q.num}</option>
+                <option value="">{renderText(String(q.num))}</option>
                 {["A", "B", "C", "D"].map((letter) => (
                   <option key={letter} value={letter}>
-                    {letter}
+                    {renderText(letter)}
                   </option>
                 ))}
               </select>
             </div>
           ))}
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -635,104 +612,90 @@ const Reading1Part32023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
-                <div className="mt-10 flex items-center justify-center">
-                  {!showResult && (
-                    <button
-                      onClick={() => setShowResult(true)}
-                      className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
-                    >
-                      Submit Answers
-                    </button>
-                  )}
-                </div>
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    {renderText("All Answers (27–40)")}
+                  </h3>
+                  <ul className="space-y-3">
+                    {Array.from({ length: 14 }, (_, i) => i + 27).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+                      const noAnswer = !userAnswer;
 
-                {showResult && (
-                  <div className="space-y-6">
-                    {/* Result Card */}
-                    <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                      <h1 className="text-3xl font-bold mb-2">Result</h1>
-                      <p className="text-green-600 text-2xl font-semibold">
-                        Your Score: {score}/{Object.keys(correctAnswers).length}
-                      </p>
-                    </div>
-
-                    {/* All Answers List */}
-                    <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
-                      <h3 className="text-xl font-bold text-gray-700 mb-3">
-                        All Answers
-                      </h3>
-                      <ul className="space-y-3">
-                        {Object.keys(correctAnswers).map((num) => {
-                          const userAnswer =
-                            userAnswers[num]?.trim().toLowerCase() || "";
-                          const correctAnswer = correctAnswers[num]
-                            ?.trim()
-                            .toLowerCase();
-                          const isCorrect =
-                            userAnswer && userAnswer === correctAnswer;
-                          const noAnswer = !userAnswer;
-
-                          return (
-                            <li
-                              key={num}
-                              className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
-                            >
-                              <div className="flex items-center gap-2">
-                                {isCorrect && (
-                                  <span className="text-green-600 text-xl font-bold">
-                                    <FaDotCircle />
-                                  </span>
-                                )}
-                                {(noAnswer || !isCorrect) && (
-                                  <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
-                                    <span className="text-white text-sm font-bold leading-none">
-                                      <ImCross />
-                                    </span>
-                                  </div>
-                                )}
-                                <p className="font-bold">Q{num}:</p>
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
                               </div>
+                            )}
 
-                              <p className="ml-8">
-                                <span className="font-semibold">
-                                  Your Answer:
-                                </span>{" "}
-                                {noAnswer ? (
-                                  <span className="italic">
-                                    No answer provided
-                                  </span>
-                                ) : (
-                                  userAnswer
-                                )}
-                              </p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
+                          </div>
 
-                              <p className="ml-8">
-                                <span className="font-semibold text-green-600">
-                                  Correct Answer:
-                                </span>{" "}
-                                {correctAnswers[num]}
-                              </p>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </div>
-                )}
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer ? (
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
+                            ) : (
+                              <span>{renderText(userAnswer)}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              {renderText("Correct Answer:")}
+                            </span>{" "}
+                            <span>{renderText(correctAnswers[num])}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             )}
           </div>

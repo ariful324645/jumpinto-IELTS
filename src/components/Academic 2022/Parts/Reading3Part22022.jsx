@@ -235,59 +235,62 @@ const Reading3Part22022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">Palm oil</h1>
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("Palm oil")}
+            </h1>
 
-            <p className="text-lg font-bold">A</p>
+            {/* ===================== A ===================== */}
             <p className="text-lg">
-              Palm oil is an edible oil derived from the fruit of the African
-              oil palm tree, and is currently the most consumed vegetable oil in
-              the world.It's almost certainly in the soap we wash with in the
-              morning, the sandwich we have for lunch, and the biscuits we snack
-              on during the day.
+              {renderText(
+                "Palm oil is an edible oil derived from the fruit of the African oil palm tree, and is currently the most consumed vegetable oil in the world."
+              )}
+              {renderText(
+                " It's almost certainly in the soap we wash with in the morning, the sandwich we have for lunch, and the biscuits we snack on during the day."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Why is palm oil so attractive for manufacturers?Primarily
-                because its unique properties - such as remaining solid at room
-                temperature - make it an ideal ingredient for long-term
-                preservation, allowing many packaged foods on supermarket
-                shelves to have 'best before' dates of months, even years, into
-                the future.
+                {renderText(
+                  " Why is palm oil so attractive for manufacturers? Primarily because its unique properties - such as remaining solid at room temperature - make it an ideal ingredient for long-term preservation, allowing many packaged foods on supermarket shelves to have 'best before' dates of months, even years, into the future."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     16
                   </span>
                 )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                    23
-                  </span>
-                )}
               </span>
+              {renderText(" ")}
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  23
+                </span>
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">B</p>
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              Many farmers have seized the opportunity to maximise the planting
-              of oil palm trees.Between 1990 and 2012, the global land area
-              devoted to growing oil palm trees grew from 6 to 17 million
-              hectares, now accounting for around ten percent of total cropland
-              in the entire world.
+              {renderText(
+                "Many farmers have seized the opportunity to maximise the planting of oil palm trees."
+              )}
+              {renderText(
+                " Between 1990 and 2012, the global land area devoted to growing oil palm trees grew from 6 to 17 million hectares, now accounting for around ten percent of total cropland in the entire world."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                From a mere two million tonnes of palm oil being produced
-                annually globally 50 years ago, there are now around 60 million
-                tonnes produced every single year, a figure looking likely to
-                double or even triple by the middle of the century.
+                {renderText(
+                  " From a mere two million tonnes of palm oil being produced annually globally 50 years ago, there are now around 60 million tonnes produced every single year, a figure looking likely to double or even triple by the middle of the century."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     18
                   </span>
                 )}
@@ -296,80 +299,144 @@ const Reading3Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">C</p>
+            {/* ===================== C ===================== */}
             <p className="text-lg">
-              However, there are multiple reasons why conservationists cite the
-              rapid spread of oil palm plantations as a major concern.There are
-              countless news stories of deforestation, habitat destruction and
-              dwindling species populations, all as a direct result of land
-              clearing to establish oil palm tree monoculture on an industrial
-              scale, particularly in Malaysia and Indonesia.
+              {renderText(
+                "However, there are multiple reasons why conservationists cite the rapid spread of oil palm plantations as a major concern."
+              )}
+              {renderText(
+                " There are countless news stories of deforestation, habitat destruction and dwindling species populations, all as a direct result of land clearing to establish oil palm tree monoculture on an industrial scale, particularly in Malaysia and Indonesia."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Endangered species - most famously the Sumatran orangutan, but
-                also rhinos, elephants, tigers, and numerous other fauna - have
-                suffered from the unstoppable spread of oil palm plantations.
+                {renderText(
+                  " Endangered species - most famously the Sumatran orangutan, but also rhinos, elephants, tigers, and numerous other fauna - have suffered from the unstoppable spread of oil palm plantations."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      20
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      24
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    20
+                  </span>
+                )}
+              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  24
+                </span>
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== D ===================== */}
+            <p className="text-lg">
+              {renderText(
+                '"Palm oil is surely one of the greatest threats to global biodiversity," declares Dr Farnon Ellwood of the University of the West of England, Bristol.'
+              )}
+              {renderText(
+                " Palm oil is replacing rainforest, and rainforest is where all the species are. That's a problem."
+              )}
+              {renderText(
+                " This has led to some radical questions among environmentalists, such as whether consumers should try to boycott palm oil entirely."
+              )}
+              {renderText(
+                " Meanwhile Bhavani Shankar, Professor at London's School of Oriental and African Studies, argues, 'It's easy to say that palm oil is the enemy and we should be against it."
+              )}
+              {renderText(
+                " It makes for a more dramatic story, and it's very intuitive. But given the complexity of the argument, I think a much more nuanced story is closer to the truth.'"
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== E ===================== */}
+            <p className="text-lg">
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "One response to the boycott movement has been the argument for the vital role palm oil plays in lifting many millions of people in the developing world out of poverty."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    19
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " Is it desirable to have palm oil boycotted, replaced, eliminated from the global supply chain, given how many low-income people in developing countries depend on it for their livelihoods?"
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    19
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " How best to strike a utilitarian balance between these competing factors has become a serious bone of contention."
+              )}
+            </p>
+
+            <br />
+
+            {/* ===================== F ===================== */}
+            <p className="text-lg">
+              {renderText(
+                "Even the deforestation argument isn't as straightforward as it seems. Oil palm plantations produce at least four and potentially up to ten times more oil per hectare than soybean, rapeseed, sunflower or other competing oils."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " That immensely high yield - which is predominantly what makes it so profitable - is potentially also an ecological benefit."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    14
+                  </span>
                 )}
               </span>
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">D</p>
             <p className="text-lg">
+              {renderText(
+                "As for the question of carbon emissions, the issue really depends on what oil palm trees are replacing. Crops vary in the degree to which they sequester carbon - in other words, the amount of carbon they capture from the atmosphere and store within the plant."
+              )}
+              {renderText(
+                " The more carbon a plant sequesters, the more it reduces the effect of climate change."
+              )}
+              {renderText(
+                " As Shankar explains: '[Palm oil production] actually sequesters more carbon in some ways than other alternatives."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "Palm oil is surely one of the greatest threats to global
-                biodiversity," declares Dr Farnon Ellwood of the University of
-                the West of England, Bristol."Palm oil is replacing rainforest,
-                and rainforest is where all the species are.That's a problem."
-              </span>
-              This has led to some radical questions among environmentalists,
-              such as whether consumers should try to boycott palm oil entirely.
-            </p>
-            <p className="text-lg">
-              Meanwhile Bhavani Shankar, Professor at London's School of
-              Oriental and African Studies, argues, 'It's easy to say that palm
-              oil is the enemy and we should be against it.It makes for a more
-              dramatic story, and it's very intuitive.But given the complexity
-              of the argument, I think a much more nuanced story is closer to
-              the truth.'
-            </p>
-
-            <br />
-
-            <p className="text-lg font-bold">E</p>
-            <p className="text-lg">
-              One response to the boycott movement has been the argument for the
-              vital role palm oil plays in lifting many millions of people in
-              the developing world out of poverty.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Is it desirable to have palm oil boycotted, replaced, eliminated
-                from the global supply chain, given how many low-income people
-                in developing countries depend on it for their livelihoods?How
-                best to strike a utilitarian balance between these competing
-                factors has become a serious bone of contention.
+                {renderText(
+                  " [...] Of course, if you're cutting down virgin forest it's terrible - that's what's happening in Indonesia and Malaysia, it's been allowed to get out of hand."
+                )}
+                {renderText(
+                  " But if it's replacing rice, for example, it might actually sequester more carbon.'"
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     19
                   </span>
                 )}
@@ -378,127 +445,85 @@ const Reading3Part22022 = () => {
 
             <br />
 
-            <p className="text-lg font-bold">F</p>
+            {/* ===================== G ===================== */}
             <p className="text-lg">
-              Even the deforestation argument isn't as straightforward as it
-              seems.Oil palm plantations produce at least four and potentially
-              up to ten times more oil per hectare than soybean, rapeseed,
-              sunflower or other competing oils.
+              {renderText(
+                "The industry is now regulated by a group called the Roundtable on Sustainable Palm Oil (RSPO), consisting of palm growers, retailers, product manufacturers, and other interested parties."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                That immensely high yield - which is predominantly what makes it
-                so profitable - is potentially also an ecological benefit.If ten
-                times more palm oil can be produced from a patch of land than
-                any competing oil, then ten times more land would need to be
-                cleared in order to produce the same volume of oil from that
-                competitor.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    14
-                  </span>
+                {renderText(
+                  " Over the past decade or so, an agreement has gradually been reached regarding standards that producers of palm oil have to meet in order for their product to be regarded as officially 'sustainable'."
                 )}
               </span>
-            </p>
-            <p className="text-lg">
-              As for the question of carbon emissions, the issue really depends
-              on what oil palm trees are replacing.Crops vary in the degree to
-              which they sequester carbon - in other words, the amount of carbon
-              they capture from the atmosphere and store within the plant.The
-              more carbon a plant sequesters, the more it reduces the effect of
-              climate change.As Shankar explains: '[Palm oil production]
-              actually sequesters more carbon in some ways than other
-              alternatives.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  15
+                </span>
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                [...] Of course, if you're cutting down virgin forest it's
-                terrible - that's what's happening in Indonesia and Malaysia,
-                it's been allowed to get out of hand.But if it's replacing rice,
-                for example, it might actually sequester more carbon.'
+                {renderText(
+                  " The RSPO insists upon no virgin forest clearing, transparency and regular assessment of carbon stocks, among other criteria."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    14
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    15
                   </span>
                 )}
               </span>
+              {renderText(
+                " Only once these requirements are fully satisfied is the oil allowed to be sold as certified sustainable palm oil (CSPO). Recent figures show that the RSPO now certifies around 12 million tonnes of palm oil annually, equivalent to roughly 21 percent of the world's total palm oil production."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">G</p>
+            {/* ===================== H ===================== */}
             <p className="text-lg">
-              The industry is now regulated by a group called the Roundtable on
-              Sustainable Palm Oil (RSPO), consisting of palm growers,
-              retailers, product manufacturers, and other interested parties.
+              {renderText(
+                "There is even hope that oil palm plantations might not need to be such sterile monocultures, or 'green deserts', as Ellwood describes them."
+              )}
+              {renderText(
+                " New research at Ellwood's lab hints at one plant which might make all the difference."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Over the past decade or so, an agreement has gradually been
-                reached regarding standards that producers of palm oil have to
-                meet in order for their product to be regarded as officially
-                'sustainable'.The RSPO insists upon no virgin forest clearing,
-                transparency and regular assessment of carbon stocks, among
-                other criteria.Only once these requirements are fully satisfied
-                is the oil allowed to be sold as certified sustainable palm oil
-                (CSPO).Recent figures show that the RSPO now certifies around 12
-                million tonnes of palm oil annually, equivalent to roughly 21
-                percent of the world's total palm oil production.
+                {renderText(
+                  " The bird's nest fern (Asplenium nidus) grows on trees in an epiphytic fashion (meaning it's dependent on the tree only for support, not for nutrients), and is native to many tropical regions, where as a keystone species it performs a vital ecological role."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      15
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      21
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      25
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    17
+                  </span>
                 )}
               </span>
-            </p>
 
-            <br />
-
-            <p className="text-lg font-bold">H</p>
-            <p className="text-lg">
-              There is even hope that oil palm plantations might not need to be
-              such sterile monocultures, or 'green deserts', as Ellwood
-              describes them.New research at Ellwood's lab hints at one plant
-              which might make all the difference.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The bird's nest fern (Asplenium nidus) grows on trees in an
-                epiphytic fashion (meaning it's dependent on the tree only for
-                support, not for nutrients), and is native to many tropical
-                regions, where as a keystone species it performs a vital
-                ecological role.Ellwood believes that reintroducing the bird's
-                nest fern into oil palm plantations could potentially allow
-                these areas to recover their biodiversity, providing a home for
-                all manner of species, from fungi and bacteria, to invertebrates
-                such as insects, amphibians, reptiles and even mammals.
-                {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                      17
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      26
-                    </span>
-                  </>
+                {renderText(
+                  " Ellwood believes that reintroducing the bird's nest fern into oil palm plantations could potentially allow these areas to recover their biodiversity, providing a home for all manner of species, from fungi and bacteria, to invertebrates such as insects, amphibians, reptiles and even mammals."
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  17
+                </span>
+              )}
             </p>
           </div>
 
@@ -527,14 +552,18 @@ const Reading3Part22022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 14–20 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 14–20</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 14–20")}
+          </h2>
 
           <p className="mb-4">
-            Reading Passage 2 has eight sections, A–H.
+            {renderText("Reading Passage 2 has eight sections, A–H.")}
             <br />
-            Which section contains the following information?
+            {renderText("Which section contains the following information?")}
             <br />
-            Choose the correct letter, A–H, in boxes 14–20 on your answer sheet.
+            {renderText(
+              "Choose the correct letter, A–H, in boxes 14–20 on your answer sheet."
+            )}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -551,7 +580,10 @@ const Reading3Part22022 = () => {
               return (
                 <li key={qNum} className="flex items-center gap-2">
                   <span className="">
-                    <span className="font-bold">{qNum}</span> {text}
+                    <span className="font-bold">
+                      {renderText(qNum.toString())}
+                    </span>{" "}
+                    {renderText(text)}
                   </span>
                   <select
                     className="border rounded px-2 py-1"
@@ -573,14 +605,18 @@ const Reading3Part22022 = () => {
           </ul>
 
           {/* ================= Questions 21–22 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 21–22</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 21–22")}
+          </h2>
           <h2 className="mt-4">
-            {" "}
-            Choose <strong>TWO</strong> letters, A–E.
+            {renderText("Choose ")}
+            <strong>{renderText("TWO")}</strong>
+            {renderText(" letters, A–E.")}
           </h2>
           <p className="mt-4">
-            Which TWO statements are made about the Roundtable on Sustainable
-            Palm Oil (RSPO)?
+            {renderText(
+              "Which TWO statements are made about the Roundtable on Sustainable Palm Oil (RSPO)?"
+            )}
           </p>
 
           {[
@@ -608,78 +644,61 @@ const Reading3Part22022 = () => {
                   disabled={disabled}
                   onChange={() => handleInputChange("21-22", value)}
                 />
-                <span className="font-semibold">{value}.</span>
+                <span className="font-semibold">{renderText(value)}.</span>
                 <span>{renderText(text)}</span>
               </label>
             );
           })}
 
           {/* ================= Questions 23–26 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 23–26</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 23–26")}
+          </h2>
 
           <p className="mb-4">
-            Complete the sentences below.
+            {renderText("Complete the sentences below.")}
             <br />
-            Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for
-            each answer.
+            {renderText("Choose ")}
+            <strong>{renderText("NO MORE THAN TWO WORDS")}</strong>
+            {renderText(" from the passage for each answer.")}
           </p>
 
           <div className="space-y-4 text-lg">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-bold">23</span>
-              <span>
-                One advantage of palm oil for manufacturers is that it stays
-              </span>
-              <input
-                type="text"
-                className="border rounded px-2 py-1 w-32 text-center"
-                onChange={(e) => handleInputChange(23, e.target.value)}
-              />
-              <span>even when not refrigerated.</span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-bold">24</span>
-              <span>The</span>
-              <input
-                type="text"
-                className="border rounded px-2 py-1 w-32 text-center"
-                onChange={(e) => handleInputChange(24, e.target.value)}
-              />
-              <span>
-                is the best known of the animals suffering habitat loss as a
-                result of oil palm plantations.
-              </span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-bold">25</span>
-              <span>
-                As one criterion for certification, the RSPO insists that
-                growers check
-              </span>
-              <input
-                type="text"
-                className="border rounded px-2 py-1 w-32 text-center"
-                onChange={(e) => handleInputChange(25, e.target.value)}
-              />
-              <span>on a routine basis.</span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-bold">26</span>
-              <span>
-                Ellwood and his team are investigating whether the bird’s nest
-                fern could restore
-              </span>
-              <input
-                type="text"
-                className="border rounded px-2 py-1 w-32 text-center"
-                onChange={(e) => handleInputChange(26, e.target.value)}
-              />
-              <span>in oil palm plantations.</span>
-            </div>
+            {[
+              {
+                q: 23,
+                pre: "One advantage of palm oil for manufacturers is that it stays",
+                post: "even when not refrigerated.",
+              },
+              {
+                q: 24,
+                pre: "The",
+                post: "is the best known of the animals suffering habitat loss as a result of oil palm plantations.",
+              },
+              {
+                q: 25,
+                pre: "As one criterion for certification, the RSPO insists that growers check",
+                post: "on a routine basis.",
+              },
+              {
+                q: 26,
+                pre: "Ellwood and his team are investigating whether the bird’s nest fern could restore",
+                post: "in oil palm plantations.",
+              },
+            ].map(({ q, pre, post }) => (
+              <div key={q} className="flex flex-wrap items-center gap-2">
+                <span className="font-bold">{renderText(q.toString())}</span>
+                <span>{renderText(pre)}</span>
+                <input
+                  type="text"
+                  className="border rounded px-2 py-1 w-32 text-center"
+                  onChange={(e) => handleInputChange(q, e.target.value)}
+                />
+                <span>{renderText(post)}</span>
+              </div>
+            ))}
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -687,23 +706,25 @@ const Reading3Part22022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/10
+                    {renderText(`Your Score: ${score}/10`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (11–20)
+                    {renderText("All Answers (14–26)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -750,27 +771,29 @@ const Reading3Part22022 = () => {
                                   <ImCross className="text-white text-sm font-bold" />
                                 </div>
                               )}
-                              <p className="font-bold">Q{num}:</p>
+                              <p className="font-bold">
+                                {renderText(`Q${num}:`)}
+                              </p>
                             </div>
 
                             <p className="ml-8">
                               <span className="font-semibold">
-                                Your Answer:
+                                {renderText("Your Answer:")}
                               </span>{" "}
                               {noAnswer ? (
                                 <span className="italic">
-                                  No answer provided
+                                  {renderText("No answer provided")}
                                 </span>
                               ) : (
-                                userAnswerDisplay
+                                renderText(userAnswerDisplay)
                               )}
                             </p>
 
                             <p className="ml-8">
                               <span className="font-semibold text-green-600">
-                                Correct Answer:
+                                {renderText("Correct Answer:")}
                               </span>{" "}
-                              {correctAnswerDisplay}
+                              {renderText(correctAnswerDisplay)}
                             </p>
                           </li>
                         );

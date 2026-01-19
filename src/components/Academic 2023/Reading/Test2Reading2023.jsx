@@ -457,30 +457,45 @@ const Test2Reading2023 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 1–8 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 1–8</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–8")}
+          </h2>
 
           <p className="mb-4">
-            Complete the notes below.
+            {renderText("Complete the notes below.")}
             <br />
-            Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for
-            each answer.
+            {renderText("Choose ")}
+            <strong>{renderText("NO MORE THAN TWO WORDS")}</strong>
+            {renderText(" from the passage for each answer.")}
             <br />
-            Write your answers in boxes 1-8 on your answer sheet.
+            {renderText(
+              "Write your answers in boxes 1-8 on your answer sheet."
+            )}
           </p>
 
           <div className="border p-5 mt-4">
-            <h3 className="text-xl font-bold text-center mb-4">Stonehenge</h3>
+            <h3 className="text-xl font-bold text-center mb-4">
+              {renderText("Stonehenge")}
+            </h3>
 
             <ul className="list-disc list-inside space-y-4 text-lg">
               {/* 1 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Stage 1: the ditch and henge were dug, possibly using tools
-                  made from
+                  {renderText(
+                    "Stage 1: the ditch and henge were dug, possibly using tools made from"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(1)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[1]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   1
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -491,11 +506,20 @@ const Test2Reading2023 = () => {
               {/* 2 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Stage 1: may have been arranged in deep pits inside the circle
+                  {renderText(
+                    " may have been arranged in deep pits inside the circle"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(2)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[2]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   2
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -506,27 +530,43 @@ const Test2Reading2023 = () => {
               {/* 3 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Stage 2: bluestones from the Preseli Hills were placed in
-                  standing position. Theories about transportation of the
-                  bluestones (archaeological): builders used
+                  {renderText(
+                    "Stage 2: bluestones from the Preseli Hills were placed in standing position. Theories about transportation of the bluestones (archaeological): builders used"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(3)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[3]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   3
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
                   onChange={(e) => handleInputChange(3, e.target.value)}
                 />
-                <span>to make sledges and rollers</span>
+                <span>{renderText("to make sledges and rollers")}</span>
               </li>
 
               {/* 4 */}
               <li className="flex items-center flex-wrap gap-2">
-                <span>Stage 2: pulled them on giant baskets</span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
-                  4
+                <span>
+                  {renderText("Stage 2: pulled them on giant baskets")}
                 </span>
+                <button
+                  onClick={() => toggleButton(4)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[4]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  4
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -537,11 +577,20 @@ const Test2Reading2023 = () => {
               {/* 5 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Stage 2: geological theory - they were brought from Wales by
+                  {renderText(
+                    "Stage 2: geological theory - they were brought from Wales by"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(5)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[5]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   5
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -552,12 +601,20 @@ const Test2Reading2023 = () => {
               {/* 6 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Stage 3: Builders - a theory arose in the 17th century that
-                  its builders were Celtic
+                  {renderText(
+                    "Stage 3: Builders - a theory arose in the 17th century that its builders were Celtic"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(6)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[6]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   6
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -567,10 +624,21 @@ const Test2Reading2023 = () => {
 
               {/* 7 */}
               <li className="flex items-center flex-wrap gap-2">
-                <span>Purpose: many experts agree it has been used as a</span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
-                  7
+                <span>
+                  {renderText(
+                    "Purpose: many experts agree it has been used as a"
+                  )}
                 </span>
+                <button
+                  onClick={() => toggleButton(7)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[7]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
+                  7
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -581,12 +649,20 @@ const Test2Reading2023 = () => {
               {/* 8 */}
               <li className="flex items-center flex-wrap gap-2">
                 <span>
-                  Purpose: in the 1960s, it was suggested that it worked as a
-                  kind of
+                  {renderText(
+                    "Purpose: in the 1960s, it was suggested that it worked as a kind of"
+                  )}
                 </span>
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 font-bold">
+                <button
+                  onClick={() => toggleButton(8)}
+                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
+                    activeButtons[8]
+                      ? "bg-yellow-400 border-yellow-500"
+                      : "bg-gray-200 border-gray-400"
+                  }`}
+                >
                   8
-                </span>
+                </button>
                 <input
                   type="text"
                   className="border-2 rounded px-2 py-1 w-32"
@@ -597,25 +673,30 @@ const Test2Reading2023 = () => {
           </div>
 
           {/* ================= Questions 9–13 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 9–13</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 9–13")}
+          </h2>
 
           <p className="mt-4">
-            Do the following statements agree with the information given in
-            Reading Passage 1?
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}
             <br />
-            In boxes 9-13 on your answer sheet, choose:
+            {renderText("In boxes 9-13 on your answer sheet, choose:")}
           </p>
 
           <div className="mb-4 space-y-1 ml-3">
             <p>
-              <strong>TRUE</strong> if the statement agrees with the information
+              <strong>{renderText("TRUE")}</strong>{" "}
+              {renderText("if the statement agrees with the information")}
             </p>
             <p>
-              <strong>FALSE</strong> if the statement contradicts the
-              information
+              <strong>{renderText("FALSE")}</strong>{" "}
+              {renderText("if the statement contradicts the information")}
             </p>
             <p>
-              <strong>NOT GIVEN</strong> if there is no information on this
+              <strong>{renderText("NOT GIVEN")}</strong>{" "}
+              {renderText("if there is no information on this")}
             </p>
           </div>
 
@@ -638,9 +719,9 @@ const Test2Reading2023 = () => {
                   : "border-gray-300"
               }`}
                   >
-                    {qIndex + 9}
+                    {renderText(`${qIndex + 9}`)}
                   </div>
-                  <p className="text-lg">{q}</p>
+                  <p className="text-lg">{renderText(q)}</p>
                 </div>
 
                 <div className="ml-12 space-y-2">
@@ -665,7 +746,7 @@ const Test2Reading2023 = () => {
                             : ""
                         }
                       >
-                        {option}
+                        {renderText(option)}
                       </span>
                     </div>
                   ))}
@@ -682,23 +763,25 @@ const Test2Reading2023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    {renderText("Your Score:")} {score}/13
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–13)
+                    {renderText("All Answers (1–13)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -731,23 +814,29 @@ const Test2Reading2023 = () => {
                                 <ImCross className="text-white text-sm" />
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswer}</span>
+                            <span>{renderText(correctAnswer)}</span>
                           </p>
                         </li>
                       );

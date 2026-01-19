@@ -210,275 +210,285 @@ const Reading4Part22023 = () => {
           </div>
 
           {/* Reading Passage */}
-          <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              The growth mindset
+          <div className="">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("The Growth Mindset")}
             </h1>
 
-            <p className="text-lg">
-              Over the past century, a powerful idea has taken root in the
-              educational landscape.
+            <p className="text-lg my-5">
+              {renderText(
+                "Over the past century, a powerful idea has taken root in the educational landscape."
+              )}
+              {renderText(
+                " The concept of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and that, with the right training, we can be the authors of our own cognitive capabilities."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The concept of intelligence as something innate has been
-                supplanted by the idea that intelligence is not fixed, and that,
-                with the right training, we can be the authors of our own
-                cognitive capabilities.
+                {renderText(
+                  "Psychologist Alfred Binet, the developer of the first intelligence tests, was one of many 19th-century scientists who held that earlier view and sought to quantify cognitive ability."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    14
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("14")}
                   </span>
                 )}
               </span>
-              Psychologist Alfred Binet, the developer of the first intelligence
-              tests, was one of many 19th-century scientists who held that
-              earlier view and sought to quantify cognitive ability.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Then, in the early 20th century, progressive thinkers revolted
-                against the notion that inherent ability is destiny.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    19
-                  </span>
-                )}
-              </span>
-              Instead, educators such as John Dewey argued that every child's
-              intelligence could be developed, given the right environment.
+              {renderText(
+                " Then, in the early 20th century, progressive thinkers revolted against the notion that inherent ability is destiny."
+              )}
+              {renderText(
+                " Instead, educators such as John Dewey argued that every child's intelligence could be developed, given the right environment."
+              )}
             </p>
 
+            {/* Section A */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section A")}
+            </h1>
             <p className="text-lg">
-              'Growth mindset theory' is a relatively new - and extremely
-              popular - version of this idea.In many schools today you will see
-              hallways covered in motivational posters and hear speeches on the
-              mindset of great sporting heroes who simply believed their way to
-              the top.
+              {renderText(
+                "'Growth mindset theory' is a relatively new - and extremely popular - version of this idea."
+              )}
+              {renderText(
+                " In many schools today you will see hallways covered in motivational posters and hear speeches on the mindset of great sporting heroes who simply believed their way to the top."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                A major focus of the growth mindset in schools is coaxing
-                students away from seeing failure as an indication of their
-                ability, and towards seeing it as a chance to improve that
-                ability.
+                {renderText(
+                  "A major focus of the growth mindset in schools is coaxing students away from seeing failure as an indication of their ability, and towards seeing it as a chance to improve that ability."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    15
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("15")}
                   </span>
                 )}
               </span>
-              As educationalist Jeff Howard noted several decades ago: "Smart is
-              not something that you just are, smart is something that you can
-              get."
+              {renderText(
+                ' As educationalist Jeff Howard noted several decades ago: "Smart is not something that you just are, smart is something that you can get."'
+              )}
             </p>
 
+            {/* Section B */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section B")}
+            </h1>
             <p className="text-lg">
-              The idea of the growth mindset is based on the work of
-              psychologist Carol Dweck in California in the 1990s.In one key
-              experiment, Dweck divided a group of 10- to 12-year-olds into two
-              groups.All were told that they had achieved a high score on a test
-              but the first group were praised for their intelligence in
-              achieving this, while the others were praised for their effort.The
-              second group - those who had been instilled with a 'growth
-              mindset' - were subsequently far more likely to put effort into
-              future tasks.Meanwhile, the former took on only those tasks that
-              would not risk their sense of worth.
+              {renderText(
+                "The idea of the growth mindset is based on the work of psychologist Carol Dweck in California in the 1990s."
+              )}
+              {renderText(
+                " In one key experiment, Dweck divided a group of 10- to 12-year-olds into two groups."
+              )}
+              {renderText(
+                " All were told that they had achieved a high score on a test but the first group were praised for their intelligence in achieving this, while the others were praised for their effort."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                This group had inferred that success or failure is due to innate
-                ability, and this 'fixed mindset' had led them to fear of
-                failure and lack of effort.
+                {renderText(
+                  "The second group - those who had been instilled with a 'growth mindset' - were subsequently far more likely to put effort into future tasks."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    16
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("16")}
                   </span>
                 )}
               </span>
-              Praising ability actually made the students perform worse, while
-              praising effort emphasised that change was possible.
+              {renderText(
+                " Meanwhile, the former took on only those tasks that would not risk their sense of worth."
+              )}
+              {renderText(
+                " This group had inferred that success or failure is due to innate ability, and this 'fixed mindset' had led them to fear of failure and lack of effort."
+              )}
+              {renderText(
+                " Praising ability actually made the students perform worse, while praising effort emphasised that change was possible."
+              )}
             </p>
 
+            {/* Section C */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section C")}
+            </h1>
             <p className="text-lg">
-              One of the greatest impediments to successfully implementing a
-              growth mindset, however, is the education system itself: in many
-              parts of the world, the school climate is obsessed with
-              performance in the form of constant testing, analysing and ranking
-              of students - a key characteristic of the fixed mindset.Nor is it
-              unusual for schools to create a certain cognitive dissonance, when
-              they applaud the benefits of a growth mindset but then hand out
-              fixed target grades in lessons based on performance.
+              {renderText(
+                "One of the greatest impediments to successfully implementing a growth mindset, however, is the education system itself: in many parts of the world, the school climate is obsessed with performance in the form of constant testing, analysing and ranking of students - a key characteristic of the fixed mindset."
+              )}
+              {renderText(
+                " Nor is it unusual for schools to create a certain cognitive dissonance, when they applaud the benefits of a growth mindset but then hand out fixed target grades in lessons based on performance."
+              )}
             </p>
 
+            {/* Section D */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section D")}
+            </h1>
             <p className="text-lg">
-              Aside from the implementation problem, the original growth mindset
-              research has also received harsh criticism.The statistician Andrew
-              Gelman claims that "their research designs have enough degrees of
-              freedom that they could take their data to support just about any
-              theory at all".
+              {renderText(
+                "Aside from the implementation problem, the original growth mindset research has also received harsh criticism."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Professor of Psychology Timothy Bates, who has been trying to
-                replicate Dweck's work, is finding that the results are
-                repeatedly null.
+                {renderText(
+                  'The statistician Andrew Gelman claims that "their research designs have enough degrees of freedom that they could take their data to support just about any theory at all".'
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    17
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("17")}
                   </span>
                 )}
               </span>
+              {renderText(
+                " Professor of Psychology Timothy Bates, who has been trying to replicate Dweck's work, is finding that the results are repeatedly null."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He notes that: "People with a growth mindset don't cope any
-                better with failure...Kids with the growth mindset aren't
-                getting better grades, either before or after our intervention
-                study."
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    22
-                  </span>
+                {renderText(
+                  "He notes that: \"People with a growth mindset don't cope any better with failure...Kids with the growth mindset aren't getting better grades, either before or after our intervention study.\""
                 )}
-              </span>
-            </p>
-
-            <p className="text-lg">
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Much of this criticism is not lost on Dweck, and she deserves
-                great credit for responding to it and adapting her work
-                accordingly.
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    23
-                  </span>
-                )}
-              </span>
-              In fact, she argues that her work has been misunderstood and
-              misapplied in a range of ways.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                She has also expressed concerns that her theories are being
-                misappropriated in schools by being conflated with the
-                self-esteem movement: "For me the growth mindset is a tool for
-                learning and improvement.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    18
-                  </span>
-                )}
-              </span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                It's not just a vehicle for making children feel good."
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    21
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("22")}
                   </span>
                 )}
               </span>
             </p>
 
+            {/* Section E */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section E")}
+            </h1>
             <p className="text-lg">
-              But there is another factor at work here.The failure to translate
-              the growth mindset into the classroom might reflect a
-              misunderstanding of the nature of teaching and learning
-              itself.Growth mindset supporters David Yeager and Gregory Walton
-              claim that interventions should be delivered in a subtle way to
-              maximise their effectiveness.
+              {renderText(
+                "Much of this criticism is not lost on Dweck, and she deserves great credit for responding to it and adapting her work accordingly."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                They say that if adolescents perceive a teacher's intervention
-                as conveying that they are in need of help, this could undo its
-                intended effects.
+                {renderText(
+                  "In fact, she argues that her work has been misunderstood and misapplied in a range of ways."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    20
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("23")}
                   </span>
                 )}
               </span>
-            </p>
-
-            <p className="text-lg">
-              A lot of what drives students is their innate beliefs and how they
-              perceive themselves.There is a strong correlation between
-              self-perception and achievement, but there is evidence to suggest
-              that the actual effect of achievement on self-perception is
-              stronger than the other way round.
+              {renderText(
+                ' She has also expressed concerns that her theories are being misappropriated in schools by being conflated with the self-esteem movement: "For me the growth mindset is a tool for learning and improvement.'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                To stand up in a classroom and successfully deliver a good
-                speech is a genuine achievement, and that is likely to be more
-                powerfully motivating than vague notions of 'motivation' itself.
+                {renderText(
+                  "It's not just a vehicle for making children feel good."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    24
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("18")}
                   </span>
                 )}
               </span>
             </p>
 
+            {/* Section F */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section F")}
+            </h1>
             <p className="text-lg">
-              Recent evidence would suggest that growth mindset interventions
-              are not the elixir of student learning that its proponents claim
-              it to be.The growth mindset appears to be a viable construct in
-              the lab, which, when administered in the classroom via targeted
-              interventions, doesn't seem to work.It is hard to dispute that
-              having faith in the capacity to change is a good attribute for
-              students.
+              {renderText(
+                "But there is another factor at work here. The failure to translate the growth mindset into the classroom might reflect a misunderstanding of the nature of teaching and learning itself."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Paradoxically, however, that aspiration is not well served by
-                direct interventions that try to instil it.
+                {renderText(
+                  "Growth mindset supporters David Yeager and Gregory Walton claim that interventions should be delivered in a subtle way to maximise their effectiveness."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    26
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("20")}
                   </span>
                 )}
               </span>
+              {renderText(
+                " They say that if adolescents perceive a teacher's intervention as conveying that they are in need of help, this could undo its intended effects."
+              )}
             </p>
 
+            {/* Section G */}
+            <h1 className="text-lg font-bold my-5">
+              {renderText("Section G")}
+            </h1>
             <p className="text-lg">
-              Motivational posters and talks are often a waste of time, and
-              might well give students a deluded notion of what success actually
-              means.Teaching concrete skills such as how to write an effective
-              introduction to an essay then praising students' effort in getting
-              there is probably a far better way of improving confidence than
-              telling them how unique they are, or indeed how capable they are
-              of changing their own brains.Perhaps growth mindset works best as
-              a philosophy and not an intervention.
+              {renderText(
+                "A lot of what drives students is their innate beliefs and how they perceive themselves. There is a strong correlation between self-perception and achievement, but there is evidence to suggest that the actual effect of achievement on self-perception is stronger than the other way round."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "To stand up in a classroom and successfully deliver a good speech is a genuine achievement, and that is likely to be more powerfully motivating than vague notions of 'motivation' itself."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("24")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Recent evidence would suggest that growth mindset interventions are not the elixir of student learning that its proponents claim it to be."
+              )}
+              {renderText(
+                " The growth mindset appears to be a viable construct in the lab, which, when administered in the classroom via targeted interventions, doesn't seem to work."
+              )}
+              {renderText(
+                " It is hard to dispute that having faith in the capacity to change is a good attribute for students."
+              )}
+              {renderText(
+                " Paradoxically, however, that aspiration is not well served by direct interventions that try to instil it."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Motivational posters and talks are often a waste of time, and might well give students a deluded notion of what success actually means."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("26")}
+                  </span>
+                )}
+              </span>
+              {renderText(
+                " Teaching concrete skills such as how to write an effective introduction to an essay then praising students' effort in getting there is probably a far better way of improving confidence than telling them how unique they are, or indeed how capable they are of changing their own brains."
+              )}
+              {renderText(
+                " Perhaps growth mindset works best as a philosophy and not an intervention."
+              )}
             </p>
           </div>
 
@@ -508,8 +518,13 @@ const Reading4Part22023 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 14–16 ================= */}
           <div className="space-y-6 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 14–16</h2>
-            <p className="mb-4">Choose the correct letter, A, B, C or D.</p>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 14–16")}
+            </h2>
+
+            <p className="mb-4">
+              {renderText("Choose the correct letter, A, B, C or D.")}
+            </p>
 
             {[
               {
@@ -545,8 +560,10 @@ const Reading4Part22023 = () => {
             ].map(({ num, text, options }) => (
               <div key={num} className="space-y-2">
                 <p>
-                  <span className="font-bold">{num}</span> {text}
+                  <span className="font-bold">{renderText(String(num))}</span>{" "}
+                  {renderText(text)}
                 </p>
+
                 <div className="flex flex-col">
                   {options.map((opt) => (
                     <label
@@ -560,7 +577,7 @@ const Reading4Part22023 = () => {
                         checked={userAnswers[num] === opt.charAt(0)}
                         onChange={() => handleInputChange(num, opt.charAt(0))}
                       />
-                      <span>{opt}</span>
+                      <span>{renderText(opt)}</span>
                     </label>
                   ))}
                 </div>
@@ -570,18 +587,27 @@ const Reading4Part22023 = () => {
 
           {/* ================= Questions 17–22 ================= */}
           <div className="space-y-6 mt-10 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 17–22</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 17–22")}
+            </h2>
+
             <p className="mb-4">
-              Match each statement with the correct person or people, A–E.
+              {renderText(
+                "Match each statement with the correct person or people, A–E."
+              )}
             </p>
 
             <div className="border max-w-[350px] mx-auto p-4">
               <ul className="text-center space-y-1">
-                <li>A. Alfred Binet</li>
-                <li>B. Carol Dweck</li>
-                <li>C. Andrew Gelman</li>
-                <li>D. Timothy Bates</li>
-                <li>E. David Yeager and Gregory Walton</li>
+                {[
+                  "A. Alfred Binet",
+                  "B. Carol Dweck",
+                  "C. Andrew Gelman",
+                  "D. Timothy Bates",
+                  "E. David Yeager and Gregory Walton",
+                ].map((name) => (
+                  <li key={name}>{renderText(name)}</li>
+                ))}
               </ul>
             </div>
 
@@ -595,19 +621,23 @@ const Reading4Part22023 = () => {
             ].map((text, idx) => {
               const qNum = 17 + idx;
               return (
-                <div key={qNum} className="space-y-2 flex items-center gap-2">
-                  <p>
-                    <span className="font-bold">{qNum}</span> {text}
+                <div key={qNum} className="space-y-2 flex items-center gap-3">
+                  <p className="flex-1">
+                    <span className="font-bold">
+                      {renderText(String(qNum))}
+                    </span>{" "}
+                    {renderText(text)}
                   </p>
+
                   <select
                     className="border rounded px-2 py-1"
                     value={userAnswers[qNum] || ""}
                     onChange={(e) => handleInputChange(qNum, e.target.value)}
                   >
-                    <option value="">{qNum}</option>
+                    <option value="">{renderText(String(qNum))}</option>
                     {["A", "B", "C", "D", "E"].map((opt) => (
                       <option key={opt} value={opt}>
-                        {opt}
+                        {renderText(opt)}
                       </option>
                     ))}
                   </select>
@@ -618,10 +648,14 @@ const Reading4Part22023 = () => {
 
           {/* ================= Questions 23–26 ================= */}
           <div className="space-y-6 mt-10 text-lg">
-            <h2 className="text-lg font-bold mb-3">Questions 23–26</h2>
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 23–26")}
+            </h2>
+
             <p className="mb-4">
-              Choose <strong>YES</strong>, <strong>NO</strong> or{" "}
-              <strong>NOT GIVEN</strong>.
+              {renderText("Choose")} <strong>{renderText("YES")}</strong>,{" "}
+              <strong>{renderText("NO")}</strong> {renderText("or")}{" "}
+              <strong>{renderText("NOT GIVEN")}</strong>.
             </p>
 
             {[
@@ -634,8 +668,12 @@ const Reading4Part22023 = () => {
               return (
                 <div key={qNum} className="space-y-2">
                   <p>
-                    <span className="font-bold">{qNum}</span> {text}
+                    <span className="font-bold">
+                      {renderText(String(qNum))}
+                    </span>{" "}
+                    {renderText(text)}
                   </p>
+
                   <div className="flex flex-col">
                     {["YES", "NO", "NOT GIVEN"].map((opt) => (
                       <label
@@ -649,7 +687,7 @@ const Reading4Part22023 = () => {
                           checked={userAnswers[qNum] === opt}
                           onChange={() => handleInputChange(qNum, opt)}
                         />
-                        <span>{opt}</span>
+                        <span>{renderText(opt)}</span>
                       </label>
                     ))}
                   </div>
@@ -657,6 +695,8 @@ const Reading4Part22023 = () => {
               );
             })}
           </div>
+
+          {/* ================= Submit / Result ================= */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -664,24 +704,27 @@ const Reading4Part22023 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
-                {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
+
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/{Object.keys(correctAnswers).length}
+                    {renderText("Your Score:")} {score}/
+                    {Object.keys(correctAnswers).length}
                   </p>
                 </div>
 
-                {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers
+                    {renderText("All Answers")}
                   </h3>
+
                   <ul className="space-y-3">
                     {Object.keys(correctAnswers).map((num) => {
                       const userAnswer =
@@ -710,23 +753,25 @@ const Reading4Part22023 = () => {
                                 </span>
                               </div>
                             )}
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
-                            {noAnswer ? (
-                              <span className="italic">No answer provided</span>
-                            ) : (
-                              userAnswer
-                            )}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
+                            {noAnswer
+                              ? renderText("No answer provided")
+                              : renderText(userAnswer)}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            {correctAnswers[num]}
+                            {renderText(correctAnswers[num])}
                           </p>
                         </li>
                       );

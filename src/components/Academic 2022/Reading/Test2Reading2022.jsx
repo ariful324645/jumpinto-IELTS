@@ -209,81 +209,86 @@ const Test2Reading2022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              The Dead Sea Scrolls
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("The Dead Sea Scrolls")}
             </h1>
 
             <p className="text-lg">
-              In late 1946 or early 1947, three Bedouin teenagers were tending
-              their goats and sheep near the ancient settlement of Qumran,
-              located on the northwest shore of the Dead Sea in what is now
-              known as the West Bank.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                One of these young shepherds tossed a rock into an opening on
-                the side of a cliff and was surprised to hear a shattering
-                sound.
+                {renderText(
+                  "In late 1946 or early 1947, three Bedouin teenagers were tending their goats and sheep near the ancient settlement of Qumran, located on the northwest shore of the Dead Sea in what is now known as the West Bank."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     1
                   </span>
                 )}
               </span>
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He and his companions later entered the cave and stumbled across
-                a collection of large clay jars, seven of which contained
-                scrolls with writing on them.
+                {renderText(
+                  " One of these young shepherds tossed a rock into an opening on the side of a cliff and was surprised to hear a shattering sound."
+                )}
                 {highlight && (
-                  <>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                      2
-                    </span>
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-1">
-                      3
-                    </span>
-                  </>
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    2,3
+                  </span>
                 )}
               </span>
-              The teenagers took the seven scrolls to a nearby town where they
-              were sold for a small sum to a local antiquities dealer. Word of
-              the find spread, and Bedouins and archaeologists eventually
-              unearthed tens of thousands of additional scroll fragments from 10
-              nearby caves; together they make up between 800 and 900
-              manuscripts. It soon became clear that this was one of the
-              greatest archaeological discoveries ever made.
+
+              {renderText(
+                " He and his companions later entered the cave and stumbled across a collection of large clay jars, seven of which contained scrolls with writing on them."
+              )}
+              {renderText(
+                " The teenagers took the seven scrolls to a nearby town where they were sold for a small sum to a local antiquities dealer."
+              )}
+              {renderText(
+                " Word of the find spread, and Bedouins and archaeologists eventually unearthed tens of thousands of additional scroll fragments from 10 nearby caves; together they make up between 800 and 900 manuscripts."
+              )}
+              {renderText(
+                " It soon became clear that this was one of the greatest archaeological discoveries ever made."
+              )}
             </p>
 
             <br />
 
             <p className="text-lg">
-              The origin of the Dead Sea Scrolls, which were written around
-              2,000 years ago between 150 BCE and 70 CE, is still the subject of
-              scholarly debate even today.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  7
-                </span>
-              )}
-              According to the prevailing theory, they are the work of a
-              population that inhabited the area until Roman troops destroyed
-              the settlement around 70 CE.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The area was known as Judea at that time, and the people are
-                thought to have belonged to a group called the Essenes, a devout
-                Jewish sect.
+                {renderText(
+                  "The origin of the Dead Sea Scrolls, which were written around 2,000 years ago between 150 BCE and 70 CE, is still the subject of scholarly debate even today."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    7
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " According to the prevailing theory, they are the work of a population that inhabited the area until Roman troops destroyed the settlement around 70 CE."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " The area was known as Judea at that time, and the people are thought to have belonged to a group called the Essenes, a devout Jewish sect."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     4
                   </span>
                 )}
@@ -293,140 +298,145 @@ const Test2Reading2022 = () => {
             <br />
 
             <p className="text-lg">
-              The majority of the texts on the Dead Sea Scrolls are in Hebrew,
-              with some fragments written in an ancient version of its alphabet
-              thought to have fallen out of use in the fifth century BCE.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  5
-                </span>
-              )}
-              But there are other languages as well. Some scrolls are in
-              Aramaic, the language spoken by many inhabitants of the region
-              from the sixth century BCE to the siege of Jerusalem in 70 CE. In
-              addition, several texts feature translations of the Hebrew Bible
-              into Greek.
-            </p>
-
-            <br />
-
-            <p className="text-lg">
-              The Dead Sea Scrolls include fragments from every book of the Old
-              Testament of the Bible except for the Book of Esther.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The only entire book of the Hebrew Bible preserved among the
-                manuscripts from Qumran is Isaiah; this copy, dated to the first
-                century BCE, is considered the earliest biblical manuscript
-                still in existence.
+                {renderText(
+                  "The majority of the texts on the Dead Sea Scrolls are in Hebrew, with some fragments written in an ancient version of its alphabet thought to have fallen out of use in the fifth century BCE."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    5
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " But there are other languages as well. Some scrolls are in Aramaic, the language spoken by many inhabitants of the region from the sixth century BCE to the siege of Jerusalem in 70 CE."
+              )}
+              {renderText(
+                " In addition, several texts feature translations of the Hebrew Bible into Greek."
+              )}
+            </p>
+
+            <br />
+
+            <p className="text-lg">
+              {renderText(
+                "The Dead Sea Scrolls include fragments from every book of the Old Testament of the Bible except for the Book of Esther."
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " The only entire book of the Hebrew Bible preserved among the manuscripts from Qumran is Isaiah; this copy, dated to the first century BCE, is considered the earliest biblical manuscript still in existence."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     8
                   </span>
                 )}
               </span>
-              Along with biblical texts, the scrolls include documents about
-              sectarian regulations and religious writings that do not appear in
-              the Old Testament.
+
+              {renderText(
+                " Along with biblical texts, the scrolls include documents about sectarian regulations and religious writings that do not appear in the Old Testament."
+              )}
             </p>
 
             <br />
 
             <p className="text-lg">
-              The writing on the Dead Sea Scrolls is mostly in black or
-              occasionally red ink, and the scrolls themselves are nearly all
-              made of either parchment (animal skin) or an early form of paper
-              called 'papyrus'. The only exception is the scroll numbered 3Q15,
-              which was created out of a combination of copper and tin. Known as
-              the Copper Scroll, this curious document features letters
-              chiselled onto metal - perhaps, as some have theorized, to better
-              withstand the passage of time.
+              {renderText(
+                "The writing on the Dead Sea Scrolls is mostly in black or occasionally red ink, and the scrolls themselves are nearly all made of either parchment or an early form of paper called papyrus."
+              )}
+              {renderText(
+                " The only exception is the scroll numbered 3Q15, which was created out of a combination of copper and tin."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                One of the most intriguing manuscripts from Qumran, this is a
-                sort of ancient treasure map that lists dozens of gold and
-                silver caches. Using an unconventional vocabulary and odd
-                spelling, it describes 64 underground hiding places that
-                supposedly contain riches buried for safekeeping.
+                {" "}
+                {renderText(
+                  " Using an unconventional vocabulary and odd spelling, it describes 64 underground hiding places that supposedly contain riches buried for safekeeping"
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     9
                   </span>
                 )}
               </span>
-              None of these hoards have been recovered, possibly because the
-              Romans pillaged Judea during the first century CE. According to
-              various hypotheses, the treasure belonged to local people, or was
-              rescued from the Second Temple before its destruction or never
-              existed to begin with.
             </p>
 
             <br />
 
             <p className="text-lg">
-              Some of the Dead Sea Scrolls have been on interesting journeys. In
-              1948, a Syrian Orthodox archbishop known as Mar Samuel acquired
-              four of the original seven scrolls from a Jerusalem shoemaker and
-              part-time antiquity dealer, paying less than $100 for them.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                  10
-                </span>
-              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                He then travelled to the United States and unsuccessfully
-                offered them to a number of universities, including Yale.
+                {renderText(
+                  "Some of the Dead Sea Scrolls have been on interesting journeys. In 1948, a Syrian Orthodox archbishop known as Mar Samuel acquired four of the original seven scrolls, paying less than $100 for them."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    10
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  " He later travelled to the United States and unsuccessfully offered them to a number of universities."
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     11
                   </span>
                 )}
               </span>
-              Finally, in 1954, he placed an advertisement in the business
-              newspaper The Wall Street Journal - under the category
-              "Miscellaneous Items for Sale" - that read: "Biblical Manuscripts
-              dating back to at least 200 B.C. are for sale. This would be an
-              ideal gift to an educational or religious institution by an
-              individual or group." Fortunately, Israeli archaeologist and
-              statesman Yigael Yadin negotiated their purchase and brought the
-              scrolls back to Jerusalem, where they remain to this day.
+
+              {renderText(
+                " In 1954, he placed an advertisement in The Wall Street Journal offering the manuscripts for sale."
+              )}
+              {renderText(
+                " Israeli archaeologist Yigael Yadin eventually negotiated their purchase and returned them to Jerusalem."
+              )}
             </p>
 
             <br />
 
             <p className="text-lg">
-              In 2017, researchers from the University of Haifa restored and
-              deciphered one of the last untranslated scrolls. The university's
-              Eshbal Ratson and Jonathan Ben-Dov spent one year reassembling the
-              60 fragments that make up the scroll. Deciphered from a band of
-              coded text on parchment, the find provides insight into the
-              community of people who wrote it and the 364-day calendar they
-              would have used.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The scroll names celebrations that indicate shifts in seasons
-                and details two yearly religious events known from another Dead
-                Sea Scroll.
+                {renderText(
+                  "In 2017, researchers from the University of Haifa restored and deciphered one of the last untranslated scrolls."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     12
                   </span>
                 )}
               </span>
-              Only one more known scroll remains untranslated.
+
+              {renderText(
+                " The scroll provided insight into the community that wrote it and the 364-day calendar they used."
+              )}
+              {renderText(" Only one more known scroll remains untranslated.")}
             </p>
           </div>
 
@@ -455,18 +465,25 @@ const Test2Reading2022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 1–5 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 1–5</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–5")}
+          </h2>
 
           <p className="mb-4">
-            Complete the notes below. <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer. <br />
-            Write your answers in boxes 1-5 on your answer sheet.
+            {renderText("Complete the notes below.")}
+            <br />
+            {renderText("Choose ")}
+            <strong>{renderText("ONE WORD ONLY")}</strong>
+            {renderText(" from the passage for each answer.")}
+            <br />
+            {renderText(
+              "Write your answers in boxes 1-5 on your answer sheet."
+            )}
           </p>
 
           <div className="border p-5 space-y-4">
             <h3 className="text-xl font-bold text-center mb-4">
-              The Dead Sea Scrolls
+              {renderText("The Dead Sea Scrolls")}
             </h3>
 
             <ul className="list-disc list-inside space-y-4 text-lg">
@@ -480,10 +497,17 @@ const Test2Reading2022 = () => {
                 const qNum = index + 1;
                 return (
                   <li key={qNum} className="flex flex-wrap items-center gap-2">
-                    <span>{text}</span>
-                    <span className="w-8 h-8 flex items-center justify-center rounded-full border font-bold">
+                    <span>{renderText(text)}</span>
+                    <button
+                      onClick={() => toggleButton(qNum)}
+                      className={`w-8 h-8 rounded-full border-2 ${
+                        activeButtons[qNum]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
+                    >
                       {qNum}
-                    </span>
+                    </button>
                     <input
                       type="text"
                       className="border rounded px-2 py-1 w-32"
@@ -496,24 +520,30 @@ const Test2Reading2022 = () => {
           </div>
 
           {/* ================= Questions 6–13 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 6–13</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 6–13")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the information given in
-            Reading Passage 1? <br />
-            In boxes 6-13 on your answer sheet, choose:
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 1?"
+            )}
+            <br />
+            {renderText("In boxes 6-13 on your answer sheet, choose:")}
           </p>
 
           <div className="mb-4 space-y-1">
             <p>
-              <strong>TRUE</strong> if the statement agrees with the information
+              <strong>{renderText("TRUE")}</strong>{" "}
+              {renderText("if the statement agrees with the information")}
             </p>
             <p>
-              <strong>FALSE</strong> if the statement contradicts the
-              information
+              <strong>{renderText("FALSE")}</strong>{" "}
+              {renderText("if the statement contradicts the information")}
             </p>
             <p>
-              <strong>NOT GIVEN</strong> if there is no information on this
+              <strong>{renderText("NOT GIVEN")}</strong>{" "}
+              {renderText("if there is no information on this")}
             </p>
           </div>
 
@@ -540,9 +570,9 @@ const Test2Reading2022 = () => {
                           : "border-gray-300"
                       }`}
                     >
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </div>
-                    <p className="text-lg">{statement}</p>
+                    <p className="text-lg">{renderText(statement)}</p>
                   </div>
 
                   <div className="ml-12 space-y-2">
@@ -566,7 +596,7 @@ const Test2Reading2022 = () => {
                               : ""
                           }
                         >
-                          {option}
+                          {renderText(option)}
                         </span>
                       </div>
                     ))}
@@ -584,23 +614,25 @@ const Test2Reading2022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/13
+                    {renderText(`Your Score: ${score}/13`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–13)
+                    {renderText("All Answers (1–13)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -633,23 +665,29 @@ const Test2Reading2022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              <span>{renderText(userAnswer)}</span>
                             )}
                           </p>
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{renderText(correctAnswers[num])}</span>
                           </p>
                         </li>
                       );

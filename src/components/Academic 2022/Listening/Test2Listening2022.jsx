@@ -620,7 +620,11 @@ const Test2Listening2022 = () => {
               {renderText("Help with")}
               <button
                 onClick={() => toggleButton(1)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[1]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 1
               </button>
@@ -637,7 +641,11 @@ const Test2Listening2022 = () => {
               {renderText("Help needed to keep")}
               <button
                 onClick={() => toggleButton(2)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[2]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 2
               </button>
@@ -654,7 +662,11 @@ const Test2Listening2022 = () => {
               {renderText("Library is in the")}
               <button
                 onClick={() => toggleButton(3)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[3]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 3
               </button>
@@ -676,7 +688,11 @@ const Test2Listening2022 = () => {
               {renderText("Help by providing")}
               <button
                 onClick={() => toggleButton(4)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[4]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 4
               </button>
@@ -692,7 +708,11 @@ const Test2Listening2022 = () => {
               {renderText("Help with hobbies such as")}
               <button
                 onClick={() => toggleButton(5)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[5]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 5
               </button>
@@ -713,7 +733,11 @@ const Test2Listening2022 = () => {
               {renderText("Taking Mrs Carroll to")}
               <button
                 onClick={() => toggleButton(6)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[6]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 6
               </button>
@@ -729,7 +753,11 @@ const Test2Listening2022 = () => {
               {renderText("Work in the")}
               <button
                 onClick={() => toggleButton(7)}
-                className="mx-2 w-8 h-8 rounded-full border-2"
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[7]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
               >
                 7
               </button>
@@ -769,7 +797,11 @@ const Test2Listening2022 = () => {
                   <td className="border p-2">
                     <button
                       onClick={() => toggleButton(8)}
-                      className="mr-2 w-8 h-8 rounded-full border-2"
+                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        activeButtons[8]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
                     >
                       8
                     </button>
@@ -791,7 +823,11 @@ const Test2Listening2022 = () => {
                     checking
                     <button
                       onClick={() => toggleButton(9)}
-                      className="mx-2 w-8 h-8 rounded-full border-2"
+                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        activeButtons[9]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
                     >
                       9
                     </button>
@@ -811,7 +847,11 @@ const Test2Listening2022 = () => {
                     designing the
                     <button
                       onClick={() => toggleButton(10)}
-                      className="mx-2 w-8 h-8 rounded-full border-2"
+                      className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        activeButtons[10]
+                          ? "bg-yellow-400 border-yellow-500"
+                          : "bg-gray-200 border-gray-400"
+                      }`}
                     >
                       10
                     </button>

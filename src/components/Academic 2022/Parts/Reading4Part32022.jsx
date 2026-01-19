@@ -7,6 +7,7 @@ import Reading4Pagination2022 from "../Pagination2022/Reading4Pagination2022";
 
 const Reading4Part32022 = () => {
   const [highlight, setHighlight] = useState(false);
+  const [activeButtons, setActiveButtons] = useState({});
   const [showResult, setShowResult] = useState(false);
   const calculateScore = (answers) => {
     let newScore = 0;
@@ -25,6 +26,12 @@ const Reading4Part32022 = () => {
 
     setScore(newScore);
     localStorage.setItem("/2022/Test 1/reading", newScore);
+  };
+  const toggleButton = (id) => {
+    setActiveButtons((prev) => ({
+      ...prev,
+      [id]: !prev[id], // toggle true/false
+    }));
   };
 
   // text highlight and clear
@@ -159,267 +166,255 @@ const Reading4Part32022 = () => {
 
           {/* Reading Passage */}
           <div>
-            <h1 className="text-2xl font-bold mb-5 text-center">
-              Timur Gareyev - blindfold chess champion
+            <h1 className="text-2xl font-bold mb-2 text-center">
+              {renderText("Timur Gareyev - blindfold chess champion")}
             </h1>
 
-            <p className="text-lg font-bold">A</p>
+            {/* ===================== A ===================== */}
             <p className="text-lg">
-              Next month, a chess player named Timur Gareyev will take on nearly
-              50 opponents at once. But that is not the hard part. While his
-              challengers will play the games as normal, Gareyev himself will be
-              blindfolded.
+              {renderText(
+                "Next month, a chess player named Timur Gareyev will take on nearly 50 opponents at once. But that is not the hard part. "
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Even by world record standards, it sets a high bar for human
-                performance.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    33
-                  </span>
+                {renderText(
+                  "While his challengers will play the games as normal, Gareyev himself will be blindfolded."
                 )}
               </span>
-              The 28-year-old already stands out in the rarefied world of
-              blindfold chess. He has a fondness for bright clothes and unusual
-              hairstyles, and he gets his kicks from the adventure sport of BASE
-              jumping. He has already proved himself a strong chess player, too.
-              In a 10-hour chess marathon in 2013, Gareyev played 33 games in
-              his head simultaneously. He won 29 and lost none. The skill has
-              become his brand: he calls himself the Blindfold King.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  33
+                </span>
+              )}
+              {renderText(
+                " Even by world record standards, it sets a high bar for human performance. The 28-year-old already stands out in the rarefied world of blindfold chess. He has a fondness for bright clothes and unusual hairstyles, and he gets his kicks from the adventure sport of BASE jumping. He has already proved himself a strong chess player, too. In a 10-hour chess marathon in 2013, Gareyev played 33 games in his head simultaneously. He won 29 and lost none. The skill has become his brand: he calls himself the Blindfold King."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">B</p>
+            {/* ===================== B ===================== */}
             <p className="text-lg">
-              But Gareyev's prowess has drawn interest from beyond the
-              chess-playing community.
+              {renderText(
+                "But Gareyev's prowess has drawn interest from beyond the chess-playing community."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                In the hope of understanding how he and others like him can
-                perform such mental feats, researchers at the University of
-                California in Los Angeles (UCLA) called him in for tests.
+                {renderText(
+                  " In the hope of understanding how he and others like him can perform such mental feats, researchers at the University of California in Los Angeles (UCLA) called him in for tests. They now have their first results."
+                )}
                 {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
                     30
                   </span>
                 )}
               </span>
-              They now have their first results. "The ability to play a game of
-              chess with your eyes closed is not a far reach for most
-              accomplished players," said Jesse Rissman, who runs a memory lab
-              at UCLA.
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "But the thing that's so remarkable about Timur and a few other
-                individuals is the number of games they can keep active at once.
-                To me it is simply astonishing."
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    36
-                  </span>
+                {renderText(
+                  ' "The ability to play a game of chess with your eyes closed is not a far reach for most accomplished players," said Jesse Rissman, who runs a memory lab at UCLA. "But the thing that\'s so remarkable about Timur and a few other individuals is the number of games they can keep active at once. To me it is simply astonishing."'
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  36
+                </span>
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">C</p>
+            {/* ===================== C ===================== */}
             <p className="text-lg">
-              Gareyev learned to play chess in his native Uzbekistan when he was
-              six years old. Tutored by his grandfather, he entered his first
-              tournament aged eight and soon became obsessed with competitions.
-              At 16, he was crowned Asia's youngest ever chess grandmaster. He
-              moved to the US soon after, and as a student helped his university
-              win its first national chess championship. In 2013, Gareyev was
-              ranked the third best chess player in the US.
+              {renderText(
+                "Gareyev learned to play chess in his native Uzbekistan when he was six years old. Tutored by his grandfather, he entered his first tournament aged eight and soon became obsessed with competitions. At 16, he was crowned Asia's youngest ever chess grandmaster. He moved to the US soon after, and as a student helped his university win its first national chess championship. In 2013, Gareyev was ranked the third best chess player in the US."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">D</p>
+            {/* ===================== D ===================== */}
             <p className="text-lg">
-              To the uninitiated, blindfold chess seems to call for superhuman
-              skill.
+              {renderText(
+                "To the uninitiated, blindfold chess seems to call for superhuman skill. But displays of the feat go back centuries."
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But displays of the feat go back centuries. The first recorded
-                game in Europe was played in 13th-century Florence.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    27
-                  </span>
+                {renderText(
+                  " The first recorded game in Europe was played in 13th-century Florence. In 1947, the Argentinian grandmaster Miguel Najdorf played 45 simultaneous games in his mind, winning 39 in the 24-hour session."
                 )}
               </span>
-              In 1947, the Argentinian grandmaster Miguel Najdorf played 45
-              simultaneous games in his mind, winning 39 in the 24-hour session.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    27
-                  </span>
-                )}
-              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  27
+                </span>
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">E</p>
+            {/* ===================== E ===================== */}
             <p className="text-lg">
-              Accomplished players can develop the skill of playing blind even
-              without realising it.
+              {renderText(
+                "Accomplished players can develop the skill of playing blind even without realising it. The nature of the game is to run through possible moves in the mind to see how they play out. From this, regular players develop a memory for the patterns the pieces make, the defences and attacks."
+              )}
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  28
+                </span>
+              )}
+              {renderText(
+                ' "You recreate it in your mind," said Gareyev. "A lot of players are capable of doing what I\'m doing."'
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                The nature of the game is to run through possible moves in the
-                mind to see how they play out.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    28
-                  </span>
+                {renderText(
+                  "But the ends of games are taxing too, as exhaustion sets in"
                 )}
               </span>
-              From this, regular players develop a memory for the patterns the
-              pieces make, the defences and attacks.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                "You recreate it in your mind," said Gareyev. "A lot of players
-                are capable of doing what I'm doing."
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    28
-                  </span>
-                )}
-              </span>
-              The real mental challenge comes from playing multiple games at
-              once in the head. Not only must the positions of each piece on
-              every board be memorised, they must be recalled faithfully when
-              needed, updated with each player's moves, and then reliably stored
-              again, so the brain can move on to the next board.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                First moves can be tough to remember because they are fairly
-                uninteresting. But the ends of games are taxing too, as
-                exhaustion sets in.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    32
-                  </span>
-                )}
-              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  32
+                </span>
+              )}
+
+              {renderText(
+                " The real mental challenge comes from playing multiple games at once in the head. Not only must the positions of each piece on every board be memorised, they must be recalled faithfully when needed, updated with each player's moves, and then reliably stored again, so the brain can move on to the next board. First moves can be tough to remember because they are fairly uninteresting. . When Gareyev is tired, his recall can get patchy. He sometimes makes moves based on only a fragmented memory of the pieces' positions."
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">F</p>
+            {/* ===================== F ===================== */}
             <p className="text-lg">
-              The scientists first had Gareyev perform some standard memory
-              tests.
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                These assessed his ability to hold numbers, pictures and words
-                in mind. One classic test measures how many numbers a person can
-                repeat, both forwards and backwards, soon after hearing them.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    37
-                  </span>
+                {renderText(
+                  "The scientists first had Gareyev perform some standard memory tests"
                 )}
               </span>
-              Most people manage about seven. "He was not exceptional on any of
-              these standard tests," said Rissman. "We didn't find anything
-              other than playing chess that he seems to be supremely gifted at."
+              {renderText(
+                ". These assessed his ability to hold numbers, pictures and words in mind. One classic test measures how many numbers a person can repeat, both forwards and backwards, soon after hearing them. Most people manage about seven."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                But next came the brain scans. With Gareyev lying down in the
-                machine, Rissman looked at how well connected the various
-                regions of the chess player's brain were.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    29
-                  </span>
+                {renderText(
+                  "The scientists first had Gareyev perform some standard memory tests"
                 )}
               </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  37
+                </span>
+              )}
+              {renderText(
+                ' "He was not exceptional on any of these standard tests," said Rissman. "We didn\'t find anything other than playing chess that he seems to be supremely gifted at." But next came the brain scans. With Gareyev lying down in the machine, Rissman looked at how well connected the various regions of the chess player\'s brain were. Of 63 people scanned alongside the chess player, only one or two scored more highly on the measure.'
+              )}
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  "Though the results are tentative and as yet unpublished, the scans found much greater than average communication between parts of Gareyev's brain that make up what is called the frontoparietal control network"
+                )}
+              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  39
+                </span>
+              )}
+
+              <span
+                className={`ml-2 ${
+                  highlight ? "bg-yellow-100" : "bg-transparent"
+                }`}
+              >
+                {renderText(
+                  ' "You use this network in almost any complex task. It helps you to allocate attention, keep rules in mind, and work out whether you should be responding or not," said Rissman.'
+                )}
+              </span>
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  29
+                </span>
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">G</p>
+            {/* ===================== G ===================== */}
             <p className="text-lg">
-              It was not the only hint of something special in Gareyev's brain.
-              The scans also suggest that Gareyev's visual network is more
-              highly connected to other brain parts than usual.
+              {renderText(
+                "It was not the only hint of something special in Gareyev's brain. The scans also suggest that Gareyev's visual network is more highly connected to other brain parts than usual. While the analyses are not finalised yet, they may hold the first clues to Gareyev's extraordinary ability."
+              )}
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                Initial results suggest that the areas of his brain that process
-                visual images - such as chess boards - may have stronger links
-                to other brain regions, and so be more powerful than normal.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    40
-                  </span>
+                {renderText(
+                  "Initial results suggest that the areas of his brain that process visual images - such as chess boards - may have stronger links to other brain regions, and so be more powerful than normal."
                 )}
               </span>
-              While the analyses are not finalised yet, they may hold the first
-              clues to Gareyev's extraordinary ability.
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  40
+                </span>
+              )}
             </p>
 
             <br />
 
-            <p className="text-lg font-bold">H</p>
+            {/* ===================== H ===================== */}
             <p className="text-lg">
-              For the world record attempt, Gareyev hopes to play 47 blindfold
-              games at once in about 16 hours. He will need to win 80% to claim
-              the title.
+              {renderText(
+                "For the world record attempt, Gareyev hopes to play 47 blindfold games at once in about 16 hours. He will need to win 80% to claim the title."
+              )}
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  31
+                </span>
+              )}
+
               <span
                 className={`ml-2 ${
                   highlight ? "bg-yellow-100" : "bg-transparent"
                 }`}
               >
-                "I don't worry too much about the winning percentage, that's
-                never been an issue for me," he said.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold ml-2">
-                    31
-                  </span>
+                {renderText(
+                  ' "I don\'t worry too much about the winning percentage, that\'s never been an issue for me," he said. "The most important part of blindfold chess for me is that I have found the one thing that I can fully dedicate myself to. I miss having an obsession."'
                 )}
               </span>
-              "The most important part of blindfold chess for me is that I have
-              found the one thing that I can fully dedicate myself to. I miss
-              having an obsession."
+              {highlight && (
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                  31
+                </span>
+              )}
             </p>
           </div>
 
@@ -448,16 +443,14 @@ const Reading4Part32022 = () => {
         {/* right div */}
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
           {/* ================= Questions 27–32 ================= */}
-          <h2 className="text-lg font-bold mb-3">Questions 27–32</h2>
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 27–32")}
+          </h2>
 
           <p className="mb-4">
-            Reading Passage 3 has eight paragraphs, A–H.
-            <br />
-            Which paragraph contains the following information?
-            <br />
-            Choose the correct letter, A–H, in boxes 27–32 on your answer sheet.
-            <br />
-            NB You may use any letter more than once.
+            {renderText(
+              "Reading Passage 3 has eight paragraphs, A–H.\nWhich paragraph contains the following information?\nChoose the correct letter, A–H, in boxes 27–32 on your answer sheet.\nNB You may use any letter more than once."
+            )}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -475,7 +468,8 @@ const Reading4Part32022 = () => {
               return (
                 <li key={qNum} className="flex items-center gap-2">
                   <span>
-                    <span className="font-bold">{num}</span> {rest.join(" ")}
+                    <span className="font-bold">{renderText(num)}</span>{" "}
+                    {renderText(rest.join(" "))}
                   </span>
                   <select
                     className="border rounded px-2 py-1 w-15"
@@ -483,7 +477,7 @@ const Reading4Part32022 = () => {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </option>
                     {options.map((opt) => (
                       <option key={opt} value={opt}>
@@ -497,19 +491,14 @@ const Reading4Part32022 = () => {
           </ul>
 
           {/* ================= Questions 33–36 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 33–36</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 33–36")}
+          </h2>
 
           <p className="mb-4">
-            Do the following statements agree with the information given in
-            Reading Passage 3?
-            <br />
-            In boxes 33–36 on your answer sheet, choose
-            <br />
-            TRUE if the statement agrees with the information
-            <br />
-            FALSE if the statement contradicts the information
-            <br />
-            NOT GIVEN if there is no information on this
+            {renderText(
+              "Do the following statements agree with the information given in Reading Passage 3?\nIn boxes 33–36 on your answer sheet, choose\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this"
+            )}
           </p>
 
           <ul className="list-decimal list-inside space-y-4 text-lg">
@@ -525,7 +514,8 @@ const Reading4Part32022 = () => {
               return (
                 <li key={qNum} className="flex items-center gap-2">
                   <span>
-                    <span className="font-bold">{num}</span> {rest.join(" ")}
+                    <span className="font-bold">{renderText(num)}</span>{" "}
+                    {renderText(rest.join(" "))}
                   </span>
                   <select
                     className="border rounded px-2 py-1 w-24"
@@ -533,11 +523,11 @@ const Reading4Part32022 = () => {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      {qNum}
+                      {renderText(qNum.toString())}
                     </option>
                     {options.map((opt) => (
                       <option key={opt} value={opt}>
-                        {opt}
+                        {renderText(opt)}
                       </option>
                     ))}
                   </select>
@@ -547,83 +537,121 @@ const Reading4Part32022 = () => {
           </ul>
 
           {/* ================= Questions 37–40 ================= */}
-          <h2 className="text-lg font-bold mt-6">Questions 37–40</h2>
+          <h2 className="text-lg font-bold mt-6">
+            {renderText("Questions 37–40")}
+          </h2>
 
           <p className="mb-4">
-            Complete the summary below.
-            <br />
-            Choose <strong>ONE WORD ONLY</strong> from the passage for each
-            answer.
-            <br />
-            Write your answers in boxes 37–40 on your answer sheet.
+            {renderText(
+              "Complete the summary below.\nChoose ONE WORD ONLY from the passage for each answer.\nWrite your answers in boxes 37–40 on your answer sheet."
+            )}
           </p>
 
           <div className="space-y-4 text-lg border p-5 mt-4">
             <h2 className="font-bold text-center text-xl">
-              How the research was carried out
+              {renderText("How the research was carried out")}
             </h2>
+
             <div className="flex items-center flex-wrap gap-2">
-              <span>The researchers started by testing Gareyev's</span>
-              <span className="font-bold h-8 w-8 border rounded-2xl text-center">
-                37
+              <span>
+                {renderText("The researchers started by testing Gareyev's")}
               </span>
+              <button
+                onClick={() => toggleButton(37)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(37, e.target.value)}
               />
-              <span>;</span>
+              <span>{renderText(";")}</span>
             </div>
 
             <div className="flex items-center flex-wrap gap-2">
-              <span>for example, he was required to recall a string of</span>
-              <span className="font-bold h-8 w-8 border rounded-2xl text-center">
-                38
+              <span>
+                {renderText(
+                  "for example, he was required to recall a string of"
+                )}
               </span>
+              <button
+                onClick={() => toggleButton(38)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(38, e.target.value)}
               />
-              <span>in order and also in reverse order.</span>
+              <span>{renderText("in order and also in reverse order.")}</span>
             </div>
 
             <div className="flex items-center flex-wrap gap-2">
               <span>
-                Although his performance was normal, scans showed an unusual
-                amount of
+                {renderText(
+                  "Although his performance was normal, scans showed an unusual amount of"
+                )}
               </span>
-              <span className="font-bold h-8 w-8 border rounded-2xl text-center">
+              <button
+                onClick={() => toggleButton(39)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[99]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
                 39
-              </span>
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(39, e.target.value)}
               />
               <span>
-                within the areas of Gareyev's brain that are concerned with
-                directing attention.
+                {renderText(
+                  "within the areas of Gareyev's brain that are concerned with directing attention."
+                )}
               </span>
             </div>
 
             <div className="flex items-center flex-wrap gap-2">
               <span>
-                In addition, the scans raised the possibility of unusual
-                strength in the parts of his brain that deal with
+                {renderText(
+                  "In addition, the scans raised the possibility of unusual strength in the parts of his brain that deal with"
+                )}
               </span>
-              <span className="font-bold h-8 w-8 border rounded-2xl text-center">
+              <button
+                onClick={() => toggleButton(40)}
+                className={`w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
                 40
-              </span>
+              </button>
               <input
                 type="text"
                 className="border rounded px-2 py-1 w-28 text-center"
                 onChange={(e) => handleInputChange(40, e.target.value)}
               />
-              <span>input.</span>
+              <span>{renderText("input.")}</span>
             </div>
           </div>
 
+          {/* ================= Submit & Result ================= */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -631,23 +659,25 @@ const Reading4Part32022 = () => {
                   onClick={() => setShowResult(true)}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  Submit Answers
+                  {renderText("Submit Answers")}
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
                 {/* Result Card */}
                 <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
-                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <h1 className="text-3xl font-bold mb-2">
+                    {renderText("Result")}
+                  </h1>
                   <p className="text-green-600 text-2xl font-semibold">
-                    Your Score: {score}/14
+                    {renderText(`Your Score: ${score}/14`)}
                   </p>
                 </div>
 
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (27–40)
+                    {renderText("All Answers (27–40)")}
                   </h3>
 
                   <ul className="space-y-3">
@@ -656,8 +686,6 @@ const Reading4Part32022 = () => {
                       const correctAnswer = correctAnswers[num]?.trim();
                       const isCorrect =
                         userAnswer && userAnswer === correctAnswer;
-                      const isWrong =
-                        userAnswer && userAnswer !== correctAnswer;
                       const noAnswer = !userAnswer;
 
                       return (
@@ -671,7 +699,7 @@ const Reading4Part32022 = () => {
                                 <FaDotCircle />
                               </span>
                             )}
-                            {(isWrong || noAnswer) && (
+                            {!isCorrect && (
                               <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
                                 <span className="text-white text-sm font-bold leading-none">
                                   <ImCross />
@@ -679,13 +707,19 @@ const Reading4Part32022 = () => {
                               </div>
                             )}
 
-                            <p className="font-bold">Q{num}:</p>
+                            <p className="font-bold">
+                              {renderText(`Q${num}:`)}
+                            </p>
                           </div>
 
                           <p className="ml-8">
-                            <span className="font-semibold">Your Answer:</span>{" "}
+                            <span className="font-semibold">
+                              {renderText("Your Answer:")}
+                            </span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className="italic">
+                                {renderText("No answer provided")}
+                              </span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
@@ -693,9 +727,9 @@ const Reading4Part32022 = () => {
 
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
-                              Correct Answer:
+                              {renderText("Correct Answer:")}
                             </span>{" "}
-                            <span>{correctAnswers[num]}</span>
+                            <span>{correctAnswer}</span>
                           </p>
                         </li>
                       );
