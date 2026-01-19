@@ -1,9 +1,15 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+
+
+
+
+import Speaking4Pagination2023 from "../Pagination 2023/Speaking4Pagination2023";
+
+const Speaking4Part32023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,46 +23,27 @@ const Test3Speaking2015 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questions = [
+  "What sort of things can neighbours do to help each other?",
+  "How well do people generally know their neighbours in your country?",
+  "How important do you think it is to have good neighbours?",
+  "Which facilities are most important to people living in cities?",
+  "How does shopping in small local shops differ from shopping in large city centre shops?",
+  "Do you think that children should always go to the school nearest to where they live?",
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["neighbours", "help", "each other", "community", "support"],
+  ["people", "know", "neighbours", "country", "relationship"],
+  ["importance", "good neighbours", "community", "opinion"],
+  ["facilities", "cities", "important", "amenities", "services"],
+  ["shopping", "small shops", "large shops", "city centre", "difference"],
+  ["children", "school", "nearest", "location", "education"],
+];
+
+
+
+
 
 
   // ▶ Speak current question
@@ -206,28 +193,40 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Neighbours & Facilities in cities
+            </h1>
+
+            <p className="text-lg font-bold">Neighbours</p>
+            <li>What sort of things can neighbours do to help each other?</li>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              How well do people generally know their neighbours in your
+              country?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
+            <li>How important do you think it is to have good neighbours?</li>
+
+            <p className="text-lg font-bold mt-4">Facilities in cities</p>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Which facilities are most important to people living in cities?
+            </li>
+            <li>
+              How does shopping in small local shops differ from shopping in
+              large city centre shops?
+            </li>
+            <li>
+              Do you think that children should always go to the school nearest
+              to where they live?
             </li>
           </ul>
         </div>
@@ -288,10 +287,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking4Pagination2023></Speaking4Pagination2023>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking4Part32023;

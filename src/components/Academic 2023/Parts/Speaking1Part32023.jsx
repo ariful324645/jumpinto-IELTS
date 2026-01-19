@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+
+import Speaking1Pagination2023 from "../Pagination 2023/Speaking1Pagination2023";
+
+const Speaking1Part32023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,46 +20,24 @@ const Test3Speaking2015 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questions = [
+  "What kinds of things can children learn to cook?",
+  "Do you think it is important for children to learn to cook?",
+  "Do you think young people should learn to cook at home or at school?",
+  "How enjoyable do you think it would be to work as a professional chef?",
+  "What skills does a person need to be a great chef?",
+  "How much influence do celebrity or TV chefs have on what ordinary people cook?",
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["children", "learn", "cook", "food", "things"],
+  ["important", "children", "learn", "cook", "opinion"],
+  ["young people", "learn", "cook", "home", "school"],
+  ["working as a chef", "professional chef", "enjoyable", "job", "career"],
+  ["skills", "great chef", "cooking", "experience", "ability"],
+  ["celebrity chefs", "TV chefs", "influence", "ordinary people", "cook"],
+];
+
 
 
   // ▶ Speak current question
@@ -206,28 +187,38 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Young people and cooking & Working as a chef
+            </h1>
+
+            <p className="text-lg font-bold">Young people and cooking</p>
+            <li>What kinds of things can children learn to cook?</li>
+            <li>Do you think it is important for children to learn to cook?</li>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              Do you think young people should learn to cook at home or at
+              school?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
+
+            <p className="text-lg font-bold mt-4">Working as a chef</p>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              How enjoyable do you think it would be to work as a professional
+              chef?
+            </li>
+            <li>What skills does a person need to be a great chef?</li>
+            <li>
+              How much influence do celebrity or TV chefs have on what ordinary
+              people cook?
             </li>
           </ul>
         </div>
@@ -288,10 +279,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking1Pagination2023></Speaking1Pagination2023>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking1Part32023;

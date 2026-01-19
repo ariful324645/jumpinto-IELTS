@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+
+
+import Speaking2Pagination2023 from "../Pagination 2023/Speaking2Pagination2023";
+
+const Speaking2Part22023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,48 +19,21 @@ const Test3Speaking2015 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
+const questions = [
+  "What is the tourist attraction?",
+  "Where in your country is this tourist attraction located?",
+  "What can visitors see and do at this tourist attraction?",
+];
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questionKeywords = [
+  ["tourist attraction", "place", "site", "location"],
+  ["where", "country", "located", "area", "region"],
+  ["visitors", "see", "do", "activities", "experience"],
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+
+
 
 
   // ▶ Speak current question
@@ -206,30 +183,38 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
-            <li>
-              Who do you spend most time talking to on the telephone? [Why?]
-            </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
-            <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A tourist attraction in your country that you would recommend
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a tourist attraction in your country that you would
+              recommend.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>what the tourist attraction is</li>
+            <li>where in your country this tourist attraction is</li>
+            <li>what visitors can see and do at this tourist attraction</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            and explain why you would recommend this tourist attraction.
+          </p>
         </div>
 
         {/* right div */}
@@ -288,10 +273,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking2Pagination2023></Speaking2Pagination2023>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking2Part22023;

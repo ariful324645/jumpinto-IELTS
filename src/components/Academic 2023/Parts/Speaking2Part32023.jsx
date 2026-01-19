@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+
+
+import Speaking2Pagination2023 from "../Pagination 2023/Speaking2Pagination2023";
+
+const Speaking2Part32023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,46 +21,25 @@ const Test3Speaking2015 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questions = [
+  "What are the most popular museums and art galleries where you live?",
+  "Do you believe that all museums and art galleries should be free?",
+  "What kinds of things make a museum or art gallery an interesting place to visit?",
+  "Why do you think some people book package holidays rather than travelling independently?",
+  "Would you say that large numbers of tourists cause problems for local people?",
+  "What sort of impact can large holiday resorts have on the environment?",
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["popular", "museums", "art galleries", "where you live", "places"],
+  ["museums", "art galleries", "free", "opinion", "believe"],
+  ["museum", "art gallery", "interesting", "visit", "exhibits"],
+  ["package holidays", "travelling independently", "reasons", "tourism"],
+  ["tourists", "problems", "local people", "crowds"],
+  ["holiday resorts", "environment", "impact", "nature"],
+];
+
+
 
 
   // ▶ Speak current question
@@ -206,28 +189,46 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Museums and art galleries & The holiday industry
+            </h1>
+
+            <p className="text-lg font-bold">Museums and art galleries</p>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              What are the most popular museums and art galleries where you
+              live?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Do you believe that all museums and art galleries should be free?
+            </li>
+            <li>
+              What kinds of things make a museum or art gallery an interesting
+              place to visit?
+            </li>
+
+            <p className="text-lg font-bold mt-4">The holiday industry</p>
+            <li>
+              Why do you think some people book package holidays rather than
+              travelling independently?
+            </li>
+            <li>
+              Would you say that large numbers of tourists cause problems for
+              local people?
+            </li>
+            <li>
+              What sort of impact can large holiday resorts have on the
+              environment?
             </li>
           </ul>
         </div>
@@ -288,10 +289,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking2Pagination2023></Speaking2Pagination2023>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking2Part32023;

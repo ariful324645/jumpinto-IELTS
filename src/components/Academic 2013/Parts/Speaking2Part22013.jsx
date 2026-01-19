@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
-import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+import { VscDebugStart } from "react-icons/vsc";
+
+
+
+import Speaking2Pagination2013 from "../Pagination 2013/Speaking2Pagination2013";
+
+const Speaking2Part22013 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -15,48 +19,20 @@ const Test3Speaking2015 = () => {
 
   const recognitionRef = useRef(null);
 
-  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questions = [
+  "What did you do?",
+  "Where and when did you do this?",
+  "Who did you share the activity with?",
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["what", "did", "activity", "task", "experience", "do", "done"],
+  ["where", "location", "when", "time", "place", "date"],
+  ["who", "shared", "with", "friends", "family", "colleagues", "people"],
+];
+
 
 
   // ▶ Speak current question
@@ -206,30 +182,37 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
-            <li>
-              Who do you spend most time talking to on the telephone? [Why?]
-            </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
-            <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              Something you did that was new or exciting
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe something you did that was new or exciting.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>What you did</li>
+            <li>Where and when you did this</li>
+            <li>Who you shared the activity with</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            And explain why this activity was new or exciting for you.
+          </p>
         </div>
 
         {/* right div */}
@@ -288,10 +271,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking2Pagination2013></Speaking2Pagination2013>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking2Part22013;

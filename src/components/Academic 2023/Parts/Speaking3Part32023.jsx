@@ -1,9 +1,14 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
-import Speaking3Pagination2013 from "../Pagination 2013/Speaking3Pagination2013";
 
-const Test3Speaking2015 = () => {
+
+
+
+
+import Speaking3Pagination2023 from "../Pagination 2023/Speaking3Pagination2023";
+
+const Speaking3Part32023 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -17,46 +22,26 @@ const Test3Speaking2015 = () => {
 
   const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 
- const questions = [
-   "How often do you make telephone calls? ",
-   "Who do you spend most time talking to on the telephone? ",
-   "When do you think you'll next make a telephone call? ",
-   "Do you sometimes prefer to send a text message instead of telephoning? ",
- ];
+const questions = [
+  "When do families celebrate together in your country?",
+  "How often do all the generations in a family come together in your country?",
+  "Why is it that some people might not enjoy attending family occasions?",
+  "Do you think it is a good thing for parents to help their children with schoolwork?",
+  "How important do you think it is for families to eat together at least once a day?",
+  "Do you believe that everyone in a family should share household tasks?",
+];
 
- const questionKeywords = [
-   [
-     "how often",
-     "telephone calls",
-     "daily",
-     "sometimes",
-     "rarely",
-     "work",
-     "family",
-     "why",
-     "why not",
-   ],
-   [
-     "talking to",
-     "telephone",
-     "family",
-     "friends",
-     "colleagues",
-     "parents",
-     "why",
-   ],
-   ["next call", "telephone", "today", "tomorrow", "work", "personal", "why"],
-   [
-     "prefer",
-     "text message",
-     "sms",
-     "whatsapp",
-     "messenger",
-     "instead of calling",
-     "why",
-     "why not",
-   ],
- ];
+const questionKeywords = [
+  ["families", "celebrate", "together", "country", "occasions"],
+  ["generations", "family", "come together", "frequency", "country"],
+  ["people", "not enjoy", "family occasions", "reasons", "opinion"],
+  ["parents", "children", "schoolwork", "help", "opinion"],
+  ["families", "eat together", "importance", "daily", "meal"],
+  ["family", "share", "household tasks", "responsibilities", "everyone"],
+];
+
+
+
 
 
   // ▶ Speak current question
@@ -206,28 +191,44 @@ const Test3Speaking2015 = () => {
 
   return (
     <div>
+      {" "}
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
           <br />
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
+
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <h1 className="text-2xl font-bold text-center">Telephoning</h1>
-            <li>How often do you make telephone calls? [Why/Why not?]</li>
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Family occasions & Everyday life in families
+            </h1>
+
+            <p className="text-lg font-bold">Family occasions</p>
+            <li>When do families celebrate together in your country?</li>
             <li>
-              Who do you spend most time talking to on the telephone? [Why?]
+              How often do all the generations in a family come together in your
+              country?
             </li>
-            <li>When do you think you'll next make a telephone call? [Why?]</li>
             <li>
-              Do you sometimes prefer to send a text message instead of
-              telephoning? [Why/Why not?]
+              Why is it that some people might not enjoy attending family
+              occasions?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Everyday life in families</p>
+            <li>
+              Do you think it is a good thing for parents to help their children
+              with schoolwork?
+            </li>
+            <li>
+              How important do you think it is for families to eat together at
+              least once a day?
+            </li>
+            <li>
+              Do you believe that everyone in a family should share household
+              tasks?
             </li>
           </ul>
         </div>
@@ -288,10 +289,9 @@ const Test3Speaking2015 = () => {
           </div>
         </div>
       </div>
-<Speaking3Pagination2013></Speaking3Pagination2013>
-      {/* <Speaking1Pagination2015></Speaking1Pagination2015> */}
+      <Speaking3Pagination2023></Speaking3Pagination2023>
     </div>
   );
 };
 
-export default Test3Speaking2015;
+export default Speaking3Part32023;
