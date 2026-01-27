@@ -3,15 +3,9 @@ import { FaMicrophone } from "react-icons/fa";
 import { VscDebugStart } from "react-icons/vsc";
 
 
+import Speaking1Pagination2011 from "../Pagination 2011/Speaking1Pagination2011";
 
-
-import Speaking4Pagination2024 from "../Pagination 2024/Speaking4Pagination2024";
-
-
-
-
-
-const Test4Speaking2024 = () => {
+const Speaking1Part32011 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -22,22 +16,46 @@ const Test4Speaking2024 = () => {
   const [totalMark, setTotalMark] = useState(0);
 
   const recognitionRef = useRef(null);
-const questions = [
-  "Do you prefer spending holidays with friends or with family?",
-  "What kind of holiday accommodation do you like to stay in?",
-  "What plans do you have for your next holiday?",
-  "Is your city or region a good place for other people to visit on holiday? ",
-];
 
-const questionKeywords = [
-  ["prefer", "holidays", "friends", "family", "reason"],
-  ["holiday", "accommodation", "hotel", "resort", "stay"],
-  ["plans", "next holiday", "travel", "future"],
-  ["city", "region", "visit", "holiday", "tourists"],
-];
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
+ const questions = [
+   "What kinds of organisations want to find out about people's opinions?",
+   "Do you think questionnaires or surveys are good ways of finding out people's opinions?",
+   "What reasons might people have for not wanting to give their opinions?",
+   "Do you think it would be a good idea for schools to ask students their opinions about lessons?",
+   "What advantages would schools have if they asked students their opinions?",
+   "Do you think there would be any disadvantages in asking students' opinions?",
+ ];
 
-
-
+ const questionKeywords = [
+   [
+     "organisations",
+     "companies",
+     "government",
+     "schools",
+     "opinions",
+     "feedback",
+     "why",
+   ],
+   [
+     "questionnaires",
+     "surveys",
+     "good way",
+     "opinions",
+     "advantages",
+     "effective",
+   ],
+   ["reasons", "not want", "give opinions", "privacy", "fear", "confidence"],
+   ["schools", "students", "opinions", "lessons", "education", "idea"],
+   ["advantages", "schools", "student feedback", "improve lessons", "benefits"],
+   [
+     "disadvantages",
+     "students opinions",
+     "pressure",
+     "bias",
+     "negative effects",
+   ],
+ ];
 
 
   // ▶ Speak current question
@@ -59,16 +77,15 @@ const questionKeywords = [
   };
 
   // ✅ keyword-based mark calculation
-  // ✅ Live answer only, do not show "No answer given"
   const calculateMark = (answer, questionIdx) => {
     const text = answer.toLowerCase();
-    if (!text) return 0; // empty answer → 0 mark
+    if (!text) return 0;
 
     const keywords = questionKeywords[questionIdx];
     for (let kw of keywords) {
-      if (text.includes(kw)) return 1; // match → 1 mark
+      if (text.includes(kw)) return 1;
     }
-    return 0; // no keyword → 0 mark
+    return 0;
   };
 
   // 🎤 Microphone click
@@ -112,14 +129,22 @@ const questionKeywords = [
       const answerText = finalTranscript.trim() || currentAnswer.trim();
       const mark = calculateMark(answerText, questionIndex);
 
-      setAnswers((prev) => [
-        ...prev,
+      const updatedAnswers = [
+        ...answers,
         {
           question: questions[questionIndex],
           answer: answerText || "No answer given",
           mark,
         },
-      ]);
+      ];
+
+      setAnswers(updatedAnswers);
+
+      const total = updatedAnswers.reduce((sum, a) => sum + a.mark, 0);
+      setTotalMark(total);
+
+      // ✅ Save mark to localStorage
+      localStorage.setItem(storageKey, total);
 
       setTimeout(() => {
         if (questionIndex < questions.length - 1) {
@@ -127,15 +152,6 @@ const questionKeywords = [
           setSpokenQuestion("");
           setCurrentAnswer("");
         } else {
-          const total = [
-            ...answers,
-            {
-              question: questions[questionIndex],
-              answer: answerText || "No answer given",
-              mark,
-            },
-          ].reduce((sum, a) => sum + a.mark, 0);
-          setTotalMark(total);
           setShowResult(true);
         }
       }, 800);
@@ -150,7 +166,7 @@ const questionKeywords = [
     return (
       <div className="p-6 max-w-2xl mx-auto border rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
-          🎉 Speaking Test Complete!
+          Speaking Test Complete!
         </h1>
 
         <ul className="space-y-6 text-left">
@@ -174,7 +190,7 @@ const questionKeywords = [
 
         <div className="text-center mt-8">
           <p className="text-xl font-bold text-blue-700 mb-4">
-            🏆 Total Score: {totalMark} / {questions.length}
+            Total Score: {totalMark} / {questions.length}
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -193,31 +209,41 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
-
-          <h2 className="text-2xl font-bold mb-2">Holidays</h2>
 
           <ul className="list-disc pl-8 list-inside space-y-2">
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Asking questions & Questionnaires in school
+            </h1>
+
+            <p className="text-lg font-bold">Asking questions</p>
             <li>
-              Do you prefer spending holidays with friends or with family?
-              [Why?]
+              What kinds of organisations want to find out about people's
+              opinions?
             </li>
             <li>
-              What kind of holiday accommodation do you like to stay in? [Why?]
+              Do you think questionnaires or surveys are good ways of finding
+              out people's opinions? Why or why not?
             </li>
-            <li>What plans do you have for your next holiday?</li>
             <li>
-              Is your city or region a good place for other people to visit on
-              holiday? [Why/Why not?]
+              What reasons might people have for not wanting to give their
+              opinions?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Questionnaires in school</p>
+            <li>
+              Do you think it would be a good idea for schools to ask students
+              their opinions about lessons?
+            </li>
+            <li>
+              What would the advantages for schools be if they asked students
+              their opinions?
+            </li>
+            <li>
+              Would there be any disadvantages in asking students' opinions?
             </li>
           </ul>
         </div>
@@ -225,7 +251,6 @@ const questionKeywords = [
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
-            {" "}
             <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
               2/3 speaking practices finished in 180 minutes.
             </span>
@@ -279,9 +304,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking4Pagination2024></Speaking4Pagination2024>
+      <Speaking1Pagination2011></Speaking1Pagination2011>
     </div>
   );
 };
 
-export default Test4Speaking2024;
+export default Speaking1Part32011;

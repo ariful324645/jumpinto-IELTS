@@ -1,17 +1,14 @@
 import React, { useState, useRef } from "react";
 import { FaMicrophone } from "react-icons/fa";
+
 import { VscDebugStart } from "react-icons/vsc";
 
 
 
 
-import Speaking4Pagination2024 from "../Pagination 2024/Speaking4Pagination2024";
+import Speaking1Pagination2009 from "../Pagination 2009/Speaking1Pagination2009";
 
-
-
-
-
-const Test4Speaking2024 = () => {
+const Speaking1Part22009 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -22,20 +19,28 @@ const Test4Speaking2024 = () => {
   const [totalMark, setTotalMark] = useState(0);
 
   const recognitionRef = useRef(null);
+
+  const storageKey = "/2019/Test 1/speaking"; // ✅ localStorage key
+
 const questions = [
-  "Do you prefer spending holidays with friends or with family?",
-  "What kind of holiday accommodation do you like to stay in?",
-  "What plans do you have for your next holiday?",
-  "Is your city or region a good place for other people to visit on holiday? ",
+  "Whose party was it and what was it celebrating?",
+  "Where was the party held and who went to it?",
+  "What did people do during the party?",
 ];
 
 const questionKeywords = [
-  ["prefer", "holidays", "friends", "family", "reason"],
-  ["holiday", "accommodation", "hotel", "resort", "stay"],
-  ["plans", "next holiday", "travel", "future"],
-  ["city", "region", "visit", "holiday", "tourists"],
+  ["whose party", "celebrating", "birthday", "wedding", "occasion", "reason"],
+  [
+    "where",
+    "party held",
+    "location",
+    "who went",
+    "friends",
+    "family",
+    "guests",
+  ],
+  ["people did", "activities", "music", "dance", "food", "fun", "games"],
 ];
-
 
 
 
@@ -59,16 +64,15 @@ const questionKeywords = [
   };
 
   // ✅ keyword-based mark calculation
-  // ✅ Live answer only, do not show "No answer given"
   const calculateMark = (answer, questionIdx) => {
     const text = answer.toLowerCase();
-    if (!text) return 0; // empty answer → 0 mark
+    if (!text) return 0;
 
     const keywords = questionKeywords[questionIdx];
     for (let kw of keywords) {
-      if (text.includes(kw)) return 1; // match → 1 mark
+      if (text.includes(kw)) return 1;
     }
-    return 0; // no keyword → 0 mark
+    return 0;
   };
 
   // 🎤 Microphone click
@@ -112,14 +116,22 @@ const questionKeywords = [
       const answerText = finalTranscript.trim() || currentAnswer.trim();
       const mark = calculateMark(answerText, questionIndex);
 
-      setAnswers((prev) => [
-        ...prev,
+      const updatedAnswers = [
+        ...answers,
         {
           question: questions[questionIndex],
           answer: answerText || "No answer given",
           mark,
         },
-      ]);
+      ];
+
+      setAnswers(updatedAnswers);
+
+      const total = updatedAnswers.reduce((sum, a) => sum + a.mark, 0);
+      setTotalMark(total);
+
+      // ✅ Save mark to localStorage
+      localStorage.setItem(storageKey, total);
 
       setTimeout(() => {
         if (questionIndex < questions.length - 1) {
@@ -127,15 +139,6 @@ const questionKeywords = [
           setSpokenQuestion("");
           setCurrentAnswer("");
         } else {
-          const total = [
-            ...answers,
-            {
-              question: questions[questionIndex],
-              answer: answerText || "No answer given",
-              mark,
-            },
-          ].reduce((sum, a) => sum + a.mark, 0);
-          setTotalMark(total);
           setShowResult(true);
         }
       }, 800);
@@ -150,7 +153,7 @@ const questionKeywords = [
     return (
       <div className="p-6 max-w-2xl mx-auto border rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
-          🎉 Speaking Test Complete!
+          Speaking Test Complete!
         </h1>
 
         <ul className="space-y-6 text-left">
@@ -174,7 +177,7 @@ const questionKeywords = [
 
         <div className="text-center mt-8">
           <p className="text-xl font-bold text-blue-700 mb-4">
-            🏆 Total Score: {totalMark} / {questions.length}
+            Total Score: {totalMark} / {questions.length}
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -193,39 +196,38 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 2</h1>
           <br />
           <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
+            You will have to talk about the topic for one to two minutes. You
+            have one minute to think about what you are going to say. You can
+            make some notes to help you if you wish.
           </p>
-          <br />
-
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
-
-          <h2 className="text-2xl font-bold mb-2">Holidays</h2>
 
           <ul className="list-disc pl-8 list-inside space-y-2">
-            <li>
-              Do you prefer spending holidays with friends or with family?
-              [Why?]
-            </li>
-            <li>
-              What kind of holiday accommodation do you like to stay in? [Why?]
-            </li>
-            <li>What plans do you have for your next holiday?</li>
-            <li>
-              Is your city or region a good place for other people to visit on
-              holiday? [Why/Why not?]
-            </li>
+            <h1 className="text-2xl font-bold text-center my-5">
+              A party that you enjoyed
+            </h1>
+
+            <p className="text-lg font-bold">
+              Describe a party that you enjoyed.
+            </p>
+
+            <p className="text-lg font-bold">You should say:</p>
+
+            <li>whose party it was and what it was celebrating</li>
+            <li>where the party was held and who went to it</li>
+            <li>what people did during the party</li>
           </ul>
+
+          <p className="text-lg font-bold mt-3">
+            And explain what you enjoyed about this party.
+          </p>
         </div>
 
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
-            {" "}
             <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
               2/3 speaking practices finished in 180 minutes.
             </span>
@@ -279,9 +281,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking4Pagination2024></Speaking4Pagination2024>
+      <Speaking1Pagination2009></Speaking1Pagination2009>
     </div>
   );
 };
 
-export default Test4Speaking2024;
+export default Speaking1Part22009;

@@ -5,13 +5,9 @@ import { VscDebugStart } from "react-icons/vsc";
 
 
 
-import Speaking4Pagination2024 from "../Pagination 2024/Speaking4Pagination2024";
+import Speaking2Pagination2009 from "../Pagination 2009/Speaking2Pagination2009";
 
-
-
-
-
-const Test4Speaking2024 = () => {
+const Speaking2Part32009 = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [spokenQuestion, setSpokenQuestion] = useState("");
   const [currentAnswer, setCurrentAnswer] = useState("");
@@ -22,20 +18,39 @@ const Test4Speaking2024 = () => {
   const [totalMark, setTotalMark] = useState(0);
 
   const recognitionRef = useRef(null);
+
+  const storageKey = "/2020/Test 1/speaking"; // ✅ localStorage key
 const questions = [
-  "Do you prefer spending holidays with friends or with family?",
-  "What kind of holiday accommodation do you like to stay in?",
-  "What plans do you have for your next holiday?",
-  "Is your city or region a good place for other people to visit on holiday? ",
+  "Some people think that education should be about memorising the important ideas of the past. Do you agree or disagree? Why?",
+  "Should education encourage students to have their own new ideas? ",
+  "How do you think teachers could help students to develop and share their own ideas?",
+  "Should employers encourage their workers to have new ideas about improving the company? ",
+  "Do you think people sometimes dislike ideas just because they are new? ",
+  "What is more difficult: having new ideas or putting them into practice? Which is more important for a successful company?",
 ];
 
 const questionKeywords = [
-  ["prefer", "holidays", "friends", "family", "reason"],
-  ["holiday", "accommodation", "hotel", "resort", "stay"],
-  ["plans", "next holiday", "travel", "future"],
-  ["city", "region", "visit", "holiday", "tourists"],
+  ["education", "memorising", "ideas of the past", "agree", "disagree", "why"],
+  ["education", "students", "new ideas", "creativity", "encourage", "why"],
+  [
+    "teachers",
+    "help students",
+    "develop ideas",
+    "share ideas",
+    "discussion",
+    "support",
+  ],
+  ["employers", "workers", "new ideas", "improve company", "innovation", "why"],
+  ["dislike new ideas", "change", "fear", "risk", "why"],
+  [
+    "having ideas",
+    "putting into practice",
+    "difficulty",
+    "successful company",
+    "importance",
+    "why",
+  ],
 ];
-
 
 
 
@@ -59,16 +74,15 @@ const questionKeywords = [
   };
 
   // ✅ keyword-based mark calculation
-  // ✅ Live answer only, do not show "No answer given"
   const calculateMark = (answer, questionIdx) => {
     const text = answer.toLowerCase();
-    if (!text) return 0; // empty answer → 0 mark
+    if (!text) return 0;
 
     const keywords = questionKeywords[questionIdx];
     for (let kw of keywords) {
-      if (text.includes(kw)) return 1; // match → 1 mark
+      if (text.includes(kw)) return 1;
     }
-    return 0; // no keyword → 0 mark
+    return 0;
   };
 
   // 🎤 Microphone click
@@ -112,14 +126,22 @@ const questionKeywords = [
       const answerText = finalTranscript.trim() || currentAnswer.trim();
       const mark = calculateMark(answerText, questionIndex);
 
-      setAnswers((prev) => [
-        ...prev,
+      const updatedAnswers = [
+        ...answers,
         {
           question: questions[questionIndex],
           answer: answerText || "No answer given",
           mark,
         },
-      ]);
+      ];
+
+      setAnswers(updatedAnswers);
+
+      const total = updatedAnswers.reduce((sum, a) => sum + a.mark, 0);
+      setTotalMark(total);
+
+      // ✅ Save mark to localStorage
+      localStorage.setItem(storageKey, total);
 
       setTimeout(() => {
         if (questionIndex < questions.length - 1) {
@@ -127,15 +149,6 @@ const questionKeywords = [
           setSpokenQuestion("");
           setCurrentAnswer("");
         } else {
-          const total = [
-            ...answers,
-            {
-              question: questions[questionIndex],
-              answer: answerText || "No answer given",
-              mark,
-            },
-          ].reduce((sum, a) => sum + a.mark, 0);
-          setTotalMark(total);
           setShowResult(true);
         }
       }, 800);
@@ -150,7 +163,7 @@ const questionKeywords = [
     return (
       <div className="p-6 max-w-2xl mx-auto border rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
-          🎉 Speaking Test Complete!
+          Speaking Test Complete!
         </h1>
 
         <ul className="space-y-6 text-left">
@@ -174,7 +187,7 @@ const questionKeywords = [
 
         <div className="text-center mt-8">
           <p className="text-xl font-bold text-blue-700 mb-4">
-            🏆 Total Score: {totalMark} / {questions.length}
+            Total Score: {totalMark} / {questions.length}
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -193,31 +206,42 @@ const questionKeywords = [
       <div className="p-6 flex justify-between">
         {/* left div */}
         <div className="flex-1">
-          <h1 className="text-2xl font-bold">PART 1</h1>
+          <h1 className="text-2xl font-bold">PART 3</h1>
           <br />
-          <p className="text-lg">
-            The examiner asks you about yourself, your home, work or studies and
-            other familiar topics.
-          </p>
+          <h1 className="text-2xl font-bold">Discussion topics:</h1>
           <br />
-
-          <h1 className="text-2xl font-bold">EXAMPLE</h1>
-          <br />
-
-          <h2 className="text-2xl font-bold mb-2">Holidays</h2>
 
           <ul className="list-disc pl-8 list-inside space-y-2">
+            <h1 className="text-2xl font-bold text-center mb-5">
+              Ideas and education & Ideas in the workplace
+            </h1>
+
+            <p className="text-lg font-bold">Ideas and education</p>
             <li>
-              Do you prefer spending holidays with friends or with family?
-              [Why?]
+              Some people think that education should be about memorising the
+              important ideas of the past. Do you agree or disagree? Why?
             </li>
             <li>
-              What kind of holiday accommodation do you like to stay in? [Why?]
+              Should education encourage students to have their own new ideas?
+              Why?
             </li>
-            <li>What plans do you have for your next holiday?</li>
             <li>
-              Is your city or region a good place for other people to visit on
-              holiday? [Why/Why not?]
+              How do you think teachers could help students to develop and share
+              their own ideas?
+            </li>
+
+            <p className="text-lg font-bold mt-4">Ideas in the workplace</p>
+            <li>
+              Should employers encourage their workers to have new ideas about
+              improving the company? Why?
+            </li>
+            <li>
+              Do you think people sometimes dislike ideas just because they are
+              new? Why?
+            </li>
+            <li>
+              What is more difficult: having new ideas or putting them into
+              practice? Which is more important for a successful company?
             </li>
           </ul>
         </div>
@@ -225,7 +249,6 @@ const questionKeywords = [
         {/* right div */}
         <div className="flex-1 max-w-xl text-center border rounded-xl shadow-lg p-6 bg-gray-50">
           <p className="flex items-center justify-center">
-            {" "}
             <span className="bg-amber-100 text-gray-400 rounded-sm w-96 mb-10">
               2/3 speaking practices finished in 180 minutes.
             </span>
@@ -279,9 +302,9 @@ const questionKeywords = [
           </div>
         </div>
       </div>
-      <Speaking4Pagination2024></Speaking4Pagination2024>
+      <Speaking2Pagination2009></Speaking2Pagination2009>
     </div>
   );
 };
 
-export default Test4Speaking2024;
+export default Speaking2Part32009;
