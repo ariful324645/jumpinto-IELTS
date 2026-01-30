@@ -507,6 +507,7 @@ import Speaking3Part22023 from "../components/Academic 2023/Parts/Speaking3Part2
 import Speaking3Part32023 from "../components/Academic 2023/Parts/Speaking3Part32023";
 import Speaking4Part22023 from "../components/Academic 2023/Parts/Speaking4Part22023";
 import Speaking4Part32023 from "../components/Academic 2023/Parts/Speaking4Part32023";
+<<<<<<< HEAD
 import Test1Listening2025 from "../components/Academic 2025/Listening/Test1Listening2025";
 import Test2Listening2025 from "../components/Academic 2025/Listening/Test2Listening2025";
 import Test3Listening2025 from "../components/Academic 2025/Listening/Test3Listening2025";
@@ -535,6 +536,60 @@ import Reading3Part22025 from "../components/Academic 2025/Parts/Reading3Part220
 import Reading3Part32025 from "../components/Academic 2025/Parts/Reading3Part32025";
 import Reading4Part22025 from "../components/Academic 2025/Parts/Reading4Part22025";
 import Reading4Part32025 from "../components/Academic 2025/Parts/Reading4Part32025";
+=======
+import Writing1Part22024 from "../components/Academic 2024/Parts/Writing1Part22024";
+import Writing2Part22024 from "../components/Academic 2024/Parts/Writing2Part22024";
+import Writing3Part22024 from "../components/Academic 2024/Parts/Writing3Part22024";
+import Writing4Part22024 from "../components/Academic 2024/Parts/Writing4Part22024";
+import Speaking1Part22024 from "../components/Academic 2024/Parts/Speaking1Part22024";
+import Speaking1Part32024 from "../components/Academic 2024/Parts/Speaking1Part32024";
+import Speaking2Part22024 from "../components/Academic 2024/Parts/Speaking2Part22024";
+import Speaking2Part32024 from "../components/Academic 2024/Parts/Speaking2Part32024";
+import Speaking3Part22024 from "../components/Academic 2024/Parts/Speaking3Part22024";
+import Speaking3Part32024 from "../components/Academic 2024/Parts/Speaking3Part32024";
+import Speaking4Part22024 from "../components/Academic 2024/Parts/Speaking4Part22024";
+import Speaking4Part32024 from "../components/Academic 2024/Parts/Speaking4Part32024";
+import Test1Writing2011 from "../components/Academic 2011/Writing/Test1Writing2011";
+import Test2Writing2011 from "../components/Academic 2011/Writing/Test2Writing2011";
+import Test3Writing2011 from "../components/Academic 2011/Writing/Test3Writing2011";
+import Test4Writing2011 from "../components/Academic 2011/Writing/Test4Writing2011";
+import Test1Speaking2011 from "../components/Academic 2011/Speaking/Test1Speaking2011";
+import Test2Speaking2011 from "../components/Academic 2011/Speaking/Test2Speaking2011";
+import Test3Speaking2011 from "../components/Academic 2011/Speaking/Test3Speaking2011";
+import Test4Speaking2011 from "../components/Academic 2011/Speaking/Test4Speaking2011";
+import Writing2Part22011 from "../components/Academic 2011/Parts/Writing2Part22011";
+import Writing3Part22011 from "../components/Academic 2011/Parts/Writing3Part22011";
+import Writing4Part22011 from "../components/Academic 2011/Parts/Writing4Part22011";
+import Writing1Part22011 from "../components/Academic 2011/Parts/Writing1Part22011";
+import Speaking1Part22011 from "../components/Academic 2011/Parts/Speaking1Part22011";
+import Speaking1Part32011 from "../components/Academic 2011/Parts/Speaking1Part32011";
+import Speaking4Part22011 from "../components/Academic 2011/Parts/Speaking4Part22011";
+import Speaking4Part32011 from "../components/Academic 2011/Parts/Speaking4Part32011";
+import Speaking3Part32011 from "../components/Academic 2011/Parts/Speaking3Part32011";
+import Speaking3Part22011 from "../components/Academic 2011/Parts/Speaking3Part22011";
+import Speaking2Part32011 from "../components/Academic 2011/Parts/Speaking2Part32011";
+import Speaking2Part22011 from "../components/Academic 2011/Parts/Speaking2Part22011";
+import Test1Writing2009 from "../components/Academic 2009/Writing/Test1Writing2009";
+import Test2Writing2009 from "../components/Academic 2009/Writing/Test2Writing2009";
+import Test3Writing2009 from "../components/Academic 2009/Writing/Test3Writing2009";
+import Test4Writing2009 from "../components/Academic 2009/Writing/Test4Writing2009";
+import Test1Speaking2009 from "../components/Academic 2009/Speaking/Test1Speaking2009";
+import Test2Speaking2009 from "../components/Academic 2009/Speaking/Test2Speaking2009";
+import Test3Speaking2009 from "../components/Academic 2009/Speaking/Test3Speaking2009";
+import Test4Speaking2009 from "../components/Academic 2009/Speaking/Test4Speaking2009";
+import Writing1Part22009 from "../components/Academic 2009/Parts/Writing1Part22009";
+import Writing2Part22009 from "../components/Academic 2009/Parts/Writing2Part22009";
+import Writing3Part22009 from "../components/Academic 2009/Parts/Writing3Part22009";
+import Writing4Part22009 from "../components/Academic 2009/Parts/Writing4Part22009";
+import Speaking1Part22009 from "../components/Academic 2009/Parts/Speaking1Part22009";
+import Speaking1Part32009 from "../components/Academic 2009/Parts/Speaking1Part32009";
+import Speaking2Part22009 from "../components/Academic 2009/Parts/Speaking2Part22009";
+import Speaking2Part32009 from "../components/Academic 2009/Parts/Speaking2Part32009";
+import Speaking3Part22009 from "../components/Academic 2009/Parts/Speaking3Part22009";
+import Speaking3Part32009 from "../components/Academic 2009/Parts/Speaking3Part32009";
+import Speaking4Part22009 from "../components/Academic 2009/Parts/Speaking4Part22009";
+import Speaking4Part32009 from "../components/Academic 2009/Parts/Speaking4Part32009";
+>>>>>>> aeef215ffcd5744b6e015ed9540bb9a8e9d50d45
 
 export const router = createBrowserRouter([
   {
@@ -826,33 +881,83 @@ export const router = createBrowserRouter([
         Component: Test1Writing2024,
       },
       {
+        path: "/writing1Part22024",
+        Component: Writing1Part22024,
+      },
+      {
         path: "/2024/Test 2/writing",
         Component: Test2Writing2024,
+      },
+      {
+        path: "/writing2Part22024",
+        Component: Writing2Part22024,
       },
       {
         path: "/2024/Test 3/writing",
         Component: Test3Writing2024,
       },
       {
+        path: "/writing3Part22024",
+        Component: Writing3Part22024,
+      },
+      {
         path: "/2024/Test 4/writing",
         Component: Test4Writing2024,
+      },
+      {
+        path: "/writing4Part22024",
+        Component: Writing4Part22024,
       },
       {
         path: "/2024/Test 1/speaking",
         Component: Test1Speaking2024,
       },
       {
+        path: "/speaking1Part22024",
+        Component: Speaking1Part22024,
+      },
+      {
+        path: "/speaking1Part32024",
+        Component: Speaking1Part32024,
+      },
+      {
         path: "/2024/Test 2/speaking",
         Component: Test2Speaking2024,
       },
+      {
+        path: "/speaking2Part22024",
+        Component: Speaking2Part22024,
+      },
+      {
+        path: "/speaking2Part32024",
+        Component: Speaking2Part32024,
+      },
+
       {
         path: "/2024/Test 3/speaking",
         Component: Test3Speaking2024,
       },
       {
+        path: "/speaking3Part22024",
+        Component: Speaking3Part22024,
+      },
+      {
+        path: "/speaking3Part32024",
+        Component: Speaking3Part32024,
+      },
+      {
         path: "/2024/Test 4/speaking",
         Component: Test4Speaking2024,
       },
+      {
+        path: "/speaking4Part22024",
+        Component: Speaking4Part22024,
+      },
+      {
+        path: "/speaking4Part32024",
+        Component: Speaking4Part32024,
+      },
+
       {
         path: "/2023/Test 1/listening",
         Component: Test1Listening2023,
@@ -2656,7 +2761,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/speaking2Part22013",
-        Component: Speaking2Part22013,
+        Component: Speaking2Part22011,
       },
       {
         path: "/speaking2Part32013",
@@ -2685,6 +2790,182 @@ export const router = createBrowserRouter([
       {
         path: "/speaking4Part32013",
         Component: Speaking4Part32013,
+      },
+      //2011
+      {
+        path: "/2011/Test 1/writing",
+        Component: Test1Writing2011,
+      },
+      {
+        path: "/writing1Part22011",
+        Component: Writing1Part22011,
+      },
+
+      {
+        path: "/2011/Test 2/writing",
+        Component: Test2Writing2011,
+      },
+      {
+        path: "/writing2Part22011",
+        Component: Writing2Part22011,
+      },
+      {
+        path: "/2011/Test 3/writing",
+        Component: Test3Writing2011,
+      },
+      {
+        path: "/writing3Part22011",
+        Component: Writing3Part22011,
+      },
+      {
+        path: "/2011/Test 4/writing",
+        Component: Test4Writing2011,
+      },
+      {
+        path: "/writing4Part22011",
+        Component: Writing4Part22011,
+      },
+      {
+        path: "/2011/Test 1/speaking",
+        Component: Test1Speaking2011,
+      },
+      {
+        path: "/speaking1Part22011",
+        Component: Speaking1Part22011,
+      },
+      {
+        path: "/speaking1Part32011",
+        Component: Speaking1Part32011,
+      },
+      {
+        path: "/2011/Test 2/speaking",
+        Component: Test2Speaking2011,
+      },
+      {
+        path: "/speaking2Part32011",
+        Component: Speaking2Part32011,
+      },
+      {
+        path: "/speaking2Part32011",
+        Component: Speaking2Part32011,
+      },
+
+      {
+        path: "/speaking3Part22011",
+        Component: Speaking3Part22011,
+      },
+
+      {
+        path: "/2011/Test 3/speaking",
+        Component: Test3Speaking2011,
+      },
+      {
+        path: "/speaking3Part32011",
+        Component: Speaking3Part32011,
+      },
+      {
+        path: "/speaking3Part22011",
+        Component: Speaking3Part22011,
+      },
+
+      {
+        path: "/2011/Test 4/speaking",
+        Component: Test4Speaking2011,
+      },
+      {
+        path: "/speaking4Part32011",
+        Component: Speaking4Part32011,
+      },
+      {
+        path: "/speaking4Part22011",
+        Component: Speaking4Part22011,
+      },
+      //2009
+      {
+        path: "/2009/Test 1/writing",
+        Component: Test1Writing2009,
+      },
+      {
+        path: "/writing1Part22009",
+        Component: Writing1Part22009,
+      },
+      {
+        path: "/2009/Test 2/writing",
+        Component: Test2Writing2009,
+      },
+
+      {
+        path: "/writing2Part22009",
+        Component: Writing2Part22009,
+      },
+      {
+        path: "/2009/Test 3/writing",
+        Component: Test3Writing2009,
+      },
+      {
+        path: "/writing3Part22009",
+        Component: Writing3Part22009,
+      },
+      {
+        path: "/2009/Test 4/writing",
+        Component: Test4Writing2009,
+      },
+
+      {
+        path: "/writing4Part22009",
+        Component: Writing4Part22009,
+      },
+      {
+        path: "/2009/Test 1/speaking",
+        Component: Test1Speaking2009,
+      },
+      {
+        path: "/speaking1Part22009",
+        Component: Speaking1Part22009,
+      },
+      {
+        path: "/speaking1Part32009",
+        Component: Speaking1Part32009,
+      },
+
+      {
+        path: "/2009/Test 2/speaking",
+        Component: Test2Speaking2009,
+      },
+
+      {
+        path: "/speaking2Part22009",
+        Component: Speaking2Part22009,
+      },
+
+      {
+        path: "/speaking2Part32009",
+        Component: Speaking2Part32009,
+      },
+      {
+        path: "/2009/Test 3/speaking",
+        Component: Test3Speaking2009,
+      },
+      {
+        path: "/speaking3Part22009",
+        Component: Speaking3Part22009,
+      },
+      {
+        path: "/speaking3Part32009",
+        Component: Speaking3Part32009,
+      },
+
+      {
+        path: "/2009/Test 4/speaking",
+        Component: Test4Speaking2009,
+      },
+      {
+        path: "/speaking4Part22009",
+        Component: Speaking4Part22009,
+      },
+      {
+        path: "/speaking4Part32009",
+        Component: Speaking4Part32009,
       },
     ],
   },
