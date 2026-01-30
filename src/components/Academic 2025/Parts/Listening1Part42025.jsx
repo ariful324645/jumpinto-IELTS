@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2024 from "../Pagination 2024/Listening1Pagination2024";
+import Listening1Pagination2025 from "../Pagination 2025/Listening1Pagination2025";
 
-const Test1Listening2024 = () => {
+const Listening1Part42025 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,235 +24,85 @@ const Test1Listening2024 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a teaching assistant calling a country park about a school visit.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Part 4, you will hear part of a presentation by an urban planning student about the role of rivers in cities around the world.",
+        "First you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SPEAKER",
       text: [
-        "Good morning, Hinchingbrooke Country Park, Sally speaking.",
-        "I'm one of the rangers.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Oh, hello, uh, my name is John Chapman, and I'm a teaching assistant at a local primary school.",
-        "I've been asked to arrange a visit to the park for two of our classes.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["OK, what would you like to know?"],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, I'm new to this area.",
-        "So perhaps you could tell me something about the park first, please.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Of course. Altogether the park covers 170 acres. That's 69 hectares.",
-        "There are three main types of habitat, wetland, grassland, and woodland.",
-        "The woods are well established and varied.",
-        "With an oak plantation and other areas of mixed species.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Right."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "The wetland is quite varied too.",
-        "The original farmland was dug up around 40 years ago to extract gravel.",
-        "Once this work was completed, the gravel pits filled with water, forming the two large lakes.",
+        "It's quite hard to think of a city that doesn't have a big river running through it.",
+        "If you think about the major cities in the world, Shanghai, New York, Mumbai, London, they're nearly all built on rivers.",
+        "When these cities were established hundreds or even thousands of years ago, the rivers were a big part of people's lives.",
+        "In 16th century London, the quickest way to get from one part of the city to another was by river.",
+        "But people also used the river for fishing, as the water then was relatively clean.",
+        "And they would also go on boat trips up and down the river just for pleasure, as a relaxing escape from the noise and bustle of the city streets.",
+        "But as industries developed and populations increased city rivers suffered.",
+        "The rising number of people meant there was a huge increase in the amount of sewage discharged into the rivers.",
+        "Rivers had always been used for this purpose.",
+        "But when the number of inhabitants was so small, that wasn't such a problem.",
+        "However, as cities grew to over a million inhabitants, the impact on the rivers became more serious.",
+        "In addition, other types of pollution increased as factories were built beside the river and discharged their waste materials into the water.",
         {
-          text: "There are also several smaller ones. Ponds and a stream that flows through the park.",
-          number: 2,
+          text: "This got worse over time. As recently as 1957, scientists at London's Natural History Museum declared that the River Thames was dead, in biological terms.",
+          number: 31,
+        },
+        {
+          text: "As the water was too filthy to support any kind of life.",
+          number: 32,
+        },
+        "But in recent years, as rivers lost their industrial function, cities have begun to recognize their true value, and to take steps to clean them up.",
+        "For example, the River Thames is now cleaner than it's been for 150 years.",
+        "These days you can see seals swimming in the water, and recently people had to try to rescue a whale, which had got lost and swam up the river from the sea by mistake.",
+        {
+          text: "Unfortunately they didn't succeed, but the problem was disorientation rather than the quality of the water.",
+          number: 33,
+        },
+        "Then, all around the world Riverside areas are now seen as prime sites for development.",
+        "Warehouses that were once used for storing goods are now being converted into expensive restaurants, and also into apartments with river views, which are in great demand and sell for astronomical prices.",
+        {
+          text: "In Los Angeles on the west coast of the USA, an architect has plans to revitalize the banks of the river. And to make a park there, which can provide facilities for sports, as well as a natural environment for relaxing in.",
+          number: 34,
+        },
+        {
+          text: "It's also hoped that the Riverside can be used for other purposes. It's been proposed that facilities could be provided for displaying projects related to various kinds of art that have been produced by local people, for example.",
+          number: 35,
+        },
+        {
+          text: "In the city of Paris, during the summer months of July and August, all the traffic is banned from the roads by the sides of the river, and the banks are transformed into beaches where people can relax in deck chairs under potted palm trees, sunbathe, or buy a drink or a snack while enjoying the view.",
+          number: 36,
+        },
+        "But to make the most of our rivers in our increasingly crowded cities, we need to allow them to regain their original purpose, and be used as a means of transport.",
+        "Reclaiming our streets from cars and lorries.",
+        "To do this, we'll have to shift more traffic back to the river, but this time cleanly and silently.",
+        "Making the most of modern technology.",
+        "Already, more than 2 billion passengers use the ferry to travel in cities around the world, like Istanbul, San Francisco, and New York.",
+        {
+          text: "And these numbers are set to rise further, admittedly it's not a fast way of traveling, but neither is a car when it's stuck in traffic.",
+          number: 37,
+        },
+        "Of course, passenger traffic on roads might decrease as more people start working from home.",
+        "But another recent development, the huge rise in online shopping, has meant that another form of urban traffic just keeps on growing, and that's deliveries.",
+        "Trucks and vans in the city pollute and double park while dropping off parcels.",
+        "Imagine using the immense capacity of shipping to take these trucks off the road.",
+        "One freight barge can replace 44 large trucks, uses far less energy, and causes less pollution.",
+        "When the barge docks at the Riverside the parcels could be taken the last few kilometers to their final destination on cargo bikes, electric ones of course.",
+        {
+          text: "This is already happening in the Dutch city of Amsterdam. And in future, the final stage could even be carried out by drone, although at present this isn't allowed.",
+          number: 39,
+        },
+        {
+          text: "Wouldn't it be great to unblock our city centers in this way? Looking further ahead...",
+          number: 40,
         },
       ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "OK, so I suppose with these different habitats, there's quite a variety of wildlife.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "There certainly is. A lot of different species of birds and insects, and also animals like deer and rabbits.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "And I understand you organize educational visits for school parties.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right. We can organize a wide range of activities, and adapt them to suit all ages.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Can you give me some examples of the activities?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Well, one focus is on science, where we help children to discover and study plants, trees and insects.",
-        {
-          text: "They also collect and analyze data about the things they see.",
-          number: 3,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Another focus is on geography.",
-        {
-          text: "The park is a great environment to learn and practice reading a map.",
-          number: 4,
-        },
-        "And using a compass to navigate around the park.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Do you do anything connected with history?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, we do. For instance, the children can explore how the use of the land has changed over time. Then there's leisure and tourism.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That focuses on your visitors, I would imagine."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, mostly.",
-        {
-          text: "The children find out about them, their requirements, the problems they may cause, and how we manage these.",
-          number: 5,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["And another subject we cover is music."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes.",
-        {
-          text: "Here the children experiment with natural materials to create sounds and explore rhythm and tempo.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That must be fun."],
-    },
-    {
-      speaker: "SALLY",
-      text: ["Most children really enjoy it."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "And of course, all the activities are educational too.",
-        "Learning outside the classroom encourages children to be creative and to explore and discover for themselves.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "I would imagine they get a sense of freedom",
-        { text: "that might not be a normal part of their lives.", number: 7 },
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right.",
-        "And very often the children discover that they can do things they didn't know they could do.",
-        { text: "And they develop new skills.", number: 8 },
-        "This gives them greater self-confidence.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "It sounds great.",
-        "So what about the practical side of it?",
-        "How much does it cost for a full day visit?",
-        "We would expect to bring between 30 and 40 children",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "If there are over 30,",
-        {
-          text: "it costs £4.95 for each child who attends on the day.",
-          number: 9,
-        },
-        "We invoice you afterwards, so you don't pay for children who can't come because of sickness, for example.",
-        {
-          text: "There's no charge for leaders and other adults, as many as you want to bring.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "That sounds very fair.",
-        "Well, thanks for all the information.",
-        "I'll need to discuss it with my colleagues, and I hope to get back to you soon to make a booking.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["We'll look forward to hearing from you. Goodbye."],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Goodbye, and thank you."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -358,26 +208,12 @@ const Test1Listening2024 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "FATHER") {
+      if (speaker === "TC EMPLOYEE")
+        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+      if (speaker === "OFFICER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "SADIE") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
       return voices[0];
     };
 
@@ -416,25 +252,25 @@ const Test1Listening2024 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "50", // Area: 50 hectares (example)
-    2: "lake", // Wetland: lakes, ponds and a lake
-    3: "plants", // Science: Children look at plants about plants, etc.
-    4: "map", // Geography: includes learning to use a map and compass
-    5: "wildlife", // Leisure and tourism: mostly concentrates on the park's wildlife
-    6: "instruments", // Music: Children make instruments with natural materials
-    7: "freedom", // They give children a feeling of freedom
-    8: "skills", // Children learn new skills and gain self-confidence
-    9: "5", // Cost per child: £5
-    10: "teachers", // Adults, such as teachers, free
+    // Questions 31–40 (Reclaiming Urban Rivers, one-word answers)
+    31: "factories", // pollution from factories on the river bank
+    32: "dead", // River Thames declared biologically dead
+    33: "whale", // Seals and even a whale have been seen
+    34: "apartments", // Warehouses converted to restaurants and apartments
+    35: "park", // Build a riverside park
+    36: "art", // Display art projects
+    37: "beaches", // Paris: beaches created on river sides
+    38: "ferry", // Over 2 billion passengers travel by ferry
+    39: "bikes", // Goods transported by electric bikes
+    40: "drone", // Future deliveries by drone
   };
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       const updated = { ...prev, [id]: value };
-      calculateScore(updated);
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
@@ -442,16 +278,30 @@ const Test1Listening2024 = () => {
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
+      const user = answers[key];
+
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((v) => user.includes(v))
+        ) {
+          newScore += 2; // 🔥 21–22 & 23–24
+        }
+      } else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
+
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening1Part22022", newScore);
   };
 
   const toggleButton = (id) => {
@@ -463,12 +313,12 @@ const Test1Listening2024 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/listening1Part22022");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening1Part22022");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -480,7 +330,7 @@ const Test1Listening2024 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -511,7 +361,7 @@ const Test1Listening2024 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("School Visit to Hinchingbrooke Country Park")}
+                {renderText("The Role of Rivers in Global Cities")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -544,238 +394,244 @@ const Test1Listening2024 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6  rounded-lg space-y-5 bg-white">
+          <div className="border p-6  space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Hinchingbrooke Country Park")}
+              {renderText("Reclaiming Urban Rivers")}
             </h1>
 
-            <p className="text-lg">{renderText("The park")}</p>
+            <h3 className="font-semibold mt-4">
+              {renderText("Historical background")}
+            </h3>
 
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Area:")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" hectares")}
-            </p>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("Wetland: lakes, ponds and a")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Science: Children look at")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" about plants, etc.")}
-            </p>
-
-            {/* Q4 */}
-            <p className="text-lg">
-              {renderText("Geography: includes learning to use a")}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" and compass")}
-            </p>
-
-            {/* Q5 */}
             <p className="text-lg">
               {renderText(
-                "Leisure and tourism: mostly concentrates on the park's",
+                "Industrial development and rising populations later led to more sewage from houses being discharged into the river and pollution from",
               )}
               <button
-                onClick={() => toggleButton(5)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                5
+                31
               </button>
               <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" on the river bank.")}
             </p>
 
-            {/* Q6 */}
             <p className="text-lg">
-              {renderText("Music: Children make")}
+              {renderText(
+                "In 1957, the River Thames in London was declared biologically",
+              )}
               <button
-                onClick={() => toggleButton(6)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                6
+                32
               </button>
               <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            <p className="text-lg">
+              {renderText("Seals and even a")}
+              <button
+                onClick={() => toggleButton(33)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[33]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                33
+              </button>
+              <input
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" have been seen in the River Thames.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "Riverside warehouses are converted to restaurants and",
+              )}
+              <button
+                onClick={() => toggleButton(34)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[34]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                34
+              </button>
+              <input
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Urban development plans")}
+            </h3>
+
+            <p className="text-lg">
+              {renderText(
+                "In Los Angeles, there are plans to build a riverside",
+              )}
+              <button
+                onClick={() => toggleButton(35)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[35]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                35
+              </button>
+              <input
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            <p className="text-lg">
+              {renderText("Display")}
+              <button
+                onClick={() => toggleButton(36)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[36]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                36
+              </button>
+              <input
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" projects.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("In Paris,")}
+              <button
+                onClick={() => toggleButton(37)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               {renderText(
-                " with natural materials, and experiment with rhythm and speed.",
+                " are created on the sides of the river every summer.",
               )}
             </p>
 
-            {/* Q7 */}
+            <h3 className="font-semibold mt-4">
+              {renderText("Transport possibilities")}
+            </h3>
+
             <p className="text-lg">
-              {renderText("They give children a feeling of")}
+              {renderText("Over 2 billion passengers already travel by")}
               <button
-                onClick={() => toggleButton(7)}
+                onClick={() => toggleButton(38)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
+                  activeButtons[38]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                7
+                38
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" in cities round the world.")}
             </p>
 
-            {/* Q8 */}
             <p className="text-lg">
-              {renderText("Children learn new")}
+              {renderText(
+                "Instead of road transport, goods could be transported by large freight barges and electric",
+              )}
               <button
-                onClick={() => toggleButton(8)}
+                onClick={() => toggleButton(39)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
+                  activeButtons[39]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                8
+                39
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-            </p>
-
-            {/* Q9 */}
-            <p className="text-lg">
-              {renderText("Cost per child: £")}
+              {renderText(" or, in future, by")}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(40)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[40]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                40
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-            </p>
-
-            {/* Q10 */}
-            <p className="text-lg">
-              {renderText("Adults, such as")}
-              <button
-                onClick={() => toggleButton(10)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                10
-              </button>
-              <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(", free")}
+              .
             </p>
           </div>
 
-          {/* ---------- Submit / Result ---------- */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -799,11 +655,11 @@ const Test1Listening2024 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -834,14 +690,15 @@ const Test1Listening2024 = () => {
                                 </span>
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className=" italic">
+                                No answer provided
+                              </span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
@@ -863,9 +720,9 @@ const Test1Listening2024 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2024></Listening1Pagination2024>
+      <Listening1Pagination2025></Listening1Pagination2025>
     </div>
   );
 };
 
-export default Test1Listening2024;
+export default Listening1Part42025;

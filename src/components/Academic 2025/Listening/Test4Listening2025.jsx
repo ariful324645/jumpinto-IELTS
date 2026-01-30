@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2024 from "../Pagination 2024/Listening1Pagination2024";
+import Listening4Pagination2025 from "../Pagination 2025/Listening4Pagination2025";
 
-const Test1Listening2024 = () => {
+const Test4Listening2025 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,229 +24,299 @@ const Test1Listening2024 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a teaching assistant calling a country park about a school visit.",
+        "Part 1. You will hear a man asking a friend for advice on things to do in the city with a family of visitors.",
         "First, you have some time to look at questions 1 to 6.",
         "Now listen carefully and answer questions 1 to 6.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "MAN",
       text: [
-        "Good morning, Hinchingbrooke Country Park, Sally speaking.",
-        "I'm one of the rangers.",
+        "Sandra, I seem to remember you had some family visitors staying with you recently.",
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "SANDRA",
       text: [
-        "Oh, hello, uh, my name is John Chapman, and I'm a teaching assistant at a local primary school.",
-        "I've been asked to arrange a visit to the park for two of our classes.",
+        "Yeah, that's right.",
+        "My brother and his family were here a couple of months ago.",
       ],
     },
     {
-      speaker: "SALLY",
-      text: ["OK, what would you like to know?"],
-    },
-    {
-      speaker: "JOHN",
+      speaker: "MAN",
       text: [
-        "Well, I'm new to this area.",
-        "So perhaps you could tell me something about the park first, please.",
+        "OK, good.",
+        "Well, I wanted to ask your advice.",
+        "I've got my cousin and her family visiting next month,",
+        "and as I don't have kids, I've no idea where to take them.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SANDRA",
       text: [
-        "Of course. Altogether the park covers 170 acres. That's 69 hectares.",
-        "There are three main types of habitat, wetland, grassland, and woodland.",
-        "The woods are well established and varied.",
-        "With an oak plantation and other areas of mixed species.",
+        "Right, what about accommodation?",
+        "Are they going to stay with you in your flat?",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["Right."],
+      speaker: "MAN",
+      text: [
+        "No, thankfully, there wouldn't be room.",
+        "My cousin wants me to recommend a hotel.",
+        "Do you know anywhere?",
+      ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SANDRA",
       text: [
-        "The wetland is quite varied too.",
-        "The original farmland was dug up around 40 years ago to extract gravel.",
-        "Once this work was completed, the gravel pits filled with water, forming the two large lakes.",
+        "Yes, I do actually.",
         {
-          text: "There are also several smaller ones. Ponds and a stream that flows through the park.",
+          text: "I always recommend people stay at the Kings Hotel.",
+          number: 1,
+        },
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["Where's that near?"],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "It's about 5 minutes' walk from Murray station, so nice and central.",
+        "It's actually on George Street.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        "Oh, yes, I know.",
+        "I think they're on quite a tight budget,",
+        "so how much roughly is it to stay there?",
+      ],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        {
+          text: "If you book a family room, it's about £125 per night.",
           number: 2,
         },
+        "My brother paid for two double rooms in the end,",
+        "and I think that was around £95 for each room.",
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "MAN",
+      text: ["Oh, that's not so bad."],
+    },
+    {
+      speaker: "SANDRA",
+      text: ["So how old are your cousin's kids?"],
+    },
+    {
+      speaker: "MAN",
       text: [
-        "OK, so I suppose with these different habitats, there's quite a variety of wildlife.",
+        "12 and 9.",
+        "So I want to organize some trips while they're here.",
+        "I was thinking of doing a bus tour of the city center,",
+        "as none of them have been here before.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SANDRA",
       text: [
-        "There certainly is. A lot of different species of birds and insects, and also animals like deer and rabbits.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "And I understand you organize educational visits for school parties.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right. We can organize a wide range of activities, and adapt them to suit all ages.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Can you give me some examples of the activities?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Well, one focus is on science, where we help children to discover and study plants, trees and insects.",
+        "Those bus tours are quite expensive.",
         {
-          text: "They also collect and analyze data about the things they see.",
+          text: "I think it's better to do a walking tour.",
           number: 3,
         },
+        "It gives you a much better feel for the city.",
+        "There's one that starts from Carlton Square.",
+        "It takes a couple of hours and doesn't cost that much.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["Uh huh."],
+      speaker: "MAN",
+      text: ["Sounds good.", "I'll look that up, thanks."],
     },
     {
-      speaker: "SALLY",
+      speaker: "SANDRA",
       text: [
-        "Another focus is on geography.",
+        "If the weather's nice, one thing you could do is visit the old fort.",
         {
-          text: "The park is a great environment to learn and practice reading a map.",
+          text: "You could get there by boat.",
           number: 4,
         },
-        "And using a compass to navigate around the park.",
+        "The whole trip takes half a day.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["Do you do anything connected with history?"],
-    },
-    {
-      speaker: "SALLY",
+      speaker: "MAN",
       text: [
-        "Yes, we do. For instance, the children can explore how the use of the land has changed over time. Then there's leisure and tourism.",
+        "That's a really good idea.",
+        "I'd like to do that myself.",
+        "And if the weather's bad, I was thinking they could go to the science museum.",
+        "But maybe they could do that when I'm at work.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["That focuses on your visitors, I would imagine."],
+      speaker: "SANDRA",
+      text: ["Yeah, don't forget it's closed on Mondays."],
     },
     {
-      speaker: "SALLY",
+      speaker: "MAN",
       text: [
-        "Yes, mostly.",
+        "They're here from Saturday for 4 nights,",
         {
-          text: "The children find out about them, their requirements, the problems they may cause, and how we manage these.",
+          text: "so Tuesday would be best I think.",
           number: 5,
         },
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["And another subject we cover is music."],
+      speaker: "SANDRA",
+      text: [
+        "And it won't be so crowded then.",
+        "Saturdays are terrible.",
+        "I took my kids to the exhibition on old computers there,",
+        "and it was far too crowded.",
+        "I wanted to go back, but it's finished now.",
+      ],
     },
     {
-      speaker: "SALLY",
+      speaker: "MAN",
+      text: ["That's a shame.", "My cousin's kids would have enjoyed that."],
+    },
+    {
+      speaker: "SANDRA",
       text: [
-        "Yes.",
+        "There's another one starting soon on space,",
         {
-          text: "Here the children experiment with natural materials to create sounds and explore rhythm and tempo.",
+          text: "which looks really good too.",
           number: 6,
         },
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["That must be fun."],
-    },
-    {
-      speaker: "SALLY",
-      text: ["Most children really enjoy it."],
+      speaker: "MAN",
+      text: ["OK, well I'll mention that to my cousin."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "Before you hear the rest of the conversation,",
+        "you have some time to look at questions 7 to 10.",
         "Now listen and answer questions 7 to 10.",
       ],
     },
     {
-      speaker: "SALLY",
-      text: [
-        "And of course, all the activities are educational too.",
-        "Learning outside the classroom encourages children to be creative and to explore and discover for themselves.",
-      ],
+      speaker: "SANDRA",
+      text: ["Have you thought about where to take them to eat?"],
     },
     {
-      speaker: "JOHN",
+      speaker: "MAN",
       text: [
-        "I would imagine they get a sense of freedom",
-        { text: "that might not be a normal part of their lives.", number: 7 },
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right.",
-        "And very often the children discover that they can do things they didn't know they could do.",
-        { text: "And they develop new skills.", number: 8 },
-        "This gives them greater self-confidence.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "It sounds great.",
-        "So what about the practical side of it?",
-        "How much does it cost for a full day visit?",
-        "We would expect to bring between 30 and 40 children",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "If there are over 30,",
+        "Well, I really like all the food stalls at Clacton Market.",
         {
-          text: "it costs £4.95 for each child who attends on the day.",
+          text: "My cousin's vegetarian, I know it's one of the best places for that kind of food.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "Definitely.",
+        "And there'll be loads of choice for the kids too.",
+        {
+          text: "You need to get there quite early though, at the weekend most of the stalls stop serving lunch at 2:30.",
+          number: 8,
+        },
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: [
+        "Good point, it's all going to need careful planning.",
+        "My cousin said she'd love to take the kids to a show at the theater,",
+        "but tickets are so expensive.",
+      ],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "I know, but you can get some good deals if you book online with bargaintickets.com for the following day.",
+        {
+          text: "On some seats, there's a 75% discount.",
           number: 9,
         },
-        "We invoice you afterwards, so you don't pay for children who can't come because of sickness, for example.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["Really?", "Hmm, I must try and get some."],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "Yeah, there are lots of things you can do for free as well.",
+        "No need to spend a fortune.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["Like what?"],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "They're coming next month, right?",
+        "Well check and see if it's the same weekend as the Roots Music Festival in Blakewell Gardens.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["R double O T S."],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "Yeah, check it out online.",
+        "It's always a family friendly event,",
+        "and there's no entry charge.",
+      ],
+    },
+    {
+      speaker: "MAN",
+      text: ["That sounds perfect."],
+    },
+    {
+      speaker: "SANDRA",
+      text: [
+        "And if you're in Blakewell Gardens - climb Telegraph Hill -",
         {
-          text: "There's no charge for leaders and other adults, as many as you want to bring.",
+          text: "you'll be able to look right down on the port.",
           number: 10,
         },
+        "Everyone's always really impressed because it's so huge.",
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "MAN",
       text: [
-        "That sounds very fair.",
-        "Well, thanks for all the information.",
-        "I'll need to discuss it with my colleagues, and I hope to get back to you soon to make a booking.",
+        "Oh, yeah.",
+        "I've been meaning to do that for ages.",
+        "I've heard the view's amazing.",
       ],
     },
     {
-      speaker: "SALLY",
-      text: ["We'll look forward to hearing from you. Goodbye."],
+      speaker: "SANDRA",
+      text: ["Yeah, it's really worth the effort."],
     },
     {
-      speaker: "JOHN",
-      text: ["Goodbye, and thank you."],
+      speaker: "MAN",
+      text: ["Well, that's given me loads of ideas.", "Thanks so much."],
     },
     {
       speaker: "ANNOUNCER",
@@ -368,7 +438,7 @@ const Test1Listening2024 = () => {
       }
 
       // Erica: female
-      if (speaker === "SADIE") {
+      if (speaker === "SANDRA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -418,16 +488,16 @@ const Test1Listening2024 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "50", // Area: 50 hectares (example)
-    2: "lake", // Wetland: lakes, ponds and a lake
-    3: "plants", // Science: Children look at plants about plants, etc.
-    4: "map", // Geography: includes learning to use a map and compass
-    5: "wildlife", // Leisure and tourism: mostly concentrates on the park's wildlife
-    6: "instruments", // Music: Children make instruments with natural materials
-    7: "freedom", // They give children a feeling of freedom
-    8: "skills", // Children learn new skills and gain self-confidence
-    9: "5", // Cost per child: £5
-    10: "teachers", // Adults, such as teachers, free
+    1: "george", // Hotel on George Street
+    2: "70", // Cost of family room per night (approx.)
+    3: "walking", // a walking tour of the city centre
+    4: "bus", // a trip by bus to the old fort
+    5: "france", // Best day to visit Science Museum (example: exhibition about France)
+    6: "dinosaurs", // See the exhibition about dinosaurs
+    7: "fresh", // Clacton Market: good for fresh food
+    8: "1", // Need to have lunch before 1 p.m.
+    9: "20", // Save up to 20% on theatre ticket prices
+    10: "town", // Climb Telegraph Hill to see a view of the town
   };
 
   // --- Handle input change and auto-check ---
@@ -511,7 +581,7 @@ const Test1Listening2024 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("School Visit to Hinchingbrooke Country Park")}
+                {renderText("Advice on City Activities for Family Visitors")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -558,16 +628,18 @@ const Test1Listening2024 = () => {
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6  rounded-lg space-y-5 bg-white">
+          <div className="border max-w-2xl mx-auto p-6 rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Hinchingbrooke Country Park")}
+              {renderText("Advice on family visit")}
             </h1>
 
-            <p className="text-lg">{renderText("The park")}</p>
+            <h3 className="font-semibold mt-2">
+              {renderText("Accommodation")}
+            </h3>
 
             {/* Q1 */}
             <p className="text-lg">
-              {renderText("Area:")}
+              {renderText("Hotel on George Street:")}
               <button
                 onClick={() => toggleButton(1)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -583,12 +655,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(1, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" hectares")}
+              {renderText(" cost of family room per night: £")}
             </p>
 
             {/* Q2 */}
             <p className="text-lg">
-              {renderText("Wetland: lakes, ponds and a")}
+              {renderText("(approx.)")}
               <button
                 onClick={() => toggleButton(2)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -606,9 +678,13 @@ const Test1Listening2024 = () => {
               />
             </p>
 
+            <h3 className="font-semibold mt-4">
+              {renderText("Recommended trips")}
+            </h3>
+
             {/* Q3 */}
             <p className="text-lg">
-              {renderText("Science: Children look at")}
+              {renderText("a")}
               <button
                 onClick={() => toggleButton(3)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -624,12 +700,14 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(3, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" about plants, etc.")}
+              {renderText(
+                " tour of the city centre (starts in Carlton Square)",
+              )}
             </p>
 
             {/* Q4 */}
             <p className="text-lg">
-              {renderText("Geography: includes learning to use a")}
+              {renderText("a trip by")}
               <button
                 onClick={() => toggleButton(4)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -645,14 +723,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(4, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" and compass")}
+              {renderText(" to the old fort")}
             </p>
 
             {/* Q5 */}
             <p className="text-lg">
-              {renderText(
-                "Leisure and tourism: mostly concentrates on the park's",
-              )}
+              {renderText("Science Museum: best day to visit:")}
               <button
                 onClick={() => toggleButton(5)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -672,7 +748,7 @@ const Test1Listening2024 = () => {
 
             {/* Q6 */}
             <p className="text-lg">
-              {renderText("Music: Children make")}
+              {renderText("see the exhibition about")}
               <button
                 onClick={() => toggleButton(6)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -688,14 +764,14 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(6, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(
-                " with natural materials, and experiment with rhythm and speed.",
-              )}
+              {renderText(", which opens soon")}
             </p>
+
+            <h3 className="font-semibold mt-4">{renderText("Food")}</h3>
 
             {/* Q7 */}
             <p className="text-lg">
-              {renderText("They give children a feeling of")}
+              {renderText("Clacton Market: good for")}
               <button
                 onClick={() => toggleButton(7)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -711,11 +787,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(7, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" food")}
             </p>
 
             {/* Q8 */}
             <p className="text-lg">
-              {renderText("Children learn new")}
+              {renderText("need to have lunch before")}
               <button
                 onClick={() => toggleButton(8)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -731,11 +808,16 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(8, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" p.m.")}
             </p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Theatre tickets")}
+            </h3>
 
             {/* Q9 */}
             <p className="text-lg">
-              {renderText("Cost per child: £")}
+              {renderText("save up to")}
               <button
                 onClick={() => toggleButton(9)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -751,11 +833,18 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(9, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText("% on ticket prices at bargaintickets.com")}
             </p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Free activities")}
+            </h3>
 
             {/* Q10 */}
             <p className="text-lg">
-              {renderText("Adults, such as")}
+              {renderText(
+                "Blakewell Gardens / Roots Music Festival: climb Telegraph Hill to see a view of the",
+              )}
               <button
                 onClick={() => toggleButton(10)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -771,7 +860,7 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(10, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(", free")}
+              .
             </p>
           </div>
 
@@ -863,9 +952,9 @@ const Test1Listening2024 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2024></Listening1Pagination2024>
+      <Listening4Pagination2025></Listening4Pagination2025>
     </div>
   );
 };
 
-export default Test1Listening2024;
+export default Test4Listening2025;

@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2024 from "../Pagination 2024/Listening1Pagination2024";
+import Listening4Pagination2025 from "../Pagination 2025/Listening4Pagination2025";
 
-const Test1Listening2024 = () => {
+const Listening4Part42025 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,235 +24,86 @@ const Test1Listening2024 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a teaching assistant calling a country park about a school visit.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Part 4. You will hear part of an environmental science lecture about the impact of birds of prey on a farming community in Africa.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SPEAKER",
       text: [
-        "Good morning, Hinchingbrooke Country Park, Sally speaking.",
-        "I'm one of the rangers.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Oh, hello, uh, my name is John Chapman, and I'm a teaching assistant at a local primary school.",
-        "I've been asked to arrange a visit to the park for two of our classes.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["OK, what would you like to know?"],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, I'm new to this area.",
-        "So perhaps you could tell me something about the park first, please.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Of course. Altogether the park covers 170 acres. That's 69 hectares.",
-        "There are three main types of habitat, wetland, grassland, and woodland.",
-        "The woods are well established and varied.",
-        "With an oak plantation and other areas of mixed species.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Right."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "The wetland is quite varied too.",
-        "The original farmland was dug up around 40 years ago to extract gravel.",
-        "Once this work was completed, the gravel pits filled with water, forming the two large lakes.",
+        "We've been looking at different types of conflicts that may arise between wildlife and humans at the boundaries of protected areas, such as national parks and animal sanctuaries.",
+        "I'd like to illustrate this by telling you about some research that I've been involved in recently, in the Central African country of Zambia, in the area around the Chembe Bird Sanctuary.",
+        "Which contains over 300 of the listed birds of Zambia.",
+        "These include a number of birds of prey such as eagles, hawks and owls that live by hunting and killing other birds and animals.",
+        "Now, most of the people living in the local communities near to the bird sanctuary are small scale farmers, and these birds of prey provide important social and ecological benefits to them.",
+        "For example, a lot of damage can be caused to farmers' crops by rodents such as rats, which would consume the crops as they grow in the fields, as well as after harvesting, if they weren't hunted and killed by the birds.",
         {
-          text: "There are also several smaller ones. Ponds and a stream that flows through the park.",
-          number: 2,
+          text: "And the predatory habits of these birds also protect farmers in other ways.",
+          number: 31,
+        },
+        "For example, a major danger to rural workers is snakes, whose bite may be dangerous or even fatal.",
+        {
+          text: "And birds of prey have a major role in keeping their populations under control.",
+          number: 32,
+        },
+        "Local people have always been aware of these benefits, and for years even before the sanctuary was opened in 1973, the birds played a key role in the culture of the region.",
+        "However, more recently the sanctuary and its birds have also become increasingly important to the community in economic terms.",
+        "At present, after a relatively slow start, tourism has become an important source of revenue for them.",
+        {
+          text: "However, although these birds of prey are protected by the government, their numbers are falling.",
+          number: 33,
+        },
+        "Some of these deaths are accidental.",
+        "Fatalities occur when birds alight on roads to catch and eat their prey, and are hit by fast-moving traffic.",
+        {
+          text: "Drivers in Zambia have to take special care at night, as birds may regard the quieter roads as safe places to sleep.",
+          number: 34,
+        },
+        "Accidental deaths may also occur if these birds fly close to high voltage power lines, as they may be electrocuted.",
+        {
+          text: "This is a particular danger in the heavy rain which can occur in the region in the months from December to April.",
+          number: 35,
+        },
+        "Local farmers also pose a threat to these birds.",
+        "As well as growing crops, small scale farmers in the area also rear chickens.",
+        "These provide food for the farmers' families, as well as being an important source of income.",
+        "But they're also an easy target for birds of prey.",
+        {
+          text: "And so farmers may shoot or poison the birds, which is illegal and can have negative effects on the ecosystem.",
+          number: 36,
+        },
+        "So how else can farmers protect their chickens from birds of prey?",
+        "Some people believe that it's best to keep the area where chickens are kept free from vegetation.",
+        "But this is counterproductive, as the chickens then have no cover to hide in and are easier for the birds to see.",
+        {
+          text: "Another possibility would be to keep the chickens inside a building.",
+          number: 37,
+        },
+        "But this would cost far too much to be a practical solution.",
+        "Nearly all the farmers reported that they spent a lot of time and effort trying to frighten off the birds of prey without actually harming them.",
+        {
+          text: "Most of the farmers had at least one dog, which helped scare away the predators.",
+          number: 38,
+        },
+        "Some farmers also reported that during the breeding season, when the chickens were particularly vulnerable,",
+        {
+          text: "They encouraged their children to watch over the chickens and make loud noises using metal pans.",
+          number: 39,
+        },
+        "None of these methods was completely effective.",
+        "As a result, villagers said they had to use a combination of methods for any real effect.",
+        {
+          text: "Even so, birds of prey remain a major threat to the survival of chickens and cause considerable economic loss to farmers.",
+          number: 40,
         },
       ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "OK, so I suppose with these different habitats, there's quite a variety of wildlife.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "There certainly is. A lot of different species of birds and insects, and also animals like deer and rabbits.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "And I understand you organize educational visits for school parties.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right. We can organize a wide range of activities, and adapt them to suit all ages.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Can you give me some examples of the activities?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Well, one focus is on science, where we help children to discover and study plants, trees and insects.",
-        {
-          text: "They also collect and analyze data about the things they see.",
-          number: 3,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Another focus is on geography.",
-        {
-          text: "The park is a great environment to learn and practice reading a map.",
-          number: 4,
-        },
-        "And using a compass to navigate around the park.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Do you do anything connected with history?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, we do. For instance, the children can explore how the use of the land has changed over time. Then there's leisure and tourism.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That focuses on your visitors, I would imagine."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, mostly.",
-        {
-          text: "The children find out about them, their requirements, the problems they may cause, and how we manage these.",
-          number: 5,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["And another subject we cover is music."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes.",
-        {
-          text: "Here the children experiment with natural materials to create sounds and explore rhythm and tempo.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That must be fun."],
-    },
-    {
-      speaker: "SALLY",
-      text: ["Most children really enjoy it."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "And of course, all the activities are educational too.",
-        "Learning outside the classroom encourages children to be creative and to explore and discover for themselves.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "I would imagine they get a sense of freedom",
-        { text: "that might not be a normal part of their lives.", number: 7 },
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right.",
-        "And very often the children discover that they can do things they didn't know they could do.",
-        { text: "And they develop new skills.", number: 8 },
-        "This gives them greater self-confidence.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "It sounds great.",
-        "So what about the practical side of it?",
-        "How much does it cost for a full day visit?",
-        "We would expect to bring between 30 and 40 children",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "If there are over 30,",
-        {
-          text: "it costs £4.95 for each child who attends on the day.",
-          number: 9,
-        },
-        "We invoice you afterwards, so you don't pay for children who can't come because of sickness, for example.",
-        {
-          text: "There's no charge for leaders and other adults, as many as you want to bring.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "That sounds very fair.",
-        "Well, thanks for all the information.",
-        "I'll need to discuss it with my colleagues, and I hope to get back to you soon to make a booking.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["We'll look forward to hearing from you. Goodbye."],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Goodbye, and thank you."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -368,7 +219,7 @@ const Test1Listening2024 = () => {
       }
 
       // Erica: female
-      if (speaker === "SADIE") {
+      if (speaker === "SPEAKER") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||
@@ -415,26 +266,25 @@ const Test1Listening2024 = () => {
     speakNextChunk();
   };
 
-  //  Marks show
-
+  // Marks show
   const correctAnswers = {
-    1: "50", // Area: 50 hectares (example)
-    2: "lake", // Wetland: lakes, ponds and a lake
-    3: "plants", // Science: Children look at plants about plants, etc.
-    4: "map", // Geography: includes learning to use a map and compass
-    5: "wildlife", // Leisure and tourism: mostly concentrates on the park's wildlife
-    6: "instruments", // Music: Children make instruments with natural materials
-    7: "freedom", // They give children a feeling of freedom
-    8: "skills", // Children learn new skills and gain self-confidence
-    9: "5", // Cost per child: £5
-    10: "teachers", // Adults, such as teachers, free
+    31: "rats", // They destroy rats and other rodents
+    32: "snakes", // Prevent farmers from being bitten by snakes
+    33: "tourism", // Support the economy by encouraging tourism
+    34: "traffic", // Killed by traffic when hunting or sleeping
+    35: "rain", // Electrocution more likely when there is heavy rain
+    36: "poison", // Farmers may illegally poison them
+    37: "building", // Providing a building for chickens (expensive)
+    38: "dog", // Keeping a dog to frighten birds of prey
+    39: "noise", // Making a noise, e.g. with metal objects
+    40: "combination", // A combination of methods is most effective
   };
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       const updated = { ...prev, [id]: value };
-      calculateScore(updated);
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
@@ -442,16 +292,30 @@ const Test1Listening2024 = () => {
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
+      const user = answers[key];
+
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((v) => user.includes(v))
+        ) {
+          newScore += 2; // 🔥 21–22 & 23–24
+        }
+      } else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
+
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening1Part22022", newScore);
   };
 
   const toggleButton = (id) => {
@@ -463,12 +327,12 @@ const Test1Listening2024 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/listening1Part22022");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening1Part22022");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -480,7 +344,7 @@ const Test1Listening2024 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -511,7 +375,9 @@ const Test1Listening2024 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("School Visit to Hinchingbrooke Country Park")}
+                {renderText(
+                  "The Impact of Birds of Prey on a Zambian Farming Community",
+                )}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -544,238 +410,251 @@ const Test1Listening2024 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6  rounded-lg space-y-5 bg-white">
+          <div className="border p-6 space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Hinchingbrooke Country Park")}
+              {renderText(
+                "Research in the area around the Chembe Bird Sanctuary",
+              )}
             </h1>
 
-            <p className="text-lg">{renderText("The park")}</p>
-
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Area:")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" hectares")}
-            </p>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("Wetland: lakes, ponds and a")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Science: Children look at")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" about plants, etc.")}
-            </p>
-
-            {/* Q4 */}
-            <p className="text-lg">
-              {renderText("Geography: includes learning to use a")}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" and compass")}
-            </p>
-
-            {/* Q5 */}
-            <p className="text-lg">
+            <h3 className="font-semibold mt-4">
               {renderText(
-                "Leisure and tourism: mostly concentrates on the park's",
+                "The importance of birds of prey to the local communities",
               )}
+            </h3>
+
+            <p className="text-lg">
+              {renderText("They destroy")}
               <button
-                onClick={() => toggleButton(5)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                5
+                31
               </button>
               <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" and other rodents.")}
             </p>
 
-            {/* Q6 */}
             <p className="text-lg">
-              {renderText("Music: Children make")}
+              {renderText("They help to prevent farmers from being bitten by")}
               <button
-                onClick={() => toggleButton(6)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                6
+                32
               </button>
               <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              .
+            </p>
+
+            <p className="text-lg">
               {renderText(
-                " with natural materials, and experiment with rhythm and speed.",
+                "They have been an important part of the local culture for many years.",
               )}
             </p>
 
-            {/* Q7 */}
             <p className="text-lg">
-              {renderText("They give children a feeling of")}
+              {renderText("They now support the economy by encouraging")}
               <button
-                onClick={() => toggleButton(7)}
+                onClick={() => toggleButton(33)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
+                  activeButtons[33]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                7
+                33
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" in the area.")}
             </p>
 
-            {/* Q8 */}
+            <h3 className="font-semibold mt-4">
+              {renderText("Falling numbers of birds of prey")}
+            </h3>
+
             <p className="text-lg">
-              {renderText("Children learn new")}
+              {renderText("The birds may be accidentally killed by")}
               <button
-                onClick={() => toggleButton(8)}
+                onClick={() => toggleButton(34)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
+                  activeButtons[34]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                8
+                34
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" when they are hunting or sleeping.")}
             </p>
 
-            {/* Q9 */}
             <p className="text-lg">
-              {renderText("Cost per child: £")}
+              {renderText(
+                "by electrocution from contact with power lines, especially at times when there is a lot of",
+              )}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(35)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[35]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                35
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              .
             </p>
 
-            {/* Q10 */}
             <p className="text-lg">
-              {renderText("Adults, such as")}
+              {renderText("Local farmers may illegally shoot them or")}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(36)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[36]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                36
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(", free")}
+              {renderText(" them.")}
+            </p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Ways of protecting chickens from birds of prey")}
+            </h3>
+
+            <p className="text-lg">
+              {renderText("clearing away vegetation from the area (unhelpful)")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("providing a")}
+              <button
+                onClick={() => toggleButton(37)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[37]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                37
+              </button>
+              <input
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" for chickens (expensive)")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("frightening birds of prey by keeping a")}
+              <button
+                onClick={() => toggleButton(38)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            <p className="text-lg">
+              {renderText("making a")}
+              <button
+                onClick={() => toggleButton(39)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[39]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                39
+              </button>
+              <input
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" – e.g. with metal objects")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("A")}
+              <button
+                onClick={() => toggleButton(40)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" of methods is usually most effective.")}
             </p>
           </div>
-
-          {/* ---------- Submit / Result ---------- */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -799,11 +678,11 @@ const Test1Listening2024 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -834,14 +713,15 @@ const Test1Listening2024 = () => {
                                 </span>
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className=" italic">
+                                No answer provided
+                              </span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
@@ -863,9 +743,9 @@ const Test1Listening2024 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2024></Listening1Pagination2024>
+      <Listening4Pagination2025></Listening4Pagination2025>
     </div>
   );
 };
 
-export default Test1Listening2024;
+export default Listening4Part42025;

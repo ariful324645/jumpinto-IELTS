@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2024 from "../Pagination 2024/Listening1Pagination2024";
+import Listening3Pagination2025 from "../Pagination 2025/Listening3Pagination2025";
 
-const Test1Listening2024 = () => {
+const Listening3Part42025 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,235 +24,99 @@ const Test1Listening2024 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a teaching assistant calling a country park about a school visit.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Part 4. You will hear a design and technology lecturer talking about inclusive design.",
+        "First, you have some time to look at questions 31 to 40.",
+        "Now listen carefully and answer questions 31 to 40.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "SPEAKER",
       text: [
-        "Good morning, Hinchingbrooke Country Park, Sally speaking.",
-        "I'm one of the rangers.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Oh, hello, uh, my name is John Chapman, and I'm a teaching assistant at a local primary school.",
-        "I've been asked to arrange a visit to the park for two of our classes.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["OK, what would you like to know?"],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "Well, I'm new to this area.",
-        "So perhaps you could tell me something about the park first, please.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Of course. Altogether the park covers 170 acres. That's 69 hectares.",
-        "There are three main types of habitat, wetland, grassland, and woodland.",
-        "The woods are well established and varied.",
-        "With an oak plantation and other areas of mixed species.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Right."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "The wetland is quite varied too.",
-        "The original farmland was dug up around 40 years ago to extract gravel.",
-        "Once this work was completed, the gravel pits filled with water, forming the two large lakes.",
+        "It's only relatively recently that designers have become aware of the need to be inclusive when designing products, but what does that mean exactly?",
+        "Well, it simply means designing products that span economic, social and cultural barriers.",
+        "It means making sure products are accessible, ",
         {
-          text: "There are also several smaller ones. Ponds and a stream that flows through the park.",
-          number: 2,
+          text: "so that as many different types of people as possible can use them without any type of adaptation having to be made to the original design. Inclusive design explained.",
+          number: 31,
         },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "OK, so I suppose with these different habitats, there's quite a variety of wildlife.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "There certainly is. A lot of different species of birds and insects, and also animals like deer and rabbits.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "And I understand you organize educational visits for school parties.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right. We can organize a wide range of activities, and adapt them to suit all ages.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Can you give me some examples of the activities?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Well, one focus is on science, where we help children to discover and study plants, trees and insects.",
+        "Inclusive design is often linked with universal design, although they are not quite the same thing.",
+        "Universal design aims to make products that work for everyone, and ",
         {
-          text: "They also collect and analyze data about the things they see.",
-          number: 3,
+          text: " that includes considering the needs of people who have cognitive difficulties, which can present quite a challenge. Challenges of inclusive design.",
+          number: 32,
         },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Another focus is on geography.",
+        "Today, examples of successful inclusive design can be seen all around us.",
+
         {
-          text: "The park is a great environment to learn and practice reading a map.",
-          number: 4,
+          text: "In workplaces, it is common to see desks which can be adjusted to suit people of different heights, or for wheelchair users. Workplace examples of inclusive design.",
+          number: 33,
         },
-        "And using a compass to navigate around the park.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Do you do anything connected with history?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, we do. For instance, the children can explore how the use of the land has changed over time. Then there's leisure and tourism.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That focuses on your visitors, I would imagine."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes, mostly.",
+        "This still isn't always the case, however, and is one reason why office workers often suffer from back or neck problems.",
+        "You'll find another example in the public toilets of countless hotels, airports and offices.",
+        "",
         {
-          text: "The children find out about them, their requirements, the problems they may cause, and how we manage these.",
-          number: 5,
+          text: " Taps that you activate by sensor require no pressing or twisting movements. .",
+          number: 34,
         },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["And another subject we cover is music."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Yes.",
+        "Accessible facilities in public places",
+        "These are not only more hygienic, they're also easier for people with dexterity or mobility issues.",
+        "The tech industry has been criticized in the past for focusing too much on young consumers, but this is changing.",
+        "Many products are now designed with the elderly in mind.",
+        "For example, it's well known that vision declines with age, and that we also become worse at distinguishing between similar colors,",
         {
-          text: "Here the children experiment with natural materials to create sounds and explore rhythm and tempo.",
-          number: 6,
+          text: " in particular shades of blue, which is why software designers rarely create interfaces with this color. Inclusive design for the elderly.",
+          number: 35,
         },
+        "Motor skills also decline with age, and some people have difficulty doing everyday things, like picking up a cup or opening a door.",
+        "This can also affect their ability to use a mouse or keyboard.",
+        "",
+        {
+          text: "So voice access is now a routine way of making commands.",
+          number: 36,
+        },
+        "Voice access and adaptive design",
+        "It's worth looking at the problems non-inclusive designs cause when not enough consideration is given to a range of users, as it can have a serious impact on people's lives.",
+        "Access is one obvious example, because it has such a huge impact on disabled people's independence.",
+        "Not being able to access public transport because buses or trains are not wheelchair-friendly means many disabled people can't go out, unless someone goes with them.",
+        "Safety is another issue, inexplicably, most cars are still crash tested using a dummy based on an average sized male.",
+        "",
+        {
+          text: "This has safety implications for all women, particularly those who are pregnant, as the seat belts worn by the dummy are not adapted to accommodate them. Safety issues in design.",
+          number: 37,
+        },
+        "Over the past 100 years, workplaces in the UK have on the whole become considerably safer.",
+        "Employers are legally required to provide well maintained personal protective equipment or PPE, anything from goggles to full body suits, to workers who need it free of charge.",
+        "But most PPE is designed to fit men.",
+        "A recent report found that employers often think that when it comes to female workers, all they need to do to comply with this legal requirement is to buy jackets, for example, designed for a small man.",
+
+        {
+          text: "The problem with this is that women can be tall and still have much smaller shoulders than the average man. ",
+          number: 38,
+        },
+        "Problems with PPE design for women.",
+        "Ill-fitting PPE such as hi-vis jackets, vests, and body armor can put women at risk.",
+        "The report found that 95% of women said that their PPE often hampered their work.",
+        "And that this problem was worst in the emergency services, particularly the police.",
+        "Another problem is related to comfort at work.",
+        "A very common scenario in offices in summertime is to see women wrapped in blankets or wearing sweaters while the air conditioning is on high.",
+        "Meanwhile, the men are in shorts and t-shirts.",
+        "This is due to differences in metabolic rates for men and women.",
+        "There is a standard setting for air conditioning to be at a temperature of 21 degrees.",
+        {
+          text: "And that this problem was worst in the emergency services, particularly the police",
+          number: 39,
+        },
+        "Designed to suit men, and in most modern offices, it's not possible to turn the air conditioning up or down.",
+        "This means that many offices which mainly employ women are wasting energy by having the air conditioning set too high.",
+        "As you can see from the examples I've just mentioned, there are serious consequences for designs which don't consider the needs of all users.",
+        { text: "Consequences of non-inclusive design.", number: 40 },
       ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["That must be fun."],
-    },
-    {
-      speaker: "SALLY",
-      text: ["Most children really enjoy it."],
     },
     {
       speaker: "ANNOUNCER",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "And of course, all the activities are educational too.",
-        "Learning outside the classroom encourages children to be creative and to explore and discover for themselves.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "I would imagine they get a sense of freedom",
-        { text: "that might not be a normal part of their lives.", number: 7 },
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right.",
-        "And very often the children discover that they can do things they didn't know they could do.",
-        { text: "And they develop new skills.", number: 8 },
-        "This gives them greater self-confidence.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "It sounds great.",
-        "So what about the practical side of it?",
-        "How much does it cost for a full day visit?",
-        "We would expect to bring between 30 and 40 children",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "If there are over 30,",
-        {
-          text: "it costs £4.95 for each child who attends on the day.",
-          number: 9,
-        },
-        "We invoice you afterwards, so you don't pay for children who can't come because of sickness, for example.",
-        {
-          text: "There's no charge for leaders and other adults, as many as you want to bring.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "That sounds very fair.",
-        "Well, thanks for all the information.",
-        "I'll need to discuss it with my colleagues, and I hope to get back to you soon to make a booking.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["We'll look forward to hearing from you. Goodbye."],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Goodbye, and thank you."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of part 1.",
-        "You now have one minute to check your answers to part 1.",
+        "That is the end of part 4.",
+        "You now have one minute to check your answers to part 4.",
       ],
     },
   ];
@@ -358,26 +222,12 @@ const Test1Listening2024 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
+      if (speaker === "ANNOUNCER")
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "FATHER") {
+      if (speaker === "TC EMPLOYEE")
+        return voices.find((v) => v.name.includes("Zira")) || voices[0];
+      if (speaker === "OFFICER")
         return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "SADIE") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
       return voices[0];
     };
 
@@ -416,25 +266,24 @@ const Test1Listening2024 = () => {
   };
 
   //  Marks show
-
   const correctAnswers = {
-    1: "50", // Area: 50 hectares (example)
-    2: "lake", // Wetland: lakes, ponds and a lake
-    3: "plants", // Science: Children look at plants about plants, etc.
-    4: "map", // Geography: includes learning to use a map and compass
-    5: "wildlife", // Leisure and tourism: mostly concentrates on the park's wildlife
-    6: "instruments", // Music: Children make instruments with natural materials
-    7: "freedom", // They give children a feeling of freedom
-    8: "skills", // Children learn new skills and gain self-confidence
-    9: "5", // Cost per child: £5
-    10: "teachers", // Adults, such as teachers, free
+    31: "accessibility", // Designing products that can be accessed by a diverse range of people
+    32: "cognitive", // Including catering for people with cognitive problems
+    33: "desks", // Desks which are adjustable, avoiding back or neck problems
+    34: "taps", // Taps in public toilets which are easier to use
+    35: "blue", // Designers avoid using blue in interfaces
+    36: "voice", // People can make commands using a mouse, keyboard or their voice
+    37: "pregnant", // Seatbelts especially problematic for pregnant women
+    38: "shoulders", // PPE jackets often unsuitable because of the size of women's shoulders
+    39: "female", // PPE for female officers dealing with emergencies is the worst
+    40: "air-conditioning", // Air-conditioning in offices is often too low for women
   };
 
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
       const updated = { ...prev, [id]: value };
-      calculateScore(updated);
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
@@ -442,16 +291,30 @@ const Test1Listening2024 = () => {
   // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
+      const user = answers[key];
+
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((v) => user.includes(v))
+        ) {
+          newScore += 2; // 🔥 21–22 & 23–24
+        }
+      } else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
+
     setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
+    localStorage.setItem("/listening1Part22022", newScore);
   };
 
   const toggleButton = (id) => {
@@ -463,12 +326,12 @@ const Test1Listening2024 = () => {
     setScore(0);
     setActiveButtons({});
     setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
+    localStorage.removeItem("/listening1Part22022");
   };
 
   // --- Restore answers from localStorage (optional) ---
   useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    const savedScore = localStorage.getItem("/listening1Part22022");
     if (savedScore) {
       setScore(Number(savedScore));
     }
@@ -480,7 +343,7 @@ const Test1Listening2024 = () => {
         {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 4")}</h1>
             <input
               type="checkbox"
               checked={highlight}
@@ -511,7 +374,7 @@ const Test1Listening2024 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("School Visit to Hinchingbrooke Country Park")}
+                {renderText("Food Fashions and Marketing Campaigns")}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -544,238 +407,245 @@ const Test1Listening2024 = () => {
         <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
-            {renderText("Questions 1–10")}
+            {renderText("Questions 31–40")}
           </h2>
 
           <h3 className="text-lg mb-6">
             {renderText("Complete the notes below.")} <br />
             <br />
             {renderText("Write ")}
-            <span className="font-bold">
-              {renderText("ONE WORD AND/OR A NUMBER")}
-            </span>
+            <span className="font-bold">{renderText("ONE WORD ONLY")}</span>
             {renderText(" for each answer.")}
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6  rounded-lg space-y-5 bg-white">
+          <div className="border p-6 space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Hinchingbrooke Country Park")}
+              {renderText("Inclusive design")}
             </h1>
 
-            <p className="text-lg">{renderText("The park")}</p>
+            <h3 className="font-semibold mt-4">{renderText("Definition")}</h3>
 
-            {/* Q1 */}
-            <p className="text-lg">
-              {renderText("Area:")}
-              <button
-                onClick={() => toggleButton(1)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[1]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                1
-              </button>
-              <input
-                value={userAnswers[1] || ""}
-                onChange={(e) => handleInputChange(1, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" hectares")}
-            </p>
-
-            {/* Q2 */}
-            <p className="text-lg">
-              {renderText("Wetland: lakes, ponds and a")}
-              <button
-                onClick={() => toggleButton(2)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[2]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                2
-              </button>
-              <input
-                value={userAnswers[2] || ""}
-                onChange={(e) => handleInputChange(2, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-            </p>
-
-            {/* Q3 */}
-            <p className="text-lg">
-              {renderText("Science: Children look at")}
-              <button
-                onClick={() => toggleButton(3)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[3]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                3
-              </button>
-              <input
-                value={userAnswers[3] || ""}
-                onChange={(e) => handleInputChange(3, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" about plants, etc.")}
-            </p>
-
-            {/* Q4 */}
-            <p className="text-lg">
-              {renderText("Geography: includes learning to use a")}
-              <button
-                onClick={() => toggleButton(4)}
-                className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[4]
-                    ? "bg-yellow-400 border-yellow-500"
-                    : "bg-gray-200 border-gray-400"
-                }`}
-              >
-                4
-              </button>
-              <input
-                value={userAnswers[4] || ""}
-                onChange={(e) => handleInputChange(4, e.target.value)}
-                className="border rounded-md px-2 py-1 w-32"
-              />
-              {renderText(" and compass")}
-            </p>
-
-            {/* Q5 */}
             <p className="text-lg">
               {renderText(
-                "Leisure and tourism: mostly concentrates on the park's",
+                "Designing products that can be accessed by a diverse range of people without the need for any",
               )}
               <button
-                onClick={() => toggleButton(5)}
+                onClick={() => toggleButton(31)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[5]
+                  activeButtons[31]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                5
+                31
               </button>
               <input
-                value={userAnswers[5] || ""}
-                onChange={(e) => handleInputChange(5, e.target.value)}
+                value={userAnswers[31] || ""}
+                onChange={(e) => handleInputChange(31, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              .
             </p>
 
-            {/* Q6 */}
             <p className="text-lg">
-              {renderText("Music: Children make")}
+              {renderText(
+                "Not the same as universal design: that is design for everyone, including catering for people with",
+              )}
               <button
-                onClick={() => toggleButton(6)}
+                onClick={() => toggleButton(32)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[6]
+                  activeButtons[32]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                6
+                32
               </button>
               <input
-                value={userAnswers[6] || ""}
-                onChange={(e) => handleInputChange(6, e.target.value)}
+                value={userAnswers[32] || ""}
+                onChange={(e) => handleInputChange(32, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" problems.")}
+            </p>
+
+            <h3 className="font-semibold mt-4">
+              {renderText("Examples of inclusive design")}
+            </h3>
+
+            <p className="text-lg">
+              {renderText("Desks")}
+              <button
+                onClick={() => toggleButton(33)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[33]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                33
+              </button>
+              <input
+                value={userAnswers[33] || ""}
+                onChange={(e) => handleInputChange(33, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
               {renderText(
-                " with natural materials, and experiment with rhythm and speed.",
+                " which are adjustable, avoiding back or neck problems.",
               )}
             </p>
 
-            {/* Q7 */}
             <p className="text-lg">
-              {renderText("They give children a feeling of")}
+              {renderText("Taps")}
               <button
-                onClick={() => toggleButton(7)}
+                onClick={() => toggleButton(34)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[7]
+                  activeButtons[34]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                7
+                34
               </button>
               <input
-                value={userAnswers[7] || ""}
-                onChange={(e) => handleInputChange(7, e.target.value)}
+                value={userAnswers[34] || ""}
+                onChange={(e) => handleInputChange(34, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" in public toilets which are easier to use.")}
             </p>
 
-            {/* Q8 */}
             <p className="text-lg">
-              {renderText("Children learn new")}
+              {renderText("To assist the elderly: designers avoid using")}
               <button
-                onClick={() => toggleButton(8)}
+                onClick={() => toggleButton(35)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[8]
+                  activeButtons[35]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                8
+                35
               </button>
               <input
-                value={userAnswers[8] || ""}
-                onChange={(e) => handleInputChange(8, e.target.value)}
+                value={userAnswers[35] || ""}
+                onChange={(e) => handleInputChange(35, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" in interfaces.")}
             </p>
 
-            {/* Q9 */}
             <p className="text-lg">
-              {renderText("Cost per child: £")}
+              {renderText(
+                "People can make commands using a mouse, keyboard or their",
+              )}
               <button
-                onClick={() => toggleButton(9)}
+                onClick={() => toggleButton(36)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[9]
+                  activeButtons[36]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                9
+                36
               </button>
               <input
-                value={userAnswers[9] || ""}
-                onChange={(e) => handleInputChange(9, e.target.value)}
+                value={userAnswers[36] || ""}
+                onChange={(e) => handleInputChange(36, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              .
             </p>
 
-            {/* Q10 */}
+            <h3 className="font-semibold mt-4">
+              {renderText("Impact of non-inclusive designs")}
+            </h3>
+
             <p className="text-lg">
-              {renderText("Adults, such as")}
+              {renderText("Seatbelts are especially problematic for")}
               <button
-                onClick={() => toggleButton(10)}
+                onClick={() => toggleButton(37)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                  activeButtons[10]
+                  activeButtons[37]
                     ? "bg-yellow-400 border-yellow-500"
                     : "bg-gray-200 border-gray-400"
                 }`}
               >
-                10
+                37
               </button>
               <input
-                value={userAnswers[10] || ""}
-                onChange={(e) => handleInputChange(10, e.target.value)}
+                value={userAnswers[37] || ""}
+                onChange={(e) => handleInputChange(37, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(", free")}
+              {renderText(" women.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText(
+                "PPE jackets are often unsuitable because of the size of women's",
+              )}
+              <button
+                onClick={() => toggleButton(38)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[38]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                38
+              </button>
+              <input
+                value={userAnswers[38] || ""}
+                onChange={(e) => handleInputChange(38, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            <p className="text-lg">
+              {renderText("PPE for female")}
+              <button
+                onClick={() => toggleButton(39)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[39]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                39
+              </button>
+              <input
+                value={userAnswers[39] || ""}
+                onChange={(e) => handleInputChange(39, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" officers dealing with emergencies is the worst.")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("The")}
+              <button
+                onClick={() => toggleButton(40)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[40]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                40
+              </button>
+              <input
+                value={userAnswers[40] || ""}
+                onChange={(e) => handleInputChange(40, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText(" in offices is often too low for women.")}
             </p>
           </div>
 
-          {/* ---------- Submit / Result ---------- */}
+          {/* ---------- Submit / Result Section ---------- */}
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">
@@ -799,11 +669,11 @@ const Test1Listening2024 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1–10)
+                    All Answers (31–40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 10 }, (_, i) => i + 31).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -834,14 +704,15 @@ const Test1Listening2024 = () => {
                                 </span>
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <span className="italic">No answer provided</span>
+                              <span className=" italic">
+                                No answer provided
+                              </span>
                             ) : (
                               <span>{userAnswer}</span>
                             )}
@@ -863,9 +734,9 @@ const Test1Listening2024 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2024></Listening1Pagination2024>
+      <Listening3Pagination2025></Listening3Pagination2025>
     </div>
   );
 };
 
-export default Test1Listening2024;
+export default Listening3Part42025;

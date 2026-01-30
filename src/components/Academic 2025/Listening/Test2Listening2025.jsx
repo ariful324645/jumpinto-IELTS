@@ -3,9 +3,9 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
-import Listening1Pagination2024 from "../Pagination 2024/Listening1Pagination2024";
+import Listening2Pagination2025 from "../Pagination 2025/Listening2Pagination2025";
 
-const Test1Listening2024 = () => {
+const Test2Listening2025 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -24,229 +24,232 @@ const Test1Listening2024 = () => {
     {
       speaker: "ANNOUNCER",
       text: [
-        "Part 1. You will hear a teaching assistant calling a country park about a school visit.",
-        "First, you have some time to look at questions 1 to 6.",
-        "Now listen carefully and answer questions 1 to 6.",
+        "Part 1. You will hear a woman who is caring for her elderly mother talking to a friend.",
+        "First, you have some time to look at questions 1 to 4.",
+        "Now listen carefully and answer questions 1 to 4.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "CAROL",
       text: [
-        "Good morning, Hinchingbrooke Country Park, Sally speaking.",
-        "I'm one of the rangers.",
+        "It's really good to see you, Tom.",
+        "Since I had to give up work, I feel I'm losing touch with my friends and colleagues.",
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "TOM",
       text: [
-        "Oh, hello, uh, my name is John Chapman, and I'm a teaching assistant at a local primary school.",
-        "I've been asked to arrange a visit to the park for two of our classes.",
+        "We really miss you in the office.",
+        "We were all so sorry you had to leave.",
+        "But you must be relieved to have more time to look after your mother.",
+        "How is she?",
       ],
     },
     {
-      speaker: "SALLY",
-      text: ["OK, what would you like to know?"],
+      speaker: "CAROL",
+      text: ["Well, she's very cheerful, but she needs a lot of help."],
     },
     {
-      speaker: "JOHN",
+      speaker: "TOM",
+      text: ["Have you tried to get any support from the local council?"],
+    },
+    {
+      speaker: "CAROL",
+      text: ["No, I didn't know I could."],
+    },
+    {
+      speaker: "TOM",
       text: [
-        "Well, I'm new to this area.",
-        "So perhaps you could tell me something about the park first, please.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Of course. Altogether the park covers 170 acres. That's 69 hectares.",
-        "There are three main types of habitat, wetland, grassland, and woodland.",
-        "The woods are well established and varied.",
-        "With an oak plantation and other areas of mixed species.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Right."],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "The wetland is quite varied too.",
-        "The original farmland was dug up around 40 years ago to extract gravel.",
-        "Once this work was completed, the gravel pits filled with water, forming the two large lakes.",
+        "Yes, they offer different kinds of practical support.",
+
         {
-          text: "There are also several smaller ones. Ponds and a stream that flows through the park.",
+          text: " They realize that carers sometimes need time for all the other responsibilities they have apart from the person they're caring for,and also that they sometimes need a break.",
+          number: 1,
+        },
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: [
+        "Absolutely.",
+        "Ok, so tell me more.",
+        "How do I go about getting this support?",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Well, you'd have to have an assessment of your mother's needs.",
+        "That means someone would come round and talk to you about the situation and what you need.",
+
+        {
+          text: "So for a start, they'd want to know the amount of time you spend looking after your mother every day.",
           number: 2,
         },
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "CAROL",
+      text: ["OK."],
+    },
+    {
+      speaker: "TOM",
       text: [
-        "OK, so I suppose with these different habitats, there's quite a variety of wildlife.",
+        "Then they'll probably ask you what sorts of tasks you do for your mother during the day.",
+        "Things like if she needs help with getting dressed, for example.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "CAROL",
       text: [
-        "There certainly is. A lot of different species of birds and insects, and also animals like deer and rabbits.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "And I understand you organize educational visits for school parties.",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right. We can organize a wide range of activities, and adapt them to suit all ages.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Can you give me some examples of the activities?"],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "Well, one focus is on science, where we help children to discover and study plants, trees and insects.",
+        "Right, I help her with that,",
         {
-          text: "They also collect and analyze data about the things they see.",
+          text: "and also I help her get into the shower in the morning.",
           number: 3,
         },
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["Uh huh."],
-    },
-    {
-      speaker: "SALLY",
+      speaker: "TOM",
       text: [
-        "Another focus is on geography.",
+        "Yes, that sort of thing.",
+        "They'll probably ask you if you do the shopping for her, and help her at meal times,",
         {
-          text: "The park is a great environment to learn and practice reading a map.",
+          text: "and whether she can cope using money.",
           number: 4,
         },
-        "And using a compass to navigate around the park.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["Do you do anything connected with history?"],
-    },
-    {
-      speaker: "SALLY",
+      speaker: "CAROL",
       text: [
-        "Yes, we do. For instance, the children can explore how the use of the land has changed over time. Then there's leisure and tourism.",
+        "Yes, that's becoming a bit of a problem.",
+        "She used to be very good at it, but not anymore.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["That focuses on your visitors, I would imagine."],
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation,",
+        "you have some time to look at questions 5 to 10.",
+        "Now listen and answer questions 5 to 10.",
+      ],
     },
     {
-      speaker: "SALLY",
+      speaker: "TOM",
       text: [
-        "Yes, mostly.",
+        "And be ready to tell them about anything you find particularly difficult about caring for your mother.",
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: [
+        "So recently, I've noticed she started to have quite bad problems with her memory.",
         {
-          text: "The children find out about them, their requirements, the problems they may cause, and how we manage these.",
+          text: "If I wasn't there, I think she'd forget to eat for example,",
           number: 5,
         },
+        "and often she doesn't seem quite sure what day it is.",
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["And another subject we cover is music."],
-    },
-    {
-      speaker: "SALLY",
+      speaker: "TOM",
       text: [
-        "Yes.",
+        "Yes, tell them about that.",
         {
-          text: "Here the children experiment with natural materials to create sounds and explore rhythm and tempo.",
+          text: "And are there any physical difficulties you have caring for her? Lifting her for example?",
           number: 6,
         },
       ],
     },
     {
-      speaker: "JOHN",
-      text: ["That must be fun."],
-    },
-    {
-      speaker: "SALLY",
-      text: ["Most children really enjoy it."],
-    },
-    {
-      speaker: "ANNOUNCER",
+      speaker: "CAROL",
       text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
-        "Now listen and answer questions 7 to 10.",
+        "Yes, she's quite heavy,",
+        "and I'm afraid of hurting my back.",
+        "I'd be in real trouble if that happened.",
       ],
     },
     {
-      speaker: "SALLY",
+      speaker: "TOM",
       text: [
-        "And of course, all the activities are educational too.",
-        "Learning outside the classroom encourages children to be creative and to explore and discover for themselves.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "I would imagine they get a sense of freedom",
-        { text: "that might not be a normal part of their lives.", number: 7 },
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "That's right.",
-        "And very often the children discover that they can do things they didn't know they could do.",
-        { text: "And they develop new skills.", number: 8 },
-        "This gives them greater self-confidence.",
-      ],
-    },
-    {
-      speaker: "JOHN",
-      text: [
-        "It sounds great.",
-        "So what about the practical side of it?",
-        "How much does it cost for a full day visit?",
-        "We would expect to bring between 30 and 40 children",
-      ],
-    },
-    {
-      speaker: "SALLY",
-      text: [
-        "If there are over 30,",
+        "They can give you advice about that,",
         {
-          text: "it costs £4.95 for each child who attends on the day.",
+          text: "and also about how to avoid the possibility of your mom having a fall.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: [
+        "Great.",
+        "So once they've done this assessment, if I'm eligible, what happens next?",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Well, they might support you financially,",
+        "so they might help you with transport costs,",
+        {
+          text: "like if you have to get a taxi to take your mother for an appointment for example.",
+          number: 8,
+        },
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: [
+        "I usually drive her myself, actually.",
+        "So could I claim for the petrol?",
+      ],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "You could,",
+        {
+          text: "and you can claim for the insurance too.",
           number: 9,
         },
-        "We invoice you afterwards, so you don't pay for children who can't come because of sickness, for example.",
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: ["Oh, right."],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "And if you need help with the housework, they can arrange for someone to come along once or twice a week.",
+        "And one other thing, I hope you don't mind me saying this,",
+        "but it's important you look after yourself,",
+        "and it seems to me you're under quite a bit of stress.",
+      ],
+    },
+    {
+      speaker: "CAROL",
+      text: ["I am, yes."],
+    },
+    {
+      speaker: "TOM",
+      text: [
+        "Well tell the council,",
         {
-          text: "There's no charge for leaders and other adults, as many as you want to bring.",
+          text: "because they may be able to give you some advice on how to minimize it.",
           number: 10,
         },
       ],
     },
     {
-      speaker: "JOHN",
+      speaker: "CAROL",
       text: [
-        "That sounds very fair.",
-        "Well, thanks for all the information.",
-        "I'll need to discuss it with my colleagues, and I hope to get back to you soon to make a booking.",
+        "Really?",
+        "Though, actually, I feel so much better having talked to you.",
+        "I'll get in touch with the council straight away.",
+        "Now, shall we go for coffee or something?",
       ],
-    },
-    {
-      speaker: "SALLY",
-      text: ["We'll look forward to hearing from you. Goodbye."],
-    },
-    {
-      speaker: "JOHN",
-      text: ["Goodbye, and thank you."],
     },
     {
       speaker: "ANNOUNCER",
@@ -418,16 +421,16 @@ const Test1Listening2024 = () => {
   //  Marks show
 
   const correctAnswers = {
-    1: "50", // Area: 50 hectares (example)
-    2: "lake", // Wetland: lakes, ponds and a lake
-    3: "plants", // Science: Children look at plants about plants, etc.
-    4: "map", // Geography: includes learning to use a map and compass
-    5: "wildlife", // Leisure and tourism: mostly concentrates on the park's wildlife
-    6: "instruments", // Music: Children make instruments with natural materials
-    7: "freedom", // They give children a feeling of freedom
-    8: "skills", // Children learn new skills and gain self-confidence
-    9: "5", // Cost per child: £5
-    10: "teachers", // Adults, such as teachers, free
+    1: "break", // a break for other responsibilities
+    2: "time", // how much time the caring involves
+    3: "meal", // helping her have a meal / shopping
+    4: "stress", // dealing with stress
+    5: "memory", // loss of memory
+    6: "health", // her health
+    7: "accident", // preventing a accident
+    8: "taxi", // transport costs, e.g., cost of a taxi
+    9: "insurance", // car-related costs, e.g., fuel and insurance
+    10: "burden", // help to reduce burden
   };
 
   // --- Handle input change and auto-check ---
@@ -511,7 +514,9 @@ const Test1Listening2024 = () => {
           {openScript ? (
             <div className="space-y-5">
               <h1 className="text-2xl font-bold mb-8 text-center">
-                {renderText("School Visit to Hinchingbrooke Country Park")}
+                {renderText(
+                  "Conversation about Caring for Elderly Mother and Council Support",
+                )}
               </h1>
               {lines.map((line, index) => speakerText(line, index))}
             </div>
@@ -558,16 +563,25 @@ const Test1Listening2024 = () => {
           </h3>
 
           {/* ---------- Notes Box ---------- */}
-          <div className="border p-6  rounded-lg space-y-5 bg-white">
+          <div className="border p-6 rounded-lg space-y-5 bg-white">
             <h1 className="text-2xl font-bold text-center">
-              {renderText("Hinchingbrooke Country Park")}
+              {renderText("Help for carers")}
             </h1>
 
-            <p className="text-lg">{renderText("The park")}</p>
+            <p className="text-lg">
+              {renderText(
+                "Local councils can arrange practical support to help carers.",
+              )}
+            </p>
 
             {/* Q1 */}
             <p className="text-lg">
-              {renderText("Area:")}
+              {renderText(
+                "This can give the carer: time for other responsibilities,",
+              )}
+            </p>
+            <p className="text-lg">
+              {renderText("a")}
               <button
                 onClick={() => toggleButton(1)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -583,12 +597,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(1, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" hectares")}
+              {renderText(" assessment of mother's needs.")}
             </p>
 
             {/* Q2 */}
             <p className="text-lg">
-              {renderText("Wetland: lakes, ponds and a")}
+              {renderText("This may include discussion of how much")}
               <button
                 onClick={() => toggleButton(2)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -604,11 +618,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(2, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" the caring involves.")}
             </p>
 
             {/* Q3 */}
             <p className="text-lg">
-              {renderText("Science: Children look at")}
+              {renderText("Tasks involved, e.g. helping her have a")}
               <button
                 onClick={() => toggleButton(3)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -624,12 +639,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(3, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" about plants, etc.")}
+              {renderText(" shopping.")}
             </p>
 
             {/* Q4 */}
             <p className="text-lg">
-              {renderText("Geography: includes learning to use a")}
+              {renderText("Dealing with")}
               <button
                 onClick={() => toggleButton(4)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -645,14 +660,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(4, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(" and compass")}
+              {renderText(" any aspects of caring that are difficult.")}
             </p>
 
             {/* Q5 */}
             <p className="text-lg">
-              {renderText(
-                "Leisure and tourism: mostly concentrates on the park's",
-              )}
+              {renderText("E.g. loss of")}
               <button
                 onClick={() => toggleButton(5)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -672,7 +685,7 @@ const Test1Listening2024 = () => {
 
             {/* Q6 */}
             <p className="text-lg">
-              {renderText("Music: Children make")}
+              {renderText("Her")}
               <button
                 onClick={() => toggleButton(6)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -688,14 +701,14 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(6, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(
-                " with natural materials, and experiment with rhythm and speed.",
-              )}
+              {renderText(" preventing a")}
             </p>
 
             {/* Q7 */}
             <p className="text-lg">
-              {renderText("They give children a feeling of")}
+              {renderText(
+                "Types of support include transport costs, e.g. cost of a",
+              )}
               <button
                 onClick={() => toggleButton(7)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -711,11 +724,12 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(7, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
+              {renderText(" costs.")}
             </p>
 
             {/* Q8 */}
             <p className="text-lg">
-              {renderText("Children learn new")}
+              {renderText("Car-related costs, e.g. fuel and")}
               <button
                 onClick={() => toggleButton(8)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -735,7 +749,7 @@ const Test1Listening2024 = () => {
 
             {/* Q9 */}
             <p className="text-lg">
-              {renderText("Cost per child: £")}
+              {renderText("Help with housework helps to reduce")}
               <button
                 onClick={() => toggleButton(9)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -755,7 +769,7 @@ const Test1Listening2024 = () => {
 
             {/* Q10 */}
             <p className="text-lg">
-              {renderText("Adults, such as")}
+              {renderText("Help to reduce")}
               <button
                 onClick={() => toggleButton(10)}
                 className={`mx-2 w-8 h-8 rounded-full border-2 ${
@@ -771,7 +785,7 @@ const Test1Listening2024 = () => {
                 onChange={(e) => handleInputChange(10, e.target.value)}
                 className="border rounded-md px-2 py-1 w-32"
               />
-              {renderText(", free")}
+              {renderText(" stress.")}
             </p>
           </div>
 
@@ -863,9 +877,9 @@ const Test1Listening2024 = () => {
           </div>
         </div>
       </div>
-      <Listening1Pagination2024></Listening1Pagination2024>
+      <Listening2Pagination2025></Listening2Pagination2025>
     </div>
   );
 };
 
-export default Test1Listening2024;
+export default Test2Listening2025;
