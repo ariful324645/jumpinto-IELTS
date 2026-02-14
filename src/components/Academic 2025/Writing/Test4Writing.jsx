@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import Writing4Pagination2025 from "../Pagination 2025/Writing4Pagination2025";
 
 const Test4Writing = () => {
   const [message, setMessage] = useState("");
@@ -32,9 +33,9 @@ const Test4Writing = () => {
   return (
     <div className="px-3">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6 ">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -54,8 +55,11 @@ const Test4Writing = () => {
             <br />
 
             {/* image */}
-            <div>
-              <img src="" alt="Eikhane image bosabo" />
+            <div className="flex items-center justify-center">
+              <img className="h-auto w-auto"
+                src="https://i.ibb.co.com/S4JrFy3N/a20t4w1.jpg"
+                alt="Eikhane image bosabo"
+              />
             </div>
 
             <br />
@@ -69,25 +73,25 @@ const Test4Writing = () => {
             <p className="mt-5">
               This diagram illustrates the step-by-step process of making fabric
               from bamboo, which consists of several distinct stages spanning
-              from cultivation to the creation of final products. <br /> <br /> The process
-              commences in spring with planting bamboo plants, allowing them
-              sufficient time to grow before harvest. In autumn, when the bamboo
-              reaches maturity, it is carefully harvested. Subsequently, the
-              harvested bamboo is cut into thin strips to facilitate further
-              processing, and these strips are then crushed mechanically to form
-              a liquid pulp. After that, the pulp undergoes a thorough filtering
-              process to separate long, usable fibres from the liquid. <br /> <br /> Next, the
-              extracted fibres are softened by mixing them with water and amine
-              oxide, a substance that helps enhance their flexibility. Following
-              this treatment, the softened fibres are spun into continuous yarn
-              using specialized spinning equipment. The yarn is then woven on
-              looms to create fabric, which can ultimately be made into a
-              variety of bamboo-fabric products like T-shirts, socks, and other
-              clothing items. <br /> <br /> Overall, the production of bamboo fabric involves
-              multiple stages, from bamboo cultivation and harvesting to fibre
-              processing, spinning, weaving, and final product manufacturing,
-              transforming raw bamboo into practical and comfortable textile
-              materials.
+              from cultivation to the creation of final products. <br /> <br />{" "}
+              The process commences in spring with planting bamboo plants,
+              allowing them sufficient time to grow before harvest. In autumn,
+              when the bamboo reaches maturity, it is carefully harvested.
+              Subsequently, the harvested bamboo is cut into thin strips to
+              facilitate further processing, and these strips are then crushed
+              mechanically to form a liquid pulp. After that, the pulp undergoes
+              a thorough filtering process to separate long, usable fibres from
+              the liquid. <br /> <br /> Next, the extracted fibres are softened
+              by mixing them with water and amine oxide, a substance that helps
+              enhance their flexibility. Following this treatment, the softened
+              fibres are spun into continuous yarn using specialized spinning
+              equipment. The yarn is then woven on looms to create fabric, which
+              can ultimately be made into a variety of bamboo-fabric products
+              like T-shirts, socks, and other clothing items. <br /> <br />{" "}
+              Overall, the production of bamboo fabric involves multiple stages,
+              from bamboo cultivation and harvesting to fibre processing,
+              spinning, weaving, and final product manufacturing, transforming
+              raw bamboo into practical and comfortable textile materials.
             </p>
           </div>
         </div>
@@ -129,6 +133,7 @@ const Test4Writing = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing4Pagination2025></Writing4Pagination2025>
     </div>
   );
 };

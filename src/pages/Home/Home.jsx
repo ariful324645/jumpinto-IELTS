@@ -318,27 +318,7 @@ const data = [
       },
     ],
   },
-  {
-    headline: "IELTS 5 Academic 2006",
-    tests: [
-      {
-        testName: "Test 1",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 2",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 3",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-      {
-        testName: "Test 4",
-        sections: ["Listening", "Reading", "Writing", "Speaking"],
-      },
-    ],
-  },
+
 ];
 
 const Home = () => {
