@@ -647,6 +647,30 @@ import Reading3Part22013 from "../components/Academic 2013/Parts/Reading3Part220
 import Reading3Part32013 from "../components/Academic 2013/Parts/Reading3Part32013";
 import Reading4Part22013 from "../components/Academic 2013/Parts/Reading4Part22013";
 import Reading4Part32013 from "../components/Academic 2013/Parts/Reading4Part32013";
+import Test1Listening2011 from "../components/Academic 2011/Listening/Test1Listening2011";
+import Test2Listening2011 from "../components/Academic 2011/Listening/Test2Listening2011";
+import Test3Listening2011 from "../components/Academic 2011/Listening/Test3Listening2011";
+import Test4Listening2011 from "../components/Academic 2011/Listening/Test4Listening2011";
+import Test1Reading2011 from "../components/Academic 2011/Reading/Test1Reading2011";
+import Test2Reading2011 from "../components/Academic 2011/Reading/Test2Reading2011";
+import Test3Reading2011 from "../components/Academic 2011/Reading/Test3Reading2011";
+import Test4Reading2011 from "../components/Academic 2011/Reading/Test4Reading2011";
+import Test1Listening2009 from "../components/Academic 2009/Listening/Test1Listening2009";
+import Test2Listening2009 from "../components/Academic 2009/Listening/Test2Listening2009";
+import Test3Listening2009 from "../components/Academic 2009/Listening/Test3Listening2009";
+import Test4Listening2009 from "../components/Academic 2009/Listening/Test4Listening2009";
+import Test1Reading2009 from "../components/Academic 2009/Reading/Test1Reading2009";
+import Test2Reading2009 from "../components/Academic 2009/Reading/Test2Reading2009";
+import Test3Reading2009 from "../components/Academic 2009/Reading/Test3Reading2009";
+import Test4Reading2009 from "../components/Academic 2009/Reading/Test4Reading2009";
+import Test1Listening2007 from "../components/Academic 2007/Listening/Test1Listening2007";
+import Test2Listening2007 from "../components/Academic 2007/Listening/Test2Listening2007";
+import Test3Listening2007 from "../components/Academic 2007/Listening/Test3Listening2007";
+import Test4Listening2007 from "../components/Academic 2007/Listening/Test4Listening2007";
+import Test1Reading2007 from "../components/Academic 2007/Reading/Test1Reading2007";
+import Test2Reading2007 from "../components/Academic 2007/Reading/Test2Reading2007";
+import Test3Reading2007 from "../components/Academic 2007/Reading/Test3Reading2007";
+import Test4Reading2007 from "../components/Academic 2007/Reading/Test4Reading2007";
 
 export const router = createBrowserRouter([
   {
@@ -3017,6 +3041,40 @@ export const router = createBrowserRouter([
         Component: Speaking4Part32013,
       },
       //2011
+
+      {
+        path: "/2011/Test 1/listening",
+        Component: Test1Listening2011,
+      },
+      {
+        path: "/2011/Test 2/listening",
+        Component: Test2Listening2011,
+      },
+      {
+        path: "/2011/Test 3/listening",
+        Component: Test3Listening2011,
+      },
+      {
+        path: "/2011/Test 4/listening",
+        Component: Test4Listening2011,
+      },
+      {
+        path: "/2011/Test 1/reading",
+        Component: Test1Reading2011,
+      },
+      {
+        path: "/2011/Test 2/reading",
+        Component: Test2Reading2011,
+      },
+      {
+        path: "/2011/Test 3/reading",
+        Component: Test3Reading2011,
+      },
+      {
+        path: "/2011/Test 4/reading",
+        Component: Test4Reading2011,
+      },
+
       {
         path: "/2011/Test 1/writing",
         Component: Test1Writing2011,
@@ -3107,6 +3165,39 @@ export const router = createBrowserRouter([
       },
       //2009
       {
+        path: "/2009/Test 1/listening",
+        Component: Test1Listening2009,
+      },
+      {
+        path: "/2009/Test 2/listening",
+        Component: Test2Listening2009,
+      },
+      {
+        path: "/2009/Test 3/listening",
+        Component: Test3Listening2009,
+      },
+      {
+        path: "/2009/Test 4/listening",
+        Component: Test4Listening2009,
+      },
+      {
+        path: "/2009/Test 1/reading",
+        Component: Test1Reading2009,
+      },
+      {
+        path: "/2009/Test 2/reading",
+        Component: Test2Reading2009,
+      },
+      {
+        path: "/2009/Test 3/reading",
+        Component: Test3Reading2009,
+      },
+      {
+        path: "/2009/Test 4/reading",
+        Component: Test4Reading2009,
+      },
+
+      {
         path: "/2009/Test 1/writing",
         Component: Test1Writing2009,
       },
@@ -3193,6 +3284,39 @@ export const router = createBrowserRouter([
         Component: Speaking4Part32009,
       },
       //2007
+
+      {
+        path: "/2007/Test 1/listening",
+        Component: Test1Listening2007,
+      },
+      {
+        path: "/2007/Test 2/listening",
+        Component: Test2Listening2007,
+      },
+      {
+        path: "/2007/Test 3/listening",
+        Component: Test3Listening2007,
+      },
+      {
+        path: "/2007/Test 4/listening",
+        Component: Test4Listening2007,
+      },
+      {
+        path: "/2007/Test 2/reading",
+        Component: Test2Reading2007,
+      },
+      {
+        path: "/2007/Test 1/reading",
+        Component: Test1Reading2007,
+      },
+      {
+        path: "/2007/Test 3/reading",
+        Component: Test3Reading2007,
+      },
+      {
+        path: "/2007/Test 4/reading",
+        Component: Test4Reading2007,
+      },
       {
         path: "/2007/Test 1/writing",
         Component: Test1Writing2007,

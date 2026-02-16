@@ -619,7 +619,7 @@ const Navbar = () => {
     <div className="p-4 mx-auto sticky top-0 z-50 navbar flex justify-between bg-base-100">
       {/* Logo */}
       <div className="flex items-center gap-5">
-        <Link to="/voiceIelts">
+        <Link to="/">
           <img
             className="h-16"
             src="https://i.ibb.co.com/zTw3NXG3/images.png"
