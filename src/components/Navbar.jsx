@@ -518,7 +518,7 @@ const Navbar = () => {
     "/Writing4Part22015": 40 * 60,
 
     //2013
-    // 2015  listening
+    // 2013  listening
 
     "/2013/test 1/listening": 7 * 60 + 30,
     "/2013/test 2/listening": 8 * 60,
@@ -537,7 +537,7 @@ const Navbar = () => {
     "/listening4Part22013": 7 * 60 + 30,
     "/listening4Part32013": 7 * 60 + 30,
     "/listening4Part42013": 8 * 60 + 30,
-    // 2017  reading
+    // 2013 reading
     "/2013/Test 1/reading": 20 * 60,
     "/2013/Test 2/reading": 20 * 60,
     "/2013/Test 3/reading": 20 * 60,
@@ -552,7 +552,7 @@ const Navbar = () => {
     "/Reading3Part32013": 20 * 60,
     "/Reading4Part22013": 20 * 60,
     "/Reading4Part32013": 20 * 60,
-    // 2015 writing
+    // 2013 writing
     "/2013/Test 1/writing": 20 * 60,
     "/2013/Test 2/writing": 20 * 60,
     "/2013/Test 3/writing": 20 * 60,
@@ -562,6 +562,144 @@ const Navbar = () => {
     "/Writing2Part22013": 40 * 60,
     "/Writing3Part22013": 40 * 60,
     "/Writing4Part22013": 40 * 60,
+
+    //2011
+    // 2011  listening
+
+    "/2011/test 1/listening": 7 * 60 + 30,
+    "/2011/test 2/listening": 8 * 60,
+    "/2011/test 3/listening": 6 * 60 + 30,
+    "/2011/test 4/listening": 8 * 60 + 30,
+    // li3tening part time
+    "/listening1Part22011": 7 * 60,
+    "/listening1Part32011": 7 * 60,
+    "/listening1Part42011": 9 * 60 + 30,
+    "/listening2Part22011": 8 * 60,
+    "/listening2Part32011": 7 * 60 + 30,
+    "/listening2Part42011": 8 * 60 + 30,
+    "/listening3Part22011": 9 * 60,
+    "/listening3Part32011": 8 * 60,
+    "/listening3Part42011": 7 * 60,
+    "/listening4Part22011": 7 * 60 + 30,
+    "/listening4Part32011": 7 * 60 + 30,
+    "/listening4Part42011": 8 * 60 + 30,
+    // 2013 reading
+    "/2011/Test 1/reading": 20 * 60,
+    "/2011/Test 2/reading": 20 * 60,
+    "/2011/Test 3/reading": 20 * 60,
+    "/2011/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22011": 20 * 60,
+    "/Reading1Part32011": 20 * 60,
+    "/Reading2Part22011": 20 * 60,
+    "/Reading2Part32011": 20 * 60,
+    "/Reading3Part22011": 20 * 60,
+    "/Reading3Part32011": 20 * 60,
+    "/Reading4Part22011": 20 * 60,
+    "/Reading4Part32011": 20 * 60,
+    // 2013 writing
+    "/2011/Test 1/writing": 20 * 60,
+    "/2011/Test 2/writing": 20 * 60,
+    "/2011/Test 3/writing": 20 * 60,
+    "/2011/Test 4/writing": 20 * 60,
+    // wr1ting part
+    "/Writing1Part22011": 40 * 60,
+    "/Writing2Part22011": 40 * 60,
+    "/Writing3Part22011": 40 * 60,
+    "/Writing4Part22011": 40 * 60,
+
+    //2009
+    //2009
+
+    "/2009/test 1/listening": 7 * 60 + 30,
+    "/2009/test 2/listening": 8 * 60,
+    "/2009/test 3/listening": 7 * 60 + 30,
+    "/2009/test 4/listening": 9 * 60 + 30,
+    // li3tening part time
+    "/listening1Part22009": 7 * 60,
+    "/listening1Part32009": 7 * 60,
+    "/listening1Part42009": 9 * 60 + 30,
+    "/listening2Part22009": 8 * 60,
+    "/listening2Part32009": 7 * 60 + 30,
+    "/listening2Part42009": 8 * 60 + 30,
+    "/listening3Part22009": 9 * 60,
+    "/listening3Part32009": 8 * 60,
+    "/listening3Part42009": 7 * 60,
+    "/listening4Part22009": 7 * 60 + 30,
+    "/listening4Part32009": 7 * 60 + 30,
+    "/listening4Part42009": 8 * 60 + 30,
+    // 2013 reading
+    "/2009/Test 1/reading": 20 * 60,
+    "/2009/Test 2/reading": 20 * 60,
+    "/2009/Test 3/reading": 20 * 60,
+    "/2009/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22009": 20 * 60,
+    "/Reading1Part32009": 20 * 60,
+    "/Reading2Part22009": 20 * 60,
+    "/Reading2Part32009": 20 * 60,
+    "/Reading3Part22009": 20 * 60,
+    "/Reading3Part32009": 20 * 60,
+    "/Reading4Part22009": 20 * 60,
+    "/Reading4Part32009": 20 * 60,
+    // 2013 writing
+    "/2009/Test 1/writing": 20 * 60,
+    "/2009/Test 2/writing": 20 * 60,
+    "/2009/Test 3/writing": 20 * 60,
+    "/2009/Test 4/writing": 20 * 60,
+    // wr1ting part
+    "/Writing1Part22009": 40 * 60,
+    "/Writing2Part22009": 40 * 60,
+    "/Writing3Part22009": 40 * 60,
+    "/Writing4Part22009": 40 * 60,
+
+    //2007
+    //2007
+
+    "/2007/test 1/listening": 7 * 60 + 30,
+    "/2007/test 2/listening": 8 * 60,
+    "/2007/test 3/listening": 7 * 60 + 30,
+    "/2007/test 4/listening": 9 * 60 + 30,
+    // li3tening part time
+    "/listening1Part22007": 7 * 60,
+    "/listening1Part32007": 7 * 60,
+    "/listening1Part42007": 9 * 60 + 30,
+    "/listening2Part22007": 8 * 60,
+    "/listening2Part32007": 7 * 60 + 30,
+    "/listening2Part42007": 8 * 60 + 30,
+    "/listening3Part22007": 9 * 60,
+    "/listening3Part32007": 8 * 60,
+    "/listening3Part42007": 7 * 60,
+    "/listening4Part22007": 7 * 60 + 30,
+    "/listening4Part32007": 7 * 60 + 30,
+    "/listening4Part42007": 8 * 60 + 30,
+    // 2013 reading
+    "/2007/Test 1/reading": 20 * 60,
+    "/2007/Test 2/reading": 20 * 60,
+    "/2007/Test 3/reading": 20 * 60,
+    "/2007/Test 4/reading": 20 * 60,
+    // reading part time
+
+    "/Reading1Part22007": 20 * 60,
+    "/Reading1Part32007": 20 * 60,
+    "/Reading2Part22007": 20 * 60,
+    "/Reading2Part32007": 20 * 60,
+    "/Reading3Part22007": 20 * 60,
+    "/Reading3Part32007": 20 * 60,
+    "/Reading4Part22007": 20 * 60,
+    "/Reading4Part32007": 20 * 60,
+    // 2013 writing
+    "/2007/Test 1/writing": 20 * 60,
+    "/2007/Test 2/writing": 20 * 60,
+    "/2007/Test 3/writing": 20 * 60,
+    "/2007/Test 4/writing": 20 * 60,
+    // wr1ting part
+    "/Writing1Part22007": 40 * 60,
+    "/Writing2Part22007": 40 * 60,
+    "/Writing3Part22007": 40 * 60,
+    "/Writing4Part22007": 40 * 60,
   };
 
   // Format seconds to mm:ss
@@ -616,7 +754,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="p-4 mx-auto sticky top-0 z-50 navbar flex justify-between bg-base-100">
+    <div className="p-4  mx-auto sticky top-0 z-50 navbar flex justify-between bg-base-100">
       {/* Logo */}
       <div className="flex items-center gap-5">
         <Link to="/">
@@ -677,16 +815,21 @@ const Navbar = () => {
               alt="message icon"
             />
           </div>
-          <div className="absolute top-12 left-1/2 -translate-x-1/2 w-max p-2.5 text-white border border-gray-300 rounded-md text-lg bg-gray-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Have suggestions or need to report an issue? <br /> Email us at
-            team@jumpinto.com
+          <div
+            className="absolute top-12 left-1/2 -translate-x-1/2 
+w-56 p-2.5 text-white border border-gray-300 rounded-md text-sm 
+bg-gray-800 shadow-lg opacity-0 group-hover:opacity-100 
+transition-opacity duration-300 pointer-events-none text-center"
+          >
+            Have suggestions or need to report an issue? <br />
+            Email us at team@jumpinto.com
           </div>
         </div>
 
         <div className="flex items-center gap-4">
           {!user ? (
             <Link to="/login">
-              <button className="btn text-white text-xl font-bold rounded-2xl bg-[#47698F]">
+              <button className="btn flex items-center justify-center text-center text-white text-xl font-bold rounded-2xl bg-[#47698F]">
                 Sign In
               </button>
             </Link>
