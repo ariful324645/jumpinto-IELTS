@@ -420,7 +420,7 @@ const Reading2Part32022 = () => {
         </div>
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           {/* ================= Questions 27–31 ================= */}
           <h2 className="text-lg font-bold mb-3">
             {renderText("Questions 27–31")}

@@ -426,7 +426,7 @@ const Test4Reading2022 = () => {
         )}
 
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll ">
           {/* table */}
           <div className="space-y-4 leading-relaxed">
             <div className="flex justify-end items-center p-4 text-gray-500">

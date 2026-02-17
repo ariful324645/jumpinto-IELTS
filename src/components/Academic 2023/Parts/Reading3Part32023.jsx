@@ -458,7 +458,7 @@ const Reading3Part32023 = () => {
           )}
         </div>
         {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ================= Questions 27–30 ================= */}
           <div className="space-y-6 text-lg">
             <h2 className="text-lg font-bold mb-3">
