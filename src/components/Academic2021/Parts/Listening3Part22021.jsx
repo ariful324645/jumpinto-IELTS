@@ -294,7 +294,7 @@ const Listening3Part22021 = () => {
       }
 
       // Erica: female
-      if (speaker === "JOY PARKINS") {
+      if (speaker === "MEGAN BAKER") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||

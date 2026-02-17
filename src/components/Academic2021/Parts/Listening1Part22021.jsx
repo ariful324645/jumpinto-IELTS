@@ -262,73 +262,73 @@ const Listening1Part22021 = () => {
   };
 
   // ---- Voice function ----
-  const handleVoice = () => {
-    if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-      setCurrentLine(null);
-      setCurrentChunk(null);
-      return;
-    }
-    const voices = window.speechSynthesis.getVoices();
-    const getVoice = (speaker) => {
-      if (!voices.length) return null;
+   const handleVoice = () => {
+     if (isSpeaking) {
+       window.speechSynthesis.cancel();
+       setIsSpeaking(false);
+       setCurrentLine(null);
+       setCurrentChunk(null);
+       return;
+     }
+     const voices = window.speechSynthesis.getVoices();
+     const getVoice = (speaker) => {
+       if (!voices.length) return null;
 
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
-        return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "RUSS") {
-        return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
+       // Announcer: male
+       if (speaker === "ANNOUNCER") {
+         return voices.find((v) => v.name.includes("Alex")) || voices[0];
+       }
+       if (speaker === "FATHER") {
+         return voices.find((v) => v.name.includes("David")) || voices[0];
+       }
 
-      // Erica: female
-      if (speaker === "JOY PARKINS") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
+       // Erica: female
+       if (speaker === "JULIA SIMMONS") {
+         return (
+           voices.find((v) => v.name.includes("Aria")) ||
+           voices.find((v) => v.name.includes("Jenny")) ||
+           voices.find((v) => v.name.includes("Ana")) ||
+           voices.find((v) => v.name.includes("Female")) ||
+           voices[0]
+         );
+       }
 
-      return voices[0];
-    };
+       return voices[0];
+     };
 
-    let lineIndex = 0;
-    let chunkIndex = 0;
-    setIsSpeaking(true);
-    const speakNextChunk = () => {
-      if (lineIndex >= lines.length) {
-        setIsSpeaking(false);
-        setCurrentLine(null);
-        setCurrentChunk(null);
-        return;
-      }
-      const line = lines[lineIndex];
-      const chunks = Array.isArray(line.text) ? line.text : [line.text];
-      if (chunkIndex >= chunks.length) {
-        lineIndex++;
-        chunkIndex = 0;
-        speakNextChunk();
-        return;
-      }
-      setCurrentLine(lineIndex);
-      setCurrentChunk(chunkIndex);
-      const chunk = chunks[chunkIndex];
-      const text = typeof chunk === "string" ? chunk : chunk.text;
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = getVoice(line.speaker);
-      utterance.rate = 1;
-      utterance.onend = () => {
-        chunkIndex++;
-        speakNextChunk();
-      };
-      window.speechSynthesis.speak(utterance);
-    };
-    speakNextChunk();
-  };
+     let lineIndex = 0;
+     let chunkIndex = 0;
+     setIsSpeaking(true);
+     const speakNextChunk = () => {
+       if (lineIndex >= lines.length) {
+         setIsSpeaking(false);
+         setCurrentLine(null);
+         setCurrentChunk(null);
+         return;
+       }
+       const line = lines[lineIndex];
+       const chunks = Array.isArray(line.text) ? line.text : [line.text];
+       if (chunkIndex >= chunks.length) {
+         lineIndex++;
+         chunkIndex = 0;
+         speakNextChunk();
+         return;
+       }
+       setCurrentLine(lineIndex);
+       setCurrentChunk(chunkIndex);
+       const chunk = chunks[chunkIndex];
+       const text = typeof chunk === "string" ? chunk : chunk.text;
+       const utterance = new SpeechSynthesisUtterance(text);
+       utterance.voice = getVoice(line.speaker);
+       utterance.rate = 1;
+       utterance.onend = () => {
+         chunkIndex++;
+         speakNextChunk();
+       };
+       window.speechSynthesis.speak(utterance);
+     };
+     speakNextChunk();
+   };
   useEffect(() => {
     window.speechSynthesis.onvoiceschanged = () => {
       const list = window.speechSynthesis.getVoices();

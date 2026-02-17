@@ -426,7 +426,7 @@ const Test3Listening2024 = () => {
       }
 
       // Erica: female
-      if (speaker === "SADIE") {
+      if (speaker === "SHANNON") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||

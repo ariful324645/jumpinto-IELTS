@@ -551,9 +551,9 @@ const Test1Listening2025 = () => {
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex flex-col md:flex-row gap-6 h-auto md:h-[1000px]">
         {/* LEFT SIDE */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
+        <div className="w-full md:w-1/2  bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
             <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
@@ -616,7 +616,7 @@ const Test1Listening2025 = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+        <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
           {/* ---------- Header ---------- */}
           <h2 className="text-lg font-bold mb-3">
             {renderText("Questions 1–10")}
@@ -633,38 +633,34 @@ const Test1Listening2025 = () => {
           </h3>
 
           {/* ---------- Table ---------- */}
-          <div className="overflow-x-auto">
-            <table className="w-full border border-gray-400 text-lg">
+          <div className="">
+            <table className="border-collapse border border-gray-400 w-full text-lg text-center">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="border p-3 text-left">
-                    {renderText("Name of restaurant")}
+                  <th className="border border-gray-400 p-2">
+                    Name of restaurant
                   </th>
-                  <th className="border p-3 text-left">
-                    {renderText("Location")}
+                  <th className="border border-gray-400 p-2">Location</th>
+                  <th className="border border-gray-400 p-2">
+                    Reason for recommendation
                   </th>
-                  <th className="border p-3 text-left">
-                    {renderText("Reason for recommendation")}
-                  </th>
-                  <th className="border p-3 text-left">
-                    {renderText("Other comments")}
-                  </th>
+                  <th className="border border-gray-400 p-2">Other comments</th>
                 </tr>
               </thead>
 
               <tbody>
                 {/* Row 1 */}
                 <tr>
-                  <td className="border p-3">The Junction</td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-2">The Junction</td>
+                  <td className="border border-gray-400 p-2">
                     Greyson Street, near the station
                   </td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-2">
                     Good for people who are especially keen on
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(1)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[1]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -675,18 +671,17 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[1] || ""}
                         onChange={(e) => handleInputChange(1, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
                   </td>
-                  <td className="border p-3">
-                    {" "}
-                    <p>{renderText("Quite expensive")}</p>
-                    <div className="flex  items-center gap-2 mt-2">
-                      <p>{renderText("the")}</p>
+                  <td className="border border-gray-400 p-2">
+                    Quite expensive
+                    <div className="flex items-center gap-1 mt-1">
+                      The
                       <button
                         onClick={() => toggleButton(2)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[2]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -697,24 +692,24 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[2] || ""}
                         onChange={(e) => handleInputChange(2, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
-                    <p>{renderText("is a good place for a drink")}</p>
+                    is a good place for a drink
                   </td>
                 </tr>
 
                 {/* Row 2 */}
                 <tr>
-                  <td className="border p-3">{renderText("Paloma")}</td>
-                  <td className="border p-3">
-                    {renderText("	In Bow Street next to the cinema")}
+                  <td className="border border-gray-400 p-2">Paloma</td>
+                  <td className="border border-gray-400 p-2">
+                    In Bow Street next to the cinema
                   </td>
-                  <td className="border p-3">
-                    <div className="flex items-center gap-2">
+                  <td className="border border-gray-400 p-2">
+                    <div className="flex items-center gap-1">
                       <button
                         onClick={() => toggleButton(3)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[3]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -725,19 +720,18 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[3] || ""}
                         onChange={(e) => handleInputChange(3, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
                     food, good for sharing
                   </td>
-                  <td className="border p-3">
-                    {" "}
+                  <td className="border border-gray-400 p-2">
                     Staff are very friendly <br />
                     Need to pay £50 deposit <br />A limited selection of
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(4)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[4]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -748,7 +742,7 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[4] || ""}
                         onChange={(e) => handleInputChange(4, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
                     food on the menu
@@ -756,15 +750,13 @@ const Test1Listening2025 = () => {
                 </tr>
 
                 {/* Row 3 */}
-
-                {/* Row 4 */}
                 <tr>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-2">
                     The
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(5)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[5]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -775,16 +767,16 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[5] || ""}
                         onChange={(e) => handleInputChange(5, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
                   </td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-2">
                     At the top of a
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(6)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[6]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -795,62 +787,58 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[6] || ""}
                         onChange={(e) => handleInputChange(6, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
                   </td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-2">
                     A famous chef <br />
                     All the
-                    <div className="space-y-2 mt-2">
-                      <div className="flex gap-2">
-                        {" "}
-                        <button
-                          onClick={() => toggleButton(7)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                            activeButtons[7]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          7
-                        </button>
-                        <input
-                          value={userAnswers[7] || ""}
-                          onChange={(e) => handleInputChange(7, e.target.value)}
-                          className="border px-2 py-1 w-24"
-                        />
-                      </div>
-                      <div className="flex gap-2">
-                        {" "}
-                        <button
-                          onClick={() => toggleButton(8)}
-                          className={`mx-2 w-8 h-8 rounded-full border-2 ${
-                            activeButtons[8]
-                              ? "bg-yellow-400 border-yellow-500"
-                              : "bg-gray-200 border-gray-400"
-                          }`}
-                        >
-                          8
-                        </button>
-                        <input
-                          value={userAnswers[8] || ""}
-                          onChange={(e) => handleInputChange(8, e.target.value)}
-                          className="border px-2 py-1 w-24"
-                        />
-                      </div>
+                    <div className="flex items-center gap-1 mt-1">
+                      <button
+                        onClick={() => toggleButton(7)}
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
+                          activeButtons[7]
+                            ? "bg-yellow-400 border-yellow-500"
+                            : "bg-gray-200 border-gray-400"
+                        }`}
+                      >
+                        7
+                      </button>
+                      <input
+                        value={userAnswers[7] || ""}
+                        onChange={(e) => handleInputChange(7, e.target.value)}
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
+                      />
                     </div>
                     are very good
                   </td>
-                  <td className="border p-3">
-                    Only uses
-                    <div className="flex items-center gap-2 mt-2"></div>
-                    ingredients <br />
+                  <td className="border border-gray-400 p-2">
+                    Only uses ingredients <br />
                     Set lunch costs £
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-1 mt-1">
+                      <button
+                        onClick={() => toggleButton(8)}
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
+                          activeButtons[8]
+                            ? "bg-yellow-400 border-yellow-500"
+                            : "bg-gray-200 border-gray-400"
+                        }`}
+                      >
+                        8
+                      </button>
+                      <input
+                        value={userAnswers[8] || ""}
+                        onChange={(e) => handleInputChange(8, e.target.value)}
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
+                      />
+                    </div>
+                    per person <br />
+                    Portions probably of
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(9)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[9]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -861,15 +849,14 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[9] || ""}
                         onChange={(e) => handleInputChange(9, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
-                    per person <br />
-                    Portions probably of
-                    <div className="flex items-center gap-2 mt-2">
+                    size
+                    <div className="flex items-center gap-1 mt-1">
                       <button
                         onClick={() => toggleButton(10)}
-                        className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                        className={`w-6 h-6 text-xs rounded-full border-2 ${
                           activeButtons[10]
                             ? "bg-yellow-400 border-yellow-500"
                             : "bg-gray-200 border-gray-400"
@@ -880,15 +867,15 @@ const Test1Listening2025 = () => {
                       <input
                         value={userAnswers[10] || ""}
                         onChange={(e) => handleInputChange(10, e.target.value)}
-                        className="border px-2 py-1 w-24"
+                        className="w-16 border px-1 py-0.5 text-xs rounded"
                       />
                     </div>
-                    size
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+
           <div className="mt-10">
             {!showResult ? (
               <div className="flex items-center justify-center">

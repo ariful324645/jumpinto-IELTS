@@ -213,12 +213,26 @@ const Listening2Part22023 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-      if (speaker === "ANNOUNCER")
+
+      // Announcer: male
+      if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "TC EMPLOYEE")
-        return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "OFFICER")
+      }
+      if (speaker === "FATHER") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
+
+      // Erica: female
+      if (speaker === "MARK REYNOLDS") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
+
       return voices[0];
     };
 
@@ -255,7 +269,6 @@ const Listening2Part22023 = () => {
     };
     speakNextChunk();
   };
-
   //  Marks show
   const correctAnswers = {
     "11-12": ["B", "E"], // easy access to local facilities, convenient for workers

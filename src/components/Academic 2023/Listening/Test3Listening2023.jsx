@@ -482,7 +482,7 @@ const Test3Listening2023 = () => {
       }
 
       // Erica: female
-      if (speaker === "WOMAN") {
+      if (speaker === "BREDA") {
         return (
           voices.find((v) => v.name.includes("Aria")) ||
           voices.find((v) => v.name.includes("Jenny")) ||

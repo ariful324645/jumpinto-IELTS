@@ -3125,8 +3125,8 @@ export const router = createBrowserRouter([
         Component: Test2Speaking2011,
       },
       {
-        path: "/speaking2Part32011",
-        Component: Speaking2Part32011,
+        path: "/speaking2Part22011",
+        Component: Speaking2Part22011,
       },
       {
         path: "/speaking2Part32011",

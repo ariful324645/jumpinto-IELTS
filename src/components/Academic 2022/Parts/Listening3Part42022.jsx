@@ -206,12 +206,26 @@ const Listening3Part42022 = () => {
     const voices = window.speechSynthesis.getVoices();
     const getVoice = (speaker) => {
       if (!voices.length) return null;
-      if (speaker === "ANNOUNCER")
+
+      // Announcer: male
+      if (speaker === "ANNOUNCER") {
         return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      if (speaker === "TC EMPLOYEE")
-        return voices.find((v) => v.name.includes("Zira")) || voices[0];
-      if (speaker === "OFFICER")
+      }
+      if (speaker === "FATHER") {
         return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
+
+      // Erica: female
+      if (speaker === "SPEAKER") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
+
       return voices[0];
     };
 
@@ -248,6 +262,7 @@ const Listening3Part42022 = () => {
     };
     speakNextChunk();
   };
+
 
   //  Marks show
   const correctAnswers = {
