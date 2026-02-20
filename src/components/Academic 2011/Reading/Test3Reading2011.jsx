@@ -4,6 +4,7 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { ImCross } from "react-icons/im";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
+import Reading3Pagination2011 from "../Pagination 2011/Reading3Pagination2011";
 
 
 
@@ -1004,7 +1005,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Reading4Pagination2020></Reading4Pagination2020> */}
+    <Reading3Pagination2011></Reading3Pagination2011>
     </div>
   );
 };

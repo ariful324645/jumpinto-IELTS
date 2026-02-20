@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
 import { IoIosArrowDown } from "react-icons/io";
+import Listening4Pagination2011 from "../Pagination 2011/Listening4Pagination2011";
 
 const Test4Listening2011 = () => {
   const [highlight, setHighlight] = useState(false);
@@ -904,7 +905,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Listening4Pagination2025></Listening4Pagination2025> */}
+    <Listening4Pagination2011></Listening4Pagination2011>
     </div>
   );
 };
