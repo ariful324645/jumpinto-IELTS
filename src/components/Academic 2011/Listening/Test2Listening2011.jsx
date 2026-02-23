@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
@@ -24,299 +24,6 @@ const Test2Listening2011 = () => {
   // result marks display
   const [showResult, setShowResult] = useState(false);
 
-  const lines = [
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Section 1, you will hear a conversation between a representative of an insurance company and a customer.",
-        "First, you have some time to look at questions 1 to 3.",
-        "You will see that there is an example that has been done for you.",
-        "On this occasion only, the conversation relating to this will be played first.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "Good morning. Total Insurance. Judy speaking. How may I help you?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "I recently shipped my belongings from overseas back here to Australia, and I took out insurance with your company.",
-        "Uh. Some items were damaged during the move, so I need to make a claim. What do I have to do?",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "OK, well, first I need to get a few details about this. Can you give me your name, please?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: ["Yes, it's Michael Alexander."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "The man's name is Michael Alexander. So Michael Alexander has been written in the space.",
-        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
-        "Listen carefully and answer questions 1 to 3.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "Good morning. Total Insurance. Judy speaking. How may I help you?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "I recently shipped my belongings from overseas back here to Australia, and I took out insurance with your company.",
-        "Uh. Some items were damaged during the move, so I need to make a claim. What do I have to do?",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "OK, well, first I need to get a few details about this. Can you give me your name, please?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: ["Yes, it's Michael Alexander."],
-    },
-    {
-      speaker: "JUDY",
-      text: ["OK, and your address please?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "My old address or my current one?",
-        {
-          text: "It's 24 Manly Street. Milperra near Sydney.",
-          number: 1,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["What was the suburb, sorry?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: ["Milperra. MILPERRA."],
-    },
-    {
-      speaker: "JUDY",
-      text: ["Right. Now, who was the shipping agent, Mr Alexander?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Hmm. You mean the company we used?",
-
-        {
-          text: "Oh, it was... er... First Class Movers.",
-          number: 2,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["OK, uh, where were the goods shipped from?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "China, but the ship came via Singapore, and was there for about a week.",
-        {
-          text: "It left on the 11th of October and got to Sydney on the 28th of November.",
-          number: 3,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "OK, I need one more thing. There's a reference number. It should be in the top right-hand corner of the pink form they gave you.",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Uh. Let me have a look. I have so many papers. Uh. Yes, here it is. It's 601ACK.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["Thanks."],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
-        "Now listen and answer questions 4 to 10.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "I need to take down a few details of the actual damage over the phone before you put in a full report.",
-        "Can you tell me how many items were damaged, and what the damage was?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Yes, well, four things actually. I'll start with the big things. My TV first of all, it's a large one, very expensive.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["Our Insurance doesn't cover electrical problems."],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "It isn't an electrical problem. ",
-        {
-          text: "The screen has a huge crack in it, so it's unusable.",
-          number: 4,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["I see. Any idea of the price to repair it?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "No. Well, I don't think it can be repaired. It will need a new one.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "OK, I'll make a note of that, and we'll see what we can do. Now, what was the second item?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        {
-          text: "The cabinet from the bathroom was damaged as well.",
-          number: 5,
-        },
-        " It's a lovely cabinet, we use it to keep our towels in.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["And what is the extent of the damage?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Well, the back and the sides seem OK, but the door has a huge hole in it.",
-        {
-          text: "It can't be repaired. I'm really not very happy about it.",
-          number: 6,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["And how much do you think it will cost to replace it?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Well, when I bought it last year, I paid $125 for it.",
-        {
-          text: " But the one I've seen here in Sydney is a bit more expensive, it's $140.",
-          number: 7,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["Right, and what was the third item?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "My dining room table, it's a lovely table from Indonesia. ",
-        {
-          text: "It must have been very hot inside the container, because one leg has completely split down the middle.",
-          number: 8,
-        },
-        "The top and the other 3 look OK, thank goodness.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["Any idea of the price to repair it?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Well, I had an estimate done on this actually, because it is a very special table to us. They quoted us $200 which is really pricey. So I hope the insurance will cover the total cost.",
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: [
-        "I'm sure that will be fine. Uh. What was the last item, Mr Alexander?",
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Well, we have a lovely set of china plates and dishes, you know, with matching cups, saucers, the lot. ",
-        {
-          text: "They were all in the one box, which must have got dropped, because some plates were broken, 6 actually.",
-          number: 9,
-        },
-      ],
-    },
-    {
-      speaker: "JUDY",
-      text: ["And can you tell me the replacement value of these?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: [
-        "Well, it's hard to say, because they were part of a set, but they can be up to $10 each, as it's such a good set.",
-        {
-          text: " OK, so that would be around $60 altogether.",
-          number: 10,
-        },
-      ],
-    },
-    {
-      speaker: "MICHAEL",
-      text: ["Yes, that's right."],
-    },
-    {
-      speaker: "JUDY",
-      text: ["And is that all of the items?"],
-    },
-    {
-      speaker: "MICHAEL",
-      text: ["Yes, so what do I have to do now?"],
-    },
-    {
-      speaker: "ANNOUNCER",
-      text: [
-        "That is the end of section 1. You now have half a minute to check your answers.",
-      ],
-    },
-  ];
 
   // different option
 
@@ -544,6 +251,530 @@ const correctAnswers = {
     }
   }, []);
 
+
+
+
+  
+    //updated button
+  
+    const [isPlaying, setIsPlaying] = useState(false);
+  
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [progress, setProgress] = useState(0);
+    const [totalDuration, setTotalDuration] = useState(0);
+  
+    const [voices, setVoices] = useState([]);
+  
+    const utteranceRef = useRef(null);
+    const progressInterval = useRef(null);
+  
+   const lines = [
+     {
+       speaker: "ANNOUNCER",
+       text: [
+         "Section 1, you will hear a conversation between a representative of an insurance company and a customer.",
+         "First, you have some time to look at questions 1 to 3.",
+         "You will see that there is an example that has been done for you.",
+         "On this occasion only, the conversation relating to this will be played first.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "Good morning. Total Insurance. Judy speaking. How may I help you?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "I recently shipped my belongings from overseas back here to Australia, and I took out insurance with your company.",
+         "Uh. Some items were damaged during the move, so I need to make a claim. What do I have to do?",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "OK, well, first I need to get a few details about this. Can you give me your name, please?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: ["Yes, it's Michael Alexander."],
+     },
+     {
+       speaker: "ANNOUNCER",
+       text: [
+         "The man's name is Michael Alexander. So Michael Alexander has been written in the space.",
+         "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+         "Listen carefully and answer questions 1 to 3.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "Good morning. Total Insurance. Judy speaking. How may I help you?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "I recently shipped my belongings from overseas back here to Australia, and I took out insurance with your company.",
+         "Uh. Some items were damaged during the move, so I need to make a claim. What do I have to do?",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "OK, well, first I need to get a few details about this. Can you give me your name, please?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: ["Yes, it's Michael Alexander."],
+     },
+     {
+       speaker: "JUDY",
+       text: ["OK, and your address please?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "My old address or my current one?",
+         {
+           text: "It's 24 Manly Street. Milperra near Sydney.",
+           number: 1,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["What was the suburb, sorry?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: ["Milperra. MILPERRA."],
+     },
+     {
+       speaker: "JUDY",
+       text: ["Right. Now, who was the shipping agent, Mr Alexander?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Hmm. You mean the company we used?",
+
+         {
+           text: "Oh, it was... er... First Class Movers.",
+           number: 2,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["OK, uh, where were the goods shipped from?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "China, but the ship came via Singapore, and was there for about a week.",
+         {
+           text: "It left on the 11th of October and got to Sydney on the 28th of November.",
+           number: 3,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "OK, I need one more thing. There's a reference number. It should be in the top right-hand corner of the pink form they gave you.",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Uh. Let me have a look. I have so many papers. Uh. Yes, here it is. It's 601ACK.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["Thanks."],
+     },
+     {
+       speaker: "ANNOUNCER",
+       text: [
+         "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
+         "Now listen and answer questions 4 to 10.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "I need to take down a few details of the actual damage over the phone before you put in a full report.",
+         "Can you tell me how many items were damaged, and what the damage was?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Yes, well, four things actually. I'll start with the big things. My TV first of all, it's a large one, very expensive.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["Our Insurance doesn't cover electrical problems."],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "It isn't an electrical problem. ",
+         {
+           text: "The screen has a huge crack in it, so it's unusable.",
+           number: 4,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["I see. Any idea of the price to repair it?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "No. Well, I don't think it can be repaired. It will need a new one.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "OK, I'll make a note of that, and we'll see what we can do. Now, what was the second item?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         {
+           text: "The cabinet from the bathroom was damaged as well.",
+           number: 5,
+         },
+         " It's a lovely cabinet, we use it to keep our towels in.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["And what is the extent of the damage?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Well, the back and the sides seem OK, but the door has a huge hole in it.",
+         {
+           text: "It can't be repaired. I'm really not very happy about it.",
+           number: 6,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["And how much do you think it will cost to replace it?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Well, when I bought it last year, I paid $125 for it.",
+         {
+           text: " But the one I've seen here in Sydney is a bit more expensive, it's $140.",
+           number: 7,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["Right, and what was the third item?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "My dining room table, it's a lovely table from Indonesia. ",
+         {
+           text: "It must have been very hot inside the container, because one leg has completely split down the middle.",
+           number: 8,
+         },
+         "The top and the other 3 look OK, thank goodness.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["Any idea of the price to repair it?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Well, I had an estimate done on this actually, because it is a very special table to us. They quoted us $200 which is really pricey. So I hope the insurance will cover the total cost.",
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: [
+         "I'm sure that will be fine. Uh. What was the last item, Mr Alexander?",
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Well, we have a lovely set of china plates and dishes, you know, with matching cups, saucers, the lot. ",
+         {
+           text: "They were all in the one box, which must have got dropped, because some plates were broken, 6 actually.",
+           number: 9,
+         },
+       ],
+     },
+     {
+       speaker: "JUDY",
+       text: ["And can you tell me the replacement value of these?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: [
+         "Well, it's hard to say, because they were part of a set, but they can be up to $10 each, as it's such a good set.",
+         {
+           text: " OK, so that would be around $60 altogether.",
+           number: 10,
+         },
+       ],
+     },
+     {
+       speaker: "MICHAEL",
+       text: ["Yes, that's right."],
+     },
+     {
+       speaker: "JUDY",
+       text: ["And is that all of the items?"],
+     },
+     {
+       speaker: "MICHAEL",
+       text: ["Yes, so what do I have to do now?"],
+     },
+     {
+       speaker: "ANNOUNCER",
+       text: [
+         "That is the end of section 1. You now have half a minute to check your answers.",
+       ],
+     },
+   ];
+
+    const flatText = lines.flatMap((line, lineIndex) =>
+      line.text.map((chunk, chunkIndex) => ({
+        text: chunk,
+        lineIndex,
+        chunkIndex,
+      })),
+    );
+    useEffect(() => {
+      let total = 0;
+  
+      flatText.forEach((item) => {
+        const actualText =
+          typeof item.text === "string" ? item.text : item.text.text;
+  
+        total += actualText.split(" ").length * 0.45;
+      });
+  
+      setTotalDuration(total);
+    }, [flatText]);
+  
+    // Load voices
+    useEffect(() => {
+      const loadVoices = () => {
+        const voiceList = window.speechSynthesis.getVoices();
+        if (voiceList.length > 0) {
+          setVoices(voiceList);
+          setVoicesLoaded(true);
+        }
+      };
+  
+      loadVoices();
+  
+      window.speechSynthesis.onvoiceschanged = () => {
+        loadVoices();
+      };
+    }, []);
+  
+    const getVoice = (speaker) => {
+      if (!voices.length) return null;
+  
+      if (speaker === "MICHAEL")
+        return voices.find((v) => v.name.includes("Male")) || voices[0];
+  
+      if (speaker === "JUDY")
+        return (
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[1] ||
+          voices[0]
+        );
+  
+      return voices[0]; // ANNOUNCER
+    };
+  
+    const speakFromIndex = (index) => {
+      if (index >= flatText.length) {
+        stopCompletely();
+        return;
+      }
+  
+      const item = flatText[index];
+  
+      setCurrentLine(item.lineIndex);
+      setCurrentChunk(item.chunkIndex);
+      setCurrentIndex(index);
+  
+      const actualText =
+        typeof item.text === "string" ? item.text : item.text.text;
+  
+      const utterance = new SpeechSynthesisUtterance(actualText);
+  
+      utterance.voice = getVoice(lines[item.lineIndex].speaker);
+      utterance.rate = 1;
+  
+      utterance.onstart = () => {
+        setCurrentLine(item.lineIndex);
+        setCurrentChunk(item.chunkIndex);
+      };
+  
+      utterance.onend = () => {
+        speakFromIndex(index + 1);
+      };
+  
+      utteranceRef.current = utterance;
+  
+      window.speechSynthesis.speak(utterance);
+    };
+  
+    const startProgress = () => {
+      if (progressInterval.current) clearInterval(progressInterval.current);
+      progressInterval.current = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= totalDuration) {
+            clearInterval(progressInterval.current);
+            return totalDuration;
+          }
+          return prev + 0.5;
+        });
+      }, 500);
+    };
+  
+    const [voicesLoaded, setVoicesLoaded] = useState(false);
+  
+    useEffect(() => {
+      const loadVoices = () => {
+        const v = window.speechSynthesis.getVoices();
+        if (v.length) {
+          setVoices(v);
+          setVoicesLoaded(true);
+        }
+      };
+  
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }, []);
+  
+    const handleControl = () => {
+      if (!voicesLoaded) {
+        alert("Voices still loading... please wait 1 second and click again.");
+        return;
+      }
+  
+      if (!isPlaying) {
+        // যদি আগে pause করা থাকে
+        if (currentIndex > 0 && !window.speechSynthesis.speaking) {
+          speakFromIndex(currentIndex);
+          startProgress();
+          setIsPlaying(true);
+          return;
+        }
+  
+        // First time start
+        window.speechSynthesis.cancel();
+        setCurrentIndex(0);
+        setProgress(0);
+        speakFromIndex(0);
+        startProgress();
+        setIsPlaying(true);
+      } else {
+        // Pause করলে পুরো speech cancel করবো
+        window.speechSynthesis.cancel();
+        clearInterval(progressInterval.current);
+        setIsPlaying(false);
+      }
+    };
+  
+    const stopCompletely = () => {
+      window.speechSynthesis.cancel();
+      clearInterval(progressInterval.current);
+      setIsPlaying(false);
+      setCurrentLine(null);
+      setCurrentChunk(null);
+      setCurrentIndex(0);
+      setProgress(0);
+    };
+  
+    const handleSeek = (e) => {
+      const percent = e.target.value;
+      const newIndex = Math.floor((percent / 100) * flatText.length);
+      window.speechSynthesis.cancel();
+      clearInterval(progressInterval.current);
+      setCurrentIndex(newIndex);
+      setProgress((percent / 100) * totalDuration);
+      if (isPlaying) {
+        speakFromIndex(newIndex);
+        startProgress();
+      }
+    };
+  
+    const renderLine = (line, lineIdx) => (
+      <p key={lineIdx} className="text-lg">
+        <span className="font-bold">{line.speaker}:</span>{" "}
+        {line.text.map((chunk, chunkIdx) => {
+          let parts = [chunk];
+          highlightedTexts.forEach((ht) => {
+            parts = parts.flatMap((part) =>
+              typeof part === "string"
+                ? part.split(ht).flatMap((p, i, arr) =>
+                    i < arr.length - 1
+                      ? [
+                          p,
+                          <span key={Math.random()} className="bg-yellow-200">
+                            {ht}
+                          </span>,
+                        ]
+                      : [p],
+                  )
+                : [part],
+            );
+          });
+  
+          return (
+            <span
+              key={chunkIdx}
+              className={
+                lineIdx === currentLine && chunkIdx === currentChunk
+                  ? "bg-green-200 transition-all duration-300"
+                  : ""
+              }
+            >
+              {parts}{" "}
+            </span>
+          );
+        })}
+      </p>
+    );
+  
+    const formatTime = (sec) => {
+      const minutes = Math.floor(sec / 60);
+      const seconds = Math.floor(sec % 60);
+      return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    };
+  
+
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
       <div className="flex gap-6 h-[1000px]">
@@ -559,14 +790,28 @@ const correctAnswers = {
             />
           </div>
 
-          <button
-            onClick={handleVoice}
-            className={`mt-5 px-6 py-2 rounded-full font-medium text-white transition ${
-              isSpeaking ? "bg-yellow-400" : "bg-green-400"
-            }`}
-          >
-            {isSpeaking ? "⏹ Stop" : "🔊 Play Voice"}
-          </button>
+          {/* updated button */}
+          <div className="space-y-4">
+            <button
+              onClick={handleControl}
+              className={`px-6 py-2 rounded-full text-white ${isPlaying ? "bg-yellow-500" : "bg-green-500"}`}
+            >
+              {isPlaying ? "⏸ Pause" : "▶ Play"}
+            </button>
+
+            <div className="flex items-center gap-4">
+              <span>{formatTime(progress)}</span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={(progress / totalDuration) * 100 || 0}
+                onChange={handleSeek}
+                className="w-full"
+              />
+              <span>{formatTime(totalDuration)}</span>
+            </div>
+          </div>
 
           <hr />
           <div className="flex justify-between items-center">
@@ -808,7 +1053,6 @@ const correctAnswers = {
 
                 {/* Cabinet */}
                 <tr>
-               
                   <td className="border border-gray-400 p-2">
                     The{" "}
                     <button
@@ -827,7 +1071,7 @@ const correctAnswers = {
                       className="mx-1 w-[100px] border border-gray-300 rounded-md px-1 py-0.5 text-lg"
                       type="text"
                     />{" "}
-                     cabinet
+                    cabinet
                   </td>
                   <td className="border border-gray-400 p-2">
                     The{" "}
@@ -1044,7 +1288,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-    <Listening2Pagination2011></Listening2Pagination2011>
+      <Listening2Pagination2011></Listening2Pagination2011>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
 import { ImCross } from "react-icons/im";
@@ -20,6 +20,239 @@ const Test4Listening2011 = () => {
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
+
+  const handleTextSelect = () => {
+    const selection = window.getSelection();
+    if (selection && selection.toString()) {
+      const range = selection.getRangeAt(0).getBoundingClientRect();
+      setModalPosition({
+        top: range.bottom + window.scrollY,
+        left: range.left + window.scrollX,
+      });
+      setSelectedText(selection.toString());
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleHighlight = () => {
+    if (selectedText) {
+      setHighlightedTexts((prev) => [...prev, selectedText]);
+      setSelectedText("");
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleClearHighlight = () => {
+    setHighlightedTexts([]);
+    setSelectedText("");
+    setIsModalOpen(false);
+  };
+
+  const renderText = (chunk) => {
+    const text = typeof chunk === "string" ? chunk : chunk.text;
+    let parts = [text];
+    highlightedTexts.forEach((ht) => {
+      parts = parts.flatMap((part) =>
+        typeof part === "string"
+          ? part.split(ht).flatMap((p, i, arr) =>
+              i < arr.length - 1
+                ? [
+                    p,
+                    <span key={Math.random()} className="bg-yellow-200 ">
+                      {ht}
+                    </span>,
+                  ]
+                : [p],
+            )
+          : [part],
+      );
+    });
+    return parts;
+  };
+
+  const speakerText = (line, lineIdx) => {
+    const chunks = Array.isArray(line.text) ? line.text : [line.text];
+    return (
+      <h3 key={lineIdx} className="text-lg">
+        <span className="font-bold">{line.speaker}:</span>{" "}
+        {chunks.map((chunk, idx) => {
+          const chunkNumber = typeof chunk === "string" ? null : chunk.number;
+          return (
+            <span
+              key={idx}
+              className={`ml-2 ${
+                lineIdx === currentLine && idx === currentChunk
+                  ? "bg-green-200"
+                  : highlight && chunkNumber
+                    ? "bg-yellow-100"
+                    : "bg-transparent"
+              }`}
+            >
+              {renderText(chunk)}{" "}
+              {chunkNumber &&
+                highlight &&
+                !(lineIdx === currentLine && idx === currentChunk) && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white">
+                    {chunkNumber}
+                  </span>
+                )}
+              {chunkNumber &&
+                lineIdx === currentLine &&
+                idx === currentChunk && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-green-700 rounded-sm text-white ">
+                    {chunkNumber}
+                  </span>
+                )}
+            </span>
+          );
+        })}
+      </h3>
+    );
+  };
+
+  // ---- Voice function ----
+  const handleVoice = () => {
+    if (isSpeaking) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      setCurrentLine(null);
+      setCurrentChunk(null);
+      return;
+    }
+    const voices = window.speechSynthesis.getVoices();
+    const getVoice = (speaker) => {
+      if (!voices.length) return null;
+
+      // Announcer: male
+      if (speaker === "ANNOUNCER") {
+        return voices.find((v) => v.name.includes("Alex")) || voices[0];
+      }
+      if (speaker === "FATHER") {
+        return voices.find((v) => v.name.includes("David")) || voices[0];
+      }
+
+      // Erica: female
+      if (speaker === "WOMAN") {
+        return (
+          voices.find((v) => v.name.includes("Aria")) ||
+          voices.find((v) => v.name.includes("Jenny")) ||
+          voices.find((v) => v.name.includes("Ana")) ||
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[0]
+        );
+      }
+
+      return voices[0];
+    };
+
+    let lineIndex = 0;
+    let chunkIndex = 0;
+    setIsSpeaking(true);
+    const speakNextChunk = () => {
+      if (lineIndex >= lines.length) {
+        setIsSpeaking(false);
+        setCurrentLine(null);
+        setCurrentChunk(null);
+        return;
+      }
+      const line = lines[lineIndex];
+      const chunks = Array.isArray(line.text) ? line.text : [line.text];
+      if (chunkIndex >= chunks.length) {
+        lineIndex++;
+        chunkIndex = 0;
+        speakNextChunk();
+        return;
+      }
+      setCurrentLine(lineIndex);
+      setCurrentChunk(chunkIndex);
+      const chunk = chunks[chunkIndex];
+      const text = typeof chunk === "string" ? chunk : chunk.text;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.voice = getVoice(line.speaker);
+      utterance.rate = 1;
+      utterance.onend = () => {
+        chunkIndex++;
+        speakNextChunk();
+      };
+      window.speechSynthesis.speak(utterance);
+    };
+    speakNextChunk();
+  };
+
+  //  Marks show
+
+const correctAnswers = {
+  1: "temporary", // Newspaper advert for temporary staff
+  2: "shift", // Two shifts. Can choose your shift (must be the same each week)
+  3: "break", // Pay: £5.50 per hour, including a break
+  4: "meal", // A meal is provided in the hotel
+  5: "shirt", // Dress: a white shirt and trousers (not supplied)
+  6: "jacket", // a jacket (supplied)
+  7: "28th june", // Starting date: 28th June
+  8: "call", // Call Jane (Service Manager) before
+  9: "midday", // Tomorrow (Tel: call before midday)
+  10: "reference", // She'll require a reference
+};
+
+
+  // --- Handle input change and auto-check ---
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [id]: value };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Calculate live score ---
+  const calculateScore = (answers) => {
+    let newScore = 0;
+    Object.keys(correctAnswers).forEach((key) => {
+      if (
+        answers[key]?.trim().toLowerCase() ===
+        correctAnswers[key].trim().toLowerCase()
+      ) {
+        newScore += 1;
+      }
+    });
+    setScore(newScore);
+    localStorage.setItem("/2021/Test 1/listening", newScore);
+  };
+
+  const toggleButton = (id) => {
+    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const handleClear = () => {
+    setUserAnswers({});
+    setScore(0);
+    setActiveButtons({});
+    setIsOpen(false);
+    localStorage.removeItem("/2021/Test 1/listening");
+  };
+
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
+
+
+  
+    //update  button function
+    const [isPlaying, setIsPlaying] = useState(false);
+  
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [progress, setProgress] = useState(0);
+    const [totalDuration, setTotalDuration] = useState(0);
+  
+    const [voices, setVoices] = useState([]);
+  
+    const utteranceRef = useRef(null);
+    const progressInterval = useRef(null);
+  
   const lines = [
     {
       speaker: "ANNOUNCER",
@@ -298,223 +531,217 @@ const Test4Listening2011 = () => {
     },
   ];
 
-  const handleTextSelect = () => {
-    const selection = window.getSelection();
-    if (selection && selection.toString()) {
-      const range = selection.getRangeAt(0).getBoundingClientRect();
-      setModalPosition({
-        top: range.bottom + window.scrollY,
-        left: range.left + window.scrollX,
+    const flatText = lines.flatMap((line, lineIndex) =>
+      line.text.map((chunk, chunkIndex) => ({
+        text: chunk,
+        lineIndex,
+        chunkIndex,
+      })),
+    );
+    useEffect(() => {
+      let total = 0;
+  
+      flatText.forEach((item) => {
+        const actualText =
+          typeof item.text === "string" ? item.text : item.text.text;
+  
+        total += actualText.split(" ").length * 0.45;
       });
-      setSelectedText(selection.toString());
-      setIsModalOpen(true);
-    }
-  };
-
-  const handleHighlight = () => {
-    if (selectedText) {
-      setHighlightedTexts((prev) => [...prev, selectedText]);
-      setSelectedText("");
-      setIsModalOpen(false);
-    }
-  };
-
-  const handleClearHighlight = () => {
-    setHighlightedTexts([]);
-    setSelectedText("");
-    setIsModalOpen(false);
-  };
-
-  const renderText = (chunk) => {
-    const text = typeof chunk === "string" ? chunk : chunk.text;
-    let parts = [text];
-    highlightedTexts.forEach((ht) => {
-      parts = parts.flatMap((part) =>
-        typeof part === "string"
-          ? part.split(ht).flatMap((p, i, arr) =>
-              i < arr.length - 1
-                ? [
-                    p,
-                    <span key={Math.random()} className="bg-yellow-200 ">
-                      {ht}
-                    </span>,
-                  ]
-                : [p],
-            )
-          : [part],
-      );
-    });
-    return parts;
-  };
-
-  const speakerText = (line, lineIdx) => {
-    const chunks = Array.isArray(line.text) ? line.text : [line.text];
-    return (
-      <h3 key={lineIdx} className="text-lg">
+  
+      setTotalDuration(total);
+    }, [flatText]);
+  
+    // Load voices
+    useEffect(() => {
+      const loadVoices = () => {
+        const voiceList = window.speechSynthesis.getVoices();
+        if (voiceList.length > 0) {
+          setVoices(voiceList);
+          setVoicesLoaded(true);
+        }
+      };
+  
+      loadVoices();
+  
+      window.speechSynthesis.onvoiceschanged = () => {
+        loadVoices();
+      };
+    }, []);
+  
+    const getVoice = (speaker) => {
+      if (!voices.length) return null;
+  
+      if (speaker === "TUTOR")
+        return voices.find((v) => v.name.includes("Male")) || voices[0];
+  
+      if (speaker === "WOMAN")
+        return (
+          voices.find((v) => v.name.includes("Female")) ||
+          voices[1] ||
+          voices[0]
+        );
+  
+      return voices[0]; // ANNOUNCER
+    };
+  
+    const speakFromIndex = (index) => {
+      if (index >= flatText.length) {
+        stopCompletely();
+        return;
+      }
+  
+      const item = flatText[index];
+  
+      setCurrentLine(item.lineIndex);
+      setCurrentChunk(item.chunkIndex);
+      setCurrentIndex(index);
+  
+      const actualText =
+        typeof item.text === "string" ? item.text : item.text.text;
+  
+      const utterance = new SpeechSynthesisUtterance(actualText);
+  
+      utterance.voice = getVoice(lines[item.lineIndex].speaker);
+      utterance.rate = 1;
+  
+      utterance.onstart = () => {
+        setCurrentLine(item.lineIndex);
+        setCurrentChunk(item.chunkIndex);
+      };
+  
+      utterance.onend = () => {
+        speakFromIndex(index + 1);
+      };
+  
+      utteranceRef.current = utterance;
+  
+      window.speechSynthesis.speak(utterance);
+    };
+  
+    const startProgress = () => {
+      if (progressInterval.current) clearInterval(progressInterval.current);
+      progressInterval.current = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= totalDuration) {
+            clearInterval(progressInterval.current);
+            return totalDuration;
+          }
+          return prev + 0.5;
+        });
+      }, 500);
+    };
+  
+    const [voicesLoaded, setVoicesLoaded] = useState(false);
+  
+    useEffect(() => {
+      const loadVoices = () => {
+        const v = window.speechSynthesis.getVoices();
+        if (v.length) {
+          setVoices(v);
+          setVoicesLoaded(true);
+        }
+      };
+  
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }, []);
+  
+    const handleControl = () => {
+      if (!voicesLoaded) {
+        alert("Voices still loading... please wait 1 second and click again.");
+        return;
+      }
+  
+      if (!isPlaying) {
+        // যদি আগে pause করা থাকে
+        if (currentIndex > 0 && !window.speechSynthesis.speaking) {
+          speakFromIndex(currentIndex);
+          startProgress();
+          setIsPlaying(true);
+          return;
+        }
+  
+        // First time start
+        window.speechSynthesis.cancel();
+        setCurrentIndex(0);
+        setProgress(0);
+        speakFromIndex(0);
+        startProgress();
+        setIsPlaying(true);
+      } else {
+        // Pause করলে পুরো speech cancel করবো
+        window.speechSynthesis.cancel();
+        clearInterval(progressInterval.current);
+        setIsPlaying(false);
+      }
+    };
+  
+    const stopCompletely = () => {
+      window.speechSynthesis.cancel();
+      clearInterval(progressInterval.current);
+      setIsPlaying(false);
+      setCurrentLine(null);
+      setCurrentChunk(null);
+      setCurrentIndex(0);
+      setProgress(0);
+    };
+  
+    const handleSeek = (e) => {
+      const percent = e.target.value;
+      const newIndex = Math.floor((percent / 100) * flatText.length);
+      window.speechSynthesis.cancel();
+      clearInterval(progressInterval.current);
+      setCurrentIndex(newIndex);
+      setProgress((percent / 100) * totalDuration);
+      if (isPlaying) {
+        speakFromIndex(newIndex);
+        startProgress();
+      }
+    };
+  
+    const renderLine = (line, lineIdx) => (
+      <p key={lineIdx} className="text-lg">
         <span className="font-bold">{line.speaker}:</span>{" "}
-        {chunks.map((chunk, idx) => {
-          const chunkNumber = typeof chunk === "string" ? null : chunk.number;
+        {line.text.map((chunk, chunkIdx) => {
+          let parts = [chunk];
+          highlightedTexts.forEach((ht) => {
+            parts = parts.flatMap((part) =>
+              typeof part === "string"
+                ? part.split(ht).flatMap((p, i, arr) =>
+                    i < arr.length - 1
+                      ? [
+                          p,
+                          <span key={Math.random()} className="bg-yellow-200">
+                            {ht}
+                          </span>,
+                        ]
+                      : [p],
+                  )
+                : [part],
+            );
+          });
+  
           return (
             <span
-              key={idx}
-              className={`ml-2 ${
-                lineIdx === currentLine && idx === currentChunk
-                  ? "bg-green-200"
-                  : highlight && chunkNumber
-                    ? "bg-yellow-100"
-                    : "bg-transparent"
-              }`}
+              key={chunkIdx}
+              className={
+                lineIdx === currentLine && chunkIdx === currentChunk
+                  ? "bg-green-200 transition-all duration-300"
+                  : ""
+              }
             >
-              {renderText(chunk)}{" "}
-              {chunkNumber &&
-                highlight &&
-                !(lineIdx === currentLine && idx === currentChunk) && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white">
-                    {chunkNumber}
-                  </span>
-                )}
-              {chunkNumber &&
-                lineIdx === currentLine &&
-                idx === currentChunk && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-green-700 rounded-sm text-white ">
-                    {chunkNumber}
-                  </span>
-                )}
+              {parts}{" "}
             </span>
           );
         })}
-      </h3>
+      </p>
     );
-  };
-
-  // ---- Voice function ----
-  const handleVoice = () => {
-    if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-      setCurrentLine(null);
-      setCurrentChunk(null);
-      return;
-    }
-    const voices = window.speechSynthesis.getVoices();
-    const getVoice = (speaker) => {
-      if (!voices.length) return null;
-
-      // Announcer: male
-      if (speaker === "ANNOUNCER") {
-        return voices.find((v) => v.name.includes("Alex")) || voices[0];
-      }
-      if (speaker === "FATHER") {
-        return voices.find((v) => v.name.includes("David")) || voices[0];
-      }
-
-      // Erica: female
-      if (speaker === "WOMAN") {
-        return (
-          voices.find((v) => v.name.includes("Aria")) ||
-          voices.find((v) => v.name.includes("Jenny")) ||
-          voices.find((v) => v.name.includes("Ana")) ||
-          voices.find((v) => v.name.includes("Female")) ||
-          voices[0]
-        );
-      }
-
-      return voices[0];
+  
+    const formatTime = (sec) => {
+      const minutes = Math.floor(sec / 60);
+      const seconds = Math.floor(sec % 60);
+      return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
     };
-
-    let lineIndex = 0;
-    let chunkIndex = 0;
-    setIsSpeaking(true);
-    const speakNextChunk = () => {
-      if (lineIndex >= lines.length) {
-        setIsSpeaking(false);
-        setCurrentLine(null);
-        setCurrentChunk(null);
-        return;
-      }
-      const line = lines[lineIndex];
-      const chunks = Array.isArray(line.text) ? line.text : [line.text];
-      if (chunkIndex >= chunks.length) {
-        lineIndex++;
-        chunkIndex = 0;
-        speakNextChunk();
-        return;
-      }
-      setCurrentLine(lineIndex);
-      setCurrentChunk(chunkIndex);
-      const chunk = chunks[chunkIndex];
-      const text = typeof chunk === "string" ? chunk : chunk.text;
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = getVoice(line.speaker);
-      utterance.rate = 1;
-      utterance.onend = () => {
-        chunkIndex++;
-        speakNextChunk();
-      };
-      window.speechSynthesis.speak(utterance);
-    };
-    speakNextChunk();
-  };
-
-  //  Marks show
-
-const correctAnswers = {
-  1: "temporary", // Newspaper advert for temporary staff
-  2: "shift", // Two shifts. Can choose your shift (must be the same each week)
-  3: "break", // Pay: £5.50 per hour, including a break
-  4: "meal", // A meal is provided in the hotel
-  5: "shirt", // Dress: a white shirt and trousers (not supplied)
-  6: "jacket", // a jacket (supplied)
-  7: "28th june", // Starting date: 28th June
-  8: "call", // Call Jane (Service Manager) before
-  9: "midday", // Tomorrow (Tel: call before midday)
-  10: "reference", // She'll require a reference
-};
-
-
-  // --- Handle input change and auto-check ---
-  const handleInputChange = (id, value) => {
-    setUserAnswers((prev) => {
-      const updated = { ...prev, [id]: value };
-      calculateScore(updated);
-      return updated;
-    });
-  };
-
-  // --- Calculate live score ---
-  const calculateScore = (answers) => {
-    let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
-      }
-    });
-    setScore(newScore);
-    localStorage.setItem("/2021/Test 1/listening", newScore);
-  };
-
-  const toggleButton = (id) => {
-    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
-  const handleClear = () => {
-    setUserAnswers({});
-    setScore(0);
-    setActiveButtons({});
-    setIsOpen(false);
-    localStorage.removeItem("/2021/Test 1/listening");
-  };
-
-  // --- Restore answers from localStorage (optional) ---
-  useEffect(() => {
-    const savedScore = localStorage.getItem("/2021/Test 1/listening");
-    if (savedScore) {
-      setScore(Number(savedScore));
-    }
-  }, []);
 
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
@@ -531,14 +758,27 @@ const correctAnswers = {
             />
           </div>
 
-          <button
-            onClick={handleVoice}
-            className={`mt-5 px-6 py-2 rounded-full font-medium text-white transition ${
-              isSpeaking ? "bg-yellow-400" : "bg-green-400"
-            }`}
-          >
-            {isSpeaking ? "⏹ Stop" : "🔊 Play Voice"}
-          </button>
+          <div className="space-y-4">
+            <button
+              onClick={handleControl}
+              className={`px-6 py-2 rounded-full text-white ${isPlaying ? "bg-yellow-500" : "bg-green-500"}`}
+            >
+              {isPlaying ? "⏸ Pause" : "▶ Play"}
+            </button>
+
+            <div className="flex items-center gap-4">
+              <span>{formatTime(progress)}</span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={(progress / totalDuration) * 100 || 0}
+                onChange={handleSeek}
+                className="w-full"
+              />
+              <span>{formatTime(totalDuration)}</span>
+            </div>
+          </div>
 
           <hr />
           <div className="flex justify-between items-center">
@@ -905,7 +1145,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-    <Listening4Pagination2011></Listening4Pagination2011>
+      <Listening4Pagination2011></Listening4Pagination2011>
     </div>
   );
 };

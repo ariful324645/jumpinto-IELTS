@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
@@ -24,222 +24,23 @@ const Test1Listening2011 = () => {
   // result marks display
   const [showResult, setShowResult] = useState(false);
 
-const lines = [
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Section 1, you will hear a conversation between two friends called George and Nina about a summer music festival.",
-      "First, you have some time to look at questions 1 and 2.",
-      "You will see that there is an example that has been done for you.",
-      "On this occasion only, the conversation relating to this will be played first.",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: ["Hi, George. Glad you're back. Loads of people have phoned you."],
-  },
-  {
-    speaker: "GEORGE",
-    text: ["Really?"],
-  },
-  {
-    speaker: "NINA",
-    text: ["I felt just like your secretary."],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "Sorry. I went into the library this afternoon to have a look at a newspaper, and I came across something really interesting.",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: ["What? A book?"],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "No, a brochure from a summer festival, mainly Spanish music. Look, I've got it here.",
-    ],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "George says that he found a brochure from a festival, so b has been circled as the answer.",
-      "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
-      "Listen carefully and answer questions 1 and 2.",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: ["Hi, George. Glad you're back. Loads of people have phoned you."],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "Really?",
-      "Sorry. I went into the library this afternoon to have a look at a newspaper, and I came across something really interesting.",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: ["I felt just like your secretary.", "What? A book?"],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "No, a brochure from a summer festival, mainly Spanish music. Look, I've got it here.",
-      {
-        text: "They're really good. They had a video with all the highlights of the festival at a stand in the lobby to the library. So I heard them. They play fantastic instruments, drums and flutes and old kinds of guitars. I've never heard anything like it before.",
-        number: 1,
-      },
-      "The only problem is there aren't any cheap seats. It's all one price.",
-      {
-        text: "Yeah, though, I think that if you sit at the back, you can actually hear the whole thing better.",
-        number: 2,
-      },
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Spanish music. I really love the guitar. Hmm. Let's have a look. So what's this group 'Guitarrini'?",
-      "Sounds great.",
-      "Hmm. Yes, anyway we can decide when we get there.",
-    ],
-  },
-  {
-    speaker: "GEORGE",
-    text: ["OK, shall we go then? Spoil ourselves?"],
-  },
-  {
-    speaker: "NINA",
-    text: ["Yes, let's."],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "Before you hear the rest of the conversation, you have some time to look at questions 3 to 10.",
-      "Now listen and answer questions 3 to 10.",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: ["So will you fill in the form or shall I?"],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "I'll do it. Name: George O'Neill. Address: 48 North Avenue, Westsea.",
-      {
-        text: "Do you remember our new postcode? Still can't remember it.",
-        number: 3,
-      },
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Hmm. Just a minute, I've got it written down here. WS62YH.",
-      {
-        text: "Do you need the phone too?",
-        number: 4,
-      },
-    ],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "Please, I'm really bad at numbers. 01674553242.",
-      {
-        text: "So, let's book two tickets for Guitarrini.",
-        number: 5,
-      },
-      "OK, if you're sure £7.50 each is all right. How do you feel about the singer?",
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Hmm. I haven't quite decided, but I've noticed something on the booking form that might just persuade me.",
-    ],
-  },
-  {
-    speaker: "GEORGE",
-    text: ["What's that then?"],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Yes, look here. Sunday, 17th of June. Singer, ticket £6.00 includes drinks in the garden.",
-      {
-        text: "Sounds like a bargain to me.",
-        number: 6,
-      },
-    ],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "OK, let's book two tickets for that. So what else? I'm feeling quite keen now. How about the pianist on the 22nd of June?",
-      {
-        text: "Anna Ventura? I've just remembered that's my evening class night.",
-        number: 7,
-      },
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Hmm. That's OK. I'll just have to go on my own. But we can go to the Spanish dance and guitar concert together, can't we?",
-    ],
-  },
-  {
-    speaker: "GEORGE",
-    text: [
-      "Yes, I'm sure Tom and Kieran would enjoy that too. Good heavens, £10.50 a ticket.",
-      {
-        text: "I can see we're going to have to go without food for the rest of the week. We'll need to book four.",
-        number: 8,
-      },
-    ],
-  },
-  {
-    speaker: "NINA",
-    text: [
-      "Uh. Wish we were students. Look, children, students and senior citizens get a 50% discount on everything.",
-      {
-        text: "If only.",
-        number: 9,
-      },
-    ],
-  },
-  {
-    speaker: "ANNOUNCER",
-    text: [
-      "That is the end of section 1.",
-      "You now have half a minute to check your answers.",
-    ],
-  },
-];
-
   // different option
-const questions = [
-  "In the lobby of the library George saw",
-  "George wants to sit at the back so they can",
-];
+  const questions = [
+    "In the lobby of the library George saw",
+    "George wants to sit at the back so they can",
+  ];
 
-const options = [
-  [
-    "A. a group playing music.",
-    "B. a display of instruments.",
-    "C. a video about the festival.",
-  ],
-  ["A. see well.", "B. hear clearly.", "C. pay less."],
-];
+  const options = [
+    [
+      "A. a group playing music.",
+      "B. a display of instruments.",
+      "C. a video about the festival.",
+    ],
+    ["A. see well.", "B. hear clearly.", "C. pay less."],
+  ];
 
   const [selectedOptions, setSelectedOptions] = useState(
-    Array(questions.length).fill(null)
+    Array(questions.length).fill(null),
   );
   const handleOptionClick = (qIndex, option) => {
     const updatedOptions = [...selectedOptions];
@@ -296,9 +97,9 @@ const options = [
                       {ht}
                     </span>,
                   ]
-                : [p]
+                : [p],
             )
-          : [part]
+          : [part],
       );
     });
     return parts;
@@ -318,8 +119,8 @@ const options = [
                 lineIdx === currentLine && idx === currentChunk
                   ? "bg-green-200"
                   : highlight && chunkNumber
-                  ? "bg-yellow-100"
-                  : "bg-transparent"
+                    ? "bg-yellow-100"
+                    : "bg-transparent"
               }`}
             >
               {renderText(chunk)}{" "}
@@ -418,19 +219,18 @@ const options = [
 
   //  Marks show
 
-const correctAnswers = {
-  1: "C. a video about the festival.",
-  2: "B. hear clearly.",
-  3: "48 North Avenue",
-  4: "WS62YH",
-  5: "01674553242",
-  6: "drinks",
-  7: "Pianist",
-  8: "10.50",
-  9: "4",
-  10: "50%",
-};
-
+  const correctAnswers = {
+    1: "C. a video about the festival.",
+    2: "B. hear clearly.",
+    3: "48 North Avenue",
+    4: "WS62YH",
+    5: "01674553242",
+    6: "drinks",
+    7: "Pianist",
+    8: "10.50",
+    9: "4",
+    10: "50%",
+  };
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
@@ -479,6 +279,427 @@ const correctAnswers = {
     }
   }, []);
 
+  //updated button
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [totalDuration, setTotalDuration] = useState(0);
+
+  const [voices, setVoices] = useState([]);
+
+  const utteranceRef = useRef(null);
+  const progressInterval = useRef(null);
+
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Section 1, you will hear a conversation between two friends called George and Nina about a summer music festival.",
+        "First, you have some time to look at questions 1 and 2.",
+        "You will see that there is an example that has been done for you.",
+        "On this occasion only, the conversation relating to this will be played first.",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: ["Hi, George. Glad you're back. Loads of people have phoned you."],
+    },
+    {
+      speaker: "GEORGE",
+      text: ["Really?"],
+    },
+    {
+      speaker: "NINA",
+      text: ["I felt just like your secretary."],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "Sorry. I went into the library this afternoon to have a look at a newspaper, and I came across something really interesting.",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: ["What? A book?"],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "No, a brochure from a summer festival, mainly Spanish music. Look, I've got it here.",
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "George says that he found a brochure from a festival, so b has been circled as the answer.",
+        "Now we shall begin. You should answer the questions as you listen, because you will not hear the recording a second time.",
+        "Listen carefully and answer questions 1 and 2.",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: ["Hi, George. Glad you're back. Loads of people have phoned you."],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "Really?",
+        "Sorry. I went into the library this afternoon to have a look at a newspaper, and I came across something really interesting.",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: ["I felt just like your secretary.", "What? A book?"],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "No, a brochure from a summer festival, mainly Spanish music. Look, I've got it here.",
+        {
+          text: "They're really good. They had a video with all the highlights of the festival at a stand in the lobby to the library. So I heard them. They play fantastic instruments, drums and flutes and old kinds of guitars. I've never heard anything like it before.",
+          number: 1,
+        },
+        "The only problem is there aren't any cheap seats. It's all one price.",
+        {
+          text: "Yeah, though, I think that if you sit at the back, you can actually hear the whole thing better.",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Spanish music. I really love the guitar. Hmm. Let's have a look. So what's this group 'Guitarrini'?",
+        "Sounds great.",
+        "Hmm. Yes, anyway we can decide when we get there.",
+      ],
+    },
+    {
+      speaker: "GEORGE",
+      text: ["OK, shall we go then? Spoil ourselves?"],
+    },
+    {
+      speaker: "NINA",
+      text: ["Yes, let's."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 3 to 10.",
+        "Now listen and answer questions 3 to 10.",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: ["So will you fill in the form or shall I?"],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "I'll do it. Name: George O'Neill. Address: 48 North Avenue, Westsea.",
+        {
+          text: "Do you remember our new postcode? Still can't remember it.",
+          number: 3,
+        },
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Hmm. Just a minute, I've got it written down here. WS62YH.",
+        {
+          text: "Do you need the phone too?",
+          number: 4,
+        },
+      ],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "Please, I'm really bad at numbers. 01674553242.",
+        {
+          text: "So, let's book two tickets for Guitarrini.",
+          number: 5,
+        },
+        "OK, if you're sure £7.50 each is all right. How do you feel about the singer?",
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Hmm. I haven't quite decided, but I've noticed something on the booking form that might just persuade me.",
+      ],
+    },
+    {
+      speaker: "GEORGE",
+      text: ["What's that then?"],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Yes, look here. Sunday, 17th of June. Singer, ticket £6.00 includes drinks in the garden.",
+        {
+          text: "Sounds like a bargain to me.",
+          number: 6,
+        },
+      ],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "OK, let's book two tickets for that. So what else? I'm feeling quite keen now. How about the pianist on the 22nd of June?",
+        {
+          text: "Anna Ventura? I've just remembered that's my evening class night.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Hmm. That's OK. I'll just have to go on my own. But we can go to the Spanish dance and guitar concert together, can't we?",
+      ],
+    },
+    {
+      speaker: "GEORGE",
+      text: [
+        "Yes, I'm sure Tom and Kieran would enjoy that too. Good heavens, £10.50 a ticket.",
+        {
+          text: "I can see we're going to have to go without food for the rest of the week. We'll need to book four.",
+          number: 8,
+        },
+      ],
+    },
+    {
+      speaker: "NINA",
+      text: [
+        "Uh. Wish we were students. Look, children, students and senior citizens get a 50% discount on everything.",
+        {
+          text: "If only.",
+          number: 9,
+        },
+      ],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of section 1.",
+        "You now have half a minute to check your answers.",
+      ],
+    },
+  ];
+  const flatText = lines.flatMap((line, lineIndex) =>
+    line.text.map((chunk, chunkIndex) => ({
+      text: chunk,
+      lineIndex,
+      chunkIndex,
+    })),
+  );
+  useEffect(() => {
+    let total = 0;
+
+    flatText.forEach((item) => {
+      const actualText =
+        typeof item.text === "string" ? item.text : item.text.text;
+
+      total += actualText.split(" ").length * 0.45;
+    });
+
+    setTotalDuration(total);
+  }, [flatText]);
+
+  // Load voices
+  useEffect(() => {
+    const loadVoices = () => {
+      const voiceList = window.speechSynthesis.getVoices();
+      if (voiceList.length > 0) {
+        setVoices(voiceList);
+        setVoicesLoaded(true);
+      }
+    };
+
+    loadVoices();
+
+    window.speechSynthesis.onvoiceschanged = () => {
+      loadVoices();
+    };
+  }, []);
+
+  const getVoice = (speaker) => {
+    if (!voices.length) return null;
+
+    if (speaker === "GEORGE")
+      return voices.find((v) => v.name.includes("Male")) || voices[0];
+
+    if (speaker === "NINA")
+      return (
+        voices.find((v) => v.name.includes("Female")) || voices[1] || voices[0]
+      );
+
+    return voices[0]; // ANNOUNCER
+  };
+
+  const speakFromIndex = (index) => {
+    if (index >= flatText.length) {
+      stopCompletely();
+      return;
+    }
+
+    const item = flatText[index];
+
+    setCurrentLine(item.lineIndex);
+    setCurrentChunk(item.chunkIndex);
+    setCurrentIndex(index);
+
+    const actualText =
+      typeof item.text === "string" ? item.text : item.text.text;
+
+    const utterance = new SpeechSynthesisUtterance(actualText);
+
+    utterance.voice = getVoice(lines[item.lineIndex].speaker);
+    utterance.rate = 1;
+
+    utterance.onstart = () => {
+      setCurrentLine(item.lineIndex);
+      setCurrentChunk(item.chunkIndex);
+    };
+
+    utterance.onend = () => {
+      speakFromIndex(index + 1);
+    };
+
+    utteranceRef.current = utterance;
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const startProgress = () => {
+    if (progressInterval.current) clearInterval(progressInterval.current);
+    progressInterval.current = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= totalDuration) {
+          clearInterval(progressInterval.current);
+          return totalDuration;
+        }
+        return prev + 0.5;
+      });
+    }, 500);
+  };
+
+  const [voicesLoaded, setVoicesLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadVoices = () => {
+      const v = window.speechSynthesis.getVoices();
+      if (v.length) {
+        setVoices(v);
+        setVoicesLoaded(true);
+      }
+    };
+
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }, []);
+
+  const handleControl = () => {
+    if (!voicesLoaded) {
+      alert("Voices still loading... please wait 1 second and click again.");
+      return;
+    }
+
+    if (!isPlaying) {
+      // যদি আগে pause করা থাকে
+      if (currentIndex > 0 && !window.speechSynthesis.speaking) {
+        speakFromIndex(currentIndex);
+        startProgress();
+        setIsPlaying(true);
+        return;
+      }
+
+      // First time start
+      window.speechSynthesis.cancel();
+      setCurrentIndex(0);
+      setProgress(0);
+      speakFromIndex(0);
+      startProgress();
+      setIsPlaying(true);
+    } else {
+      // Pause করলে পুরো speech cancel করবো
+      window.speechSynthesis.cancel();
+      clearInterval(progressInterval.current);
+      setIsPlaying(false);
+    }
+  };
+
+  const stopCompletely = () => {
+    window.speechSynthesis.cancel();
+    clearInterval(progressInterval.current);
+    setIsPlaying(false);
+    setCurrentLine(null);
+    setCurrentChunk(null);
+    setCurrentIndex(0);
+    setProgress(0);
+  };
+
+  const handleSeek = (e) => {
+    const percent = e.target.value;
+    const newIndex = Math.floor((percent / 100) * flatText.length);
+    window.speechSynthesis.cancel();
+    clearInterval(progressInterval.current);
+    setCurrentIndex(newIndex);
+    setProgress((percent / 100) * totalDuration);
+    if (isPlaying) {
+      speakFromIndex(newIndex);
+      startProgress();
+    }
+  };
+
+  const renderLine = (line, lineIdx) => (
+    <p key={lineIdx} className="text-lg">
+      <span className="font-bold">{line.speaker}:</span>{" "}
+      {line.text.map((chunk, chunkIdx) => {
+        let parts = [chunk];
+        highlightedTexts.forEach((ht) => {
+          parts = parts.flatMap((part) =>
+            typeof part === "string"
+              ? part.split(ht).flatMap((p, i, arr) =>
+                  i < arr.length - 1
+                    ? [
+                        p,
+                        <span key={Math.random()} className="bg-yellow-200">
+                          {ht}
+                        </span>,
+                      ]
+                    : [p],
+                )
+              : [part],
+          );
+        });
+
+        return (
+          <span
+            key={chunkIdx}
+            className={
+              lineIdx === currentLine && chunkIdx === currentChunk
+                ? "bg-green-200 transition-all duration-300"
+                : ""
+            }
+          >
+            {parts}{" "}
+          </span>
+        );
+      })}
+    </p>
+  );
+
+  const formatTime = (sec) => {
+    const minutes = Math.floor(sec / 60);
+    const seconds = Math.floor(sec % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
   return (
     <div onMouseUp={handleTextSelect} className="px-3">
       <div className="flex gap-6 h-[1000px]">
@@ -494,14 +715,28 @@ const correctAnswers = {
             />
           </div>
 
-          <button
-            onClick={handleVoice}
-            className={`mt-5 px-6 py-2 rounded-full font-medium text-white transition ${
-              isSpeaking ? "bg-yellow-400" : "bg-green-400"
-            }`}
-          >
-            {isSpeaking ? "⏹ Stop" : "🔊 Play Voice"}
-          </button>
+          {/* updated button */}
+          <div className="space-y-4">
+            <button
+              onClick={handleControl}
+              className={`px-6 py-2 rounded-full text-white ${isPlaying ? "bg-yellow-500" : "bg-green-500"}`}
+            >
+              {isPlaying ? "⏸ Pause" : "▶ Play"}
+            </button>
+
+            <div className="flex items-center gap-4">
+              <span>{formatTime(progress)}</span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={(progress / totalDuration) * 100 || 0}
+                onChange={handleSeek}
+                className="w-full"
+              />
+              <span>{formatTime(totalDuration)}</span>
+            </div>
+          </div>
 
           <hr />
           <div className="flex justify-between items-center">
@@ -966,7 +1201,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-<Listening1Pagination2011></Listening1Pagination2011>
+      <Listening1Pagination2011></Listening1Pagination2011>
     </div>
   );
 };
