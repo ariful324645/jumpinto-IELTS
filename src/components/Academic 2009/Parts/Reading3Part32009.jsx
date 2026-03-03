@@ -4,11 +4,12 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { ImCross } from "react-icons/im";
 import { FaChevronDown, FaDotCircle } from "react-icons/fa";
-import Reading2Pagination2009 from "../Pagination 2009/Reading2Pagination2009";
+
+import Reading3Pagination2009 from "../Pagination 2009/Reading3Pagination2009";
 
 //  Marks show
 
-const Test2Reading2009 = () => {
+const Reading3Part32009 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -25,39 +26,27 @@ const Test2Reading2009 = () => {
   };
 
   const questions = [
-    "Only two Japanese pagodas have collapsed in 1400 years.",
-    "The Hanshin earthquake of 1995 destroyed the pagoda at the Toji temple.",
-    "The other buildings near the Toji pagoda had been built in the last 30 years.",
+    "Forest problems of Mediterranean countries are to be discussed at the next meeting of experts.",
+    "Problems in Nordic countries were excluded because they are outside the European Economic Community.",
+    "Forests are a renewable source of raw material.",
+    "The biological functions of forests were recognised only in the twentieth century.",
+    "Natural forests still exist in parts of Europe.",
+    "Forest policy should be limited by national boundaries.",
+    "The Strasbourg conference decided that a forest policy must allow for the possibility of change.",
   ];
 
-  const options = ["YES", "NO", "NOT GIVEN"];
+  const options = ["TRUE", "FALSE", "NOT GIVEN"];
 
   //   second
   // different option
-  const question2 = [
-    "In a Japanese pagoda, the shinbashira",
-    "Shuzo Ishida performs experiments in order to",
-    "The storeys of a Japanese pagoda are",
-  ];
+  const question2 = ["What is the best title for Reading Passage 3?"];
 
   const options2 = [
     [
-      "A. bears the full weight of the building.",
-      "B. bends under pressure like a tree.",
-      "C. connects the floors with the foundations.",
-      "D. stops the floors moving too far.",
-    ],
-    [
-      "A. improve skyscraper design.",
-      "B. be able to build new pagodas.",
-      "C. learn about the dynamics of pagodas.",
-      "D. understand ancient mathematics.",
-    ],
-    [
-      "A. linked only by wood.",
-      "B. fastened only to the central pillar.",
-      "C. fitted loosely on top of each other.",
-      "D. fastened securely to all columns.",
+      "A. The biological, economic and recreational role of forests",
+      "B. Plans to protect the forests of Europe",
+      "C. The priority of European research into ecosystems",
+      "D. Proposals for a world-wide policy on forest management",
     ],
   ];
 
@@ -70,7 +59,7 @@ const Test2Reading2009 = () => {
     setSelectedOptions(updatedOptions);
 
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 1;
+      const answerKey = qIndex + 27;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -83,7 +72,7 @@ const Test2Reading2009 = () => {
     setSelectedOptions2(updatedOptions);
 
     setUserAnswers((prev) => {
-      const answerKey = qIndex + 11;
+      const answerKey = qIndex + 40;
       const updated = { ...prev, [answerKey]: option };
       calculateScore(updated);
       return updated;
@@ -169,26 +158,27 @@ const Test2Reading2009 = () => {
   };
 
   //  Marks show
- const correctAnswers = {
-   // Questions 1–4 (YES / NO / NOT GIVEN)
-   1: "YES",
-   2: "NO",
-   3: "NOT GIVEN",
+const correctAnswers = {
+  // Questions 27–33 (TRUE / FALSE / NOT GIVEN)
+  27: "NOT GIVEN",
+  28: "FALSE",
+  29: "TRUE",
+  30: "FALSE",
+  31: "FALSE",
+  32: "FALSE",
+  33: "TRUE",
 
-   // Questions 5–10 (Matching Features)
-   5: "B",
-   6: "C",
-   7: "B",
-   8: "C",
-   9: "A",
-   10: "C",
+  // Questions 34–39 (Summary Completion)
+  34: "J", // Resolution 1
+  35: "E", // Resolution 2
+  36: "B", // Resolution 3
+  37: "G", // Resolution 4
+  38: "D", // Resolution 5
+  39: "F", // Resolution 6
 
-   // Questions 11–13 (Multiple Choice)
-   11: "D. stops the floors moving too far.",
-   12: "C. learn about the dynamics of pagodas.",
-   13: "C. fitted loosely on top of each other.",
- };
-
+  // Question 40 (Best Title)
+  40: "B. Plans to protect the forests of Europe", // Plans to protect the forests of Europe
+};
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/reading4Part32020");
@@ -223,7 +213,7 @@ const Test2Reading2009 = () => {
 
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">{renderText("   PASSAGE 1")}</h1>
+            <h1 className="text-xl font-bold">{renderText("   PASSAGE 3")}</h1>
             <div className="flex gap-3">
               <IoBookSharp className="text-green-900" size={28} />
               <input
@@ -240,54 +230,35 @@ const Test2Reading2009 = () => {
               {renderText("       You should spend about 20 minutes on")}
 
               <span className="text-lg font-bold">
-                {renderText("          Questions 1-13")}
+                {renderText("          Questions 27-40")}
               </span>
-              {renderText(" which are based on Reading  PASSAGE 1 below")}
+              {renderText(" which are based on Reading  PASSAGE 3 below")}
             </h1>
           </div>
 
           {/* left text */}
           <div>
             <h1 className="text-2xl font-bold mb-5 text-center">
-              {renderText("Why pagodas don't fall down")}
+              {renderText(
+                "European Forests: Challenges, Functions, and Policy Responses",
+              )}
             </h1>
-            {/* image */}
-            <div className="flex items-center justify-center">
-              <img
-                className="w-96 h-96"
-                src="https://i.ibb.co.com/pG0Q47Y/a7t2r1.jpg"
-                alt="Eikhane image bosabo"
-              />
-            </div>
-            {/* Paragraph A */}
+
+            {/* Paragraph 1 */}
             <p className="text-lg">
               {renderText(
-                "In a land swept by typhoons and shaken by earthquakes, how have Japan's tallest and seemingly flimsiest old buildings - 500 or so wooden pagodas - remained standing for centuries?",
+                "Forests are one of the main elements of our natural heritage. The decline of Europe's forests over the last decade and a half has led to an increasing awareness and understanding of the serious imbalances which threaten them. European countries are becoming increasingly concerned by major threats to European forests, threats which know no frontiers other than those of geography or climate: air pollution, soil deterioration, the increasing number of forest fires and sometimes even the mismanagement of our woodland and forest heritage. There has been a growing awareness of the need for countries to get together to co-ordinate their policies.",
               )}
+
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " Records show that only two have collapsed during the past 1400 years.",
+                  "28However, this does not mean that in future they will be ignored.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("1")}
-                  </span>
-                )}
-              </span>
-              {renderText(
-                " Those that have disappeared were destroyed by fire as a result of lightning or civil war. The disastrous Hanshin earthquake in 1995 killed 6,400 people, toppled elevated highways, flattened office blocks and devastated the port area of Kobe.",
-              )}
-              <span
-                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
-              >
-                {renderText(
-                  " Yet it left the magnificent five-storey pagoda at the Toji temple in nearby Kyoto unscathed.",
-                )}
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("2")}
+                    {renderText("28")}
                   </span>
                 )}
               </span>
@@ -295,20 +266,38 @@ const Test2Reading2009 = () => {
 
             <br />
 
-            {/* Paragraph B */}
+            {/* Paragraph 2 */}
             <p className="text-lg">
               {renderText(
-                "Japanese scholars have been mystified for ages about why these tall, slender buildings are so stable. It was only thirty years ago that the building industry felt confident enough to erect office blocks of steel and reinforced concrete that had more than a dozen floors.",
+                "As a whole, European countries see forests as performing a triple function: biological, economic and recreational. The first is to act as a green lung for our planet; by means of photosynthesis, forests produce oxygen through the transformation of solar energy, thus fulfilling what for humans is the essential role of an immense, non-polluting power plant.",
               )}
+
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " With its special shock absorbers to dampen the effect of sudden sideways movements from an earthquake, the thirty-six-storey Kasumigaseki building in central Tokyo - Japan's first skyscraper - was considered a masterpiece of modern engineering when it was built in 1968.",
+                  "29Finally, they offer those condemned to spend five days a week in an urban environment an unrivalled area of freedom to unwind and take part in a range of leisure activities.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("3")}
+                    {renderText("29")}
+                  </span>
+                )}
+              </span>
+
+              {renderText(
+                " The economic importance of forests has been understood since the dawn of man - wood was the first fuel. The other aspects have been recognised only for a few centuries but they are becoming more and more important.",
+              )}
+
+              <span
+                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "30Hence, there is a real concern throughout Europe about the damage to the forest environment which threatens these three basic roles.",
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("30")}
                   </span>
                 )}
               </span>
@@ -316,20 +305,34 @@ const Test2Reading2009 = () => {
 
             <br />
 
-            {/* Paragraph C */}
+            {/* Paragraph 3 */}
             <p className="text-lg">
               {renderText(
-                "Yet in 826, with only pegs and wedges to keep his wooden structure upright, the master builder Kobodaishi had no hesitation in sending his majestic Toji pagoda soaring fifty-five metres into the sky - nearly half as high as the Kasumigaseki skyscraper built some eleven centuries later.",
+                "The myth of the 'natural' forest has survived, yet there are effectively no remaining primary forests in Europe. All European forests are artificial, having been adapted and exploited by man for thousands of years. This means that a forest policy is vital, that it must transcend national frontiers and generations of people, and that it must allow for the inevitable changes that take place in the forests, in needs, and hence in policy.",
               )}
+
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " Clearly, Japanese carpenters of the day knew a few tricks about allowing a building to sway and settle itself rather than fight nature's forces.",
+                  "31,32The Strasbourg conference was one of the first events on such a scale to reach this conclusion.",
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("31,32")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "33A general declaration was made that a central place in any ecologically coherent forest policy must be given to continuity over time and to the possible effects of unforeseen events.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("4")}
+                    {renderText("33")}
                   </span>
                 )}
               </span>
@@ -337,20 +340,47 @@ const Test2Reading2009 = () => {
 
             <br />
 
-            {/* Paragraph D */}
+            {/* Paragraph 4 */}
             <p className="text-lg">
               {renderText(
-                "The multi-storey pagoda came to Japan from China in the sixth century. As in China, they were first introduced with Buddhism and were attached to important temples.",
+                "That general declaration was accompanied by six detailed resolutions to assist national policy-making. The first proposes the extension and systematisation of surveillance sites to monitor forest decline.",
               )}
+
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " The Chinese built their pagodas in brick or stone, with inner staircases, and used them in later centuries mainly as watchtowers. When the pagoda reached Japan, however, its architecture was freely adapted to local conditions - they were built less high, typically five rather than nine storeys, made mainly of wood and the staircase was dispensed with because the Japanese pagoda did not have any practical use but became more of an art object.",
+                  "34Forest decline is still poorly understood but leads to the loss of a high proportion of a tree's needles or leaves.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("5")}
+                    {renderText("34")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "35Although forest fires do not affect all of Europe to the same extent, the amount of damage caused the experts to propose a European databank on the subject.",
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("35")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "36The subject of the fourth resolution discussed by the ministers was mountain forests.",
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("36")}
                   </span>
                 )}
               </span>
@@ -358,41 +388,47 @@ const Test2Reading2009 = () => {
 
             <br />
 
-            {/* Paragraph E */}
+            {/* Paragraph 5 */}
             <p className="text-lg">
               {renderText(
-                "But this does not totally explain the great resilience of Japanese pagodas. Is the answer that, like a tall pine tree, the Japanese pagoda - with its massive trunk-like central pillar known as shinbashira - simply flexes and sways during a typhoon or earthquake?",
+                "The fifth resolution relaunched the European research network on the physiology of trees, called Eurosilva. Eurosilva should support joint European research on tree diseases and their physiological and biochemical aspects.",
               )}
+
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " For centuries, many thought so. But the answer is not so simple because the startling thing is that the shinbashira actually carries no load at all.",
+                  "37Each country concerned could increase the number of scholarships and other financial support for doctoral theses and research projects in this area.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("6")}
+                    {renderText("37")}
                   </span>
                 )}
               </span>
-            </p>
 
-            <br />
-
-            {/* Paragraph F */}
-            <p className="text-lg">
-              {renderText(
-                "And what is the role of the shinbashira, the central pillar? The best way to understand the shinbashira's role is to watch a video made by Shuzo Ishida, a structural engineer at Kyoto Institute of Technology.",
-              )}
               <span
                 className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
               >
                 {renderText(
-                  " In short, the shinbashira was acting like an enormous stationary pendulum. The ancient craftsmen, apparently without the assistance of very advanced mathematics, seemed to grasp the principles that were, more than a thousand years later, applied in the construction of Japan's first skyscraper.",
+                  "38Finally, the conference established the framework for a European research network on forest ecosystems.",
                 )}
                 {highlight && (
                   <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    {renderText("7")}
+                    {renderText("38")}
+                  </span>
+                )}
+              </span>
+
+              <span
+                className={`ml-2 ${highlight ? "bg-yellow-100" : "bg-transparent"}`}
+              >
+                {renderText(
+                  "39,40The Strasbourg conference's main concern was to provide for the future. Their final text commits them to on-going discussion between government representatives with responsibility for forests.",
+                )}
+                {highlight && (
+                  <span className="inline-flex items-center justify-center w-12 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
+                    {renderText("39,40")}
                   </span>
                 )}
               </span>
@@ -470,26 +506,28 @@ const Test2Reading2009 = () => {
               </div>
             </div>
           </div>
+          {/* 2nd step */}
+
           <div>
             <h2 className="text-lg font-bold mb-3">
-              {renderText("Questions 1-4")}
+              {renderText("Questions 27-33")}
             </h2>
             <br />
             <h3 className="text-lg font-semibold mb-5">
               {renderText(
-                "Do the following statements agree with the information given in Reading Passage 1?",
+                "Do the following statements agree with the information given in Reading Passage 3?",
               )}{" "}
               <br /> <br />
-              {renderText("In boxes 1-4 on your answer sheet, choose")}
+              {renderText("In boxes 27-33 on your answer sheet, choose")}
             </h3>
             <h3 className="flex gap-5 text-lg">
-              <span className="text-lg font-bold">{renderText("YES")}</span>{" "}
+              <span className="text-lg font-bold">{renderText("TRUE")}</span>{" "}
               {renderText(
                 "if the statement agrees with the claims of the writer",
               )}
             </h3>
             <h3 className="flex gap-5 text-lg">
-              <span className="text-lg font-bold">{renderText("NO")}</span>{" "}
+              <span className="text-lg font-bold">{renderText("FALSE")}</span>{" "}
               {renderText(
                 "if the statement contradicts the claims of the writer",
               )}
@@ -505,9 +543,9 @@ const Test2Reading2009 = () => {
             <br /> <br />
             {/* question dynamic */}
             <div className="space-y-6 leading-relaxed p-4">
-              <h2 className="text-lg font-bold">Questions 1-4</h2>
+              <h2 className="text-lg font-bold">Questions 27-33</h2>
               {questions.map((q, qIndex) => {
-                const answerKey = qIndex + 1;
+                const answerKey = qIndex + 27;
                 const correct = correctAnswers[answerKey];
 
                 return (
@@ -549,59 +587,250 @@ const Test2Reading2009 = () => {
               })}
             </div>
             {/* optional question */}
-            <div className="space-y-4">
-              <h1 className="text-lg font-bold mt-6">
-                {renderText("Questions 5-10")}
-              </h1>
-              <p>
-                {renderText(
-                  "Choose the correct letter, A-C, next to Questions 5-10.",
-                )}
-              </p>
-              <p>{renderText("Classify the following as typical of:")}</p>
-              <ul className="list-disc ml-5 space-y-1">
-                <li>{renderText("A. both Chinese and Japanese pagodas")}</li>
-                <li>{renderText("B. only Chinese pagodas")}</li>
-                <li>{renderText("C. only Japanese pagodas")}</li>
-              </ul>
+            <div className="space-y-4 leading-relaxed">
+              <h2 className="text-lg font-bold mb-3">
+                {renderText("Questions 34-39")}
+              </h2>
 
-              {/* ---------- Questions 5-10 ---------- */}
-              <div className="space-y-2 mt-3">
-                {[
-                  "easy interior access to top",
-                  "tiles on eaves",
-                  "use as observation post",
-                  "size of eaves up to half the width of the building",
-                  "original religious purpose",
-                  "floors fitting loosely over each other",
-                ].map((text, idx) => (
-                  <div key={idx} className="flex items-center gap-4">
-                    <span className="font-semibold">{idx + 5}</span>
-                    <span>{renderText(text)}</span>
-                    <select
-                      value={userAnswers[idx + 5] || ""}
-                      onChange={(e) =>
-                        handleInputChange(idx + 5, e.target.value)
-                      }
-                      className="ml-4 border-2 border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:border-blue-400"
-                    >
-                      <option value="">{renderText("Select")}</option>
-                      <option value="A">{renderText("A")}</option>
-                      <option value="B">{renderText("B")}</option>
-                      <option value="C">{renderText("C")}</option>
-                    </select>
-                  </div>
-                ))}
+              <h3 className="text-lg mb-5">
+                {renderText(
+                  "Complete the summary using the list of words or phrases below.",
+                )}
+                <br />
+                <br />
+                {renderText(
+                  "Choose the correct letter, A-J, in boxes 34-39 on your answer sheet.",
+                )}
+              </h3>
+
+              {/* List Box */}
+              <div className="flex items-center justify-center border border-black py-6 px-6 w-xl mx-auto">
+                <div className="text-left">
+                  <h1 className="text-xl font-bold mb-5 text-center">
+                    {renderText("List of Statements")}
+                  </h1>
+
+                  <ul className="space-y-2 text-lg">
+                    <li>
+                      {renderText(
+                        "A. All kinds of species of trees should be preserved.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "B. Fragile mountain forests should be given priority in research programs.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "C. The surviving natural forests of Europe do not need priority treatment.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "D. Research is to be better co-ordinated throughout Europe.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "E. Information on forest fires should be collected and shared.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "F. Loss of leaves from trees should be more extensively and carefully monitored.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "G. Resources should be allocated to research into tree diseases.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "H. Skiing should be encouraged in thinly populated areas.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "I. Soil imbalances such as acidification should be treated with compounds of nitrogen and sulphur.",
+                      )}
+                    </li>
+                    <li>
+                      {renderText(
+                        "J. Information is to be systematically gathered on any decline in the condition of forests.",
+                      )}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <br />
+            </div>
+            <div className="space-y-3">
+              {/* 34 */}
+              {renderText("34")} {renderText("Resolution 1")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[34] || ""}
+                  onChange={(e) => handleInputChange(34, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">34</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+              <br />
+              {/* 35 */}
+              {renderText("35")} {renderText("Resolution 2")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[35] || ""}
+                  onChange={(e) => handleInputChange(35, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">35</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+              <br />
+              {/* 36 */}
+              {renderText("36")} {renderText("Resolution 3")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[36] || ""}
+                  onChange={(e) => handleInputChange(36, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">36</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+              <br />
+              {/* 37 */}
+              {renderText("37")} {renderText("Resolution 4")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[37] || ""}
+                  onChange={(e) => handleInputChange(37, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">37</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+              <br />
+              {/* 38 */}
+              {renderText("38")} {renderText("Resolution 5")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[38] || ""}
+                  onChange={(e) => handleInputChange(38, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">38</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
+              </div>
+              <br />
+              {/* 39 */}
+              {renderText("39")} {renderText("Resolution 6")}
+              <div className="relative w-40 inline-block mx-2">
+                <select
+                  value={userAnswers[39] || ""}
+                  onChange={(e) => handleInputChange(39, e.target.value)}
+                  className="appearance-none w-full border-2 border-gray-300 rounded-md px-3 py-1 pr-8"
+                >
+                  <option value="">39</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>{" "}
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  <FaChevronDown />
+                </span>
               </div>
             </div>
           </div>
           <br />
-          {/* 2nd step */}
           <div>
             {/* question dynamic */}
             <div className="space-y-6 leading-relaxed p-4">
               <h2 className="text-lg font-bold">
-                {renderText("Questions 11-13")}
+                {renderText("Questions 40")}
               </h2>
               <p className="text-xl">
                 {renderText("Choose the correct letter,")}
@@ -609,7 +838,7 @@ const Test2Reading2009 = () => {
               </p>
 
               {question2.map((q, qIndex) => {
-                const answerKey = qIndex + 11;
+                const answerKey = qIndex + 40;
 
                 return (
                   <div key={qIndex} className="flex flex-col gap-2">
@@ -651,7 +880,6 @@ const Test2Reading2009 = () => {
               })}
             </div>
           </div>
-  
           {/* ---------- Marks Section (Submit + Result Display) ---------- */}
           <div className="mt-10">
             {!showResult ? (
@@ -677,11 +905,11 @@ const Test2Reading2009 = () => {
                 {/* All Answers List */}
                 <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
                   <h3 className="text-xl font-bold text-gray-700 mb-3">
-                    All Answers (1-13)
+                    All Answers (27-40)
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 13 }, (_, i) => i + 1).map((num) => {
+                    {Array.from({ length: 14 }, (_, i) => i + 27).map((num) => {
                       const userAnswer =
                         userAnswers[num]?.trim().toLowerCase() || "";
                       const correctAnswer = correctAnswers[num]
@@ -748,9 +976,9 @@ const Test2Reading2009 = () => {
           </div>
         </div>
       </div>
-<Reading2Pagination2009></Reading2Pagination2009>
+      <Reading3Pagination2009></Reading3Pagination2009>
     </div>
   );
 };
 
-export default Test2Reading2009;
+export default Reading3Part32009;

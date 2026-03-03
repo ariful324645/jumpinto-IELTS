@@ -4,6 +4,7 @@ import { IoBookSharp } from "react-icons/io5";
 
 import { ImCross } from "react-icons/im";
 import { FaDotCircle } from "react-icons/fa";
+import Reading4Pagination2009 from "../Pagination 2009/Reading4Pagination2009";
 
 //  Marks show
 
@@ -144,22 +145,21 @@ const Test4Reading2009 = () => {
 
   //  Marks show
 
-const correctAnswers = {
-  1: "TRUE",
-  2: "TRUE",
-  3: "NOT GIVEN",
-  4: "TRUE",
-  5: "FALSE",
-  6: "TRUE",
-  7: "TRUE",
-  8: "kites",
-  9: "stones",
-  10: "sailors",
-  11: "glider",
-  12: "flight",
-  13: "messages",
-};
-
+  const correctAnswers = {
+    1: "TRUE",
+    2: "TRUE",
+    3: "NOT GIVEN",
+    4: "TRUE",
+    5: "FALSE",
+    6: "TRUE",
+    7: "TRUE",
+    8: "kites",
+    9: "stones",
+    10: "sailors",
+    11: "glider",
+    12: "flight",
+    13: "messages",
+  };
 
   useEffect(() => {
     const savedScore = localStorage.getItem("/2020/Test 1/reading");
@@ -791,7 +791,7 @@ const correctAnswers = {
           </div>
         </div>
       </div>
-      {/* <Reading1Pagination2020></Reading1Pagination2020> */}
+      <Reading4Pagination2009></Reading4Pagination2009>
     </div>
   );
 };

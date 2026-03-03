@@ -691,6 +691,26 @@ import Reading3Part22011 from "../components/Academic 2011/Parts/Reading3Part220
 import Reading3Part32011 from "../components/Academic 2011/Parts/Reading3Part32011";
 import Reading4Part22011 from "../components/Academic 2011/Parts/Reading4Part22011";
 import Reading4Part32011 from "../components/Academic 2011/Parts/Reading4Part32011";
+import Listening1Part22009 from "../components/Academic 2009/Parts/Listening1Part22009";
+import Listening1Part32009 from "../components/Academic 2009/Parts/Listening1Part32009";
+import Listening1Part42009 from "../components/Academic 2009/Parts/Listening1Part42009";
+import Listening2Part22009 from "../components/Academic 2009/Parts/Listening2Part22009";
+import Listening2Part32009 from "../components/Academic 2009/Parts/Listening2Part32009";
+import Listening2Part42009 from "../components/Academic 2009/Parts/Listening2Part42009";
+import Listening3Part22009 from "../components/Academic 2009/Parts/Listening3Part22009";
+import Listening3Part32009 from "../components/Academic 2009/Parts/Listening3Part32009";
+import Listening3Part42009 from "../components/Academic 2009/Parts/Listening3Part42009";
+import Listening4Part22009 from "../components/Academic 2009/Parts/Listening4Part22009";
+import Listening4Part32009 from "../components/Academic 2009/Parts/Listening4Part32009";
+import Listening4Part42009 from "../components/Academic 2009/Parts/Listening4Part42009";
+import Reading1Part22009 from "../components/Academic 2009/Parts/Reading1Part22009";
+import Reading1Part32009 from "../components/Academic 2009/Parts/Reading1Part32009";
+import Reading2Part22009 from "../components/Academic 2009/Parts/Reading2Part22009";
+import Reading2Part32009 from "../components/Academic 2009/Parts/Reading2Part32009";
+import Reading3Part22009 from "../components/Academic 2009/Parts/Reading3Part22009";
+import Reading3Part32009 from "../components/Academic 2009/Parts/Reading3Part32009";
+import Reading4Part22009 from "../components/Academic 2009/Parts/Reading4Part22009";
+import Reading4Part32009 from "../components/Academic 2009/Parts/Reading4Part32009";
 
 export const router = createBrowserRouter([
   {
@@ -3268,34 +3288,113 @@ export const router = createBrowserRouter([
         Component: Test1Listening2009,
       },
       {
+        path: "/listening1Part22009",
+        Component: Listening1Part22009,
+      },
+      {
+        path: "/listening1Part32009",
+        Component: Listening1Part32009,
+      },
+      {
+        path: "/listening1Part42009",
+        Component: Listening1Part42009,
+      },
+      {
         path: "/2009/Test 2/listening",
         Component: Test2Listening2009,
+      },
+      {
+        path: "/listening2Part22009",
+        Component: Listening2Part22009,
+      },
+      {
+        path: "/listening2Part32009",
+        Component: Listening2Part32009,
+      },
+      {
+        path: "/listening2Part42009",
+        Component: Listening2Part42009,
       },
       {
         path: "/2009/Test 3/listening",
         Component: Test3Listening2009,
       },
       {
+        path: "/listening3Part22009",
+        Component: Listening3Part22009,
+      },
+      {
+        path: "/listening3Part32009",
+        Component: Listening3Part32009,
+      },
+      {
+        path: "/listening3Part42009",
+        Component: Listening3Part42009,
+      },
+      {
         path: "/2009/Test 4/listening",
         Component: Test4Listening2009,
+      },
+      {
+        path: "/listening4Part22009",
+        Component: Listening4Part22009,
+      },
+      {
+        path: "/listening4Part32009",
+        Component: Listening4Part32009,
+      },
+      {
+        path: "/listening4Part42009",
+        Component: Listening4Part42009,
       },
       {
         path: "/2009/Test 1/reading",
         Component: Test1Reading2009,
       },
       {
+        path: "/reading1Part22009",
+        Component: Reading1Part22009,
+      },
+      {
+        path: "/reading1Part32009",
+        Component: Reading1Part32009,
+      },
+      {
         path: "/2009/Test 2/reading",
         Component: Test2Reading2009,
+      },
+      {
+        path: "/reading2Part22009",
+        Component: Reading2Part22009,
+      },
+      {
+        path: "/reading2Part32009",
+        Component: Reading2Part32009,
       },
       {
         path: "/2009/Test 3/reading",
         Component: Test3Reading2009,
       },
       {
+        path: "/reading3Part22009",
+        Component: Reading3Part22009,
+      },
+      {
+        path: "/reading3Part32009",
+        Component: Reading3Part32009,
+      },
+      {
         path: "/2009/Test 4/reading",
         Component: Test4Reading2009,
       },
-
+      {
+        path: "/reading4Part22009",
+        Component: Reading4Part22009,
+      },
+      {
+        path: "/reading4Part32009",
+        Component: Reading4Part32009,
+      },
       {
         path: "/2009/Test 1/writing",
         Component: Test1Writing2009,
