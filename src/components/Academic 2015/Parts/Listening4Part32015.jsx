@@ -500,8 +500,8 @@ const Listening4Part32015 = () => {
 
   // Correct answers
   const correctAnswers = {
-    21: ["A", "E"], // Q21–22 together
-    23: ["B", "C"], // Q23–24 together
+    "21-22": ["A", "E"], // Q21–22 together
+    "23-24": ["B", "C"], // Q23–24 together
     25: "F",
     26: "C",
     27: "G",
@@ -510,39 +510,46 @@ const Listening4Part32015 = () => {
     30: "C",
   };
 
-  // --- Handle input change (checkbox or dropdown) ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
-      const updated = { ...prev, [id]: value };
-      calculateScore(updated);
+      let updated = { ...prev };
+
+      // Multi-select (arrays) for 11-12, 13-14
+      if (id === "21-22" || id === "23-24") {
+        const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
+        if (prevAnswers.includes(value)) {
+          updated[id] = prevAnswers.filter((v) => v !== value);
+        } else {
+          updated[id] = [...prevAnswers, value];
+        }
+      } else {
+        // Single-select (string) for 15–20
+        updated[id] = value;
+      }
+
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
-
   // --- Calculate score ---
   const calculateScore = (answers) => {
     let newScore = 0;
 
-    Object.keys(correctAnswers).forEach((key) => {
-      const q = Number(key);
-      const correct = correctAnswers[q];
-      const user = answers[q];
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
+      const user = answers[key];
 
-      // 🔹 Choose TWO letters
       if (Array.isArray(correct)) {
         if (
           Array.isArray(user) &&
           user.length === correct.length &&
-          correct.every((ans) => user.includes(ans))
+          correct.every((v) => user.includes(v))
         ) {
-          newScore += 1;
+          newScore += 2; // 🔥 21–22 & 23–24
         }
-      }
-      // 🔹 Single answer
-      else {
+      } else {
         if (
           typeof user === "string" &&
-          user.trim().toLowerCase() === correct.toLowerCase()
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
         ) {
           newScore += 1;
         }
@@ -550,7 +557,6 @@ const Listening4Part32015 = () => {
     });
 
     setScore(newScore);
-    localStorage.setItem("/listening4Part32015", newScore);
   };
 
   // --- Restore from localStorage ---
@@ -675,34 +681,36 @@ const Listening4Part32015 = () => {
               "21–22 Which TWO skills did Laura improve as a result of her work placement?"
             )}
           </p>
+          {["communication", "design", "IT", "marketing", "organisation"].map(
+            (optionText, index) => {
+              const value = String.fromCharCode(65 + index); // A–E
 
-          {[
-            ["A", "communication"],
-            ["B", "design"],
-            ["C", "IT"],
-            ["D", "marketing"],
-            ["E", "organisation"],
-          ].map(([letter, text]) => (
-            <label key={letter} className="flex items-center gap-3">
-              <input
-                type="checkbox"
-                value={letter}
-                checked={userAnswers[21]?.includes(letter) || false}
-                onChange={() => {
-                  const prev = userAnswers[21] || [];
-                  let updated = [];
-                  if (prev.includes(letter)) {
-                    updated = prev.filter((l) => l !== letter);
-                  } else {
-                    updated = [...prev, letter];
-                  }
-                  handleInputChange(21, updated);
-                }}
-              />
-              <span className="font-semibold">{letter}.</span>{" "}
-              {renderText(text)}
-            </label>
-          ))}
+              const selectedOptions = userAnswers["21-22"] || [];
+              const isChecked = selectedOptions.includes(value);
+
+              // Disable other options once TWO are selected
+              const isDisabled = selectedOptions.length === 2 && !isChecked;
+
+              return (
+                <label
+                  key={index}
+                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    disabled={isDisabled}
+                    onChange={() => handleInputChange("21-22", value)}
+                  />
+
+                  <span className="font-semibold">{value}.</span>
+                  <span>{renderText(optionText)}</span>
+                </label>
+              );
+            }
+          )}
 
           {/* ---------- Questions 23–24 ---------- */}
           <h2 className="font-bold text-lg mt-8">
@@ -719,32 +727,39 @@ const Listening4Part32015 = () => {
           </p>
 
           {[
-            ["A", "updates for its software"],
-            ["B", "cost savings"],
-            ["C", "an improved image"],
-            ["D", "new clients"],
-            ["E", "a growth in sales"],
-          ].map(([letter, text]) => (
-            <label key={letter} className="flex items-center gap-3">
-              <input
-                type="checkbox"
-                value={letter}
-                checked={userAnswers[23]?.includes(letter) || false}
-                onChange={() => {
-                  const prev = userAnswers[23] || [];
-                  let updated = [];
-                  if (prev.includes(letter)) {
-                    updated = prev.filter((l) => l !== letter);
-                  } else {
-                    updated = [...prev, letter];
-                  }
-                  handleInputChange(23, updated);
-                }}
-              />
-              <span className="font-semibold">{letter}.</span>{" "}
-              {renderText(text)}
-            </label>
-          ))}
+            "updates for its software",
+            "cost savings",
+            "an improved image",
+            "new clients",
+            "a growth in sales",
+          ].map((optionText, index) => {
+            const value = String.fromCharCode(65 + index); // A–E
+
+            const selectedOptions = userAnswers["23-24"] || [];
+            const isChecked = selectedOptions.includes(value);
+
+            // Disable other options once TWO are selected
+            const isDisabled = selectedOptions.length === 2 && !isChecked;
+
+            return (
+              <label
+                key={index}
+                className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                  isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  disabled={isDisabled}
+                  onChange={() => handleInputChange("23-24", value)}
+                />
+
+                <span className="font-semibold">{value}.</span>
+                <span>{renderText(optionText)}</span>
+              </label>
+            );
+          })}
 
           {/* ---------- Questions 25–30 ---------- */}
           <h2 className="font-bold text-lg mt-8">
@@ -842,61 +857,65 @@ const Listening4Part32015 = () => {
                   </h3>
 
                   <ul className="space-y-3">
-                    {[21, 23, 25, 26, 27, 28, 29, 30].map((num) => {
+                    {["21-22", "23-24", 25, 26, 27, 28, 29, 30].map((num) => {
                       const user = userAnswers[num];
                       const correct = correctAnswers[num];
 
-                      const noAnswer =
-                        user === undefined ||
-                        (Array.isArray(user) && user.length === 0);
+                      const isCorrect = (() => {
+                        if (Array.isArray(correct)) {
+                          return (
+                            Array.isArray(user) &&
+                            user.length === correct.length &&
+                            correct.every((val) => user.includes(val))
+                          );
+                        } else {
+                          return (
+                            user?.trim().toLowerCase() ===
+                            correct?.trim().toLowerCase()
+                          );
+                        }
+                      })();
 
-                      const isCorrect = Array.isArray(correct)
-                        ? Array.isArray(user) &&
-                          user.length === correct.length &&
-                          correct.every((a) => user.includes(a))
-                        : user === correct;
+                      const noAnswer = !user;
 
-                      const isWrong = !noAnswer && !isCorrect;
+                      const userAnswerDisplay = Array.isArray(user)
+                        ? user.join(", ")
+                        : user?.trim() || "";
+                      const correctAnswerDisplay = Array.isArray(correct)
+                        ? correct.join(", ")
+                        : correct?.trim();
 
                       return (
                         <li
                           key={num}
-                          className="p-3 rounded-lg bg-white shadow-sm"
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
                             {isCorrect && (
-                              <span className="text-green-600 text-xl">
-                                <FaDotCircle />
-                              </span>
+                              <FaDotCircle className="text-green-600 text-xl font-bold" />
                             )}
-                            {(isWrong || noAnswer) && (
-                              <span className="text-red-600 text-xl">
-                                <ImCross />
-                              </span>
+                            {!isCorrect && (
+                              <div className="w-6 h-6 flex items-center justify-center rounded-full bg-red-500">
+                                <ImCross className="text-white text-sm font-bold" />
+                              </div>
                             )}
-                            <p className="font-bold">
-                              Q{num}
-                              {num === 21 && "–22"}
-                              {num === 23 && "–24"}:
-                            </p>
+                            <p className="font-bold">Q{num}:</p>
                           </div>
 
                           <p className="ml-8">
-                            <strong>Your Answer:</strong>{" "}
+                            <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
-                              <em>No answer provided</em>
-                            ) : Array.isArray(user) ? (
-                              user.join(", ")
+                              <span className="italic">No answer provided</span>
                             ) : (
-                              user
+                              userAnswerDisplay
                             )}
                           </p>
 
-                          <p className="ml-8 text-green-600">
-                            <strong>Correct Answer:</strong>{" "}
-                            {Array.isArray(correct)
-                              ? correct.join(", ")
-                              : correct}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            {correctAnswerDisplay}
                           </p>
                         </li>
                       );

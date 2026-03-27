@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import Writing2Pagination2025 from "../Pagination 2025/Writing2Pagination2025";
 
 const Test2Writing = () => {
   const [message, setMessage] = useState("");
@@ -32,9 +33,9 @@ const Test2Writing = () => {
   return (
     <div className="px-3">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6 ">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -54,22 +55,26 @@ const Test2Writing = () => {
             <p className="text-lg mt-4">Write at least 150 words.</p>
             <br />
 
+     
             {/* image */}
-            <div>
-              <img src="" alt="Eikhane image bosabo" />
+            <div className="flex items-center justify-center">
+              <img
+                className="w-96 h-96"
+                src="https://i.ibb.co.com/bMH3LTZY/a20t2w1.jpg"
+                alt="Eikhane image bosabo"
+              />
             </div>
+        
 
             <br />
             <hr className="border border-gray-400" />
             <br />
             <p>
-            
               <p>Sample Writing Answer</p>
             </p>
             <br />
             <h1 className="text-xl text-center  font-bold ">
-              Population Changes in New York City and Its Five Districts (1800 -
-              2000)
+              Changes at Beechwood Farm: 1950 vs. Today
             </h1>
             <p className="mt-5">
               The two maps illustrate the transformations of Beechwood Farm from
@@ -130,6 +135,7 @@ const Test2Writing = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing2Pagination2025></Writing2Pagination2025>
     </div>
   );
 };

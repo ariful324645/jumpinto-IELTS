@@ -331,7 +331,8 @@ const Listening1Part22015 = () => {
   //  Marks show
 
   const correctAnswers = {
-    11: "AC", // the gym + indoor pool
+    // 11: "AC", // the gym + indoor pool
+    "11-12": ["A", "C"],
     // optional if you want second checkbox logic; or you can combine 11–12 as one
     13: "health problems",
     14: "safety rules",
@@ -349,27 +350,54 @@ const Listening1Part22015 = () => {
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
-      const updated = { ...prev, [id]: value };
-      calculateScore(updated);
+      let updated = { ...prev };
+
+      // Multi-select (arrays) for 11-12, 13-14
+      if (id === "11-12") {
+        const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
+        if (prevAnswers.includes(value)) {
+          updated[id] = prevAnswers.filter((v) => v !== value);
+        } else {
+          updated[id] = [...prevAnswers, value];
+        }
+      } else {
+        // Single-select (string) for 15–20
+        updated[id] = value;
+      }
+
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
 
   // --- Calculate live score ---
+  // --- Calculate live score ---
   const calculateScore = (answers) => {
     let newScore = 0;
-    Object.keys(correctAnswers).forEach((key) => {
-      if (
-        answers[key]?.trim().toLowerCase() ===
-        correctAnswers[key].trim().toLowerCase()
-      ) {
-        newScore += 1;
+
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
+      const user = answers[key];
+
+      if (Array.isArray(correct)) {
+        if (
+          Array.isArray(user) &&
+          user.length === correct.length &&
+          correct.every((v) => user.includes(v))
+        ) {
+          newScore += 2; // 🔥 21–22 & 23–24
+        }
+      } else {
+        if (
+          typeof user === "string" &&
+          user.trim().toLowerCase() === correct.trim().toLowerCase()
+        ) {
+          newScore += 1;
+        }
       }
     });
-    setScore(newScore);
-    localStorage.setItem("/listening1Part22015", newScore);
-  };
 
+    setScore(newScore);
+  };
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -473,50 +501,51 @@ const Listening1Part22015 = () => {
             )}
           </p>
 
-          <ul className="space-y-2 mb-10">
+          <div className="mb-10">
+            <h2 className="text-lg font-bold mb-3">
+              {renderText("Questions 11–12")}
+            </h2>
+            <p className="mb-4 font-semibold">
+              {renderText(
+                "Which TWO facilities at the leisure club have recently been improved?"
+              )}
+            </p>
+
             {[
               "the gym",
               "the tracks",
               "the indoor pool",
               "the outdoor pool",
               "the sports training for children",
-            ].map((item, index) => {
-              const optionLetter = String.fromCharCode(65 + index);
-              const isChecked = userAnswers[11]?.includes(optionLetter);
+            ].map((optionText, index) => {
+              const value = String.fromCharCode(65 + index); // A–E
+
+              const selectedOptions = userAnswers["11-12"] || [];
+              const isChecked = selectedOptions.includes(value);
+
+              // Disable other options once TWO are selected
+              const isDisabled = selectedOptions.length === 2 && !isChecked;
 
               return (
-                <li
+                <label
                   key={index}
-                  className="flex items-center gap-3 cursor-pointer"
+                  className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   <input
                     type="checkbox"
-                    className="w-4 h-4"
-                    checked={isChecked || false}
-                    onChange={(e) => {
-                      setUserAnswers((prev) => {
-                        let current = prev[11] || "";
-                        if (e.target.checked) {
-                          if (!current.includes(optionLetter))
-                            current += optionLetter;
-                        } else {
-                          current = current.replace(optionLetter, "");
-                        }
-                        const updated = {
-                          ...prev,
-                          11: current.split("").sort().join(""),
-                        };
-                        calculateScore(updated);
-                        return updated;
-                      });
-                    }}
+                    checked={isChecked}
+                    disabled={isDisabled}
+                    onChange={() => handleInputChange("11-12", value)}
                   />
-                  <span className="font-semibold">{optionLetter}.</span>
-                  <span>{item}</span>
-                </li>
+
+                  <span className="font-semibold">{value}.</span>
+                  <span>{renderText(optionText)}</span>
+                </label>
               );
             })}
-          </ul>
+          </div>
 
           {/* ---------- Questions 13–20 ---------- */}
           <h2 className="text-lg font-bold mb-3">
@@ -673,36 +702,33 @@ const Listening1Part22015 = () => {
                   </h3>
 
                   <ul className="space-y-3">
-                    {Array.from({ length: 10 }, (_, i) => i + 11).map((num) => {
-                      let userAnswer = "";
-                      let correctAnswer = correctAnswers[num]?.trim() || "";
+                    {["11-12", 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
+                      const user = userAnswers[num];
+                      const correct = correctAnswers[num];
 
-                      // Handle Q11–12 together
-                      if (num === 12) {
-                        // show the second letter of Q11's answer as Q12
-                        userAnswer =
-                          userAnswers[11]?.charAt(1)?.toUpperCase() || "";
-                        correctAnswer =
-                          correctAnswers[11]?.charAt(1)?.toUpperCase() || "";
-                      } else if (num === 11) {
-                        // first letter of Q11 answer
-                        userAnswer =
-                          userAnswers[11]?.charAt(0)?.toUpperCase() || "";
-                        correctAnswer =
-                          correctAnswers[11]?.charAt(0)?.toUpperCase() || "";
-                      } else {
-                        userAnswer = userAnswers[num] || "";
-                      }
+                      const isCorrect = (() => {
+                        if (Array.isArray(correct)) {
+                          return (
+                            Array.isArray(user) &&
+                            user.length === correct.length &&
+                            correct.every((val) => user.includes(val))
+                          );
+                        } else {
+                          return (
+                            user?.trim().toLowerCase() ===
+                            correct?.trim().toLowerCase()
+                          );
+                        }
+                      })();
 
-                      const isCorrect =
-                        userAnswer &&
-                        userAnswer.toLowerCase() ===
-                          correctAnswer.toLowerCase();
-                      const isWrong =
-                        userAnswer &&
-                        userAnswer.toLowerCase() !==
-                          correctAnswer.toLowerCase();
-                      const noAnswer = !userAnswer;
+                      const noAnswer = !user;
+
+                      const userAnswerDisplay = Array.isArray(user)
+                        ? user.join(", ")
+                        : user?.trim() || "";
+                      const correctAnswerDisplay = Array.isArray(correct)
+                        ? correct.join(", ")
+                        : correct?.trim();
 
                       return (
                         <li
@@ -710,39 +736,31 @@ const Listening1Part22015 = () => {
                           className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                         >
                           <div className="flex items-center gap-2">
-                            {/* ICONS */}
                             {isCorrect && (
-                              <span className="text-green-600 text-xl font-bold">
-                                <FaDotCircle />
-                              </span>
+                              <FaDotCircle className="text-green-600 text-xl font-bold" />
                             )}
-                            {(isWrong || noAnswer) && (
-                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
-                                <span className="text-white text-sm font-bold leading-none">
-                                  <ImCross />
-                                </span>
+                            {!isCorrect && (
+                              <div className="w-6 h-6 flex items-center justify-center rounded-full bg-red-500">
+                                <ImCross className="text-white text-sm font-bold" />
                               </div>
                             )}
-
                             <p className="font-bold">Q{num}:</p>
                           </div>
 
-                          {/* User Answer */}
                           <p className="ml-8">
                             <span className="font-semibold">Your Answer:</span>{" "}
                             {noAnswer ? (
                               <span className="italic">No answer provided</span>
                             ) : (
-                              <span>{userAnswer}</span>
+                              userAnswerDisplay
                             )}
                           </p>
 
-                          {/* Correct Answer */}
                           <p className="ml-8">
                             <span className="font-semibold text-green-600">
                               Correct Answer:
                             </span>{" "}
-                            <span>{correctAnswer}</span>
+                            {correctAnswerDisplay}
                           </p>
                         </li>
                       );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import Writing3Pagination2025 from "../Pagination 2025/Writing3Pagination2025";
 
 const Test3Writing = () => {
   const [message, setMessage] = useState("");
@@ -32,9 +33,9 @@ const Test3Writing = () => {
   return (
     <div className="px-3">
       {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
+      <div className="flex gap-6 ">
         {/* LEFT SIDE (dynamic texts) */}
-        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-screen">
+        <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll h-[1000px]">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">TASK 1</h1>
           </div>
@@ -54,8 +55,12 @@ const Test3Writing = () => {
             <br />
 
             {/* image */}
-            <div>
-              <img src="" alt="Eikhane image bosabo" />
+            <div className="flex items-center justify-center">
+              
+              <img className="h-auto w-auto"
+                src="https://i.ibb.co.com/s9dYhMBK/a20t3w1.jpg"
+                alt="Eikhane image bosabo"
+              />
             </div>
 
             <br />
@@ -125,6 +130,7 @@ const Test3Writing = () => {
           <ToastContainer />
         </div>
       </div>
+      <Writing3Pagination2025></Writing3Pagination2025>
     </div>
   );
 };

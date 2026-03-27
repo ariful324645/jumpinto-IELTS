@@ -1,645 +1,940 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
+import { ImCross } from "react-icons/im";
+import { IoIosArrowDown } from "react-icons/io";
+import Listening2Pagination2021 from "../Pagination 2021/Listening2Pagination2021";
 
 const Test2Listening2021 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+  const [openScript, setOpenScript] = useState(true);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [currentLine, setCurrentLine] = useState(null);
+  const [currentChunk, setCurrentChunk] = useState(null);
 
-  const handleClear = () => {
-    setActiveButtons({});
-    const inputs = document.querySelectorAll("input[type='text']");
-    inputs.forEach((input) => (input.value = ""));
-    console.log("All answers cleared!");
-    setIsOpen(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [highlightedTexts, setHighlightedTexts] = useState([]);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const [showResult, setShowResult] = useState(false);
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Part 1. You will hear a woman phoning a company that converts old photographs to digital format.",
+        "First, you have some time to look at questions 1 to 3.",
+        "Now listen carefully and answer questions 1 to 3.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Hello, Picturerep. Can I help you?"],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Oh, hi.",
+        "I saw your advertisement about copying pictures to disk, and I'd like a bit more information about what you do.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Sure, what would you like to know?"],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Well, I've got a box full of old family photos that's been up in the attic for years.",
+        "Some of them must be 50 or 60 years old.",
+        "And I'd like to get them converted to digital format.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Sure, we can do that for you."],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Right, and what about size?",
+        "The photos are all sorts of sizes.",
+        "Are there any restrictions?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "Well, the maximum size of photo we can do with our normal service is 30 centimeters,",
+        "and each picture must be at least 4 cm.",
+        "That's the minimum we can cope with.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Oh, that should be fine.",
+        "And some of them are in a frame.",
+        { text: "Should I take them out before I send them?", number: 1 },
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "Yes, please.",
+        "We can't copy them otherwise, and also the photos must all be separate,",
+        "they mustn't be stuck into an album.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "OK, that's not a problem.",
+        "So, can you give me an idea of how much this will cost?",
+        "I've got about 360 photos, I think.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        {
+          text: "We charge £195 for 300 to 400 photos for the basic service.",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK, and does that include the disk?"],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Yes, one disk, but you can get extra ones for £5 each."],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "That's good.",
+        "So, do I need to pay when I send you the photos?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "No, we won't need anything until we've actually copied the pictures.",
+        {
+          text: "Then we'll let you know how much it is, and once we've received the payment, we'll send the parcel off to you.",
+          number: 3,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Right."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 4 to 10.",
+        "Now listen and answer questions 4 to 10.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Is there anything else you'd like to ask about our services?"],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Yes, I've roughly sorted out the photos into groups according to what they're about.",
+        "So, can you keep them in those groups when you copy them?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "Sure, we'll save each group in a different folder on the disk,",
+        "and if you like, you can suggest a name for each folder.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        {
+          text: "So, I could have one called 'Grandparents' for instance?",
+          number: 4,
+        },
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Exactly."],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "And do you do anything besides scan the photos?",
+        "Like, can you make any improvements?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "Yes, in the standard service, each photo is checked,",
+        {
+          text: "and we can sometimes touch up the color a bit, or improve the contrast,",
+          number: 5,
+        },
+        "that can make a big difference.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "OK, and some of the photos are actually quite fragile.",
+        "They won't get damaged in the process, will they?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        {
+          text: "No, if any look particularly fragile, we'd do them by hand.",
+          number: 6,
+        },
+        "We do realize how precious these old photos can be.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "And another thing is we can make changes to a photo if you want,",
+        {
+          text: "so, if you want to remove an object from a photo, or maybe alter the background,",
+          number: 7,
+        },
+        "we can do that.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Really?",
+        "I might be interested in that.",
+        "I'll have a look through the photos and see.",
+        "Oh, and talking of fixing photos.",
+        { text: "I've got a few that aren't properly in focus.", number: 8 },
+        "Can you do anything to make that better?",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["No, I'm afraid that's one thing we can't do."],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK."],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Any other information I can give you?"],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Er... oh, how long will it all take?"],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [{ text: "We aim to get the copying done in 10 days.", number: 9 }],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Fine.",
+        "Right, well, I'll get the photos packed up in a box and post them off to you.",
+      ],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: [
+        "Right, if you've got a strong cardboard box, that's best.",
+        {
+          text: "We've found that plastic ones sometimes break in the post.",
+          number: 10,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK.", "Right, thanks for your help.", "Bye."],
+    },
+    {
+      speaker: "EMPLOYEE",
+      text: ["Bye."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of part 1.",
+        "You now have half a minute to check your answers to part 1.",
+      ],
+    },
+  ];
+
+  const handleTextSelect = () => {
+    const selection = window.getSelection();
+    if (selection && selection.toString()) {
+      const range = selection.getRangeAt(0).getBoundingClientRect();
+      setModalPosition({
+        top: range.bottom + window.scrollY,
+        left: range.left + window.scrollX,
+      });
+      setSelectedText(selection.toString());
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleHighlight = () => {
+    if (selectedText) {
+      setHighlightedTexts((prev) => [...prev, selectedText]);
+      setSelectedText("");
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleClearHighlight = () => {
+    setHighlightedTexts([]);
+    setSelectedText("");
+    setIsModalOpen(false);
+  };
+
+  const renderText = (chunk) => {
+    const text = typeof chunk === "string" ? chunk : chunk.text;
+    let parts = [text];
+    highlightedTexts.forEach((ht) => {
+      parts = parts.flatMap((part) =>
+        typeof part === "string"
+          ? part.split(ht).flatMap((p, i, arr) =>
+              i < arr.length - 1
+                ? [
+                    p,
+                    <span key={Math.random()} className="bg-yellow-200 ">
+                      {ht}
+                    </span>,
+                  ]
+                : [p]
+            )
+          : [part]
+      );
+    });
+    return parts;
+  };
+
+  const speakerText = (line, lineIdx) => {
+    const chunks = Array.isArray(line.text) ? line.text : [line.text];
+    return (
+      <h3 key={lineIdx} className="text-lg">
+        <span className="font-bold">{line.speaker}:</span>{" "}
+        {chunks.map((chunk, idx) => {
+          const chunkNumber = typeof chunk === "string" ? null : chunk.number;
+          return (
+            <span
+              key={idx}
+              className={`ml-2 ${
+                lineIdx === currentLine && idx === currentChunk
+                  ? "bg-green-200"
+                  : highlight && chunkNumber
+                  ? "bg-yellow-100"
+                  : "bg-transparent"
+              }`}
+            >
+              {renderText(chunk)}{" "}
+              {chunkNumber &&
+                highlight &&
+                !(lineIdx === currentLine && idx === currentChunk) && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white">
+                    {chunkNumber}
+                  </span>
+                )}
+              {chunkNumber &&
+                lineIdx === currentLine &&
+                idx === currentChunk && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-green-700 rounded-sm text-white ">
+                    {chunkNumber}
+                  </span>
+                )}
+            </span>
+          );
+        })}
+      </h3>
+    );
+  };
+
+  // ---- Voice function ----
+   const handleVoice = () => {
+     if (isSpeaking) {
+       window.speechSynthesis.cancel();
+       setIsSpeaking(false);
+       setCurrentLine(null);
+       setCurrentChunk(null);
+       return;
+     }
+     const voices = window.speechSynthesis.getVoices();
+     const getVoice = (speaker) => {
+       if (!voices.length) return null;
+
+       // Announcer: male
+       if (speaker === "ANNOUNCER") {
+         return voices.find((v) => v.name.includes("Alex")) || voices[0];
+       }
+       if (speaker === "FATHER") {
+         return voices.find((v) => v.name.includes("David")) || voices[0];
+       }
+
+       // Erica: female
+       if (speaker === "WOMAN") {
+         return (
+           voices.find((v) => v.name.includes("Aria")) ||
+           voices.find((v) => v.name.includes("Jenny")) ||
+           voices.find((v) => v.name.includes("Ana")) ||
+           voices.find((v) => v.name.includes("Female")) ||
+           voices[0]
+         );
+       }
+
+       return voices[0];
+     };
+
+     let lineIndex = 0;
+     let chunkIndex = 0;
+     setIsSpeaking(true);
+     const speakNextChunk = () => {
+       if (lineIndex >= lines.length) {
+         setIsSpeaking(false);
+         setCurrentLine(null);
+         setCurrentChunk(null);
+         return;
+       }
+       const line = lines[lineIndex];
+       const chunks = Array.isArray(line.text) ? line.text : [line.text];
+       if (chunkIndex >= chunks.length) {
+         lineIndex++;
+         chunkIndex = 0;
+         speakNextChunk();
+         return;
+       }
+       setCurrentLine(lineIndex);
+       setCurrentChunk(chunkIndex);
+       const chunk = chunks[chunkIndex];
+       const text = typeof chunk === "string" ? chunk : chunk.text;
+       const utterance = new SpeechSynthesisUtterance(text);
+       utterance.voice = getVoice(line.speaker);
+       utterance.rate = 1;
+       utterance.onend = () => {
+         chunkIndex++;
+         speakNextChunk();
+       };
+       window.speechSynthesis.speak(utterance);
+     };
+     speakNextChunk();
+   };
+
+  //  Marks show
+
+  const correctAnswers = {
+    1: "frame",
+    2: "195",
+    3: "payment",
+    4: "grandparents",
+    5: "colour",
+    6: "hand",
+    7: "background",
+    8: "focus",
+    9: "10 days",
+    10: "plastic",
+  };
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
+
+  // --- Handle input change and auto-check ---
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [id]: value };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Calculate live score ---
+  const calculateScore = (answers) => {
+    let newScore = 0;
+    Object.keys(correctAnswers).forEach((key) => {
+      if (
+        answers[key]?.trim().toLowerCase() ===
+        correctAnswers[key].trim().toLowerCase()
+      ) {
+        newScore += 1;
+      }
+    });
+    setScore(newScore);
+    localStorage.setItem("/2021/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
-    setActiveButtons((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
-  return (
-    <div className="px-3">
-      {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
-        {/* LEFT SIDE (dynamic texts) */}
 
+  const handleClear = () => {
+    setUserAnswers({});
+    setScore(0);
+    setActiveButtons({});
+    setIsOpen(false);
+    localStorage.removeItem("/2021/Test 1/listening");
+  };
+
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
+
+  return (
+    <div onMouseUp={handleTextSelect} className="px-3">
+      <div className="flex gap-6 h-[1000px]">
+        {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
               checked={highlight}
               onChange={() => setHighlight(!highlight)}
               className="toggle toggle-accent"
             />
-            <span className="absolute -top-7 right-6 text-left bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap">
-              Toggle guided mode
+          </div>
+
+          <button
+            onClick={handleVoice}
+            className={`mt-5 px-6 py-2 rounded-full font-medium text-white transition ${
+              isSpeaking ? "bg-yellow-400" : "bg-green-400"
+            }`}
+          >
+            {isSpeaking ? "⏹ Stop" : "🔊 Play Voice"}
+          </button>
+
+          <hr />
+          <div className="flex justify-between items-center">
+            <p onClick={() => setOpenScript(!openScript)}>
+              {renderText("Audio Script")}
+            </p>
+            <span onClick={() => setOpenScript(!openScript)}>
+              <IoIosArrowDown size={20} />
             </span>
           </div>
 
-          <div>
-            <audio controls className="mt-2 w-7/12">
-              <source type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <hr />
-          <p>Audio Script</p>
+          {openScript ? (
+            <div className="space-y-5">
+              <h1 className="text-2xl font-bold mb-8 text-center">
+                {renderText("Picture Conversion Service")}
+              </h1>
+              {lines.map((line, index) => speakerText(line, index))}
+            </div>
+          ) : (
+            <hr className="border border-gray-400 border-dotted" />
+          )}
 
-          {/* left text  */}
-
-          <div className=" space-y-5">
-            <h1 className="text-2xl font-bold mb-8 text-center">
-              Picture Conversion Service
-            </h1>
-
-            <h3 className="text-lg">
-              <span className="font-bold">ANNOUNCER:</span> Part 1. You will
-              hear a woman phoning a company that converts old photographs to
-              digital format. First, you have some time to look at questions 1
-              to 3. Now listen carefully and answer questions 1 to 3.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Hello, Picturerep.
-              Can I help you?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Oh, hi. I saw your
-              advertisement about copying pictures to disk, and I'd like a bit
-              more information about what you do.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Sure, what would you
-              like to know?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Well, I've got a box
-              full of old family photos that's been up in the attic for years.
-              Some of them must be 50 or 60 years old. And I'd like to get them
-              converted to digital format.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Sure, we can do that
-              for you.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Right, and what about
-              size? The photos are all sorts of sizes. Are there any
-              restrictions?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Well, the maximum
-              size of photo we can do with our normal service is 30 centimeters,
-              and each picture must be at least 4 cm. That's the minimum we can
-              cope with.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Oh, that should be fine.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
+          {isModalOpen && (
+            <div
+              style={{ top: modalPosition.top + 5, left: modalPosition.left }}
+              className="absolute bg-white p-3 rounded-lg shadow-lg flex gap-3 z-50"
+            >
+              <button
+                onClick={handleHighlight}
+                className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
               >
-                And some of them are in a frame.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    1
-                  </span>
-                )}
-              </span>
-              Should I take them out before I send them?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Yes, please. We can't
-              copy them otherwise, and also the photos must all be separate,
-              they mustn't be stuck into an album.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> OK, that's not a
-              problem. So, can you give me an idea of how much this will cost?
-              I've got about 360 photos, I think.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
+                Highlight
+              </button>
+              <button
+                onClick={handleClearHighlight}
+                className="bg-gray-300 px-3 py-1 rounded-md hover:bg-gray-400 transition"
               >
-                We charge £195 for 300 to 400 photos for the basic service.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    2
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> OK, and does that
-              include the disk?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Yes, one disk, but
-              you can get extra ones for £5 each.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> That's good. So, do I
-              need to pay when I send you the photos?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> No, we won't need
-              anything until we've actually copied the pictures.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Then we'll let you know how much it is, and once we've received
-                the payment, we'll send the parcel off to you.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    3
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">ANNOUNCER:</span> Before you hear the
-              rest of the conversation, you have some time to look at questions
-              4 to 10. Now listen and answer questions 4 to 10.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Is there anything
-              else you'd like to ask about our services?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Yes, I've roughly sorted
-              out the photos into groups according to what they're about. So,
-              can you keep them in those groups when you copy them?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                Sure, we'll save each group in a different folder on the disk,
-                and if you like, you can suggest a name for each folder.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    4
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> So, I could have one
-              called 'Grandparents' for instance?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Exactly. And in the
-              standard service, each photo is checked, and we can sometimes
-              touch up the color a bit, or improve the contrast
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                — that can make a big difference.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    5
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> OK, and some of the
-              photos are actually quite fragile. They won't get damaged in the
-              process, will they?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                No, if any look particularly fragile, we'd do them by hand..
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    6
-                  </span>
-                )}
-              </span>{" "}
-              We do realize how precious these old photos can be
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> And another thing is
-              we can make changes to a photo
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                so, if you want to remove an object from a photo, or maybe alter
-                the background,
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    7
-                  </span>
-                )}
-              </span>
-              we can do that.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Really? I might be
-              interested in that. I'll have a look through the photos and see.
-              Oh, and talking of fixing photos,
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                I've got a few that aren't properly in focus.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    8
-                  </span>
-                )}
-              </span>
-              Can you do anything to make that better?
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> No, I'm afraid that's
-              one thing we can't do.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> OK.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span>
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                We aim to get the copying done in 10 days.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    9
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> Fine. Right, well, I'll
-              get the photos packed up in a box and post them off to you.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Right, if you've got
-              a strong cardboard box, that's best.
-              <span
-                className={`ml-2 ${
-                  highlight ? "bg-yellow-100" : "bg-transparent"
-                }`}
-              >
-                We've found that plastic ones sometimes break in the post.
-                {highlight && (
-                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                    10
-                  </span>
-                )}
-              </span>
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">WOMAN:</span> OK. Right, thanks for
-              your help. Bye.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">EMPLOYEE:</span> Bye.
-            </h3>
-
-            <h3 className="text-lg">
-              <span className="font-bold">ANNOUNCER:</span> That is the end of
-              part 1. You now have half a minute to check your answers to part
-              1.
-            </h3>
-          </div>
+                Clear Highlight
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
-          <div className="flex justify-end items-center p-4 text-gray-500">
-            {/* clear icon */}
+        {/* RIGHT SIDE */}
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+          {/* ---------- Header ---------- */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–10")}
+          </h2>
 
-            <div className="relative group">
-              <div className="flex justify-between items-center">
-                <span
-                  onClick={() => setIsOpen(true)}
-                  className="text-xl cursor-pointer"
-                >
-                  <GrClearOption />
-                </span>
-              </div>
-              {/* Tooltip */}
-
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Clear answer
-              </span>
-
-              {isOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                    <h2 className="text-lg font-semibold mb-4">
-                      Are you sure you want to clear all answers?
-                    </h2>
-                    <div className="flex justify-center gap-4">
-                      <button
-                        onClick={() => setIsOpen(false)}
-                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                      >
-                        No, keep them
-                      </button>
-                      <button
-                        onClick={handleClear}
-                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                      >
-                        Yes, clear them
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-          <h2 className="text-lg font-bold mb-3">Questions 1–10</h2> <br />
-          <h3 className="text-lg mb-5">
-            Complete the notes below. <br /> <br /> Write{" "}
-            <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
-            answer.
+          <h3 className="text-lg mb-6">
+            {renderText("Complete the notes below.")} <br />
+            <br />
+            {renderText("Write ")}
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
+            {renderText(" for each answer.")}
           </h3>
-          <div className="overflow-x-auto border p-5  bg-white rounded-lg">
-            <h1 className="text-lg font-bold text-center mb-4">
-              Copying photos to digital format
+
+          {/* ---------- Notes Box ---------- */}
+          <div className="border p-6 rounded-lg space-y-6 bg-white">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("Copying photos to digital format")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">
-              Name of company: Picturerep <br /> Requirements
-            </h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                Maximum size of photos is 30 cm, minimum size 4 cm.
-              </li>
-              <li className="text-lg">
-                <span>Photos must not be in a</span>
-                <button
-                  onClick={() => toggleButton(1)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  1
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>an album.</span>
-              </li>
-            </ul>
+            {/* ---------- Company ---------- */}
+            <p className="text-lg">
+              {renderText("Name of company: ")}
+              <span className="font-semibold">{renderText("Picturerep")}</span>
+            </p>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Cost</h2>
-            <ul className="list-disc list-inside space-y-3">
-              {" "}
-              <li className="text-lg">
-                <span>The cost for 360 photos is £</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>including one desk.</span>
-              </li>
-              <li className="text-lg">
-                <span>Before the completed order is sent </span>
-                <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  3
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>is required.</span>
-              </li>
-            </ul>
+            {/* ---------- Requirements ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Requirements")}
+            </h2>
 
-            {/* ---------- Section 4 ---------- */}
+            <p className="text-lg">
+              {renderText(
+                "Maximum size of photos is 30 cm, minimum size 4 cm."
+              )}
+            </p>
+
+            {/* Q1 */}
+            <p className="text-lg">
+              {renderText("Photos must not be in a")}
+              <button
+                onClick={() => toggleButton(1)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[1]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                1
+              </button>
+              <input
+                value={userAnswers[1] || ""}
+                onChange={(e) => handleInputChange(1, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("or an album.")}
+            </p>
+
+            {/* ---------- Cost ---------- */}
+            <h2 className="text-lg font-bold mt-6">{renderText("Cost")}</h2>
+
+            {/* Q2 */}
+            <p className="text-lg">
+              {renderText("The cost for 360 photos is £")}
+              <button
+                onClick={() => toggleButton(2)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[2]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                2
+              </button>
+              <input
+                value={userAnswers[2] || ""}
+                onChange={(e) => handleInputChange(2, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("(including one disk).")}
+            </p>
+
+            {/* Q3 */}
+            <p className="text-lg">
+              {renderText("Before the completed order is sent,")}
+              <button
+                onClick={() => toggleButton(3)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[3]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                3
+              </button>
+              <input
+                value={userAnswers[3] || ""}
+                onChange={(e) => handleInputChange(3, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("is required.")}
+            </p>
+
+            {/* ---------- Services Included ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              Services included in the price
+              {renderText("Services included in the price")}
             </h2>
-            <ul className="list-disc list-inside space-y-3">
-              {" "}
-              <li className="text-lg">
-                <span>Photos can be placed in a folder,e.g. with the name</span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>and learn how to program them so they can move.</span>
-              </li>
-              <li className="text-lg">
-                <span>The</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>and contrast can be improved if necessary.</span>
-              </li>
-              <li className="text-lg">
-                <span>Photos which are very fragile will be scanned by</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
-            </ul>
-            {/* ---------- Section 5 ---------- */}
+
+            {/* Q4 */}
+            <p className="text-lg">
+              {renderText(
+                "Photos can be placed in a folder, e.g. with the name"
+              )}
+              <button
+                onClick={() => toggleButton(4)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[4]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                4
+              </button>
+              <input
+                value={userAnswers[4] || ""}
+                onChange={(e) => handleInputChange(4, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q5 */}
+            <p className="text-lg">
+              {renderText("The")}
+              <button
+                onClick={() => toggleButton(5)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[5]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                5
+              </button>
+              <input
+                value={userAnswers[5] || ""}
+                onChange={(e) => handleInputChange(5, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("and contrast can be improved if necessary.")}
+            </p>
+
+            {/* Q6 */}
+            <p className="text-lg">
+              {renderText("Photos which are very fragile will be scanned by")}
+              <button
+                onClick={() => toggleButton(6)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[6]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                6
+              </button>
+              <input
+                value={userAnswers[6] || ""}
+                onChange={(e) => handleInputChange(6, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* ---------- Special Restore ---------- */}
             <h2 className="text-lg font-bold mt-6">
-              Special restore service (costs extra)
+              {renderText("Special restore service (costs extra)")}
             </h2>
-            <ul className="list-disc list-inside space-y-3">
-              {" "}
-              <li className="text-lg">
-                <span>
-                  It may be possible to remove an object from a photo, or change
-                  the
-                </span>
+
+            {/* Q7 */}
+            <p className="text-lg">
+              {renderText(
+                "It may be possible to remove an object from a photo, or change the"
+              )}
+              <button
+                onClick={() => toggleButton(7)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[7]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                7
+              </button>
+              <input
+                value={userAnswers[7] || ""}
+                onChange={(e) => handleInputChange(7, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q8 */}
+            <p className="text-lg">
+              {renderText("A photo which is not correctly in")}
+              <button
+                onClick={() => toggleButton(8)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[8]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                8
+              </button>
+              <input
+                value={userAnswers[8] || ""}
+                onChange={(e) => handleInputChange(8, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("cannot be fixed.")}
+            </p>
+
+            {/* ---------- Other Information ---------- */}
+            <h2 className="text-lg font-bold mt-6">
+              {renderText("Other information")}
+            </h2>
+
+            {/* Q9 */}
+            <p className="text-lg">
+              {renderText("Orders are completed within")}
+              <button
+                onClick={() => toggleButton(9)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[9]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                9
+              </button>
+              <input
+                value={userAnswers[9] || ""}
+                onChange={(e) => handleInputChange(9, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              .
+            </p>
+
+            {/* Q10 */}
+            <p className="text-lg">
+              {renderText("Send the photos in a box (not")}
+              <button
+                onClick={() => toggleButton(10)}
+                className={`mx-2 w-8 h-8 rounded-full border-2 ${
+                  activeButtons[10]
+                    ? "bg-yellow-400 border-yellow-500"
+                    : "bg-gray-200 border-gray-400"
+                }`}
+              >
+                10
+              </button>
+              <input
+                value={userAnswers[10] || ""}
+                onChange={(e) => handleInputChange(10, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              ).
+            </p>
+          </div>
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
+                {" "}
                 <button
-                  onClick={() => toggleButton(7)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600  text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  7
+                  Submit Answers
                 </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>.</span>
-              </li>{" "}
-              <li className="text-lg">
-                <span>A photo which is not correctly in</span>
-                <button
-                  onClick={() => toggleButton(8)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  8
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>can not be fixed.</span>
-              </li>
-            </ul>
-            {/* ---------- Section 6 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Other information</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>Orders are completed within</span>
-                <button
-                  onClick={() => toggleButton(9)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  9
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
-              <li className="text-lg">
-                <span>Send the photos in a box (not</span>
-                <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  10
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>).</span>
-              </li>
-            </ul>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2"> Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–10)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer =
+                        userAnswers[num]?.trim().toLowerCase() || "";
+                      const correctAnswer = correctAnswers[num]
+                        ?.trim()
+                        .toLowerCase();
+
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {/* ICONS */}
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span> // GREEN CIRCLE
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          {/* User Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          {/* Correct Answer */}
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
+      <Listening2Pagination2021></Listening2Pagination2021>
     </div>
   );
 };

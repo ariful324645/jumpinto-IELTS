@@ -1,567 +1,792 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { FaDotCircle } from "react-icons/fa";
 import { GrClearOption } from "react-icons/gr";
-
+import { ImCross } from "react-icons/im";
+import { IoIosArrowDown } from "react-icons/io";
+import Listening3Pagination2022 from "../Pagination2022/Listening3Pagination2022";
 const Test3Listening2022 = () => {
   const [highlight, setHighlight] = useState(false);
   const [activeButtons, setActiveButtons] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+  const [openScript, setOpenScript] = useState(true);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [currentLine, setCurrentLine] = useState(null);
+  const [currentChunk, setCurrentChunk] = useState(null);
 
-  const handleClear = () => {
-    setActiveButtons({});
-    const inputs = document.querySelectorAll("input[type='text']");
-    inputs.forEach((input) => (input.value = ""));
-    console.log("All answers cleared!");
-    setIsOpen(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [highlightedTexts, setHighlightedTexts] = useState([]);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const [showResult, setShowResult] = useState(false);
+  const lines = [
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Part 1. You will hear a man called Jack giving advice to a friend about surfing holidays.",
+        "First, you have some time to look at questions 1 to 6.",
+        "Now listen carefully and answer questions 1 to 6.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Jack, I'm thinking of taking the kids to the seaside on a surfing holiday this summer, and I wanted to ask your advice, as I know you're such an expert.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Well, I don't know about that.But yes, I've done a bit of surfing over the years.I'd thoroughly recommend it.",
+        {
+          text: "I think it's the kind of holiday all the family can enjoy together.",
+          number: 1,
+        },
+        "The thing about surfing is that it's great for all ages and all abilities.My youngest started when he was only 3.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Wow!But it's quite physically demanding, isn't it?",
+        {
+          text: "I've heard you need to be pretty fit.",
+          number: 2,
+        },
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yes, you'll certainly learn more quickly, and won't tire as easily.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Well, that should be OK for us.You've been surfing a few times in Ireland, haven't you?",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yes, there's some great surfing there, which people don't always realize.",
+        "Yes, there are loads.Last year we went to County Donegal.There are several great places to surf there.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "What about in County Clare? I read that's also really good for surfing.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yes, it is.I've been there a few times.Most people go to Lahinch.My kids love it there, the waves aren't too challenging, and the town is very lively.",
+        {
+          text: "Yes, some very nice ones.",
+          number: 3,
+        },
+        "And there are also a few basic hostels and camp sites.It's great if you need lessons, as the surf schools are excellent.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Sounds good."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Yes, and there's lots to see in the area.Like those well-known cliffs, I've forgotten the name of them.",
+        "I've also been surfing in County Mayo.Which is less well known for surfing, but we had a really good time.",
+        {
+          text: "There's a good surf school at Carrowniskey beach.",
+          number: 4,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["How do you spell that?"],
+    },
+    {
+      speaker: "JACK",
+      text: ["CARROWNISKEY."],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "I put the kids into the surf camp they run during the summer for 10 to 16 year olds.",
+        {
+          text: "3 hours every day for a week.",
+          number: 5,
+        },
+        "It was perfect.They were so tired out after that.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["I can imagine."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        {
+          text: "One thing we did while the kids were surfing was to rent some kayaks to have a look around the bay, which is nearby.",
+          number: 6,
+        },
+        "It's really beautiful.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["Oh, I'd love to do that."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "Now listen and answer questions 7 to 10.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: [
+        "Now, the only time I went to Ireland, it rained practically every day.",
+      ],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Hmm. Yes, that can be a problem, but you can surf in the rain, you know.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["It doesn't have the same appeal somehow."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Well, the weather's been fine the last couple of years when I've been there, but actually it tends to rain more in August than in the spring or autumn.",
+        {
+          text: "September's my favorite month, because the water is warmer then.",
+          number: 7,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["The only problem is that the kids are back to school then."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "I know, but one good thing about Irish summers is that it doesn't get too hot.",
+        {
+          text: "The average temperature is about 19 degrees, and it usually doesn't go above 25 degrees.",
+          number: 8,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["That sounds all right. Now what about costs?"],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "Surfing is a pretty cheap holiday really, the only cost is the hire of equipment.",
+        {
+          text: "You can expect to pay a daily rate of about €30 for the hire of a wetsuit and board, but you can save about €40 if you hire by the week.",
+          number: 9,
+        },
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["That's not too bad."],
+    },
+    {
+      speaker: "JACK",
+      text: [
+        "No, it's important to make sure you get good quality wetsuits.",
+        {
+          text: "You'll all get too cold if you don't, and make sure you also get boots.",
+          number: 10,
+        },
+        "They keep your feet warm, and it's easier to surf with them on too.",
+      ],
+    },
+    {
+      speaker: "WOMAN",
+      text: ["OK, well, thanks very much for that."],
+    },
+    {
+      speaker: "ANNOUNCER",
+      text: [
+        "That is the end of part 1. You now have half a minute to check your answers to part 1.",
+      ],
+    },
+  ];
+
+  const handleTextSelect = () => {
+    const selection = window.getSelection();
+    if (selection && selection.toString()) {
+      const range = selection.getRangeAt(0).getBoundingClientRect();
+      setModalPosition({
+        top: range.bottom + window.scrollY,
+        left: range.left + window.scrollX,
+      });
+      setSelectedText(selection.toString());
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleHighlight = () => {
+    if (selectedText) {
+      setHighlightedTexts((prev) => [...prev, selectedText]);
+      setSelectedText("");
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleClearHighlight = () => {
+    setHighlightedTexts([]);
+    setSelectedText("");
+    setIsModalOpen(false);
+  };
+
+  const renderText = (chunk) => {
+    const text = typeof chunk === "string" ? chunk : chunk.text;
+    let parts = [text];
+    highlightedTexts.forEach((ht) => {
+      parts = parts.flatMap((part) =>
+        typeof part === "string"
+          ? part.split(ht).flatMap((p, i, arr) =>
+              i < arr.length - 1
+                ? [
+                    p,
+                    <span key={Math.random()} className="bg-yellow-200 ">
+                      {ht}
+                    </span>,
+                  ]
+                : [p]
+            )
+          : [part]
+      );
+    });
+    return parts;
+  };
+
+  const speakerText = (line, lineIdx) => {
+    const chunks = Array.isArray(line.text) ? line.text : [line.text];
+    return (
+      <h3 key={lineIdx} className="text-lg">
+        <span className="font-bold">{line.speaker}:</span>{" "}
+        {chunks.map((chunk, idx) => {
+          const chunkNumber = typeof chunk === "string" ? null : chunk.number;
+          return (
+            <span
+              key={idx}
+              className={`ml-2 ${
+                lineIdx === currentLine && idx === currentChunk
+                  ? "bg-green-200"
+                  : highlight && chunkNumber
+                  ? "bg-yellow-100"
+                  : "bg-transparent"
+              }`}
+            >
+              {renderText(chunk)}{" "}
+              {chunkNumber &&
+                highlight &&
+                !(lineIdx === currentLine && idx === currentChunk) && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white">
+                    {chunkNumber}
+                  </span>
+                )}
+              {chunkNumber &&
+                lineIdx === currentLine &&
+                idx === currentChunk && (
+                  <span className="inline-flex items-center justify-center w-8 h-6 bg-green-700 rounded-sm text-white ">
+                    {chunkNumber}
+                  </span>
+                )}
+            </span>
+          );
+        })}
+      </h3>
+    );
+  };
+
+  // ---- Voice function ----
+   const handleVoice = () => {
+     if (isSpeaking) {
+       window.speechSynthesis.cancel();
+       setIsSpeaking(false);
+       setCurrentLine(null);
+       setCurrentChunk(null);
+       return;
+     }
+     const voices = window.speechSynthesis.getVoices();
+     const getVoice = (speaker) => {
+       if (!voices.length) return null;
+
+       // Announcer: male
+       if (speaker === "ANNOUNCER") {
+         return voices.find((v) => v.name.includes("Alex")) || voices[0];
+       }
+       if (speaker === "FATHER") {
+         return voices.find((v) => v.name.includes("David")) || voices[0];
+       }
+
+       // Erica: female
+       if (speaker === "WOMAN") {
+         return (
+           voices.find((v) => v.name.includes("Aria")) ||
+           voices.find((v) => v.name.includes("Jenny")) ||
+           voices.find((v) => v.name.includes("Ana")) ||
+           voices.find((v) => v.name.includes("Female")) ||
+           voices[0]
+         );
+       }
+
+       return voices[0];
+     };
+
+     let lineIndex = 0;
+     let chunkIndex = 0;
+     setIsSpeaking(true);
+     const speakNextChunk = () => {
+       if (lineIndex >= lines.length) {
+         setIsSpeaking(false);
+         setCurrentLine(null);
+         setCurrentChunk(null);
+         return;
+       }
+       const line = lines[lineIndex];
+       const chunks = Array.isArray(line.text) ? line.text : [line.text];
+       if (chunkIndex >= chunks.length) {
+         lineIndex++;
+         chunkIndex = 0;
+         speakNextChunk();
+         return;
+       }
+       setCurrentLine(lineIndex);
+       setCurrentChunk(chunkIndex);
+       const chunk = chunks[chunkIndex];
+       const text = typeof chunk === "string" ? chunk : chunk.text;
+       const utterance = new SpeechSynthesisUtterance(text);
+       utterance.voice = getVoice(line.speaker);
+       utterance.rate = 1;
+       utterance.onend = () => {
+         chunkIndex++;
+         speakNextChunk();
+       };
+       window.speechSynthesis.speak(utterance);
+     };
+     speakNextChunk();
+   };
+
+  //  Marks show
+  const correctAnswers = {
+    1: "all", // Jack recommends surfing for all holidays in the summer
+    2: "fit", // Need to be quite fit
+    3: "hotels", // Lahinch has some good quality hotels and surf schools
+    4: "Carrowniskey", // Good surf school at Carrowniskey beach
+    5: "week", // Surf camp lasts for one week
+    6: "bay", // Can also explore the local bay by kayak
+    7: "September", // Best month to go
+    8: "19", // Average temperature in summer approx. 19 degrees
+    9: "30", // Wetsuit and surfboard: 30 euros per day
+    10: "boots", // Also advisable to hire boots for warmth
+  };
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [score, setScore] = useState(0);
+
+  // --- Handle input change and auto-check ---
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => {
+      const updated = { ...prev, [id]: value };
+      calculateScore(updated);
+      return updated;
+    });
+  };
+
+  // --- Calculate live score ---
+  const calculateScore = (answers) => {
+    let newScore = 0;
+    Object.keys(correctAnswers).forEach((key) => {
+      if (
+        answers[key]?.trim().toLowerCase() ===
+        correctAnswers[key].trim().toLowerCase()
+      ) {
+        newScore += 1;
+      }
+    });
+    setScore(newScore);
+    localStorage.setItem("/2021/Test 1/listening", newScore);
   };
 
   const toggleButton = (id) => {
-    setActiveButtons((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
-  return (
-    <div className="px-3">
-      {/* Main Layout */}
-      <div className="flex gap-6 h-[1000px]">
-        {/* LEFT SIDE (dynamic texts) */}
 
+  const handleClear = () => {
+    setUserAnswers({});
+    setScore(0);
+    setActiveButtons({});
+    setIsOpen(false);
+    localStorage.removeItem("/2021/Test 1/listening");
+  };
+
+  // --- Restore answers from localStorage (optional) ---
+  useEffect(() => {
+    const savedScore = localStorage.getItem("/2021/Test 1/listening");
+    if (savedScore) {
+      setScore(Number(savedScore));
+    }
+  }, []);
+
+  return (
+    <div onMouseUp={handleTextSelect} className="px-3">
+      <div className="flex gap-6 h-[1000px]">
+        {/* LEFT SIDE */}
         <div className="w-1/2 bg-white space-y-5 rounded-lg shadow-md p-6 overflow-y-scroll">
           <div className="flex relative group justify-between items-center">
-            <h1 className="text-xl font-bold">PART 1</h1>
+            <h1 className="text-xl font-bold">{renderText("    PART 1")}</h1>
             <input
               type="checkbox"
               checked={highlight}
               onChange={() => setHighlight(!highlight)}
               className="toggle toggle-accent"
             />
-            <span className="absolute -top-7 right-6 text-left bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap">
-              Toggle guided mode
-            </span>
           </div>
 
-          <div>
-            <audio controls className="mt-2 w-7/12">
-              <source type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
+          <button
+            onClick={handleVoice}
+            className={`mt-5 px-6 py-2 rounded-full font-medium text-white transition ${
+              isSpeaking ? "bg-yellow-400" : "bg-green-400"
+            }`}
+          >
+            {isSpeaking ? "⏹ Stop" : "🔊 Play Voice"}
+          </button>
+
           <hr />
-          <p>Audio Script</p>
-          <h1 className="text-xl font-bold text-center">
-            Advice on Surfing Holidays
-          </h1>
+          <div className="flex justify-between items-center">
+            <p onClick={() => setOpenScript(!openScript)}>
+              {renderText("Audio Script")}
+            </p>
+            <span onClick={() => setOpenScript(!openScript)}>
+              <IoIosArrowDown size={20} />
+            </span>
+          </div>
 
-          <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span>Part 1, you will hear a
-            man called Jack giving advice to a friend about surfing
-            holidays.First, you have some time to look at questions 1 to 6.Now
-            listen carefully and answer questions 1 to 6.
-          </h3>
+          {openScript ? (
+            <div className="space-y-5">
+              <h1 className="text-2xl font-bold mb-8 text-center">
+                {renderText("Advice on Surfing Holidays")}
+              </h1>
+              {lines.map((line, index) => speakerText(line, index))}
+            </div>
+          ) : (
+            <hr className="border border-gray-400 border-dotted" />
+          )}
 
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Jack, I'm thinking of
-            taking the kids to the seaside on a surfing holiday this summer, and
-            I wanted to ask your advice, as I know you're such an expert.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Well, I don't know about
-            that.But yes, I've done a bit of surfing over the years.I'd
-            thoroughly recommend it.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
+          {isModalOpen && (
+            <div
+              style={{ top: modalPosition.top + 5, left: modalPosition.left }}
+              className="absolute bg-white p-3 rounded-lg shadow-lg flex gap-3 z-50"
             >
-              I think it's the kind of holiday all the family can enjoy
-              together.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  1
-                </span>
-              )}
-            </span>
-            The thing about surfing is that it's great for all ages and all
-            abilities.My youngest started when he was only 3.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Wow!But it's quite
-            physically demanding, isn't it?
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              I've heard you need to be pretty fit.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  2
-                </span>
-              )}
-            </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Yes, you'll certainly learn
-            more quickly, and won't tire as easily.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>What about in County
-            Clare?I read that's also really good for surfing.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Yes, it is.I've been there a
-            few times.Most people go to Lahinch.My kids love it there, the waves
-            aren't too challenging, and the town is very lively.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Are there good hotels
-            there?
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              Yes, some very nice ones.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  3
-                </span>
-              )}
-            </span>
-            And there are also a few basic hostels and camp sites.It's great if
-            you need lessons, as the surf schools are excellent.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Sounds good.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Yes, and there's lots to see
-            in the area.Like those well-known cliffs, I've forgotten the name of
-            them.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Oh, don't worry, I can look
-            them up.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>I've also been surfing in
-            County Mayo.Which is less well known for surfing, but we had a
-            really good time.That was a few years ago, when the kids were
-            younger.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              There's a good surf school at Carrowniskey beach.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  4
-                </span>
-              )}
-            </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>Oh, right.How long was that
-            for?
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              3 hours every day for a week.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  5
-                </span>
-              )}
-            </span>
-            It was perfect.They were so tired out after that.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>I can imagine
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              One thing we did while the kids were surfing was to rent some
-              kayaks to have a look around the bay, which is nearby.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  6
-                </span>
-              )}
-            </span>
-            It's really beautiful.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>It doesn't have the same
-            appeal somehow.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Well, the weather's been
-            fine the last couple of years when I've been there, but actually it
-            tends to rain more in August than in the spring or autumn.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              September's my favorite month, because the water is warmer then.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  7
-                </span>
-              )}
-            </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>The only problem is that
-            the kids are back to school then.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>I know, but one good thing
-            about Irish summers is that it doesn't get too hot.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              The average temperature is about 19 degrees, and it usually
-              doesn't go above 25 degrees.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  8
-                </span>
-              )}
-            </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>That sounds all right.Now
-            what about costs?
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>Surfing is a pretty cheap
-            holiday really, the only cost is the hire of equipment.
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              You can expect to pay a daily rate of about €30 for the hire of a
-              wetsuit and board, but you can save about €40 if you hire by the
-              week.
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  9
-                </span>
-              )}
-            </span>
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>That's not too bad.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">JACK:</span>No, it's important to make
-            sure you get good quality wetsuits
-            <span
-              className={`ml-2 ${
-                highlight ? "bg-yellow-100" : "bg-transparent"
-              }`}
-            >
-              .You'll all get too cold if you don't, and make sure you also get
-              boots.10
-              {highlight && (
-                <span className="inline-flex items-center justify-center w-8 h-6 bg-yellow-700 rounded-sm text-white font-semibold">
-                  9
-                </span>
-              )}
-            </span>
-            They keep your feet warm, and it's easier to surf with them on too.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">WOMAN:</span>OK, well, thanks very much
-            for that.
-          </h3>
-          <h3 className="text-lg">
-            <span className="font-bold">ANNOUNCER:</span>That is the end of part
-            1.You now have half a minute to check your answers to part 1.
-          </h3>
+              <button
+                onClick={handleHighlight}
+                className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
+              >
+                Highlight
+              </button>
+              <button
+                onClick={handleClearHighlight}
+                className="bg-gray-300 px-3 py-1 rounded-md hover:bg-gray-400 transition"
+              >
+                Clear Highlight
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* right div */}
-        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll h-[90vh]">
-          <div className="flex justify-end items-center p-4 text-gray-500">
-            {/* clear icon */}
+        {/* RIGHT SIDE */}
+        <div className="md:w-[50%] bg-white rounded-lg shadow-md p-4 overflow-y-scroll">
+          {/* ---------- Header ---------- */}
+          <h2 className="text-lg font-bold mb-3">
+            {renderText("Questions 1–10")}
+          </h2>
 
-            <div className="relative group">
-              <div className="flex justify-between items-center">
-                <span
-                  onClick={() => setIsOpen(true)}
-                  className="text-xl cursor-pointer"
-                >
-                  <GrClearOption />
-                </span>
-              </div>
-              {/* Tooltip */}
-
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                Clear answer
-              </span>
-
-              {isOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                  <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
-                    <h2 className="text-lg font-semibold mb-4">
-                      Are you sure you want to clear all answers?
-                    </h2>
-                    <div className="flex justify-center gap-4">
-                      <button
-                        onClick={() => setIsOpen(false)}
-                        className="px-2 py-2 bg-gray-300 rounded-md hover:bg-gray-400 transition"
-                      >
-                        No, keep them
-                      </button>
-                      <button
-                        onClick={handleClear}
-                        className="px-2 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                      >
-                        Yes, clear them
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-          <h2 className="text-lg font-bold mb-3">Questions 1–10</h2> <br />
-          <h3 className="text-lg mb-5">
-            Complete the notes below. <br /> <br /> Write{" "}
-            <span className="font-bold">ONE WORD AND/OR A NUMBER</span> for each
-            answer.
+          <h3 className="text-lg mb-6">
+            {renderText("Complete the notes below.")} <br />
+            <br />
+            {renderText("Write ")}
+            <span className="font-bold">
+              {renderText("ONE WORD AND/OR A NUMBER")}
+            </span>
+            {renderText(" for each answer.")}
           </h3>
-          <div className="overflow-x-auto border p-5  bg-white rounded-lg">
-            <h1 className="text-2xl font-bold text-center mb-4">
-              Advice on surfing holidays
+
+          {/* ---------- Notes Box ---------- */}
+          <div className="border max-w-xl mx-auto p-6 rounded-lg space-y-4 bg-white">
+            <h1 className="text-2xl font-bold text-center">
+              {renderText("Advice on surfing holidays")}
             </h1>
 
-            {/* ---------- Section 1 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Jack's advice</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>Recommends surfing for</span>
-                <button
-                  onClick={() => toggleButton(1)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[1]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  1
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>holidays in the summer.</span>
-              </li>
+            {/* ---------- Holidays ---------- */}
+            <p className="text-lg">
+              {renderText("Jack recommends surfing for")}
+              <button
+                onClick={() => toggleButton(1)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                1
+              </button>
+              <input
+                value={userAnswers[1] || ""}
+                onChange={(e) => handleInputChange(1, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("holidays in the summer")}
+            </p>
 
-              <li className="text-lg">
-                <span>Need to be quite</span>
-                <button
-                  onClick={() => toggleButton(2)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[2]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  2
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span></span>
-              </li>
-            </ul>
+            <p className="text-lg">
+              {renderText("Need to be quite")}
+              <button
+                onClick={() => toggleButton(2)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                2
+              </button>
+              <input
+                value={userAnswers[2] || ""}
+                onChange={(e) => handleInputChange(2, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
 
-            {/* ---------- Section 2 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Irish surfing locations</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">County Clare</li>
-              <li className="text-lg">There are famous cliffs nearby</li>
-              <li className="text-lg">
-                <span>Lahinch has some good quality</span>
-                <button
-                  onClick={() => toggleButton(3)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[3]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  3
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>and suffer school.</span>
-              </li>
+            <p className="text-lg">
+              {renderText("County Clare – Lahinch has some good quality")}
+              <button
+                onClick={() => toggleButton(3)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                3
+              </button>
+              <input
+                value={userAnswers[3] || ""}
+                onChange={(e) => handleInputChange(3, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("and surf schools")}
+            </p>
 
-              <li className="text-lg">
-                <span>Good surf school at</span>
-                <button
-                  onClick={() => toggleButton(4)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[4]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  4
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>beach.</span>
-              </li>
+            <p className="text-lg">
+              {renderText("County Mayo – Good surf school at")}
+              <button
+                onClick={() => toggleButton(4)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                4
+              </button>
+              <input
+                value={userAnswers[4] || ""}
+                onChange={(e) => handleInputChange(4, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("beach")}
+            </p>
 
-              <li className="text-lg">
-                <span>Surf camp lasts for one</span>
-                <button
-                  onClick={() => toggleButton(5)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[5]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  5
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-              </li>
-              <li className="text-lg">
-                <span>Can also explore the local</span>
-                <button
-                  onClick={() => toggleButton(6)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[6]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  6
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
-            </ul>
+            <p className="text-lg">
+              {renderText("Surf camp lasts for one")}
+              <button
+                onClick={() => toggleButton(5)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                5
+              </button>
+              <input
+                value={userAnswers[5] || ""}
+                onChange={(e) => handleInputChange(5, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
 
-            {/* ---------- Section 3 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Weather</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>Best month to go</span>
-                <button
-                  onClick={() => toggleButton(7)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[7]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  7
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>.</span>
-              </li>
-              <li className="text-lg">
-                <span>Average temperature in summer: approx.</span>
-                <button
-                  onClick={() => toggleButton(8)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[8]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  8
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>degrees.</span>
-              </li>
-            </ul>
+            <p className="text-lg">
+              {renderText("Can also explore the local")}
+              <button
+                onClick={() => toggleButton(6)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                6
+              </button>
+              <input
+                value={userAnswers[6] || ""}
+                onChange={(e) => handleInputChange(6, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("by kayak")}
+            </p>
 
-            {/* ---------- Section 4 ---------- */}
-            <h2 className="text-lg font-bold mt-6">Costs</h2>
-            <ul className="list-disc list-inside space-y-3">
-              <li className="text-lg">
-                <span>Wetsuit and surfboard </span>
-                <button
-                  onClick={() => toggleButton(9)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[9]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
-                >
-                  9
-                </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>euros per day.</span>
-              </li>
+            <p className="text-lg">
+              {renderText("Best month to go:")}
+              <button
+                onClick={() => toggleButton(7)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                7
+              </button>
+              <input
+                value={userAnswers[7] || ""}
+                onChange={(e) => handleInputChange(7, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+            </p>
 
-              <li className="text-lg">
-                <span>Also advisable to hire</span>
+            <p className="text-lg">
+              {renderText("Average temperature in summer: approx.")}
+              <button
+                onClick={() => toggleButton(8)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                8
+              </button>
+              <input
+                value={userAnswers[8] || ""}
+                onChange={(e) => handleInputChange(8, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("degrees")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("Wetsuit and surfboard:")}
+              <button
+                onClick={() => toggleButton(9)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                9
+              </button>
+              <input
+                value={userAnswers[9] || ""}
+                onChange={(e) => handleInputChange(9, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("euros per day")}
+            </p>
+
+            <p className="text-lg">
+              {renderText("Also advisable to hire")}
+              <button
+                onClick={() => toggleButton(10)}
+                className="mx-2 w-8 h-8 rounded-full border-2"
+              >
+                10
+              </button>
+              <input
+                value={userAnswers[10] || ""}
+                onChange={(e) => handleInputChange(10, e.target.value)}
+                className="border rounded-md px-2 py-1 w-32"
+              />
+              {renderText("for warmth")}
+            </p>
+          </div>
+
+          <div className="mt-10">
+            {!showResult ? (
+              <div className="flex items-center justify-center">
                 <button
-                  onClick={() => toggleButton(10)}
-                  className={`mx-2 w-8 h-8 rounded-full border-2 transition-colors duration-300 ${
-                    activeButtons[10]
-                      ? "bg-yellow-400 border-yellow-500"
-                      : "bg-gray-200 border-gray-400"
-                  }`}
+                  onClick={() => setShowResult(true)}
+                  className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md"
                 >
-                  10
+                  Submit Answers
                 </button>
-                <input
-                  className="border-2 border-gray-300 focus:border-blue-400 focus:outline-none rounded-md px-2 py-1 mx-2"
-                  type="text"
-                />
-                <span>for warmth.</span>
-              </li>
-            </ul>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Result Card */}
+                <div className="border-2 border-gray-400 rounded-xl p-6 text-center shadow-sm bg-white">
+                  <h1 className="text-3xl font-bold mb-2">Result</h1>
+                  <p className="text-green-600 text-2xl font-semibold">
+                    Your Score: {score}/10
+                  </p>
+                </div>
+
+                {/* All Answers List */}
+                <div className="bg-gray-50 border border-gray-300 rounded-xl p-5 shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-700 mb-3">
+                    All Answers (1–10)
+                  </h3>
+
+                  <ul className="space-y-3">
+                    {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => {
+                      const userAnswer = userAnswers[num]?.trim() || "";
+                      const correctAnswer = correctAnswers[num]?.trim();
+                      const isCorrect =
+                        userAnswer && userAnswer === correctAnswer;
+                      const isWrong =
+                        userAnswer && userAnswer !== correctAnswer;
+                      const noAnswer = !userAnswer;
+
+                      return (
+                        <li
+                          key={num}
+                          className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
+                        >
+                          <div className="flex items-center gap-2">
+                            {isCorrect && (
+                              <span className="text-green-600 text-xl font-bold">
+                                <FaDotCircle />
+                              </span>
+                            )}
+                            {(isWrong || noAnswer) && (
+                              <div className="w-6 h-6 bg-red-500 p-3 rounded-full flex items-center justify-center">
+                                <span className="text-white text-sm font-bold leading-none">
+                                  <ImCross />
+                                </span>
+                              </div>
+                            )}
+
+                            <p className="font-bold">Q{num}:</p>
+                          </div>
+
+                          <p className="ml-8">
+                            <span className="font-semibold">Your Answer:</span>{" "}
+                            {noAnswer ? (
+                              <span className=" italic">
+                                No answer provided
+                              </span>
+                            ) : (
+                              <span>{userAnswer}</span>
+                            )}
+                          </p>
+
+                          <p className="ml-8">
+                            <span className="font-semibold text-green-600">
+                              Correct Answer:
+                            </span>{" "}
+                            <span>{correctAnswers[num]}</span>
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
+      <Listening3Pagination2022></Listening3Pagination2022>
     </div>
   );
 };

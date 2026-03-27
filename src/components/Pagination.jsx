@@ -55,9 +55,9 @@ const Pagination = () => {
   return (
     <div className="px-3">
       {/* ===== Pagination Bottom ===== */}
-      <div className="flex gap-5 items-center justify-center mt-6 mb-6 px-4">
+      <div className="flex flex-wrap sm:flex-col sm:items-center gap-2 md:gap-5 items-center justify-center mt-6 mb-6 px-4">
         {/* === Left Button === */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 sm:gap-1">
           <Link
             to={topicLinks[sideButtonsList[leftIndex]]} // ✅ dynamic navigation
             onClick={rotateLeft} // ✅ rotate on click
@@ -69,7 +69,7 @@ const Pagination = () => {
         </div>
 
         {/* === Middle Buttons (Tests 1–4) === */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 sm:gap-1">
           {centerLinks.map((link, idx) => (
             <Link key={idx} to={link}>
               <button
@@ -87,7 +87,7 @@ const Pagination = () => {
         </div>
 
         {/* === Right Button === */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 sm:gap-1">
           <Link
             to={topicLinks[sideButtonsList[rightIndex]]} // ✅ dynamic navigation
             onClick={rotateRight} // ✅ rotate on click

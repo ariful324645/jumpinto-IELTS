@@ -388,7 +388,7 @@ const Listening3Part22015 = () => {
 
   const correctAnswers = {
     // Questions 11 and 12 (Choose TWO letters)
-    11: ["C", "E"],
+    "11-12": ["C", "E"],
 
     // Questions 13–15 (Choose the correct letter)
     13: "B", // It made the work of the trust better known.
@@ -409,20 +409,22 @@ const Listening3Part22015 = () => {
   // --- Handle input change and auto-check ---
   const handleInputChange = (id, value) => {
     setUserAnswers((prev) => {
-      const updated = { ...prev, [id]: value };
-      calculateScore(updated);
-      return updated;
-    });
-  };
-  const handleCheckboxChange = (qNum, letter) => {
-    setUserAnswers((prev) => {
-      const prevArr = Array.isArray(prev[qNum]) ? prev[qNum] : [];
-      const updatedArr = prevArr.includes(letter)
-        ? prevArr.filter((l) => l !== letter)
-        : [...prevArr, letter];
+      let updated = { ...prev };
 
-      const updated = { ...prev, [qNum]: updatedArr };
-      calculateScore(updated);
+      // Multi-select (arrays) for 11-12, 13-14
+      if (id === "11-12") {
+        const prevAnswers = Array.isArray(prev[id]) ? [...prev[id]] : [];
+        if (prevAnswers.includes(value)) {
+          updated[id] = prevAnswers.filter((v) => v !== value);
+        } else {
+          updated[id] = [...prevAnswers, value];
+        }
+      } else {
+        // Single-select (string) for 15–20
+        updated[id] = value;
+      }
+
+      calculateScore(updated); // recalc score immediately
       return updated;
     });
   };
@@ -431,22 +433,18 @@ const Listening3Part22015 = () => {
   const calculateScore = (answers) => {
     let newScore = 0;
 
-    Object.keys(correctAnswers).forEach((key) => {
-      const correct = correctAnswers[key];
+    Object.entries(correctAnswers).forEach(([key, correct]) => {
       const user = answers[key];
 
-      // 🔹 Choose TWO letters
       if (Array.isArray(correct)) {
         if (
           Array.isArray(user) &&
           user.length === correct.length &&
-          correct.every((ans) => user.includes(ans))
+          correct.every((v) => user.includes(v))
         ) {
-          newScore += 1;
+          newScore += 2; // 🔥 21–22 & 23–24
         }
-      }
-      // 🔹 Single answer
-      else {
+      } else {
         if (
           typeof user === "string" &&
           user.trim().toLowerCase() === correct.trim().toLowerCase()
@@ -458,7 +456,6 @@ const Listening3Part22015 = () => {
 
     setScore(newScore);
   };
-
   const toggleButton = (id) => {
     setActiveButtons((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -575,18 +572,32 @@ const Listening3Part22015 = () => {
                 "It's the country's largest conservation organisation.",
                 "It helps finance campaigns for changes in fishing practices.",
                 "It employs several dolphin experts full-time.",
-                "Volunteers help in various ways.",
-              ].map((text, idx) => {
-                const letter = String.fromCharCode(65 + idx);
+                "Volunteers help in various ways",
+              ].map((optionText, index) => {
+                const value = String.fromCharCode(65 + index); // A–E
+
+                const selectedOptions = userAnswers["11-12"] || [];
+                const isChecked = selectedOptions.includes(value);
+
+                // Disable other options once TWO are selected
+                const isDisabled = selectedOptions.length === 2 && !isChecked;
+
                 return (
-                  <label key={letter} className="flex items-start gap-2 mb-2">
+                  <label
+                    key={index}
+                    className={`flex items-center gap-3 mb-1 cursor-pointer ${
+                      isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                  >
                     <input
                       type="checkbox"
-                      onChange={() => handleCheckboxChange(11, letter)}
+                      checked={isChecked}
+                      disabled={isDisabled}
+                      onChange={() => handleInputChange("11-12", value)}
                     />
-                    <span>
-                      <strong>{letter}.</strong> {renderText(text)}
-                    </span>
+
+                    <span className="font-semibold">{value}.</span>
+                    <span>{renderText(optionText)}</span>
                   </label>
                 );
               })}
@@ -758,57 +769,69 @@ const Listening3Part22015 = () => {
                     </h3>
 
                     <ul className="space-y-3">
-                      {[11, 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
+                      {["11-12", 13, 14, 15, 16, 17, 18, 19, 20].map((num) => {
                         const user = userAnswers[num];
                         const correct = correctAnswers[num];
 
-                        const noAnswer =
-                          user === undefined ||
-                          (Array.isArray(user) && user.length === 0);
+                        const isCorrect = (() => {
+                          if (Array.isArray(correct)) {
+                            return (
+                              Array.isArray(user) &&
+                              user.length === correct.length &&
+                              correct.every((val) => user.includes(val))
+                            );
+                          } else {
+                            return (
+                              user?.trim().toLowerCase() ===
+                              correct?.trim().toLowerCase()
+                            );
+                          }
+                        })();
 
-                        const isCorrect = Array.isArray(correct)
-                          ? Array.isArray(user) &&
-                            user.length === correct.length &&
-                            correct.every((a) => user.includes(a))
-                          : user === correct;
+                        const noAnswer = !user;
 
-                        const isWrong = !noAnswer && !isCorrect;
+                        const userAnswerDisplay = Array.isArray(user)
+                          ? user.join(", ")
+                          : user?.trim() || "";
+                        const correctAnswerDisplay = Array.isArray(correct)
+                          ? correct.join(", ")
+                          : correct?.trim();
 
                         return (
                           <li
                             key={num}
-                            className="p-3 rounded-lg bg-white shadow-sm"
+                            className="p-3 rounded-lg bg-white shadow-sm hover:bg-gray-100 transition"
                           >
                             <div className="flex items-center gap-2">
                               {isCorrect && (
-                                <span className="text-green-600 text-xl">
-                                  <FaDotCircle />
-                                </span>
+                                <FaDotCircle className="text-green-600 text-xl font-bold" />
                               )}
-                              {(isWrong || noAnswer) && (
-                                <span className="text-red-600 text-xl">
-                                  <ImCross />
-                                </span>
+                              {!isCorrect && (
+                                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-red-500">
+                                  <ImCross className="text-white text-sm font-bold" />
+                                </div>
                               )}
                               <p className="font-bold">Q{num}:</p>
                             </div>
 
                             <p className="ml-8">
-                              <strong>Your Answer:</strong>{" "}
+                              <span className="font-semibold">
+                                Your Answer:
+                              </span>{" "}
                               {noAnswer ? (
-                                <em>No answer provided</em>
-                              ) : Array.isArray(user) ? (
-                                user.join(", ")
+                                <span className="italic">
+                                  No answer provided
+                                </span>
                               ) : (
-                                user
+                                userAnswerDisplay
                               )}
                             </p>
 
-                            <p className="ml-8 text-green-600">
-                              <strong>Correct Answer:</strong>{" "}
-                              {Array.isArray(correct)
-                                ? correct.join(", ")
-                                : correct}
+                            <p className="ml-8">
+                              <span className="font-semibold text-green-600">
+                                Correct Answer:
+                              </span>{" "}
+                              {correctAnswerDisplay}
                             </p>
                           </li>
                         );

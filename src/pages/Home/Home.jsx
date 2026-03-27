@@ -234,6 +234,91 @@ const data = [
       },
     ],
   },
+  {
+    headline: "IELTS 9 Academic 2013",
+    tests: [
+      {
+        testName: "Test 1",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 2",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 3",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 4",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+    ],
+  },
+  {
+    headline: "IELTS 8 Academic 2011",
+    tests: [
+      {
+        testName: "Test 1",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 2",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 3",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 4",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+    ],
+  },
+  {
+    headline: "IELTS 7 Academic 2009",
+    tests: [
+      {
+        testName: "Test 1",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 2",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 3",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 4",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+    ],
+  },
+  {
+    headline: "IELTS 6 Academic 2007",
+    tests: [
+      {
+        testName: "Test 1",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 2",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 3",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+      {
+        testName: "Test 4",
+        sections: ["Listening", "Reading", "Writing", "Speaking"],
+      },
+    ],
+  },
+
 ];
 
 const Home = () => {
